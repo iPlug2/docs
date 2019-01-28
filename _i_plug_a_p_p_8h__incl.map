@@ -1,0 +1,17 @@
+<map id="IPlugAPP.h" name="IPlugAPP.h">
+<area shape="rect" id="node2" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="135,677,245,704"/>
+<area shape="rect" id="node5" href="$_i_plug_a_p_i_base_8h.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs. " alt="" coords="1365,80,1480,107"/>
+<area shape="rect" id="node32" href="$_i_plug_processor_8h.html" title="The base class for IPlug Audio Processing. " alt="" coords="449,304,572,331"/>
+<area shape="rect" id="node9" href="$_i_plug_plugin_base_8h.html" title="Base class that contains plug&#45;in info and state manipulation methods. " alt="" coords="1191,155,1320,181"/>
+<area shape="rect" id="node14" href="$_i_plug_parameter_8h.html" title="IPlug&#39;s parameter class. " alt="" coords="1559,379,1681,405"/>
+<area shape="rect" id="node18" href="$_i_plug_utilities_8h.html" title="Utility functions and macros. " alt="" coords="756,603,863,629"/>
+<area shape="rect" id="node23" href="$_i_plug_constants_8h.html" title="IPlug Constant definitions, Types, magic numbers. " alt="" coords="425,677,548,704"/>
+<area shape="rect" id="node28" href="$_i_plug_structs_8h_source.html" title="IPlugStructs.h" alt="" coords="1043,379,1148,405"/>
+<area shape="rect" id="node29" href="$_i_plug_queue_8h.html" title="A lock&#45;free SPSC queue used to transfer data between threads based on MLQueue.h by Randy Jones based ..." alt="" coords="1615,155,1716,181"/>
+<area shape="rect" id="node31" href="$_i_plug_timer_8h.html" title="This file includes classes for implementing timers &#45; in order to get a regular callback on the main t..." alt="" coords="1788,379,1884,405"/>
+<area shape="rect" id="node10" href="$_i_plug_delegate__select_8h.html" title="Used for choosing an editor delegate. " alt="" coords="1177,229,1335,256"/>
+<area shape="rect" id="node25" href="$_i_plug_logger_8h.html" title="IPlug logging a.k.a tracing functionality. " alt="" coords="993,528,1095,555"/>
+<area shape="rect" id="node11" href="$_i_plug_editor_delegate_8h.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="1221,304,1369,331"/>
+<area shape="rect" id="node24" href="$_i_plug_midi_8h.html" title="MIDI and sysex structs/utilites. " alt="" coords="1090,453,1176,480"/>
+<area shape="rect" id="node35" href="$_i_plug_processor_8cpp.html" title="IPlugProcessor implementation. " alt="" coords="575,528,709,555"/>
+</map>

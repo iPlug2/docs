@@ -1,0 +1,16 @@
+<map id="IControl.h" name="IControl.h">
+<area shape="rect" id="node4" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="1648,603,1759,629"/>
+<area shape="rect" id="node7" href="$_i_graphics_8h.html" title="The lowest level base class of an IGraphics context. " alt="" coords="1531,80,1620,107"/>
+<area shape="rect" id="node8" href="$_i_plug_constants_8h.html" title="IPlug Constant definitions, Types, magic numbers. " alt="" coords="1839,603,1961,629"/>
+<area shape="rect" id="node9" href="$_i_plug_logger_8h.html" title="IPlug logging a.k.a tracing functionality. " alt="" coords="1243,453,1345,480"/>
+<area shape="rect" id="node20" href="$_i_graphics_constants_8h_source.html" title="IGraphicsConstants.h" alt="" coords="2040,453,2188,480"/>
+<area shape="rect" id="node21" href="$_i_graphics_structs_8h_source.html" title="IGraphicsStructs.h" alt="" coords="1485,379,1615,405"/>
+<area shape="rect" id="node27" href="$_i_graphics_utilities_8h_source.html" title="IGraphicsUtilities.h" alt="" coords="1759,304,1892,331"/>
+<area shape="rect" id="node28" href="$_i_graphics_popup_menu_8h.html" title="A class for setting the contents of a pop up menu. " alt="" coords="246,379,404,405"/>
+<area shape="rect" id="node29" href="$_i_graphics_editor_delegate_8h.html" title="An editor delgate base class for a SOMETHING that uses IGraphics for it&#39;s UI. " alt="" coords="906,155,1080,181"/>
+<area shape="rect" id="node17" href="$_i_plug_utilities_8h.html" title="Utility functions and macros. " alt="" coords="1139,528,1245,555"/>
+<area shape="rect" id="node30" href="$_i_plug_editor_delegate_8h.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="680,229,828,256"/>
+<area shape="rect" id="node32" href="$_i_plug_parameter_8h.html" title="IPlug&#39;s parameter class. " alt="" coords="995,453,1117,480"/>
+<area shape="rect" id="node34" href="$_i_plug_midi_8h.html" title="MIDI and sysex structs/utilites. " alt="" coords="711,379,797,405"/>
+<area shape="rect" id="node35" href="$_i_plug_structs_8h_source.html" title="IPlugStructs.h" alt="" coords="747,304,852,331"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="IPlugAPIBase.h" name="IPlugAPIBase.h">
+<area shape="rect" id="node6" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="1335,603,1445,629"/>
+<area shape="rect" id="node8" href="$_i_plug_plugin_base_8h.html" title="Base class that contains plug&#45;in info and state manipulation methods. " alt="" coords="741,80,869,107"/>
+<area shape="rect" id="node13" href="$_i_plug_parameter_8h.html" title="IPlug&#39;s parameter class. " alt="" coords="1084,304,1207,331"/>
+<area shape="rect" id="node17" href="$_i_plug_utilities_8h.html" title="Utility functions and macros. " alt="" coords="996,528,1103,555"/>
+<area shape="rect" id="node22" href="$_i_plug_constants_8h.html" title="IPlug Constant definitions, Types, magic numbers. " alt="" coords="528,603,651,629"/>
+<area shape="rect" id="node27" href="$_i_plug_structs_8h_source.html" title="IPlugStructs.h" alt="" coords="723,304,828,331"/>
+<area shape="rect" id="node28" href="$_i_plug_queue_8h.html" title="A lock&#45;free SPSC queue used to transfer data between threads based on MLQueue.h by Randy Jones based ..." alt="" coords="1329,80,1431,107"/>
+<area shape="rect" id="node30" href="$_i_plug_timer_8h.html" title="This file includes classes for implementing timers &#45; in order to get a regular callback on the main t..." alt="" coords="1231,304,1327,331"/>
+<area shape="rect" id="node9" href="$_i_plug_delegate__select_8h.html" title="Used for choosing an editor delegate. " alt="" coords="611,155,768,181"/>
+<area shape="rect" id="node24" href="$_i_plug_logger_8h.html" title="IPlug logging a.k.a tracing functionality. " alt="" coords="434,453,536,480"/>
+<area shape="rect" id="node10" href="$_i_plug_editor_delegate_8h.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="587,229,735,256"/>
+<area shape="rect" id="node23" href="$_i_plug_midi_8h.html" title="MIDI and sysex structs/utilites. " alt="" coords="429,379,515,405"/>
+</map>

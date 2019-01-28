@@ -1,0 +1,18 @@
+<map id="IPopupMenuControl.cpp" name="IPopupMenuControl.cpp">
+<area shape="rect" id="node2" href="$_i_popup_menu_control_8h.html" title="A base control for a pop&#45;up menu/drop&#45;down list that stays within the bounds of the IGraphics context..." alt="" coords="935,80,1083,107"/>
+<area shape="rect" id="node3" href="$_i_control_8h.html" title="This file contains the base IControl implementation, along with some base classes for specific types ..." alt="" coords="970,155,1048,181"/>
+<area shape="rect" id="node6" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="1648,752,1759,779"/>
+<area shape="rect" id="node9" href="$_i_graphics_8h.html" title="The lowest level base class of an IGraphics context. " alt="" coords="1531,229,1620,256"/>
+<area shape="rect" id="node10" href="$_i_plug_constants_8h.html" title="IPlug Constant definitions, Types, magic numbers. " alt="" coords="1839,752,1961,779"/>
+<area shape="rect" id="node11" href="$_i_plug_logger_8h.html" title="IPlug logging a.k.a tracing functionality. " alt="" coords="1243,603,1345,629"/>
+<area shape="rect" id="node22" href="$_i_graphics_constants_8h_source.html" title="IGraphicsConstants.h" alt="" coords="2040,603,2188,629"/>
+<area shape="rect" id="node23" href="$_i_graphics_structs_8h_source.html" title="IGraphicsStructs.h" alt="" coords="1485,528,1615,555"/>
+<area shape="rect" id="node29" href="$_i_graphics_utilities_8h_source.html" title="IGraphicsUtilities.h" alt="" coords="1759,453,1892,480"/>
+<area shape="rect" id="node30" href="$_i_graphics_popup_menu_8h.html" title="A class for setting the contents of a pop up menu. " alt="" coords="246,528,404,555"/>
+<area shape="rect" id="node31" href="$_i_graphics_editor_delegate_8h.html" title="An editor delgate base class for a SOMETHING that uses IGraphics for it&#39;s UI. " alt="" coords="906,304,1080,331"/>
+<area shape="rect" id="node19" href="$_i_plug_utilities_8h.html" title="Utility functions and macros. " alt="" coords="1139,677,1245,704"/>
+<area shape="rect" id="node32" href="$_i_plug_editor_delegate_8h.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="680,379,828,405"/>
+<area shape="rect" id="node34" href="$_i_plug_parameter_8h.html" title="IPlug&#39;s parameter class. " alt="" coords="995,603,1117,629"/>
+<area shape="rect" id="node36" href="$_i_plug_midi_8h.html" title="MIDI and sysex structs/utilites. " alt="" coords="711,528,797,555"/>
+<area shape="rect" id="node37" href="$_i_plug_structs_8h_source.html" title="IPlugStructs.h" alt="" coords="747,453,852,480"/>
+</map>

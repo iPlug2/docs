@@ -1,0 +1,51 @@
+<map id="IPlugParameter.h" name="IPlugParameter.h">
+<area shape="rect" id="node2" href="$_i_plug_editor_delegate_8h.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="2339,80,2487,107"/>
+<area shape="rect" id="node4" href="$_i_plug_plugin_base_8h.html" title="Base class that contains plug&#45;in info and state manipulation methods. " alt="" coords="1457,229,1585,256"/>
+<area shape="rect" id="node5" href="$_i_plug_a_p_i_base_8h.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs. " alt="" coords="772,304,887,331"/>
+<area shape="rect" id="node31" href="$_i_graphics_8cpp_source.html" title="IGraphics.cpp" alt="" coords="2837,528,2939,555"/>
+<area shape="rect" id="node46" href="$_i_control_8cpp_source.html" title="IControl.cpp" alt="" coords="3105,379,3199,405"/>
+<area shape="rect" id="node48" href="$_i_graphics_win_8cpp_source.html" title="IGraphicsWin.cpp" alt="" coords="3274,379,3400,405"/>
+<area shape="rect" id="node50" href="$_i_plug_parameter_8cpp.html" title="IParam implementation. " alt="" coords="3477,80,3613,107"/>
+<area shape="rect" id="node3" href="$_i_plug_delegate__select_8h.html" title="Used for choosing an editor delegate. " alt="" coords="1973,155,2131,181"/>
+<area shape="rect" id="node32" href="$_i_graphics_editor_delegate_8h.html" title="An editor delgate base class for a SOMETHING that uses IGraphics for it&#39;s UI. " alt="" coords="2326,155,2500,181"/>
+<area shape="rect" id="node19" href="$_i_plug_v_s_t2_8cpp_source.html" title="IPlugVST2.cpp" alt="" coords="1419,453,1529,480"/>
+<area shape="rect" id="node30" href="$_i_plug_plugin_base_8cpp.html" title="IPluginBase implementation. " alt="" coords="1315,304,1457,331"/>
+<area shape="rect" id="node6" href="$_i_plug_a_a_x_8h.html" title="AAX API base class for an IPlug plug&#45;in. " alt="" coords="852,379,943,405"/>
+<area shape="rect" id="node8" href="$_i_plug_a_p_p_8h.html" title="Standalone application base class for an IPlug plug&#45;in. " alt="" coords="477,379,568,405"/>
+<area shape="rect" id="node14" href="$_i_plug_a_u_8h.html" title="AudioUnit v2 API base class for an IPlug plug&#45;in. " alt="" coords="592,379,673,405"/>
+<area shape="rect" id="node16" href="$_i_plug_a_p_i_base_8cpp.html" title="IPlugAPIBase implementation. " alt="" coords="698,379,827,405"/>
+<area shape="rect" id="node17" href="$_i_plug_v_s_t2_8h.html" title="IPlugVST2.h" alt="" coords="1277,379,1373,405"/>
+<area shape="rect" id="node20" href="$_i_plug_v_s_t3_8h.html" title="VST3 base class for a non&#45;distributed IPlug VST3 plug&#45;in. " alt="" coords="967,379,1063,405"/>
+<area shape="rect" id="node22" href="$_i_plug_v_s_t3___controller_8h.html" title="VST3 Controller base class for a distributed IPlug VST3 plug&#45;in. " alt="" coords="1087,379,1245,405"/>
+<area shape="rect" id="node24" href="$_i_plug_v_s_t3___processor_8h.html" title="VST3 Processor base class for a distributed IPlug VST3 plug&#45;in. " alt="" coords="31,379,193,405"/>
+<area shape="rect" id="node26" href="$_i_plug_w_a_m_8h_source.html" title="IPlugWAM.h" alt="" coords="224,379,320,405"/>
+<area shape="rect" id="node28" href="$_i_plug_web_8h_source.html" title="IPlugWeb.h" alt="" coords="355,379,445,405"/>
+<area shape="rect" id="node7" href="$_i_plug_a_a_x_8cpp_source.html" title="IPlugAAX.cpp" alt="" coords="795,453,899,480"/>
+<area shape="rect" id="node9" href="$_i_plug_a_p_p_8cpp_source.html" title="IPlugAPP.cpp" alt="" coords="628,528,732,555"/>
+<area shape="rect" id="node10" href="$_i_plug_a_p_p__host_8h_source.html" title="IPlugAPP_host.h" alt="" coords="469,453,592,480"/>
+<area shape="rect" id="node11" href="$_i_plug_a_p_p__dialog_8cpp_source.html" title="IPlugAPP_dialog.cpp" alt="" coords="458,528,603,555"/>
+<area shape="rect" id="node12" href="$_i_plug_a_p_p__host_8cpp_source.html" title="IPlugAPP_host.cpp" alt="" coords="135,528,269,555"/>
+<area shape="rect" id="node13" href="$_i_plug_a_p_p__main_8cpp_source.html" title="IPlugAPP_main.cpp" alt="" coords="295,528,433,555"/>
+<area shape="rect" id="node15" href="$_i_plug_a_u_8cpp_source.html" title="IPlugAU.cpp" alt="" coords="667,453,763,480"/>
+<area shape="rect" id="node18" href="$_i_plug_reaper_v_s_t2_8h_source.html" title="IPlugReaperVST2.h" alt="" coords="1256,453,1395,480"/>
+<area shape="rect" id="node21" href="$_i_plug_v_s_t3_8cpp_source.html" title="IPlugVST3.cpp" alt="" coords="923,453,1033,480"/>
+<area shape="rect" id="node23" href="$_i_plug_v_s_t3___controller_8cpp_source.html" title="IPlugVST3_Controller.cpp" alt="" coords="1059,453,1232,480"/>
+<area shape="rect" id="node25" href="$_i_plug_v_s_t3___processor_8cpp_source.html" title="IPlugVST3_Processor.cpp" alt="" coords="5,453,181,480"/>
+<area shape="rect" id="node27" href="$_i_plug_w_a_m_8cpp_source.html" title="IPlugWAM.cpp" alt="" coords="206,453,316,480"/>
+<area shape="rect" id="node29" href="$_i_plug_web_8cpp_source.html" title="IPlugWeb.cpp" alt="" coords="341,453,445,480"/>
+<area shape="rect" id="node33" href="$_i_graphics_8h.html" title="The lowest level base class of an IGraphics context. " alt="" coords="2454,229,2543,256"/>
+<area shape="rect" id="node47" href="$_i_graphics_editor_delegate_8cpp_source.html" title="IGraphicsEditorDelegate.cpp" alt="" coords="1736,379,1925,405"/>
+<area shape="rect" id="node34" href="$_i_graphics_lice_8h_source.html" title="IGraphicsLice.h" alt="" coords="2145,304,2257,331"/>
+<area shape="rect" id="node36" href="$_i_control_8h.html" title="This file contains the base IControl implementation, along with some base classes for specific types ..." alt="" coords="2498,304,2576,331"/>
+<area shape="rect" id="node49" href="$_i_graphics_path_base_8h.html" title="A base class to share implementations of IGraphics.h functionality across different path based graphi..." alt="" coords="2601,304,2748,331"/>
+<area shape="rect" id="node35" href="$_i_graphics_lice_8cpp_source.html" title="IGraphicsLice.cpp" alt="" coords="1585,379,1711,405"/>
+<area shape="rect" id="node37" href="$_i_color_picker_control_8h.html" title="A control for choosing a color. " alt="" coords="2833,379,2980,405"/>
+<area shape="rect" id="node38" href="$_i_controls_8h.html" title="A collection of IControls for common UI widgets, such as knobs, sliders, switches. " alt="" coords="2574,453,2660,480"/>
+<area shape="rect" id="node39" href="$_i_v_keyboard_control_8h.html" title="Vectorial keyboard control. " alt="" coords="2001,379,2143,405"/>
+<area shape="rect" id="node40" href="$_i_v_meter_control_8h.html" title="Vectorial multichannel capable meter control. " alt="" coords="2167,379,2288,405"/>
+<area shape="rect" id="node41" href="$_i_v_scope_control_8h.html" title="Vectorial multichannel capable oscilloscope control. " alt="" coords="2313,379,2439,405"/>
+<area shape="rect" id="node42" href="$_i_v_multi_slider_control_8h.html" title="A vectorial multi&#45;slider control. " alt="" coords="2463,379,2611,405"/>
+<area shape="rect" id="node43" href="$_i_r_t_text_control_8h.html" title="A control to display some text in the UI, driven by values in the RT audio thread. " alt="" coords="2636,379,2759,405"/>
+<area shape="rect" id="node44" href="$_i_corner_resizer_control_8h.html" title="A control for resizing the plug&#45;in window by clicking and dragging in the bottom right&#45;hand corner Th..." alt="" coords="2807,453,2969,480"/>
+<area shape="rect" id="node45" href="$_i_f_p_s_display_control_8h.html" title="Performance display meter, based on code from NanoVG This is a special control that lives outside the..." alt="" coords="2993,453,3141,480"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="IPlugDelegate_select.h" name="IPlugDelegate_select.h">
+<area shape="rect" id="node2" href="$_i_plug_editor_delegate_8h.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="1183,80,1331,107"/>
+<area shape="rect" id="node7" href="$_i_plug_parameter_8h.html" title="IPlug&#39;s parameter class. " alt="" coords="148,304,271,331"/>
+<area shape="rect" id="node19" href="$_i_plug_midi_8h.html" title="MIDI and sysex structs/utilites. " alt="" coords="1114,229,1200,256"/>
+<area shape="rect" id="node25" href="$_i_plug_structs_8h_source.html" title="IPlugStructs.h" alt="" coords="590,155,695,181"/>
+<area shape="rect" id="node11" href="$_i_plug_utilities_8h.html" title="Utility functions and macros. " alt="" coords="473,379,580,405"/>
+<area shape="rect" id="node17" href="$_i_plug_constants_8h.html" title="IPlug Constant definitions, Types, magic numbers. " alt="" coords="857,453,980,480"/>
+<area shape="rect" id="node18" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="353,453,464,480"/>
+<area shape="rect" id="node21" href="$_i_plug_logger_8h.html" title="IPlug logging a.k.a tracing functionality. " alt="" coords="991,304,1093,331"/>
+</map>

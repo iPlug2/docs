@@ -1,0 +1,45 @@
+<map id="IControl.h" name="IControl.h">
+<area shape="rect" id="node2" href="$_i_color_picker_control_8h.html" title="A control for choosing a color. " alt="" coords="671,80,817,107"/>
+<area shape="rect" id="node3" href="$_i_controls_8h.html" title="A collection of IControls for common UI widgets, such as knobs, sliders, switches. " alt="" coords="513,155,599,181"/>
+<area shape="rect" id="node5" href="$_i_graphics_8cpp_source.html" title="IGraphics.cpp" alt="" coords="1185,229,1287,256"/>
+<area shape="rect" id="node6" href="$_i_v_keyboard_control_8h.html" title="Vectorial keyboard control. " alt="" coords="842,80,984,107"/>
+<area shape="rect" id="node7" href="$_i_v_meter_control_8h.html" title="Vectorial multichannel capable meter control. " alt="" coords="5,80,125,107"/>
+<area shape="rect" id="node8" href="$_i_v_scope_control_8h.html" title="Vectorial multichannel capable oscilloscope control. " alt="" coords="151,80,276,107"/>
+<area shape="rect" id="node9" href="$_i_v_multi_slider_control_8h.html" title="A vectorial multi&#45;slider control. " alt="" coords="300,80,448,107"/>
+<area shape="rect" id="node10" href="$_i_r_t_text_control_8h.html" title="A control to display some text in the UI, driven by values in the RT audio thread. " alt="" coords="473,80,596,107"/>
+<area shape="rect" id="node11" href="$_i_corner_resizer_control_8h.html" title="A control for resizing the plug&#45;in window by clicking and dragging in the bottom right&#45;hand corner Th..." alt="" coords="695,155,857,181"/>
+<area shape="rect" id="node12" href="$_i_f_p_s_display_control_8h.html" title="Performance display meter, based on code from NanoVG This is a special control that lives outside the..." alt="" coords="1425,155,1573,181"/>
+<area shape="rect" id="node13" href="$_i_popup_menu_control_8h.html" title="A base control for a pop&#45;up menu/drop&#45;down list that stays within the bounds of the IGraphics context..." alt="" coords="1162,80,1309,107"/>
+<area shape="rect" id="node15" href="$_i_graphics_web_8cpp_source.html" title="IGraphicsWeb.cpp" alt="" coords="881,155,1011,181"/>
+<area shape="rect" id="node16" href="$_i_graphics_win_8cpp_source.html" title="IGraphicsWin.cpp" alt="" coords="1274,155,1400,181"/>
+<area shape="rect" id="node17" href="$_i_text_entry_control_8h.html" title="A Text entry widget drawn by IGraphics to optionally override platform text entries. " alt="" coords="1487,80,1621,107"/>
+<area shape="rect" id="node22" href="$_test_animation_control_8h.html" title="Control to test animation. " alt="" coords="2783,80,2941,107"/>
+<area shape="rect" id="node24" href="$_test_arc_control_8h.html" title="Control to test drawing arcs. " alt="" coords="2966,80,3087,107"/>
+<area shape="rect" id="node25" href="$_test_blend_control_8h.html" title="Control to test blend methods. " alt="" coords="3111,80,3245,107"/>
+<area shape="rect" id="node26" href="$_test_color_control_8h.html" title="Control to colors. " alt="" coords="3270,80,3401,107"/>
+<area shape="rect" id="node27" href="$_test_dir_browse_control_8h.html" title="Control to test IDirBrowseControlBase. " alt="" coords="3427,80,3589,107"/>
+<area shape="rect" id="node28" href="$_test_gradient_control_8h.html" title="Control to test drawing gradients with path based drawing backends. " alt="" coords="3614,80,3764,107"/>
+<area shape="rect" id="node29" href="$_test_layer_control_8h.html" title="Control to test IGraphics layers. " alt="" coords="3789,80,3923,107"/>
+<area shape="rect" id="node30" href="$_test_multi_path_control_8h.html" title="Control to test drawing paths in path&#45;based drawing backends. " alt="" coords="3947,80,4103,107"/>
+<area shape="rect" id="node31" href="$_test_poly_control_8h.html" title="Control to test drawing polygons. " alt="" coords="4127,80,4253,107"/>
+<area shape="rect" id="node32" href="$_test_text_control_8h.html" title="Control to test drawing text. " alt="" coords="4278,80,4404,107"/>
+<area shape="rect" id="node33" href="$_test_draw_context_control_8h.html" title="Control to test obtaining a drawing API (NanoVG, LICE, Cairo, AGG etc) context and using that API wit..." alt="" coords="4429,80,4608,107"/>
+<area shape="rect" id="node34" href="$_test_size_control_8h.html" title="Control to display the size of a region. " alt="" coords="4633,80,4759,107"/>
+<area shape="rect" id="node35" href="$_test_s_v_g_control_8h.html" title="Control to test drawing SVGs. " alt="" coords="4783,80,4912,107"/>
+<area shape="rect" id="node36" href="$_test_image_control_8h.html" title="Control to test drawing bitmaps. " alt="" coords="1647,80,1784,107"/>
+<area shape="rect" id="node37" href="$_test_drop_shadow_control_8h.html" title="Control to test layer drop shadows. " alt="" coords="1809,80,1985,107"/>
+<area shape="rect" id="node38" href="$_test_cursor_control_8h.html" title="Control to test changing the platform cursor. " alt="" coords="2010,80,2149,107"/>
+<area shape="rect" id="node39" href="$_test_keyboard_control_8h.html" title="Control to test keyboard input. " alt="" coords="2174,80,2329,107"/>
+<area shape="rect" id="node40" href="$_test_rotating_mask_control_8h_source.html" title="TestRotatingMaskControl.h" alt="" coords="2354,80,2536,107"/>
+<area shape="rect" id="node41" href="$_test_shadow_gradient_control_8h.html" title="Control to test drawing shadows with gradients. " alt="" coords="2561,80,2759,107"/>
+<area shape="rect" id="node42" href="$_i_control_8cpp_source.html" title="IControl.cpp" alt="" coords="4937,80,5031,107"/>
+<area shape="rect" id="node43" href="$_i_graphics_live_edit_8h.html" title="A control to enable live modification of control layout in an IGraphics context in debug builds This ..." alt="" coords="1599,155,1733,181"/>
+<area shape="rect" id="node44" href="$_i_graphics_editor_delegate_8cpp_source.html" title="IGraphicsEditorDelegate.cpp" alt="" coords="5055,80,5244,107"/>
+<area shape="rect" id="node4" href="$_i_controls_8cpp.html" title="IControls implementation. " alt="" coords="506,229,605,256"/>
+<area shape="rect" id="node14" href="$_i_popup_menu_control_8cpp.html" title="IPopupMenuControl implementation. " alt="" coords="1036,155,1199,181"/>
+<area shape="rect" id="node18" href="$_i_text_entry_control_8cpp.html" title="ITextEntryControl implementation. " alt="" coords="1810,155,1960,181"/>
+<area shape="rect" id="node19" href="$_i_graphics_cairo_8cpp_source.html" title="IGraphicsCairo.cpp" alt="" coords="1985,155,2119,181"/>
+<area shape="rect" id="node20" href="$_i_graphics_lice_8cpp_source.html" title="IGraphicsLice.cpp" alt="" coords="2143,155,2269,181"/>
+<area shape="rect" id="node21" href="$_i_graphics_nano_v_g_8cpp_source.html" title="IGraphicsNanoVG.cpp" alt="" coords="2294,155,2447,181"/>
+<area shape="rect" id="node23" href="$_test_controls_8h.html" title="Include all the test controls. " alt="" coords="3282,155,3389,181"/>
+</map>
