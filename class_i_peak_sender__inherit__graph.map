@@ -1,0 +1,4 @@
+<map id="IPeakSender&lt; MAXNC, QUEUE_SIZE &gt;" name="IPeakSender&lt; MAXNC, QUEUE_SIZE &gt;">
+<area shape="rect" id="node1" title="IPeakSender is a utility class which can be used to defer peak data from sample buffers for sending t..." alt="" coords="15,93,175,133"/>
+<area shape="rect" id="node2" href="$class_i_sender.html" title="ISender is a utility class which can be used to defer data from the realtime audio processing and sen..." alt="" coords="5,5,184,45"/>
+</map>

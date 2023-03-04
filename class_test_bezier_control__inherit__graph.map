@@ -1,0 +1,4 @@
+<map id="TestBezierControl" name="TestBezierControl">
+<area shape="rect" id="node1" title="Control to test drawing bezier curves." alt="" coords="5,79,131,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="35,5,101,31"/>
+</map>

@@ -1,6 +1,9 @@
 <map id="IPlugVST3Processor" name="IPlugVST3Processor">
-<area shape="rect" id="node3" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs. " alt="" coords="120,163,224,189"/>
-<area shape="rect" id="node4" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods. " alt="" coords="126,80,217,107"/>
-<area shape="rect" id="node5" href="$class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="71,5,273,32"/>
-<area shape="rect" id="node6" href="$class_i_plug_processor.html" title="IPlugProcessor\&lt; PLUG\l_SAMPLE_DST \&gt;" alt="" coords="249,155,407,197"/>
+<area shape="rect" id="node1" title="VST3 Processor API&#45;base class for a distributed IPlug VST3 plug&#45;in." alt="" coords="185,225,329,251"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,152,180,177"/>
+<area shape="rect" id="node3" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs." alt="" coords="205,152,309,177"/>
+<area shape="rect" id="node4" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods." alt="" coords="211,79,303,104"/>
+<area shape="rect" id="node5" title=" " alt="" coords="159,5,355,31"/>
+<area shape="rect" id="node6" href="$class_i_plug_v_s_t3_processor_base.html" title="Shared VST3 processor code." alt="" coords="333,152,508,177"/>
+<area shape="rect" id="node7" href="$class_i_plug_processor.html" title="The base class for IPlug Audio Processing." alt="" coords="365,79,476,104"/>
 </map>

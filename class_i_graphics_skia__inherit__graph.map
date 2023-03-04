@@ -1,0 +1,4 @@
+<map id="IGraphicsSkia" name="IGraphicsSkia">
+<area shape="rect" id="node1" title="IGraphics draw class using Skia." alt="" coords="5,79,109,104"/>
+<area shape="rect" id="node2" href="$class_i_graphics.html" title="The lowest level base class of an IGraphics context." alt="" coords="18,5,97,31"/>
+</map>

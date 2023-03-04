@@ -1,3 +1,4 @@
 <map id="IByteChunk" name="IByteChunk">
-<area shape="rect" id="node2" href="$struct_i_byte_getter.html" title="A helper class for IBtyeChunk and IBtyeStream that avoids code duplication. " alt="" coords="6,5,95,32"/>
+<area shape="rect" id="node1" title="Manages a block of memory, for plug&#45;in settings store/recall." alt="" coords="5,79,95,104"/>
+<area shape="rect" id="node2" href="$struct_i_byte_getter.html" title="A helper class for IByteChunk and IByteStream that avoids code duplication." alt="" coords="6,5,94,31"/>
 </map>

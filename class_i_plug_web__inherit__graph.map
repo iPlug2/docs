@@ -1,5 +1,6 @@
 <map id="IPlugWeb" name="IPlugWeb">
-<area shape="rect" id="node2" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs. " alt="" coords="55,155,159,181"/>
-<area shape="rect" id="node3" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods. " alt="" coords="61,80,152,107"/>
-<area shape="rect" id="node4" href="$class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node1" title="This is used for the UI &quot;editor&quot; &#45; controller side of a WAM or remote editors that communicate with d..." alt="" coords="64,225,143,251"/>
+<area shape="rect" id="node2" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs." alt="" coords="51,152,155,177"/>
+<area shape="rect" id="node3" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods." alt="" coords="57,79,149,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,201,31"/>
 </map>

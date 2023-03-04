@@ -1,10 +1,12 @@
 <map id="IBitmapBase" name="IBitmapBase">
-<area shape="rect" id="node2" href="$class_i_b_button_control.html" title="A bitmap button/momentary switch control. " alt="" coords="156,5,271,32"/>
-<area shape="rect" id="node3" href="$class_i_bitmap_control.html" title="A basic control to draw a bitmap, or one frame of a stacked bitmap depending on the current value..." alt="" coords="159,56,268,83"/>
-<area shape="rect" id="node5" href="$class_i_b_knob_control.html" title="A bitmap knob/dial control that draws a frame from a stacked bitmap. " alt="" coords="160,107,267,133"/>
-<area shape="rect" id="node7" href="$class_i_b_slider_control.html" title="A bitmap slider/fader control. " alt="" coords="158,157,269,184"/>
-<area shape="rect" id="node8" href="$class_i_b_text_control.html" title="A control to display text using a monospace bitmap font. " alt="" coords="162,208,265,235"/>
-<area shape="rect" id="node9" href="$class_test_blend_control.html" title="Control to test blend methods. " alt="" coords="152,259,275,285"/>
-<area shape="rect" id="node4" href="$class_i_b_switch_control.html" title="A bitmap switch control. " alt="" coords="340,56,457,83"/>
-<area shape="rect" id="node6" href="$class_i_b_knob_rotater_control.html" title="A bitmap knob/dial control that rotates an image. " alt="" coords="323,107,474,133"/>
+<area shape="rect" id="node1" title="A base interface to be combined with IControl for bitmap&#45;based controls &quot;IBControls&quot;,..." alt="" coords="5,129,103,155"/>
+<area shape="rect" id="node2" href="$class_i_b_button_control.html" title="A bitmap button/momentary switch control." alt="" coords="151,5,266,31"/>
+<area shape="rect" id="node3" href="$class_i_b_knob_control.html" title="A bitmap knob/dial control that draws a frame from a stacked bitmap." alt="" coords="155,55,262,80"/>
+<area shape="rect" id="node5" href="$class_i_b_slider_control.html" title="A bitmap slider/fader control." alt="" coords="154,104,263,129"/>
+<area shape="rect" id="node6" href="$class_i_b_switch_control.html" title="A bitmap switch control." alt="" coords="151,153,267,179"/>
+<area shape="rect" id="node7" href="$class_i_b_text_control.html" title="A control to display text using a monospace bitmap font." alt="" coords="158,203,259,228"/>
+<area shape="rect" id="node8" href="$class_i_bitmap_control.html" title="A basic control to draw a bitmap, or one frame of a stacked bitmap depending on the current value." alt="" coords="155,252,263,277"/>
+<area shape="rect" id="node4" href="$class_i_b_knob_rotater_control.html" title="A bitmap knob/dial control that rotates an image." alt="" coords="315,55,463,80"/>
+<area shape="rect" id="node9" href="$class_i_b_meter_control.html" title="A bitmap meter control, that can be used for VUMeters." alt="" coords="334,227,443,252"/>
+<area shape="rect" id="node10" href="$class_test_mask_control.html" title="Control to display the size of a region." alt="" coords="328,276,449,301"/>
 </map>

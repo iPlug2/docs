@@ -1,0 +1,5 @@
+<map id="TestGesturesControl" name="TestGesturesControl">
+<area shape="rect" id="node1" title="Control to test multi gesture recognizers." alt="" coords="5,152,148,177"/>
+<area shape="rect" id="node2" href="$class_i_text_control.html" title="A basic control to display some text." alt="" coords="31,79,123,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="43,5,110,31"/>
+</map>

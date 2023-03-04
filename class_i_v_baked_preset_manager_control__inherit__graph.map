@@ -1,0 +1,4 @@
+<map id="IVBakedPresetManagerControl" name="IVBakedPresetManagerControl">
+<area shape="rect" id="node1" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for &quot;baked in&quot; factory presets It adds several child buttons." alt="" coords="5,79,207,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="73,5,139,31"/>
+</map>

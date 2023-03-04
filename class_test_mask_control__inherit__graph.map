@@ -1,0 +1,6 @@
+<map id="TestMaskControl" name="TestMaskControl">
+<area shape="rect" id="node1" title="Control to display the size of a region." alt="" coords="31,152,153,177"/>
+<area shape="rect" id="node2" href="$class_i_bitmap_control.html" title="A basic control to draw a bitmap, or one frame of a stacked bitmap depending on the current value." alt="" coords="38,79,146,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="5,5,72,31"/>
+<area shape="rect" id="node4" href="$class_i_bitmap_base.html" title="A base interface to be combined with IControl for bitmap&#45;based controls &quot;IBControls&quot;,..." alt="" coords="97,5,194,31"/>
+</map>

@@ -1,3 +1,4 @@
 <map id="IPopupMenuControl" name="IPopupMenuControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="39,5,107,32"/>
+<area shape="rect" id="node1" title="A base control for a pop&#45;up menu/drop&#45;down list that stays within the bounds of the IGraphics context..." alt="" coords="5,79,141,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="40,5,107,31"/>
 </map>

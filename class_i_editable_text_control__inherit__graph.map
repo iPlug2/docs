@@ -1,0 +1,5 @@
+<map id="IEditableTextControl" name="IEditableTextControl">
+<area shape="rect" id="node1" title="A basic control to display some editable text." alt="" coords="5,152,144,177"/>
+<area shape="rect" id="node2" href="$class_i_text_control.html" title="A basic control to display some text." alt="" coords="29,79,121,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="41,5,108,31"/>
+</map>

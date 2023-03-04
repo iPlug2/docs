@@ -1,3 +1,4 @@
 <map id="TestSVGControl" name="TestSVGControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="30,5,97,32"/>
+<area shape="rect" id="node1" title="Control to test drawing SVGs." alt="" coords="5,79,123,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="31,5,97,31"/>
 </map>

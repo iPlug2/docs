@@ -1,5 +1,8 @@
 <map id="IVSwitchControl" name="IVSwitchControl">
-<area shape="rect" id="node2" href="$class_i_switch_control_base.html" title="A base class for switch controls. " alt="" coords="5,80,144,107"/>
-<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="41,5,108,32"/>
-<area shape="rect" id="node4" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;, in order for them to share a common set of colors. " alt="" coords="169,80,263,107"/>
+<area shape="rect" id="node1" title="A vector switch control." alt="" coords="97,152,213,177"/>
+<area shape="rect" id="node5" href="$class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked." alt="" coords="5,225,151,251"/>
+<area shape="rect" id="node6" href="$class_i_v_toggle_control.html" title="A vector toggle control." alt="" coords="175,225,290,251"/>
+<area shape="rect" id="node2" href="$class_i_switch_control_base.html" title="A base class for switch controls." alt="" coords="17,79,155,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="53,5,119,31"/>
+<area shape="rect" id="node4" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="179,79,273,104"/>
 </map>

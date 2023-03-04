@@ -1,3 +1,4 @@
 <map id="IParam::ShapeExp" name="IParam::ShapeExp">
-<area shape="rect" id="node2" href="$struct_i_param_1_1_shape.html" title="Base struct for parameter shaping. " alt="" coords="16,5,125,32"/>
+<area shape="rect" id="node1" title="Exponential parameter shaping." alt="" coords="5,79,133,104"/>
+<area shape="rect" id="node2" href="$struct_i_param_1_1_shape.html" title="Base struct for parameter shaping." alt="" coords="16,5,123,31"/>
 </map>

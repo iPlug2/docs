@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['data',['Data',['../struct_i_v_meter_control_1_1_data.html',1,'IVMeterControl']]],
-  ['data',['Data',['../struct_i_v_scope_control_1_1_data.html',1,'IVScopeControl']]]
+  ['bitmap_0',['Bitmap',['../class_i_graphics_canvas_1_1_bitmap.html',1,'IGraphicsCanvas::Bitmap'],['../class_i_graphics_nano_v_g_1_1_bitmap.html',1,'IGraphicsNanoVG::Bitmap'],['../class_i_graphics_skia_1_1_bitmap.html',1,'IGraphicsSkia::Bitmap']]]
 ];

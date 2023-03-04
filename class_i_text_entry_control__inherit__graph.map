@@ -1,3 +1,4 @@
 <map id="ITextEntryControl" name="ITextEntryControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="34,5,101,32"/>
+<area shape="rect" id="node1" title="A Text entry widget drawn by IGraphics." alt="" coords="5,79,127,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="33,5,99,31"/>
 </map>

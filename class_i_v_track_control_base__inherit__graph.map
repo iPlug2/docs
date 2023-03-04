@@ -1,6 +1,13 @@
 <map id="IVTrackControlBase" name="IVTrackControlBase">
-<area shape="rect" id="node4" href="$class_i_v_meter_control.html" title="Vectorial multichannel capable meter control. " alt="" coords="5,155,179,197"/>
-<area shape="rect" id="node5" href="$class_i_v_multi_slider_control.html" title="A vectorial multi&#45;slider control. " alt="" coords="204,155,343,197"/>
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="97,5,164,32"/>
-<area shape="rect" id="node3" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;, in order for them to share a common set of colors. " alt="" coords="189,5,283,32"/>
+<area shape="rect" id="node1" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="148,129,287,155"/>
+<area shape="rect" id="node4" href="$class_i_v_meter_control.html" title=" " alt="" coords="335,5,513,31"/>
+<area shape="rect" id="node6" href="$class_i_v_meter_control.html" title=" " alt="" coords="355,55,493,80"/>
+<area shape="rect" id="node7" href="$class_i_v_multi_slider_control.html" title=" " alt="" coords="341,104,507,129"/>
+<area shape="rect" id="node8" href="$class_i_v_meter_control.html" title="Vectorial multi&#45;channel capable meter control, linear or log response." alt="" coords="335,153,513,179"/>
+<area shape="rect" id="node9" href="$class_i_v_multi_slider_control.html" title="A vectorial multi&#45;slider control." alt="" coords="355,203,493,243"/>
+<area shape="rect" id="node11" href="$class_i_v_range_slider_control.html" title="A vector range slider control, with two handles." alt="" coords="351,268,497,293"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="19,104,86,129"/>
+<area shape="rect" id="node3" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="5,153,100,179"/>
+<area shape="rect" id="node5" href="$class_i_v_peak_avg_meter_control.html" title=" " alt="" coords="561,80,752,105"/>
+<area shape="rect" id="node10" href="$class_i_v_multi_toggle_control.html" title="A vectorial multi&#45;toggle control, could be used for a trigger in a step sequencer or tarnce gate." alt="" coords="585,203,728,243"/>
 </map>

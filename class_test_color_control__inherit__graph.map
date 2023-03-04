@@ -1,3 +1,4 @@
 <map id="TestColorControl" name="TestColorControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="31,5,99,32"/>
+<area shape="rect" id="node1" title="Control to colors." alt="" coords="5,79,124,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="31,5,98,31"/>
 </map>

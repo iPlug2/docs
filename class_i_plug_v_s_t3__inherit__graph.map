@@ -1,6 +1,12 @@
 <map id="IPlugVST3" name="IPlugVST3">
-<area shape="rect" id="node2" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs. " alt="" coords="55,163,159,189"/>
-<area shape="rect" id="node3" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods. " alt="" coords="61,80,152,107"/>
-<area shape="rect" id="node4" href="$class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="5,5,208,32"/>
-<area shape="rect" id="node5" href="$class_i_plug_processor.html" title="IPlugProcessor\&lt; PLUG\l_SAMPLE_DST \&gt;" alt="" coords="183,155,341,197"/>
+<area shape="rect" id="node1" title="VST3 base class for a non&#45;distributed IPlug VST3 plug&#45;in." alt="" coords="667,133,752,159"/>
+<area shape="rect" id="node2" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs." alt="" coords="461,5,565,31"/>
+<area shape="rect" id="node3" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods." alt="" coords="259,5,351,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,201,31"/>
+<area shape="rect" id="node5" href="$class_i_plug_v_s_t3_processor_base.html" title="Shared VST3 processor code." alt="" coords="426,55,601,80"/>
+<area shape="rect" id="node6" href="$class_i_plug_processor.html" title="The base class for IPlug Audio Processing." alt="" coords="249,55,360,80"/>
+<area shape="rect" id="node7" href="$class_i_plug_v_s_t3_controller_base.html" title="Shared VST3 controller code." alt="" coords="428,104,599,129"/>
+<area shape="rect" id="node8" title=" " alt="" coords="408,154,619,194"/>
+<area shape="rect" id="node9" title=" " alt="" coords="420,219,607,244"/>
+<area shape="rect" id="node10" title=" " alt="" coords="413,269,613,309"/>
 </map>

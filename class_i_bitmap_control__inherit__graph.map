@@ -1,5 +1,7 @@
 <map id="IBitmapControl" name="IBitmapControl">
-<area shape="rect" id="node4" href="$class_i_b_switch_control.html" title="A bitmap switch control. " alt="" coords="33,155,149,181"/>
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="5,5,72,32"/>
-<area shape="rect" id="node3" href="$class_i_bitmap_base.html" title="A base interface, to be combined with IControl for bitmap&#45;based controls &quot;IBControls&quot;, managing an IBitmap and IBlend. " alt="" coords="97,5,193,32"/>
+<area shape="rect" id="node1" title="A basic control to draw a bitmap, or one frame of a stacked bitmap depending on the current value." alt="" coords="75,79,183,104"/>
+<area shape="rect" id="node4" href="$class_i_b_meter_control.html" title="A bitmap meter control, that can be used for VUMeters." alt="" coords="5,152,115,177"/>
+<area shape="rect" id="node5" href="$class_test_mask_control.html" title="Control to display the size of a region." alt="" coords="139,152,261,177"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="43,5,109,31"/>
+<area shape="rect" id="node3" href="$class_i_bitmap_base.html" title="A base interface to be combined with IControl for bitmap&#45;based controls &quot;IBControls&quot;,..." alt="" coords="134,5,231,31"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="ISkLottieControl" name="ISkLottieControl">
+<area shape="rect" id="node1" title="A control that hosts a Lottie animation, via Skia&#39;s Skottie module https://skia.org/user/modules/skot..." alt="" coords="5,79,121,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="30,5,97,31"/>
+</map>

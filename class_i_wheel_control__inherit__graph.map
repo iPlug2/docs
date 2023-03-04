@@ -1,0 +1,5 @@
+<map id="IWheelControl" name="IWheelControl">
+<area shape="rect" id="node1" title="Vectorial &quot;wheel&quot; control for pitchbender/modwheel." alt="" coords="19,152,122,177"/>
+<area shape="rect" id="node2" href="$class_i_slider_control_base.html" title="A base class for slider/fader controls, to handle mouse action and Sender." alt="" coords="5,79,136,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="37,5,104,31"/>
+</map>

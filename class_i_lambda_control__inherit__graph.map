@@ -1,3 +1,4 @@
 <map id="ILambdaControl" name="ILambdaControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="29,5,96,32"/>
+<area shape="rect" id="node1" title="A control that can be specialised with a lambda function, for quick experiments without making a cust..." alt="" coords="5,79,120,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="29,5,96,31"/>
 </map>

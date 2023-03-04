@@ -1,0 +1,4 @@
+<map id="IMultiTouchControlBase" name="IMultiTouchControlBase">
+<area shape="rect" id="node1" title="A base class for controls that can do do multitouch." alt="" coords="5,5,167,31"/>
+<area shape="rect" id="node2" href="$class_test_m_t_control.html" title="Control to test multi touch." alt="" coords="32,79,140,104"/>
+</map>

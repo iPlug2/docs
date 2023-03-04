@@ -1,3 +1,4 @@
 <map id="TestShadowGradientControl" name="TestShadowGradientControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="65,5,132,32"/>
+<area shape="rect" id="node1" title="Control to test drawing shadows with gradients." alt="" coords="5,79,191,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="65,5,131,31"/>
 </map>

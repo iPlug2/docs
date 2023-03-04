@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['duplicating_20projects',['Duplicating Projects',['../md_duplicate.html',1,'']]]
+  ['iosapp_0',['iosapp',['../md_iosapp.html',1,'']]]
 ];

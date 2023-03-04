@@ -1,3 +1,4 @@
 <map id="IPanelControl" name="IPanelControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="22,5,89,32"/>
+<area shape="rect" id="node1" title="A basic control to fill a rectangle with a color or gradient." alt="" coords="5,79,105,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="22,5,89,31"/>
 </map>

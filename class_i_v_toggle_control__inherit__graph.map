@@ -1,0 +1,7 @@
+<map id="IVToggleControl" name="IVToggleControl">
+<area shape="rect" id="node1" title="A vector toggle control." alt="" coords="86,225,201,251"/>
+<area shape="rect" id="node2" href="$class_i_v_switch_control.html" title="A vector switch control." alt="" coords="85,152,201,177"/>
+<area shape="rect" id="node3" href="$class_i_switch_control_base.html" title="A base class for switch controls." alt="" coords="5,79,143,104"/>
+<area shape="rect" id="node4" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="41,5,107,31"/>
+<area shape="rect" id="node5" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="167,79,261,104"/>
+</map>

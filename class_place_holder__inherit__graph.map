@@ -1,0 +1,5 @@
+<map id="PlaceHolder" name="PlaceHolder">
+<area shape="rect" id="node1" title="A control to use as a placeholder during development." alt="" coords="5,152,99,177"/>
+<area shape="rect" id="node2" href="$class_i_text_control.html" title="A basic control to display some text." alt="" coords="6,79,98,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="19,5,85,31"/>
+</map>

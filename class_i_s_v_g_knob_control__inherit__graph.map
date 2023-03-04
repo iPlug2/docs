@@ -1,0 +1,5 @@
+<map id="ISVGKnobControl" name="ISVGKnobControl">
+<area shape="rect" id="node1" title="A vector knob/dial control which rotates an SVG image." alt="" coords="6,152,131,177"/>
+<area shape="rect" id="node2" href="$class_i_knob_control_base.html" title="A base class for knob/dial controls, to handle mouse action and Sender." alt="" coords="5,79,132,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="35,5,102,31"/>
+</map>

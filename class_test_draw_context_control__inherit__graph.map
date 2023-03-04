@@ -1,3 +1,4 @@
 <map id="TestDrawContextControl" name="TestDrawContextControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="54,5,121,32"/>
+<area shape="rect" id="node1" title="Control to test obtaining a drawing API (NanoVG, Skia, Canvas) context and using that API within an I..." alt="" coords="5,79,168,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="53,5,120,31"/>
 </map>

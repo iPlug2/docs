@@ -1,3 +1,4 @@
 <map id="ICornerResizerControl" name="ICornerResizerControl">
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="47,5,115,32"/>
+<area shape="rect" id="node1" title="A control for resizing the plug&#45;in window by clicking and dragging in the bottom right&#45;hand corner Th..." alt="" coords="5,79,153,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="46,5,113,31"/>
 </map>

@@ -1,5 +1,8 @@
-<map id="IVMeterControl&lt; MAXNC, QUEUE_SIZE &gt;" name="IVMeterControl&lt; MAXNC, QUEUE_SIZE &gt;">
-<area shape="rect" id="node2" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters. " alt="" coords="22,80,161,107"/>
-<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="6,5,73,32"/>
-<area shape="rect" id="node4" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;, in order for them to share a common set of colors. " alt="" coords="98,5,192,32"/>
+<map id="IVMeterControl&lt; MAXNC &gt;" name="IVMeterControl&lt; MAXNC &gt;">
+<area shape="rect" id="node1" title="Vectorial multi&#45;channel capable meter control, linear or log response." alt="" coords="5,152,184,177"/>
+<area shape="rect" id="node5" href="$class_i_v_peak_avg_meter_control.html" title="Vectorial multi&#45;channel capable meter control, with log response, held&#45;peaks and filled&#45;average/rms R..." alt="" coords="13,225,176,265"/>
+<area shape="rect" id="node2" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="25,79,164,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="9,5,76,31"/>
+<area shape="rect" id="node4" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="101,5,195,31"/>
+<area shape="rect" id="node6" href="$class_i_v_l_e_d_meter_control.html" title="Vectorial multi&#45;channel capable meter control with segmented LEDs, log response." alt="" coords="23,313,166,353"/>
 </map>

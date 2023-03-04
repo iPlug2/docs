@@ -1,3 +1,4 @@
 <map id="IParam::ShapeLinear" name="IParam::ShapeLinear">
-<area shape="rect" id="node2" href="$struct_i_param_1_1_shape.html" title="Base struct for parameter shaping. " alt="" coords="23,5,132,32"/>
+<area shape="rect" id="node1" title="Linear parameter shaping." alt="" coords="5,79,148,104"/>
+<area shape="rect" id="node2" href="$struct_i_param_1_1_shape.html" title="Base struct for parameter shaping." alt="" coords="23,5,130,31"/>
 </map>

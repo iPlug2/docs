@@ -1,5 +1,6 @@
 <map id="IParam::Shape" name="IParam::Shape">
-<area shape="rect" id="node2" href="$struct_i_param_1_1_shape_exp.html" title="Exponential parameter shaping. " alt="" coords="5,80,136,107"/>
-<area shape="rect" id="node3" href="$struct_i_param_1_1_shape_linear.html" title="Linear parameter shaping. " alt="" coords="161,80,305,107"/>
-<area shape="rect" id="node4" href="$struct_i_param_1_1_shape_pow_curve.html" title="PowCurve parameter shaping. " alt="" coords="329,80,500,107"/>
+<area shape="rect" id="node1" title="Base struct for parameter shaping." alt="" coords="176,5,283,31"/>
+<area shape="rect" id="node2" href="$struct_i_param_1_1_shape_exp.html" title="Exponential parameter shaping." alt="" coords="5,79,133,104"/>
+<area shape="rect" id="node3" href="$struct_i_param_1_1_shape_linear.html" title="Linear parameter shaping." alt="" coords="158,79,301,104"/>
+<area shape="rect" id="node4" href="$struct_i_param_1_1_shape_pow_curve.html" title="PowCurve parameter shaping." alt="" coords="325,79,491,104"/>
 </map>

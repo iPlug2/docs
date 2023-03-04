@@ -1,5 +1,8 @@
 <map id="ISliderControlBase" name="ISliderControlBase">
-<area shape="rect" id="node3" href="$class_i_b_slider_control.html" title="A bitmap slider/fader control. " alt="" coords="5,155,115,181"/>
-<area shape="rect" id="node4" href="$class_i_v_slider_control.html" title="A vector slider control. " alt="" coords="139,155,249,181"/>
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control. " alt="" coords="93,5,160,32"/>
+<area shape="rect" id="node1" title="A base class for slider/fader controls, to handle mouse action and Sender." alt="" coords="208,79,339,104"/>
+<area shape="rect" id="node3" href="$class_i_b_slider_control.html" title="A bitmap slider/fader control." alt="" coords="5,152,115,177"/>
+<area shape="rect" id="node4" href="$class_i_s_v_g_slider_control.html" title="A Slider control with and SVG for track and handle." alt="" coords="139,152,267,177"/>
+<area shape="rect" id="node5" href="$class_i_v_slider_control.html" title="A vector slider control." alt="" coords="291,152,400,177"/>
+<area shape="rect" id="node6" href="$class_i_wheel_control.html" title="Vectorial &quot;wheel&quot; control for pitchbender/modwheel." alt="" coords="425,152,527,177"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="240,5,307,31"/>
 </map>

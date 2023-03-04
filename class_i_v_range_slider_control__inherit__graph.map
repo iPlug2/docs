@@ -1,0 +1,6 @@
+<map id="IVRangeSliderControl" name="IVRangeSliderControl">
+<area shape="rect" id="node1" title="A vector range slider control, with two handles." alt="" coords="17,152,164,177"/>
+<area shape="rect" id="node2" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="21,79,160,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="5,5,72,31"/>
+<area shape="rect" id="node4" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="97,5,191,31"/>
+</map>

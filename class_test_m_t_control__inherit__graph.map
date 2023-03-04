@@ -1,0 +1,5 @@
+<map id="TestMTControl" name="TestMTControl">
+<area shape="rect" id="node1" title="Control to test multi touch." alt="" coords="54,79,162,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="5,5,72,31"/>
+<area shape="rect" id="node3" href="$class_i_multi_touch_control_base.html" title="A base class for controls that can do do multitouch." alt="" coords="97,5,258,31"/>
+</map>

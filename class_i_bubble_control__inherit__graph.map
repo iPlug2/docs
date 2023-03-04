@@ -1,0 +1,4 @@
+<map id="IBubbleControl" name="IBubbleControl">
+<area shape="rect" id="node1" title="A special control to draw contextual info as a slider etc is moved If used in the main IControl stack..." alt="" coords="5,79,112,104"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="25,5,92,31"/>
+</map>
