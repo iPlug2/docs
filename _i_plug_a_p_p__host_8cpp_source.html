@@ -125,10 +125,10 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  CloseAudio();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">if</span>(mMidiIn)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordflow">if</span> (mMidiIn)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    mMidiIn-&gt;cancelCallback();</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordflow">if</span>(mMidiOut)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordflow">if</span> (mMidiOut)</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    mMidiOut-&gt;closePort();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -183,13 +183,13 @@ $(function() {
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">struct </span>stat st;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span>(stat(mINIPath.Get(), &amp;st) == 0) <span class="comment">// if directory exists</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (stat(mINIPath.Get(), &amp;st) == 0) <span class="comment">// if directory exists</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    mINIPath.Append(<span class="stringliteral">&quot;settings.ini&quot;</span>); <span class="comment">// add file name to path</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">char</span> buf[STRBUFSZ];</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span>(stat(mINIPath.Get(), &amp;st) == 0) <span class="comment">// if settings file exists read values into state</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> (stat(mINIPath.Get(), &amp;st) == 0) <span class="comment">// if settings file exists read values into state</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      DBGMSG(<span class="stringliteral">&quot;Reading ini file from %s\n&quot;</span>, mINIPath.Get());</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      </div>
@@ -231,7 +231,7 @@ $(function() {
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">int</span> result_code = mkdir(mINIPath.Get(), S_IRWXU | S_IRWXG | S_IRWXO);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    umask(process_mask);</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span>(!result_code)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span> (!result_code)</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      mINIPath.Append(<span class="stringliteral">&quot;\\settings.ini&quot;</span>);</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      UpdateINI(); <span class="comment">// will write file if doesn&#39;t exist</span></div>
@@ -293,9 +293,9 @@ $(function() {
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="class_i_plug_a_p_p_host.html#a4d52f6571ecf5a788e81cf2d23d793c5">  207</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_i_plug_a_p_p_host.html#a4d52f6571ecf5a788e81cf2d23d793c5">IPlugAPPHost::GetAudioDeviceIdx</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* deviceNameToTest)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; mAudioIDDevNames.size(); i++)</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mAudioIDDevNames.size(); i++)</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">if</span>(!strcmp(deviceNameToTest, mAudioIDDevNames.at(i).c_str() ))</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">if</span> (!strcmp(deviceNameToTest, mAudioIDDevNames.at(i).c_str() ))</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      <span class="keywordflow">return</span> i;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  }</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  </div>
@@ -306,33 +306,33 @@ $(function() {
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keywordtype">int</span> start = 1;</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keywordflow">if</span>(direction == ERoute::kInput)</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keywordflow">if</span> (direction == ERoute::kInput)</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  {</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">if</span>(!strcmp(nameToTest, OFF_TEXT)) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordflow">if</span> (!strcmp(nameToTest, OFF_TEXT)) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    </div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="preprocessor">  #ifdef OS_MAC</span></div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    start = 2;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">if</span>(!strcmp(nameToTest, <span class="stringliteral">&quot;virtual input&quot;</span>)) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordflow">if</span> (!strcmp(nameToTest, <span class="stringliteral">&quot;virtual input&quot;</span>)) <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">  #endif</span></div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mMidiIn-&gt;getPortCount(); i++)</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <span class="keywordflow">if</span>(!strcmp(nameToTest, mMidiIn-&gt;getPortName(i).c_str()))</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <span class="keywordflow">if</span> (!strcmp(nameToTest, mMidiIn-&gt;getPortName(i).c_str()))</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">return</span> (i + start);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  }</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  {</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">if</span>(!strcmp(nameToTest, OFF_TEXT)) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    <span class="keywordflow">if</span> (!strcmp(nameToTest, OFF_TEXT)) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  </div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">  #ifdef OS_MAC</span></div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    start = 2;</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordflow">if</span>(!strcmp(nameToTest, <span class="stringliteral">&quot;virtual output&quot;</span>)) <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordflow">if</span> (!strcmp(nameToTest, <span class="stringliteral">&quot;virtual output&quot;</span>)) <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">  #endif</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  </div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; mMidiOut-&gt;getPortCount(); i++)</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keywordflow">if</span>(!strcmp(nameToTest, mMidiOut-&gt;getPortName(i).c_str()))</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keywordflow">if</span> (!strcmp(nameToTest, mMidiOut-&gt;getPortName(i).c_str()))</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordflow">return</span> (i + start);</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  }</div>
@@ -360,23 +360,23 @@ $(function() {
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="preprocessor">#ifdef OS_MAC</span></div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordtype">size_t</span> colonIdx = deviceName.rfind(<span class="stringliteral">&quot;: &quot;</span>);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordflow">if</span>(colonIdx != std::string::npos &amp;&amp; deviceName.length() &gt;= 2)</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordflow">if</span> (colonIdx != std::string::npos &amp;&amp; deviceName.length() &gt;= 2)</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>      deviceName = deviceName.substr(colonIdx + 2, deviceName.length() - colonIdx - 2);</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    </div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    mAudioIDDevNames.push_back(deviceName);</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordflow">if</span> ( info.probed == <span class="keyword">false</span> )</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keywordflow">if</span> (info.probed == <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>      std::cout &lt;&lt; deviceName &lt;&lt; <span class="stringliteral">&quot;: Probe Status = Unsuccessful\n&quot;</span>;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( !strcmp(<span class="stringliteral">&quot;Generic Low Latency ASIO Driver&quot;</span>, deviceName.c_str() ))</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strcmp(<span class="stringliteral">&quot;Generic Low Latency ASIO Driver&quot;</span>, deviceName.c_str()))</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>      std::cout &lt;&lt; deviceName &lt;&lt; <span class="stringliteral">&quot;: Probe Status = Unsuccessful\n&quot;</span>;</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">if</span>(info.inputChannels &gt; 0)</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="keywordflow">if</span> (info.inputChannels &gt; 0)</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        mAudioInputDevs.push_back(i);</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keywordflow">if</span>(info.outputChannels &gt; 0)</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <span class="keywordflow">if</span> (info.outputChannels &gt; 0)</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        mAudioOutputDevs.push_back(i);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>      <span class="keywordflow">if</span> (info.isDefaultInput)</div>
@@ -459,12 +459,12 @@ $(function() {
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  }</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span><span class="preprocessor">#if defined OS_WIN</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <span class="keywordflow">if</span>(mState.mAudioDriverType == kDeviceASIO)</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <span class="keywordflow">if</span> (mState.mAudioDriverType == kDeviceASIO)</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>    mDAC = std::make_unique&lt;RtAudio&gt;(RtAudio::WINDOWS_ASIO);</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    mDAC = std::make_unique&lt;RtAudio&gt;(RtAudio::WINDOWS_DS);</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span><span class="preprocessor">#elif defined OS_MAC</span></div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  <span class="keywordflow">if</span>(mState.mAudioDriverType == kDeviceCoreAudio)</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  <span class="keywordflow">if</span> (mState.mAudioDriverType == kDeviceCoreAudio)</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    mDAC = std::make_unique&lt;RtAudio&gt;(RtAudio::MACOSX_CORE);</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  <span class="comment">//else</span></div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  <span class="comment">//mDAC = std::make_unique&lt;RtAudio&gt;(RtAudio::UNIX_JACK);</span></div>
@@ -472,7 +472,7 @@ $(function() {
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="preprocessor">  #error NOT IMPLEMENTED</span></div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>  <span class="keywordflow">if</span>(mDAC)</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>  <span class="keywordflow">if</span> (mDAC)</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -484,7 +484,7 @@ $(function() {
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  <span class="keywordtype">int</span> outputID = -1;</div>
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="preprocessor">#if defined OS_WIN</span></div>
-<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  <span class="keywordflow">if</span>(mState.mAudioDriverType == kDeviceASIO)</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  <span class="keywordflow">if</span> (mState.mAudioDriverType == kDeviceASIO)</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>    inputID = <a class="code hl_function" href="class_i_plug_a_p_p_host.html#a4d52f6571ecf5a788e81cf2d23d793c5">GetAudioDeviceIdx</a>(mState.mAudioOutDev.Get());</div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    inputID = <a class="code hl_function" href="class_i_plug_a_p_p_host.html#a4d52f6571ecf5a788e81cf2d23d793c5">GetAudioDeviceIdx</a>(mState.mAudioInDev.Get());</div>
@@ -549,9 +549,9 @@ $(function() {
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>{</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>  <span class="keywordtype">int</span> port = <a class="code hl_function" href="class_i_plug_a_p_p_host.html#a47c0983df4cdb914580941840da70501">GetMIDIPortNumber</a>(direction, pPortName);</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span> </div>
-<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>  <span class="keywordflow">if</span>(direction == ERoute::kInput)</div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>  <span class="keywordflow">if</span> (direction == ERoute::kInput)</div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>  {</div>
-<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>    <span class="keywordflow">if</span>(port == -1)</div>
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>    <span class="keywordflow">if</span> (port == -1)</div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    {</div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>      mState.mMidiInDev.Set(OFF_TEXT);</div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>      UpdateINI();</div>
@@ -574,7 +574,7 @@ $(function() {
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>      }</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span><span class="preprocessor">  #elif defined OS_MAC</span></div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(port == 1)</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (port == 1)</div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>      {</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>        std::string virtualMidiInputName = <span class="stringliteral">&quot;To &quot;</span>;</div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>        virtualMidiInputName += BUNDLE_NAME;</div>
@@ -593,7 +593,7 @@ $(function() {
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>  }</div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>  <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>  {</div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    <span class="keywordflow">if</span>(port == -1)</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    <span class="keywordflow">if</span> (port == -1)</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    {</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>      mState.mMidiOutDev.Set(OFF_TEXT);</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>      UpdateINI();</div>
@@ -614,7 +614,7 @@ $(function() {
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>      }</div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="preprocessor">#elif defined OS_MAC</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span>(port == 1)</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (port == 1)</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>      {</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>        std::string virtualMidiOutputName = <span class="stringliteral">&quot;From &quot;</span>;</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>        virtualMidiOutputName += BUNDLE_NAME;</div>
@@ -675,7 +675,7 @@ $(function() {
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span> </div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  mBufferSize = iovs; <span class="comment">// mBufferSize may get changed by stream</span></div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  DBGMSG(<span class="stringliteral">&quot;\ntrying to start audio stream @ %i sr, %i buffer size\nindev = %i:%s\noutdev = %i:%s\ninputs = %i\noutputs = %i\n&quot;</span>,</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  DBGMSG(<span class="stringliteral">&quot;trying to start audio stream @ %i sr, %i buffer size\nindev = %i:%s\noutdev = %i:%s\ninputs = %i\noutputs = %i\n&quot;</span>,</div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>         sr, mBufferSize, inId, <a class="code hl_function" href="class_i_plug_a_p_p_host.html#a50d2b979e5a0b53f62bbd0ef564ec7bd">GetAudioDeviceName</a>(inId).c_str(), outId, <a class="code hl_function" href="class_i_plug_a_p_p_host.html#a50d2b979e5a0b53f62bbd0ef564ec7bd">GetAudioDeviceName</a>(outId).c_str(), iParams.nChannels, oParams.nChannels);</div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span> </div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>  RtAudio::StreamOptions options;</div>
@@ -843,7 +843,7 @@ $(function() {
 <div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>  </div>
 <div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>  <span class="keywordflow">if</span> (pMsg-&gt;size() &gt; 3)</div>
 <div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>  {</div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    <span class="keywordflow">if</span>(pMsg-&gt;size() &gt; MAX_SYSEX_SIZE)</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    <span class="keywordflow">if</span> (pMsg-&gt;size() &gt; MAX_SYSEX_SIZE)</div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    {</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>      DBGMSG(<span class="stringliteral">&quot;SysEx message exceeds MAX_SYSEX_SIZE\n&quot;</span>);</div>
 <div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>      <span class="keywordflow">return</span>;</div>
