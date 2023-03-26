@@ -102,11 +102,11 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>BEGIN_IPLUG_NAMESPACE</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>BEGIN_IGRAPHICS_NAMESPACE</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_i_f_p_s_display_control.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_f_p_s_display_control.html">IFPSDisplayControl</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_control.html">IControl</a></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                         , <span class="keyword">public</span> <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> MAXBUF = 100;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_i_f_p_s_display_control.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_f_p_s_display_control.html">IFPSDisplayControl</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_control.html">IControl</a>, <span class="keyword">public</span> <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> MAXBUF = 100;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">enum</span> EStyle</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  {</div>
@@ -117,10 +117,10 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  };</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="class_i_f_p_s_display_control.html">IFPSDisplayControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, EStyle style = EStyle::kFPS, <span class="keyword">const</span> <span class="keywordtype">char</span>* label = <span class="stringliteral">&quot;Frame Time&quot;</span>)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  : <a class="code hl_class" href="class_i_control.html">IControl</a>(bounds)</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  , <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a>(DEFAULT_STYLE)</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  , mStyle(style)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  , mNameLabel(label)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    : <a class="code hl_class" href="class_i_control.html">IControl</a>(bounds)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    , <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a>(DEFAULT_STYLE)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    , mStyle(style)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    , mNameLabel(label)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_function" href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">AttachIControl</a>(<span class="keyword">this</span>, label);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
@@ -133,149 +133,153 @@ $(function() {
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">  </span>{</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    mStyle++;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span>(mStyle == kNumStyles)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (mStyle == kNumStyles)</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      mStyle = kFPS;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_i_f_p_s_display_control.html#aac67bee7aab00bd360d6289eef78043c">   62</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_f_p_s_display_control.html#aac67bee7aab00bd360d6289eef78043c">IsDirty</a>()<span class="keyword"> override</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">void</span> Update(<span class="keywordtype">float</span> frameTime)</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    mReadPos = (mReadPos+1) % MAXBUF;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    mBuffer[mReadPos] = frameTime;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">   73</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">Draw</a>(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">float</span> avg = 0.f;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      avg += mBuffer[i];</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    avg = avg / (float)MAXBUF;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_i_f_p_s_display_control.html#aac67bee7aab00bd360d6289eef78043c">   62</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_f_p_s_display_control.html#aac67bee7aab00bd360d6289eef78043c">IsDirty</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">void</span> Update(<span class="keywordtype">float</span> frameTime)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    mReadPos = (mReadPos + 1) % MAXBUF;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    mBuffer[mReadPos] = frameTime;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">   70</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">Draw</a>(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">float</span> avg = 0.f;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      avg += mBuffer[i];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    avg = avg / (float)MAXBUF;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    g.<a class="code hl_function" href="class_i_graphics.html#a7056c9288ed66e21b8c9f424054677b2">FillRect</a>(<a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kBG), mRECT);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    g.<a class="code hl_function" href="class_i_graphics.html#a0a7bba668c103968e96fad159173eff3">DrawRect</a>(COLOR_BLACK, mRECT);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    g.<a class="code hl_function" href="class_i_graphics.html#a7056c9288ed66e21b8c9f424054677b2">FillRect</a>(<a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kBG), mRECT);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    g.<a class="code hl_function" href="class_i_graphics.html#a0a7bba668c103968e96fad159173eff3">DrawRect</a>(COLOR_BLACK, mRECT);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> padded = mRECT.<a class="code hl_function" href="struct_i_r_e_c_t.html#af020b51247a87c9427041307c53dd6d7">GetPadded</a>(-2);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">float</span> x = padded.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">float</span> y = padded.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">float</span> w = padded.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">float</span> h = padded.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>();</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// TODO: replace with IGraphics::DrawData, make it work with lice</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    g.<a class="code hl_function" href="class_i_graphics.html#aafa78e8658ed993d876cbb4d91397043">PathMoveTo</a>(x, y+h);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">if</span> (mStyle == kFPS)</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordtype">float</span> v = 1.0f / (0.00001f + mBuffer[(mReadPos+i) % MAXBUF]);</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">float</span> vx, vy;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordflow">if</span> (v &gt; 80.0f) v = 80.0f;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        vx = x + ((float)i/(MAXBUF-1)) * w;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        vy = y + h - ((v / 80.0f) * h);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(vx, vy);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mStyle == kPercentage)</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++) {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">float</span> v = mBuffer[(mReadPos+i) % MAXBUF] * 1.0f;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> padded = mRECT.<a class="code hl_function" href="struct_i_r_e_c_t.html#af020b51247a87c9427041307c53dd6d7">GetPadded</a>(-2);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">float</span> x = padded.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">float</span> y = padded.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">float</span> w = padded.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">float</span> h = padded.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// TODO: replace with IGraphics::DrawData, make it work with lice</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    g.<a class="code hl_function" href="class_i_graphics.html#aafa78e8658ed993d876cbb4d91397043">PathMoveTo</a>(x, y + h);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (mStyle == kFPS)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">float</span> v = 1.0f / (0.00001f + mBuffer[(mReadPos + i) % MAXBUF]);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">float</span> vx, vy;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span> (v &gt; 80.0f)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>          v = 80.0f;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        vx = x + ((float)i / (MAXBUF - 1)) * w;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        vy = y + h - ((v / 80.0f) * h);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(vx, vy);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mStyle == kPercentage)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>      {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">float</span> v = mBuffer[(mReadPos + i) % MAXBUF] * 1.0f;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">float</span> vx, vy;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (v &gt; 100.0f) v = 100.0f;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        vx = x + ((float)i/(MAXBUF-1)) * w;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        vy = y + h - ((v / 100.0f) * h);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(vx, vy);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    {</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++) {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordtype">float</span> v = mBuffer[(mReadPos+i) % MAXBUF] * 1000.0f;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordtype">float</span> vx, vy;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">if</span> (v &gt; 20.0f) v = 20.0f;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        vx = x + ((float)i/(MAXBUF-1)) * w;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        vy = y + h - ((v / 20.0f) * h);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(vx, vy);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(mRECT.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">R</a>, mRECT.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">B</a>);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    g.<a class="code hl_function" href="class_i_graphics.html#a185b056c70c54319c85c72246cd79458">PathFill</a>(<a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFG));</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">if</span> (v &gt; 100.0f)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>          v = 100.0f;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        vx = x + ((float)i / (MAXBUF - 1)) * w;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        vy = y + h - ((v / 100.0f) * h);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(vx, vy);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; MAXBUF; i++)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordtype">float</span> v = mBuffer[(mReadPos + i) % MAXBUF] * 1000.0f;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordtype">float</span> vx, vy;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">if</span> (v &gt; 20.0f)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>          v = 20.0f;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        vx = x + ((float)i / (MAXBUF - 1)) * w;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        vy = y + h - ((v / 20.0f) * h);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(vx, vy);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mAPILabelText, g.<a class="code hl_function" href="class_i_graphics.html#a44c574012a59b541e6f18e8ecf1f7671">GetDrawingAPIStr</a>(), padded);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">if</span> (mNameLabel.GetLength())</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mNameLabelText, mNameLabel.Get(), padded);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    g.<a class="code hl_function" href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">PathLineTo</a>(mRECT.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">R</a>, mRECT.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">B</a>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    g.<a class="code hl_function" href="class_i_graphics.html#a185b056c70c54319c85c72246cd79458">PathFill</a>(<a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFG));</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mAPILabelText, g.<a class="code hl_function" href="class_i_graphics.html#a44c574012a59b541e6f18e8ecf1f7671">GetDrawingAPIStr</a>(), padded);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    WDL_String str;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">if</span> (mStyle == kFPS)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.2f FPS&quot;</span>, 1.0f / avg);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mTopLabelText, str.Get(), padded);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.2f ms&quot;</span>, avg * 1000.0f);</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mBottomLabelText, str.Get(), padded);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mStyle == kPercentage)</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.1f %%&quot;</span>, avg * 1.0f);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mTopLabelText, str.Get(), padded);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.2f ms&quot;</span>, avg * 1000.0f);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mTopLabelText, str.Get(), padded);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  }</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keywordtype">int</span> mStyle;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  WDL_String mNameLabel;</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordtype">float</span> mBuffer[MAXBUF] = {};</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keywordtype">int</span> mReadPos = 0;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keywordtype">float</span> mPadding = 1.f;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; mNameLabelText = mText;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a> mAPILabelText = <a class="code hl_struct" href="struct_i_text.html">IText</a>(14, <a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFR), DEFAULT_FONT, EAlign::Near, EVAlign::Top);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a> mTopLabelText = <a class="code hl_struct" href="struct_i_text.html">IText</a>(18, <a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFR), DEFAULT_FONT, EAlign::Far, EVAlign::Top);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a> mBottomLabelText = <a class="code hl_struct" href="struct_i_text.html">IText</a>(15, <a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFR), DEFAULT_FONT, EAlign::Far, EVAlign::Bottom);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>};</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">if</span> (mNameLabel.GetLength())</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mNameLabelText, mNameLabel.Get(), padded);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    WDL_String str;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">if</span> (mStyle == kFPS)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.2f FPS&quot;</span>, 1.0f / avg);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mTopLabelText, str.Get(), padded);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.2f ms&quot;</span>, avg * 1000.0f);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mBottomLabelText, str.Get(), padded);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (mStyle == kPercentage)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.1f %%&quot;</span>, avg * 1.0f);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mTopLabelText, str.Get(), padded);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      str.SetFormatted(32, <span class="stringliteral">&quot;%.2f ms&quot;</span>, avg * 1000.0f);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      g.<a class="code hl_function" href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">DrawText</a>(mTopLabelText, str.Get(), padded);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="keywordtype">int</span> mStyle;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  WDL_String mNameLabel;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">float</span> mBuffer[MAXBUF] = {};</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordtype">int</span> mReadPos = 0;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="keywordtype">float</span> mPadding = 1.f;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; mNameLabelText = mText;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a> mAPILabelText = <a class="code hl_struct" href="struct_i_text.html">IText</a>(14, <a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFR), DEFAULT_FONT, EAlign::Near, EVAlign::Top);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a> mTopLabelText = <a class="code hl_struct" href="struct_i_text.html">IText</a>(18, <a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFR), DEFAULT_FONT, EAlign::Far, EVAlign::Top);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_struct" href="struct_i_text.html">IText</a> mBottomLabelText = <a class="code hl_struct" href="struct_i_text.html">IText</a>(15, <a class="code hl_function" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a>(kFR), DEFAULT_FONT, EAlign::Far, EVAlign::Bottom);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
 <div class="ttc" id="aclass_i_control_html"><div class="ttname"><a href="class_i_control.html">IControl</a></div><div class="ttdoc">The lowest level base class of an IGraphics control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00042">IControl.h:47</a></div></div>
-<div class="ttc" id="aclass_i_f_p_s_display_control_html"><div class="ttname"><a href="class_i_f_p_s_display_control.html">IFPSDisplayControl</a></div><div class="ttdoc">Performance display meter, based on code from NanoVG This is a special control that lives outside the...</div><div class="ttdef"><b>Definition:</b> <a href="_i_f_p_s_display_control_8h_source.html#l00027">IFPSDisplayControl.h:29</a></div></div>
-<div class="ttc" id="aclass_i_f_p_s_display_control_html_a41926f619e4bfc4eda1bff51f22ee36d"><div class="ttname"><a href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">IFPSDisplayControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_f_p_s_display_control_8h_source.html#l00073">IFPSDisplayControl.h:73</a></div></div>
+<div class="ttc" id="aclass_i_f_p_s_display_control_html"><div class="ttname"><a href="class_i_f_p_s_display_control.html">IFPSDisplayControl</a></div><div class="ttdoc">Performance display meter, based on code from NanoVG This is a special control that lives outside the...</div><div class="ttdef"><b>Definition:</b> <a href="_i_f_p_s_display_control_8h_source.html#l00027">IFPSDisplayControl.h:28</a></div></div>
+<div class="ttc" id="aclass_i_f_p_s_display_control_html_a41926f619e4bfc4eda1bff51f22ee36d"><div class="ttname"><a href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">IFPSDisplayControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_f_p_s_display_control_8h_source.html#l00070">IFPSDisplayControl.h:70</a></div></div>
 <div class="ttc" id="aclass_i_f_p_s_display_control_html_aa8b182dd8617816b343c4fd6bf8030ec"><div class="ttname"><a href="class_i_f_p_s_display_control.html#aa8b182dd8617816b343c4fd6bf8030ec">IFPSDisplayControl::OnMouseDown</a></div><div class="ttdeci">void OnMouseDown(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse down event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_f_p_s_display_control_8h_source.html#l00054">IFPSDisplayControl.h:54</a></div></div>
 <div class="ttc" id="aclass_i_f_p_s_display_control_html_aac67bee7aab00bd360d6289eef78043c"><div class="ttname"><a href="class_i_f_p_s_display_control.html#aac67bee7aab00bd360d6289eef78043c">IFPSDisplayControl::IsDirty</a></div><div class="ttdeci">bool IsDirty() override</div><div class="ttdoc">Called at each display refresh by the IGraphics draw loop, after IControl::Animate(),...</div><div class="ttdef"><b>Definition:</b> <a href="_i_f_p_s_display_control_8h_source.html#l00062">IFPSDisplayControl.h:62</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00082">IGraphics.h:86</a></div></div>
-<div class="ttc" id="aclass_i_graphics_html_a0a7bba668c103968e96fad159173eff3"><div class="ttname"><a href="class_i_graphics.html#a0a7bba668c103968e96fad159173eff3">IGraphics::DrawRect</a></div><div class="ttdeci">virtual void DrawRect(const IColor &amp;color, const IRECT &amp;bounds, const IBlend *pBlend=0, float thickness=1.f)</div><div class="ttdoc">Draw a rectangle to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l02412">IGraphics.cpp:2412</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html_a0a7bba668c103968e96fad159173eff3"><div class="ttname"><a href="class_i_graphics.html#a0a7bba668c103968e96fad159173eff3">IGraphics::DrawRect</a></div><div class="ttdeci">virtual void DrawRect(const IColor &amp;color, const IRECT &amp;bounds, const IBlend *pBlend=0, float thickness=1.f)</div><div class="ttdoc">Draw a rectangle to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l02390">IGraphics.cpp:2390</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html_a185b056c70c54319c85c72246cd79458"><div class="ttname"><a href="class_i_graphics.html#a185b056c70c54319c85c72246cd79458">IGraphics::PathFill</a></div><div class="ttdeci">virtual void PathFill(const IPattern &amp;pattern, const IFillOptions &amp;options=IFillOptions(), const IBlend *pBlend=0)=0</div><div class="ttdoc">Fill the current current path.</div></div>
-<div class="ttc" id="aclass_i_graphics_html_a1af84cb75ed09bae3deac0ec32076ddd"><div class="ttname"><a href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">IGraphics::DrawText</a></div><div class="ttdeci">void DrawText(const IText &amp;text, const char *str, const IRECT &amp;bounds, const IBlend *pBlend=0)</div><div class="ttdoc">Draw some text to the graphics context in a specific rectangle.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l00648">IGraphics.cpp:648</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html_a1af84cb75ed09bae3deac0ec32076ddd"><div class="ttname"><a href="class_i_graphics.html#a1af84cb75ed09bae3deac0ec32076ddd">IGraphics::DrawText</a></div><div class="ttdeci">void DrawText(const IText &amp;text, const char *str, const IRECT &amp;bounds, const IBlend *pBlend=0)</div><div class="ttdoc">Draw some text to the graphics context in a specific rectangle.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l00623">IGraphics.cpp:623</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html_a44c574012a59b541e6f18e8ecf1f7671"><div class="ttname"><a href="class_i_graphics.html#a44c574012a59b541e6f18e8ecf1f7671">IGraphics::GetDrawingAPIStr</a></div><div class="ttdeci">virtual const char * GetDrawingAPIStr()=0</div></div>
-<div class="ttc" id="aclass_i_graphics_html_a7056c9288ed66e21b8c9f424054677b2"><div class="ttname"><a href="class_i_graphics.html#a7056c9288ed66e21b8c9f424054677b2">IGraphics::FillRect</a></div><div class="ttdeci">virtual void FillRect(const IColor &amp;color, const IRECT &amp;bounds, const IBlend *pBlend=0)</div><div class="ttdoc">Fill a rectangular region of the graphics context with a color.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l02484">IGraphics.cpp:2484</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html_a7056c9288ed66e21b8c9f424054677b2"><div class="ttname"><a href="class_i_graphics.html#a7056c9288ed66e21b8c9f424054677b2">IGraphics::FillRect</a></div><div class="ttdeci">virtual void FillRect(const IColor &amp;color, const IRECT &amp;bounds, const IBlend *pBlend=0)</div><div class="ttdoc">Fill a rectangular region of the graphics context with a color.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l02462">IGraphics.cpp:2462</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html_aafa78e8658ed993d876cbb4d91397043"><div class="ttname"><a href="class_i_graphics.html#aafa78e8658ed993d876cbb4d91397043">IGraphics::PathMoveTo</a></div><div class="ttdeci">virtual void PathMoveTo(float x, float y)=0</div><div class="ttdoc">Move the current point in the current path.</div></div>
 <div class="ttc" id="aclass_i_graphics_html_acd575e0411509a2fe05495ef05198a8d"><div class="ttname"><a href="class_i_graphics.html#acd575e0411509a2fe05495ef05198a8d">IGraphics::PathLineTo</a></div><div class="ttdeci">virtual void PathLineTo(float x, float y)=0</div><div class="ttdoc">Add a line to the current path from the current point to the specified location.</div></div>
-<div class="ttc" id="aclass_i_vector_base_html"><div class="ttname"><a href="class_i_vector_base.html">IVectorBase</a></div><div class="ttdoc">A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00628">IControl.h:629</a></div></div>
-<div class="ttc" id="aclass_i_vector_base_html_a1e72f0aa794ef2f610191a2274372d66"><div class="ttname"><a href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">IVectorBase::SetColor</a></div><div class="ttdeci">void SetColor(EVColor colorIdx, const IColor &amp;color)</div><div class="ttdoc">Set one of the IVColors that style the IVControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00656">IControl.h:656</a></div></div>
-<div class="ttc" id="aclass_i_vector_base_html_aaeaad70c3715e71344c9e589461483c8"><div class="ttname"><a href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">IVectorBase::AttachIControl</a></div><div class="ttdeci">void AttachIControl(IControl *pControl, const char *label)</div><div class="ttdoc">Call in the constructor of your IVControl to link the IVectorBase and IControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00647">IControl.h:647</a></div></div>
-<div class="ttc" id="aclass_i_vector_base_html_ac7bbfa5e773c9c8bd2e76319aa5c58b5"><div class="ttname"><a href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">IVectorBase::GetColor</a></div><div class="ttdeci">const IColor &amp; GetColor(EVColor color) const</div><div class="ttdoc">Get value of a specific EVColor in the IVControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00670">IControl.h:670</a></div></div>
-<div class="ttc" id="astruct_i_mouse_mod_html"><div class="ttname"><a href="struct_i_mouse_mod.html">IMouseMod</a></div><div class="ttdoc">Used to manage mouse modifiers i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01695">IGraphicsStructs.h:1696</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00752">IGraphicsStructs.h:753</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a2eee91211068e27b94aa9340a9a337d9"><div class="ttname"><a href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">IRECT::L</a></div><div class="ttdeci">float L</div><div class="ttdoc">Left side of the rectangle (X)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00755">IGraphicsStructs.h:755</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a3f35eaa20141fa6538b6af243dc353b2"><div class="ttname"><a href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">IRECT::B</a></div><div class="ttdeci">float B</div><div class="ttdoc">Bottom of the rectangle (Y + H)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00761">IGraphicsStructs.h:761</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a8628cfae6c6f355dbc12c4aada210bc5"><div class="ttname"><a href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">IRECT::R</a></div><div class="ttdeci">float R</div><div class="ttdoc">Right side of the rectangle (X + W)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00759">IGraphicsStructs.h:759</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a9d21ea21ff622e370664267c12cc7c24"><div class="ttname"><a href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">IRECT::W</a></div><div class="ttdeci">float W() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00824">IGraphicsStructs.h:824</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_aa186fda1fe88873a41e3d9c66f7639f6"><div class="ttname"><a href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">IRECT::T</a></div><div class="ttdeci">float T</div><div class="ttdoc">Top of the rectangle (Y)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00757">IGraphicsStructs.h:757</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_ac7252cd16f74972ce29d481f47d4a784"><div class="ttname"><a href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT::H</a></div><div class="ttdeci">float H() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00827">IGraphicsStructs.h:827</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_af020b51247a87c9427041307c53dd6d7"><div class="ttname"><a href="struct_i_r_e_c_t.html#af020b51247a87c9427041307c53dd6d7">IRECT::GetPadded</a></div><div class="ttdeci">IRECT GetPadded(float padding) const</div><div class="ttdoc">Get a copy of this IRECT with each value padded by padding N.B.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01340">IGraphicsStructs.h:1340</a></div></div>
-<div class="ttc" id="astruct_i_text_html"><div class="ttname"><a href="struct_i_text.html">IText</a></div><div class="ttdoc">IText is used to manage font and text/text entry style for a piece of text on the UI,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00665">IGraphicsStructs.h:666</a></div></div>
+<div class="ttc" id="aclass_i_vector_base_html"><div class="ttname"><a href="class_i_vector_base.html">IVectorBase</a></div><div class="ttdoc">A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00670">IControl.h:671</a></div></div>
+<div class="ttc" id="aclass_i_vector_base_html_a1e72f0aa794ef2f610191a2274372d66"><div class="ttname"><a href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">IVectorBase::SetColor</a></div><div class="ttdeci">void SetColor(EVColor colorIdx, const IColor &amp;color)</div><div class="ttdoc">Set one of the IVColors that style the IVControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00698">IControl.h:698</a></div></div>
+<div class="ttc" id="aclass_i_vector_base_html_aaeaad70c3715e71344c9e589461483c8"><div class="ttname"><a href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">IVectorBase::AttachIControl</a></div><div class="ttdeci">void AttachIControl(IControl *pControl, const char *label)</div><div class="ttdoc">Call in the constructor of your IVControl to link the IVectorBase and IControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00689">IControl.h:689</a></div></div>
+<div class="ttc" id="aclass_i_vector_base_html_ac7bbfa5e773c9c8bd2e76319aa5c58b5"><div class="ttname"><a href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">IVectorBase::GetColor</a></div><div class="ttdeci">const IColor &amp; GetColor(EVColor color) const</div><div class="ttdoc">Get value of a specific EVColor in the IVControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00709">IControl.h:709</a></div></div>
+<div class="ttc" id="astruct_i_mouse_mod_html"><div class="ttname"><a href="struct_i_mouse_mod.html">IMouseMod</a></div><div class="ttdoc">Used to manage mouse modifiers i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01754">IGraphicsStructs.h:1755</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00821">IGraphicsStructs.h:822</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a2eee91211068e27b94aa9340a9a337d9"><div class="ttname"><a href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">IRECT::L</a></div><div class="ttdeci">float L</div><div class="ttdoc">Left side of the rectangle (X)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00824">IGraphicsStructs.h:824</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a3f35eaa20141fa6538b6af243dc353b2"><div class="ttname"><a href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">IRECT::B</a></div><div class="ttdeci">float B</div><div class="ttdoc">Bottom of the rectangle (Y + H)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00830">IGraphicsStructs.h:830</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a8628cfae6c6f355dbc12c4aada210bc5"><div class="ttname"><a href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">IRECT::R</a></div><div class="ttdeci">float R</div><div class="ttdoc">Right side of the rectangle (X + W)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00828">IGraphicsStructs.h:828</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a9d21ea21ff622e370664267c12cc7c24"><div class="ttname"><a href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">IRECT::W</a></div><div class="ttdeci">float W() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00879">IGraphicsStructs.h:879</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_aa186fda1fe88873a41e3d9c66f7639f6"><div class="ttname"><a href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">IRECT::T</a></div><div class="ttdeci">float T</div><div class="ttdoc">Top of the rectangle (Y)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00826">IGraphicsStructs.h:826</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_ac7252cd16f74972ce29d481f47d4a784"><div class="ttname"><a href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT::H</a></div><div class="ttdeci">float H() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00882">IGraphicsStructs.h:882</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_af020b51247a87c9427041307c53dd6d7"><div class="ttname"><a href="struct_i_r_e_c_t.html#af020b51247a87c9427041307c53dd6d7">IRECT::GetPadded</a></div><div class="ttdeci">IRECT GetPadded(float padding) const</div><div class="ttdoc">Get a copy of this IRECT with each value padded by padding N.B.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01411">IGraphicsStructs.h:1411</a></div></div>
+<div class="ttc" id="astruct_i_text_html"><div class="ttname"><a href="struct_i_text.html">IText</a></div><div class="ttdoc">IText is used to manage font and text/text entry style for a piece of text on the UI,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00697">IGraphicsStructs.h:698</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

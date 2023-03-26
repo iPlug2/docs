@@ -1,4 +1,4 @@
 <map id="IGraphicsNanoVG" name="IGraphicsNanoVG">
-<area shape="rect" id="node1" title="IGraphics draw class using NanoVG" alt="" coords="5,79,133,104"/>
+<area shape="rect" id="node1" title="IGraphics draw class using NanoVG." alt="" coords="5,79,133,104"/>
 <area shape="rect" id="node2" href="$class_i_graphics.html" title="The lowest level base class of an IGraphics context." alt="" coords="30,5,109,31"/>
 </map>

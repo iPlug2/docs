@@ -105,8 +105,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9aa7710d768c0a9b4f8828e9deef9c6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_l_e_d_meter_control.html#a9aa7710d768c0a9b4f8828e9deef9c6a">IVLEDMeterControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, EDirection dir=EDirection::Vertical, std::initializer_list&lt; const char * &gt; trackNames={}, int totalNSegs=13, const std::vector&lt; <a class="el" href="struct_i_v_l_e_d_meter_control_1_1_l_e_d_range.html">LEDRange</a> &gt; &amp;ranges={ {0., 6., 1, LED5}, {-18., 0., 3, LED4}, {-36., -18., 3, LED3}, {-54., -36., 3, LED2}, {-72., -54., 3, LED1} })</td></tr>
-<tr class="separator:a9aa7710d768c0a9b4f8828e9deef9c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4be531a2aad6fb9dc403c5c2dc64993"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_l_e_d_meter_control.html#aa4be531a2aad6fb9dc403c5c2dc64993">IVLEDMeterControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, EDirection dir=EDirection::Vertical, std::initializer_list&lt; const char * &gt; trackNames={}, int totalNSegs=13, const std::vector&lt; <a class="el" href="struct_i_v_l_e_d_meter_control_1_1_l_e_d_range.html">LEDRange</a> &gt; &amp;ranges={{0., 6., 1, LED5}, {-18., 0., 3, LED4}, {-36., -18., 3, LED3}, {-54., -36., 3, LED2}, {-72., -54., 3, LED1}})</td></tr>
+<tr class="separator:aa4be531a2aad6fb9dc403c5c2dc64993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17cebd46d7120fb484e32a7de51cdc73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_l_e_d_meter_control.html#a17cebd46d7120fb484e32a7de51cdc73">DrawTrackHandle</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;r, int chIdx, bool aboveBaseValue) override</td></tr>
 <tr class="memdesc:a17cebd46d7120fb484e32a7de51cdc73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the main body of the track.  <a href="class_i_v_l_e_d_meter_control.html#a17cebd46d7120fb484e32a7de51cdc73">More...</a><br /></td></tr>
 <tr class="separator:a17cebd46d7120fb484e32a7de51cdc73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -729,10 +729,10 @@ Additional Inherited Members</h2></td></tr>
 class IVLEDMeterControl&lt; MAXNC &gt;</div><p >Vectorial multi-channel capable meter control with segmented LEDs, log response. </p>
 <p >Requires an <a class="el" href="class_i_peak_avg_sender.html" title="IPeakAvgSender is a utility class which can be used to defer peak &amp; avg/RMS data from sample buffers ...">IPeakAvgSender</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00228">228</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00242">242</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9aa7710d768c0a9b4f8828e9deef9c6a" name="a9aa7710d768c0a9b4f8828e9deef9c6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9aa7710d768c0a9b4f8828e9deef9c6a">&#9670;&#160;</a></span>IVLEDMeterControl()</h2>
+<a id="aa4be531a2aad6fb9dc403c5c2dc64993" name="aa4be531a2aad6fb9dc403c5c2dc64993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4be531a2aad6fb9dc403c5c2dc64993">&#9670;&#160;</a></span>IVLEDMeterControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -782,7 +782,7 @@ template&lt;int MAXNC = 1&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="struct_i_v_l_e_d_meter_control_1_1_l_e_d_range.html">LEDRange</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>ranges</em> = <code>{&#160;{0.,&#160;6.,&#160;1,&#160;LED5},&#160;{-18.,&#160;0.,&#160;3,&#160;LED4},&#160;{-36.,&#160;-18.,&#160;3,&#160;LED3},&#160;{-54.,&#160;-36.,&#160;3,&#160;LED2},&#160;{-72.,&#160;-54.,&#160;3,&#160;LED1}&#160;}</code>&#160;</td>
+          <td class="paramname"><em>ranges</em> = <code>{{0.,&#160;6.,&#160;1,&#160;LED5},&#160;{-18.,&#160;0.,&#160;3,&#160;LED4},&#160;{-36.,&#160;-18.,&#160;3,&#160;LED3},&#160;{-54.,&#160;-36.,&#160;3,&#160;LED2},&#160;{-72.,&#160;-54.,&#160;3,&#160;LED1}}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -797,7 +797,7 @@ template&lt;int MAXNC = 1&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00248">248</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00262">262</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
 
 </div>
 </div>
@@ -846,7 +846,7 @@ template&lt;int MAXNC = 1&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_i_v_track_control_base.html">IVTrackControlBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00288">288</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00297">297</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
 
 </div>
 </div>
@@ -911,7 +911,7 @@ template&lt;int MAXNC = 1&gt; </div>
 
 <p>Reimplemented from <a class="el" href="class_i_v_track_control_base.html#a8034d6bd1afc1a91074f6365e799928f">IVTrackControlBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00283">283</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_meter_control_8h_source.html#l00295">295</a> of file <a class="el" href="_i_v_meter_control_8h_source.html">IVMeterControl.h</a>.</p>
 
 </div>
 </div>

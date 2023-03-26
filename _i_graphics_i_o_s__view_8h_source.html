@@ -108,110 +108,99 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordtype">float</span> y = floor(bounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a> * scale);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordtype">float</span> x2 = ceil(bounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">R</a> * scale);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">float</span> y2 = ceil(bounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">B</a> * scale);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">return</span> CGRectMake(x, y, x2 - x, y2 - y);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">inline</span> UIColor* ToUIColor(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; c)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">return</span> [UIColor colorWithRed:(double) c.R / 255.0 green:(<span class="keywordtype">double</span>) c.G / 255.0 blue:(double) c.B / 255.0 alpha:(<span class="keywordtype">double</span>) c.A / 255.0];</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">inline</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a> FromUIColor(<span class="keyword">const</span> UIColor* c)</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  CGFloat r,g,b,a;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  [c getRed:&amp;r green:&amp;g blue:&amp;b alpha:&amp;a];</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>(a * 255., r * 255., g * 255., b * 255.);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">inline</span> UIColor* ToUIColor(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; c) { <span class="keywordflow">return</span> [UIColor colorWithRed:(double)c.R / 255.0 green:(<span class="keywordtype">double</span>)c.G / 255.0 blue:(double)c.B / 255.0 alpha:(<span class="keywordtype">double</span>)c.A / 255.0]; }</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">inline</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a> FromUIColor(<span class="keyword">const</span> UIColor* c)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  CGFloat r, g, b, a;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  [c getRed:&amp;r green:&amp;g blue:&amp;b alpha:&amp;a];</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">return</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>(a * 255., r * 255., g * 255., b * 255.);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>END_IPLUG_NAMESPACE</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">using namespace </span>iplug;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">using namespace </span>igraphics;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">using namespace </span>iplug;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">using namespace </span>igraphics;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keyword">@interface </span>IGRAPHICS_UITABLEVC : UIViewController&lt;UITableViewDataSource, UITableViewDelegate&gt; <span class="comment">// UITableViewController</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>* mMenu;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>* mGraphics;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">@property</span> (strong, nonatomic) UITableView* tableView;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">@property</span> (strong, nonatomic) NSMutableArray* items;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>- (id) initWithIPopupMenuAndIGraphics: (<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>*) pMenu : (<a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>*) pGraphics;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">@end</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keyword">@interface </span>IGRAPHICS_VIEW : UIView</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>&lt;</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>UITextFieldDelegate,</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>UIPopoverPresentationControllerDelegate,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>UIGestureRecognizerDelegate,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>UITraitEnvironment,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>UIDocumentPickerDelegate,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>UIColorPickerViewControllerDelegate</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>&gt;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">@public</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>* mGraphics;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  IGRAPHICS_UITABLEVC* mMenuTableController;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  UINavigationController* mMenuNavigationController;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  UITextField* mTextField;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  UIAlertController* mAlertController;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  CAMetalLayer* mMTLLayer;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordtype">int</span> mTextFieldLength;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  IColorPickerHandlerFunc mColorPickerHandlerFunc;</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  IFileDialogCompletionHandlerFunc mFileDialogFunc;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordtype">float</span> mPrevX, mPrevY;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>- (id) initWithIGraphics: (<a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>*) pGraphics;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>- (BOOL) isOpaque;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>- (BOOL) acceptsFirstResponder;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>- (BOOL) delaysContentTouches;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>- (void) removeFromSuperview;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>- (<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>*) createPopupMenu: (<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>&amp;) menu : (CGRect) bounds;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>- (void) createTextEntry: (<span class="keywordtype">int</span>) paramIdx : (const <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp;) text : (const <span class="keywordtype">char</span>*) str : (<span class="keywordtype">int</span>) length : (CGRect) areaRect;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>- (void) endUserInput;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>- (void) showMessageBox: (const <span class="keywordtype">char</span>*) str : (const <span class="keywordtype">char</span>*) caption : (EMsgBoxType) type : (IMsgBoxCompletionHandlerFunc) completionHandler;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>- (void) promptForFile: (NSString*) fileName : (NSString*) path : (EFileAction) action : (NSArray*) contentTypes : (IFileDialogCompletionHandlerFunc) completionHandler;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>- (BOOL) promptForColor: (<a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp;) color : (const <span class="keywordtype">char</span>*) str : (IColorPickerHandlerFunc) func;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>- (void) presentationControllerDidDismiss: (UIPresentationController*) presentationController;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">//UIDocumentPickerDelegate,</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>- (void) documentPicker:(UIDocumentPickerViewController*) controller didPickDocumentsAtURLs:(NSArray &lt;NSURL *&gt;*)urls;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>- (void) documentPickerWasCancelled:(UIDocumentPickerViewController*) controller;</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">//UIColorPickerViewControllerDelegate</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>- (void) colorPickerViewControllerDidSelectColor:(UIColorPickerViewController*) viewController;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>- (void) colorPickerViewControllerDidFinish:(UIColorPickerViewController*) viewController;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">@interface </span>IGRAPHICS_UITABLEVC : UIViewController &lt;UITableViewDataSource, UITableViewDelegate&gt; <span class="comment">// UITableViewController</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>* mMenu;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>* mGraphics;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">@property</span>(strong, nonatomic) UITableView* tableView;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">@property</span>(strong, nonatomic) NSMutableArray* items;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>- (id)initWithIPopupMenuAndIGraphics:(<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>*)pMenu:(<a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>*)pGraphics;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">@interface </span>IGRAPHICS_VIEW</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  : UIView &lt;UITextFieldDelegate, UIPopoverPresentationControllerDelegate, UIGestureRecognizerDelegate, UITraitEnvironment, UIDocumentPickerDelegate, UIColorPickerViewControllerDelegate&gt; {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">@public</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>* mGraphics;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  IGRAPHICS_UITABLEVC* mMenuTableController;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  UINavigationController* mMenuNavigationController;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  UITextField* mTextField;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  UIAlertController* mAlertController;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  CAMetalLayer* mMTLLayer;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">int</span> mTextFieldLength;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  IColorPickerHandlerFunc mColorPickerHandlerFunc;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  IFileDialogCompletionHandlerFunc mFileDialogFunc;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">float</span> mPrevX, mPrevY;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>- (id)initWithIGraphics:(<a class="code hl_class" href="class_i_graphics_i_o_s.html">IGraphicsIOS</a>*)pGraphics;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>- (BOOL)isOpaque;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>- (BOOL)acceptsFirstResponder;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>- (BOOL)delaysContentTouches;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>- (void)removeFromSuperview;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>- (<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>*)createPopupMenu:(<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>&amp;)menu:(CGRect)bounds;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>- (void)createTextEntry:(<span class="keywordtype">int</span>)paramIdx:(const <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp;)text:(const <span class="keywordtype">char</span>*)str:(<span class="keywordtype">int</span>)length:(CGRect)areaRect;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>- (void)endUserInput;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>- (void)showMessageBox:(const <span class="keywordtype">char</span>*)str:(const <span class="keywordtype">char</span>*)caption:(EMsgBoxType)type:(IMsgBoxCompletionHandlerFunc)completionHandler;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>- (void)promptForFile:(NSString*)fileName:(NSString*)path:(EFileAction)action:(NSArray*)contentTypes:(IFileDialogCompletionHandlerFunc)completionHandler;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>- (BOOL)promptForColor:(<a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp;)color:(const <span class="keywordtype">char</span>*)str:(IColorPickerHandlerFunc)func;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>- (void)presentationControllerDidDismiss:(UIPresentationController*)presentationController;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">// UIDocumentPickerDelegate,</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>- (void)documentPicker:(UIDocumentPickerViewController*)controller didPickDocumentsAtURLs:(NSArray&lt;NSURL*&gt;*)urls;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>- (void)documentPickerWasCancelled:(UIDocumentPickerViewController*)controller;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// UIColorPickerViewControllerDelegate</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>- (void)colorPickerViewControllerDidSelectColor:(UIColorPickerViewController*)viewController;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>- (void)colorPickerViewControllerDidFinish:(UIColorPickerViewController*)viewController;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">// gestures</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>- (void)attachGestureRecognizer:(EGestureType)type;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>- (BOOL)gestureRecognizer:(UIGestureRecognizer*)gestureRecognizer shouldReceiveTouch:(UITouch*)touch;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>- (void)onTapGesture:(UITapGestureRecognizer*)recognizer;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>- (void)onLongPressGesture:(UILongPressGestureRecognizer*)recognizer;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>- (void)onSwipeGesture:(UISwipeGestureRecognizer*)recognizer;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>- (void)onPinchGesture:(UIPinchGestureRecognizer*)recognizer;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>- (void)onRotateGesture:(UIRotationGestureRecognizer*)recognizer;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>- (void)getLastTouchLocation:(<span class="keywordtype">float</span>&amp;)x:(<span class="keywordtype">float</span>&amp;)y;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">//gestures</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>- (void) attachGestureRecognizer: (EGestureType) type;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>- (BOOL) gestureRecognizer:(UIGestureRecognizer*) gestureRecognizer shouldReceiveTouch:(UITouch*)touch;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>- (void) onTapGesture: (UITapGestureRecognizer*) recognizer;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>- (void) onLongPressGesture: (UILongPressGestureRecognizer*) recognizer;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>- (void) onSwipeGesture: (UISwipeGestureRecognizer*) recognizer;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>- (void) onPinchGesture: (UIPinchGestureRecognizer*) recognizer;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>- (void) onRotateGesture: (UIRotationGestureRecognizer*) recognizer;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>- (void) getLastTouchLocation: (<span class="keywordtype">float</span>&amp;) x : (<span class="keywordtype">float</span>&amp;) y;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>- (void) traitCollectionDidChange: (UITraitCollection*) previousTraitCollection;</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">@property</span> (readonly) CAMetalLayer* metalLayer;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">@property</span> (nonatomic, strong) CADisplayLink *displayLink;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>- (void)traitCollectionDidChange:(UITraitCollection*)previousTraitCollection;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">@property</span>(readonly) CAMetalLayer* metalLayer;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="keyword">@property</span>(nonatomic, strong) CADisplayLink* displayLink;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keyword">@end</span></div>
 <div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00082">IGraphics.h:86</a></div></div>
-<div class="ttc" id="aclass_i_graphics_html_ad5f403e5b79d4068985b7b8afcaa8da1"><div class="ttname"><a href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">IGraphics::GetDrawScale</a></div><div class="ttdeci">float GetDrawScale() const</div><div class="ttdoc">Gets the graphics context scaling factor.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l01066">IGraphics.h:1066</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html_ad5f403e5b79d4068985b7b8afcaa8da1"><div class="ttname"><a href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">IGraphics::GetDrawScale</a></div><div class="ttdeci">float GetDrawScale() const</div><div class="ttdoc">Gets the graphics context scaling factor.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l01074">IGraphics.h:1074</a></div></div>
 <div class="ttc" id="aclass_i_graphics_i_o_s_html"><div class="ttname"><a href="class_i_graphics_i_o_s.html">IGraphicsIOS</a></div><div class="ttdoc">IGraphics platform class for IOS.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_i_o_s_8h_source.html#l00024">IGraphicsIOS.h:25</a></div></div>
 <div class="ttc" id="aclass_i_popup_menu_html"><div class="ttname"><a href="class_i_popup_menu.html">IPopupMenu</a></div><div class="ttdoc">A class for setting the contents of a pop up menu.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_popup_menu_8h_source.html#l00039">IGraphicsPopupMenu.h:40</a></div></div>
-<div class="ttc" id="astruct_i_color_html"><div class="ttname"><a href="struct_i_color.html">IColor</a></div><div class="ttdoc">Used to manage color data, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00229">IGraphicsStructs.h:230</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00752">IGraphicsStructs.h:753</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a2eee91211068e27b94aa9340a9a337d9"><div class="ttname"><a href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">IRECT::L</a></div><div class="ttdeci">float L</div><div class="ttdoc">Left side of the rectangle (X)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00755">IGraphicsStructs.h:755</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a3f35eaa20141fa6538b6af243dc353b2"><div class="ttname"><a href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">IRECT::B</a></div><div class="ttdeci">float B</div><div class="ttdoc">Bottom of the rectangle (Y + H)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00761">IGraphicsStructs.h:761</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a8628cfae6c6f355dbc12c4aada210bc5"><div class="ttname"><a href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">IRECT::R</a></div><div class="ttdeci">float R</div><div class="ttdoc">Right side of the rectangle (X + W)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00759">IGraphicsStructs.h:759</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_aa186fda1fe88873a41e3d9c66f7639f6"><div class="ttname"><a href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">IRECT::T</a></div><div class="ttdeci">float T</div><div class="ttdoc">Top of the rectangle (Y)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00757">IGraphicsStructs.h:757</a></div></div>
-<div class="ttc" id="astruct_i_text_html"><div class="ttname"><a href="struct_i_text.html">IText</a></div><div class="ttdoc">IText is used to manage font and text/text entry style for a piece of text on the UI,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00665">IGraphicsStructs.h:666</a></div></div>
+<div class="ttc" id="astruct_i_color_html"><div class="ttname"><a href="struct_i_color.html">IColor</a></div><div class="ttdoc">Used to manage color data, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00226">IGraphicsStructs.h:227</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00821">IGraphicsStructs.h:822</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a2eee91211068e27b94aa9340a9a337d9"><div class="ttname"><a href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">IRECT::L</a></div><div class="ttdeci">float L</div><div class="ttdoc">Left side of the rectangle (X)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00824">IGraphicsStructs.h:824</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a3f35eaa20141fa6538b6af243dc353b2"><div class="ttname"><a href="struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2">IRECT::B</a></div><div class="ttdeci">float B</div><div class="ttdoc">Bottom of the rectangle (Y + H)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00830">IGraphicsStructs.h:830</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a8628cfae6c6f355dbc12c4aada210bc5"><div class="ttname"><a href="struct_i_r_e_c_t.html#a8628cfae6c6f355dbc12c4aada210bc5">IRECT::R</a></div><div class="ttdeci">float R</div><div class="ttdoc">Right side of the rectangle (X + W)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00828">IGraphicsStructs.h:828</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_aa186fda1fe88873a41e3d9c66f7639f6"><div class="ttname"><a href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">IRECT::T</a></div><div class="ttdeci">float T</div><div class="ttdoc">Top of the rectangle (Y)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00826">IGraphicsStructs.h:826</a></div></div>
+<div class="ttc" id="astruct_i_text_html"><div class="ttname"><a href="struct_i_text.html">IText</a></div><div class="ttdoc">IText is used to manage font and text/text entry style for a piece of text on the UI,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00697">IGraphicsStructs.h:698</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

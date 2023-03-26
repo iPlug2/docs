@@ -133,8 +133,8 @@ $(function() {
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">    #include &quot;IGraphicsSkia.h&quot;</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    #define IGRAPHICS_DRAW_CLASS_TYPE IGraphicsSkia</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">  #elif defined IGRAPHICS_CANVAS</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">     #include &quot;IGraphicsCanvas.h&quot;</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">     #define IGRAPHICS_DRAW_CLASS_TYPE IGraphicsCanvas</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">    #include &quot;IGraphicsCanvas.h&quot;</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">    #define IGRAPHICS_DRAW_CLASS_TYPE IGraphicsCanvas</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">    #if defined IGRAPHICS_GL || defined IGRAPHICS_METAL</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">      #error When using IGRAPHICS_CANVAS, don&#39;t define IGRAPHICS_METAL or IGRAPHICS_GL*</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">    #endif</span></div>
@@ -148,7 +148,6 @@ $(function() {
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">using </span>IGRAPHICS_DRAW_CLASS = IGRAPHICS_DRAW_CLASS_TYPE;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>END_IGRAPHICS_NAMESPACE</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>END_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -87,11 +87,11 @@ $(function() {
 <div class="contents">
 <a href="_i_plug_paths_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> ==============================================================================</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> </span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> This file is part of the iPlug 2 library. Copyright (C) the iPlug 2 developers. </span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> </span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"></span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> This file is part of the iPlug 2 library. Copyright (C) the iPlug 2 developers.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"></span> </div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> See LICENSE.txt for  more info.</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"></span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> ==============================================================================</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">*/</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
@@ -102,16 +102,16 @@ $(function() {
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>BEGIN_IPLUG_NAMESPACE</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#if defined OS_MAC || defined OS_IOS</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">using </span>PluginIDType = <span class="keyword">const</span> <span class="keywordtype">char</span> *;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">using </span>PluginIDType = <span class="keyword">const</span> <span class="keywordtype">char</span>*;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#elif defined OS_WIN</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">using </span>PluginIDType = HMODULE;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">using </span>PluginIDType = <span class="keywordtype">void</span> *;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">using </span>PluginIDType = <span class="keywordtype">void</span>*;</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#if defined OS_WIN</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> <span class="comment">// Unicode helpers</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">  #include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// Unicode helpers</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> UTF8ToUTF16(<span class="keywordtype">wchar_t</span>* utf16Str, <span class="keyword">const</span> <span class="keywordtype">char</span>* utf8Str, <span class="keywordtype">int</span> maxLen);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> UTF16ToUTF8(WDL_String&amp; utf8Str, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span>* utf16Str);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
@@ -151,7 +151,6 @@ $(function() {
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>END_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a0238ef4a2d49efc240321b8b5ce290fe"><div class="ttname"><a href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource</a></div><div class="ttdeci">const void * LoadWinResource(const char *resID, const char *type, int &amp;sizeInBytes, void *pHInstance)</div><div class="ttdoc">Load a resource from the binary (windows only).</div></div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a03a8b65ce1ec3f165019023f43b3dd07"><div class="ttname"><a href="_i_plug_paths_8h.html#a03a8b65ce1ec3f165019023f43b3dd07">UserHomePath</a></div><div class="ttdeci">void UserHomePath(WDL_String &amp;path)</div></div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a219939770dc84d12c583a7c6c5cd1d59"><div class="ttname"><a href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource</a></div><div class="ttdeci">EResourceLocation LocateResource(const char *fileNameOrResID, const char *type, WDL_String &amp;result, const char *bundleID, void *pHInstance, const char *sharedResourcesSubPath)</div><div class="ttdoc">Find the absolute path of a resource based on it's file name (e.g.</div></div>
