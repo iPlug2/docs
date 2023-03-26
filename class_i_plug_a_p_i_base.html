@@ -307,7 +307,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afe2433eb98528511d585a3fd6c278f63 inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name, param1, param2, ..., paramN) See <a class="el" href="class_i_plugin_base.html#ac715f278c10ab08ef8b434d6821da94f" title="Writes a call to MakePreset() for the current preset to a new text file.">DumpMakePresetSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls.  <a href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63">More...</a><br /></td></tr>
 <tr class="separator:afe2433eb98528511d585a3fd6c278f63 inherit pub_methods_class_i_plugin_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">MakePresetFromNamedParams</a> (const char *name, int nParamsNamed,...)</td></tr>
-<tr class="memdesc:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values with a list of parameter index and value pairs usage: MakePresetFromNamedParams(name, nParamsNamed, paramEnum1, paramVal1, paramEnum2, paramVal2, ..., paramEnumN, paramVal2) See <a class="el" href="class_i_plugin_base.html#a2fa5a469b7b6b38ac7281fd7a6a9f9a1" title="Writes a call to MakePresetFromNamedParams() for the current preset to a new text file.">DumpMakePresetFromNamedParamsSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls nParamsNamed may be less than the total number of params.  <a href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">More...</a><br /></td></tr>
+<tr class="memdesc:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values with a list of parameter index and value pairs usage: MakePresetFromNamedParams(name, nParamsNamed, paramEnum1, paramVal1, paramEnum2, paramVal2, ..., paramEnumN,
+paramVal2) See <a class="el" href="class_i_plugin_base.html#a2fa5a469b7b6b38ac7281fd7a6a9f9a1" title="Writes a call to MakePresetFromNamedParams() for the current preset to a new text file.">DumpMakePresetFromNamedParamsSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls nParamsNamed may be less than the total number of params.  <a href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">More...</a><br /></td></tr>
 <tr class="separator:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd0798cc3425bafa6e8e5c9d2583537 inherit pub_methods_class_i_plugin_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#aebd0798cc3425bafa6e8e5c9d2583537">MakePresetFromChunk</a> (const char *name, <a class="el" href="class_i_byte_chunk.html">IByteChunk</a> &amp;chunk)</td></tr>
 <tr class="memdesc:aebd0798cc3425bafa6e8e5c9d2583537 inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a preset from an <a class="el" href="class_i_byte_chunk.html" title="Manages a block of memory, for plug-in settings store/recall.">IByteChunk</a> containging serialized data.  <a href="class_i_plugin_base.html#aebd0798cc3425bafa6e8e5c9d2583537">More...</a><br /></td></tr>
@@ -504,7 +505,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00167">167</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00174">174</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -552,7 +553,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> in order to indicate that the states are equal. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00068">68</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00072">72</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -601,7 +602,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00186">186</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00193">193</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -629,7 +630,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00188">188</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00195">195</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -661,9 +662,9 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_v_s_t3.html#af5a58d12b5da5a4a7328911144f0e7c1">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#a144f551cdfd0531e21c38f7d1021083a">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00120">120</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00124">124</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_v_s_t3_8cpp_source.html#l00219">IPlugVST3::DirtyParametersFromUI()</a>, and <a class="el" href="_i_plug_v_s_t3___controller_8cpp_source.html#l00140">IPlugVST3Controller::DirtyParametersFromUI()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_v_s_t3_8cpp_source.html#l00238">IPlugVST3::DirtyParametersFromUI()</a>, and <a class="el" href="_i_plug_v_s_t3___controller_8cpp_source.html#l00149">IPlugVST3Controller::DirtyParametersFromUI()</a>.</p>
 
 </div>
 </div>
@@ -707,7 +708,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00087">87</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00091">91</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -735,7 +736,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00169">169</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00176">176</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -765,9 +766,9 @@ Friends</h2></td></tr>
 <p>You need to implement this method if you are not using <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> and you want to support AAX's view interface functionality (special shortcuts to add automation for a parameter etc.) </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to the class that implements the IAAXViewInterface </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00105">105</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00109">109</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00546">IPlugAAX::EditorResize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00563">IPlugAAX::EditorResize()</a>.</p>
 
 </div>
 </div>
@@ -815,7 +816,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if you specified a custom textual description for this note </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00096">96</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00100">100</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -863,7 +864,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_reaper_v_s_t2.html#a14c2458e35ffcb1d3aa281a43f7acb48">IPlugReaperVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#a37a158438c1302f39b3732ab335479e2">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#a4bccb2006ff526e84462186715834643">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00125">125</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00130">130</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -894,7 +895,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_v_s_t3.html#a4dd536ec2d3efe96d4d1383895df860f">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#a660f69c9286d32a81554c79785ef8b8b">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00136">136</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00141">141</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -926,7 +927,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_a_a_x.html#abc9ae54c026597dd95a322ff92bb5fea">IPlugAAX</a>, <a class="el" href="class_i_plug_a_u.html#abbe86b0e398d5cd2b7b9e23be352d08e">IPlugAU</a>, <a class="el" href="class_i_plug_reaper_v_s_t2.html#ac706a7358cfef7a845ce55b1802e4e60">IPlugReaperVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#a3eb6121f13e6652a768a964e7ab62fdf">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#a7bf628d537ceaa63d417e90b204da090">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00133">133</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00138">138</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -958,7 +959,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_v_s_t3.html#a0656f153b5637647074bb000907e9dda">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#ab5ab471864a981402cf452a67e03ae53">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00139">139</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00144">144</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -989,7 +990,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_v_s_t3.html#a60f2402c2242470f7fca60c2e321dff6">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#a392b3b6108e3745d7ce2fc423e6feff6">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00142">142</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00147">147</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1021,9 +1022,9 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_v_s_t2.html#a9e8dfdc3c57562d83fe52b985e8d2b10">IPlugVST2</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00164">164</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00171">171</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00097">SetHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00101">SetHost()</a>.</p>
 
 </div>
 </div>
@@ -1053,9 +1054,9 @@ Friends</h2></td></tr>
 <p>Implement this to do something specific when IPlug becomes aware of the particular host that is hosting the plug-in. </p>
 <p >The method may get called multiple times. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00069">69</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00072">72</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00097">SetHost()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00101">SetHost()</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1083,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00062">62</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00064">64</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1157,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00065">65</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00068">68</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1205,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return <code>true</code> if your plug-in supports these dimensions </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00080">80</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00084">84</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1251,7 +1252,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00089">89</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00093">93</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1282,7 +1283,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_plug_web.html#a8b5af3d18331367991434d3cc0f7b0e0">IPlugWeb</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00115">115</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00119">119</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1333,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00204">204</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00208">208</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -1360,7 +1361,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00192">192</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00196">196</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -1414,7 +1415,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00129">129</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00133">133</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_queue_8h_source.html#l00051">IPlugQueue&lt; T &gt;::Push()</a>.</p>
 
@@ -1454,7 +1455,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00173">173</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00180">180</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1482,7 +1483,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00198">198</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00202">202</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -1521,9 +1522,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00097">97</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00101">101</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00136">GetVersionStr()</a>, <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00164">HostSpecificInit()</a>, <a class="el" href="_i_plug_utilities_8h_source.html#l00174">LookUpHost()</a>, and <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00069">OnHostIdentified()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00136">GetVersionStr()</a>, <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00171">HostSpecificInit()</a>, <a class="el" href="_i_plug_utilities_8h_source.html#l00174">LookUpHost()</a>, and <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00072">OnHostIdentified()</a>.</p>
 
 </div>
 </div>
@@ -1562,7 +1563,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00112">112</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00116">116</a> of file <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html">IPlugAPIBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1588,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00225">225</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00233">233</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1611,7 +1612,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00224">224</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00232">232</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1635,7 +1636,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00230">230</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00238">238</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1659,7 +1660,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00231">231</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00239">239</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1683,7 +1684,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00226">226</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00234">234</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1708,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00227">227</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00235">235</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1731,7 +1732,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00228">228</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00236">236</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1755,7 +1756,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00229">229</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00237">237</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1779,7 +1780,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00233">233</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00241">241</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>
@@ -1803,7 +1804,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00232">232</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00240">240</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>

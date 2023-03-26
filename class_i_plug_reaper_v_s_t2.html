@@ -374,7 +374,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afe2433eb98528511d585a3fd6c278f63 inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name, param1, param2, ..., paramN) See <a class="el" href="class_i_plugin_base.html#ac715f278c10ab08ef8b434d6821da94f" title="Writes a call to MakePreset() for the current preset to a new text file.">DumpMakePresetSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls.  <a href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63">More...</a><br /></td></tr>
 <tr class="separator:afe2433eb98528511d585a3fd6c278f63 inherit pub_methods_class_i_plugin_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">MakePresetFromNamedParams</a> (const char *name, int nParamsNamed,...)</td></tr>
-<tr class="memdesc:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values with a list of parameter index and value pairs usage: MakePresetFromNamedParams(name, nParamsNamed, paramEnum1, paramVal1, paramEnum2, paramVal2, ..., paramEnumN, paramVal2) See <a class="el" href="class_i_plugin_base.html#a2fa5a469b7b6b38ac7281fd7a6a9f9a1" title="Writes a call to MakePresetFromNamedParams() for the current preset to a new text file.">DumpMakePresetFromNamedParamsSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls nParamsNamed may be less than the total number of params.  <a href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">More...</a><br /></td></tr>
+<tr class="memdesc:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values with a list of parameter index and value pairs usage: MakePresetFromNamedParams(name, nParamsNamed, paramEnum1, paramVal1, paramEnum2, paramVal2, ..., paramEnumN,
+paramVal2) See <a class="el" href="class_i_plugin_base.html#a2fa5a469b7b6b38ac7281fd7a6a9f9a1" title="Writes a call to MakePresetFromNamedParams() for the current preset to a new text file.">DumpMakePresetFromNamedParamsSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls nParamsNamed may be less than the total number of params.  <a href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">More...</a><br /></td></tr>
 <tr class="separator:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd0798cc3425bafa6e8e5c9d2583537 inherit pub_methods_class_i_plugin_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#aebd0798cc3425bafa6e8e5c9d2583537">MakePresetFromChunk</a> (const char *name, <a class="el" href="class_i_byte_chunk.html">IByteChunk</a> &amp;chunk)</td></tr>
 <tr class="memdesc:aebd0798cc3425bafa6e8e5c9d2583537 inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a preset from an <a class="el" href="class_i_byte_chunk.html" title="Manages a block of memory, for plug-in settings store/recall.">IByteChunk</a> containging serialized data.  <a href="class_i_plugin_base.html#aebd0798cc3425bafa6e8e5c9d2583537">More...</a><br /></td></tr>
@@ -720,7 +721,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00040">40</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00043">43</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -747,7 +748,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00096">96</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00100">100</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -774,7 +775,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00094">94</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00098">98</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -802,7 +803,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00058">58</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00062">62</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -850,11 +851,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html#afc3e0c09082db89bc8c44bf325aa38c2">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00098">98</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00105">105</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00098">GetTrackColor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00105">GetTrackColor()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00098">GetTrackColor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00105">GetTrackColor()</a>.</p>
 
 </div>
 </div>
@@ -886,7 +887,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html#ac2f3bdbe470c29a8fbf476c1c3972f81">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00079">79</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00083">83</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +925,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00111">111</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00118">118</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -962,7 +963,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00118">118</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00125">125</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -1000,7 +1001,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00125">125</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00132">132</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1029,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00105">105</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00112">112</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1057,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00065">65</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00069">69</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1085,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00088">88</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00092">92</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>
@@ -1112,7 +1113,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00050">50</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html#l00054">54</a> of file <a class="el" href="_i_plug_reaper_v_s_t2_8h_source.html">IPlugReaperVST2.h</a>.</p>
 
 </div>
 </div>

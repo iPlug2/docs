@@ -356,7 +356,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afe2433eb98528511d585a3fd6c278f63 inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name, param1, param2, ..., paramN) See <a class="el" href="class_i_plugin_base.html#ac715f278c10ab08ef8b434d6821da94f" title="Writes a call to MakePreset() for the current preset to a new text file.">DumpMakePresetSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls.  <a href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63">More...</a><br /></td></tr>
 <tr class="separator:afe2433eb98528511d585a3fd6c278f63 inherit pub_methods_class_i_plugin_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">MakePresetFromNamedParams</a> (const char *name, int nParamsNamed,...)</td></tr>
-<tr class="memdesc:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values with a list of parameter index and value pairs usage: MakePresetFromNamedParams(name, nParamsNamed, paramEnum1, paramVal1, paramEnum2, paramVal2, ..., paramEnumN, paramVal2) See <a class="el" href="class_i_plugin_base.html#a2fa5a469b7b6b38ac7281fd7a6a9f9a1" title="Writes a call to MakePresetFromNamedParams() for the current preset to a new text file.">DumpMakePresetFromNamedParamsSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls nParamsNamed may be less than the total number of params.  <a href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">More...</a><br /></td></tr>
+<tr class="memdesc:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a baked-in factory preset, specifiying parameter values with a list of parameter index and value pairs usage: MakePresetFromNamedParams(name, nParamsNamed, paramEnum1, paramVal1, paramEnum2, paramVal2, ..., paramEnumN,
+paramVal2) See <a class="el" href="class_i_plugin_base.html#a2fa5a469b7b6b38ac7281fd7a6a9f9a1" title="Writes a call to MakePresetFromNamedParams() for the current preset to a new text file.">DumpMakePresetFromNamedParamsSrc()</a> which is a utility that can be used to create the code for <a class="el" href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63" title="Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...">MakePreset()</a> calls nParamsNamed may be less than the total number of params.  <a href="class_i_plugin_base.html#a85c0d5dc218b1e8f49bc5a1a81ca8afd">More...</a><br /></td></tr>
 <tr class="separator:a85c0d5dc218b1e8f49bc5a1a81ca8afd inherit pub_methods_class_i_plugin_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebd0798cc3425bafa6e8e5c9d2583537 inherit pub_methods_class_i_plugin_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#aebd0798cc3425bafa6e8e5c9d2583537">MakePresetFromChunk</a> (const char *name, <a class="el" href="class_i_byte_chunk.html">IByteChunk</a> &amp;chunk)</td></tr>
 <tr class="memdesc:aebd0798cc3425bafa6e8e5c9d2583537 inherit pub_methods_class_i_plugin_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a preset from an <a class="el" href="class_i_byte_chunk.html" title="Manages a block of memory, for plug-in settings store/recall.">IByteChunk</a> containging serialized data.  <a href="class_i_plugin_base.html#aebd0798cc3425bafa6e8e5c9d2583537">More...</a><br /></td></tr>
@@ -662,7 +663,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01780">1780</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01834">1834</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -681,7 +682,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01841">1841</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01896">1896</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -710,7 +711,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01299">1299</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01324">1324</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -748,7 +749,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01862">1862</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01917">1917</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -786,7 +787,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01874">1874</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01929">1929</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -830,7 +831,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00105">105</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00108">108</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -880,7 +881,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00079">79</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00082">82</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -924,7 +925,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00091">91</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00094">94</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1006,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01868">1868</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01923">1923</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1037,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plugin_base.html#a5f4c63ae52fb7563fb79905c8c735966">IPluginBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01886">1886</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01941">1941</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1067,7 +1068,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plugin_base.html#a76e63793d667abfad1510cf55a56906d">IPluginBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01880">1880</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01935">1935</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1105,7 +1106,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00177">177</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00180">180</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1125,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02070">2070</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02128">2128</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1143,7 +1144,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01892">1892</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01947">1947</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1187,7 +1188,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00071">71</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00074">74</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1237,7 +1238,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00056">56</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00059">59</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1281,7 +1282,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00064">64</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l00067">67</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1301,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01944">1944</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02001">2001</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1339,7 +1340,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_plug_processor.html#a4e9b417cee5b4baba70468cb15d927c3">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01978">1978</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02035">2035</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1378,7 +1379,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_processor.html#a0283210dcd86bc9cf13cb2cf790d769e">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02003">2003</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02060">2060</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1417,7 +1418,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_processor.html#a195e1f95d847cfb5d5cc665b2143d10a">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02034">2034</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02091">2091</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
 </div>
 </div>
@@ -1455,9 +1456,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_processor.html#a3c5c2a1b80ba384c50a2bb4888b63461">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l01971">1971</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8cpp_source.html#l02028">2028</a> of file <a class="el" href="_i_plug_a_u_8cpp_source.html">IPlugAU.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8cpp_source.html#l00269">IPlugProcessor::SetLatency()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8cpp_source.html#l00270">IPlugProcessor::SetLatency()</a>.</p>
 
 </div>
 </div>
@@ -1484,7 +1485,7 @@ template&lt;class Plug , bool DoesMIDIIn&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8h_source.html#l00219">219</a> of file <a class="el" href="_i_plug_a_u_8h_source.html">IPlugAU.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_u_8h_source.html#l00315">315</a> of file <a class="el" href="_i_plug_a_u_8h_source.html">IPlugAU.h</a>.</p>
 
 </div>
 </div>

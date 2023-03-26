@@ -136,113 +136,115 @@ $(function() {
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordflow">if</span> (mAnimationSize.width() &gt; 0 &amp;&amp; mAnimationSize.height() &gt; 0)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">float</span> scale = std::min(size.width() / mAnimationSize.width(), size.height() / mAnimationSize.height());</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        mMatrix.setScaleTranslate(scale, scale, (size.width() - mAnimationSize.width() * scale) * 0.5f, (size.height() - mAnimationSize.height() * scale) * 0.5f);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        mMatrix = SkMatrix();</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      mSize = size;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    canvas-&gt;concat(mMatrix);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    mAnimation-&gt;render(canvas);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> LoadFile(<span class="keyword">const</span> <span class="keywordtype">char</span>* path)</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  {</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    skottie::Animation::Builder builder;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    mAnimation = builder.makeFromFile(path);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    mSize = {0, 0};</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">if</span> (mAnimation)</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      mAnimationSize = mAnimation-&gt;size();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <a class="code hl_function" href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">SetActionFunction</a>([&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">if</span> (mAnimation)</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          <a class="code hl_function" href="class_i_control.html#afce4ca5cb07bd2db0373d94d48b51593">SetAnimation</a>(</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>              <span class="keyword">auto</span> progress = pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a89f8af5b9f31375d3f8b014b23a985a0">GetAnimationProgress</a>();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>              mAnimation-&gt;seekFrameTime((pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a15534040235ebe827f1778203341f07b">GetAnimationDuration</a>().count() / 1000.) * progress, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>              if (progress &gt; 1.f)</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                pCaller-&gt;OnEndAnimation();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            },</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            mAnimation-&gt;duration() * 1000.);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      });</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      mAnimationSize = {0, 0};</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  }</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordtype">void</span> LoadData(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> length)</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    skottie::Animation::Builder builder;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    mAnimation = builder.make((<span class="keyword">const</span> <span class="keywordtype">char</span>*)data, (<span class="keywordtype">size_t</span>)length);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    mSize = {0, 0};</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    mAnimationSize = mAnimation ? mAnimation-&gt;size() : SkSize{0, 0};</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_function" href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">SetActionFunction</a>([&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <a class="code hl_function" href="class_i_control.html#afce4ca5cb07bd2db0373d94d48b51593">SetAnimation</a>(</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>          <span class="keyword">auto</span> progress = pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a89f8af5b9f31375d3f8b014b23a985a0">GetAnimationProgress</a>();</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>          mAnimation-&gt;seekFrameTime((pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a15534040235ebe827f1778203341f07b">GetAnimationDuration</a>().count() / 1000.) * progress, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>          if (progress &gt; 1.f)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            pCaller-&gt;OnEndAnimation();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        },</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        mAnimation-&gt;duration() * 1000.);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    });</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_i_sk_lottie_control.html#aa5942473c18ad682e806d1295a2bb305">  123</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_sk_lottie_control.html#aa5942473c18ad682e806d1295a2bb305">OnMouseDown</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (mod.S)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      WDL_String fileName, path{<span class="stringliteral">&quot;~/Desktop&quot;</span>};</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <a class="code hl_function" href="class_i_control.html#a22b976d26b6670a8b84457a999dc7ce5">GetUI</a>()-&gt;<a class="code hl_function" href="class_i_graphics.html#a8d1ea967c5bff143a3554d7589e88f58">PromptForFile</a>(fileName, path, EFileAction::Open, <span class="stringliteral">&quot;svg&quot;</span>, [<span class="keyword">this</span>](<span class="keyword">const</span> WDL_String&amp; fileName, <span class="keyword">const</span> WDL_String&amp; path) {</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="keywordflow">if</span> (fileName.GetLength())</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>          LoadFile(fileName.Get());</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      });</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>      <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  }</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  sk_sp&lt;skottie::Animation&gt; mAnimation;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  SkSize mSize;</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  SkSize mAnimationSize;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  SkMatrix mMatrix;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>};</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        mMatrix.setScaleTranslate(scale, scale, (size.width() - mAnimationSize.width() * scale) * 0.5f,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                  (size.height() - mAnimationSize.height() * scale) * 0.5f);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        mMatrix = SkMatrix();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      mSize = size;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    canvas-&gt;concat(mMatrix);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    mAnimation-&gt;render(canvas);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordtype">void</span> LoadFile(<span class="keyword">const</span> <span class="keywordtype">char</span>* path)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    skottie::Animation::Builder builder;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    mAnimation = builder.makeFromFile(path);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    mSize = {0, 0};</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (mAnimation)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      mAnimationSize = mAnimation-&gt;size();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_function" href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">SetActionFunction</a>([&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">if</span> (mAnimation)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>          <a class="code hl_function" href="class_i_control.html#afce4ca5cb07bd2db0373d94d48b51593">SetAnimation</a>(</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>              <span class="keyword">auto</span> progress = pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a89f8af5b9f31375d3f8b014b23a985a0">GetAnimationProgress</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>              mAnimation-&gt;seekFrameTime((pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a15534040235ebe827f1778203341f07b">GetAnimationDuration</a>().count() / 1000.) * progress, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>              if (progress &gt; 1.f)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                pCaller-&gt;OnEndAnimation();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            },</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            mAnimation-&gt;duration() * 1000.);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      });</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      mAnimationSize = {0, 0};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordtype">void</span> LoadData(<span class="keyword">const</span> <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> length)</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    skottie::Animation::Builder builder;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    mAnimation = builder.make((<span class="keyword">const</span> <span class="keywordtype">char</span>*)data, (<span class="keywordtype">size_t</span>)length);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    mSize = {0, 0};</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    mAnimationSize = mAnimation ? mAnimation-&gt;size() : SkSize{0, 0};</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">SetActionFunction</a>([&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <a class="code hl_function" href="class_i_control.html#afce4ca5cb07bd2db0373d94d48b51593">SetAnimation</a>(</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>          <span class="keyword">auto</span> progress = pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a89f8af5b9f31375d3f8b014b23a985a0">GetAnimationProgress</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>          mAnimation-&gt;seekFrameTime((pCaller-&gt;<a class="code hl_function" href="class_i_control.html#a15534040235ebe827f1778203341f07b">GetAnimationDuration</a>().count() / 1000.) * progress, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>          if (progress &gt; 1.f)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            pCaller-&gt;OnEndAnimation();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        },</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        mAnimation-&gt;duration() * 1000.);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    });</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_i_sk_lottie_control.html#aa5942473c18ad682e806d1295a2bb305">  124</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_sk_lottie_control.html#aa5942473c18ad682e806d1295a2bb305">OnMouseDown</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordflow">if</span> (mod.S)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>      WDL_String fileName, path{<span class="stringliteral">&quot;~/Desktop&quot;</span>};</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <a class="code hl_function" href="class_i_control.html#a22b976d26b6670a8b84457a999dc7ce5">GetUI</a>()-&gt;<a class="code hl_function" href="class_i_graphics.html#a8d1ea967c5bff143a3554d7589e88f58">PromptForFile</a>(</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        fileName, path, EFileAction::Open, <span class="stringliteral">&quot;svg&quot;</span>, [<span class="keyword">this</span>](<span class="keyword">const</span> WDL_String&amp; fileName, <span class="keyword">const</span> WDL_String&amp; path) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>          <span class="keywordflow">if</span> (fileName.GetLength())</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            LoadFile(fileName.Get());</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>          <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        });</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  sk_sp&lt;skottie::Animation&gt; mAnimation;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  SkSize mSize;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  SkSize mAnimationSize;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  SkMatrix mMatrix;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>};</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
-<div class="ttc" id="aclass_i_control_html"><div class="ttname"><a href="class_i_control.html">IControl</a></div><div class="ttdoc">The lowest level base class of an IGraphics control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00042">IControl.h:47</a></div></div>
-<div class="ttc" id="aclass_i_control_html_a15534040235ebe827f1778203341f07b"><div class="ttname"><a href="class_i_control.html#a15534040235ebe827f1778203341f07b">IControl::GetAnimationDuration</a></div><div class="ttdeci">Milliseconds GetAnimationDuration() const</div><div class="ttdoc">Get the duration of animations applied to the control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00534">IControl.h:534</a></div></div>
-<div class="ttc" id="aclass_i_control_html_a22b976d26b6670a8b84457a999dc7ce5"><div class="ttname"><a href="class_i_control.html#a22b976d26b6670a8b84457a999dc7ce5">IControl::GetUI</a></div><div class="ttdeci">IGraphics * GetUI()</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00487">IControl.h:487</a></div></div>
-<div class="ttc" id="aclass_i_control_html_a89f8af5b9f31375d3f8b014b23a985a0"><div class="ttname"><a href="class_i_control.html#a89f8af5b9f31375d3f8b014b23a985a0">IControl::GetAnimationProgress</a></div><div class="ttdeci">double GetAnimationProgress() const</div><div class="ttdoc">Get the progress in a control's animation, in the range 0-1.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00432">IControl.cpp:432</a></div></div>
-<div class="ttc" id="aclass_i_control_html_af7a0665239ff8e63860d6976f326cb5c"><div class="ttname"><a href="class_i_control.html#af7a0665239ff8e63860d6976f326cb5c">IControl::GetAnimationFunction</a></div><div class="ttdeci">IAnimationFunction GetAnimationFunction()</div><div class="ttdoc">Get the control's animation function, if it exists.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00525">IControl.h:525</a></div></div>
-<div class="ttc" id="aclass_i_control_html_af8c805c09b1a89f44aec43026fcb1fe7"><div class="ttname"><a href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">IControl::SetDirty</a></div><div class="ttdeci">virtual void SetDirty(bool triggerAction=true, int valIdx=kNoValIdx)</div><div class="ttdoc">Mark the control as dirty, i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00199">IControl.cpp:199</a></div></div>
-<div class="ttc" id="aclass_i_control_html_afc5925240d88ea44ace15f7c283745ea"><div class="ttname"><a href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">IControl::SetActionFunction</a></div><div class="ttdeci">IControl * SetActionFunction(IActionFunction actionFunc)</div><div class="ttdoc">Set an Action Function for this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00207">IControl.h:207</a></div></div>
-<div class="ttc" id="aclass_i_control_html_afce4ca5cb07bd2db0373d94d48b51593"><div class="ttname"><a href="class_i_control.html#afce4ca5cb07bd2db0373d94d48b51593">IControl::SetAnimation</a></div><div class="ttdeci">void SetAnimation(IAnimationFunction func)</div><div class="ttdoc">Set the animation function.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00513">IControl.h:513</a></div></div>
-<div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00082">IGraphics.h:86</a></div></div>
+<div class="ttc" id="aclass_i_control_html"><div class="ttname"><a href="class_i_control.html">IControl</a></div><div class="ttdoc">The lowest level base class of an IGraphics control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00043">IControl.h:48</a></div></div>
+<div class="ttc" id="aclass_i_control_html_a15534040235ebe827f1778203341f07b"><div class="ttname"><a href="class_i_control.html#a15534040235ebe827f1778203341f07b">IControl::GetAnimationDuration</a></div><div class="ttdeci">Milliseconds GetAnimationDuration() const</div><div class="ttdoc">Get the duration of animations applied to the control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00570">IControl.h:570</a></div></div>
+<div class="ttc" id="aclass_i_control_html_a22b976d26b6670a8b84457a999dc7ce5"><div class="ttname"><a href="class_i_control.html#a22b976d26b6670a8b84457a999dc7ce5">IControl::GetUI</a></div><div class="ttdeci">IGraphics * GetUI()</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00517">IControl.h:517</a></div></div>
+<div class="ttc" id="aclass_i_control_html_a89f8af5b9f31375d3f8b014b23a985a0"><div class="ttname"><a href="class_i_control.html#a89f8af5b9f31375d3f8b014b23a985a0">IControl::GetAnimationProgress</a></div><div class="ttdeci">double GetAnimationProgress() const</div><div class="ttdoc">Get the progress in a control's animation, in the range 0-1.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00438">IControl.cpp:438</a></div></div>
+<div class="ttc" id="aclass_i_control_html_af7a0665239ff8e63860d6976f326cb5c"><div class="ttname"><a href="class_i_control.html#af7a0665239ff8e63860d6976f326cb5c">IControl::GetAnimationFunction</a></div><div class="ttdeci">IAnimationFunction GetAnimationFunction()</div><div class="ttdoc">Get the control's animation function, if it exists.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00561">IControl.h:561</a></div></div>
+<div class="ttc" id="aclass_i_control_html_af8c805c09b1a89f44aec43026fcb1fe7"><div class="ttname"><a href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">IControl::SetDirty</a></div><div class="ttdeci">virtual void SetDirty(bool triggerAction=true, int valIdx=kNoValIdx)</div><div class="ttdoc">Mark the control as dirty, i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00204">IControl.cpp:204</a></div></div>
+<div class="ttc" id="aclass_i_control_html_afc5925240d88ea44ace15f7c283745ea"><div class="ttname"><a href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">IControl::SetActionFunction</a></div><div class="ttdeci">IControl * SetActionFunction(IActionFunction actionFunc)</div><div class="ttdoc">Set an Action Function for this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00222">IControl.h:222</a></div></div>
+<div class="ttc" id="aclass_i_control_html_afce4ca5cb07bd2db0373d94d48b51593"><div class="ttname"><a href="class_i_control.html#afce4ca5cb07bd2db0373d94d48b51593">IControl::SetAnimation</a></div><div class="ttdeci">void SetAnimation(IAnimationFunction func)</div><div class="ttdoc">Set the animation function.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00549">IControl.h:549</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00083">IGraphics.h:87</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html_a223c6189a1906071bcb3018837792946"><div class="ttname"><a href="class_i_graphics.html#a223c6189a1906071bcb3018837792946">IGraphics::GetDrawContext</a></div><div class="ttdeci">virtual void * GetDrawContext()=0</div><div class="ttdoc">Gets a void pointer to underlying drawing context, for the IGraphics backend See draw class implement...</div></div>
 <div class="ttc" id="aclass_i_graphics_html_a8d1ea967c5bff143a3554d7589e88f58"><div class="ttname"><a href="class_i_graphics.html#a8d1ea967c5bff143a3554d7589e88f58">IGraphics::PromptForFile</a></div><div class="ttdeci">virtual void PromptForFile(WDL_String &amp;fileName, WDL_String &amp;path, EFileAction action=EFileAction::Open, const char *ext=&quot;&quot;, IFileDialogCompletionHandlerFunc completionHandler=nullptr)=0</div><div class="ttdoc">Create a platform file prompt dialog to choose a path for opening/saving a single file.</div></div>
 <div class="ttc" id="aclass_i_sk_lottie_control_html"><div class="ttname"><a href="class_i_sk_lottie_control.html">ISkLottieControl</a></div><div class="ttdoc">A control that hosts a Lottie animation, via Skia's Skottie module https://skia.org/user/modules/skot...</div><div class="ttdef"><b>Definition:</b> <a href="_i_sk_lottie_control_8h_source.html#l00036">ISkLottieControl.h:37</a></div></div>
-<div class="ttc" id="aclass_i_sk_lottie_control_html_aa5942473c18ad682e806d1295a2bb305"><div class="ttname"><a href="class_i_sk_lottie_control.html#aa5942473c18ad682e806d1295a2bb305">ISkLottieControl::OnMouseDown</a></div><div class="ttdeci">void OnMouseDown(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse down event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sk_lottie_control_8h_source.html#l00123">ISkLottieControl.h:123</a></div></div>
+<div class="ttc" id="aclass_i_sk_lottie_control_html_aa5942473c18ad682e806d1295a2bb305"><div class="ttname"><a href="class_i_sk_lottie_control.html#aa5942473c18ad682e806d1295a2bb305">ISkLottieControl::OnMouseDown</a></div><div class="ttdeci">void OnMouseDown(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse down event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sk_lottie_control_8h_source.html#l00124">ISkLottieControl.h:124</a></div></div>
 <div class="ttc" id="aclass_i_sk_lottie_control_html_ad7ccc22e0a6c23936e29200e400a7be6"><div class="ttname"><a href="class_i_sk_lottie_control.html#ad7ccc22e0a6c23936e29200e400a7be6">ISkLottieControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sk_lottie_control_8h_source.html#l00044">ISkLottieControl.h:44</a></div></div>
-<div class="ttc" id="astruct_i_mouse_mod_html"><div class="ttname"><a href="struct_i_mouse_mod.html">IMouseMod</a></div><div class="ttdoc">Used to manage mouse modifiers i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01760">IGraphicsStructs.h:1761</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00827">IGraphicsStructs.h:828</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a9d21ea21ff622e370664267c12cc7c24"><div class="ttname"><a href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">IRECT::W</a></div><div class="ttdeci">float W() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00885">IGraphicsStructs.h:885</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_ac7252cd16f74972ce29d481f47d4a784"><div class="ttname"><a href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT::H</a></div><div class="ttdeci">float H() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00888">IGraphicsStructs.h:888</a></div></div>
+<div class="ttc" id="astruct_i_mouse_mod_html"><div class="ttname"><a href="struct_i_mouse_mod.html">IMouseMod</a></div><div class="ttdoc">Used to manage mouse modifiers i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01775">IGraphicsStructs.h:1776</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00830">IGraphicsStructs.h:831</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a9d21ea21ff622e370664267c12cc7c24"><div class="ttname"><a href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">IRECT::W</a></div><div class="ttdeci">float W() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00888">IGraphicsStructs.h:888</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_ac7252cd16f74972ce29d481f47d4a784"><div class="ttname"><a href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT::H</a></div><div class="ttdeci">float H() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00891">IGraphicsStructs.h:891</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

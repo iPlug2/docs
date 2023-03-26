@@ -108,213 +108,232 @@ $(function() {
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// Custom bus type function (in global namespace)</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#ifdef CUSTOM_BUSTYPE_FUNC</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> uint64_t GetAPIBusTypeForChannelIOConfig(<span class="keywordtype">int</span> configIdx, iplug::ERoute dir, <span class="keywordtype">int</span> busIdx, <span class="keyword">const</span> iplug::IOConfig* pConfig, WDL_TypedBuf&lt;uint64_t&gt;* APIBusTypes = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>BEGIN_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">// Default bus type function (in iplug namespace)</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef CUSTOM_BUSTYPE_FUNC</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>uint64_t GetAPIBusTypeForChannelIOConfig(<span class="keywordtype">int</span> configIdx, <a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> dir, <span class="keywordtype">int</span> busIdx, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig, WDL_TypedBuf&lt;uint64_t&gt;* APIBusTypes = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_i_plug_v_s_t3_processor_base.html">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_plug_processor.html">IPlugProcessor</a></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a>(Config c, <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>&amp; plug);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="keywordtype">void</span> Initialize(T* pPlug)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">using namespace </span>Steinberg::Vst;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> uint64_t GetAPIBusTypeForChannelIOConfig(<span class="keywordtype">int</span> configIdx,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                                iplug::ERoute dir,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                                <span class="keywordtype">int</span> busIdx,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                                                <span class="keyword">const</span> iplug::IOConfig* pConfig,</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                                                WDL_TypedBuf&lt;uint64_t&gt;* APIBusTypes = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>BEGIN_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// Default bus type function (in iplug namespace)</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifndef CUSTOM_BUSTYPE_FUNC</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>uint64_t GetAPIBusTypeForChannelIOConfig(</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordtype">int</span> configIdx, <a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> dir, <span class="keywordtype">int</span> busIdx, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig, WDL_TypedBuf&lt;uint64_t&gt;* APIBusTypes = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_i_plug_v_s_t3_processor_base.html">   40</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_plug_processor.html">IPlugProcessor</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_class" href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a>(Config c, <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>&amp; plug);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Steinberg::Vst::String128 tmpStringBuf;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// TODO: move this to IPlugProcessor::MaxNBuses(x,&amp;x) method;</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">int</span> configWithMostInputBuses = 0;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">int</span> configWithMostOutputBuses = 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">/*int maxNInBuses =*/</span><a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kInput, &amp;configWithMostInputBuses);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> maxNOutBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kOutput, &amp;configWithMostOutputBuses);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Add the maximum number of input buses in any ioconfig. channel count/API Bus type will be changed later if nessecary</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(configWithMostInputBuses);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keywordtype">int</span> nIn = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kInput);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> busIdx = 0; busIdx &lt; nIn; busIdx++)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        uint64_t busType = GetAPIBusTypeForChannelIOConfig(configWithMostInputBuses, ERoute::kInput, busIdx, pConfig);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">int</span> flags = busIdx == 0 ? flags = BusInfo::BusFlags::kDefaultActive : flags = 0;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        WDL_String busName;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kInput, busIdx, nIn, busName);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        pPlug-&gt;addAudioInput(tmpStringBuf, busType, busIdx &gt; 0 ? kAux : kMain, flags);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Add the maximum number of output buses in any ioconfig. channel count/API Bus type will be changed later if nessecary</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(configWithMostOutputBuses);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">int</span> nOut = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kOutput);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> busIdx = 0; busIdx &lt; nOut; busIdx++)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        uint64_t busType = GetAPIBusTypeForChannelIOConfig(configWithMostOutputBuses, ERoute::kOutput, busIdx, pConfig);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">int</span> flags = busIdx == 0 ? flags = BusInfo::BusFlags::kDefaultActive : flags = 0;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        WDL_String busName;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kOutput, busIdx, nOut, busName);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        pPlug-&gt;addAudioOutput(tmpStringBuf, busType, busIdx &gt; 0 ? kAux : kMain, flags);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#a446a979fea07f7e21a3c8e60cde1e7e6">IsMidiEffect</a>() &amp;&amp; maxNOutBuses == 0)</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      <span class="keywordtype">int</span> flags = 0;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      Steinberg::UString(tmpStringBuf, 128).fromAscii(<span class="stringliteral">&quot;Dummy Output&quot;</span>, 128);</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      pPlug-&gt;addAudioOutput(tmpStringBuf, Steinberg::Vst::SpeakerArr::kEmpty, Steinberg::Vst::BusTypes::kMain, flags);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">void</span> Initialize(T* pPlug)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keyword">using namespace </span>Steinberg::Vst;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    Steinberg::Vst::String128 tmpStringBuf;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// TODO: move this to IPlugProcessor::MaxNBuses(x,&amp;x) method;</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">int</span> configWithMostInputBuses = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">int</span> configWithMostOutputBuses = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">/*int maxNInBuses =*/</span><a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kInput, &amp;configWithMostInputBuses);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">int</span> maxNOutBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kOutput, &amp;configWithMostOutputBuses);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// Add the maximum number of input buses in any ioconfig. channel count/API Bus type will be changed later if</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// nessecary</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(configWithMostInputBuses);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordtype">int</span> nIn = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kInput);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> busIdx = 0; busIdx &lt; nIn; busIdx++)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        uint64_t busType = GetAPIBusTypeForChannelIOConfig(configWithMostInputBuses, ERoute::kInput, busIdx, pConfig);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordtype">int</span> flags = busIdx == 0 ? flags = BusInfo::BusFlags::kDefaultActive : flags = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        WDL_String busName;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kInput, busIdx, nIn, busName);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        pPlug-&gt;addAudioInput(tmpStringBuf, busType, busIdx &gt; 0 ? kAux : kMain, flags);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// Add the maximum number of output buses in any ioconfig. channel count/API Bus type will be changed later if</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// nessecary</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(configWithMostOutputBuses);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordtype">int</span> nOut = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kOutput);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> busIdx = 0; busIdx &lt; nOut; busIdx++)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        uint64_t busType = GetAPIBusTypeForChannelIOConfig(configWithMostOutputBuses, ERoute::kOutput, busIdx, pConfig);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">int</span> flags = busIdx == 0 ? flags = BusInfo::BusFlags::kDefaultActive : flags = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        WDL_String busName;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kOutput, busIdx, nOut, busName);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        pPlug-&gt;addAudioOutput(tmpStringBuf, busType, busIdx &gt; 0 ? kAux : kMain, flags);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      }</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#a81a67a6bf4bb9ffec859fadf2d6c5fd6">DoesMIDIIn</a>())</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      pPlug-&gt;addEventInput(STR16(<span class="stringliteral">&quot;MIDI Input&quot;</span>), VST3_NUM_MIDI_IN_CHANS);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#aee97466c42af33d84d18e60b3ed9d6ae">DoesMIDIOut</a>())</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      pPlug-&gt;addEventOutput(STR16(<span class="stringliteral">&quot;MIDI Output&quot;</span>), VST3_NUM_MIDI_OUT_CHANS);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#a446a979fea07f7e21a3c8e60cde1e7e6">IsMidiEffect</a>() &amp;&amp; maxNOutBuses == 0)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <span class="keywordtype">int</span> flags = 0;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      Steinberg::UString(tmpStringBuf, 128).fromAscii(<span class="stringliteral">&quot;Dummy Output&quot;</span>, 128);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      pPlug-&gt;addAudioOutput(tmpStringBuf, Steinberg::Vst::SpeakerArr::kEmpty, Steinberg::Vst::BusTypes::kMain, flags);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    }</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="comment">// MIDI Processing</span></div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordtype">void</span> ProcessMidiIn(Steinberg::Vst::IEventList* pEventList, <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; editorQueue, <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; processorQueue);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordtype">void</span> ProcessMidiOut(<a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;SysExData&gt;</a>&amp; sysExQueue, <a class="code hl_struct" href="struct_sys_ex_data.html">SysExData</a>&amp; sysExBuf, Steinberg::Vst::IEventList* pOutputEvents, Steinberg::int32 numSamples);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="comment">// Audio Processing Setup</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">bool</span> SetBusArrangements(</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    T* pPlug, Steinberg::Vst::SpeakerArrangement* pInputBusArrangements, Steinberg::int32 numInBuses, Steinberg::Vst::SpeakerArrangement* pOutputBusArrangements, Steinberg::int32 numOutBuses)</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keyword">using namespace </span>Steinberg::Vst;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// This would seem to be a bug in Ardour</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordflow">if</span> ((pPlug-&gt;GetHost() == kHostMixbus32C) || (pPlug-&gt;GetHost() == kHostArdour))</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    {</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">// disconnect all io pins, they will be reconnected in process</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    SetChannelConnections(ERoute::kInput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kInput), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    SetChannelConnections(ERoute::kOutput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kOutput), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> maxNInBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kInput);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> maxNOutBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kOutput);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// if the host is wanting more more buses that the max we have defined in channel io configs, return false</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (numInBuses &gt; maxNInBuses || numOutBuses &gt; maxNOutBuses)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    std::vector&lt;int&gt; inputBuses;</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    std::vector&lt;int&gt; outputBuses;</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numInBuses; i++)</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    {</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      inputBuses.push_back(SpeakerArr::getChannelCount(pInputBusArrangements[i]));</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#a81a67a6bf4bb9ffec859fadf2d6c5fd6">DoesMIDIIn</a>())</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      pPlug-&gt;addEventInput(STR16(<span class="stringliteral">&quot;MIDI Input&quot;</span>), VST3_NUM_MIDI_IN_CHANS);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#aee97466c42af33d84d18e60b3ed9d6ae">DoesMIDIOut</a>())</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      pPlug-&gt;addEventOutput(STR16(<span class="stringliteral">&quot;MIDI Output&quot;</span>), VST3_NUM_MIDI_OUT_CHANS);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">// MIDI Processing</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordtype">void</span> ProcessMidiIn(Steinberg::Vst::IEventList* pEventList,</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                     <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; editorQueue,</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                     <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; processorQueue);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordtype">void</span> ProcessMidiOut(<a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;SysExData&gt;</a>&amp; sysExQueue,</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                      <a class="code hl_struct" href="struct_sys_ex_data.html">SysExData</a>&amp; sysExBuf,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                      Steinberg::Vst::IEventList* pOutputEvents,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                      Steinberg::int32 numSamples);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="comment">// Audio Processing Setup</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordtype">bool</span> SetBusArrangements(T* pPlug,</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                          Steinberg::Vst::SpeakerArrangement* pInputBusArrangements,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                          Steinberg::int32 numInBuses,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                          Steinberg::Vst::SpeakerArrangement* pOutputBusArrangements,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                          Steinberg::int32 numOutBuses)</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keyword">using namespace </span>Steinberg::Vst;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="comment">// This would seem to be a bug in Ardour</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> ((pPlug-&gt;GetHost() == kHostMixbus32C) || (pPlug-&gt;GetHost() == kHostArdour))</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// disconnect all io pins, they will be reconnected in process</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    SetChannelConnections(ERoute::kInput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kInput), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    SetChannelConnections(ERoute::kOutput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kOutput), <span class="keyword">false</span>);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numOutBuses; i++)</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      outputBuses.push_back(SpeakerArr::getChannelCount(pOutputBusArrangements[i]));</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> matchingIdx = <a class="code hl_function" href="class_i_plug_processor.html#a8c7dedcc12b4bf205d1d0dc3d03083eb">GetIOConfigWithChanCounts</a>(inputBuses, outputBuses);</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    Steinberg::Vst::String128 tmpStringBuf;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">if</span> (matchingIdx &gt; -1)</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>      pPlug-&gt;removeAudioBusses();</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(matchingIdx);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nIn = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kInput);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> maxNInBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kInput);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> maxNOutBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kOutput);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// if the host is wanting more more buses that the max we have defined in channel io configs, return false</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">if</span> (numInBuses &gt; maxNInBuses || numOutBuses &gt; maxNOutBuses)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    std::vector&lt;int&gt; inputBuses;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    std::vector&lt;int&gt; outputBuses;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numInBuses; i++)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      inputBuses.push_back(SpeakerArr::getChannelCount(pInputBusArrangements[i]));</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> inBusIdx = 0; inBusIdx &lt; nIn; inBusIdx++)</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      {</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> flags = inBusIdx == 0 ? BusInfo::BusFlags::kDefaultActive : 0;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        SpeakerArrangement arr = GetAPIBusTypeForChannelIOConfig(matchingIdx, ERoute::kInput, inBusIdx, pConfig);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numOutBuses; i++)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      outputBuses.push_back(SpeakerArr::getChannelCount(pOutputBusArrangements[i]));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        WDL_String busName;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kInput, inBusIdx, nIn, busName);</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        pPlug-&gt;addAudioInput(tmpStringBuf, arr, (BusTypes)inBusIdx &gt; 0, flags);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>      }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nOut = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kOutput);</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> outBusIdx = 0; outBusIdx &lt; nOut; outBusIdx++)</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>      {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordtype">int</span> flags = outBusIdx == 0 ? BusInfo::BusFlags::kDefaultActive : 0;</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        SpeakerArrangement arr = GetAPIBusTypeForChannelIOConfig(matchingIdx, ERoute::kOutput, outBusIdx, pConfig);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        WDL_String busName;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kOutput, outBusIdx, nOut, busName);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        pPlug-&gt;addAudioOutput(tmpStringBuf, arr, (BusTypes)outBusIdx &gt; 0, flags);</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      }</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  }</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="keywordtype">void</span> AttachBuffers(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> idx, <span class="keywordtype">int</span> n, Steinberg::Vst::AudioBusBuffers&amp; pBus, <span class="keywordtype">int</span> nFrames, Steinberg::int32 sampleSize);</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordtype">bool</span> SetupProcessing(<span class="keyword">const</span> Steinberg::Vst::ProcessSetup&amp; setup, Steinberg::Vst::ProcessSetup&amp; storedSetup);</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordtype">bool</span> CanProcessSampleSize(Steinberg::int32 symbolicSampleSize);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="keywordtype">bool</span> SetProcessing(<span class="keywordtype">bool</span> state);</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="comment">// Audio Processing</span></div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordtype">void</span> PrepareProcessContext(Steinberg::Vst::ProcessData&amp; data, Steinberg::Vst::ProcessSetup&amp; setup);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordtype">void</span> ProcessParameterChanges(Steinberg::Vst::ProcessData&amp; data, <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; fromProcessor);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="keywordtype">void</span> ProcessAudio(Steinberg::Vst::ProcessData&amp; data, Steinberg::Vst::ProcessSetup&amp; setup, <span class="keyword">const</span> Steinberg::Vst::BusList&amp; ins, <span class="keyword">const</span> Steinberg::Vst::BusList&amp; outs);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="keywordtype">void</span> Process(Steinberg::Vst::ProcessData&amp; data,</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>               Steinberg::Vst::ProcessSetup&amp; setup,</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>               <span class="keyword">const</span> Steinberg::Vst::BusList&amp; ins,</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>               <span class="keyword">const</span> Steinberg::Vst::BusList&amp; outs,</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>               <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; fromEditor,</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>               <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; fromProcessor,</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>               <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;SysExData&gt;</a>&amp; sysExFromEditor,</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>               <a class="code hl_struct" href="struct_sys_ex_data.html">SysExData</a>&amp; sysExBuf);</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">// IPlugProcessor overrides</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">SendMidiMsg</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> matchingIdx = <a class="code hl_function" href="class_i_plug_processor.html#a8c7dedcc12b4bf205d1d0dc3d03083eb">GetIOConfigWithChanCounts</a>(inputBuses, outputBuses);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    Steinberg::Vst::String128 tmpStringBuf;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordflow">if</span> (matchingIdx &gt; -1)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      pPlug-&gt;removeAudioBusses();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(matchingIdx);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nIn = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kInput);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> inBusIdx = 0; inBusIdx &lt; nIn; inBusIdx++)</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keyword">const</span> <span class="keywordtype">int</span> flags = inBusIdx == 0 ? BusInfo::BusFlags::kDefaultActive : 0;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        SpeakerArrangement arr = GetAPIBusTypeForChannelIOConfig(matchingIdx, ERoute::kInput, inBusIdx, pConfig);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        WDL_String busName;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kInput, inBusIdx, nIn, busName);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        pPlug-&gt;addAudioInput(tmpStringBuf, arr, (BusTypes)inBusIdx &gt; 0, flags);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <span class="keyword">const</span> <span class="keywordtype">int</span> nOut = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kOutput);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> outBusIdx = 0; outBusIdx &lt; nOut; outBusIdx++)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>      {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="keywordtype">int</span> flags = outBusIdx == 0 ? BusInfo::BusFlags::kDefaultActive : 0;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        SpeakerArrangement arr = GetAPIBusTypeForChannelIOConfig(matchingIdx, ERoute::kOutput, outBusIdx, pConfig);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        WDL_String busName;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <a class="code hl_function" href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">GetBusName</a>(ERoute::kOutput, outBusIdx, nOut, busName);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        Steinberg::UString(tmpStringBuf, 128).fromAscii(busName.Get(), 128);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        pPlug-&gt;addAudioOutput(tmpStringBuf, arr, (BusTypes)outBusIdx &gt; 0, flags);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>      }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="keywordtype">void</span> AttachBuffers(</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> idx, <span class="keywordtype">int</span> n, Steinberg::Vst::AudioBusBuffers&amp; pBus, <span class="keywordtype">int</span> nFrames, Steinberg::int32 sampleSize);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <span class="keywordtype">bool</span> SetupProcessing(<span class="keyword">const</span> Steinberg::Vst::ProcessSetup&amp; setup, Steinberg::Vst::ProcessSetup&amp; storedSetup);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keywordtype">bool</span> CanProcessSampleSize(Steinberg::int32 symbolicSampleSize);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keywordtype">bool</span> SetProcessing(<span class="keywordtype">bool</span> state);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">int</span> mMaxNChansForMainInputBus = 0;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>&amp; mPlug;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  Steinberg::Vst::ProcessContext mProcessContext;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_class" href="class_i_midi_queue.html">IMidiQueue</a> mMidiOutputQueue;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keywordtype">bool</span> mSidechainActive = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>};</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="comment">// Audio Processing</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">void</span> PrepareProcessContext(Steinberg::Vst::ProcessData&amp; data, Steinberg::Vst::ProcessSetup&amp; setup);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="keywordtype">void</span> ProcessParameterChanges(Steinberg::Vst::ProcessData&amp; data, <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; fromProcessor);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">void</span> ProcessAudio(Steinberg::Vst::ProcessData&amp; data,</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                    Steinberg::Vst::ProcessSetup&amp; setup,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                    <span class="keyword">const</span> Steinberg::Vst::BusList&amp; ins,</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>                    <span class="keyword">const</span> Steinberg::Vst::BusList&amp; outs);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keywordtype">void</span> Process(Steinberg::Vst::ProcessData&amp; data,</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>               Steinberg::Vst::ProcessSetup&amp; setup,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>               <span class="keyword">const</span> Steinberg::Vst::BusList&amp; ins,</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>               <span class="keyword">const</span> Steinberg::Vst::BusList&amp; outs,</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>               <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; fromEditor,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>               <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;IMidiMsg&gt;</a>&amp; fromProcessor,</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>               <a class="code hl_class" href="class_i_plug_queue.html">IPlugQueue&lt;SysExData&gt;</a>&amp; sysExFromEditor,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>               <a class="code hl_struct" href="struct_sys_ex_data.html">SysExData</a>&amp; sysExBuf);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="comment">// IPlugProcessor overrides</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">SendMidiMsg</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="keywordtype">int</span> mMaxNChansForMainInputBus = 0;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>&amp; mPlug;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  Steinberg::Vst::ProcessContext mProcessContext;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <a class="code hl_class" href="class_i_midi_queue.html">IMidiQueue</a> mMidiOutputQueue;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordtype">bool</span> mSidechainActive = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>};</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_plug_a_p_i_base_8h_html"><div class="ttname"><a href="_i_plug_a_p_i_base_8h.html">IPlugAPIBase.h</a></div></div>
 <div class="ttc" id="a_i_plug_processor_8h_html"><div class="ttname"><a href="_i_plug_processor_8h.html">IPlugProcessor.h</a></div></div>
-<div class="ttc" id="aclass_i_midi_queue_html"><div class="ttname"><a href="class_i_midi_queue.html">IMidiQueue</a></div><div class="ttdoc">A class to help with queuing timestamped MIDI messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_midi_8h_source.html#l00538">IPlugMidi.h:539</a></div></div>
+<div class="ttc" id="aclass_i_midi_queue_html"><div class="ttname"><a href="class_i_midi_queue.html">IMidiQueue</a></div><div class="ttdoc">A class to help with queuing timestamped MIDI messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_midi_8h_source.html#l00550">IPlugMidi.h:551</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_p_i_base_html"><div class="ttname"><a href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a></div><div class="ttdoc">The base class of an IPlug plug-in, which interacts with the different plug-in APIs.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_i_base_8h_source.html#l00042">IPlugAPIBase.h:43</a></div></div>
 <div class="ttc" id="aclass_i_plug_processor_html"><div class="ttname"><a href="class_i_plug_processor.html">IPlugProcessor</a></div><div class="ttdoc">The base class for IPlug Audio Processing.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00040">IPlugProcessor.h:41</a></div></div>
-<div class="ttc" id="aclass_i_plug_processor_html_a0f0de1323b84a32ac31f116a82860731"><div class="ttname"><a href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">IPlugProcessor::GetIOConfig</a></div><div class="ttdeci">const IOConfig * GetIOConfig(int idx) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00155">IPlugProcessor.h:155</a></div></div>
+<div class="ttc" id="aclass_i_plug_processor_html_a0f0de1323b84a32ac31f116a82860731"><div class="ttname"><a href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">IPlugProcessor::GetIOConfig</a></div><div class="ttdeci">const IOConfig * GetIOConfig(int idx) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00163">IPlugProcessor.h:163</a></div></div>
 <div class="ttc" id="aclass_i_plug_processor_html_a3b558377490dc5fea51bfd3c009d18c9"><div class="ttname"><a href="class_i_plug_processor.html#a3b558377490dc5fea51bfd3c009d18c9">IPlugProcessor::GetBusName</a></div><div class="ttdeci">virtual void GetBusName(ERoute direction, int busIdx, int nBuses, WDL_String &amp;str) const</div><div class="ttdoc">Get the name for a particular bus.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8cpp_source.html#l00116">IPlugProcessor.cpp:116</a></div></div>
-<div class="ttc" id="aclass_i_plug_processor_html_a446a979fea07f7e21a3c8e60cde1e7e6"><div class="ttname"><a href="class_i_plug_processor.html#a446a979fea07f7e21a3c8e60cde1e7e6">IPlugProcessor::IsMidiEffect</a></div><div class="ttdeci">bool IsMidiEffect() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00215">IPlugProcessor.h:215</a></div></div>
+<div class="ttc" id="aclass_i_plug_processor_html_a446a979fea07f7e21a3c8e60cde1e7e6"><div class="ttname"><a href="class_i_plug_processor.html#a446a979fea07f7e21a3c8e60cde1e7e6">IPlugProcessor::IsMidiEffect</a></div><div class="ttdeci">bool IsMidiEffect() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00232">IPlugProcessor.h:232</a></div></div>
 <div class="ttc" id="aclass_i_plug_processor_html_a4b9440ca11ef64f790a9b00b24fe6be0"><div class="ttname"><a href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">IPlugProcessor::MaxNBuses</a></div><div class="ttdeci">int MaxNBuses(ERoute direction, int *pConfigIdxWithTheMostBuses=nullptr) const</div><div class="ttdoc">Used to determine the maximum number of input or output buses based on what was specified in the chan...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8cpp_source.html#l00149">IPlugProcessor.cpp:149</a></div></div>
-<div class="ttc" id="aclass_i_plug_processor_html_a81a67a6bf4bb9ffec859fadf2d6c5fd6"><div class="ttname"><a href="class_i_plug_processor.html#a81a67a6bf4bb9ffec859fadf2d6c5fd6">IPlugProcessor::DoesMIDIIn</a></div><div class="ttdeci">bool DoesMIDIIn() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00221">IPlugProcessor.h:221</a></div></div>
+<div class="ttc" id="aclass_i_plug_processor_html_a81a67a6bf4bb9ffec859fadf2d6c5fd6"><div class="ttname"><a href="class_i_plug_processor.html#a81a67a6bf4bb9ffec859fadf2d6c5fd6">IPlugProcessor::DoesMIDIIn</a></div><div class="ttdeci">bool DoesMIDIIn() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00238">IPlugProcessor.h:238</a></div></div>
 <div class="ttc" id="aclass_i_plug_processor_html_a8c7dedcc12b4bf205d1d0dc3d03083eb"><div class="ttname"><a href="class_i_plug_processor.html#a8c7dedcc12b4bf205d1d0dc3d03083eb">IPlugProcessor::GetIOConfigWithChanCounts</a></div><div class="ttdeci">int GetIOConfigWithChanCounts(std::vector&lt; int &gt; &amp;inputBuses, std::vector&lt; int &gt; &amp;outputBuses)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8cpp_source.html#l00172">IPlugProcessor.cpp:172</a></div></div>
-<div class="ttc" id="aclass_i_plug_processor_html_acb0943c20c855b881cfbaaa291d5e776"><div class="ttname"><a href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">IPlugProcessor::MaxNChannels</a></div><div class="ttdeci">int MaxNChannels(ERoute direction) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00180">IPlugProcessor.h:180</a></div></div>
-<div class="ttc" id="aclass_i_plug_processor_html_aee97466c42af33d84d18e60b3ed9d6ae"><div class="ttname"><a href="class_i_plug_processor.html#aee97466c42af33d84d18e60b3ed9d6ae">IPlugProcessor::DoesMIDIOut</a></div><div class="ttdeci">bool DoesMIDIOut() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00224">IPlugProcessor.h:224</a></div></div>
+<div class="ttc" id="aclass_i_plug_processor_html_acb0943c20c855b881cfbaaa291d5e776"><div class="ttname"><a href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">IPlugProcessor::MaxNChannels</a></div><div class="ttdeci">int MaxNChannels(ERoute direction) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00192">IPlugProcessor.h:192</a></div></div>
+<div class="ttc" id="aclass_i_plug_processor_html_aee97466c42af33d84d18e60b3ed9d6ae"><div class="ttname"><a href="class_i_plug_processor.html#aee97466c42af33d84d18e60b3ed9d6ae">IPlugProcessor::DoesMIDIOut</a></div><div class="ttdeci">bool DoesMIDIOut() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_processor_8h_source.html#l00241">IPlugProcessor.h:241</a></div></div>
 <div class="ttc" id="aclass_i_plug_queue_html"><div class="ttname"><a href="class_i_plug_queue.html">IPlugQueue</a></div><div class="ttdoc">A lock-free SPSC queue used to transfer data between threads based on MLQueue.h by Randy Jones based ...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_queue_8h_source.html#l00031">IPlugQueue.h:32</a></div></div>
-<div class="ttc" id="aclass_i_plug_v_s_t3_processor_base_html"><div class="ttname"><a href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a></div><div class="ttdoc">Shared VST3 processor code.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_v_s_t3___processor_base_8h_source.html#l00035">IPlugVST3_ProcessorBase.h:36</a></div></div>
-<div class="ttc" id="aclass_i_plug_v_s_t3_processor_base_html_ad123ab66833e9664c82cbd5e414697af"><div class="ttname"><a href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">IPlugVST3ProcessorBase::SendMidiMsg</a></div><div class="ttdeci">bool SendMidiMsg(const IMidiMsg &amp;msg) override</div><div class="ttdoc">Send a single MIDI message // TODO: info about what thread should this be called on or not called on!</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00449">IPlugVST3_ProcessorBase.cpp:449</a></div></div>
-<div class="ttc" id="agroup___i_plug_constants_html_ga2d2950b86093091e6a4fcf3fa7c6732a"><div class="ttname"><a href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a></div><div class="ttdeci">ERoute</div><div class="ttdoc">Used to identify whether a bus/channel connection is an input or an output.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_constants_8h_source.html#l00169">IPlugConstants.h:170</a></div></div>
+<div class="ttc" id="aclass_i_plug_v_s_t3_processor_base_html"><div class="ttname"><a href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a></div><div class="ttdoc">Shared VST3 processor code.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_v_s_t3___processor_base_8h_source.html#l00040">IPlugVST3_ProcessorBase.h:41</a></div></div>
+<div class="ttc" id="aclass_i_plug_v_s_t3_processor_base_html_ad123ab66833e9664c82cbd5e414697af"><div class="ttname"><a href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">IPlugVST3ProcessorBase::SendMidiMsg</a></div><div class="ttdeci">bool SendMidiMsg(const IMidiMsg &amp;msg) override</div><div class="ttdoc">Send a single MIDI message // TODO: info about what thread should this be called on or not called on!</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00468">IPlugVST3_ProcessorBase.cpp:468</a></div></div>
+<div class="ttc" id="agroup___i_plug_constants_html_ga2d2950b86093091e6a4fcf3fa7c6732a"><div class="ttname"><a href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a></div><div class="ttdeci">ERoute</div><div class="ttdoc">Used to identify whether a bus/channel connection is an input or an output.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_constants_8h_source.html#l00170">IPlugConstants.h:171</a></div></div>
 <div class="ttc" id="astruct_i_midi_msg_html"><div class="ttname"><a href="struct_i_midi_msg.html">IMidiMsg</a></div><div class="ttdoc">Encapsulates a MIDI message and provides helper functions.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_midi_8h_source.html#l00030">IPlugMidi.h:31</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html"><div class="ttname"><a href="struct_i_o_config.html">IOConfig</a></div><div class="ttdoc">An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00459">IPlugStructs.h:460</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_a1652d01a2e41a1b2245d523919e4b19a"><div class="ttname"><a href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">IOConfig::NBuses</a></div><div class="ttdeci">int NBuses(ERoute direction) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00502">IPlugStructs.h:502</a></div></div>
-<div class="ttc" id="astruct_sys_ex_data_html"><div class="ttname"><a href="struct_sys_ex_data.html">SysExData</a></div><div class="ttdoc">This structure is used when queueing Sysex messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00045">IPlugStructs.h:46</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html"><div class="ttname"><a href="struct_i_o_config.html">IOConfig</a></div><div class="ttdoc">An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00486">IPlugStructs.h:487</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_a1652d01a2e41a1b2245d523919e4b19a"><div class="ttname"><a href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">IOConfig::NBuses</a></div><div class="ttdeci">int NBuses(ERoute direction) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00529">IPlugStructs.h:529</a></div></div>
+<div class="ttc" id="astruct_sys_ex_data_html"><div class="ttname"><a href="struct_sys_ex_data.html">SysExData</a></div><div class="ttdoc">This structure is used when queueing Sysex messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00046">IPlugStructs.h:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

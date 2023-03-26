@@ -107,172 +107,172 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>BEGIN_IPLUG_NAMESPACE</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>BEGIN_IGRAPHICS_NAMESPACE</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_i_shader_control.html">   29</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_shader_control.html">IShaderControl</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_control.html">IControl</a></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">enum</span> EUniform</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    kTime,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    kWidth,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    kHeight,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    kX,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    kY,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    kL,</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    kR,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    kNumUniforms</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  };</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="class_i_shader_control.html">IShaderControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <span class="keywordtype">char</span>* shaderStr = <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  : <a class="code hl_class" href="class_i_control.html">IControl</a>(bounds)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    mText.mAlign = EAlign::Near;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    mText.mVAlign = EVAlign::Top;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//    mTimer = std::unique_ptr&lt;Timer&gt;(Timer::Create([&amp;](Timer&amp; t) {</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">//      SetDirty(false);</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">//    }, 20));</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">//    SetActionFunction([&amp;](IControl* pCaller) {</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">//      SetAnimation([&amp;](IControl* pCaller) {</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//        float p = pCaller-&gt;GetAnimationProgress();</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">//        mUniforms[kTime] = p;</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//        if (p &gt; 1.) {</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">//          pCaller-&gt;OnEndAnimation();</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">//        }</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">//      }, 10000);</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//    });</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    WDL_String err;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    SetShaderStr(shaderStr ? shaderStr :</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                           R<span class="stringliteral">&quot;(</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="stringliteral">      uniform float uTime;</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="stringliteral">      uniform float2 uDim;</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="stringliteral">      uniform float2 uMouse;</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="stringliteral">      uniform float2 uMouseBut;</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="stringliteral">      half4 main(float2 fragCoord) {</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">   77</a></span><span class="stringliteral">       float2 pos = uMouse.xy/uDim.xy;</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="stringliteral">       return half4(pos.x, pos.y, 1, 1);</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="stringliteral">      }</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="stringliteral">    )&quot;,</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="stringliteral">                 err);</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="stringliteral"></span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="stringliteral">    </span><span class="keywordflow">if</span> (err.GetLength())</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      DBGMSG(<span class="stringliteral">&quot;%s\n&quot;</span>, err.Get());</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a49588aee936e3c9ca12c91e5704773c1">   87</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">Draw</a>(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (mRTEffect)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      DrawShader(g, GetShaderBounds());</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">//    WDL_String str;</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">//    str.SetFormatted(32, &quot;%i:%i&quot;, (int) mUniforms[kX], (int) mUniforms[kY]);</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">//    g.DrawText(mText, str.Get(), mRECT);</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a49588aee936e3c9ca12c91e5704773c1">OnMouseDown</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a4373a8aa12b7b736d33cc2cca059a72b">   98</a></span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> shaderBounds = GetShaderBounds();</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    mUniforms[kX] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, x - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>());</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    mUniforms[kY] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, y - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    mUniforms[kL] = (float)mod.L ? 1.f : 0.f;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    mUniforms[kR] = (<span class="keywordtype">float</span>)mod.R ? 1.f : 0.f;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a4373a8aa12b7b736d33cc2cca059a72b">OnMouseUp</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a06f0e07d94a74d935d7e0d92dc705d26">  109</a></span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> shaderBounds = GetShaderBounds();</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    mUniforms[kX] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, x - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>());</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    mUniforms[kY] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, y - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    mUniforms[kL] = 0.f;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    mUniforms[kR] = 0.f;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">  117</a></span>  }</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a06f0e07d94a74d935d7e0d92dc705d26">OnMouseDrag</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> dX, <span class="keywordtype">float</span> dY, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> shaderBounds = GetShaderBounds();</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    mUniforms[kX] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, x - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>());</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    mUniforms[kY] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, y - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">OnResize</a>()<span class="keyword"> override</span></div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    mUniforms[kWidth] = GetShaderBounds().<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    mUniforms[kHeight] = GetShaderBounds().<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>();</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keywordtype">bool</span> SetShaderStr(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, WDL_String&amp; error)</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  {</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    mShaderStr = SkString(str);</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keyword">auto</span> [effect, errorText] = SkRuntimeEffect::MakeForShader(mShaderStr);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordflow">if</span> (!effect)</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    {</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      error.Set(errorText.c_str());</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    }</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    mRTEffect = effect;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">auto</span> inputs = SkData::MakeWithoutCopy(mUniforms.data(), mRTEffect-&gt;uniformSize());</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">auto</span> shader = mRTEffect-&gt;makeShader(std::move(inputs), <span class="keyword">nullptr</span>, 0, <span class="keyword">nullptr</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    mPaint.setShader(std::move(shader));</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  }</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">/* Override this method to only draw the shader in a sub region of the control&#39;s mRECT */</span></div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keyword">virtual</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> GetShaderBounds()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mRECT; }</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keywordtype">void</span> DrawShader(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; r)</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  {</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    SkCanvas* canvas = <span class="keyword">static_cast&lt;</span>SkCanvas*<span class="keyword">&gt;</span>(g.<a class="code hl_function" href="class_i_graphics.html#a223c6189a1906071bcb3018837792946">GetDrawContext</a>());</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    canvas-&gt;save();</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    canvas-&gt;translate(r.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, r.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    canvas-&gt;drawRect({0, 0, r.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), r.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>()}, mPaint);</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    canvas-&gt;restore();</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  }</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="comment">//  std::unique_ptr&lt;Timer&gt; mTimer;</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  SkPaint mPaint;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  SkString mShaderStr;</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  sk_sp&lt;SkRuntimeEffect&gt; mRTEffect;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  std::array&lt;float, kNumUniforms&gt; mUniforms{0.f};</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>};</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_i_shader_control.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_shader_control.html">IShaderControl</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_control.html">IControl</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">enum</span> EUniform</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    kTime,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    kWidth,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    kHeight,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    kX,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    kY,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    kL,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    kR,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    kNumUniforms</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  };</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_class" href="class_i_shader_control.html">IShaderControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <span class="keywordtype">char</span>* shaderStr = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  : <a class="code hl_class" href="class_i_control.html">IControl</a>(bounds)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    mText.mAlign = EAlign::Near;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    mText.mVAlign = EVAlign::Top;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//    mTimer = std::unique_ptr&lt;Timer&gt;(Timer::Create([&amp;](Timer&amp; t) {</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">//      SetDirty(false);</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">//    }, 20));</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">//    SetActionFunction([&amp;](IControl* pCaller) {</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//      SetAnimation([&amp;](IControl* pCaller) {</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">//        float p = pCaller-&gt;GetAnimationProgress();</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//        mUniforms[kTime] = p;</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">//        if (p &gt; 1.) {</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">//          pCaller-&gt;OnEndAnimation();</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//        }</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//      }, 10000);</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//    });</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    WDL_String err;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    SetShaderStr(shaderStr ? shaderStr :</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                           R<span class="stringliteral">&quot;(</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="stringliteral">      uniform float uTime;</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="stringliteral">      uniform float2 uDim;</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="stringliteral">      uniform float2 uMouse;</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="stringliteral">      uniform float2 uMouseBut;</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="stringliteral">      half4 main(float2 fragCoord) {</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">   78</a></span><span class="stringliteral">       float2 pos = uMouse.xy/uDim.xy;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="stringliteral">       return half4(pos.x, pos.y, 1, 1);</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="stringliteral">      }</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="stringliteral">    )&quot;,</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="stringliteral">                 err);</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="stringliteral"></span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="stringliteral">    </span><span class="keywordflow">if</span> (err.GetLength())</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      DBGMSG(<span class="stringliteral">&quot;%s\n&quot;</span>, err.Get());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a49588aee936e3c9ca12c91e5704773c1">   88</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">Draw</a>(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (mRTEffect)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      DrawShader(g, GetShaderBounds());</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">//    WDL_String str;</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">//    str.SetFormatted(32, &quot;%i:%i&quot;, (int) mUniforms[kX], (int) mUniforms[kY]);</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">//    g.DrawText(mText, str.Get(), mRECT);</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a49588aee936e3c9ca12c91e5704773c1">OnMouseDown</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a4373a8aa12b7b736d33cc2cca059a72b">   99</a></span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> shaderBounds = GetShaderBounds();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    mUniforms[kX] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, x - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    mUniforms[kY] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, y - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    mUniforms[kL] = (float)mod.L ? 1.f : 0.f;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    mUniforms[kR] = (<span class="keywordtype">float</span>)mod.R ? 1.f : 0.f;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a4373a8aa12b7b736d33cc2cca059a72b">OnMouseUp</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a06f0e07d94a74d935d7e0d92dc705d26">  110</a></span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> shaderBounds = GetShaderBounds();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    mUniforms[kX] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, x - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>());</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    mUniforms[kY] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, y - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    mUniforms[kL] = 0.f;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    mUniforms[kR] = 0.f;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">  118</a></span>  }</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a06f0e07d94a74d935d7e0d92dc705d26">OnMouseDrag</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> dX, <span class="keywordtype">float</span> dY, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_mouse_mod.html">IMouseMod</a>&amp; mod)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> shaderBounds = GetShaderBounds();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    mUniforms[kX] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, x - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>());</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    mUniforms[kY] = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(0.f, y - shaderBounds.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>, shaderBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">OnResize</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    mUniforms[kWidth] = GetShaderBounds().<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    mUniforms[kHeight] = GetShaderBounds().<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>();</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordtype">bool</span> SetShaderStr(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, WDL_String&amp; error)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    mShaderStr = SkString(str);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">auto</span> [effect, errorText] = SkRuntimeEffect::MakeForShader(mShaderStr);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">if</span> (!effect)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      error.Set(errorText.c_str());</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    mRTEffect = effect;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">auto</span> inputs = SkData::MakeWithoutCopy(mUniforms.data(), mRTEffect-&gt;uniformSize());</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keyword">auto</span> shader = mRTEffect-&gt;makeShader(std::move(inputs), <span class="keyword">nullptr</span>, 0, <span class="keyword">nullptr</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    mPaint.setShader(std::move(shader));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">/* Override this method to only draw the shader in a sub region of the control&#39;s mRECT */</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">virtual</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> GetShaderBounds()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mRECT; }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keywordtype">void</span> DrawShader(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; r)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    SkCanvas* canvas = <span class="keyword">static_cast&lt;</span>SkCanvas*<span class="keyword">&gt;</span>(g.<a class="code hl_function" href="class_i_graphics.html#a223c6189a1906071bcb3018837792946">GetDrawContext</a>());</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    canvas-&gt;save();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    canvas-&gt;translate(r.<a class="code hl_variable" href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">L</a>, r.<a class="code hl_variable" href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">T</a>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    canvas-&gt;drawRect({0, 0, r.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), r.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>()}, mPaint);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    canvas-&gt;restore();</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="comment">//  std::unique_ptr&lt;Timer&gt; mTimer;</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  SkPaint mPaint;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  SkString mShaderStr;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  sk_sp&lt;SkRuntimeEffect&gt; mRTEffect;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  std::array&lt;float, kNumUniforms&gt; mUniforms{0.f};</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>};</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
-<div class="ttc" id="aclass_i_control_html"><div class="ttname"><a href="class_i_control.html">IControl</a></div><div class="ttdoc">The lowest level base class of an IGraphics control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00042">IControl.h:47</a></div></div>
-<div class="ttc" id="aclass_i_control_html_af8c805c09b1a89f44aec43026fcb1fe7"><div class="ttname"><a href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">IControl::SetDirty</a></div><div class="ttdeci">virtual void SetDirty(bool triggerAction=true, int valIdx=kNoValIdx)</div><div class="ttdoc">Mark the control as dirty, i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00199">IControl.cpp:199</a></div></div>
-<div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00082">IGraphics.h:86</a></div></div>
+<div class="ttc" id="aclass_i_control_html"><div class="ttname"><a href="class_i_control.html">IControl</a></div><div class="ttdoc">The lowest level base class of an IGraphics control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00043">IControl.h:48</a></div></div>
+<div class="ttc" id="aclass_i_control_html_af8c805c09b1a89f44aec43026fcb1fe7"><div class="ttname"><a href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">IControl::SetDirty</a></div><div class="ttdeci">virtual void SetDirty(bool triggerAction=true, int valIdx=kNoValIdx)</div><div class="ttdoc">Mark the control as dirty, i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00204">IControl.cpp:204</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00083">IGraphics.h:87</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html_a223c6189a1906071bcb3018837792946"><div class="ttname"><a href="class_i_graphics.html#a223c6189a1906071bcb3018837792946">IGraphics::GetDrawContext</a></div><div class="ttdeci">virtual void * GetDrawContext()=0</div><div class="ttdoc">Gets a void pointer to underlying drawing context, for the IGraphics backend See draw class implement...</div></div>
-<div class="ttc" id="aclass_i_shader_control_html"><div class="ttname"><a href="class_i_shader_control.html">IShaderControl</a></div><div class="ttdoc">This control allows you to draw to the UI via a shader written using the Skia shading language,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00029">IShaderControl.h:30</a></div></div>
-<div class="ttc" id="aclass_i_shader_control_html_a06f0e07d94a74d935d7e0d92dc705d26"><div class="ttname"><a href="class_i_shader_control.html#a06f0e07d94a74d935d7e0d92dc705d26">IShaderControl::OnMouseDrag</a></div><div class="ttdeci">void OnMouseDrag(float x, float y, float dX, float dY, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse drag event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00109">IShaderControl.h:109</a></div></div>
-<div class="ttc" id="aclass_i_shader_control_html_a4373a8aa12b7b736d33cc2cca059a72b"><div class="ttname"><a href="class_i_shader_control.html#a4373a8aa12b7b736d33cc2cca059a72b">IShaderControl::OnMouseUp</a></div><div class="ttdeci">void OnMouseUp(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse up event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00098">IShaderControl.h:98</a></div></div>
-<div class="ttc" id="aclass_i_shader_control_html_a49588aee936e3c9ca12c91e5704773c1"><div class="ttname"><a href="class_i_shader_control.html#a49588aee936e3c9ca12c91e5704773c1">IShaderControl::OnMouseDown</a></div><div class="ttdeci">void OnMouseDown(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse down event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00087">IShaderControl.h:87</a></div></div>
-<div class="ttc" id="aclass_i_shader_control_html_a94f761e4589d54c27d0563e2c789d6ef"><div class="ttname"><a href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">IShaderControl::OnResize</a></div><div class="ttdeci">void OnResize() override</div><div class="ttdoc">Called when IControl is constructed or resized using SetRect().</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00117">IShaderControl.h:117</a></div></div>
-<div class="ttc" id="aclass_i_shader_control_html_aa0bc6b9c5c1dd2395222814b592ace0f"><div class="ttname"><a href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">IShaderControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00077">IShaderControl.h:77</a></div></div>
+<div class="ttc" id="aclass_i_shader_control_html"><div class="ttname"><a href="class_i_shader_control.html">IShaderControl</a></div><div class="ttdoc">This control allows you to draw to the UI via a shader written using the Skia shading language,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00030">IShaderControl.h:31</a></div></div>
+<div class="ttc" id="aclass_i_shader_control_html_a06f0e07d94a74d935d7e0d92dc705d26"><div class="ttname"><a href="class_i_shader_control.html#a06f0e07d94a74d935d7e0d92dc705d26">IShaderControl::OnMouseDrag</a></div><div class="ttdeci">void OnMouseDrag(float x, float y, float dX, float dY, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse drag event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00110">IShaderControl.h:110</a></div></div>
+<div class="ttc" id="aclass_i_shader_control_html_a4373a8aa12b7b736d33cc2cca059a72b"><div class="ttname"><a href="class_i_shader_control.html#a4373a8aa12b7b736d33cc2cca059a72b">IShaderControl::OnMouseUp</a></div><div class="ttdeci">void OnMouseUp(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse up event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00099">IShaderControl.h:99</a></div></div>
+<div class="ttc" id="aclass_i_shader_control_html_a49588aee936e3c9ca12c91e5704773c1"><div class="ttname"><a href="class_i_shader_control.html#a49588aee936e3c9ca12c91e5704773c1">IShaderControl::OnMouseDown</a></div><div class="ttdeci">void OnMouseDown(float x, float y, const IMouseMod &amp;mod) override</div><div class="ttdoc">Implement this method to respond to a mouse down event on this control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00088">IShaderControl.h:88</a></div></div>
+<div class="ttc" id="aclass_i_shader_control_html_a94f761e4589d54c27d0563e2c789d6ef"><div class="ttname"><a href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">IShaderControl::OnResize</a></div><div class="ttdeci">void OnResize() override</div><div class="ttdoc">Called when IControl is constructed or resized using SetRect().</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00118">IShaderControl.h:118</a></div></div>
+<div class="ttc" id="aclass_i_shader_control_html_aa0bc6b9c5c1dd2395222814b592ace0f"><div class="ttname"><a href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">IShaderControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_shader_control_8h_source.html#l00078">IShaderControl.h:78</a></div></div>
 <div class="ttc" id="agroup___i_plug_utilities_html_ga027ce10e55fc63bbe14430bb99ac9042"><div class="ttname"><a href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a></div><div class="ttdeci">BEGIN_IPLUG_NAMESPACE T Clip(T x, T lo, T hi)</div><div class="ttdoc">Clips the value x between lo and hi.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_utilities_8h_source.html#l00047">IPlugUtilities.h:47</a></div></div>
-<div class="ttc" id="astruct_i_mouse_mod_html"><div class="ttname"><a href="struct_i_mouse_mod.html">IMouseMod</a></div><div class="ttdoc">Used to manage mouse modifiers i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01760">IGraphicsStructs.h:1761</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00827">IGraphicsStructs.h:828</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a2eee91211068e27b94aa9340a9a337d9"><div class="ttname"><a href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">IRECT::L</a></div><div class="ttdeci">float L</div><div class="ttdoc">Left side of the rectangle (X)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00830">IGraphicsStructs.h:830</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_a9d21ea21ff622e370664267c12cc7c24"><div class="ttname"><a href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">IRECT::W</a></div><div class="ttdeci">float W() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00885">IGraphicsStructs.h:885</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_aa186fda1fe88873a41e3d9c66f7639f6"><div class="ttname"><a href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">IRECT::T</a></div><div class="ttdeci">float T</div><div class="ttdoc">Top of the rectangle (Y)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00832">IGraphicsStructs.h:832</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html_ac7252cd16f74972ce29d481f47d4a784"><div class="ttname"><a href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT::H</a></div><div class="ttdeci">float H() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00888">IGraphicsStructs.h:888</a></div></div>
+<div class="ttc" id="astruct_i_mouse_mod_html"><div class="ttname"><a href="struct_i_mouse_mod.html">IMouseMod</a></div><div class="ttdoc">Used to manage mouse modifiers i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01775">IGraphicsStructs.h:1776</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00830">IGraphicsStructs.h:831</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a2eee91211068e27b94aa9340a9a337d9"><div class="ttname"><a href="struct_i_r_e_c_t.html#a2eee91211068e27b94aa9340a9a337d9">IRECT::L</a></div><div class="ttdeci">float L</div><div class="ttdoc">Left side of the rectangle (X)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00833">IGraphicsStructs.h:833</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_a9d21ea21ff622e370664267c12cc7c24"><div class="ttname"><a href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">IRECT::W</a></div><div class="ttdeci">float W() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00888">IGraphicsStructs.h:888</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_aa186fda1fe88873a41e3d9c66f7639f6"><div class="ttname"><a href="struct_i_r_e_c_t.html#aa186fda1fe88873a41e3d9c66f7639f6">IRECT::T</a></div><div class="ttdeci">float T</div><div class="ttdoc">Top of the rectangle (Y)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00835">IGraphicsStructs.h:835</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html_ac7252cd16f74972ce29d481f47d4a784"><div class="ttname"><a href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT::H</a></div><div class="ttdeci">float H() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00891">IGraphicsStructs.h:891</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
