@@ -104,11 +104,11 @@ $(function() {
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">using namespace </span>iplug;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_i_plug_processor.html#a7cf28ba673629cac18a071329456df91">   24</a></span><a class="code hl_function" href="class_i_plug_processor.html#a7cf28ba673629cac18a071329456df91">IPlugProcessor::IPlugProcessor</a>(<span class="keyword">const</span> Config&amp; config, EAPI plugAPI)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  : mPlugType((EIPlugPluginType)config.plugType)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  , mDoesMIDIIn(config.plugDoesMidiIn)</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  , mDoesMIDIOut(config.plugDoesMidiOut)</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  , mDoesMPE(config.plugDoesMPE)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  , mLatency(config.latency)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>: mPlugType((EIPlugPluginType)config.plugType)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>, mDoesMIDIIn(config.plugDoesMidiIn)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>, mDoesMIDIOut(config.plugDoesMidiOut)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>, mDoesMPE(config.plugDoesMPE)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>, mLatency(config.latency)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordtype">int</span> totalNInBuses, totalNOutBuses;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">int</span> totalNInChans, totalNOutChans;</div>

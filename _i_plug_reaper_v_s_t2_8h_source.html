@@ -112,7 +112,7 @@ $(function() {
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_class" href="class_i_plug_reaper_v_s_t2.html">IPlugReaperVST2</a>(<span class="keyword">const</span> InstanceInfo&amp; info, <span class="keyword">const</span> Config&amp; config)</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    : <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>(info, config)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  : <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>(info, config)</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">int</span> errorCount = REAPERAPI_LoadAPI([<span class="keyword">this</span>](<span class="keyword">const</span> <span class="keywordtype">char</span>* str) { <span class="keywordflow">return</span> (<span class="keywordtype">void</span>*)mHostCallback(NULL, 0xdeadbeef, 0xdeadf00d, 0, (<span class="keywordtype">void</span>*)str, 0.0); });</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">if</span> (errorCount &gt; 0)</div>

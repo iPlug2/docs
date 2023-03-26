@@ -86,8 +86,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>ReaperExtBase::ReaperExtBase(reaper_plugin_info_t* pRec)</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>  : EDITOR_DELEGATE_CLASS(0) <span class="comment">// zero params</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>  , mRec(pRec)</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>: EDITOR_DELEGATE_CLASS(0) <span class="comment">// zero params</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>, mRec(pRec)</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>  mTimer = std::unique_ptr&lt;Timer&gt;(Timer::Create(std::bind(&amp;ReaperExtBase::OnTimer, <span class="keyword">this</span>, std::placeholders::_1), IDLE_TIMER_RATE));</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>}</div>

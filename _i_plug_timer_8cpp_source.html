@@ -104,8 +104,8 @@ $(function() {
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_struct" href="struct_timer.html">Timer</a>* Timer::Create(ITimerFunction func, uint32_t intervalMs) { <span class="keywordflow">return</span> <span class="keyword">new</span> Timer_impl(func, intervalMs); }</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>Timer_impl::Timer_impl(ITimerFunction func, uint32_t intervalMs)</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  : mTimerFunc(func)</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  , mIntervalMs(intervalMs)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>: mTimerFunc(func)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>, mIntervalMs(intervalMs)</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  CFRunLoopTimerContext context;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  context.version = 0;</div>
@@ -145,8 +145,8 @@ $(function() {
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>WDL_PtrList&lt;Timer_impl&gt; Timer_impl::sTimers;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>Timer_impl::Timer_impl(ITimerFunction func, uint32_t intervalMs)</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  : mTimerFunc(func)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  , mIntervalMs(intervalMs)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>: mTimerFunc(func)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>, mIntervalMs(intervalMs)</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  ID = SetTimer(0, 0, intervalMs, TimerProc); <span class="comment">// TODO: timer ID correct?</span></div>
@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><a class="code hl_struct" href="struct_timer.html">Timer</a>* Timer::Create(ITimerFunction func, uint32_t intervalMs) { <span class="keywordflow">return</span> <span class="keyword">new</span> Timer_impl(func, intervalMs); }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>Timer_impl::Timer_impl(ITimerFunction func, uint32_t intervalMs)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  : mTimerFunc(func)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>: mTimerFunc(func)</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>{</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  ID = emscripten_set_interval(TimerProc, intervalMs, <span class="keyword">this</span>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>

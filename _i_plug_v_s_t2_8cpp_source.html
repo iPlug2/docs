@@ -210,9 +210,9 @@ $(function() {
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>IPlugVST2::IPlugVST2(<span class="keyword">const</span> InstanceInfo&amp; info, <span class="keyword">const</span> Config&amp; config)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  : <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>(config, kAPIVST2)</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  , <a class="code hl_class" href="class_i_plug_processor.html">IPlugProcessor</a>(config, kAPIVST2)</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  , mHostCallback(info.mVSTHostCallback)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>: <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>(config, kAPIVST2)</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>, <a class="code hl_class" href="class_i_plug_processor.html">IPlugProcessor</a>(config, kAPIVST2)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>, mHostCallback(info.mVSTHostCallback)</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>{</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  Trace(TRACELOC, <span class="stringliteral">&quot;%s&quot;</span>, config.pluginName);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>

@@ -169,8 +169,8 @@ $(function() {
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#pragma mark IPlugAAX Construct</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>IPlugAAX::IPlugAAX(<span class="keyword">const</span> InstanceInfo&amp; info, <span class="keyword">const</span> Config&amp; config)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  : <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>(config, kAPIAAX)</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  , <a class="code hl_class" href="class_i_plug_processor.html">IPlugProcessor</a>(config, kAPIAAX)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>: <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>(config, kAPIAAX)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>, <a class="code hl_class" href="class_i_plug_processor.html">IPlugProcessor</a>(config, kAPIAAX)</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>{</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  Trace(TRACELOC, <span class="stringliteral">&quot;%s%s&quot;</span>, config.pluginName, config.channelIOStr);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>

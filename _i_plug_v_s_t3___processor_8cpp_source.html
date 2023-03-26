@@ -104,8 +104,8 @@ $(function() {
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span>Vst;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>IPlugVST3Processor::IPlugVST3Processor(<span class="keyword">const</span> InstanceInfo&amp; info, <span class="keyword">const</span> Config&amp; config)</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  : <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>(config, kAPIVST3)</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  , <a class="code hl_class" href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a>(config, *this)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>: <a class="code hl_class" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>(config, kAPIVST3)</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>, <a class="code hl_class" href="class_i_plug_v_s_t3_processor_base.html">IPlugVST3ProcessorBase</a>(config, *this)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  setControllerClass(info.mOtherGUID);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  CreateTimer();</div>
