@@ -368,23 +368,23 @@ $(function() {
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="class_i_graphics_skia.html#a00c58b3b9fe18a527ce54f148ab90630">  282</a></span><a class="code hl_class" href="class_a_p_i_bitmap.html">APIBitmap</a>* <a class="code hl_function" href="class_i_graphics_skia.html#a00c58b3b9fe18a527ce54f148ab90630">IGraphicsSkia::LoadAPIBitmap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fileNameOrResID, <span class="keywordtype">int</span> scale, EResourceLocation location, <span class="keyword">const</span> <span class="keywordtype">char</span>* ext)</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>{</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">//#ifdef OS_IOS</span></div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">//  if (location == EResourceLocation::kPreloadedTexture)</span></div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">//  {</span></div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">//    assert(0 &amp;&amp; &quot;SKIA does not yet load KTX textures&quot;);</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">//    GrMtlTextureInfo textureInfo;</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment">//    textureInfo.fTexture.retain((void*)(gTextureMap[fileNameOrResID]));</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">//    id&lt;MTLTexture&gt; texture = (id&lt;MTLTexture&gt;) textureInfo.fTexture.get();</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span><span class="comment">// #ifdef OS_IOS</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span><span class="comment">//   if (location == EResourceLocation::kPreloadedTexture)</span></div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">//   {</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span><span class="comment">//     assert(0 &amp;&amp; &quot;SKIA does not yet load KTX textures&quot;);</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="comment">//     GrMtlTextureInfo textureInfo;</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span><span class="comment">//     textureInfo.fTexture.retain((void*)(gTextureMap[fileNameOrResID]));</span></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span><span class="comment">//     id&lt;MTLTexture&gt; texture = (id&lt;MTLTexture&gt;) textureInfo.fTexture.get();</span></div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="comment">//</span></div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">//    MTLPixelFormat pixelFormat = texture.pixelFormat;</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="comment">//     MTLPixelFormat pixelFormat = texture.pixelFormat;</span></div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment">//</span></div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">//    auto grBackendTexture = GrBackendTexture(texture.width, texture.height, GrMipMapped::kNo, textureInfo);</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">//     auto grBackendTexture = GrBackendTexture(texture.width, texture.height, GrMipMapped::kNo, textureInfo);</span></div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">//</span></div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">//    sk_sp&lt;SkImage&gt; image = SkImage::MakeFromTexture(mGrContext.get(), grBackendTexture, kTopLeft_GrSurfaceOrigin, kBGRA_8888_SkColorType, kOpaque_SkAlphaType, nullptr);</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">//    return new Bitmap(image, scale);</span></div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">//  }</span></div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="comment">//  else</span></div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">//#endif</span></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="comment">//     sk_sp&lt;SkImage&gt; image = SkImage::MakeFromTexture(mGrContext.get(), grBackendTexture, kTopLeft_GrSurfaceOrigin, kBGRA_8888_SkColorType, kOpaque_SkAlphaType, nullptr);</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span><span class="comment">//     return new Bitmap(image, scale);</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="comment">//   }</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="comment">//   else</span></div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span><span class="comment">// #endif</span></div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="preprocessor">#ifdef OS_WIN</span></div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  <span class="keywordflow">if</span> (location == EResourceLocation::kWinBinary)</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  {</div>

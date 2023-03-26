@@ -273,13 +273,13 @@ $(function() {
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keywordtype">void</span> IPlugAPIBase::SendMidiMsgFromUI(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg)</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>{</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  DeferMidiMsg(msg);                             <span class="comment">// queue the message so that it will be handled by the processor</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  DeferMidiMsg(msg); <span class="comment">// queue the message so that it will be handled by the processor</span></div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  EDITOR_DELEGATE_CLASS::SendMidiMsgFromUI(msg); <span class="comment">// for remote editors</span></div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>}</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keywordtype">void</span> IPlugAPIBase::SendSysexMsgFromUI(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_sys_ex.html">ISysEx</a>&amp; msg)</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>{</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  DeferSysexMsg(msg);                             <span class="comment">// queue the message so that it will be handled by the processor</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  DeferSysexMsg(msg); <span class="comment">// queue the message so that it will be handled by the processor</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  EDITOR_DELEGATE_CLASS::SendSysexMsgFromUI(msg); <span class="comment">// for remote editors</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>

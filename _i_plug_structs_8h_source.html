@@ -510,9 +510,9 @@ $(function() {
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno"><a class="line" href="struct_i_key_press.html">  562</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_i_key_press.html">IKeyPress</a></div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>{</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  <span class="keywordtype">int</span> VK;             <span class="comment">// Windows VK_XXX</span></div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  <span class="keywordtype">int</span> VK; <span class="comment">// Windows VK_XXX</span></div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  <span class="keywordtype">char</span> utf8[5] = {0}; <span class="comment">// UTF8 key</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  <span class="keywordtype">bool</span> S, C, A;       <span class="comment">// SHIFT / CTRL(WIN) or CMD (MAC) / ALT</span></div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  <span class="keywordtype">bool</span> S, C, A; <span class="comment">// SHIFT / CTRL(WIN) or CMD (MAC) / ALT</span></div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span> </div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno"><a class="line" href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">  574</a></span>  <a class="code hl_function" href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">IKeyPress</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _utf8, <span class="keywordtype">int</span> vk, <span class="keywordtype">bool</span> s = <span class="keyword">false</span>, <span class="keywordtype">bool</span> c = <span class="keyword">false</span>, <span class="keywordtype">bool</span> a = <span class="keyword">false</span>)</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>  : VK(vk)</div>
