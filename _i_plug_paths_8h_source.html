@@ -132,30 +132,26 @@ $(function() {
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="_i_plug_paths_8h.html#af2a34e54254ecf7b55eb09c772e6f558">   77</a></span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code hl_function" href="_i_plug_paths_8h.html#af2a34e54254ecf7b55eb09c772e6f558">INIPath</a>(WDL_String&amp; path, <span class="keyword">const</span> <span class="keywordtype">char</span>* pluginName);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">   95</a></span><span class="keyword">extern</span> EResourceLocation <a class="code hl_function" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fileNameOrResID,</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                        <span class="keyword">const</span> <span class="keywordtype">char</span>* type,</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                                        WDL_String&amp; result,</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                        <span class="keyword">const</span> <span class="keywordtype">char</span>* bundleID,</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                        <span class="keywordtype">void</span>* pHInstance,</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                        <span class="keyword">const</span> <span class="keywordtype">char</span>* sharedResourcesSubPath);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">  106</a></span><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* resID, <span class="keyword">const</span> <span class="keywordtype">char</span>* type, <span class="keywordtype">int</span>&amp; sizeInBytes, <span class="keywordtype">void</span>* pHInstance);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#if defined OS_MAC || defined OS_IOS</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> AppIsSandboxed();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">extern</span> <span class="keywordtype">void</span> AppGroupContainerPath(WDL_String&amp; path, <span class="keyword">const</span> <span class="keywordtype">char</span>* appGroupID);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">extern</span> <span class="keywordtype">void</span> SharedMusicPath(WDL_String&amp; path);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> IsXPCAuHost();</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> IsOOPAuv3AppExtension();</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">   95</a></span><span class="keyword">extern</span> EResourceLocation <a class="code hl_function" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fileNameOrResID, <span class="keyword">const</span> <span class="keywordtype">char</span>* type, WDL_String&amp; result,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                                        <span class="keyword">const</span> <span class="keywordtype">char</span>* bundleID, <span class="keywordtype">void</span>* pHInstance, <span class="keyword">const</span> <span class="keywordtype">char</span>* sharedResourcesSubPath);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">  102</a></span><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* resID, <span class="keyword">const</span> <span class="keywordtype">char</span>* type, <span class="keywordtype">int</span>&amp; sizeInBytes, <span class="keywordtype">void</span>* pHInstance);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#if defined OS_MAC || defined OS_IOS</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> AppIsSandboxed();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">extern</span> <span class="keywordtype">void</span> AppGroupContainerPath(WDL_String&amp; path, <span class="keyword">const</span> <span class="keywordtype">char</span>* appGroupID);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">extern</span> <span class="keywordtype">void</span> SharedMusicPath(WDL_String&amp; path);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> IsXPCAuHost();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">extern</span> <span class="keywordtype">bool</span> IsOOPAuv3AppExtension();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a0238ef4a2d49efc240321b8b5ce290fe"><div class="ttname"><a href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource</a></div><div class="ttdeci">const void * LoadWinResource(const char *resID, const char *type, int &amp;sizeInBytes, void *pHInstance)</div><div class="ttdoc">Load a resource from the binary (windows only).</div></div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a03a8b65ce1ec3f165019023f43b3dd07"><div class="ttname"><a href="_i_plug_paths_8h.html#a03a8b65ce1ec3f165019023f43b3dd07">UserHomePath</a></div><div class="ttdeci">void UserHomePath(WDL_String &amp;path)</div></div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a219939770dc84d12c583a7c6c5cd1d59"><div class="ttname"><a href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource</a></div><div class="ttdeci">EResourceLocation LocateResource(const char *fileNameOrResID, const char *type, WDL_String &amp;result, const char *bundleID, void *pHInstance, const char *sharedResourcesSubPath)</div><div class="ttdoc">Find the absolute path of a resource based on it's file name (e.g.</div></div>

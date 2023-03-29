@@ -108,49 +108,45 @@ $(function() {
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_i_r_t_text_control.html">   28</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_r_t_text_control.html">IRTTextControl</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_i_text_control.html">ITextControl</a></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="class_i_r_t_text_control.html">IRTTextControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds,</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                 <span class="keyword">const</span> <span class="keywordtype">char</span>* fmtStr = <span class="stringliteral">&quot;%f&quot;</span>,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                 <span class="keyword">const</span> <span class="keywordtype">char</span>* separatorStr = <span class="stringliteral">&quot;, &quot;</span>,</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                 <span class="keyword">const</span> <span class="keywordtype">char</span>* initStr = <span class="stringliteral">&quot;&quot;</span>,</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                 <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text = DEFAULT_TEXT,</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                 <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; BGColor = DEFAULT_BGCOLOR)</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  : <a class="code hl_class" href="class_i_text_control.html">ITextControl</a>(bounds, initStr, text, BGColor)</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  , mFMTStr(fmtStr)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  , mSeparatorStr(separatorStr)</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">   43</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">OnMsgFromDelegate</a>(<span class="keywordtype">int</span> msgTag, <span class="keywordtype">int</span> dataSize, <span class="keyword">const</span> <span class="keywordtype">void</span>* pData)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_i_control.html#a498bd0f85778e3c4205b0b7158361b48">IsDisabled</a>() &amp;&amp; msgTag == <a class="code hl_class" href="class_i_sender.html">ISender&lt;&gt;::kUpdateMessage</a>)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <a class="code hl_class" href="class_i_byte_stream.html">IByteStream</a> stream(pData, dataSize);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="class_i_r_t_text_control.html">IRTTextControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <span class="keywordtype">char</span>* fmtStr = <span class="stringliteral">&quot;%f&quot;</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>* separatorStr = <span class="stringliteral">&quot;, &quot;</span>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                 <span class="keyword">const</span> <span class="keywordtype">char</span>* initStr = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text = DEFAULT_TEXT, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; BGColor = DEFAULT_BGCOLOR)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  : <a class="code hl_class" href="class_i_text_control.html">ITextControl</a>(bounds, initStr, text, BGColor)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  , mFMTStr(fmtStr)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  , mSeparatorStr(separatorStr)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">   39</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">OnMsgFromDelegate</a>(<span class="keywordtype">int</span> msgTag, <span class="keywordtype">int</span> dataSize, <span class="keyword">const</span> <span class="keywordtype">void</span>* pData)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_i_control.html#a498bd0f85778e3c4205b0b7158361b48">IsDisabled</a>() &amp;&amp; msgTag == <a class="code hl_class" href="class_i_sender.html">ISender&lt;&gt;::kUpdateMessage</a>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <a class="code hl_class" href="class_i_byte_stream.html">IByteStream</a> stream(pData, dataSize);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keywordtype">int</span> pos = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      <a class="code hl_struct" href="struct_i_sender_data.html">ISenderData&lt;MAXNC, T&gt;</a> d;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      pos = stream.<a class="code hl_function" href="class_i_byte_stream.html#a6a559e06ec65ba71667b37265c1061da">Get</a>(&amp;d, pos);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      <span class="keywordtype">int</span> pos = 0;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>      <a class="code hl_struct" href="struct_i_sender_data.html">ISenderData&lt;MAXNC, T&gt;</a> d;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      pos = stream.<a class="code hl_function" href="class_i_byte_stream.html#a6a559e06ec65ba71667b37265c1061da">Get</a>(&amp;d, pos);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      WDL_String str;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; d.nChans - 1; i++)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        str.AppendFormatted(256, mFMTStr.Get(), d.vals[i]);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        str.Append(mSeparatorStr.Get());</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      str.AppendFormatted(256, mFMTStr.Get(), d.vals[d.nChans - 1]);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <a class="code hl_function" href="class_i_text_control.html#af2c4ee0aebd893680977304fabd3c5ae">SetStr</a>(str.Get());</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  WDL_String mFMTStr;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  WDL_String mSeparatorStr;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>};</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      WDL_String str;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; d.nChans - 1; i++)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        str.AppendFormatted(256, mFMTStr.Get(), d.vals[i]);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        str.Append(mSeparatorStr.Get());</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      str.AppendFormatted(256, mFMTStr.Get(), d.vals[d.nChans - 1]);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <a class="code hl_function" href="class_i_text_control.html#af2c4ee0aebd893680977304fabd3c5ae">SetStr</a>(str.Get());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <a class="code hl_function" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">SetDirty</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  WDL_String mFMTStr;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  WDL_String mSeparatorStr;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
 <div class="ttc" id="a_i_sender_8h_html"><div class="ttname"><a href="_i_sender_8h.html">ISender.h</a></div></div>
 <div class="ttc" id="aclass_i_byte_stream_html"><div class="ttname"><a href="class_i_byte_stream.html">IByteStream</a></div><div class="ttdoc">Manages a non-owned block of memory, for receiving arbitrary message byte streams.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00260">IPlugStructs.h:261</a></div></div>
@@ -158,14 +154,14 @@ $(function() {
 <div class="ttc" id="aclass_i_control_html_a498bd0f85778e3c4205b0b7158361b48"><div class="ttname"><a href="class_i_control.html#a498bd0f85778e3c4205b0b7158361b48">IControl::IsDisabled</a></div><div class="ttdeci">bool IsDisabled() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00412">IControl.h:412</a></div></div>
 <div class="ttc" id="aclass_i_control_html_af8c805c09b1a89f44aec43026fcb1fe7"><div class="ttname"><a href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">IControl::SetDirty</a></div><div class="ttdeci">virtual void SetDirty(bool triggerAction=true, int valIdx=kNoValIdx)</div><div class="ttdoc">Mark the control as dirty, i.e.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00204">IControl.cpp:204</a></div></div>
 <div class="ttc" id="aclass_i_r_t_text_control_html"><div class="ttname"><a href="class_i_r_t_text_control.html">IRTTextControl</a></div><div class="ttdoc">A control to display some text in the UI, driven by values in the RT audio thread.</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_t_text_control_8h_source.html#l00028">IRTTextControl.h:29</a></div></div>
-<div class="ttc" id="aclass_i_r_t_text_control_html_ac8708487c8a9ac5b166b7c4c473c12e1"><div class="ttname"><a href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">IRTTextControl::OnMsgFromDelegate</a></div><div class="ttdeci">void OnMsgFromDelegate(int msgTag, int dataSize, const void *pData) override</div><div class="ttdoc">Implement to receive messages sent to the control, see IEditorDelegate:SendControlMsgFromDelegate()</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_t_text_control_8h_source.html#l00043">IRTTextControl.h:43</a></div></div>
+<div class="ttc" id="aclass_i_r_t_text_control_html_ac8708487c8a9ac5b166b7c4c473c12e1"><div class="ttname"><a href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">IRTTextControl::OnMsgFromDelegate</a></div><div class="ttdeci">void OnMsgFromDelegate(int msgTag, int dataSize, const void *pData) override</div><div class="ttdoc">Implement to receive messages sent to the control, see IEditorDelegate:SendControlMsgFromDelegate()</div><div class="ttdef"><b>Definition:</b> <a href="_i_r_t_text_control_8h_source.html#l00039">IRTTextControl.h:39</a></div></div>
 <div class="ttc" id="aclass_i_sender_html"><div class="ttname"><a href="class_i_sender.html">ISender</a></div><div class="ttdoc">ISender is a utility class which can be used to defer data from the realtime audio processing and sen...</div><div class="ttdef"><b>Definition:</b> <a href="_i_sender_8h_source.html#l00062">ISender.h:63</a></div></div>
-<div class="ttc" id="aclass_i_text_control_html"><div class="ttname"><a href="class_i_text_control.html">ITextControl</a></div><div class="ttdoc">A basic control to display some text.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l02142">IControl.h:2143</a></div></div>
+<div class="ttc" id="aclass_i_text_control_html"><div class="ttname"><a href="class_i_text_control.html">ITextControl</a></div><div class="ttdoc">A basic control to display some text.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l02102">IControl.h:2103</a></div></div>
 <div class="ttc" id="aclass_i_text_control_html_af2c4ee0aebd893680977304fabd3c5ae"><div class="ttname"><a href="class_i_text_control.html#af2c4ee0aebd893680977304fabd3c5ae">ITextControl::SetStr</a></div><div class="ttdeci">virtual void SetStr(const char *str)</div><div class="ttdoc">Set the text to display.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8cpp_source.html#l00464">IControl.cpp:464</a></div></div>
 <div class="ttc" id="astruct_i_color_html"><div class="ttname"><a href="struct_i_color.html">IColor</a></div><div class="ttdoc">Used to manage color data, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00227">IGraphicsStructs.h:228</a></div></div>
-<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00830">IGraphicsStructs.h:831</a></div></div>
+<div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00828">IGraphicsStructs.h:829</a></div></div>
 <div class="ttc" id="astruct_i_sender_data_html"><div class="ttname"><a href="struct_i_sender_data.html">ISenderData</a></div><div class="ttdoc">ISenderData is used to represent a typed data packet, that may contain values for multiple channels.</div><div class="ttdef"><b>Definition:</b> <a href="_i_sender_8h_source.html#l00033">ISender.h:34</a></div></div>
-<div class="ttc" id="astruct_i_text_html"><div class="ttname"><a href="struct_i_text.html">IText</a></div><div class="ttdoc">IText is used to manage font and text/text entry style for a piece of text on the UI,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00700">IGraphicsStructs.h:701</a></div></div>
+<div class="ttc" id="astruct_i_text_html"><div class="ttname"><a href="struct_i_text.html">IText</a></div><div class="ttdoc">IText is used to manage font and text/text entry style for a piece of text on the UI,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00703">IGraphicsStructs.h:704</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
