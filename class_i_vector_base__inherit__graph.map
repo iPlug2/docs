@@ -1,36 +1,30 @@
 <map id="IVectorBase" name="IVectorBase">
-<area shape="rect" id="node1" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="5,524,100,549"/>
-<area shape="rect" id="node2" href="$class_i_f_p_s_display_control.html" title="Performance display meter, based on code from NanoVG This is a special control that lives outside the..." alt="" coords="181,5,316,31"/>
-<area shape="rect" id="node3" href="$class_i_v_baked_preset_manager_control.html" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for &quot;baked in&quot; factory presets It adds several child buttons." alt="" coords="148,55,349,80"/>
-<area shape="rect" id="node4" href="$class_i_v_button_control.html" title="A vector button/momentary switch control." alt="" coords="191,104,306,129"/>
-<area shape="rect" id="node5" href="$class_i_v_color_swatch_control.html" title="A control to show a color swatch of up to 9 colors." alt="" coords="173,153,324,179"/>
-<area shape="rect" id="node6" href="$class_i_v_display_control.html" title="A control to display a rolling graphics of historical values." alt="" coords="189,203,308,228"/>
-<area shape="rect" id="node7" href="$class_i_v_group_control.html" title="A control to draw a rectangle around a named IControl group." alt="" coords="193,252,304,277"/>
-<area shape="rect" id="node8" href="$class_i_v_knob_control.html" title="A vector knob control drawn using graphics primitives." alt="" coords="195,301,302,327"/>
-<area shape="rect" id="node9" href="$class_i_v_knob_control_with_marks.html" title=" " alt="" coords="165,351,333,376"/>
-<area shape="rect" id="node10" href="$class_i_v_label_control.html" title="A vector label control that can display text with a shadow." alt="" coords="195,400,303,425"/>
-<area shape="rect" id="node11" href="$class_i_v_menu_button_control.html" title="A vector button that pops up a menu." alt="" coords="175,449,322,475"/>
-<area shape="rect" id="node12" href="$class_i_v_number_box_control.html" title="A &quot;meta control&quot; for a number box with an Inc/Dec button It adds several child buttons if buttons = t..." alt="" coords="177,499,321,524"/>
-<area shape="rect" id="node13" href="$class_i_v_panel_control.html" title="A panel control which can be styled with emboss etc." alt="" coords="194,548,303,573"/>
-<area shape="rect" id="node14" href="$class_i_v_plot_control.html" title="A vector plot to display functions and waveforms." alt="" coords="199,597,298,623"/>
-<area shape="rect" id="node15" href="$class_i_v_scope_control.html" title="Vectorial multi&#45;channel capable oscilloscope control." alt="" coords="161,647,337,687"/>
-<area shape="rect" id="node16" href="$class_i_v_slider_control.html" title="A vector slider control." alt="" coords="194,712,303,737"/>
-<area shape="rect" id="node17" href="$class_i_v_slider_control_with_marks.html" title=" " alt="" coords="163,761,334,787"/>
-<area shape="rect" id="node18" href="$class_i_v_switch_control.html" title="A vector switch control." alt="" coords="191,811,307,836"/>
-<area shape="rect" id="node21" href="$class_i_v_tab_switch_control.html" title="A vector &quot;tab&quot; multi switch control." alt="" coords="179,860,318,885"/>
-<area shape="rect" id="node23" href="$class_i_v_tabbed_page_base.html" title="A control used a the base class for a tabbed page of subcontrols." alt="" coords="179,909,318,935"/>
-<area shape="rect" id="node24" href="$class_i_v_tabbed_pages_control.html" title="A control to manage tabbed pages of sub controls." alt="" coords="171,959,327,984"/>
-<area shape="rect" id="node25" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="179,1008,318,1033"/>
-<area shape="rect" id="node34" href="$class_i_v_x_y_pad_control.html" title="A vector XY Pad slider control." alt="" coords="190,1057,307,1083"/>
-<area shape="rect" id="node19" href="$class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked." alt="" coords="414,761,559,787"/>
-<area shape="rect" id="node20" href="$class_i_v_toggle_control.html" title="A vector toggle control." alt="" coords="429,811,544,836"/>
-<area shape="rect" id="node22" href="$class_i_v_radio_button_control.html" title="A vector &quot;radio buttons&quot; switch control." alt="" coords="413,860,560,885"/>
-<area shape="rect" id="node26" href="$class_i_v_meter_control.html" title=" " alt="" coords="397,909,576,935"/>
-<area shape="rect" id="node28" href="$class_i_v_meter_control.html" title=" " alt="" coords="417,959,556,984"/>
-<area shape="rect" id="node29" href="$class_i_v_multi_slider_control.html" title=" " alt="" coords="403,1008,570,1033"/>
-<area shape="rect" id="node30" href="$class_i_v_meter_control.html" title="Vectorial multi&#45;channel capable meter control, linear or log response." alt="" coords="397,1057,576,1083"/>
-<area shape="rect" id="node31" href="$class_i_v_multi_slider_control.html" title="A vectorial multi&#45;slider control." alt="" coords="418,1107,555,1147"/>
-<area shape="rect" id="node33" href="$class_i_v_range_slider_control.html" title="A vector range slider control, with two handles." alt="" coords="413,1172,560,1197"/>
-<area shape="rect" id="node27" href="$class_i_v_peak_avg_meter_control.html" title=" " alt="" coords="624,984,815,1009"/>
-<area shape="rect" id="node32" href="$class_i_v_multi_toggle_control.html" title="A vectorial multi&#45;toggle control, could be used for a trigger in a step sequencer or tarnce gate." alt="" coords="648,1107,791,1147"/>
+<area shape="rect" id="node1" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="5,376,100,401"/>
+<area shape="rect" id="node2" href="$class_i_f_p_s_display_control.html" title="Performance display meter, based on code from NanoVG This is a special control that lives outside the..." alt="" coords="169,5,303,31"/>
+<area shape="rect" id="node3" href="$class_i_v_button_control.html" title="A vector button/momentary switch control." alt="" coords="179,55,293,80"/>
+<area shape="rect" id="node4" href="$class_i_v_color_swatch_control.html" title="A control to show a color swatch of up to 9 colors." alt="" coords="161,104,311,129"/>
+<area shape="rect" id="node5" href="$class_i_v_display_control.html" title="A control to display a rolling graphics of historical values." alt="" coords="177,153,295,179"/>
+<area shape="rect" id="node6" href="$class_i_v_group_control.html" title="A control to draw a rectangle around a named IControl group." alt="" coords="181,203,291,228"/>
+<area shape="rect" id="node7" href="$class_i_v_knob_control.html" title="A vector knob control drawn using graphics primitives." alt="" coords="183,252,289,277"/>
+<area shape="rect" id="node8" href="$class_i_v_label_control.html" title="A vector label control that can display text with a shadow." alt="" coords="182,301,290,327"/>
+<area shape="rect" id="node9" href="$class_i_v_number_box_control.html" title="A &quot;meta control&quot; for a number box with an Inc/Dec button It adds several child buttons." alt="" coords="164,351,308,376"/>
+<area shape="rect" id="node10" href="$class_i_v_panel_control.html" title="A panel control which can be styled with emboss etc." alt="" coords="181,400,291,425"/>
+<area shape="rect" id="node11" href="$class_i_v_plot_control.html" title="A vector plot to display functions and waveforms." alt="" coords="187,449,285,475"/>
+<area shape="rect" id="node12" href="$class_i_v_scope_control.html" title="Vectorial multi&#45;channel capable oscilloscope control." alt="" coords="148,499,324,539"/>
+<area shape="rect" id="node13" href="$class_i_v_slider_control.html" title="A vector slider control." alt="" coords="181,564,291,589"/>
+<area shape="rect" id="node14" href="$class_i_v_switch_control.html" title="A vector switch control." alt="" coords="178,613,294,639"/>
+<area shape="rect" id="node17" href="$class_i_v_tab_switch_control.html" title="A vector &quot;tab&quot; multi switch control." alt="" coords="167,663,305,688"/>
+<area shape="rect" id="node19" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="167,787,305,812"/>
+<area shape="rect" id="node28" href="$class_i_v_x_y_pad_control.html" title="A vector XY Pad slider control." alt="" coords="177,836,295,861"/>
+<area shape="rect" id="node15" href="$class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked." alt="" coords="389,564,534,589"/>
+<area shape="rect" id="node16" href="$class_i_v_toggle_control.html" title="A vector toggle control." alt="" coords="404,613,519,639"/>
+<area shape="rect" id="node18" href="$class_i_v_radio_button_control.html" title="A vector &quot;radio buttons&quot; switch control." alt="" coords="388,663,535,688"/>
+<area shape="rect" id="node20" href="$class_i_v_meter_control.html" title=" " alt="" coords="372,712,551,737"/>
+<area shape="rect" id="node22" href="$class_i_v_meter_control.html" title=" " alt="" coords="392,761,531,787"/>
+<area shape="rect" id="node23" href="$class_i_v_multi_slider_control.html" title=" " alt="" coords="378,811,545,836"/>
+<area shape="rect" id="node24" href="$class_i_v_meter_control.html" title="Vectorial multi&#45;channel capable meter control, linear or log response." alt="" coords="372,860,551,885"/>
+<area shape="rect" id="node25" href="$class_i_v_multi_slider_control.html" title="A vectorial multi&#45;slider control." alt="" coords="393,910,530,950"/>
+<area shape="rect" id="node27" href="$class_i_v_range_slider_control.html" title="A vector range slider control, with two handles." alt="" coords="388,975,535,1000"/>
+<area shape="rect" id="node21" href="$class_i_v_peak_avg_meter_control.html" title=" " alt="" coords="599,787,789,812"/>
+<area shape="rect" id="node26" href="$class_i_v_multi_toggle_control.html" title="A vectorial multi&#45;toggle control, could be used for a trigger in a step sequencer or tarnce gate." alt="" coords="623,910,765,950"/>
 </map>

@@ -1,5 +1,0 @@
-<map id="IInvisibleButtonControl" name="IInvisibleButtonControl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,152,159,177"/>
-<area shape="rect" id="node2" href="$class_i_button_control_base.html" title="A base class for buttons/momentary switches &#45; cannot be linked to parameters." alt="" coords="15,79,149,104"/>
-<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="49,5,115,31"/>
-</map>

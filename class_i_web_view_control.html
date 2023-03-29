@@ -117,9 +117,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20890d0ad8c1a51a651dcfe42df9185f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#a20890d0ad8c1a51a651dcfe42df9185f">OnResize</a> () override</td></tr>
 <tr class="memdesc:a20890d0ad8c1a51a651dcfe42df9185f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> is constructed or resized using SetRect().  <a href="class_i_web_view_control.html#a20890d0ad8c1a51a651dcfe42df9185f">More...</a><br /></td></tr>
 <tr class="separator:a20890d0ad8c1a51a651dcfe42df9185f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53fded006767cdd8790f142cc27d2008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#a53fded006767cdd8790f142cc27d2008">Hide</a> (bool hide) override</td></tr>
-<tr class="memdesc:a53fded006767cdd8790f142cc27d2008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows or hides the <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>.  <a href="class_i_web_view_control.html#a53fded006767cdd8790f142cc27d2008">More...</a><br /></td></tr>
-<tr class="separator:a53fded006767cdd8790f142cc27d2008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">IControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction actionFunc=nullptr)</td></tr>
 <tr class="memdesc:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">More...</a><br /></td></tr>
@@ -216,12 +213,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:ab7223369e3dee349130a3553eb33c0a7 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ab7223369e3dee349130a3553eb33c0a7">PromptUserInput</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int valIdx=0)</td></tr>
 <tr class="memdesc:ab7223369e3dee349130a3553eb33c0a7 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a text entry box so the user can enter a value, or pop up a pop-up menu, if the control is linked to a parameter (mParamIdx &gt; kNoParameter) specifying the bounds.  <a href="class_i_control.html#ab7223369e3dee349130a3553eb33c0a7">More...</a><br /></td></tr>
 <tr class="separator:ab7223369e3dee349130a3553eb33c0a7 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5864a335c47978ac36c025e909c2f518 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5864a335c47978ac36c025e909c2f518">SetActionFunction</a> (IActionFunction actionFunc)</td></tr>
-<tr class="memdesc:a5864a335c47978ac36c025e909c2f518 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an Action Function for this control.  <a href="class_i_control.html#a5864a335c47978ac36c025e909c2f518">More...</a><br /></td></tr>
-<tr class="separator:a5864a335c47978ac36c025e909c2f518 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9269b6365d5c42d4624e053b568f7942 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a9269b6365d5c42d4624e053b568f7942">SetAnimationEndActionFunction</a> (IActionFunction actionFunc)</td></tr>
-<tr class="memdesc:a9269b6365d5c42d4624e053b568f7942 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an Action Function to be called at the end of an animation.  <a href="class_i_control.html#a9269b6365d5c42d4624e053b568f7942">More...</a><br /></td></tr>
-<tr class="separator:a9269b6365d5c42d4624e053b568f7942 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc5925240d88ea44ace15f7c283745ea inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">SetActionFunction</a> (IActionFunction actionFunc)</td></tr>
+<tr class="memdesc:afc5925240d88ea44ace15f7c283745ea inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an Action Function for this control.  <a href="class_i_control.html#afc5925240d88ea44ace15f7c283745ea">More...</a><br /></td></tr>
+<tr class="separator:afc5925240d88ea44ace15f7c283745ea inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab8710f9ff5fbbda6719c67022754dbf inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a> (IActionFunction actionFunc)</td></tr>
+<tr class="memdesc:aab8710f9ff5fbbda6719c67022754dbf inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an Action Function to be called at the end of an animation.  <a href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">More...</a><br /></td></tr>
+<tr class="separator:aab8710f9ff5fbbda6719c67022754dbf inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb6996a904a25b17f593c4fc76e06eba inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#adb6996a904a25b17f593c4fc76e06eba">SetTooltip</a> (const char *str)</td></tr>
 <tr class="memdesc:adb6996a904a25b17f593c4fc76e06eba inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a tooltip for the control.  <a href="class_i_control.html#adb6996a904a25b17f593c4fc76e06eba">More...</a><br /></td></tr>
 <tr class="separator:adb6996a904a25b17f593c4fc76e06eba inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,10 +382,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5b31ab0ebdcbcd8e4ae49676bba62a2f inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5b31ab0ebdcbcd8e4ae49676bba62a2f">SetDelegate</a> (<a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a> &amp;dlg)</td></tr>
 <tr class="memdesc:a5b31ab0ebdcbcd8e4ae49676bba62a2f inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used internally to set the mDelegate (and mGraphics) variables.  <a href="class_i_control.html#a5b31ab0ebdcbcd8e4ae49676bba62a2f">More...</a><br /></td></tr>
 <tr class="separator:a5b31ab0ebdcbcd8e4ae49676bba62a2f inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af24322ee922f5a530eda918ebbac5082 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_container_base.html">IContainerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#af24322ee922f5a530eda918ebbac5082">GetParent</a> () const</td></tr>
-<tr class="separator:af24322ee922f5a530eda918ebbac5082 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa971c68c2eaf1e6a891de58609850457 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa971c68c2eaf1e6a891de58609850457">SetParent</a> (<a class="el" href="class_i_container_base.html">IContainerBase</a> *pParent)</td></tr>
-<tr class="separator:aa971c68c2eaf1e6a891de58609850457 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b976d26b6670a8b84457a999dc7ce5 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_graphics.html">IGraphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a22b976d26b6670a8b84457a999dc7ce5">GetUI</a> ()</td></tr>
 <tr class="separator:a22b976d26b6670a8b84457a999dc7ce5 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a001f706e09e1d4ae199dc4af7f65bab1 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_i_graphics.html">IGraphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a001f706e09e1d4ae199dc4af7f65bab1">GetUI</a> () const</td></tr>
@@ -628,46 +621,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a53fded006767cdd8790f142cc27d2008" name="a53fded006767cdd8790f142cc27d2008"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53fded006767cdd8790f142cc27d2008">&#9670;&#160;</a></span>Hide()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IWebViewControl::Hide </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>hide</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Shows or hides the <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">hide</td><td>Set to <code>true</code> to hide the control </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00099">99</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00796">IGraphics::HidePlatformView()</a>.</p>
-
-</div>
-</div>
 <a id="ac2980401fae7c995440679368b6118a2" name="ac2980401fae7c995440679368b6118a2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2980401fae7c995440679368b6118a2">&#9670;&#160;</a></span>OnAttached()</h2>
 
@@ -698,7 +651,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00066">66</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00788">IGraphics::AttachPlatformView()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00827">IRECT::H()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00755">IRECT::L</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00757">IRECT::T</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00779">IGraphics::AttachPlatformView()</a>, <a class="el" href="_i_control_8h_source.html#l00456">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00827">IRECT::H()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00755">IRECT::L</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00757">IRECT::T</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
 
 </div>
 </div>

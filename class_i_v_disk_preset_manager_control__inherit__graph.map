@@ -1,6 +1,5 @@
 <map id="IVDiskPresetManagerControl" name="IVDiskPresetManagerControl">
-<area shape="rect" id="node1" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for disk&#45;based preset files It adds several child buttons." alt="" coords="5,225,196,251"/>
-<area shape="rect" id="node2" href="$class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="22,152,179,177"/>
-<area shape="rect" id="node3" href="$class_i_container_base.html" title="IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In..." alt="" coords="45,79,156,104"/>
-<area shape="rect" id="node4" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="67,5,134,31"/>
+<area shape="rect" id="node1" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for disk&#45;based preset files It adds several child buttons." alt="" coords="5,152,196,177"/>
+<area shape="rect" id="node2" href="$class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="22,79,179,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="67,5,134,31"/>
 </map>
