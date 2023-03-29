@@ -1,0 +1,6 @@
+<map id="IVSliderControlWithMarks" name="IVSliderControlWithMarks">
+<area shape="rect" id="node1" title=" " alt="" coords="38,152,209,177"/>
+<area shape="rect" id="node2" href="$class_i_container_base.html" title="IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In..." alt="" coords="5,79,116,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="27,5,94,31"/>
+<area shape="rect" id="node4" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="140,79,235,104"/>
+</map>

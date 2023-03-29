@@ -1,5 +1,6 @@
 <map id="TestDirBrowseControl" name="TestDirBrowseControl">
-<area shape="rect" id="node1" title="Control to test IDirBrowseControlBase." alt="" coords="9,152,159,177"/>
-<area shape="rect" id="node2" href="$class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="5,79,163,104"/>
-<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="51,5,117,31"/>
+<area shape="rect" id="node1" title="Control to test IDirBrowseControlBase." alt="" coords="9,225,159,251"/>
+<area shape="rect" id="node2" href="$class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="5,152,163,177"/>
+<area shape="rect" id="node3" href="$class_i_container_base.html" title="IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In..." alt="" coords="29,79,139,104"/>
+<area shape="rect" id="node4" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="51,5,117,31"/>
 </map>

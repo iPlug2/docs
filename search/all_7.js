@@ -7,10 +7,11 @@ var searchData=
   ['haswildcardbus_4',['HasWildcardBus',['../class_i_plug_processor.html#ab293edf73c931ea7d372474aa8dc7d94',1,'IPlugProcessor']]],
   ['height_5',['Height',['../class_i_graphics.html#a876e2160f3ba0f2e732e07301e4b9e24',1,'IGraphics']]],
   ['hfontholder_6',['HFontHolder',['../struct_i_graphics_win_1_1_h_font_holder.html',1,'IGraphicsWin']]],
-  ['hide_7',['Hide',['../class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b',1,'IControl']]],
+  ['hide_7',['Hide',['../class_i_web_view_control.html#a53fded006767cdd8790f142cc27d2008',1,'IWebViewControl::Hide()'],['../class_i_container_base.html#a3dde8e81abcd125dc76b10530ebd76ba',1,'IContainerBase::Hide()'],['../class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b',1,'IControl::Hide()']]],
   ['hidecontrol_8',['HideControl',['../class_i_graphics.html#a7d3c658447977fc1d8587ce1a69c29c8',1,'IGraphics']]],
   ['hidemousecursor_9',['HideMouseCursor',['../class_i_graphics.html#abc474503de42d4dfd9827b7c532fb6cb',1,'IGraphics']]],
-  ['hostpath_10',['HostPath',['../_i_plug_paths_8h.html#a795b9d00189ed09568cbd90acf1c0f88',1,'IPlugPaths.h']]],
-  ['hostspecificinit_11',['HostSpecificInit',['../class_i_plug_a_p_i_base.html#ac0d44a1980c7fac83687468fc5a0c02d',1,'IPlugAPIBase::HostSpecificInit()'],['../class_i_plug_v_s_t2.html#a9e8dfdc3c57562d83fe52b985e8d2b10',1,'IPlugVST2::HostSpecificInit()']]],
-  ['hpad_12',['HPad',['../struct_i_r_e_c_t.html#ab1ca899231ba450dc90d735348c9ca5c',1,'IRECT']]]
+  ['hideplatformview_10',['HidePlatformView',['../class_i_graphics.html#a38967afc3d38cfde223b9c57a4bb8a05',1,'IGraphics']]],
+  ['hostpath_11',['HostPath',['../_i_plug_paths_8h.html#a795b9d00189ed09568cbd90acf1c0f88',1,'IPlugPaths.h']]],
+  ['hostspecificinit_12',['HostSpecificInit',['../class_i_plug_a_p_i_base.html#ac0d44a1980c7fac83687468fc5a0c02d',1,'IPlugAPIBase::HostSpecificInit()'],['../class_i_plug_v_s_t2.html#a9e8dfdc3c57562d83fe52b985e8d2b10',1,'IPlugVST2::HostSpecificInit()']]],
+  ['hpad_13',['HPad',['../struct_i_r_e_c_t.html#ab1ca899231ba450dc90d735348c9ca5c',1,'IRECT']]]
 ];

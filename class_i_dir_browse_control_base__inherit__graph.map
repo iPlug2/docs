@@ -1,6 +1,7 @@
 <map id="IDirBrowseControlBase" name="IDirBrowseControlBase">
-<area shape="rect" id="node1" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="119,79,277,104"/>
-<area shape="rect" id="node3" href="$class_i_v_disk_preset_manager_control.html" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for disk&#45;based preset files It adds several child buttons." alt="" coords="5,152,196,177"/>
-<area shape="rect" id="node4" href="$class_test_dir_browse_control.html" title="Control to test IDirBrowseControlBase." alt="" coords="221,152,370,177"/>
-<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="165,5,231,31"/>
+<area shape="rect" id="node1" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="119,152,277,177"/>
+<area shape="rect" id="node4" href="$class_i_v_disk_preset_manager_control.html" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for disk&#45;based preset files It adds several child buttons." alt="" coords="5,225,196,251"/>
+<area shape="rect" id="node5" href="$class_test_dir_browse_control.html" title="Control to test IDirBrowseControlBase." alt="" coords="221,225,370,251"/>
+<area shape="rect" id="node2" href="$class_i_container_base.html" title="IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In..." alt="" coords="143,79,253,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="165,5,231,31"/>
 </map>
