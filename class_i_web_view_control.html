@@ -98,9 +98,9 @@ Inheritance diagram for IWebViewControl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37418a0d1930a483036adfb9bffa4a23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#a37418a0d1930a483036adfb9bffa4a23">IWebViewControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool opaque, OnReadyFunc readyFunc, OnMessageFunc msgFunc=nullptr, const char *dllPath=&quot;&quot;, const char *tmpPath=&quot;&quot;)</td></tr>
-<tr class="memdesc:a37418a0d1930a483036adfb9bffa4a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs am <a class="el" href="class_i_web_view_control.html" title="A control that allows the embedding of HTML UI inside an IGraphics context using a platform-native we...">IWebViewControl</a>.  <a href="class_i_web_view_control.html#a37418a0d1930a483036adfb9bffa4a23">More...</a><br /></td></tr>
-<tr class="separator:a37418a0d1930a483036adfb9bffa4a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5398091ac5f2927e8383a1d739105687"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#a5398091ac5f2927e8383a1d739105687">IWebViewControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool opaque, OnReadyFunc readyFunc, OnMessageFunc msgFunc=nullptr)</td></tr>
+<tr class="memdesc:a5398091ac5f2927e8383a1d739105687"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs am <a class="el" href="class_i_web_view_control.html" title="A control that allows the embedding of HTML UI inside an IGraphics context using a platform-native we...">IWebViewControl</a>.  <a href="class_i_web_view_control.html#a5398091ac5f2927e8383a1d739105687">More...</a><br /></td></tr>
+<tr class="separator:a5398091ac5f2927e8383a1d739105687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2980401fae7c995440679368b6118a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#ac2980401fae7c995440679368b6118a2">OnAttached</a> () override</td></tr>
 <tr class="memdesc:ac2980401fae7c995440679368b6118a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the control has been attached, and its delegate and graphics member variable set.  <a href="class_i_web_view_control.html#ac2980401fae7c995440679368b6118a2">More...</a><br /></td></tr>
 <tr class="separator:ac2980401fae7c995440679368b6118a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -480,8 +480,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00036">36</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a37418a0d1930a483036adfb9bffa4a23" name="a37418a0d1930a483036adfb9bffa4a23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37418a0d1930a483036adfb9bffa4a23">&#9670;&#160;</a></span>IWebViewControl()</h2>
+<a id="a5398091ac5f2927e8383a1d739105687" name="a5398091ac5f2927e8383a1d739105687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5398091ac5f2927e8383a1d739105687">&#9670;&#160;</a></span>IWebViewControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -511,19 +511,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">OnMessageFunc&#160;</td>
-          <td class="paramname"><em>msgFunc</em> = <code>nullptr</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>dllPath</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>tmpPath</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramname"><em>msgFunc</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -545,13 +533,11 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">opaque</td><td>Should the web view background be opaque </td></tr>
     <tr><td class="paramname">readyFunc</td><td>A function conforming to onReadyFunc, that will be called asyncronously when the webview has been initialized </td></tr>
     <tr><td class="paramname">msgFunc</td><td>A function conforming to onMessageFunc, that will be called when messages are posted from the webview </td></tr>
-    <tr><td class="paramname">dllPath</td><td>(Windows only) an absolute path to the WebView2Loader.dll that is required to use the WebView2 on windows </td></tr>
-    <tr><td class="paramname">tmpPath</td><td>(Windows only) an absolute path to the folder that should be used </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00046">46</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00044">44</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -578,7 +564,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00060">60</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00054">54</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -617,7 +603,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_control.html#ab9d872edcc790c0506d5b90c07a968de">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00072">72</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00066">66</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -649,7 +635,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#aa85c9cf798273e449330a4823f24c07d">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00066">66</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00060">60</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00779">IGraphics::AttachPlatformView()</a>, <a class="el" href="_i_control_8h_source.html#l00456">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00827">IRECT::H()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00755">IRECT::L</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00757">IRECT::T</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
 
@@ -679,7 +665,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00083">83</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00077">77</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -711,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a57f6186624e970a5d6de172570aee111">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00089">89</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00083">83</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -743,7 +729,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a0c4927d3332fabe6f7626a03624f390f">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00094">94</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00088">88</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -770,7 +756,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00077">77</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00071">71</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
