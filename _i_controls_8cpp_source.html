@@ -1671,7 +1671,7 @@ $(function() {
 <div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>      <span class="keyword">auto</span> rangeDB = std::fabs(mHighRangeDB - mLowRangeDB);</div>
 <div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> c = d.chanOffset; c &lt; (d.chanOffset + d.nChans); c++)</div>
 <div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>      {</div>
-<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>        <span class="keyword">auto</span> [peak, avg] = d.vals[c];</div>
+<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>        <span class="keyword">auto</span> avg = d.vals[c].second;</div>
 <div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>        <span class="keyword">auto</span> ampValue = <a class="code hl_function" href="group___i_plug_utilities.html#ga216035c9b6b2b5bfc30d78fbda3d8bc0">AmpToDB</a>(avg);</div>
 <div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>        <span class="keyword">auto</span> linearPos = (ampValue + lowPointAbs)/rangeDB;</div>
 <div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>        <a class="code hl_function" href="class_i_control.html#adb4a369378ca89c58d2c1bf942991485">SetValue</a>(<a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(linearPos, 0., 1.), c);</div>
@@ -1681,7 +1681,7 @@ $(function() {
 <div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>    {</div>
 <div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> c = d.chanOffset; c &lt; (d.chanOffset + d.nChans); c++)</div>
 <div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>      {</div>
-<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>        <span class="keyword">auto</span> [peak, avg] = d.vals[c];</div>
+<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>        <span class="keyword">auto</span> avg = d.vals[c].second;</div>
 <div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>        <a class="code hl_function" href="class_i_control.html#adb4a369378ca89c58d2c1bf942991485">SetValue</a>(<a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(avg, 0.f, 1.f), c);</div>
 <div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>      }</div>
 <div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>    }</div>
