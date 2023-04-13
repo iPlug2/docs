@@ -244,7 +244,7 @@ $(function() {
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">//if invoked with an argument registerauv3 use plug-in kit to explicitly register auv3 app extension (doesn&#39;t happen from debugger)</span></div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordflow">if</span>(strcmp(argv[2], <span class="stringliteral">&quot;registerauv3&quot;</span>))</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    WDL_String appexPath(argv[0]);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    WDL_String appexPath;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    appexPath.SetFormatted(1024, <span class="stringliteral">&quot;pluginkit -a %s%s%s.appex&quot;</span>, argv[0], <span class="stringliteral">&quot;/../../Plugins/&quot;</span>, appexPath.get_filepart());</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordflow">if</span>(system(appexPath.Get()) &gt; -1)</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      NSLog(<span class="stringliteral">@&quot;Registered audiounit app extension\n&quot;</span>);</div>
