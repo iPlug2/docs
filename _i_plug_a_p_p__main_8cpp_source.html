@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), GetDesktopWindow(), IPlugAPPHost::MainDlgProc);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#ifndef _DEBUG</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#if !defined _DEBUG || defined NO_IGRAPHICS</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    HMENU menu = GetMenu(gHWND);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    RemoveMenu(menu, 1, MF_BYPOSITION);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    DrawMenuBar(gHWND);</div>
@@ -314,7 +314,7 @@ $(function() {
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        DeleteMenu(menu, 1, MF_BYPOSITION); <span class="comment">// delete file menu</span></div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      }</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#ifndef _DEBUG</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="preprocessor">#if !defined _DEBUG || defined NO_IGRAPHICS</span></div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      <span class="keywordflow">if</span> (menu)</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      {</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        HMENU sm = GetSubMenu(menu, 1);</div>
