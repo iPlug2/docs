@@ -106,8 +106,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a878bdcbb68379fce268c6f3845439371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a822e5fe0bed04cd2c75c47e83d758bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a822e5fe0bed04cd2c75c47e83d758bf8">AddPath</a> (const char *path, const char *label)</td></tr>
 <tr class="separator:a822e5fe0bed04cd2c75c47e83d758bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40e69f11681c2f987424f856a29fc403"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a40e69f11681c2f987424f856a29fc403">ClearPathList</a> ()</td></tr>
+<tr class="separator:a40e69f11681c2f987424f856a29fc403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfcd3943d771dee725acd81b0fffda52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#abfcd3943d771dee725acd81b0fffda52">SetupMenu</a> ()</td></tr>
 <tr class="separator:abfcd3943d771dee725acd81b0fffda52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f7e60f935f8e5e04c6733127e3f20e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a10f7e60f935f8e5e04c6733127e3f20e">GetSelectedItemLabel</a> (WDL_String &amp;label)</td></tr>
+<tr class="separator:a10f7e60f935f8e5e04c6733127e3f20e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feab9443a96c0760e39e2593475bfce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a3feab9443a96c0760e39e2593475bfce">GetSelectedItemPath</a> (WDL_String &amp;path)</td></tr>
+<tr class="separator:a3feab9443a96c0760e39e2593475bfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">IControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction actionFunc=nullptr)</td></tr>
 <tr class="memdesc:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">More...</a><br /></td></tr>
@@ -418,8 +424,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ae0463308366d840b2781570b56d43290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61200f2eb0a1cc91cd548d01f6078af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#ab61200f2eb0a1cc91cd548d01f6078af">mSelectedIndex</a> = -1</td></tr>
 <tr class="separator:ab61200f2eb0a1cc91cd548d01f6078af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fb6933008b547db832c84096197a101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a4fb6933008b547db832c84096197a101">mSelectedMenu</a> = nullptr</td></tr>
-<tr class="separator:a4fb6933008b547db832c84096197a101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523e5c487791a33ab52aebebbbfb8696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a523e5c487791a33ab52aebebbbfb8696">mMainMenu</a></td></tr>
 <tr class="separator:a523e5c487791a33ab52aebebbbfb8696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af94cf8eed4c5a043b2b004899c26f678"><td class="memItemLeft" align="right" valign="top">WDL_PtrList&lt; WDL_String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#af94cf8eed4c5a043b2b004899c26f678">mPaths</a></td></tr>
@@ -601,7 +605,66 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01021">1021</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01018">1018</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a40e69f11681c2f987424f856a29fc403" name="a40e69f11681c2f987424f856a29fc403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40e69f11681c2f987424f856a29fc403">&#9670;&#160;</a></span>ClearPathList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IDirBrowseControlBase::ClearPathList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01068">1068</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a10f7e60f935f8e5e04c6733127e3f20e" name="a10f7e60f935f8e5e04c6733127e3f20e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f7e60f935f8e5e04c6733127e3f20e">&#9670;&#160;</a></span>GetSelectedItemLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IDirBrowseControlBase::GetSelectedItemLabel </td>
+          <td>(</td>
+          <td class="paramtype">WDL_String &amp;&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01076">1076</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3feab9443a96c0760e39e2593475bfce" name="a3feab9443a96c0760e39e2593475bfce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3feab9443a96c0760e39e2593475bfce">&#9670;&#160;</a></span>GetSelectedItemPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IDirBrowseControlBase::GetSelectedItemPath </td>
+          <td>(</td>
+          <td class="paramtype">WDL_String &amp;&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01092">1092</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +683,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01016">1016</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01013">1013</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -639,7 +702,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01044">1044</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01041">1041</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -664,7 +727,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01767">1767</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01768">1768</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -688,7 +751,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01765">1765</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01766">1766</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -712,7 +775,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01766">1766</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01767">1767</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -736,7 +799,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01762">1762</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01763">1763</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -760,7 +823,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01764">1764</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01765">1765</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -784,7 +847,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01763">1763</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01764">1764</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -808,31 +871,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01760">1760</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
-
-</div>
-</div>
-<a id="a4fb6933008b547db832c84096197a101" name="a4fb6933008b547db832c84096197a101"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fb6933008b547db832c84096197a101">&#9670;&#160;</a></span>mSelectedMenu</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a>* IDirBrowseControlBase::mSelectedMenu = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01761">1761</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01762">1762</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -856,7 +895,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01758">1758</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01760">1760</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +919,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01759">1759</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01761">1761</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
