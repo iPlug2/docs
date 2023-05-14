@@ -107,9 +107,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab4f2bd6fc3b584d945a77dabe4bdf6f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#ab4f2bd6fc3b584d945a77dabe4bdf6f5">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
 <tr class="memdesc:ab4f2bd6fc3b584d945a77dabe4bdf6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_v_slide_switch_control.html#ab4f2bd6fc3b584d945a77dabe4bdf6f5">More...</a><br /></td></tr>
 <tr class="separator:ab4f2bd6fc3b584d945a77dabe4bdf6f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40dfd375d983acbea5d523b74a0d3646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#a40dfd375d983acbea5d523b74a0d3646">DrawWidget</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
+<tr class="memitem:a40dfd375d983acbea5d523b74a0d3646"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#a40dfd375d983acbea5d523b74a0d3646">DrawWidget</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
 <tr class="memdesc:a40dfd375d983acbea5d523b74a0d3646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the IVControl main widget (override)  <a href="class_i_v_slide_switch_control.html#a40dfd375d983acbea5d523b74a0d3646">More...</a><br /></td></tr>
 <tr class="separator:a40dfd375d983acbea5d523b74a0d3646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ee72c4188f8338fbbd8c7a0038924d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#a33ee72c4188f8338fbbd8c7a0038924d">DrawHandle</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;filledArea)</td></tr>
+<tr class="separator:a33ee72c4188f8338fbbd8c7a0038924d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a263aac98cac964977f6cf7ef2448b231"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#a263aac98cac964977f6cf7ef2448b231">DrawTrack</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;filledArea)</td></tr>
 <tr class="separator:a263aac98cac964977f6cf7ef2448b231"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcdebb1dd6c80907d7a8b93e4e06a40b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#afcdebb1dd6c80907d7a8b93e4e06a40b">OnResize</a> () override</td></tr>
@@ -834,6 +836,44 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a33ee72c4188f8338fbbd8c7a0038924d" name="a33ee72c4188f8338fbbd8c7a0038924d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ee72c4188f8338fbbd8c7a0038924d">&#9670;&#160;</a></span>DrawHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IVSlideSwitchControl::DrawHandle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_graphics.html">IGraphics</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>filledArea</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00285">285</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a263aac98cac964977f6cf7ef2448b231" name="a263aac98cac964977f6cf7ef2448b231"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a263aac98cac964977f6cf7ef2448b231">&#9670;&#160;</a></span>DrawTrack()</h2>
 
@@ -901,8 +941,6 @@ Protected Attributes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_i_v_switch_control.html#a3d8bf3e2897f441112f5e3685fd0166f">IVSwitchControl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00273">273</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00785">IVectorBase::DrawPressableShape()</a>, <a class="el" href="_i_control_8h_source.html#l00356">IControl::IsDisabled()</a>, and <a class="el" href="_i_control_8h_source.html#l00549">IControl::mMouseIsOver</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00263">Draw()</a>.</p>
 
@@ -1015,7 +1053,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_v_switch_control.html#a714e79d3c3cf5d252411b6df5e83bdbd">IVSwitchControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00285">285</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00290">290</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00489">IControl::GetAnimationFunction()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>.</p>
 
@@ -1069,7 +1107,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00124">124</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1131,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00121">121</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00122">122</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1155,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00122">122</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1141,7 +1179,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00121">121</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00122">122</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
