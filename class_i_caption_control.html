@@ -399,6 +399,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5b31ab0ebdcbcd8e4ae49676bba62a2f inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5b31ab0ebdcbcd8e4ae49676bba62a2f">SetDelegate</a> (<a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a> &amp;dlg)</td></tr>
 <tr class="memdesc:a5b31ab0ebdcbcd8e4ae49676bba62a2f inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used internally to set the mDelegate (and mGraphics) variables.  <a href="class_i_control.html#a5b31ab0ebdcbcd8e4ae49676bba62a2f">More...</a><br /></td></tr>
 <tr class="separator:a5b31ab0ebdcbcd8e4ae49676bba62a2f inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af24322ee922f5a530eda918ebbac5082 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_container_base.html">IContainerBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#af24322ee922f5a530eda918ebbac5082">GetParent</a> () const</td></tr>
+<tr class="separator:af24322ee922f5a530eda918ebbac5082 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa971c68c2eaf1e6a891de58609850457 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa971c68c2eaf1e6a891de58609850457">SetParent</a> (<a class="el" href="class_i_container_base.html">IContainerBase</a> *pParent)</td></tr>
+<tr class="separator:aa971c68c2eaf1e6a891de58609850457 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b976d26b6670a8b84457a999dc7ce5 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_graphics.html">IGraphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a22b976d26b6670a8b84457a999dc7ce5">GetUI</a> ()</td></tr>
 <tr class="separator:a22b976d26b6670a8b84457a999dc7ce5 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a001f706e09e1d4ae199dc4af7f65bab1 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_i_graphics.html">IGraphics</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a001f706e09e1d4ae199dc4af7f65bab1">GetUI</a> () const</td></tr>
@@ -512,7 +516,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A control to display the textual representation of a parameter. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02075">2075</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02201">2201</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a6c555356dfebeddbebaf9d563e8298bf" name="a6c555356dfebeddbebaf9d563e8298bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c555356dfebeddbebaf9d563e8298bf">&#9670;&#160;</a></span>ICaptionControl()</h2>
@@ -613,7 +617,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00623">623</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00761">IRECT::B</a>, <a class="el" href="_i_control_8cpp_source.html#l00479">ITextControl::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02485">IGraphics::FillTriangle()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00312">IParam::GetLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetMouseIsOver()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00755">IRECT::L</a>, <a class="el" href="_i_control_8h_source.html#l00549">IControl::mMouseIsOver</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00830">IRECT::MW()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00759">IRECT::R</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00757">IRECT::T</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00761">IRECT::B</a>, <a class="el" href="_i_control_8cpp_source.html#l00479">ITextControl::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02504">IGraphics::FillTriangle()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00312">IParam::GetLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00470">IControl::GetMouseIsOver()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00755">IRECT::L</a>, <a class="el" href="_i_control_8h_source.html#l00556">IControl::mMouseIsOver</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00830">IRECT::MW()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00759">IRECT::R</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00757">IRECT::T</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
 
 </div>
 </div>
@@ -730,7 +734,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02089">2089</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02215">2215</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -754,7 +758,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02092">2092</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02218">2218</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -778,7 +782,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02090">2090</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02216">2216</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -802,7 +806,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02091">2091</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02217">2217</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,11 @@
+<map id="IContainerBase" name="IContainerBase">
+<area shape="rect" id="node1" title="IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In..." alt="" coords="120,128,231,153"/>
+<area shape="rect" id="node3" href="$class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m..." alt="" coords="301,29,458,55"/>
+<area shape="rect" id="node6" href="$class_i_panel_control.html" title="A basic control to fill a rectangle with a color or gradient." alt="" coords="329,79,429,104"/>
+<area shape="rect" id="node7" href="$class_i_v_baked_preset_manager_control.html" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for &quot;baked in&quot; factory presets It adds several child buttons." alt="" coords="279,128,480,153"/>
+<area shape="rect" id="node8" href="$class_i_v_number_box_control.html" title="A &quot;meta control&quot; for a number box with an Inc/Dec button It adds several child buttons if buttons = t..." alt="" coords="307,177,451,203"/>
+<area shape="rect" id="node9" href="$class_i_v_panel_control.html" title="A panel control which can be styled with emboss etc." alt="" coords="325,227,434,252"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="5,128,72,153"/>
+<area shape="rect" id="node4" href="$class_i_v_disk_preset_manager_control.html" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for disk&#45;based preset files It adds several child buttons." alt="" coords="528,5,719,31"/>
+<area shape="rect" id="node5" href="$class_test_dir_browse_control.html" title="Control to test IDirBrowseControlBase." alt="" coords="549,55,698,80"/>
+</map>
