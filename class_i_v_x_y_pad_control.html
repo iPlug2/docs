@@ -482,6 +482,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a7587059fe709ddd58407ba56146d4cd4 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a7587059fe709ddd58407ba56146d4cd4">GetRoundedCornerRadius</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const</td></tr>
 <tr class="memdesc:a7587059fe709ddd58407ba56146d4cd4 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the radius of rounded corners for a rectangle, based on the style roundness factor.  <a href="class_i_vector_base.html#a7587059fe709ddd58407ba56146d4cd4">More...</a><br /></td></tr>
 <tr class="separator:a7587059fe709ddd58407ba56146d4cd4 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73aa0385ee8f831ab50f3595772e9685 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a73aa0385ee8f831ab50f3595772e9685">GetWidgetBounds</a> () const</td></tr>
+<tr class="separator:a73aa0385ee8f831ab50f3595772e9685 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf543c74b77436b19bc0539f40c4201d inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#abf543c74b77436b19bc0539f40c4201d">GetLabelBounds</a> () const</td></tr>
+<tr class="separator:abf543c74b77436b19bc0539f40c4201d inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c1fd00d9b6bf89a465f66db36f98d6 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ae7c1fd00d9b6bf89a465f66db36f98d6">GetValueBounds</a> () const</td></tr>
+<tr class="separator:ae7c1fd00d9b6bf89a465f66db36f98d6 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a358cd1ae384ab01ab8ffe31be5dfb0 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a9a358cd1ae384ab01ab8ffe31be5dfb0">DrawSplash</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;clipRegion=<a class="el" href="struct_i_r_e_c_t.html">IRECT</a>())</td></tr>
 <tr class="memdesc:a9a358cd1ae384ab01ab8ffe31be5dfb0 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a splash effect when a widget handle is clicked (via SplashClickAnimationFunc)  <a href="class_i_vector_base.html#a9a358cd1ae384ab01ab8ffe31be5dfb0">More...</a><br /></td></tr>
 <tr class="separator:a9a358cd1ae384ab01ab8ffe31be5dfb0 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -613,7 +619,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A vector XY Pad slider control. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00323">323</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00332">332</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a094bebbe02040e50e01b175ce198fa72" name="a094bebbe02040e50e01b175ce198fa72"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a094bebbe02040e50e01b175ce198fa72">&#9670;&#160;</a></span>IVXYPadControl()</h2>
@@ -712,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00973">973</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00739">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00752">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02412">IGraphics::DrawRect()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00984">DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00670">IVectorBase::GetColor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00743">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00756">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02420">IGraphics::DrawRect()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00984">DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00670">IVectorBase::GetColor()</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1050,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01042">1042</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01021">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00317">IControl::SetTargetRECT()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01025">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00317">IControl::SetTargetRECT()</a>.</p>
 
 </div>
 </div>
@@ -1069,7 +1075,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00340">340</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00349">349</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1093,7 +1099,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00337">337</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00346">346</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1117,7 +1123,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00338">338</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00347">347</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1141,7 +1147,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00339">339</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00348">348</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
