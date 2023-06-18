@@ -395,7 +395,7 @@ $(function() {
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>{</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <span class="keyword">static</span> WDL_Mutex sMutex;</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  WDL_MutexLock lock(&amp;sMutex);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  IPlugVST3Controller::iplug::InstanceInfo info;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  iplug::IPlugVST3Controller::InstanceInfo info;</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  info.mOtherGUID = Steinberg::FUID(VST3_PROCESSOR_UID);</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="comment">// If you are trying to build a distributed VST3 plug-in and you hit an error here like &quot;no matching constructor...&quot; or </span></div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="comment">// &quot;error: unknown type name &#39;VST3Controller&#39;&quot;, you need to replace all instances of the name of your plug-in class (e.g. IPlugEffect)</span></div>
@@ -410,7 +410,7 @@ $(function() {
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>{</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <span class="keyword">static</span> WDL_Mutex sMutex;</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  WDL_MutexLock lock(&amp;sMutex);</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  IPlugVST3Processor::iplug::InstanceInfo info;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  iplug::IPlugVST3Processor::InstanceInfo info;</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  info.mOtherGUID = Steinberg::FUID(VST3_CONTROLLER_UID);</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>Steinberg::Vst::IAudioProcessor*<span class="keyword">&gt;</span>(<span class="keyword">new</span> PLUG_CLASS_NAME(info));</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>}</div>
