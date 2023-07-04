@@ -11,7 +11,7 @@ var searchData=
   ['icolor_8',['IColor',['../struct_i_color.html#a00d7485d5b2eb1ff8a3ae45f24b7b5d9',1,'IColor']]],
   ['icolorstop_9',['IColorStop',['../struct_i_color_stop.html#ae29c11ff5f161e9cebac6026901a7102',1,'IColorStop']]],
   ['icontrol_10',['IControl',['../class_i_control.html#aed2aa258a7b87ab3f5e76746139901ed',1,'IControl::IControl(const IRECT &amp;bounds, const std::initializer_list&lt; int &gt; &amp;params, IActionFunction actionFunc=nullptr)'],['../class_i_control.html#a0f70f3bff4e47289befc211b818188fe',1,'IControl::IControl(const IRECT &amp;bounds, IActionFunction actionFunc)'],['../class_i_control.html#a06abcd014992bccbabc44448c6b02ebf',1,'IControl::IControl(const IRECT &amp;bounds, int paramIdx=kNoParameter, IActionFunction actionFunc=nullptr)']]],
-  ['idirbrowsecontrolbase_11',['IDirBrowseControlBase',['../class_i_dir_browse_control_base.html#a797456acf5611f3d3f2cf25d852db1bc',1,'IDirBrowseControlBase']]],
+  ['idirbrowsecontrolbase_11',['IDirBrowseControlBase',['../class_i_dir_browse_control_base.html#ad361c62f9dfce599c3ac9ad2f51581f7',1,'IDirBrowseControlBase']]],
   ['ikeypress_12',['IKeyPress',['../struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647',1,'IKeyPress']]],
   ['ilayer_13',['ILayer',['../class_i_layer.html#a588a3a0106992b954bbc06e8c871f452',1,'ILayer']]],
   ['imatrix_14',['IMatrix',['../struct_i_matrix.html#a0de9cbffd527876c45243389f1b37131',1,'IMatrix::IMatrix(double xx, double yx, double xy, double yy, double tx, double ty)'],['../struct_i_matrix.html#a4d069804b2092325e79b7c8e22ea2f44',1,'IMatrix::IMatrix()']]],

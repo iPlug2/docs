@@ -99,9 +99,9 @@ Inheritance diagram for IDirBrowseControlBase:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a797456acf5611f3d3f2cf25d852db1bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a797456acf5611f3d3f2cf25d852db1bc">IDirBrowseControlBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const char *extension, bool showFileExtensions=true)</td></tr>
-<tr class="memdesc:a797456acf5611f3d3f2cf25d852db1bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m...">IDirBrowseControlBase</a>.  <a href="class_i_dir_browse_control_base.html#a797456acf5611f3d3f2cf25d852db1bc">More...</a><br /></td></tr>
-<tr class="separator:a797456acf5611f3d3f2cf25d852db1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad361c62f9dfce599c3ac9ad2f51581f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#ad361c62f9dfce599c3ac9ad2f51581f7">IDirBrowseControlBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const char *extension, bool showFileExtensions=true, bool scanRecursively=true, bool showEmptySubmenus=false)</td></tr>
+<tr class="memdesc:ad361c62f9dfce599c3ac9ad2f51581f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an <a class="el" href="class_i_dir_browse_control_base.html" title="An abstract IControl base class that you can inherit from in order to make a control that pops up a m...">IDirBrowseControlBase</a>.  <a href="class_i_dir_browse_control_base.html#ad361c62f9dfce599c3ac9ad2f51581f7">More...</a><br /></td></tr>
+<tr class="separator:ad361c62f9dfce599c3ac9ad2f51581f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a878bdcbb68379fce268c6f3845439371"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a878bdcbb68379fce268c6f3845439371">NItems</a> ()</td></tr>
 <tr class="separator:a878bdcbb68379fce268c6f3845439371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6796cbfed086549f4ab50f57a50d510"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#ae6796cbfed086549f4ab50f57a50d510">AddPath</a> (const char *path, const char *displayText)</td></tr>
@@ -468,10 +468,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:abefb15b7f73a14c42bce11f1490acc9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#abefb15b7f73a14c42bce11f1490acc9c">mShowEmptySubmenus</a> = false</td></tr>
-<tr class="separator:abefb15b7f73a14c42bce11f1490acc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0463308366d840b2781570b56d43290"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#ae0463308366d840b2781570b56d43290">mShowFileExtensions</a> = true</td></tr>
-<tr class="separator:ae0463308366d840b2781570b56d43290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca28fb20208bfa33feb63d8214d40f48"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#aca28fb20208bfa33feb63d8214d40f48">mScanRecursively</a></td></tr>
+<tr class="separator:aca28fb20208bfa33feb63d8214d40f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6e3f371a73c1f18461fdd0d1d82b8f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a3e6e3f371a73c1f18461fdd0d1d82b8f">mShowFileExtensions</a></td></tr>
+<tr class="separator:a3e6e3f371a73c1f18461fdd0d1d82b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6484d7104812164a3893d741a1823a5d"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a6484d7104812164a3893d741a1823a5d">mShowEmptySubmenus</a></td></tr>
+<tr class="separator:a6484d7104812164a3893d741a1823a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61200f2eb0a1cc91cd548d01f6078af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#ab61200f2eb0a1cc91cd548d01f6078af">mSelectedIndex</a> = -1</td></tr>
 <tr class="separator:ab61200f2eb0a1cc91cd548d01f6078af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523e5c487791a33ab52aebebbbfb8696"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_dir_browse_control_base.html#a523e5c487791a33ab52aebebbbfb8696">mMainMenu</a></td></tr>
@@ -560,8 +562,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01860">1860</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a797456acf5611f3d3f2cf25d852db1bc" name="a797456acf5611f3d3f2cf25d852db1bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a797456acf5611f3d3f2cf25d852db1bc">&#9670;&#160;</a></span>IDirBrowseControlBase()</h2>
+<a id="ad361c62f9dfce599c3ac9ad2f51581f7" name="ad361c62f9dfce599c3ac9ad2f51581f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad361c62f9dfce599c3ac9ad2f51581f7">&#9670;&#160;</a></span>IDirBrowseControlBase()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,7 +587,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>showFileExtensions</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>showFileExtensions</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>scanRecursively</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>showEmptySubmenus</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -606,11 +620,13 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
     <tr><td class="paramname">extension</td><td>The file extenstion to browse for, e.g excluding the dot e.g. "txt" </td></tr>
     <tr><td class="paramname">showFileExtension</td><td>Should the menu show the file extension </td></tr>
+    <tr><td class="paramname">scanRecursively</td><td>Should the paths be scanned recursively, creating submenus </td></tr>
+    <tr><td class="paramname">showEmptySubmenus</td><td>If scanRecursively, should empty folders be shown in the menu </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01867">1867</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01869">1869</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -832,7 +848,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01911">1911</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01916">1916</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -856,7 +872,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01909">1909</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01914">1914</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -880,7 +896,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01910">1910</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01915">1915</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -904,7 +920,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01906">1906</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01911">1911</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -928,7 +944,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01908">1908</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01913">1913</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -943,6 +959,30 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">WDL_PtrList&lt;WDL_String&gt; IDirBrowseControlBase::mPaths</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01912">1912</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+
+</div>
+</div>
+<a id="aca28fb20208bfa33feb63d8214d40f48" name="aca28fb20208bfa33feb63d8214d40f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca28fb20208bfa33feb63d8214d40f48">&#9670;&#160;</a></span>mScanRecursively</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool IDirBrowseControlBase::mScanRecursively</td>
         </tr>
       </table>
   </td>
@@ -976,12 +1016,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01905">1905</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01910">1910</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
-<a id="abefb15b7f73a14c42bce11f1490acc9c" name="abefb15b7f73a14c42bce11f1490acc9c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abefb15b7f73a14c42bce11f1490acc9c">&#9670;&#160;</a></span>mShowEmptySubmenus</h2>
+<a id="a6484d7104812164a3893d741a1823a5d" name="a6484d7104812164a3893d741a1823a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6484d7104812164a3893d741a1823a5d">&#9670;&#160;</a></span>mShowEmptySubmenus</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -990,7 +1030,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IDirBrowseControlBase::mShowEmptySubmenus = false</td>
+          <td class="memname">const bool IDirBrowseControlBase::mShowEmptySubmenus</td>
         </tr>
       </table>
   </td>
@@ -1000,12 +1040,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01903">1903</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01909">1909</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
-<a id="ae0463308366d840b2781570b56d43290" name="ae0463308366d840b2781570b56d43290"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0463308366d840b2781570b56d43290">&#9670;&#160;</a></span>mShowFileExtensions</h2>
+<a id="a3e6e3f371a73c1f18461fdd0d1d82b8f" name="a3e6e3f371a73c1f18461fdd0d1d82b8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e6e3f371a73c1f18461fdd0d1d82b8f">&#9670;&#160;</a></span>mShowFileExtensions</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1014,7 +1054,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IDirBrowseControlBase::mShowFileExtensions = true</td>
+          <td class="memname">const bool IDirBrowseControlBase::mShowFileExtensions</td>
         </tr>
       </table>
   </td>
@@ -1024,7 +1064,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01904">1904</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01908">1908</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

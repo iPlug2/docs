@@ -61,7 +61,7 @@ var searchData=
   ['textstylestring_58',['TextStyleString',['../group___i_graphics_structs.html#ga1de99ddcf483fc3afd9bb9036f4e7299',1,'IGraphicsStructs.h']]],
   ['timer_59',['Timer',['../struct_timer.html',1,'']]],
   ['tocolorcode_60',['ToColorCode',['../struct_i_color.html#a724e096ed1e4730987760984070ae8ac',1,'IColor']]],
-  ['tocolorcodestr_61',['ToColorCodeStr',['../struct_i_color.html#a38d3c9c9d8f985ed2c3bbdb2c8c81f19',1,'IColor']]],
+  ['tocolorcodestr_61',['ToColorCodeStr',['../struct_i_color.html#aa8bbeec63661c6e7d6ca69d29e660bd1',1,'IColor']]],
   ['todo_20list_62',['Todo List',['../todo.html',1,'']]],
   ['tolower_63',['ToLower',['../group___i_plug_utilities.html#gab1b129be627c417ca57de41780710618',1,'IPlugUtilities.h']]],
   ['tonormalized_64',['ToNormalized',['../class_i_param.html#a1983bc6111e3d427b14b8afa3383151e',1,'IParam']]],
