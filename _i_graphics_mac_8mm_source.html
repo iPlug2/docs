@@ -563,7 +563,7 @@ $(function() {
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>  </div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>  <span class="keywordflow">if</span> (completionHandler)</div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span>  {</div>
-<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>    [(NSSavePanel*) pPanel beginWithCompletionHandler:^(NSModalResponse response){</div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>    [(NSSavePanel*) pPanel beginWithCompletionHandler:^(NSModalResponse response) {</div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>      WDL_String fileNameAsync, pathAsync;</div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>      doHandleResponse(pPanel, response, fileNameAsync, pathAsync, completionHandler);</div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>    }];</div>
@@ -620,15 +620,15 @@ $(function() {
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  <span class="keywordflow">if</span> (completionHandler)</div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  {</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>    NSModalResponse response = [panelOpen runModal];</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>    doHandleResponse(panelOpen, response, dir, completionHandler);</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  }</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  {</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>    [panelOpen beginWithCompletionHandler:^(NSModalResponse response) {</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>      WDL_String path;</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>      doHandleResponse(panelOpen, response, path, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>    }];</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>    [panelOpen beginWithCompletionHandler:^(NSModalResponse response) {</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>      WDL_String path;</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>      doHandleResponse(panelOpen, response, path, completionHandler);</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    }];</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  }</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>  {</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    NSModalResponse response = [panelOpen runModal];</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>    doHandleResponse(panelOpen, response, dir, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>  }</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>}</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span> </div>
