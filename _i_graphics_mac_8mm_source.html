@@ -599,30 +599,30 @@ $(function() {
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  [panelOpen setFloatingPanel: YES];</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  [panelOpen setDirectoryURL: [NSURL fileURLWithPath: defaultPath]];</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  </div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <span class="keyword">auto</span> doHandleResponse = [](NSOpenPanel* pPanel, NSModalResponse response, WDL_String&amp; chosenDir, IFileDialogCompletionHandlerFunc completionHandler){</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <span class="keyword">auto</span> doHandleResponse = [](NSOpenPanel* pPanel, NSModalResponse response, WDL_String&amp; pathAsync, IFileDialogCompletionHandlerFunc completionHandler){</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>    <span class="keywordflow">if</span> (response == NSOKButton)</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    {</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>      NSString* fullPath = [pPanel filename] ;</div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>      chosenDir.Set([fullPath UTF8String]);</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>      chosenDir.Append(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>      pathAsync.Set([fullPath UTF8String]);</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>      pathAsync.Append(<span class="stringliteral">&quot;/&quot;</span>);</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    }</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    {</div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>      chosenDir.Set(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>      pathAsync.Set(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>    }</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    </div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>    <span class="keywordflow">if</span> (completionHandler)</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    {</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>      WDL_String fileName; <span class="comment">// not used</span></div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>      completionHandler(fileName, chosenDir);</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>      WDL_String fileNameAsync; <span class="comment">// not used</span></div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>      completionHandler(fileNameAsync, pathAsync);</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>    }</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>  };</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  <span class="keywordflow">if</span> (completionHandler)</div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  {</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>    [panelOpen beginWithCompletionHandler:^(NSModalResponse response) {</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>      WDL_String path;</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>      doHandleResponse(panelOpen, response, path, completionHandler);</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>      WDL_String pathAsync;</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>      doHandleResponse(panelOpen, response, pathAsync, completionHandler);</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    }];</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  }</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>  <span class="keywordflow">else</span></div>
