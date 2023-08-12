@@ -146,7 +146,7 @@ $(function() {
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>IPlugView* PLUGIN_API IPlugVST3Controller::createView(<span class="keyword">const</span> <span class="keywordtype">char</span>* name)</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">if</span> (name &amp;&amp; strcmp(name, <span class="stringliteral">&quot;editor&quot;</span>) == 0)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plugin_base.html#a41c4ed6296384b212698af666a8f5f89">HasUI</a>() &amp;&amp; name &amp;&amp; strcmp(name, <span class="stringliteral">&quot;editor&quot;</span>) == 0)</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    mView = <span class="keyword">new</span> ViewType(*<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> mView;</div>
