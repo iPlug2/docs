@@ -1,7 +1,7 @@
 <map id="IButtonControlBase" name="IButtonControlBase">
 <area shape="rect" id="node1" title="A base class for buttons/momentary switches &#45; cannot be linked to parameters." alt="" coords="143,79,278,104"/>
 <area shape="rect" id="node3" href="$class_i_b_button_control.html" title="A bitmap button/momentary switch control." alt="" coords="5,152,120,177"/>
-<area shape="rect" id="node4" href="$class_i_s_v_g_button_control.html" title="A vector button/momentary switch control which shows two SVG states." alt="" coords="144,152,277,177"/>
+<area shape="rect" id="node4" href="$class_i_s_v_g_button_control.html" title="A vector button/momentary switch control which shows an SVG image." alt="" coords="144,152,277,177"/>
 <area shape="rect" id="node5" href="$class_i_v_button_control.html" title="A vector button/momentary switch control." alt="" coords="301,152,416,177"/>
 <area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="177,5,244,31"/>
 </map>

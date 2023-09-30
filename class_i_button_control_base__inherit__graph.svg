@@ -35,7 +35,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="class_i_s_v_g_button_control.html" target="_top" xlink:title="A vector button/momentary switch control which shows two SVG states.">
+<g id="a_node4"><a xlink:href="class_i_s_v_g_button_control.html" target="_top" xlink:title="A vector button/momentary switch control which shows an SVG image.">
 <polygon fill="white" stroke="#666666" points="204,-19 104,-19 104,0 204,0 204,-19"/>
 <text text-anchor="middle" x="154" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">ISVGButtonControl</text>
 </a>

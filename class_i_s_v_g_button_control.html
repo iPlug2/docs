@@ -86,7 +86,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A vector button/momentary switch control which shows two SVG states.  
+<p>A vector button/momentary switch control which shows an SVG image.  
  <a href="class_i_s_v_g_button_control.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_controls_8h_source.html">IControls.h</a>&gt;</code></p>
@@ -100,8 +100,11 @@ Inheritance diagram for ISVGButtonControl:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab77b3211c5959621f1488a6149e3c189"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_button_control.html#ab77b3211c5959621f1488a6149e3c189">ISVGButtonControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;offImage, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;onImage)</td></tr>
-<tr class="memdesc:ab77b3211c5959621f1488a6149e3c189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a vector button control, with an action function.  <a href="class_i_s_v_g_button_control.html#ab77b3211c5959621f1488a6149e3c189">More...</a><br /></td></tr>
+<tr class="memdesc:ab77b3211c5959621f1488a6149e3c189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function.  <a href="class_i_s_v_g_button_control.html#ab77b3211c5959621f1488a6149e3c189">More...</a><br /></td></tr>
 <tr class="separator:ab77b3211c5959621f1488a6149e3c189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99de59e34577ff58108c62e115f7da2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_button_control.html#ab99de59e34577ff58108c62e115f7da2">ISVGButtonControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;image, const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt; colors={COLOR_BLACK, COLOR_WHITE, COLOR_DARK_GRAY, COLOR_LIGHT_GRAY}, EColorReplacement colorReplacement=EColorReplacement::Fill)</td></tr>
+<tr class="memdesc:ab99de59e34577ff58108c62e115f7da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function and a single image, with color overrides.  <a href="class_i_s_v_g_button_control.html#ab99de59e34577ff58108c62e115f7da2">More...</a><br /></td></tr>
+<tr class="separator:ab99de59e34577ff58108c62e115f7da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13f1f3b25a138d5876346c3bf06f3c4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_button_control.html#a13f1f3b25a138d5876346c3bf06f3c4f">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
 <tr class="memdesc:a13f1f3b25a138d5876346c3bf06f3c4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_s_v_g_button_control.html#a13f1f3b25a138d5876346c3bf06f3c4f">More...</a><br /></td></tr>
 <tr class="separator:a13f1f3b25a138d5876346c3bf06f3c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,6 +428,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:ade0fd06893511feeebf576923c26f752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95580bf94d2ad4e669dc8489b8af7a76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_v_g.html">ISVG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_button_control.html#a95580bf94d2ad4e669dc8489b8af7a76">mOnSVG</a></td></tr>
 <tr class="separator:a95580bf94d2ad4e669dc8489b8af7a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac315beec8f19be5bb210820ff93dd577"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_button_control.html#ac315beec8f19be5bb210820ff93dd577">mColors</a></td></tr>
+<tr class="separator:ac315beec8f19be5bb210820ff93dd577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe68811fd9ed1ffd90e9ffef8d97e7a1"><td class="memItemLeft" align="right" valign="top">EColorReplacement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_button_control.html#afe68811fd9ed1ffd90e9ffef8d97e7a1">mColorReplacement</a> = EColorReplacement::None</td></tr>
+<tr class="separator:afe68811fd9ed1ffd90e9ffef8d97e7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:acce0760a95881e5df4c962920ef3a891 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#acce0760a95881e5df4c962920ef3a891">mRECT</a></td></tr>
 <tr class="separator:acce0760a95881e5df4c962920ef3a891 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -482,12 +489,12 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >A vector button/momentary switch control which shows two SVG states. </p>
+<div class="textblock"><p >A vector button/momentary switch control which shows an SVG image. </p>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00517">517</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab77b3211c5959621f1488a6149e3c189" name="ab77b3211c5959621f1488a6149e3c189"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab77b3211c5959621f1488a6149e3c189">&#9670;&#160;</a></span>ISVGButtonControl()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab77b3211c5959621f1488a6149e3c189">&#9670;&#160;</a></span>ISVGButtonControl() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -524,7 +531,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs a vector button control, with an action function. </p>
+<p>Constructs an SVG button control, with an action function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
@@ -533,8 +540,82 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offImage</td><td>An SVG for the off state of the button </td></tr>
+    <tr><td class="paramname">onImage</td><td>An SVG for the on state of the button </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01339">1339</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab99de59e34577ff58108c62e115f7da2" name="ab99de59e34577ff58108c62e115f7da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99de59e34577ff58108c62e115f7da2">&#9670;&#160;</a></span>ISVGButtonControl() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ISVGButtonControl::ISVGButtonControl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IActionFunction&#160;</td>
+          <td class="paramname"><em>aF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td>
+          <td class="paramname"><em>colors</em> = <code>{COLOR_BLACK,&#160;COLOR_WHITE,&#160;COLOR_DARK_GRAY,&#160;COLOR_LIGHT_GRAY}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EColorReplacement&#160;</td>
+          <td class="paramname"><em>colorReplacement</em> = <code>EColorReplacement::Fill</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an SVG button control, with an action function and a single image, with color overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">aF</td><td>An action function to execute when a button is clicked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>An SVG for the on/off state of the button <br  />
+ </td></tr>
+    <tr><td class="paramname">colors</td><td>Colors to replace the SVG's fill/stroke in the off/on/mouse-over-off/mouse-over-on states </td></tr>
+    <tr><td class="paramname">colorReplacement</td><td>Should the fill or stroke in the SVG be colored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01347">1347</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -573,13 +654,61 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_control.html#ab9d872edcc790c0506d5b90c07a968de">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01346">1346</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01356">1356</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02732">IGraphics::DrawSVG()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02732">IGraphics::DrawSVG()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, and <a class="el" href="_i_control_8h_source.html#l00556">IControl::mMouseIsOver</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="afe68811fd9ed1ffd90e9ffef8d97e7a1" name="afe68811fd9ed1ffd90e9ffef8d97e7a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe68811fd9ed1ffd90e9ffef8d97e7a1">&#9670;&#160;</a></span>mColorReplacement</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EColorReplacement ISVGButtonControl::mColorReplacement = EColorReplacement::None</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00541">541</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+
+</div>
+</div>
+<a id="ac315beec8f19be5bb210820ff93dd577" name="ac315beec8f19be5bb210820ff93dd577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac315beec8f19be5bb210820ff93dd577">&#9670;&#160;</a></span>mColors</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;<a class="el" href="struct_i_color.html">IColor</a>, 4&gt; ISVGButtonControl::mColors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00540">540</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+
+</div>
+</div>
 <a id="ade0fd06893511feeebf576923c26f752" name="ade0fd06893511feeebf576923c26f752"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ade0fd06893511feeebf576923c26f752">&#9670;&#160;</a></span>mOffSVG</h2>
 
@@ -600,7 +729,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00529">529</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00538">538</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -624,7 +753,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00530">530</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00539">539</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>

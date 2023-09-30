@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>iPlug 2: IGraphicsLiveEdit Class Reference</title>
+<title>iPlug 2: ISVGToggleControl Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,63 +80,60 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_i_graphics_live_edit-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">IGraphicsLiveEdit Class Reference<div class="ingroups"><a class="el" href="group___special_controls.html">IGraphics::IControls::SpecialControls</a></div></div></div>
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="class_i_s_v_g_toggle_control-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ISVGToggleControl Class Reference<div class="ingroups"><a class="el" href="group___controls.html">IGraphics::IControls</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A control to enable live modification of control layout in an <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> context in debug builds This is based on the work of Youlean, who first included it in iPlug-Youlean The lives outside the main <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> control stack and it can be added with <a class="el" href="class_i_graphics.html#a637237470659702554f53061b91c8d86" title="Live edit mode allows you to relocate controls at runtime in debug builds.">IGraphics::EnableLiveEdit()</a>.  
- <a href="class_i_graphics_live_edit.html#details">More...</a></p>
+<p>A vector toggle switch control which shows an SVG image.  
+ <a href="class_i_s_v_g_toggle_control.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_i_controls_8h_source.html">IControls.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for IGraphicsLiveEdit:</div>
+Inheritance diagram for ISVGToggleControl:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_graphics_live_edit__inherit__graph.svg" width="136" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_s_v_g_toggle_control__inherit__graph.svg" width="148" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab1b4b1a23f76342426bb55860f978e16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#ab1b4b1a23f76342426bb55860f978e16">IGraphicsLiveEdit</a> (bool mouseOversEnabled)</td></tr>
-<tr class="separator:ab1b4b1a23f76342426bb55860f978e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62ee4397355c2dd3553f55291ddffaf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a62ee4397355c2dd3553f55291ddffaf3">OnInit</a> () override</td></tr>
-<tr class="memdesc:a62ee4397355c2dd3553f55291ddffaf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just prior to when the control is attached, after its delegate and graphics member variable set.  <a href="class_i_graphics_live_edit.html#a62ee4397355c2dd3553f55291ddffaf3">More...</a><br /></td></tr>
-<tr class="separator:a62ee4397355c2dd3553f55291ddffaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf0b11c185defab7dd4d0dba2c857b1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#abf0b11c185defab7dd4d0dba2c857b1e">OnMouseDown</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:abf0b11c185defab7dd4d0dba2c857b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse down event on this control.  <a href="class_i_graphics_live_edit.html#abf0b11c185defab7dd4d0dba2c857b1e">More...</a><br /></td></tr>
-<tr class="separator:abf0b11c185defab7dd4d0dba2c857b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a829d435477caaddf32a34a58dc9ea595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a829d435477caaddf32a34a58dc9ea595">OnMouseUp</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:a829d435477caaddf32a34a58dc9ea595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse up event on this control.  <a href="class_i_graphics_live_edit.html#a829d435477caaddf32a34a58dc9ea595">More...</a><br /></td></tr>
-<tr class="separator:a829d435477caaddf32a34a58dc9ea595"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae77f3e52ac7387849f08fca8bd9f19ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#ae77f3e52ac7387849f08fca8bd9f19ef">OnMouseDblClick</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:ae77f3e52ac7387849f08fca8bd9f19ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse double click event on this control.  <a href="class_i_graphics_live_edit.html#ae77f3e52ac7387849f08fca8bd9f19ef">More...</a><br /></td></tr>
-<tr class="separator:ae77f3e52ac7387849f08fca8bd9f19ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1830a2bbc3bc4ba3ffb38d45795f306f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a1830a2bbc3bc4ba3ffb38d45795f306f">OnMouseOver</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:a1830a2bbc3bc4ba3ffb38d45795f306f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouseover event on this control.  <a href="class_i_graphics_live_edit.html#a1830a2bbc3bc4ba3ffb38d45795f306f">More...</a><br /></td></tr>
-<tr class="separator:a1830a2bbc3bc4ba3ffb38d45795f306f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eb1093325830f617e405b12863f02d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a2eb1093325830f617e405b12863f02d2">OnMouseDrag</a> (float x, float y, float dX, float dY, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:a2eb1093325830f617e405b12863f02d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse drag event on this control.  <a href="class_i_graphics_live_edit.html#a2eb1093325830f617e405b12863f02d2">More...</a><br /></td></tr>
-<tr class="separator:a2eb1093325830f617e405b12863f02d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a108ca3c9cec05c97fd4f42574b87c722"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a108ca3c9cec05c97fd4f42574b87c722">OnKeyDown</a> (float x, float y, const <a class="el" href="struct_i_key_press.html">IKeyPress</a> &amp;key) override</td></tr>
-<tr class="memdesc:a108ca3c9cec05c97fd4f42574b87c722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a key down event on this control.  <a href="class_i_graphics_live_edit.html#a108ca3c9cec05c97fd4f42574b87c722">More...</a><br /></td></tr>
-<tr class="separator:a108ca3c9cec05c97fd4f42574b87c722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5877543452e4575d628d383b79ab1bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a5877543452e4575d628d383b79ab1bce">OnPopupMenuSelection</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pSelectedMenu, int valIdx) override</td></tr>
-<tr class="memdesc:a5877543452e4575d628d383b79ab1bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_graphics_live_edit.html#a5877543452e4575d628d383b79ab1bce">More...</a><br /></td></tr>
-<tr class="separator:a5877543452e4575d628d383b79ab1bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf24c0378abd13b0a5ab49e4fecbb45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#afcf24c0378abd13b0a5ab49e4fecbb45">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
-<tr class="memdesc:afcf24c0378abd13b0a5ab49e4fecbb45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_graphics_live_edit.html#afcf24c0378abd13b0a5ab49e4fecbb45">More...</a><br /></td></tr>
-<tr class="separator:afcf24c0378abd13b0a5ab49e4fecbb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e0db1ceb23a9f30a0f63c0d62e93691"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a0e0db1ceb23a9f30a0f63c0d62e93691">OnResize</a> () override</td></tr>
-<tr class="memdesc:a0e0db1ceb23a9f30a0f63c0d62e93691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> is constructed or resized using SetRect().  <a href="class_i_graphics_live_edit.html#a0e0db1ceb23a9f30a0f63c0d62e93691">More...</a><br /></td></tr>
-<tr class="separator:a0e0db1ceb23a9f30a0f63c0d62e93691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affa44bd71535d25ccf93613260bb53cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#affa44bd71535d25ccf93613260bb53cd">IsDirty</a> () override</td></tr>
-<tr class="memdesc:affa44bd71535d25ccf93613260bb53cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at each display refresh by the <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> draw loop, after IControl::Animate(), to determine if the control is marked as dirty.  <a href="class_i_graphics_live_edit.html#affa44bd71535d25ccf93613260bb53cd">More...</a><br /></td></tr>
-<tr class="separator:affa44bd71535d25ccf93613260bb53cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e74b41ecebd1651fa112882cd154eb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#a2e74b41ecebd1651fa112882cd154eb1">GetHandleRect</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;r)</td></tr>
-<tr class="separator:a2e74b41ecebd1651fa112882cd154eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa21952ca73f60ee06ceb5207c2019a62"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_live_edit.html#aa21952ca73f60ee06ceb5207c2019a62">SnapToGrid</a> (float input)</td></tr>
-<tr class="separator:aa21952ca73f60ee06ceb5207c2019a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2dbe2c6da230a0f119c75cf716268e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ab2dbe2c6da230a0f119c75cf716268e8">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;offImage, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;onImage)</td></tr>
+<tr class="memdesc:ab2dbe2c6da230a0f119c75cf716268e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function.  <a href="class_i_s_v_g_toggle_control.html#ab2dbe2c6da230a0f119c75cf716268e8">More...</a><br /></td></tr>
+<tr class="separator:ab2dbe2c6da230a0f119c75cf716268e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cba2575cee3d419052bd1abb44d5259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#a1cba2575cee3d419052bd1abb44d5259">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;offImage, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;onImage)</td></tr>
+<tr class="memdesc:a1cba2575cee3d419052bd1abb44d5259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function.  <a href="class_i_s_v_g_toggle_control.html#a1cba2575cee3d419052bd1abb44d5259">More...</a><br /></td></tr>
+<tr class="separator:a1cba2575cee3d419052bd1abb44d5259"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad929851cd2877733082d466bc8f0419b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ad929851cd2877733082d466bc8f0419b">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;image, const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt; colors={COLOR_BLACK, COLOR_WHITE, COLOR_DARK_GRAY, COLOR_LIGHT_GRAY}, EColorReplacement colorReplacement=EColorReplacement::Fill)</td></tr>
+<tr class="memdesc:ad929851cd2877733082d466bc8f0419b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function and a single image, with color overrides.  <a href="class_i_s_v_g_toggle_control.html#ad929851cd2877733082d466bc8f0419b">More...</a><br /></td></tr>
+<tr class="separator:ad929851cd2877733082d466bc8f0419b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1c1c3fde01d741925941ce041552fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#aac1c1c3fde01d741925941ce041552fc">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;image, const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt; colors={COLOR_BLACK, COLOR_WHITE, COLOR_DARK_GRAY, COLOR_LIGHT_GRAY}, EColorReplacement colorReplacement=EColorReplacement::Fill)</td></tr>
+<tr class="memdesc:aac1c1c3fde01d741925941ce041552fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function and a single image, with color overrides.  <a href="class_i_s_v_g_toggle_control.html#aac1c1c3fde01d741925941ce041552fc">More...</a><br /></td></tr>
+<tr class="separator:aac1c1c3fde01d741925941ce041552fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa438d6a0d30fba85026ccc82e265c563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#aa438d6a0d30fba85026ccc82e265c563">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
+<tr class="memdesc:aa438d6a0d30fba85026ccc82e265c563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_s_v_g_toggle_control.html#aa438d6a0d30fba85026ccc82e265c563">More...</a><br /></td></tr>
+<tr class="separator:aa438d6a0d30fba85026ccc82e265c563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_switch_control_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_switch_control_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_switch_control_base.html">ISwitchControlBase</a></td></tr>
+<tr class="memitem:a5751f562f5c973786c83bff8827150d4 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a5751f562f5c973786c83bff8827150d4">ISwitchControlBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction aF=nullptr, int numStates=2)</td></tr>
+<tr class="separator:a5751f562f5c973786c83bff8827150d4 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad24d97d550f6189dfe630874df81af9f inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ad24d97d550f6189dfe630874df81af9f">OnInit</a> () override</td></tr>
+<tr class="memdesc:ad24d97d550f6189dfe630874df81af9f inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just prior to when the control is attached, after its delegate and graphics member variable set.  <a href="class_i_switch_control_base.html#ad24d97d550f6189dfe630874df81af9f">More...</a><br /></td></tr>
+<tr class="separator:ad24d97d550f6189dfe630874df81af9f inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac75b525a05c2447b18b2f41cc745332b inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ac75b525a05c2447b18b2f41cc745332b">OnMouseDown</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
+<tr class="memdesc:ac75b525a05c2447b18b2f41cc745332b inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse down event on this control.  <a href="class_i_switch_control_base.html#ac75b525a05c2447b18b2f41cc745332b">More...</a><br /></td></tr>
+<tr class="separator:ac75b525a05c2447b18b2f41cc745332b inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">OnMouseUp</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
+<tr class="memdesc:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse up event on this control.  <a href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">More...</a><br /></td></tr>
+<tr class="separator:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6227045c4c91c99dac2dee7b0f212ad inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ae6227045c4c91c99dac2dee7b0f212ad">GetSelectedIdx</a> () const</td></tr>
+<tr class="separator:ae6227045c4c91c99dac2dee7b0f212ad inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f15dc5242fc73ea7d5bb774d98a2692 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a0f15dc5242fc73ea7d5bb774d98a2692">SetStateDisabled</a> (int stateIdx, bool disabled)</td></tr>
+<tr class="separator:a0f15dc5242fc73ea7d5bb774d98a2692 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687771bc4c0af82c4a79a67dbc9565e5 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a687771bc4c0af82c4a79a67dbc9565e5">SetAllStatesDisabled</a> (bool disabled)</td></tr>
+<tr class="separator:a687771bc4c0af82c4a79a67dbc9565e5 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785c978644eb13ba524be6fefeba0283 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a785c978644eb13ba524be6fefeba0283">GetStateDisabled</a> (int stateIdx) const</td></tr>
+<tr class="separator:a785c978644eb13ba524be6fefeba0283 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">IControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction actionFunc=nullptr)</td></tr>
 <tr class="memdesc:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">More...</a><br /></td></tr>
@@ -443,15 +440,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memdesc:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to dynamic cast an <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> to a subclass.  <a href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">More...</a><br /></td></tr>
 <tr class="separator:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
-<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">ForValIdx</a> (int valIdx, T func, Args... args)</td></tr>
-<tr class="memdesc:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper template function to call a method for an individual value, or for all values.  <a href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">More...</a><br /></td></tr>
-<tr class="separator:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa35c559ca13bfdb2f3507216047afdbd">SetNVals</a> (int nVals)</td></tr>
-<tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:acf1d6ad3426220dce2678ab3ecc02602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_v_g.html">ISVG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#acf1d6ad3426220dce2678ab3ecc02602">mOffSVG</a></td></tr>
+<tr class="separator:acf1d6ad3426220dce2678ab3ecc02602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af15916907a10e203bdbbf81a036b8bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_v_g.html">ISVG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#af15916907a10e203bdbbf81a036b8bbd">mOnSVG</a></td></tr>
+<tr class="separator:af15916907a10e203bdbbf81a036b8bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac853e9a910b9ae90651205b65bc28bf9"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ac853e9a910b9ae90651205b65bc28bf9">mColors</a></td></tr>
+<tr class="separator:ac853e9a910b9ae90651205b65bc28bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac034802789c3730a4a3f144f38ac4864"><td class="memItemLeft" align="right" valign="top">EColorReplacement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ac034802789c3730a4a3f144f38ac4864">mColorReplacement</a> = EColorReplacement::None</td></tr>
+<tr class="separator:ac034802789c3730a4a3f144f38ac4864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_i_switch_control_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_switch_control_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_switch_control_base.html">ISwitchControlBase</a></td></tr>
+<tr class="memitem:ab90f7e19736ec2ef4ac1b3056d83feca inherit pro_attribs_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ab90f7e19736ec2ef4ac1b3056d83feca">mNumStates</a></td></tr>
+<tr class="separator:ab90f7e19736ec2ef4ac1b3056d83feca inherit pro_attribs_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996c0f2e1dae49069f592b28aad3962d inherit pro_attribs_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">WDL_TypedBuf&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a996c0f2e1dae49069f592b28aad3962d">mDisabledState</a></td></tr>
+<tr class="separator:a996c0f2e1dae49069f592b28aad3962d inherit pro_attribs_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee677e4861556aea7539c738842f67f3 inherit pro_attribs_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#aee677e4861556aea7539c738842f67f3">mMouseDown</a> = false</td></tr>
+<tr class="separator:aee677e4861556aea7539c738842f67f3 inherit pro_attribs_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:acce0760a95881e5df4c962920ef3a891 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#acce0760a95881e5df4c962920ef3a891">mRECT</a></td></tr>
 <tr class="separator:acce0760a95881e5df4c962920ef3a891 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -497,71 +502,263 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8345c576ab2c74910b9a91a995c2cde0 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7161238f8c99333cd6b0fff590396350">mPTisHighlighted</a> = false</td></tr>
 <tr class="separator:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
+<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">ForValIdx</a> (int valIdx, T func, Args... args)</td></tr>
+<tr class="memdesc:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper template function to call a method for an individual value, or for all values.  <a href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">More...</a><br /></td></tr>
+<tr class="separator:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa35c559ca13bfdb2f3507216047afdbd">SetNVals</a> (int nVals)</td></tr>
+<tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >A control to enable live modification of control layout in an <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> context in debug builds This is based on the work of Youlean, who first included it in iPlug-Youlean The lives outside the main <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> control stack and it can be added with <a class="el" href="class_i_graphics.html#a637237470659702554f53061b91c8d86" title="Live edit mode allows you to relocate controls at runtime in debug builds.">IGraphics::EnableLiveEdit()</a>. </p>
-<p >It should not be used in the main control stack. </p>
+<div class="textblock"><p >A vector toggle switch control which shows an SVG image. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00031">31</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00545">545</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab1b4b1a23f76342426bb55860f978e16" name="ab1b4b1a23f76342426bb55860f978e16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1b4b1a23f76342426bb55860f978e16">&#9670;&#160;</a></span>IGraphicsLiveEdit()</h2>
+<a id="ab2dbe2c6da230a0f119c75cf716268e8" name="ab2dbe2c6da230a0f119c75cf716268e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2dbe2c6da230a0f119c75cf716268e8">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IGraphicsLiveEdit::IGraphicsLiveEdit </td>
+          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>mouseOversEnabled</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">IActionFunction&#160;</td>
+          <td class="paramname"><em>aF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>offImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>onImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00034">34</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
+<p>Constructs an SVG button control, with an action function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">aF</td><td>An action function to execute when a button is clicked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offImage</td><td>An SVG for the off state of the button </td></tr>
+    <tr><td class="paramname">onImage</td><td>An SVG for the on state of the button </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01383">1383</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a456f11d0dda08eb9e8630f63e0ae2cfd" name="a456f11d0dda08eb9e8630f63e0ae2cfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a456f11d0dda08eb9e8630f63e0ae2cfd">&#9670;&#160;</a></span>~IGraphicsLiveEdit()</h2>
+<a id="a1cba2575cee3d419052bd1abb44d5259" name="a1cba2575cee3d419052bd1abb44d5259"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cba2575cee3d419052bd1abb44d5259">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IGraphicsLiveEdit::~IGraphicsLiveEdit </td>
+          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>paramIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>offImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>onImage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00042">42</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
+<p>Constructs an SVG button control, with an action function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">paramIdx</td><td>The parameter index to link this control to </td></tr>
+    <tr><td class="paramname">offImage</td><td>An SVG for the off state of the button </td></tr>
+    <tr><td class="paramname">onImage</td><td>An SVG for the on state of the button </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01390">1390</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad929851cd2877733082d466bc8f0419b" name="ad929851cd2877733082d466bc8f0419b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad929851cd2877733082d466bc8f0419b">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">IActionFunction&#160;</td>
+          <td class="paramname"><em>aF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td>
+          <td class="paramname"><em>colors</em> = <code>{COLOR_BLACK,&#160;COLOR_WHITE,&#160;COLOR_DARK_GRAY,&#160;COLOR_LIGHT_GRAY}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EColorReplacement&#160;</td>
+          <td class="paramname"><em>colorReplacement</em> = <code>EColorReplacement::Fill</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an SVG button control, with an action function and a single image, with color overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">aF</td><td>An action function to execute when a button is clicked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>An SVG for the on/off state of the button </td></tr>
+    <tr><td class="paramname">colors</td><td>Colors to replace the SVG's fill/stroke in the off/on/mouse-over-off/mouse-over-on states </td></tr>
+    <tr><td class="paramname">colorReplacement</td><td>Should the fill or stroke in the SVG be colored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01397">1397</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aac1c1c3fde01d741925941ce041552fc" name="aac1c1c3fde01d741925941ce041552fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1c1c3fde01d741925941ce041552fc">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>paramIdx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td>
+          <td class="paramname"><em>colors</em> = <code>{COLOR_BLACK,&#160;COLOR_WHITE,&#160;COLOR_DARK_GRAY,&#160;COLOR_LIGHT_GRAY}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EColorReplacement&#160;</td>
+          <td class="paramname"><em>colorReplacement</em> = <code>EColorReplacement::Fill</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an SVG button control, with an action function and a single image, with color overrides. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">paramIdx</td><td>The parameter index to link this control to </td></tr>
+    <tr><td class="paramname">image</td><td>An SVG for the on/off state of the button </td></tr>
+    <tr><td class="paramname">colors</td><td>Colors to replace the SVG's fill/stroke in the off/on/mouse-over-off/mouse-over-on states </td></tr>
+    <tr><td class="paramname">colorReplacement</td><td>Should the fill or stroke in the SVG be colored </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01406">1406</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afcf24c0378abd13b0a5ab49e4fecbb45" name="afcf24c0378abd13b0a5ab49e4fecbb45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcf24c0378abd13b0a5ab49e4fecbb45">&#9670;&#160;</a></span>Draw()</h2>
+<a id="aa438d6a0d30fba85026ccc82e265c563" name="aa438d6a0d30fba85026ccc82e265c563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa438d6a0d30fba85026ccc82e265c563">&#9670;&#160;</a></span>Draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -570,7 +767,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void IGraphicsLiveEdit::Draw </td>
+          <td class="memname">void ISVGToggleControl::Draw </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_i_graphics.html">IGraphics</a> &amp;&#160;</td>
           <td class="paramname"><em>g</em></td><td>)</td>
@@ -579,7 +776,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -594,14 +791,15 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_control.html#ab9d872edcc790c0506d5b90c07a968de">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">258</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01415">1415</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00756">IRECT::B</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02487">IGraphics::DrawDottedRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02372">IGraphics::DrawGrid()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02438">IGraphics::DrawTriangle()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00797">IRECT::Empty()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02510">IGraphics::FillTriangle()</a>, <a class="el" href="_i_graphics_8h_source.html#l01166">IGraphics::GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01321">IGraphics::GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00458">IControl::GetParent()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00358">IControl::IsDisabled()</a>, <a class="el" href="_i_control_8h_source.html#l00351">IControl::IsHidden()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00750">IRECT::L</a>, <a class="el" href="_i_graphics_8h_source.html#l01404">IGraphics::NControls()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00754">IRECT::R</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00752">IRECT::T</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02732">IGraphics::DrawSVG()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, and <a class="el" href="_i_control_8h_source.html#l00556">IControl::mMouseIsOver</a>.</p>
 
 </div>
 </div>
-<a id="a2e74b41ecebd1651fa112882cd154eb1" name="a2e74b41ecebd1651fa112882cd154eb1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e74b41ecebd1651fa112882cd154eb1">&#9670;&#160;</a></span>GetHandleRect()</h2>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac034802789c3730a4a3f144f38ac4864" name="ac034802789c3730a4a3f144f38ac4864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac034802789c3730a4a3f144f38ac4864">&#9670;&#160;</a></span>mColorReplacement</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -610,26 +808,22 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a> IGraphicsLiveEdit::GetHandleRect </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
-          <td class="paramname"><em>r</em></td><td>)</td>
-          <td></td>
+          <td class="memname">EColorReplacement ISVGToggleControl::mColorReplacement = EColorReplacement::None</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00303">303</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00584">584</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
-<a id="affa44bd71535d25ccf93613260bb53cd" name="affa44bd71535d25ccf93613260bb53cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affa44bd71535d25ccf93613260bb53cd">&#9670;&#160;</a></span>IsDirty()</h2>
+<a id="ac853e9a910b9ae90651205b65bc28bf9" name="ac853e9a910b9ae90651205b65bc28bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac853e9a910b9ae90651205b65bc28bf9">&#9670;&#160;</a></span>mColors</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -638,30 +832,22 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IGraphicsLiveEdit::IsDirty </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname">std::array&lt;<a class="el" href="struct_i_color.html">IColor</a>, 4&gt; ISVGToggleControl::mColors</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Called at each display refresh by the <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> draw loop, after IControl::Animate(), to determine if the control is marked as dirty. </p>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control is marked dirty. </dd></dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a5169582ea732d3d7c7352d0ed88d7957">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00301">301</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00583">583</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
-<a id="a62ee4397355c2dd3553f55291ddffaf3" name="a62ee4397355c2dd3553f55291ddffaf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62ee4397355c2dd3553f55291ddffaf3">&#9670;&#160;</a></span>OnInit()</h2>
+<a id="acf1d6ad3426220dce2678ab3ecc02602" name="acf1d6ad3426220dce2678ab3ecc02602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1d6ad3426220dce2678ab3ecc02602">&#9670;&#160;</a></span>mOffSVG</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -670,31 +856,22 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnInit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td class="memname"><a class="el" href="struct_i_s_v_g.html">ISVG</a> ISVGToggleControl::mOffSVG</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Called just prior to when the control is attached, after its delegate and graphics member variable set. </p>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#acd7d00c3219eacdcc1b5dfd5996ffcae">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00047">47</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01541">IGraphics::EnableMouseOver()</a>, and <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00581">581</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
-<a id="a108ca3c9cec05c97fd4f42574b87c722" name="a108ca3c9cec05c97fd4f42574b87c722"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a108ca3c9cec05c97fd4f42574b87c722">&#9670;&#160;</a></span>OnKeyDown()</h2>
+<a id="af15916907a10e203bdbbf81a036b8bbd" name="af15916907a10e203bdbbf81a036b8bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af15916907a10e203bdbbf81a036b8bbd">&#9670;&#160;</a></span>mOnSVG</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -703,471 +880,23 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IGraphicsLiveEdit::OnKeyDown </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_key_press.html">IKeyPress</a> &amp;&#160;</td>
-          <td class="paramname"><em>key</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname"><a class="el" href="struct_i_s_v_g.html">ISVG</a> ISVGToggleControl::mOnSVG</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implement this method to respond to a key down event on this control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The X coordinate of the mouse at the time of this key down event </td></tr>
-    <tr><td class="paramname">y</td><td>The Y coordinate of the mouse at the time of this key down event </td></tr>
-    <tr><td class="paramname">key</td><td>Info about the keypress </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a6eb800c82d6960baab8e691bb5222680">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00197">197</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">IGraphics::ReleaseMouseCapture()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00165">IGraphics::RemoveControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">IGraphics::SetAllControlsDirty()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00582">582</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
-<a id="ae77f3e52ac7387849f08fca8bd9f19ef" name="ae77f3e52ac7387849f08fca8bd9f19ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae77f3e52ac7387849f08fca8bd9f19ef">&#9670;&#160;</a></span>OnMouseDblClick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnMouseDblClick </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;&#160;</td>
-          <td class="paramname"><em>mod</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implement this method to respond to a mouse double click event on this control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The X coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">y</td><td>The Y coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">mod</td><td>A struct indicating which modifier keys are held for the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a82331ea6cbdead5fc2a7ce6df7c97d40">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00122">122</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-</div>
-</div>
-<a id="abf0b11c185defab7dd4d0dba2c857b1e" name="abf0b11c185defab7dd4d0dba2c857b1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf0b11c185defab7dd4d0dba2c857b1e">&#9670;&#160;</a></span>OnMouseDown()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnMouseDown </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;&#160;</td>
-          <td class="paramname"><em>mod</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implement this method to respond to a mouse down event on this control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The X coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">y</td><td>The Y coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">mod</td><td>A struct indicating which modifier keys are held for the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a4bf75d9b7be5d293b801b65c8834295e">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">52</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00299">IGraphics::AttachControl()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00756">IRECT::B</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01908">IGraphics::CreatePopupMenu()</a>, <a class="el" href="_i_graphics_8h_source.html#l01321">IGraphics::GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00315">IControl::GetTargetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00750">IRECT::L</a>, <a class="el" href="_i_graphics_8h_source.html#l01404">IGraphics::NControls()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00754">IRECT::R</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00752">IRECT::T</a>.</p>
-
-</div>
-</div>
-<a id="a2eb1093325830f617e405b12863f02d2" name="a2eb1093325830f617e405b12863f02d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eb1093325830f617e405b12863f02d2">&#9670;&#160;</a></span>OnMouseDrag()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnMouseDrag </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>dY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;&#160;</td>
-          <td class="paramname"><em>mod</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implement this method to respond to a mouse drag event on this control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The X coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">y</td><td>The Y coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">dX</td><td>The X delta (difference) since the last event </td></tr>
-    <tr><td class="paramname">dY</td><td>The Y delta (difference) since the last event </td></tr>
-    <tr><td class="paramname">mod</td><td>A struct indicating which modifier keys are held for the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#ab5b2fc14c84159cd5e0af3386a2a12e5">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">146</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00756">IRECT::B</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00869">IRECT::Contains()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00515">IGraphics::ForStandardControlsFunc()</a>, <a class="el" href="_i_graphics_8h_source.html#l01321">IGraphics::GetControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01555">IGraphics::GetMouseDownPoint()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00822">IRECT::H()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00750">IRECT::L</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00754">IRECT::R</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00212">IGraphics::SetControlPosition()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00219">IGraphics::SetControlSize()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00752">IRECT::T</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00819">IRECT::W()</a>.</p>
-
-</div>
-</div>
-<a id="a1830a2bbc3bc4ba3ffb38d45795f306f" name="a1830a2bbc3bc4ba3ffb38d45795f306f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1830a2bbc3bc4ba3ffb38d45795f306f">&#9670;&#160;</a></span>OnMouseOver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnMouseOver </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;&#160;</td>
-          <td class="paramname"><em>mod</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implement this method to respond to a mouseover event on this control. </p>
-<p >Implementations should call base class, if you wish to use mMouseIsOver. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The X coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">y</td><td>The Y coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">mod</td><td>A struct indicating which modifier keys are held for the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a39df22eddb4d9b0fd2f2504562556c49">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">126</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00869">IRECT::Contains()</a>, <a class="el" href="_i_graphics_8h_source.html#l01321">IGraphics::GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00814">IGraphics::SetMouseCursor()</a>.</p>
-
-</div>
-</div>
-<a id="a829d435477caaddf32a34a58dc9ea595" name="a829d435477caaddf32a34a58dc9ea595"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a829d435477caaddf32a34a58dc9ea595">&#9670;&#160;</a></span>OnMouseUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnMouseUp </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;&#160;</td>
-          <td class="paramname"><em>mod</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implement this method to respond to a mouse up event on this control. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">x</td><td>The X coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">y</td><td>The Y coordinate of the mouse event </td></tr>
-    <tr><td class="paramname">mod</td><td>A struct indicating which modifier keys are held for the event </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a919eb7860ce5559e589f95ceb3309df7">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">100</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00756">IRECT::B</a>, <a class="el" href="_i_graphics_8h_source.html#l01321">IGraphics::GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00750">IRECT::L</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00754">IRECT::R</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">IGraphics::SetAllControlsDirty()</a>, <a class="el" href="_i_control_8h_source.html#l00311">IControl::SetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00319">IControl::SetTargetRECT()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00752">IRECT::T</a>.</p>
-
-</div>
-</div>
-<a id="a5877543452e4575d628d383b79ab1bce" name="a5877543452e4575d628d383b79ab1bce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5877543452e4575d628d383b79ab1bce">&#9670;&#160;</a></span>OnPopupMenuSelection()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnPopupMenuSelection </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *&#160;</td>
-          <td class="paramname"><em>pSelectedMenu</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>valIdx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pSelectedMenu</td><td>If pSelectedMenu is invalid it means the user didn't select anything </td></tr>
-    <tr><td class="paramname">valIdx</td><td>An index that indicates which of the control's vals the menu relates to </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a48e5538db6500f5856d919d204a89418">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00221">221</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00299">IGraphics::AttachControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01555">IGraphics::GetMouseDownPoint()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00165">IGraphics::RemoveControl()</a>.</p>
-
-</div>
-</div>
-<a id="a0e0db1ceb23a9f30a0f63c0d62e93691" name="a0e0db1ceb23a9f30a0f63c0d62e93691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e0db1ceb23a9f30a0f63c0d62e93691">&#9670;&#160;</a></span>OnResize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsLiveEdit::OnResize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called when <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> is constructed or resized using SetRect(). </p>
-<p >NOTE: if you call <a class="el" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7" title="Mark the control as dirty, i.e.">SetDirty()</a> in this method, you should call SetDirty(false) to avoid triggering parameter changes </p>
-
-<p>Reimplemented from <a class="el" href="class_i_control.html#a0c4927d3332fabe6f7626a03624f390f">IControl</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00294">294</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01166">IGraphics::GetBounds()</a>, <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, and <a class="el" href="_i_control_8h_source.html#l00319">IControl::SetTargetRECT()</a>.</p>
-
-</div>
-</div>
-<a id="aa21952ca73f60ee06ceb5207c2019a62" name="aa21952ca73f60ee06ceb5207c2019a62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa21952ca73f60ee06ceb5207c2019a62">&#9670;&#160;</a></span>SnapToGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float IGraphicsLiveEdit::SnapToGrid </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_live_edit_8h_source.html#l00308">308</a> of file <a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a>.</p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_i_graphics_live_edit_8h_source.html">IGraphicsLiveEdit.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_i_controls_8h_source.html">IControls.h</a></li>
+<li><a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
