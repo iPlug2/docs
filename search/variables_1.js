@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['b_0',['B',['../struct_i_r_e_c_t.html#a3f35eaa20141fa6538b6af243dc353b2',1,'IRECT']]]
+  ['iamp_5fdb_0',['IAMP_DB',['../group___i_plug_constants.html#ga498109434db2f6278a1f0b7a87bf5896',1,'IPlugConstants.h']]]
 ];
