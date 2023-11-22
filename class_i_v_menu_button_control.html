@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>iPlug 2: ISVGToggleControl Class Reference</title>
+<title>iPlug 2: IVMenuButtonControl Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -80,60 +80,74 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="class_i_s_v_g_toggle_control-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">ISVGToggleControl Class Reference<div class="ingroups"><a class="el" href="group___controls.html">IGraphics::IControls</a></div></div></div>
+<a href="class_i_v_menu_button_control-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">IVMenuButtonControl Class Reference<div class="ingroups"><a class="el" href="group___controls.html">IGraphics::IControls</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>A vector toggle switch control which shows an SVG image.  
- <a href="class_i_s_v_g_toggle_control.html#details">More...</a></p>
+<p>A vector button that pops up a menu.  
+ <a href="class_i_v_menu_button_control.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_controls_8h_source.html">IControls.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for ISVGToggleControl:</div>
+Inheritance diagram for IVMenuButtonControl:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_s_v_g_toggle_control__inherit__graph.svg" width="148" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_v_menu_button_control__inherit__graph.svg" width="240" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab2dbe2c6da230a0f119c75cf716268e8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ab2dbe2c6da230a0f119c75cf716268e8">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;offImage, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;onImage)</td></tr>
-<tr class="memdesc:ab2dbe2c6da230a0f119c75cf716268e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function.  <a href="class_i_s_v_g_toggle_control.html#ab2dbe2c6da230a0f119c75cf716268e8">More...</a><br /></td></tr>
-<tr class="separator:ab2dbe2c6da230a0f119c75cf716268e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cba2575cee3d419052bd1abb44d5259"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#a1cba2575cee3d419052bd1abb44d5259">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;offImage, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;onImage)</td></tr>
-<tr class="memdesc:a1cba2575cee3d419052bd1abb44d5259"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function.  <a href="class_i_s_v_g_toggle_control.html#a1cba2575cee3d419052bd1abb44d5259">More...</a><br /></td></tr>
-<tr class="separator:a1cba2575cee3d419052bd1abb44d5259"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad929851cd2877733082d466bc8f0419b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ad929851cd2877733082d466bc8f0419b">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;image, const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt; colors={COLOR_BLACK, COLOR_WHITE, COLOR_DARK_GRAY, COLOR_LIGHT_GRAY}, EColorReplacement colorReplacement=EColorReplacement::Fill)</td></tr>
-<tr class="memdesc:ad929851cd2877733082d466bc8f0419b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function and a single image, with color overrides.  <a href="class_i_s_v_g_toggle_control.html#ad929851cd2877733082d466bc8f0419b">More...</a><br /></td></tr>
-<tr class="separator:ad929851cd2877733082d466bc8f0419b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac1c1c3fde01d741925941ce041552fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#aac1c1c3fde01d741925941ce041552fc">ISVGToggleControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx, const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;image, const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt; colors={COLOR_BLACK, COLOR_WHITE, COLOR_DARK_GRAY, COLOR_LIGHT_GRAY}, EColorReplacement colorReplacement=EColorReplacement::Fill)</td></tr>
-<tr class="memdesc:aac1c1c3fde01d741925941ce041552fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an SVG button control, with an action function and a single image, with color overrides.  <a href="class_i_s_v_g_toggle_control.html#aac1c1c3fde01d741925941ce041552fc">More...</a><br /></td></tr>
-<tr class="separator:aac1c1c3fde01d741925941ce041552fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa438d6a0d30fba85026ccc82e265c563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#aa438d6a0d30fba85026ccc82e265c563">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
-<tr class="memdesc:aa438d6a0d30fba85026ccc82e265c563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_s_v_g_toggle_control.html#aa438d6a0d30fba85026ccc82e265c563">More...</a><br /></td></tr>
-<tr class="separator:aa438d6a0d30fba85026ccc82e265c563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_i_switch_control_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_switch_control_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_switch_control_base.html">ISwitchControlBase</a></td></tr>
-<tr class="memitem:a5751f562f5c973786c83bff8827150d4 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a5751f562f5c973786c83bff8827150d4">ISwitchControlBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction aF=nullptr, int numStates=2)</td></tr>
-<tr class="separator:a5751f562f5c973786c83bff8827150d4 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad24d97d550f6189dfe630874df81af9f inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ad24d97d550f6189dfe630874df81af9f">OnInit</a> () override</td></tr>
-<tr class="memdesc:ad24d97d550f6189dfe630874df81af9f inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called just prior to when the control is attached, after its delegate and graphics member variable set.  <a href="class_i_switch_control_base.html#ad24d97d550f6189dfe630874df81af9f">More...</a><br /></td></tr>
-<tr class="separator:ad24d97d550f6189dfe630874df81af9f inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac75b525a05c2447b18b2f41cc745332b inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ac75b525a05c2447b18b2f41cc745332b">OnMouseDown</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:ac75b525a05c2447b18b2f41cc745332b inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse down event on this control.  <a href="class_i_switch_control_base.html#ac75b525a05c2447b18b2f41cc745332b">More...</a><br /></td></tr>
-<tr class="separator:ac75b525a05c2447b18b2f41cc745332b inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">OnMouseUp</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
-<tr class="memdesc:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse up event on this control.  <a href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">More...</a><br /></td></tr>
-<tr class="separator:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6227045c4c91c99dac2dee7b0f212ad inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ae6227045c4c91c99dac2dee7b0f212ad">GetSelectedIdx</a> () const</td></tr>
-<tr class="separator:ae6227045c4c91c99dac2dee7b0f212ad inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f15dc5242fc73ea7d5bb774d98a2692 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a0f15dc5242fc73ea7d5bb774d98a2692">SetStateDisabled</a> (int stateIdx, bool disabled)</td></tr>
-<tr class="separator:a0f15dc5242fc73ea7d5bb774d98a2692 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a687771bc4c0af82c4a79a67dbc9565e5 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a687771bc4c0af82c4a79a67dbc9565e5">SetAllStatesDisabled</a> (bool disabled)</td></tr>
-<tr class="separator:a687771bc4c0af82c4a79a67dbc9565e5 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a785c978644eb13ba524be6fefeba0283 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a785c978644eb13ba524be6fefeba0283">GetStateDisabled</a> (int stateIdx) const</td></tr>
-<tr class="separator:a785c978644eb13ba524be6fefeba0283 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50c0e982996172b023ecbdbadf325918"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#a50c0e982996172b023ecbdbadf325918">IVMenuButtonControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, EVShape shape=EVShape::Rectangle)</td></tr>
+<tr class="memdesc:a50c0e982996172b023ecbdbadf325918"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a vector button control, with an action function.  <a href="class_i_v_menu_button_control.html#a50c0e982996172b023ecbdbadf325918">More...</a><br /></td></tr>
+<tr class="separator:a50c0e982996172b023ecbdbadf325918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30bde4b6ce6c1950d1533531e40f5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#aa30bde4b6ce6c1950d1533531e40f5b8">OnPopupMenuSelection</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pSelectedMenu, int valIdx) override</td></tr>
+<tr class="memdesc:aa30bde4b6ce6c1950d1533531e40f5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_v_menu_button_control.html#aa30bde4b6ce6c1950d1533531e40f5b8">More...</a><br /></td></tr>
+<tr class="separator:aa30bde4b6ce6c1950d1533531e40f5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c771278b77eee0cd7f684265faf527e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#a3c771278b77eee0cd7f684265faf527e">SetValueFromDelegate</a> (double value, int valIdx=0) override</td></tr>
+<tr class="memdesc:a3c771278b77eee0cd7f684265faf527e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control's value from the delegate This method is called from the class implementing the <a class="el" href="class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth...">IEditorDelegate</a> interface in order to update a control's value members and set it to be marked dirty for redraw.  <a href="class_i_v_menu_button_control.html#a3c771278b77eee0cd7f684265faf527e">More...</a><br /></td></tr>
+<tr class="separator:a3c771278b77eee0cd7f684265faf527e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c6f88be85870a10105225c08f35de1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#a8c6f88be85870a10105225c08f35de1f">SetStyle</a> (const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style) override</td></tr>
+<tr class="memdesc:a8c6f88be85870a10105225c08f35de1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Style of this IVControl.  <a href="class_i_v_menu_button_control.html#a8c6f88be85870a10105225c08f35de1f">More...</a><br /></td></tr>
+<tr class="separator:a8c6f88be85870a10105225c08f35de1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_container_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_container_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_container_base.html">IContainerBase</a></td></tr>
+<tr class="memitem:a0e0d04d7f30c785b70b5858116719670 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a0e0d04d7f30c785b70b5858116719670">IContainerBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction actionFunc=nullptr)</td></tr>
+<tr class="separator:a0e0d04d7f30c785b70b5858116719670 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86484f87fffc5d2c9afe5b9190ee4cd1 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a86484f87fffc5d2c9afe5b9190ee4cd1">IContainerBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const std::initializer_list&lt; int &gt; &amp;params, IActionFunction actionFunc=nullptr)</td></tr>
+<tr class="separator:a86484f87fffc5d2c9afe5b9190ee4cd1 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba333d6743d4014878af3970b7d1a79c inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#aba333d6743d4014878af3970b7d1a79c">IContainerBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction actionFunc)</td></tr>
+<tr class="separator:aba333d6743d4014878af3970b7d1a79c inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf1ddff71bd5ff4e9cfd21569915a82 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#aacf1ddff71bd5ff4e9cfd21569915a82">IContainerBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, AttachFunc attachFunc, ResizeFunc resizeFunc)</td></tr>
+<tr class="separator:aacf1ddff71bd5ff4e9cfd21569915a82 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d852ef430c675adb97a492b9c4bfe80 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a2d852ef430c675adb97a492b9c4bfe80">SetAttachFunc</a> (AttachFunc attachFunc)</td></tr>
+<tr class="separator:a2d852ef430c675adb97a492b9c4bfe80 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da07838e3d5f308aed72748272ffa3f inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a8da07838e3d5f308aed72748272ffa3f">SetResizeFunc</a> (ResizeFunc resizeFunc)</td></tr>
+<tr class="separator:a8da07838e3d5f308aed72748272ffa3f inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2941612560428b465692bf592a526c1 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#ac2941612560428b465692bf592a526c1">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
+<tr class="memdesc:ac2941612560428b465692bf592a526c1 inherit pub_methods_class_i_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_container_base.html#ac2941612560428b465692bf592a526c1">More...</a><br /></td></tr>
+<tr class="separator:ac2941612560428b465692bf592a526c1 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57875515fbe62983285da0f01888f8fc inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a57875515fbe62983285da0f01888f8fc">OnAttached</a> () override</td></tr>
+<tr class="memdesc:a57875515fbe62983285da0f01888f8fc inherit pub_methods_class_i_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the control has been attached, and its delegate and graphics member variable set.  <a href="class_i_container_base.html#a57875515fbe62983285da0f01888f8fc">More...</a><br /></td></tr>
+<tr class="separator:a57875515fbe62983285da0f01888f8fc inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de57d1e1a086c3e5bbb3bdae52bc11a inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a4de57d1e1a086c3e5bbb3bdae52bc11a">OnResize</a> () override</td></tr>
+<tr class="memdesc:a4de57d1e1a086c3e5bbb3bdae52bc11a inherit pub_methods_class_i_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> is constructed or resized using SetRect().  <a href="class_i_container_base.html#a4de57d1e1a086c3e5bbb3bdae52bc11a">More...</a><br /></td></tr>
+<tr class="separator:a4de57d1e1a086c3e5bbb3bdae52bc11a inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5379d89a5d3d874ca59bd15e6223c6 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a8d5379d89a5d3d874ca59bd15e6223c6">SetDisabled</a> (bool disable) override</td></tr>
+<tr class="memdesc:a8d5379d89a5d3d874ca59bd15e6223c6 inherit pub_methods_class_i_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets disabled mode for the control, the default implementation modifies the mBlend member.  <a href="class_i_container_base.html#a8d5379d89a5d3d874ca59bd15e6223c6">More...</a><br /></td></tr>
+<tr class="separator:a8d5379d89a5d3d874ca59bd15e6223c6 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dde8e81abcd125dc76b10530ebd76ba inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a3dde8e81abcd125dc76b10530ebd76ba">Hide</a> (bool hide) override</td></tr>
+<tr class="memdesc:a3dde8e81abcd125dc76b10530ebd76ba inherit pub_methods_class_i_container_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows or hides the <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>.  <a href="class_i_container_base.html#a3dde8e81abcd125dc76b10530ebd76ba">More...</a><br /></td></tr>
+<tr class="separator:a3dde8e81abcd125dc76b10530ebd76ba inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab784cf8fdb8a7b4ffde2cf477c3df45 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#aab784cf8fdb8a7b4ffde2cf477c3df45">AddChildControl</a> (<a class="el" href="class_i_control.html">IControl</a> *pControl, int ctrlTag=kNoTag, const char *group=&quot;&quot;)</td></tr>
+<tr class="separator:aab784cf8fdb8a7b4ffde2cf477c3df45 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a390688e8ff8c40334563fef73f458253 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a390688e8ff8c40334563fef73f458253">RemoveChildControl</a> (<a class="el" href="class_i_control.html">IControl</a> *pControl)</td></tr>
+<tr class="separator:a390688e8ff8c40334563fef73f458253 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae45a1a85ae88441ab21df17cc26b83e0 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#ae45a1a85ae88441ab21df17cc26b83e0">GetChild</a> (int idx)</td></tr>
+<tr class="separator:ae45a1a85ae88441ab21df17cc26b83e0 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a109866e7091cde99cc72eddf5d9be208 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a109866e7091cde99cc72eddf5d9be208">NChildren</a> () const</td></tr>
+<tr class="separator:a109866e7091cde99cc72eddf5d9be208 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a360294fe8f679265c7fe1dcc4c5cddf4 inherit pub_methods_class_i_container_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a360294fe8f679265c7fe1dcc4c5cddf4">ForAllChildrenFunc</a> (std::function&lt; void(int childIdx, <a class="el" href="class_i_control.html">IControl</a> *pControl)&gt; func)</td></tr>
+<tr class="separator:a360294fe8f679265c7fe1dcc4c5cddf4 inherit pub_methods_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">IControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, IActionFunction actionFunc=nullptr)</td></tr>
 <tr class="memdesc:a06abcd014992bccbabc44448c6b02ebf inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_i_control.html#a06abcd014992bccbabc44448c6b02ebf">More...</a><br /></td></tr>
@@ -439,24 +453,122 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">As</a> ()</td></tr>
 <tr class="memdesc:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to dynamic cast an <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> to a subclass.  <a href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">More...</a><br /></td></tr>
 <tr class="separator:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_i_vector_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_vector_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_vector_base.html">IVectorBase</a></td></tr>
+<tr class="memitem:a662f596f2c8a291331fd2c5b2de4d5ba inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a662f596f2c8a291331fd2c5b2de4d5ba">IVectorBase</a> (const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style, bool labelInWidget=false, bool valueInWidget=false)</td></tr>
+<tr class="memdesc:a662f596f2c8a291331fd2c5b2de4d5ba inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...">IVectorBase</a> Constructor.  <a href="class_i_vector_base.html#a662f596f2c8a291331fd2c5b2de4d5ba">More...</a><br /></td></tr>
+<tr class="separator:a662f596f2c8a291331fd2c5b2de4d5ba inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">AttachIControl</a> (<a class="el" href="class_i_control.html">IControl</a> *pControl, const char *label)</td></tr>
+<tr class="memdesc:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call in the constructor of your IVControl to link the <a class="el" href="class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...">IVectorBase</a> and <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>.  <a href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">More...</a><br /></td></tr>
+<tr class="separator:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">SetColor</a> (EVColor colorIdx, const <a class="el" href="struct_i_color.html">IColor</a> &amp;color)</td></tr>
+<tr class="memdesc:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set one of the IVColors that style the IVControl.  <a href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">More...</a><br /></td></tr>
+<tr class="separator:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceff3ff816c10f9ee2c0823b7ee27c87 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#aceff3ff816c10f9ee2c0823b7ee27c87">SetColors</a> (const <a class="el" href="struct_i_v_color_spec.html">IVColorSpec</a> &amp;spec)</td></tr>
+<tr class="memdesc:aceff3ff816c10f9ee2c0823b7ee27c87 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the colors of this IVControl.  <a href="class_i_vector_base.html#aceff3ff816c10f9ee2c0823b7ee27c87">More...</a><br /></td></tr>
+<tr class="separator:aceff3ff816c10f9ee2c0823b7ee27c87 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bbfa5e773c9c8bd2e76319aa5c58b5 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_i_color.html">IColor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">GetColor</a> (EVColor color) const</td></tr>
+<tr class="memdesc:ac7bbfa5e773c9c8bd2e76319aa5c58b5 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get value of a specific EVColor in the IVControl.  <a href="class_i_vector_base.html#ac7bbfa5e773c9c8bd2e76319aa5c58b5">More...</a><br /></td></tr>
+<tr class="separator:ac7bbfa5e773c9c8bd2e76319aa5c58b5 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8689638cedbcf7c2161b5a87cf61ae inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a6f8689638cedbcf7c2161b5a87cf61ae">SetLabelStr</a> (const char *label)</td></tr>
+<tr class="separator:a6f8689638cedbcf7c2161b5a87cf61ae inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae42dd03fcfe46045c710234197f46a86 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ae42dd03fcfe46045c710234197f46a86">SetValueStr</a> (const char *value)</td></tr>
+<tr class="separator:ae42dd03fcfe46045c710234197f46a86 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eac2c32a6a0f2598900185082a3cebe inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a9eac2c32a6a0f2598900185082a3cebe">SetWidgetFrac</a> (float frac)</td></tr>
+<tr class="separator:a9eac2c32a6a0f2598900185082a3cebe inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e38ed6f5ea871f2ba8f08cbc1c7a006 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a5e38ed6f5ea871f2ba8f08cbc1c7a006">SetAngle</a> (float angle)</td></tr>
+<tr class="separator:a5e38ed6f5ea871f2ba8f08cbc1c7a006 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a6ecf755e691b6980c8b14039ae854 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a77a6ecf755e691b6980c8b14039ae854">SetShowLabel</a> (bool show)</td></tr>
+<tr class="separator:a77a6ecf755e691b6980c8b14039ae854 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d6ad6ba64ef2349d26515be734a3f72 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a3d6ad6ba64ef2349d26515be734a3f72">SetShowValue</a> (bool show)</td></tr>
+<tr class="separator:a3d6ad6ba64ef2349d26515be734a3f72 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1b2d9d861de0c7d071a9db197ec0f0 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a4c1b2d9d861de0c7d071a9db197ec0f0">SetRoundness</a> (float roundness)</td></tr>
+<tr class="separator:a4c1b2d9d861de0c7d071a9db197ec0f0 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade7335d65ded41e7b9d970d532ecc62a inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ade7335d65ded41e7b9d970d532ecc62a">SetDrawFrame</a> (bool draw)</td></tr>
+<tr class="separator:ade7335d65ded41e7b9d970d532ecc62a inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88c42cece2c8a18d47aa77c6e6d9b9a9 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a88c42cece2c8a18d47aa77c6e6d9b9a9">SetDrawShadows</a> (bool draw)</td></tr>
+<tr class="separator:a88c42cece2c8a18d47aa77c6e6d9b9a9 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59bc45c8d23cb845c3218c92395f5f1 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ac59bc45c8d23cb845c3218c92395f5f1">SetEmboss</a> (bool draw)</td></tr>
+<tr class="separator:ac59bc45c8d23cb845c3218c92395f5f1 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb85c8c3d43d0dfe425a0b106fbe1d45 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#aeb85c8c3d43d0dfe425a0b106fbe1d45">SetShadowOffset</a> (float offset)</td></tr>
+<tr class="separator:aeb85c8c3d43d0dfe425a0b106fbe1d45 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd9e17d3d9f4667c16475523489c109 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a9cd9e17d3d9f4667c16475523489c109">SetFrameThickness</a> (float thickness)</td></tr>
+<tr class="separator:a9cd9e17d3d9f4667c16475523489c109 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55d446e82da4b547814c0676e6e9bf6 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#af55d446e82da4b547814c0676e6e9bf6">SetSplashRadius</a> (float radius)</td></tr>
+<tr class="separator:af55d446e82da4b547814c0676e6e9bf6 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb614e52407f3c7d47fdfde88ceb9f1d inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#acb614e52407f3c7d47fdfde88ceb9f1d">SetSplashPoint</a> (float x, float y)</td></tr>
+<tr class="separator:acb614e52407f3c7d47fdfde88ceb9f1d inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43d13c57e3d62789186af6dca75bfa71 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a43d13c57e3d62789186af6dca75bfa71">SetShape</a> (EVShape shape)</td></tr>
+<tr class="separator:a43d13c57e3d62789186af6dca75bfa71 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac44b67f485489130d2afee9c28dae4 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a4ac44b67f485489130d2afee9c28dae4">SetStyle</a> (const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style)</td></tr>
+<tr class="memdesc:a4ac44b67f485489130d2afee9c28dae4 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Style of this IVControl.  <a href="class_i_vector_base.html#a4ac44b67f485489130d2afee9c28dae4">More...</a><br /></td></tr>
+<tr class="separator:a4ac44b67f485489130d2afee9c28dae4 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef80da16135ca71106cfc8e5d43ecc28 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_v_style.html">IVStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#aef80da16135ca71106cfc8e5d43ecc28">GetStyle</a> () const</td></tr>
+<tr class="memdesc:aef80da16135ca71106cfc8e5d43ecc28 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the style of this IVControl.  <a href="class_i_vector_base.html#aef80da16135ca71106cfc8e5d43ecc28">More...</a><br /></td></tr>
+<tr class="separator:aef80da16135ca71106cfc8e5d43ecc28 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69304c1118951c5568a0246aaa389500 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a69304c1118951c5568a0246aaa389500">GetAdjustedHandleBounds</a> (<a class="el" href="struct_i_r_e_c_t.html">IRECT</a> handleBounds) const</td></tr>
+<tr class="memdesc:a69304c1118951c5568a0246aaa389500 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the adjusted bounds for the widget handle, based on the style settings.  <a href="class_i_vector_base.html#a69304c1118951c5568a0246aaa389500">More...</a><br /></td></tr>
+<tr class="separator:a69304c1118951c5568a0246aaa389500 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7587059fe709ddd58407ba56146d4cd4 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a7587059fe709ddd58407ba56146d4cd4">GetRoundedCornerRadius</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const</td></tr>
+<tr class="memdesc:a7587059fe709ddd58407ba56146d4cd4 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the radius of rounded corners for a rectangle, based on the style roundness factor.  <a href="class_i_vector_base.html#a7587059fe709ddd58407ba56146d4cd4">More...</a><br /></td></tr>
+<tr class="separator:a7587059fe709ddd58407ba56146d4cd4 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73aa0385ee8f831ab50f3595772e9685 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a73aa0385ee8f831ab50f3595772e9685">GetWidgetBounds</a> () const</td></tr>
+<tr class="separator:a73aa0385ee8f831ab50f3595772e9685 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf543c74b77436b19bc0539f40c4201d inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#abf543c74b77436b19bc0539f40c4201d">GetLabelBounds</a> () const</td></tr>
+<tr class="separator:abf543c74b77436b19bc0539f40c4201d inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c1fd00d9b6bf89a465f66db36f98d6 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ae7c1fd00d9b6bf89a465f66db36f98d6">GetValueBounds</a> () const</td></tr>
+<tr class="separator:ae7c1fd00d9b6bf89a465f66db36f98d6 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a358cd1ae384ab01ab8ffe31be5dfb0 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a9a358cd1ae384ab01ab8ffe31be5dfb0">DrawSplash</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;clipRegion=<a class="el" href="struct_i_r_e_c_t.html">IRECT</a>())</td></tr>
+<tr class="memdesc:a9a358cd1ae384ab01ab8ffe31be5dfb0 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a splash effect when a widget handle is clicked (via SplashClickAnimationFunc)  <a href="class_i_vector_base.html#a9a358cd1ae384ab01ab8ffe31be5dfb0">More...</a><br /></td></tr>
+<tr class="separator:a9a358cd1ae384ab01ab8ffe31be5dfb0 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ede48b05e8aa446350eaf2e1bfc45a inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a34ede48b05e8aa446350eaf2e1bfc45a">DrawBackground</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;rect)</td></tr>
+<tr class="memdesc:a34ede48b05e8aa446350eaf2e1bfc45a inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the IVControl background (usually transparent)  <a href="class_i_vector_base.html#a34ede48b05e8aa446350eaf2e1bfc45a">More...</a><br /></td></tr>
+<tr class="separator:a34ede48b05e8aa446350eaf2e1bfc45a inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5560428511e64ebc99836ee7f74e96 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a4f5560428511e64ebc99836ee7f74e96">DrawWidget</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g)</td></tr>
+<tr class="memdesc:a4f5560428511e64ebc99836ee7f74e96 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the IVControl main widget (override)  <a href="class_i_vector_base.html#a4f5560428511e64ebc99836ee7f74e96">More...</a><br /></td></tr>
+<tr class="separator:a4f5560428511e64ebc99836ee7f74e96 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f3b5b90568f751a2a4e2b12f4f18e8 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ac0f3b5b90568f751a2a4e2b12f4f18e8">DrawLabel</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g)</td></tr>
+<tr class="memdesc:ac0f3b5b90568f751a2a4e2b12f4f18e8 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the IVControl label text.  <a href="class_i_vector_base.html#ac0f3b5b90568f751a2a4e2b12f4f18e8">More...</a><br /></td></tr>
+<tr class="separator:ac0f3b5b90568f751a2a4e2b12f4f18e8 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a725fc740cde9bbf39a5ebb5bdc87c7 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a7a725fc740cde9bbf39a5ebb5bdc87c7">DrawValue</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, bool mouseOver)</td></tr>
+<tr class="memdesc:a7a725fc740cde9bbf39a5ebb5bdc87c7 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the IVControl value text.  <a href="class_i_vector_base.html#a7a725fc740cde9bbf39a5ebb5bdc87c7">More...</a><br /></td></tr>
+<tr class="separator:a7a725fc740cde9bbf39a5ebb5bdc87c7 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f5192942030aecc54aeb35f34c1d41 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a05f5192942030aecc54aeb35f34c1d41">DrawPressableShape</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, EVShape shape, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool pressed, bool mouseOver, bool disabled)</td></tr>
+<tr class="memdesc:a05f5192942030aecc54aeb35f34c1d41 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call one of the DrawPressableShape methods.  <a href="class_i_vector_base.html#a05f5192942030aecc54aeb35f34c1d41">More...</a><br /></td></tr>
+<tr class="separator:a05f5192942030aecc54aeb35f34c1d41 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e46eb2743fba5e22343973923d393a7 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a6e46eb2743fba5e22343973923d393a7">DrawPressableEllipse</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool pressed, bool mouseOver, bool disabled)</td></tr>
+<tr class="memdesc:a6e46eb2743fba5e22343973923d393a7 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an ellipse-shaped vector button.  <a href="class_i_vector_base.html#a6e46eb2743fba5e22343973923d393a7">More...</a><br /></td></tr>
+<tr class="separator:a6e46eb2743fba5e22343973923d393a7 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4cf7d31acdc52745d9ca60393be1d98 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ab4cf7d31acdc52745d9ca60393be1d98">DrawPressableRectangle</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool pressed, bool mouseOver, bool disabled, bool rtl=true, bool rtr=true, bool rbl=true, bool rbr=true)</td></tr>
+<tr class="memdesc:ab4cf7d31acdc52745d9ca60393be1d98 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a rectangle-shaped vector button.  <a href="class_i_vector_base.html#ab4cf7d31acdc52745d9ca60393be1d98">More...</a><br /></td></tr>
+<tr class="separator:ab4cf7d31acdc52745d9ca60393be1d98 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73caf98459097b96c7a282e9e6981602 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a73caf98459097b96c7a282e9e6981602">DrawPressableTriangle</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool pressed, bool mouseOver, float angle, bool disabled)</td></tr>
+<tr class="memdesc:a73caf98459097b96c7a282e9e6981602 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a triangle-shaped vector button.  <a href="class_i_vector_base.html#a73caf98459097b96c7a282e9e6981602">More...</a><br /></td></tr>
+<tr class="separator:a73caf98459097b96c7a282e9e6981602 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cda013efaff29ffaa0142b5e9bde145 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a2cda013efaff29ffaa0142b5e9bde145">MakeRects</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;parent, bool hasHandle=false)</td></tr>
+<tr class="memdesc:a2cda013efaff29ffaa0142b5e9bde145 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the rectangles for the various areas, depending on the style.  <a href="class_i_vector_base.html#a2cda013efaff29ffaa0142b5e9bde145">More...</a><br /></td></tr>
+<tr class="separator:a2cda013efaff29ffaa0142b5e9bde145 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:acf1d6ad3426220dce2678ab3ecc02602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_v_g.html">ISVG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#acf1d6ad3426220dce2678ab3ecc02602">mOffSVG</a></td></tr>
-<tr class="separator:acf1d6ad3426220dce2678ab3ecc02602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af15916907a10e203bdbbf81a036b8bbd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_s_v_g.html">ISVG</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#af15916907a10e203bdbbf81a036b8bbd">mOnSVG</a></td></tr>
-<tr class="separator:af15916907a10e203bdbbf81a036b8bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac853e9a910b9ae90651205b65bc28bf9"><td class="memItemLeft" align="right" valign="top">std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ac853e9a910b9ae90651205b65bc28bf9">mColors</a></td></tr>
-<tr class="separator:ac853e9a910b9ae90651205b65bc28bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac034802789c3730a4a3f144f38ac4864"><td class="memItemLeft" align="right" valign="top">EColorReplacement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_v_g_toggle_control.html#ac034802789c3730a4a3f144f38ac4864">mColorReplacement</a> = EColorReplacement::None</td></tr>
-<tr class="separator:ac034802789c3730a4a3f144f38ac4864"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_i_switch_control_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_switch_control_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_switch_control_base.html">ISwitchControlBase</a></td></tr>
-<tr class="memitem:ab90f7e19736ec2ef4ac1b3056d83feca inherit pro_attribs_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ab90f7e19736ec2ef4ac1b3056d83feca">mNumStates</a></td></tr>
-<tr class="separator:ab90f7e19736ec2ef4ac1b3056d83feca inherit pro_attribs_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a996c0f2e1dae49069f592b28aad3962d inherit pro_attribs_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">WDL_TypedBuf&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a996c0f2e1dae49069f592b28aad3962d">mDisabledState</a></td></tr>
-<tr class="separator:a996c0f2e1dae49069f592b28aad3962d inherit pro_attribs_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee677e4861556aea7539c738842f67f3 inherit pro_attribs_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#aee677e4861556aea7539c738842f67f3">mMouseDown</a> = false</td></tr>
-<tr class="separator:aee677e4861556aea7539c738842f67f3 inherit pro_attribs_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_types_class_i_container_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_i_container_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_i_container_base.html">IContainerBase</a></td></tr>
+<tr class="memitem:a7dacb8b44cc22044689f8f77c72a4288 inherit pub_types_class_i_container_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a7dacb8b44cc22044689f8f77c72a4288">AttachFunc</a> = std::function&lt; void(<a class="el" href="class_i_container_base.html">IContainerBase</a> *pContainer, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds)&gt;</td></tr>
+<tr class="separator:a7dacb8b44cc22044689f8f77c72a4288 inherit pub_types_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e39a6e0b27bdc094cf15f6300ba258 inherit pub_types_class_i_container_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a21e39a6e0b27bdc094cf15f6300ba258">ResizeFunc</a> = std::function&lt; void(<a class="el" href="class_i_container_base.html">IContainerBase</a> *pContainer, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds)&gt;</td></tr>
+<tr class="separator:a21e39a6e0b27bdc094cf15f6300ba258 inherit pub_types_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
+<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
+<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">ForValIdx</a> (int valIdx, T func, Args... args)</td></tr>
+<tr class="memdesc:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper template function to call a method for an individual value, or for all values.  <a href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">More...</a><br /></td></tr>
+<tr class="separator:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa35c559ca13bfdb2f3507216047afdbd">SetNVals</a> (int nVals)</td></tr>
+<tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_i_container_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_container_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_container_base.html">IContainerBase</a></td></tr>
+<tr class="memitem:add3cbe2d0da85e4d96f21dca85fdea9d inherit pro_attribs_class_i_container_base"><td class="memItemLeft" align="right" valign="top">AttachFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#add3cbe2d0da85e4d96f21dca85fdea9d">mAttachFunc</a> = nullptr</td></tr>
+<tr class="separator:add3cbe2d0da85e4d96f21dca85fdea9d inherit pro_attribs_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d390a45b085baa2dc0f1d88a45d6e9 inherit pro_attribs_class_i_container_base"><td class="memItemLeft" align="right" valign="top">ResizeFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a88d390a45b085baa2dc0f1d88a45d6e9">mResizeFunc</a> = nullptr</td></tr>
+<tr class="separator:a88d390a45b085baa2dc0f1d88a45d6e9 inherit pro_attribs_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed576fd7ceb056f38a24b901ce23195 inherit pro_attribs_class_i_container_base"><td class="memItemLeft" align="right" valign="top">WDL_PtrList&lt; <a class="el" href="class_i_control.html">IControl</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a0ed576fd7ceb056f38a24b901ce23195">mChildren</a></td></tr>
+<tr class="separator:a0ed576fd7ceb056f38a24b901ce23195 inherit pro_attribs_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
 <tr class="memitem:acce0760a95881e5df4c962920ef3a891 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#acce0760a95881e5df4c962920ef3a891">mRECT</a></td></tr>
 <tr class="separator:acce0760a95881e5df4c962920ef3a891 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -502,89 +614,51 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8345c576ab2c74910b9a91a995c2cde0 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7161238f8c99333cd6b0fff590396350">mPTisHighlighted</a> = false</td></tr>
 <tr class="separator:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_class_i_control"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_i_control')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_i_control.html">IControl</a></td></tr>
-<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplParams" colspan="2">template&lt;typename T , typename... Args&gt; </td></tr>
-<tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">ForValIdx</a> (int valIdx, T func, Args... args)</td></tr>
-<tr class="memdesc:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper template function to call a method for an individual value, or for all values.  <a href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">More...</a><br /></td></tr>
-<tr class="separator:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa35c559ca13bfdb2f3507216047afdbd">SetNVals</a> (int nVals)</td></tr>
-<tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_i_vector_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_vector_base')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_vector_base.html">IVectorBase</a></td></tr>
+<tr class="memitem:ab2b1b08b278eb0af708dbc3c03f381b9 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ab2b1b08b278eb0af708dbc3c03f381b9">mControl</a> = nullptr</td></tr>
+<tr class="separator:ab2b1b08b278eb0af708dbc3c03f381b9 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d652e531dc78e06852040e3167c454 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_v_style.html">IVStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a09d652e531dc78e06852040e3167c454">mStyle</a></td></tr>
+<tr class="separator:a09d652e531dc78e06852040e3167c454 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bffa0eafca71726403dfd1dda784bc9 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a2bffa0eafca71726403dfd1dda784bc9">mLabelInWidget</a> = false</td></tr>
+<tr class="separator:a2bffa0eafca71726403dfd1dda784bc9 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addf9b25fa2fde4fdf79011aa1462e4bb inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#addf9b25fa2fde4fdf79011aa1462e4bb">mValueInWidget</a> = false</td></tr>
+<tr class="separator:addf9b25fa2fde4fdf79011aa1462e4bb inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6a22e368042911f449dd22abee542c inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a7d6a22e368042911f449dd22abee542c">mSplashRadius</a> = 0.f</td></tr>
+<tr class="separator:a7d6a22e368042911f449dd22abee542c inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d66ae2e90b614703fc07472cd067a3 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_vec2.html">IVec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a22d66ae2e90b614703fc07472cd067a3">mSplashPoint</a> = {0.f, 0.f}</td></tr>
+<tr class="separator:a22d66ae2e90b614703fc07472cd067a3 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e8b22eed947c446edd92cb23160b2f inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a47e8b22eed947c446edd92cb23160b2f">mMaxSplashRadius</a> = 50.f</td></tr>
+<tr class="separator:a47e8b22eed947c446edd92cb23160b2f inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc27e2cbf86cebc791762b4058a20754 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#afc27e2cbf86cebc791762b4058a20754">mTrackSize</a> = 2.f</td></tr>
+<tr class="separator:afc27e2cbf86cebc791762b4058a20754 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ad3d4a280823d085aa53a1b87ad4d7 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a45ad3d4a280823d085aa53a1b87ad4d7">mValueDisplayFrac</a> = 0.66f</td></tr>
+<tr class="separator:a45ad3d4a280823d085aa53a1b87ad4d7 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c009b8d7d35d2896c9c5031330f053 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ae9c009b8d7d35d2896c9c5031330f053">mWidgetBounds</a></td></tr>
+<tr class="separator:ae9c009b8d7d35d2896c9c5031330f053 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58077189529dbf1e60d7f6165225e055 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a58077189529dbf1e60d7f6165225e055">mLabelBounds</a></td></tr>
+<tr class="separator:a58077189529dbf1e60d7f6165225e055 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d75d1e3913d3385cb665eb41de6f9f9 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a1d75d1e3913d3385cb665eb41de6f9f9">mValueBounds</a></td></tr>
+<tr class="separator:a1d75d1e3913d3385cb665eb41de6f9f9 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92fa011aee9d06fbe25ee072b038db2c inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">WDL_String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a92fa011aee9d06fbe25ee072b038db2c">mLabelStr</a></td></tr>
+<tr class="separator:a92fa011aee9d06fbe25ee072b038db2c inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95f184994ac6a62cd002f5f17eadbfee inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">WDL_String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a95f184994ac6a62cd002f5f17eadbfee">mValueStr</a></td></tr>
+<tr class="separator:a95f184994ac6a62cd002f5f17eadbfee inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f5731b954cb4eff1f7b25a457ef219 inherit pro_attribs_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">EVShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#af4f5731b954cb4eff1f7b25a457ef219">mShape</a> = EVShape::Rectangle</td></tr>
+<tr class="separator:af4f5731b954cb4eff1f7b25a457ef219 inherit pro_attribs_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >A vector toggle switch control which shows an SVG image. </p>
+<div class="textblock"><p >A vector button that pops up a menu. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00566">566</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00215">215</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab2dbe2c6da230a0f119c75cf716268e8" name="ab2dbe2c6da230a0f119c75cf716268e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2dbe2c6da230a0f119c75cf716268e8">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[1/4]</span></h2>
+<a id="a50c0e982996172b023ecbdbadf325918" name="a50c0e982996172b023ecbdbadf325918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50c0e982996172b023ecbdbadf325918">&#9670;&#160;</a></span>IVMenuButtonControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
-          <td class="paramname"><em>bounds</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IActionFunction&#160;</td>
-          <td class="paramname"><em>aF</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
-          <td class="paramname"><em>offImage</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
-          <td class="paramname"><em>onImage</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs an SVG button control, with an action function. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
-    <tr><td class="paramname">aF</td><td>An action function to execute when a button is clicked </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">offImage</td><td>An SVG for the off state of the button </td></tr>
-    <tr><td class="paramname">onImage</td><td>An SVG for the on state of the button </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01431">1431</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a1cba2575cee3d419052bd1abb44d5259" name="a1cba2575cee3d419052bd1abb44d5259"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cba2575cee3d419052bd1abb44d5259">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
+          <td class="memname">IVMenuButtonControl::IVMenuButtonControl </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
           <td class="paramname"><em>bounds</em>, </td>
@@ -598,14 +672,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
-          <td class="paramname"><em>offImage</em>, </td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>label</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
-          <td class="paramname"><em>onImage</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;&#160;</td>
+          <td class="paramname"><em>style</em> = <code>DEFAULT_STYLE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EVShape&#160;</td>
+          <td class="paramname"><em>shape</em> = <code>EVShape::Rectangle</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -615,150 +695,33 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructs an SVG button control, with an action function. </p>
+<p>Constructs a vector button control, with an action function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
     <tr><td class="paramname">paramIdx</td><td>The parameter index to link this control to </td></tr>
-    <tr><td class="paramname">offImage</td><td>An SVG for the off state of the button </td></tr>
-    <tr><td class="paramname">onImage</td><td>An SVG for the on state of the button </td></tr>
+    <tr><td class="paramname">label</td><td>The label for the vector control, leave empty for no label </td></tr>
+    <tr><td class="paramname">style</td><td>The styling of this vector control </td></tr>
   </table>
   </dd>
 </dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01438">1438</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ad929851cd2877733082d466bc8f0419b" name="ad929851cd2877733082d466bc8f0419b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad929851cd2877733082d466bc8f0419b">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
-          <td class="paramname"><em>bounds</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">IActionFunction&#160;</td>
-          <td class="paramname"><em>aF</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td>
-          <td class="paramname"><em>colors</em> = <code>{COLOR_BLACK,&#160;COLOR_WHITE,&#160;COLOR_DARK_GRAY,&#160;COLOR_LIGHT_GRAY}</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">EColorReplacement&#160;</td>
-          <td class="paramname"><em>colorReplacement</em> = <code>EColorReplacement::Fill</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs an SVG button control, with an action function and a single image, with color overrides. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_i_v_style.html" title="A struct encapsulating a set of properties used to configure IVControls.">IVStyle</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
-    <tr><td class="paramname">aF</td><td>An action function to execute when a button is clicked </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">image</td><td>An SVG for the on/off state of the button </td></tr>
-    <tr><td class="paramname">colors</td><td>Colors to replace the SVG's fill/stroke in the off/on/mouse-over-off/mouse-over-on states </td></tr>
-    <tr><td class="paramname">colorReplacement</td><td>Should the fill or stroke in the SVG be colored </td></tr>
+    <tr><td class="paramname">shape</td><td>The shape of the button </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01445">1445</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00508">508</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-</div>
-</div>
-<a id="aac1c1c3fde01d741925941ce041552fc" name="aac1c1c3fde01d741925941ce041552fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac1c1c3fde01d741925941ce041552fc">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ISVGToggleControl::ISVGToggleControl </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
-          <td class="paramname"><em>bounds</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>paramIdx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="struct_i_s_v_g.html">ISVG</a> &amp;&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::array&lt; <a class="el" href="struct_i_color.html">IColor</a>, 4 &gt;&#160;</td>
-          <td class="paramname"><em>colors</em> = <code>{COLOR_BLACK,&#160;COLOR_WHITE,&#160;COLOR_DARK_GRAY,&#160;COLOR_LIGHT_GRAY}</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">EColorReplacement&#160;</td>
-          <td class="paramname"><em>colorReplacement</em> = <code>EColorReplacement::Fill</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Constructs an SVG button control, with an action function and a single image, with color overrides. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
-    <tr><td class="paramname">paramIdx</td><td>The parameter index to link this control to </td></tr>
-    <tr><td class="paramname">image</td><td>An SVG for the on/off state of the button </td></tr>
-    <tr><td class="paramname">colors</td><td>Colors to replace the SVG's fill/stroke in the off/on/mouse-over-off/mouse-over-on states </td></tr>
-    <tr><td class="paramname">colorReplacement</td><td>Should the fill or stroke in the SVG be colored </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01454">1454</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00771">IVectorBase::AttachIControl()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_control_8h_source.html#l00280">IControl::GetGroup()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">IControl::PromptUserInput()</a>, <a class="el" href="_i_control_8h_source.html#l00208">IControl::SetAnimationEndActionFunction()</a>, <a class="el" href="_i_control_8h_source.html#l00323">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa438d6a0d30fba85026ccc82e265c563" name="aa438d6a0d30fba85026ccc82e265c563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa438d6a0d30fba85026ccc82e265c563">&#9670;&#160;</a></span>Draw()</h2>
+<a id="aa30bde4b6ce6c1950d1533531e40f5b8" name="aa30bde4b6ce6c1950d1533531e40f5b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30bde4b6ce6c1950d1533531e40f5b8">&#9670;&#160;</a></span>OnPopupMenuSelection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,10 +730,61 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ISVGToggleControl::Draw </td>
+          <td class="memname">void IVMenuButtonControl::OnPopupMenuSelection </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_i_graphics.html">IGraphics</a> &amp;&#160;</td>
-          <td class="paramname"><em>g</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *&#160;</td>
+          <td class="paramname"><em>pSelectedMenu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>valIdx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSelectedMenu</td><td>If pSelectedMenu is invalid it means the user didn't select anything </td></tr>
+    <tr><td class="paramname">valIdx</td><td>An index that indicates which of the control's vals the menu relates to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_i_control.html#a48e5538db6500f5856d919d204a89418">IControl</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00547">547</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00283">IControl::OnPopupMenuSelection()</a>.</p>
+
+</div>
+</div>
+<a id="a8c6f88be85870a10105225c08f35de1f" name="a8c6f88be85870a10105225c08f35de1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c6f88be85870a10105225c08f35de1f">&#9670;&#160;</a></span>SetStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IVMenuButtonControl::SetStyle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;&#160;</td>
+          <td class="paramname"><em>style</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -781,25 +795,24 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Draw the control to the graphics context. </p>
+<p>Set the Style of this IVControl. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">g</td><td>The graphics context to which this control belongs. </td></tr>
+    <tr><td class="paramname">style</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="class_i_control.html#ab9d872edcc790c0506d5b90c07a968de">IControl</a>.</p>
+<p>Reimplemented from <a class="el" href="class_i_vector_base.html#a4ac44b67f485489130d2afee9c28dae4">IVectorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01463">1463</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00533">533</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02731">IGraphics::DrawSVG()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, and <a class="el" href="_i_control_8h_source.html#l00556">IControl::mMouseIsOver</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00817">IVectorBase::SetStyle()</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="ac034802789c3730a4a3f144f38ac4864" name="ac034802789c3730a4a3f144f38ac4864"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac034802789c3730a4a3f144f38ac4864">&#9670;&#160;</a></span>mColorReplacement</h2>
+<a id="a3c771278b77eee0cd7f684265faf527e" name="a3c771278b77eee0cd7f684265faf527e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c771278b77eee0cd7f684265faf527e">&#9670;&#160;</a></span>SetValueFromDelegate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -808,89 +821,44 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">EColorReplacement ISVGToggleControl::mColorReplacement = EColorReplacement::None</td>
+          <td class="memname">void IVMenuButtonControl::SetValueFromDelegate </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00605">605</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
-
-</div>
-</div>
-<a id="ac853e9a910b9ae90651205b65bc28bf9" name="ac853e9a910b9ae90651205b65bc28bf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac853e9a910b9ae90651205b65bc28bf9">&#9670;&#160;</a></span>mColors</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname">std::array&lt;<a class="el" href="struct_i_color.html">IColor</a>, 4&gt; ISVGToggleControl::mColors</td>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>valIdx</em> = <code>0</code>&#160;</td>
         </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00604">604</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
-
-</div>
-</div>
-<a id="acf1d6ad3426220dce2678ab3ecc02602" name="acf1d6ad3426220dce2678ab3ecc02602"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf1d6ad3426220dce2678ab3ecc02602">&#9670;&#160;</a></span>mOffSVG</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_i_s_v_g.html">ISVG</a> ISVGToggleControl::mOffSVG</td>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00602">602</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p>Set the control's value from the delegate This method is called from the class implementing the <a class="el" href="class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth...">IEditorDelegate</a> interface in order to update a control's value members and set it to be marked dirty for redraw. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Normalised incoming value </td></tr>
+    <tr><td class="paramname">valIdx</td><td>The index of the value to set, which should be between 0 and <a class="el" href="class_i_control.html#aeaddaffd7a530a015b6992fb9aef13db">NVals()</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
-</div>
-</div>
-<a id="af15916907a10e203bdbbf81a036b8bbd" name="af15916907a10e203bdbbf81a036b8bbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af15916907a10e203bdbbf81a036b8bbd">&#9670;&#160;</a></span>mOnSVG</h2>
+<p>Reimplemented from <a class="el" href="class_i_control.html#a41578daf3fcc6fff87eec86ef56051a7">IControl</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_i_s_v_g.html">ISVG</a> ISVGToggleControl::mOnSVG</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00539">539</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00603">603</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00159">IControl::SetValueFromDelegate()</a>.</p>
 
 </div>
 </div>
