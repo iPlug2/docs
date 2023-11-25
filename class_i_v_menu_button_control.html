@@ -104,6 +104,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa30bde4b6ce6c1950d1533531e40f5b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#aa30bde4b6ce6c1950d1533531e40f5b8">OnPopupMenuSelection</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pSelectedMenu, int valIdx) override</td></tr>
 <tr class="memdesc:aa30bde4b6ce6c1950d1533531e40f5b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_v_menu_button_control.html#aa30bde4b6ce6c1950d1533531e40f5b8">More...</a><br /></td></tr>
 <tr class="separator:aa30bde4b6ce6c1950d1533531e40f5b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425bd284098d6e37a2b6748a64f989bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#a425bd284098d6e37a2b6748a64f989bf">SetValueFromUserInput</a> (double value, int valIdx) override</td></tr>
+<tr class="memdesc:a425bd284098d6e37a2b6748a64f989bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control's value after user input.  <a href="class_i_v_menu_button_control.html#a425bd284098d6e37a2b6748a64f989bf">More...</a><br /></td></tr>
+<tr class="separator:a425bd284098d6e37a2b6748a64f989bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c771278b77eee0cd7f684265faf527e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_menu_button_control.html#a3c771278b77eee0cd7f684265faf527e">SetValueFromDelegate</a> (double value, int valIdx=0) override</td></tr>
 <tr class="memdesc:a3c771278b77eee0cd7f684265faf527e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the control's value from the delegate This method is called from the class implementing the <a class="el" href="class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth...">IEditorDelegate</a> interface in order to update a control's value members and set it to be marked dirty for redraw.  <a href="class_i_v_menu_button_control.html#a3c771278b77eee0cd7f684265faf527e">More...</a><br /></td></tr>
 <tr class="separator:a3c771278b77eee0cd7f684265faf527e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -715,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00508">508</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00771">IVectorBase::AttachIControl()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_control_8h_source.html#l00280">IControl::GetGroup()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">IControl::PromptUserInput()</a>, <a class="el" href="_i_control_8h_source.html#l00208">IControl::SetAnimationEndActionFunction()</a>, <a class="el" href="_i_control_8h_source.html#l00323">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00771">IVectorBase::AttachIControl()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00372">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00280">IControl::GetGroup()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">IControl::PromptUserInput()</a>, <a class="el" href="_i_control_8h_source.html#l00208">IControl::SetAnimationEndActionFunction()</a>, <a class="el" href="_i_control_8h_source.html#l00323">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
 </div>
 </div>
@@ -765,7 +768,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a48e5538db6500f5856d919d204a89418">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00547">547</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00548">548</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00283">IControl::OnPopupMenuSelection()</a>.</p>
 
@@ -805,7 +808,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_vector_base.html#a4ac44b67f485489130d2afee9c28dae4">IVectorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00533">533</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00534">534</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00817">IVectorBase::SetStyle()</a>.</p>
 
@@ -856,9 +859,60 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a41578daf3fcc6fff87eec86ef56051a7">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00539">539</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00540">540</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00159">IControl::SetValueFromDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00372">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00159">IControl::SetValueFromDelegate()</a>.</p>
+
+</div>
+</div>
+<a id="a425bd284098d6e37a2b6748a64f989bf" name="a425bd284098d6e37a2b6748a64f989bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425bd284098d6e37a2b6748a64f989bf">&#9670;&#160;</a></span>SetValueFromUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IVMenuButtonControl::SetValueFromUserInput </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>valIdx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the control's value after user input. </p>
+<p >This method is called after a text entry or popup menu prompt triggered by <a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput()</a>, calling SetDirty(true), which will mean that the new value gets sent back to the delegate </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the normalised value after user input via text entry or pop-up menu </td></tr>
+    <tr><td class="paramname">valIdx</td><td>An index to choose which of the control's linked parameters to retrieve. NOTE: since controls usually have only 1 parameter you can omit this argument and use the default index of 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_i_control.html#a4c1c9f3f537fa2f56ad8f62ba4000b73">IControl</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00557">557</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00372">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>.</p>
 
 </div>
 </div>
