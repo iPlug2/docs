@@ -173,6 +173,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">OnDrop</a> (const char *str)</td></tr>
 <tr class="memdesc:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when something was drag 'n dropped onto this control.  <a href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">More...</a><br /></td></tr>
 <tr class="separator:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">OnDropMultiple</a> (const std::vector&lt; const char * &gt; &amp;paths)</td></tr>
+<tr class="memdesc:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to handle multiple items drag 'n dropped onto this control.  <a href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">More...</a><br /></td></tr>
+<tr class="separator:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a57f6186624e970a5d6de172570aee111">OnRescale</a> ()</td></tr>
 <tr class="memdesc:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when graphics is scaled globally (e.g.  <a href="class_i_control.html#a57f6186624e970a5d6de172570aee111">More...</a><br /></td></tr>
 <tr class="separator:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -494,7 +497,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A basic control to display some text. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02117">2117</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02120">2120</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af11906ed2b15351de9013c1dde885ef5" name="af11906ed2b15351de9013c1dde885ef5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af11906ed2b15351de9013c1dde885ef5">&#9670;&#160;</a></span>ITextControl()</h2>
@@ -571,7 +574,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Clear the text . </p>
 <p >NOTE: does not set the control dirty. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02134">2134</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02137">2137</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00456">SetStr()</a>.</p>
 
@@ -615,7 +618,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00479">479</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00651">IGraphics::DrawText()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02516">IGraphics::FillRect()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01108">IGraphics::GetControlInTextEntry()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00651">IGraphics::DrawText()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02522">IGraphics::FillRect()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01108">IGraphics::GetControlInTextEntry()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>.</p>
 
@@ -645,9 +648,9 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Cstring with the text that the control displays </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02137">2137</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02140">2140</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, and <a class="el" href="_i_control_8h_source.html#l02158">IEditableTextControl::OnMouseDown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, and <a class="el" href="_i_control_8h_source.html#l02161">IEditableTextControl::OnMouseDown()</a>.</p>
 
 </div>
 </div>
@@ -703,7 +706,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00487">487</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00463">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00659">IGraphics::MeasureText()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00821">IRECT::MH()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00818">IRECT::MW()</a>, <a class="el" href="_i_control_8h_source.html#l00323">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00466">IControl::GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00659">IGraphics::MeasureText()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00821">IRECT::MH()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00818">IRECT::MW()</a>, <a class="el" href="_i_control_8h_source.html#l00326">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00450">OnInit()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00456">SetStr()</a>.</p>
 
@@ -745,7 +748,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00487">SetBoundsBasedOnStr()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l02134">ClearStr()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00054">TestGesturesControl::OnInit()</a>, <a class="el" href="_i_r_t_text_control_8h_source.html#l00038">IRTTextControl&lt; MAXNC, T &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_control_8h_source.html#l02163">IEditableTextControl::OnTextEntryCompletion()</a>, <a class="el" href="_i_control_8h_source.html#l02239">PlaceHolder::OnTextEntryCompletion()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00594">ITextToggleControl::SetDirty()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l02137">ClearStr()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00054">TestGesturesControl::OnInit()</a>, <a class="el" href="_i_r_t_text_control_8h_source.html#l00038">IRTTextControl&lt; MAXNC, T &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_control_8h_source.html#l02166">IEditableTextControl::OnTextEntryCompletion()</a>, <a class="el" href="_i_control_8h_source.html#l02242">PlaceHolder::OnTextEntryCompletion()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00594">ITextToggleControl::SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -826,7 +829,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02144">2144</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02147">2147</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -850,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02145">2145</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02148">2148</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -874,7 +877,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02143">2143</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02146">2146</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

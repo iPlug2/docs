@@ -196,6 +196,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">OnDrop</a> (const char *str)</td></tr>
 <tr class="memdesc:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when something was drag 'n dropped onto this control.  <a href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">More...</a><br /></td></tr>
 <tr class="separator:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">OnDropMultiple</a> (const std::vector&lt; const char * &gt; &amp;paths)</td></tr>
+<tr class="memdesc:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to handle multiple items drag 'n dropped onto this control.  <a href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">More...</a><br /></td></tr>
+<tr class="separator:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a57f6186624e970a5d6de172570aee111">OnRescale</a> ()</td></tr>
 <tr class="memdesc:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when graphics is scaled globally (e.g.  <a href="class_i_control.html#a57f6186624e970a5d6de172570aee111">More...</a><br /></td></tr>
 <tr class="separator:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,7 +521,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p ><a class="el" href="class_i_container_base.html" title="IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In...">IContainerBase</a> allows a control to nest sub controls and it clips the drawing of those subcontrols Inheritors can add child controls by overriding <a class="el" href="class_i_container_base.html#a57875515fbe62983285da0f01888f8fc" title="Called after the control has been attached, and its delegate and graphics member variable set.">OnAttached()</a> and calling AddChildControl(), or passing in an AttachFunc lambda to the construtor. </p>
 <p >Child controls should not have been added elsewhere OnResized() should also be overriden if the control bounds will change (can also be specified in a ResizeFunc lambda) </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00601">601</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00604">604</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7dacb8b44cc22044689f8f77c72a4288" name="a7dacb8b44cc22044689f8f77c72a4288"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7dacb8b44cc22044689f8f77c72a4288">&#9670;&#160;</a></span>AttachFunc</h2>
@@ -532,7 +535,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00604">604</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00607">607</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -548,7 +551,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00605">605</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00608">608</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -593,7 +596,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00607">607</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00610">610</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -637,7 +640,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00611">611</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00614">614</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -675,7 +678,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00615">615</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00618">618</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -719,7 +722,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00619">619</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00622">622</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -746,7 +749,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00642">642</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00645">645</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -791,7 +794,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00679">679</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00682">682</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -831,7 +834,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_v_panel_control.html#a4642399ec28a5ec575fb43aec9a2af65">IVPanelControl</a>, <a class="el" href="class_i_v_number_box_control.html#a955f890f502a3721fafac072049f7418">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#a4f26856bd21c3ea622c1c12b0df95cf2">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">IVDiskPresetManagerControl</a>, <a class="el" href="class_i_v_tab_page.html#aa69dc88c0d0e63e90e023001f6f7c90f">IVTabPage</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#ac513e9d297042b6c67c4736979ea28ee">IVTabbedPagesControl</a>, <a class="el" href="class_test_dir_browse_control.html#a24cd07c44562e038c4339232724f76ec">TestDirBrowseControl</a>, and <a class="el" href="class_i_panel_control.html#aa300e824c19404d26fb9cad8ba501a83">IPanelControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00637">637</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00640">640</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -859,7 +862,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00699">699</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00702">702</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -887,7 +890,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00692">692</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00695">695</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -925,7 +928,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00670">670</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00673">673</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>.</p>
 
@@ -956,7 +959,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00697">697</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00700">700</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -990,9 +993,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_v_panel_control.html#a28352fa79f9d397f9eb596b94b5e6238">IVPanelControl</a>, <a class="el" href="class_i_v_number_box_control.html#ad579a0a172843096dbab51dfc7584245">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#a6e9e1c13e2e25bbc55723a9f32ca6518">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">IVDiskPresetManagerControl</a>, and <a class="el" href="class_i_v_tabbed_pages_control.html#a657a3e160ebed50abefe4b1d2e4dd880">IVTabbedPagesControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00647">647</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00650">650</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00655">OnResize()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00658">OnResize()</a>.</p>
 
 </div>
 </div>
@@ -1026,9 +1029,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_v_panel_control.html#a4db0f949f46b787dc19d2a3ec1497a8e">IVPanelControl</a>, <a class="el" href="class_i_v_number_box_control.html#a1c09bfebe4807908ba8a10a71102d1b3">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#ab51c758821c34e343c6f93bd281dd879">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#a361a50ca5e9696704a934b23e1abbbf0">IVTabbedPagesControl</a>, and <a class="el" href="class_test_dir_browse_control.html#ac84cf0759c5e5eeac72679d2c0165339">TestDirBrowseControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00655">655</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00658">658</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00647">OnAttached()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00650">OnAttached()</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1059,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00685">685</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00688">688</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1087,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00627">627</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00630">630</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1122,7 +1125,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#acd04c66a6221dc5acc15194dd31e2e46">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00661">661</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00664">664</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00245">IControl::SetDisabled()</a>.</p>
 
@@ -1152,7 +1155,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00632">632</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00635">635</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1177,7 +1180,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00708">708</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00711">711</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1201,7 +1204,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00710">710</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00713">713</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1225,7 +1228,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00709">709</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00712">712</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

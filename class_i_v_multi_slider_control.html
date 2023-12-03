@@ -237,6 +237,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">OnDrop</a> (const char *str)</td></tr>
 <tr class="memdesc:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when something was drag 'n dropped onto this control.  <a href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">More...</a><br /></td></tr>
 <tr class="separator:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">OnDropMultiple</a> (const std::vector&lt; const char * &gt; &amp;paths)</td></tr>
+<tr class="memdesc:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to handle multiple items drag 'n dropped onto this control.  <a href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">More...</a><br /></td></tr>
+<tr class="separator:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a57f6186624e970a5d6de172570aee111">OnRescale</a> ()</td></tr>
 <tr class="memdesc:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when graphics is scaled globally (e.g.  <a href="class_i_control.html#a57f6186624e970a5d6de172570aee111">More...</a><br /></td></tr>
 <tr class="separator:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1046,7 +1049,7 @@ template&lt;int MAXNC = 1&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00074">74</a> of file <a class="el" href="_i_v_multi_slider_control_8h_source.html">IVMultiSliderControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01629">IVTrackControlBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00885">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02444">IGraphics::DrawRect()</a>, <a class="el" href="_i_control_8h_source.html#l01517">IVTrackControlBase::DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00797">IVectorBase::GetColor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01632">IVTrackControlBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02450">IGraphics::DrawRect()</a>, <a class="el" href="_i_control_8h_source.html#l01520">IVTrackControlBase::DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00800">IVectorBase::GetColor()</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1138,7 @@ template&lt;int MAXNC = 1&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">190</a> of file <a class="el" href="_i_v_multi_slider_control_8h_source.html">IVMultiSliderControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01502">IVTrackControlBase::GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00237">IVMultiSliderControl&lt; MAXNC &gt;::OnNewValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>, and <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01505">IVTrackControlBase::GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00237">IVMultiSliderControl&lt; MAXNC &gt;::OnNewValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>, and <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>.</p>
 
 </div>
 </div>
@@ -1261,7 +1264,7 @@ template&lt;int MAXNC = 1&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00228">228</a> of file <a class="el" href="_i_v_multi_slider_control_8h_source.html">IVMultiSliderControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00358">IControl::IsDisabled()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00361">IControl::IsDisabled()</a>.</p>
 
 </div>
 </div>
@@ -1421,7 +1424,7 @@ template&lt;int MAXNC = 1&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">84</a> of file <a class="el" href="_i_v_multi_slider_control_8h_source.html">IVMultiSliderControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00891">IRECT::Constrain()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00237">IVMultiSliderControl&lt; MAXNC &gt;::OnNewValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00891">IRECT::Constrain()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8h_source.html#l00238">IControl::NVals()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00237">IVMultiSliderControl&lt; MAXNC &gt;::OnNewValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDown()</a>, and <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00223">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDrag()</a>.</p>
 

@@ -151,6 +151,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5e9270b8ce6d321130bbff7821c63d0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">OnDrop</a> (const char *str)</td></tr>
 <tr class="memdesc:a5e9270b8ce6d321130bbff7821c63d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when something was drag 'n dropped onto this control.  <a href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">More...</a><br /></td></tr>
 <tr class="separator:a5e9270b8ce6d321130bbff7821c63d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a78bb5cf3726e81bd32bfa02b14107a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">OnDropMultiple</a> (const std::vector&lt; const char * &gt; &amp;paths)</td></tr>
+<tr class="memdesc:a1a78bb5cf3726e81bd32bfa02b14107a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to handle multiple items drag 'n dropped onto this control.  <a href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">More...</a><br /></td></tr>
+<tr class="separator:a1a78bb5cf3726e81bd32bfa02b14107a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f6186624e970a5d6de172570aee111"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a57f6186624e970a5d6de172570aee111">OnRescale</a> ()</td></tr>
 <tr class="memdesc:a57f6186624e970a5d6de172570aee111"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when graphics is scaled globally (e.g.  <a href="class_i_control.html#a57f6186624e970a5d6de172570aee111">More...</a><br /></td></tr>
 <tr class="separator:a57f6186624e970a5d6de172570aee111"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -675,7 +678,7 @@ template&lt;class T &gt; </div>
 
 <p>Helper function to dynamic cast an <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> to a subclass. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00509">509</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00512">512</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00050">IVTabPage::IVTabPage()</a>, <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00069">IVTabPage::OnStyleChanged()</a>, <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00191">IVTabbedPagesControl::OnStyleChanged()</a>, <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
@@ -718,7 +721,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00311">311</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02325">IGraphics::AttachGestureRecognizer()</a>, and <a class="el" href="_i_control_8h_source.html#l00463">GetUI()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02331">IGraphics::AttachGestureRecognizer()</a>, and <a class="el" href="_i_control_8h_source.html#l00466">GetUI()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_test_gestures_control_8h_source.html#l00054">TestGesturesControl::OnInit()</a>.</p>
 
@@ -751,9 +754,9 @@ template&lt;class T &gt; </div>
 <p>Called by default when the user right clicks a control. </p>
 <p >If IGRAPHICS_NO_CONTEXT_MENU is enabled as a preprocessor macro right clicking control will mean <a class="el" href="class_i_control.html#aa73805d1f6e1abf46781e8b976538beb" title="Called by default when the user right clicks a control.">IControl::CreateContextMenu()</a> and <a class="el" href="class_i_control.html#adf0ed7d95a0fd06594bab7b45dfa09d8" title="Implement this to respond to a menu selection from CreateContextMenu();.">IControl::OnContextSelection()</a> do not function on right clicking control. VST3 provides contextual menu support which is hard wired to right click controls by default. You can add custom items to the menu by implementing <a class="el" href="class_i_control.html#aa73805d1f6e1abf46781e8b976538beb" title="Called by default when the user right clicks a control.">IControl::CreateContextMenu()</a> and handle them in <a class="el" href="class_i_control.html#adf0ed7d95a0fd06594bab7b45dfa09d8" title="Implement this to respond to a menu selection from CreateContextMenu();.">IControl::OnContextSelection()</a>. In non-VST 3 hosts right clicking will still create the menu, but it will not feature entries added by the host. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00168">168</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00171">171</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01376">IGraphics::PopupHostContextMenuForParam()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01382">IGraphics::PopupHostContextMenuForParam()</a>.</p>
 
 </div>
 </div>
@@ -789,7 +792,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00411">411</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00414">414</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -825,7 +828,7 @@ template&lt;class T &gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="class_i_bubble_control.html#ad2caffd4d5f51576358b2d1d3d11464b">IBubbleControl</a>, <a class="el" href="class_i_color_picker_control.html#a7603f53d0a19461f0b9367af40bf1a81">IColorPickerControl</a>, <a class="el" href="class_i_v_label_control.html#a02ef957438f1a1184375b397bb23885a">IVLabelControl</a>, <a class="el" href="class_i_v_button_control.html#a21627119ec74b49a64ca8a40e31d4768">IVButtonControl</a>, <a class="el" href="class_i_v_switch_control.html#ac18186a9fe7cbf6ca0e541a7265132e3">IVSwitchControl</a>, <a class="el" href="class_i_v_slide_switch_control.html#ab4f2bd6fc3b584d945a77dabe4bdf6f5">IVSlideSwitchControl</a>, <a class="el" href="class_i_v_tab_switch_control.html#a905c136bdc27da67ffdd6e5519501f28">IVTabSwitchControl</a>, <a class="el" href="class_i_v_knob_control.html#a4f8807a36690da2fdad3fe5a5a0f9d0e">IVKnobControl</a>, <a class="el" href="class_i_v_slider_control.html#af3104c522034baa9925a1cfd4531d578">IVSliderControl</a>, <a class="el" href="class_i_v_range_slider_control.html#aa749be801c56ae551df41aa9446bf366">IVRangeSliderControl</a>, <a class="el" href="class_i_v_x_y_pad_control.html#aa0294b9a24f90b55fe65141b7fc0917a">IVXYPadControl</a>, <a class="el" href="class_i_v_plot_control.html#a18cf90c93f44e28f94f3c6688b5c4744">IVPlotControl</a>, <a class="el" href="class_i_v_group_control.html#a1b8108d5febce0ddc01142b238607258">IVGroupControl</a>, <a class="el" href="class_i_v_panel_control.html#a4642399ec28a5ec575fb43aec9a2af65">IVPanelControl</a>, <a class="el" href="class_i_v_color_swatch_control.html#a46fde8a4022417448d0380418e3ed665">IVColorSwatchControl</a>, <a class="el" href="class_i_s_v_g_knob_control.html#ad6fbda092368c4176dadfdebda27c8cd">ISVGKnobControl</a>, <a class="el" href="class_i_s_v_g_button_control.html#a13f1f3b25a138d5876346c3bf06f3c4f">ISVGButtonControl</a>, <a class="el" href="class_i_s_v_g_toggle_control.html#aa438d6a0d30fba85026ccc82e265c563">ISVGToggleControl</a>, <a class="el" href="class_i_s_v_g_switch_control.html#a3100d91631128b7babe127bd82c1f9a1">ISVGSwitchControl</a>, <a class="el" href="class_i_s_v_g_slider_control.html#a439d455fe51d741f881a3c9513c471fe">ISVGSliderControl</a>, <a class="el" href="class_i_b_button_control.html#a23e33e242501d5f3fb3ae5b34bd46fd0">IBButtonControl</a>, <a class="el" href="class_i_b_switch_control.html#ad1638830f53cc62983224dbb67b377b5">IBSwitchControl</a>, <a class="el" href="class_i_b_knob_control.html#a729bf237cdd4821541a5a492fe4e5fb6">IBKnobControl</a>, <a class="el" href="class_i_b_knob_rotater_control.html#a918cd86face4d5473729010b9c3cb1cb">IBKnobRotaterControl</a>, <a class="el" href="class_i_b_slider_control.html#a5c13c054055e701f789da89682fa863f">IBSliderControl</a>, <a class="el" href="class_i_b_text_control.html#a623a8c6ea54be3b59aa9f073c4172d01">IBTextControl</a>, <a class="el" href="class_i_b_meter_control.html#aa9f8ec15d837045a23a812e3af3149d0">IBMeterControl</a>, <a class="el" href="class_i_corner_resizer_control.html#ae15268a80ad9107d0bf440be4ff73ae6">ICornerResizerControl</a>, <a class="el" href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">IFPSDisplayControl</a>, <a class="el" href="class_i_l_e_d_control.html#a22c55170b03b5d4ef11c1d74f7b14f8e">ILEDControl</a>, <a class="el" href="class_i_popup_menu_control.html#a45d1fe2da648faee0dac5b09cbb6b383">IPopupMenuControl</a>, <a class="el" href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">IShaderControl</a>, <a class="el" href="class_i_text_entry_control.html#a71de3041a8e524dbe37265cf83a67e73">ITextEntryControl</a>, <a class="el" href="class_i_v_display_control.html#ab1bcfc1bc22d7e084572ac444d548e93">IVDisplayControl</a>, <a class="el" href="class_i_v_keyboard_control.html#ad80a1d151599484145075668ec472441">IVKeyboardControl</a>, <a class="el" href="class_i_wheel_control.html#a930c915cb4a0aa8962c37c43d3daadaf">IWheelControl</a>, <a class="el" href="class_i_v_meter_control.html#a6e19324a46a0a89ba22b463e2b73998c">IVMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_meter_control.html#a6e19324a46a0a89ba22b463e2b73998c">IVMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_meter_control.html#a6e19324a46a0a89ba22b463e2b73998c">IVMeterControl&lt; 1 &gt;</a>, <a class="el" href="class_i_v_multi_slider_control.html#ab65874261fb421d4ef1512e1b27d087d">IVMultiSliderControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_multi_slider_control.html#ab65874261fb421d4ef1512e1b27d087d">IVMultiSliderControl&lt; 1 &gt;</a>, <a class="el" href="class_i_v_number_box_control.html#a955f890f502a3721fafac072049f7418">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#a4f26856bd21c3ea622c1c12b0df95cf2">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">IVDiskPresetManagerControl</a>, <a class="el" href="class_i_v_scope_control.html#a2976263fc82b40042b155405cac61c5b">IVScopeControl&lt; MAXNC, MAXBUF &gt;</a>, <a class="el" href="class_i_v_tab_page.html#aa69dc88c0d0e63e90e023001f6f7c90f">IVTabPage</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#ac513e9d297042b6c67c4736979ea28ee">IVTabbedPagesControl</a>, <a class="el" href="class_i_web_view_control.html#ac3ed88ba6646c59ff77aa159b9878fef">IWebViewControl</a>, <a class="el" href="class_i_sk_lottie_control.html#ad7ccc22e0a6c23936e29200e400a7be6">ISkLottieControl</a>, <a class="el" href="class_i_sk_paragraph_control.html#a889a4cc4337adee61e829505f8b5a8df">ISkParagraphControl</a>, <a class="el" href="class_test_animation_control.html#a5e9d0eed5ecdeee878616abfe08ff5c1">TestAnimationControl</a>, <a class="el" href="class_test_arc_control.html#aaa52cac61d1196751f2aae8dd4e8844a">TestArcControl</a>, <a class="el" href="class_test_bezier_control.html#a84352f05e241ead8a71082e4eb650e15">TestBezierControl</a>, <a class="el" href="class_test_blend_control.html#a23d23dfe07844ae4c58362f0925f6620">TestBlendControl</a>, <a class="el" href="class_test_color_control.html#a47cdd3ecf656c72625099301df120d58">TestColorControl</a>, <a class="el" href="class_test_cursor_control.html#afdf5e2855b6db768a0b2ee617b9f289e">TestCursorControl</a>, <a class="el" href="class_test_custom_shader_control.html#a92f5f1ad18499febb1f01797fa501004">TestCustomShaderControl</a>, <a class="el" href="class_test_dir_browse_control.html#a24cd07c44562e038c4339232724f76ec">TestDirBrowseControl</a>, <a class="el" href="class_test_draw_context_control.html#aef862e5df30eb537a7995bf0e39e890e">TestDrawContextControl</a>, <a class="el" href="class_test_drop_shadow_control.html#a767bd10c3b2c301803db8cdc0ef13fa2">TestDropShadowControl</a>, <a class="el" href="class_test_flex_box_control.html#abb6b2f6cda0543bcec21247cf98a68cd">TestFlexBoxControl</a>, <a class="el" href="class_test_font_control.html#a3a14cef428ca3290ab6e53857aeef49d">TestFontControl</a>, <a class="el" href="class_test_gestures_control.html#a0fab3c91b1ce5484b6f66e99b353c4fa">TestGesturesControl</a>, <a class="el" href="class_g_f_x_label_control.html#a8d10696ab350ae03eec72779413b3ae3">GFXLabelControl</a>, <a class="el" href="class_test_gradient_control.html#ac51fc37bba37a25a3c1a3ac51abcd56e">TestGradientControl</a>, <a class="el" href="class_test_image_control.html#a421f5e0e5467a7796b8f23bd87f4f48f">TestImageControl</a>, <a class="el" href="class_test_keyboard_control.html#a52dadb1771026aac587992c0459cd0d7">TestKeyboardControl</a>, <a class="el" href="class_test_layer_control.html#ac99db6b14b0970f716167ebd6616bea3">TestLayerControl</a>, <a class="el" href="class_test_mask_control.html#ab4d127ce7f6f6bc3925fddbf78bd1036">TestMaskControl</a>, <a class="el" href="class_test_m_p_s_control.html#a672646a7a64b40ee23b1c659a3b06dc9">TestMPSControl</a>, <a class="el" href="class_test_multi_path_control.html#a207fcbc55ae8b3214bd521e953514522">TestMultiPathControl</a>, <a class="el" href="class_test_m_t_control.html#ac98e1ca5bea0881fbcdc63cc6c0eced6">TestMTControl</a>, <a class="el" href="class_test_poly_control.html#a62aad2679ade1c66f5b52152a450c839">TestPolyControl</a>, <a class="el" href="class_test_shadow_gradient_control.html#a62c12ab452101f2599969dc6dae044f5">TestShadowGradientControl</a>, <a class="el" href="class_test_size_control.html#a130185257d4dbcdba9d2552e50205917">TestSizeControl</a>, <a class="el" href="class_test_s_v_g_control.html#acd49fd8729542275a365ca65ccb783b5">TestSVGControl</a>, <a class="el" href="class_test_text_control.html#a191acc23c7e8e117f5d0e7db3c43fc02">TestTextControl</a>, <a class="el" href="class_test_text_orientation_control.html#abcd43d4131a5de73944c210eb4b061d2">TestTextOrientationControl</a>, <a class="el" href="class_test_text_size_control.html#a130107eebba4fc663a90ade9b131ed22">TestTextSizeControl</a>, <a class="el" href="class_i_container_base.html#ac2941612560428b465692bf592a526c1">IContainerBase</a>, <a class="el" href="class_i_panel_control.html#aa300e824c19404d26fb9cad8ba501a83">IPanelControl</a>, <a class="el" href="class_i_lambda_control.html#a06289d8b07f27f82ae3efe5d3412c476">ILambdaControl</a>, <a class="el" href="class_i_bitmap_control.html#a4c90f8016022ad8087eaaa21d44ea195">IBitmapControl</a>, <a class="el" href="class_i_s_v_g_control.html#a5abf2cf0929730c340e4120db68b6949">ISVGControl</a>, <a class="el" href="class_i_text_control.html#a4284b3f2d4cf1574f4dba2f69862b0d8">ITextControl</a>, <a class="el" href="class_i_u_r_l_control.html#ab8943387cebcee18ce1ae744eaee87e0">IURLControl</a>, <a class="el" href="class_i_caption_control.html#af5a44275b2246209054fec5317505900">ICaptionControl</a>, <a class="el" href="class_place_holder.html#a3da162245031ca3e570afd0a9e6d0db5">PlaceHolder</a>, and <a class="el" href="class_i_graphics_live_edit.html#afcf24c0378abd13b0a5ab49e4fecbb45">IGraphicsLiveEdit</a>.</p>
+<p>Implemented in <a class="el" href="class_i_bubble_control.html#ad2caffd4d5f51576358b2d1d3d11464b">IBubbleControl</a>, <a class="el" href="class_i_color_picker_control.html#a7603f53d0a19461f0b9367af40bf1a81">IColorPickerControl</a>, <a class="el" href="class_i_v_label_control.html#a02ef957438f1a1184375b397bb23885a">IVLabelControl</a>, <a class="el" href="class_i_v_button_control.html#a21627119ec74b49a64ca8a40e31d4768">IVButtonControl</a>, <a class="el" href="class_i_v_switch_control.html#ac18186a9fe7cbf6ca0e541a7265132e3">IVSwitchControl</a>, <a class="el" href="class_i_v_slide_switch_control.html#ab4f2bd6fc3b584d945a77dabe4bdf6f5">IVSlideSwitchControl</a>, <a class="el" href="class_i_v_tab_switch_control.html#a905c136bdc27da67ffdd6e5519501f28">IVTabSwitchControl</a>, <a class="el" href="class_i_v_knob_control.html#a4f8807a36690da2fdad3fe5a5a0f9d0e">IVKnobControl</a>, <a class="el" href="class_i_v_slider_control.html#af3104c522034baa9925a1cfd4531d578">IVSliderControl</a>, <a class="el" href="class_i_v_range_slider_control.html#aa749be801c56ae551df41aa9446bf366">IVRangeSliderControl</a>, <a class="el" href="class_i_v_x_y_pad_control.html#aa0294b9a24f90b55fe65141b7fc0917a">IVXYPadControl</a>, <a class="el" href="class_i_v_plot_control.html#a18cf90c93f44e28f94f3c6688b5c4744">IVPlotControl</a>, <a class="el" href="class_i_v_group_control.html#a1b8108d5febce0ddc01142b238607258">IVGroupControl</a>, <a class="el" href="class_i_v_panel_control.html#a4642399ec28a5ec575fb43aec9a2af65">IVPanelControl</a>, <a class="el" href="class_i_v_color_swatch_control.html#a46fde8a4022417448d0380418e3ed665">IVColorSwatchControl</a>, <a class="el" href="class_i_s_v_g_knob_control.html#ad6fbda092368c4176dadfdebda27c8cd">ISVGKnobControl</a>, <a class="el" href="class_i_s_v_g_button_control.html#a13f1f3b25a138d5876346c3bf06f3c4f">ISVGButtonControl</a>, <a class="el" href="class_i_s_v_g_toggle_control.html#aa438d6a0d30fba85026ccc82e265c563">ISVGToggleControl</a>, <a class="el" href="class_i_s_v_g_switch_control.html#a3100d91631128b7babe127bd82c1f9a1">ISVGSwitchControl</a>, <a class="el" href="class_i_s_v_g_slider_control.html#a439d455fe51d741f881a3c9513c471fe">ISVGSliderControl</a>, <a class="el" href="class_i_b_button_control.html#a23e33e242501d5f3fb3ae5b34bd46fd0">IBButtonControl</a>, <a class="el" href="class_i_b_switch_control.html#ad1638830f53cc62983224dbb67b377b5">IBSwitchControl</a>, <a class="el" href="class_i_b_knob_control.html#a729bf237cdd4821541a5a492fe4e5fb6">IBKnobControl</a>, <a class="el" href="class_i_b_knob_rotater_control.html#a918cd86face4d5473729010b9c3cb1cb">IBKnobRotaterControl</a>, <a class="el" href="class_i_b_slider_control.html#a5c13c054055e701f789da89682fa863f">IBSliderControl</a>, <a class="el" href="class_i_b_text_control.html#a623a8c6ea54be3b59aa9f073c4172d01">IBTextControl</a>, <a class="el" href="class_i_b_meter_control.html#aa9f8ec15d837045a23a812e3af3149d0">IBMeterControl</a>, <a class="el" href="class_i_corner_resizer_control.html#ae15268a80ad9107d0bf440be4ff73ae6">ICornerResizerControl</a>, <a class="el" href="class_i_f_p_s_display_control.html#a41926f619e4bfc4eda1bff51f22ee36d">IFPSDisplayControl</a>, <a class="el" href="class_i_l_e_d_control.html#a22c55170b03b5d4ef11c1d74f7b14f8e">ILEDControl</a>, <a class="el" href="class_i_popup_menu_control.html#a45d1fe2da648faee0dac5b09cbb6b383">IPopupMenuControl</a>, <a class="el" href="class_i_shader_control.html#aa0bc6b9c5c1dd2395222814b592ace0f">IShaderControl</a>, <a class="el" href="class_i_text_entry_control.html#a71de3041a8e524dbe37265cf83a67e73">ITextEntryControl</a>, <a class="el" href="class_i_v_display_control.html#ab1bcfc1bc22d7e084572ac444d548e93">IVDisplayControl</a>, <a class="el" href="class_i_v_keyboard_control.html#ad80a1d151599484145075668ec472441">IVKeyboardControl</a>, <a class="el" href="class_i_wheel_control.html#a930c915cb4a0aa8962c37c43d3daadaf">IWheelControl</a>, <a class="el" href="class_i_v_meter_control.html#a6e19324a46a0a89ba22b463e2b73998c">IVMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_meter_control.html#a6e19324a46a0a89ba22b463e2b73998c">IVMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_meter_control.html#a6e19324a46a0a89ba22b463e2b73998c">IVMeterControl&lt; 1 &gt;</a>, <a class="el" href="class_i_v_multi_slider_control.html#ab65874261fb421d4ef1512e1b27d087d">IVMultiSliderControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_multi_slider_control.html#ab65874261fb421d4ef1512e1b27d087d">IVMultiSliderControl&lt; 1 &gt;</a>, <a class="el" href="class_i_v_number_box_control.html#a955f890f502a3721fafac072049f7418">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#a4f26856bd21c3ea622c1c12b0df95cf2">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">IVDiskPresetManagerControl</a>, <a class="el" href="class_i_v_scope_control.html#a2976263fc82b40042b155405cac61c5b">IVScopeControl&lt; MAXNC, MAXBUF &gt;</a>, <a class="el" href="class_i_v_tab_page.html#aa69dc88c0d0e63e90e023001f6f7c90f">IVTabPage</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#ac513e9d297042b6c67c4736979ea28ee">IVTabbedPagesControl</a>, <a class="el" href="class_i_web_view_control.html#ac3ed88ba6646c59ff77aa159b9878fef">IWebViewControl</a>, <a class="el" href="class_i_sk_lottie_control.html#ad7ccc22e0a6c23936e29200e400a7be6">ISkLottieControl</a>, <a class="el" href="class_i_sk_paragraph_control.html#a889a4cc4337adee61e829505f8b5a8df">ISkParagraphControl</a>, <a class="el" href="class_test_animation_control.html#a5e9d0eed5ecdeee878616abfe08ff5c1">TestAnimationControl</a>, <a class="el" href="class_test_arc_control.html#aaa52cac61d1196751f2aae8dd4e8844a">TestArcControl</a>, <a class="el" href="class_test_bezier_control.html#a84352f05e241ead8a71082e4eb650e15">TestBezierControl</a>, <a class="el" href="class_test_blend_control.html#a23d23dfe07844ae4c58362f0925f6620">TestBlendControl</a>, <a class="el" href="class_test_color_control.html#a47cdd3ecf656c72625099301df120d58">TestColorControl</a>, <a class="el" href="class_test_cursor_control.html#afdf5e2855b6db768a0b2ee617b9f289e">TestCursorControl</a>, <a class="el" href="class_test_custom_shader_control.html#a92f5f1ad18499febb1f01797fa501004">TestCustomShaderControl</a>, <a class="el" href="class_test_dir_browse_control.html#a24cd07c44562e038c4339232724f76ec">TestDirBrowseControl</a>, <a class="el" href="class_test_drag_and_drop_control.html#a31f736cfa9ca329feb6cd1b3a15f344e">TestDragAndDropControl</a>, <a class="el" href="class_test_draw_context_control.html#aef862e5df30eb537a7995bf0e39e890e">TestDrawContextControl</a>, <a class="el" href="class_test_drop_shadow_control.html#a767bd10c3b2c301803db8cdc0ef13fa2">TestDropShadowControl</a>, <a class="el" href="class_test_flex_box_control.html#abb6b2f6cda0543bcec21247cf98a68cd">TestFlexBoxControl</a>, <a class="el" href="class_test_font_control.html#a3a14cef428ca3290ab6e53857aeef49d">TestFontControl</a>, <a class="el" href="class_test_gestures_control.html#a0fab3c91b1ce5484b6f66e99b353c4fa">TestGesturesControl</a>, <a class="el" href="class_g_f_x_label_control.html#a8d10696ab350ae03eec72779413b3ae3">GFXLabelControl</a>, <a class="el" href="class_test_gradient_control.html#ac51fc37bba37a25a3c1a3ac51abcd56e">TestGradientControl</a>, <a class="el" href="class_test_image_control.html#a421f5e0e5467a7796b8f23bd87f4f48f">TestImageControl</a>, <a class="el" href="class_test_keyboard_control.html#a52dadb1771026aac587992c0459cd0d7">TestKeyboardControl</a>, <a class="el" href="class_test_layer_control.html#ac99db6b14b0970f716167ebd6616bea3">TestLayerControl</a>, <a class="el" href="class_test_mask_control.html#ab4d127ce7f6f6bc3925fddbf78bd1036">TestMaskControl</a>, <a class="el" href="class_test_m_p_s_control.html#a672646a7a64b40ee23b1c659a3b06dc9">TestMPSControl</a>, <a class="el" href="class_test_multi_path_control.html#a207fcbc55ae8b3214bd521e953514522">TestMultiPathControl</a>, <a class="el" href="class_test_m_t_control.html#ac98e1ca5bea0881fbcdc63cc6c0eced6">TestMTControl</a>, <a class="el" href="class_test_poly_control.html#a62aad2679ade1c66f5b52152a450c839">TestPolyControl</a>, <a class="el" href="class_test_shadow_gradient_control.html#a62c12ab452101f2599969dc6dae044f5">TestShadowGradientControl</a>, <a class="el" href="class_test_size_control.html#a130185257d4dbcdba9d2552e50205917">TestSizeControl</a>, <a class="el" href="class_test_s_v_g_control.html#acd49fd8729542275a365ca65ccb783b5">TestSVGControl</a>, <a class="el" href="class_test_text_control.html#a191acc23c7e8e117f5d0e7db3c43fc02">TestTextControl</a>, <a class="el" href="class_test_text_orientation_control.html#abcd43d4131a5de73944c210eb4b061d2">TestTextOrientationControl</a>, <a class="el" href="class_test_text_size_control.html#a130107eebba4fc663a90ade9b131ed22">TestTextSizeControl</a>, <a class="el" href="class_i_container_base.html#ac2941612560428b465692bf592a526c1">IContainerBase</a>, <a class="el" href="class_i_panel_control.html#aa300e824c19404d26fb9cad8ba501a83">IPanelControl</a>, <a class="el" href="class_i_lambda_control.html#a06289d8b07f27f82ae3efe5d3412c476">ILambdaControl</a>, <a class="el" href="class_i_bitmap_control.html#a4c90f8016022ad8087eaaa21d44ea195">IBitmapControl</a>, <a class="el" href="class_i_s_v_g_control.html#a5abf2cf0929730c340e4120db68b6949">ISVGControl</a>, <a class="el" href="class_i_text_control.html#a4284b3f2d4cf1574f4dba2f69862b0d8">ITextControl</a>, <a class="el" href="class_i_u_r_l_control.html#ab8943387cebcee18ce1ae744eaee87e0">IURLControl</a>, <a class="el" href="class_i_caption_control.html#af5a44275b2246209054fec5317505900">ICaptionControl</a>, <a class="el" href="class_place_holder.html#a3da162245031ca3e570afd0a9e6d0db5">PlaceHolder</a>, and <a class="el" href="class_i_graphics_live_edit.html#afcf24c0378abd13b0a5ab49e4fecbb45">IGraphicsLiveEdit</a>.</p>
 
 </div>
 </div>
@@ -863,7 +866,7 @@ template&lt;class T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00389">389</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02553">IGraphics::FillCircle()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02559">IGraphics::FillCircle()</a>.</p>
 
 </div>
 </div>
@@ -919,9 +922,9 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00523">523</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00526">526</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00397">SnapToMouse()</a>.</p>
 
@@ -952,7 +955,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Get the control's action function, if it exists. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00499">499</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00502">502</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -981,7 +984,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Get the duration of animations applied to the control. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00505">505</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00508">508</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1010,9 +1013,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Get the control's animation function, if it exists. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00496">496</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00499">499</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00263">IVSlideSwitchControl::Draw()</a>, <a class="el" href="_i_sk_lottie_control_8h_source.html#l00044">ISkLottieControl::Draw()</a>, <a class="el" href="_test_keyboard_control_8h_source.html#l00109">TestKeyboardControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00944">IVectorBase::DrawPressableEllipse()</a>, <a class="el" href="_i_control_8h_source.html#l01016">IVectorBase::DrawPressableRectangle()</a>, <a class="el" href="_i_control_8h_source.html#l01099">IVectorBase::DrawPressableTriangle()</a>, <a class="el" href="_i_control_8cpp_source.html#l00231">IsDirty()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00290">IVSlideSwitchControl::SetDirty()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00263">IVSlideSwitchControl::Draw()</a>, <a class="el" href="_i_sk_lottie_control_8h_source.html#l00044">ISkLottieControl::Draw()</a>, <a class="el" href="_test_keyboard_control_8h_source.html#l00109">TestKeyboardControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00947">IVectorBase::DrawPressableEllipse()</a>, <a class="el" href="_i_control_8h_source.html#l01019">IVectorBase::DrawPressableRectangle()</a>, <a class="el" href="_i_control_8h_source.html#l01102">IVectorBase::DrawPressableTriangle()</a>, <a class="el" href="_i_control_8cpp_source.html#l00231">IsDirty()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00290">IVSlideSwitchControl::SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -1064,9 +1067,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Get the Blend for this control. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00295">295</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00298">298</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00872">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00732">IBitmapBase::DrawBitmap()</a>, <a class="el" href="_i_control_8h_source.html#l00885">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00944">IVectorBase::DrawPressableEllipse()</a>, <a class="el" href="_i_control_8h_source.html#l01016">IVectorBase::DrawPressableRectangle()</a>, <a class="el" href="_i_control_8h_source.html#l01099">IVectorBase::DrawPressableTriangle()</a>, and <a class="el" href="_i_control_8h_source.html#l00895">IVectorBase::DrawValue()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00875">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00735">IBitmapBase::DrawBitmap()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00947">IVectorBase::DrawPressableEllipse()</a>, <a class="el" href="_i_control_8h_source.html#l01019">IVectorBase::DrawPressableRectangle()</a>, <a class="el" href="_i_control_8h_source.html#l01102">IVectorBase::DrawPressableTriangle()</a>, and <a class="el" href="_i_control_8h_source.html#l00898">IVectorBase::DrawValue()</a>.</p>
 
 </div>
 </div>
@@ -1096,9 +1099,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets a pointer to the class implementing the <a class="el" href="class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth...">IEditorDelegate</a> interface that handles parameter changes from this <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> instance. </p>
 <p >If you need to call other methods on that class, you can use static_cast&lt;PLUG_CLASS_NAME&gt;(<a class="el" href="class_i_control.html#a7b54ab2805c78856fb4cc465f9f04980" title="Gets a pointer to the class implementing the IEditorDelegate interface that handles parameter changes...">GetDelegate()</a>; </p><dl class="section return"><dt>Returns</dt><dd>The class implementing the <a class="el" href="class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth...">IEditorDelegate</a> interface that handles communication to/from from this <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> instance. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00445">445</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00448">448</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_i_v_preset_manager_control_8h_source.html#l00059">IVBakedPresetManagerControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00837">IWheelControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l01529">IVTrackControlBase::SetParamsByGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_i_v_preset_manager_control_8h_source.html#l00059">IVBakedPresetManagerControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00837">IWheelControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l01532">IVTrackControlBase::SetParamsByGroup()</a>.</p>
 
 </div>
 </div>
@@ -1128,9 +1131,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the group that the control belongs to, if any. </p>
 <dl class="section return"><dt>Returns</dt><dd>A CString indicating the control group that this control belongs to (may be empty) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00280">280</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00283">283</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00539">mGroup</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00542">mGroup</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00500">IGraphics::ForControlInGroup()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00508">IVMenuButtonControl::IVMenuButtonControl()</a>.</p>
 
@@ -1160,7 +1163,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control ignores mouse events </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00375">375</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00378">378</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1191,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the last recognized gesture </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00440">440</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00443">443</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1218,7 +1221,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get double click as single click By default, mouse double click has its own handler. </p>
 <p >A control can set mDblAsSingleClick to true which maps double click to single click for this control (and also causes the mouse to be captured by the control on double click). </p><dl class="section return"><dt>Returns</dt><dd>/c true if double clicks should be mapped to single clicks </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00344">344</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00347">347</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01176">IGraphics::OnMouseDblClick()</a>.</p>
 
@@ -1248,7 +1251,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control responds to other mouse events when disabled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00372">372</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00375">375</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1279,9 +1282,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p >Note that this method is only enabled if <a class="el" href="class_i_graphics.html#af7776c41a3a8f7fe625b8ed0cc90b84d">IGraphics::EnableMouseOver()</a> is set to <code>true</code> <br  />
  </p><dl class="section return"><dt>Returns</dt><dd>\true if the mouse is over this control. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00470">470</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00473">473</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00556">mMouseIsOver</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00559">mMouseIsOver</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_corner_resizer_control_8h_source.html#l00039">ICornerResizerControl::Draw()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>.</p>
 
@@ -1311,7 +1314,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control responds to mouse overs when disabled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00369">369</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00372">372</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1338,7 +1341,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="reference">References <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00077">IEditorDelegate::GetParam()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00508">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00144">IVSwitchControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00332">IVTabSwitchControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00720">IVKnobControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00889">IVSliderControl::OnInit()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00048">IVNumberBoxControl::OnInit()</a>, <a class="el" href="_i_control_8cpp_source.html#l00754">ISwitchControlBase::OnInit()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00216">ITextEntryControl::OnKeyDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00819">IKnobControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00924">ISliderControlBase::OnMouseDrag()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00283">OnPopupMenuSelection()</a>, <a class="el" href="_i_control_8cpp_source.html#l00646">ICaptionControl::OnResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00233">IGraphics::SetControlValueAfterTextEdit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00710">IVKnobControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00879">IVSliderControl::SetDirty()</a>, <a class="el" href="_i_control_8h_source.html#l01549">IVTrackControlBase::SetParams()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00540">IVMenuButtonControl::SetValueFromDelegate()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00164">IVNumberBoxControl::SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00175">IVNumberBoxControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00508">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00144">IVSwitchControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00332">IVTabSwitchControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00720">IVKnobControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00889">IVSliderControl::OnInit()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00048">IVNumberBoxControl::OnInit()</a>, <a class="el" href="_i_control_8cpp_source.html#l00754">ISwitchControlBase::OnInit()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00216">ITextEntryControl::OnKeyDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00819">IKnobControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00924">ISliderControlBase::OnMouseDrag()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00283">OnPopupMenuSelection()</a>, <a class="el" href="_i_control_8cpp_source.html#l00646">ICaptionControl::OnResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00233">IGraphics::SetControlValueAfterTextEdit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00710">IVKnobControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00879">IVSliderControl::SetDirty()</a>, <a class="el" href="_i_control_8h_source.html#l01552">IVTrackControlBase::SetParams()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00540">IVMenuButtonControl::SetValueFromDelegate()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00164">IVNumberBoxControl::SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00175">IVNumberBoxControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>.</p>
 
 </div>
 </div>
@@ -1369,9 +1372,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00109">109</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01870">IGraphics::CreateTextEntry()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">GetParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01357">IGraphics::GetParamIdxForPTAutomation()</a>, <a class="el" href="_i_control_8cpp_source.html#l00754">ISwitchControlBase::OnInit()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00952">IGraphics::OnMouseDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01038">IGraphics::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00283">OnPopupMenuSelection()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00253">IGraphics::SetControlValueAfterPopupMenu()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">IGraphics::UpdatePeers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::CreateTextEntry()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">GetParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01363">IGraphics::GetParamIdxForPTAutomation()</a>, <a class="el" href="_i_control_8cpp_source.html#l00754">ISwitchControlBase::OnInit()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00952">IGraphics::OnMouseDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01038">IGraphics::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00283">OnPopupMenuSelection()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00253">IGraphics::SetControlValueAfterPopupMenu()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">IGraphics::UpdatePeers()</a>.</p>
 
 </div>
 </div>
@@ -1399,7 +1402,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the parent container, if the control is a sub control </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00458">458</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00461">461</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00806">IGraphics::IsDirty()</a>.</p>
 
@@ -1429,7 +1432,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control should show parameter labels/units e.g. "Hz" in text entry prompts </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00382">382</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00385">385</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>.</p>
 
@@ -1461,9 +1464,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the rectangular draw area for this control, within the graphics context. </p>
 <dl class="section return"><dt>Returns</dt><dd>The control's bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00307">307</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00310">310</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_v_number_box_control_8h_source.html#l00058">IVNumberBoxControl::Draw()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00732">IBitmapBase::DrawBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00806">IGraphics::IsDirty()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00076">IVNumberBoxControl::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">IGraphics::StartLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_v_number_box_control_8h_source.html#l00058">IVNumberBoxControl::Draw()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00735">IBitmapBase::DrawBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00806">IGraphics::IsDirty()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00076">IVNumberBoxControl::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01930">IGraphics::StartLayer()</a>.</p>
 
 </div>
 </div>
@@ -1493,9 +1496,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the control's tag. </p>
 <dl class="section see"><dt>See also</dt><dd>Control Tags </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00417">417</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00420">420</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01350">IGraphics::GetControlTag()</a>, and <a class="el" href="_i_control_8h_source.html#l00463">GetUI()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01350">IGraphics::GetControlTag()</a>, and <a class="el" href="_i_control_8h_source.html#l00466">GetUI()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_v_keyboard_control_8h_source.html#l00837">IWheelControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00170">IGraphics::RemoveControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00137">IGraphics::RemoveControls()</a>.</p>
 
@@ -1527,7 +1530,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the rectangular mouse tracking target area, within the graphics context for this control. </p>
 <dl class="section return"><dt>Returns</dt><dd>The control's target bounds within the graphics context </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00315">315</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00318">318</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>.</p>
 
@@ -1559,7 +1562,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the Text object for the control. </p>
 <dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="struct_i_text.html" title="IText is used to manage font and text/text entry style for a piece of text on the UI,...">IText</a>&amp; The control's mText object, typically used to determine font/layout/size etc of the main text in a control. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00284">284</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00287">287</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>.</p>
 
@@ -1591,9 +1594,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the max number of characters that are allowed in text entry. </p>
 <dl class="section return"><dt>Returns</dt><dd>int The max number of characters allowed in text entry </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00299">299</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00302">302</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01870">IGraphics::CreateTextEntry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::CreateTextEntry()</a>.</p>
 
 </div>
 </div>
@@ -1621,7 +1624,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Currently set tooltip text </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00215">215</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00218">218</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1649,9 +1652,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> context that owns this control </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00463">463</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00466">466</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00311">AttachGestureRecognizer()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00439">IPopupMenuControl::CreatePopupMenu()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00039">ICornerResizerControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00417">GetTag()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_control_8h_source.html#l01154">IVectorBase::MakeRects()</a>, <a class="el" href="_i_web_view_control_8h_source.html#l00060">IWebViewControl::OnAttached()</a>, <a class="el" href="_test_drop_shadow_control_8h_source.html#l00051">TestDropShadowControl::OnDrop()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00064">TestSVGControl::OnDrop()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00047">IGraphicsLiveEdit::OnInit()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00216">ITextEntryControl::OnKeyDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00197">IGraphicsLiveEdit::OnKeyDown()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00051">ICornerResizerControl::OnMouseDblClick()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, <a class="el" href="_test_text_control_8h_source.html#l00046">TestTextControl::OnMouseDblClick()</a>, <a class="el" href="_i_control_8h_source.html#l02238">PlaceHolder::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01081">IVXYPadControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01374">IVColorSwatchControl::OnMouseDown()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00046">ICornerResizerControl::OnMouseDown()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00157">ITextEntryControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00855">IWheelControl::OnMouseDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_sk_lottie_control_8h_source.html#l00119">ISkLottieControl::OnMouseDown()</a>, <a class="el" href="_test_arc_control_8h_source.html#l00057">TestArcControl::OnMouseDown()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00038">TestCursorControl::OnMouseDown()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00099">TestFlexBoxControl::OnMouseDown()</a>, <a class="el" href="_test_image_control_8h_source.html#l00043">TestImageControl::OnMouseDown()</a>, <a class="el" href="_test_poly_control_8h_source.html#l00055">TestPolyControl::OnMouseDown()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00052">TestSVGControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8h_source.html#l02158">IEditableTextControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00550">IURLControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00071">ICornerResizerControl::OnMouseOut()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00050">TestCursorControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l02180">IURLControl::OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00063">ICornerResizerControl::OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l02179">IURLControl::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01090">IVXYPadControl::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_test_arc_control_8h_source.html#l00063">TestArcControl::OnMouseUp()</a>, <a class="el" href="_test_poly_control_8h_source.html#l00061">TestPolyControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00810">IKnobControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00915">ISliderControlBase::OnMouseUp()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00221">IGraphicsLiveEdit::OnPopupMenuSelection()</a>, <a class="el" href="_i_controls_8h_source.html#l00665">IBButtonControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00688">IBSwitchControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00707">IBKnobControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00736">IBSliderControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00754">IBTextControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00794">IBMeterControl::OnRescale()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00056">ICornerResizerControl::OnRescale()</a>, <a class="el" href="_i_control_8h_source.html#l02073">IBitmapControl::OnRescale()</a>, <a class="el" href="_test_size_control_8h_source.html#l00045">TestSizeControl::OnResize()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00294">IGraphicsLiveEdit::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00487">ITextControl::SetBoundsBasedOnStr()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00311">AttachGestureRecognizer()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00439">IPopupMenuControl::CreatePopupMenu()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00039">ICornerResizerControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00420">GetTag()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_control_8h_source.html#l01157">IVectorBase::MakeRects()</a>, <a class="el" href="_i_web_view_control_8h_source.html#l00060">IWebViewControl::OnAttached()</a>, <a class="el" href="_test_drop_shadow_control_8h_source.html#l00051">TestDropShadowControl::OnDrop()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00064">TestSVGControl::OnDrop()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00047">IGraphicsLiveEdit::OnInit()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00216">ITextEntryControl::OnKeyDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00197">IGraphicsLiveEdit::OnKeyDown()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00051">ICornerResizerControl::OnMouseDblClick()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, <a class="el" href="_test_text_control_8h_source.html#l00046">TestTextControl::OnMouseDblClick()</a>, <a class="el" href="_i_control_8h_source.html#l02241">PlaceHolder::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01081">IVXYPadControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01374">IVColorSwatchControl::OnMouseDown()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00046">ICornerResizerControl::OnMouseDown()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00157">ITextEntryControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00855">IWheelControl::OnMouseDown()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00113">IVNumberBoxControl::OnMouseDown()</a>, <a class="el" href="_i_sk_lottie_control_8h_source.html#l00119">ISkLottieControl::OnMouseDown()</a>, <a class="el" href="_test_arc_control_8h_source.html#l00057">TestArcControl::OnMouseDown()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00038">TestCursorControl::OnMouseDown()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00099">TestFlexBoxControl::OnMouseDown()</a>, <a class="el" href="_test_image_control_8h_source.html#l00043">TestImageControl::OnMouseDown()</a>, <a class="el" href="_test_poly_control_8h_source.html#l00055">TestPolyControl::OnMouseDown()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00052">TestSVGControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8h_source.html#l02161">IEditableTextControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00550">IURLControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00071">ICornerResizerControl::OnMouseOut()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00050">TestCursorControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l02183">IURLControl::OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00063">ICornerResizerControl::OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l02182">IURLControl::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01090">IVXYPadControl::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_test_arc_control_8h_source.html#l00063">TestArcControl::OnMouseUp()</a>, <a class="el" href="_test_poly_control_8h_source.html#l00061">TestPolyControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00810">IKnobControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00915">ISliderControlBase::OnMouseUp()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00221">IGraphicsLiveEdit::OnPopupMenuSelection()</a>, <a class="el" href="_i_controls_8h_source.html#l00665">IBButtonControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00688">IBSwitchControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00707">IBKnobControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00736">IBSliderControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00754">IBTextControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00794">IBMeterControl::OnRescale()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00056">ICornerResizerControl::OnRescale()</a>, <a class="el" href="_i_control_8h_source.html#l02076">IBitmapControl::OnRescale()</a>, <a class="el" href="_test_size_control_8h_source.html#l00045">TestSizeControl::OnResize()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00294">IGraphicsLiveEdit::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00487">ITextControl::SetBoundsBasedOnStr()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
 </div>
 </div>
@@ -1679,7 +1682,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>A const pointer to the <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> context that owns this control </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00466">466</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00469">469</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1729,7 +1732,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_track_control_base.html#aead38b40183cdda58e281b3ce840b968">IVTrackControlBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00241">241</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00244">244</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00258">OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00668">IVKnobControl::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00830">IVSliderControl::OnMouseDblClick()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00952">IGraphics::OnMouseDown()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00252">OnMouseDown()</a>.</p>
 
@@ -1762,9 +1765,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00153">153</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l01509">ISVGKnobControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01418">ISVGButtonControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01477">ISVGToggleControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01538">ISVGSliderControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01708">IBKnobRotaterControl::Draw()</a>, <a class="el" href="_i_l_e_d_control_8h_source.html#l00043">ILEDControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00766">IWheelControl::Draw()</a>, <a class="el" href="_test_arc_control_8h_source.html#l00033">TestArcControl::Draw()</a>, <a class="el" href="_test_blend_control_8h_source.html#l00034">TestBlendControl::Draw()</a>, <a class="el" href="_test_gradient_control_8h_source.html#l00032">TestGradientControl::Draw()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00031">TestLayerControl::Draw()</a>, <a class="el" href="_test_multi_path_control_8h_source.html#l00032">TestMultiPathControl::Draw()</a>, <a class="el" href="_test_poly_control_8h_source.html#l00031">TestPolyControl::Draw()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00036">TestTextOrientationControl::Draw()</a>, <a class="el" href="_test_text_size_control_8h_source.html#l00037">TestTextSizeControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00732">IBitmapBase::DrawBitmap()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00180">IVToggleControl::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00071">IVButtonControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00175">IVToggleControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00621">IVKnobControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00785">IVSliderControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00968">IVRangeSliderControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01051">IVXYPadControl::DrawWidget()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01626">IBSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00762">ISwitchControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00584">ITextToggleControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01018">IVRangeSliderControl::OnMouseDrag()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00875">IWheelControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00594">ITextToggleControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">SetValueFromUserInput()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">IGraphics::UpdatePeers()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l01509">ISVGKnobControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01418">ISVGButtonControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01477">ISVGToggleControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01538">ISVGSliderControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01708">IBKnobRotaterControl::Draw()</a>, <a class="el" href="_i_l_e_d_control_8h_source.html#l00043">ILEDControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00766">IWheelControl::Draw()</a>, <a class="el" href="_test_arc_control_8h_source.html#l00033">TestArcControl::Draw()</a>, <a class="el" href="_test_blend_control_8h_source.html#l00034">TestBlendControl::Draw()</a>, <a class="el" href="_test_gradient_control_8h_source.html#l00032">TestGradientControl::Draw()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00031">TestLayerControl::Draw()</a>, <a class="el" href="_test_multi_path_control_8h_source.html#l00032">TestMultiPathControl::Draw()</a>, <a class="el" href="_test_poly_control_8h_source.html#l00031">TestPolyControl::Draw()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00036">TestTextOrientationControl::Draw()</a>, <a class="el" href="_test_text_size_control_8h_source.html#l00037">TestTextSizeControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l00735">IBitmapBase::DrawBitmap()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00180">IVToggleControl::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00071">IVButtonControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00175">IVToggleControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00621">IVKnobControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00785">IVSliderControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00968">IVRangeSliderControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01051">IVXYPadControl::DrawWidget()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01626">IBSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00762">ISwitchControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00584">ITextToggleControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01018">IVRangeSliderControl::OnMouseDrag()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00875">IWheelControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00594">ITextToggleControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">SetValueFromUserInput()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">IGraphics::UpdatePeers()</a>.</p>
 
 </div>
 </div>
@@ -1792,9 +1795,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>/c true if this control supports multiple gestures </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00437">437</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00440">440</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l02310">IGraphics::OnGestureRecognized()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02290">IGraphics::RespondsToGesture()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l02316">IGraphics::OnGestureRecognized()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02296">IGraphics::RespondsToGesture()</a>.</p>
 
 </div>
 </div>
@@ -1822,7 +1825,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>/c true if this control wants to know about MIDI messages send to the UI. See OnMIDIMsg() </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00423">423</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00426">426</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00126">IGEditorDelegate::SendMidiMsgFromDelegate()</a>.</p>
 
@@ -1852,7 +1855,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>/c true if this control supports multiple touches </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00429">429</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00432">432</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1894,7 +1897,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00131">IVTabbedPagesControl::Hide()</a>, <a class="el" href="_i_control_8h_source.html#l00670">IContainerBase::Hide()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00476">IGraphics::HideControl()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, and <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00169">IVTabbedPagesControl::OnAttached()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00131">IVTabbedPagesControl::Hide()</a>, <a class="el" href="_i_control_8h_source.html#l00673">IContainerBase::Hide()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00476">IGraphics::HideControl()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, and <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00169">IVTabbedPagesControl::OnAttached()</a>.</p>
 
 </div>
 </div>
@@ -1928,7 +1931,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00231">231</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00496">GetAnimationFunction()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00499">GetAnimationFunction()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_test_multi_touch_control_8h_source.html#l00099">TestMTControl::IsDirty()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00806">IGraphics::IsDirty()</a>.</p>
 
@@ -1958,7 +1961,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control is disabled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00358">358</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00361">361</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00038">IVLabelControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00234">IVKeyboardControl::Draw()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00071">IVButtonControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00118">IVSwitchControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00175">IVToggleControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00379">IVTabSwitchControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00474">IVRadioButtonControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00621">IVKnobControl::DrawWidget()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00144">IVNumberBoxControl::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01731">IBMeterControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_r_t_text_control_8h_source.html#l00038">IRTTextControl&lt; MAXNC, T &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00110">IVDisplayControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00103">IVMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00190">IVPeakAvgMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00228">IVMultiSliderControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, and <a class="el" href="_i_v_scope_control_8h_source.html#l00073">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnMsgFromDelegate()</a>.</p>
 
@@ -1988,7 +1991,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the control is hidden. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00351">351</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00354">354</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00226">IGraphics::SetControlBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00212">IGraphics::SetControlPosition()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00219">IGraphics::SetControlSize()</a>.</p>
 
@@ -2040,7 +2043,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_button_control.html#a28b630e20c7a12ba532af75455107ff4">IVButtonControl</a>, <a class="el" href="class_i_v_switch_control.html#a25a8bd56b45c4fdfe727eee0dfc36ae5">IVSwitchControl</a>, <a class="el" href="class_i_v_tab_switch_control.html#a459f8c4eb36bace21054c0449e37b324">IVTabSwitchControl</a>, <a class="el" href="class_i_v_knob_control.html#a708efc7266be95d85d516e403b56937f">IVKnobControl</a>, and <a class="el" href="class_i_v_slider_control.html#aab506399b0750adc21eb5f592d93e7cb">IVSliderControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00391">391</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00394">394</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00862">IRECT::Contains()</a>.</p>
 
@@ -2073,7 +2076,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00132">132</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00486">IGraphics::ForControlWithParam()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00461">IGraphics::GetControlWithParamIdx()</a>.</p>
 
@@ -2103,9 +2106,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The number of values for this control </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00235">235</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00238">238</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00968">IVRangeSliderControl::DrawWidget()</a>, <a class="el" href="_i_control_8h_source.html#l01517">IVTrackControlBase::DrawWidget()</a>, <a class="el" href="_i_control_8h_source.html#l00523">ForValIdx()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l01502">IVTrackControlBase::GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">GetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00132">LinkedToParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00952">IGraphics::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01018">IVRangeSliderControl::OnMouseDrag()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00991">IVRangeSliderControl::OnMouseOver()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01038">IGraphics::OnMouseUp()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00253">IGraphics::SetControlValueAfterPopupMenu()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00115">SetParamIdx()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, and <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00968">IVRangeSliderControl::DrawWidget()</a>, <a class="el" href="_i_control_8h_source.html#l01520">IVTrackControlBase::DrawWidget()</a>, <a class="el" href="_i_control_8h_source.html#l00526">ForValIdx()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l01505">IVTrackControlBase::GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">GetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00132">LinkedToParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00952">IGraphics::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01018">IVRangeSliderControl::OnMouseDrag()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00991">IVRangeSliderControl::OnMouseOver()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01038">IGraphics::OnMouseUp()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00253">IGraphics::SetControlValueAfterPopupMenu()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00115">SetParamIdx()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, and <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>.</p>
 
 </div>
 </div>
@@ -2137,7 +2140,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_panel_control.html#a28352fa79f9d397f9eb596b94b5e6238">IVPanelControl</a>, <a class="el" href="class_i_v_number_box_control.html#ad579a0a172843096dbab51dfc7584245">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#a6e9e1c13e2e25bbc55723a9f32ca6518">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">IVDiskPresetManagerControl</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#a657a3e160ebed50abefe4b1d2e4dd880">IVTabbedPagesControl</a>, <a class="el" href="class_i_web_view_control.html#ac2980401fae7c995440679368b6118a2">IWebViewControl</a>, and <a class="el" href="class_i_container_base.html#a57875515fbe62983285da0f01888f8fc">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00156">156</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00159">159</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00299">IGraphics::AttachControl()</a>.</p>
 
@@ -2170,7 +2173,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Implement this to respond to a menu selection from <a class="el" href="class_i_control.html#aa73805d1f6e1abf46781e8b976538beb" title="Called by default when the user right clicks a control.">CreateContextMenu()</a>;. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_control.html#aa73805d1f6e1abf46781e8b976538beb" title="Called by default when the user right clicks a control.">CreateContextMenu()</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00181">181</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00184">184</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00253">IGraphics::SetControlValueAfterPopupMenu()</a>.</p>
 
@@ -2202,11 +2205,47 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Implement to do something when something was drag 'n dropped onto this control. </p>
 
-<p>Reimplemented in <a class="el" href="class_test_drop_shadow_control.html#a8d1754073de34c69ee99f2ee7b58d6af">TestDropShadowControl</a>, <a class="el" href="class_test_image_control.html#a2933ae5180c1cd4e4a03b07641736679">TestImageControl</a>, and <a class="el" href="class_test_s_v_g_control.html#ae1b5ef73c17f6e34a2fe9f25d67f5c15">TestSVGControl</a>.</p>
+<p>Reimplemented in <a class="el" href="class_test_drag_and_drop_control.html#a821d7582e2ed886c4fa85f6d3583903d">TestDragAndDropControl</a>, <a class="el" href="class_test_drop_shadow_control.html#a8d1754073de34c69ee99f2ee7b58d6af">TestDropShadowControl</a>, <a class="el" href="class_test_image_control.html#a2933ae5180c1cd4e4a03b07641736679">TestImageControl</a>, and <a class="el" href="class_test_s_v_g_control.html#ae1b5ef73c17f6e34a2fe9f25d67f5c15">TestSVGControl</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00144">144</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01247">IGraphics::OnDrop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01247">IGraphics::OnDrop()</a>, and <a class="el" href="_i_control_8h_source.html#l00147">OnDropMultiple()</a>.</p>
+
+</div>
+</div>
+<a id="a1a78bb5cf3726e81bd32bfa02b14107a" name="a1a78bb5cf3726e81bd32bfa02b14107a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a78bb5cf3726e81bd32bfa02b14107a">&#9670;&#160;</a></span>OnDropMultiple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IControl::OnDropMultiple </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; const char * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implement to handle multiple items drag 'n dropped onto this control. </p>
+
+<p>Reimplemented in <a class="el" href="class_test_drag_and_drop_control.html#a56f80fbde2c6ad6dcfebb7f0ee6d552d">TestDragAndDropControl</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00147">147</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00144">OnDrop()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01253">IGraphics::OnDropMultiple()</a>.</p>
 
 </div>
 </div>
@@ -2264,7 +2303,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00320">320</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l02310">IGraphics::OnGestureRecognized()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l02316">IGraphics::OnGestureRecognized()</a>.</p>
 
 </div>
 </div>
@@ -2293,9 +2332,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>This is an idle timer tick call on the GUI thread, only active if USE_IDLE_CALLS is defined. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00414">414</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00417">417</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01441">IGraphics::OnGUIIdle()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01447">IGraphics::OnGUIIdle()</a>.</p>
 
 </div>
 </div>
@@ -2326,9 +2365,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_switch_control.html#a1131e610d6b18147eb553679aac0d566">IVSwitchControl</a>, <a class="el" href="class_i_v_tab_switch_control.html#aeb719eaaaf423c6b6267f4dde90b69b0">IVTabSwitchControl</a>, <a class="el" href="class_i_v_knob_control.html#a1e205ea329acfefa38cea58c346eaa4d">IVKnobControl</a>, <a class="el" href="class_i_v_slider_control.html#acfc347be0ebb54e8b3c6b10ac126dd0e">IVSliderControl</a>, <a class="el" href="class_i_v_group_control.html#a4acb57635b5c4d96ca1df86fbe9b9c1b">IVGroupControl</a>, <a class="el" href="class_i_v_number_box_control.html#a509143e42c167814c62c365726a892cc">IVNumberBoxControl</a>, <a class="el" href="class_test_gestures_control.html#afd8a426c3afc9615bf18a0575a2ac799">TestGesturesControl</a>, <a class="el" href="class_i_switch_control_base.html#ad24d97d550f6189dfe630874df81af9f">ISwitchControlBase</a>, <a class="el" href="class_i_text_control.html#a5c9c9604b2ded3a71d1a2cabf8f12d68">ITextControl</a>, and <a class="el" href="class_i_graphics_live_edit.html#a62ee4397355c2dd3553f55291ddffaf3">IGraphicsLiveEdit</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00153">153</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00156">156</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00448">SetDelegate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00451">SetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -2474,7 +2513,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_keyboard_control.html#a4c5dbddfbf5abc6089619c0bc5348049">IVKeyboardControl</a>, and <a class="el" href="class_i_wheel_control.html#a1a21fcdb4a6ee6fb60814eada8947cf6">IWheelControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00162">162</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00165">165</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00126">IGEditorDelegate::SendMidiMsgFromDelegate()</a>.</p>
 
@@ -2534,7 +2573,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00258">258</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00241">GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00244">GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01176">IGraphics::OnMouseDblClick()</a>.</p>
 
@@ -2594,7 +2633,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00252">252</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00241">GetValIdxForPos()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00244">GetValIdxForPos()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00952">IGraphics::OnMouseDown()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00171">IPopupMenuControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>.</p>
 
@@ -2702,9 +2741,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00275">275</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00556">mMouseIsOver</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00559">mMouseIsOver</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01126">IGraphics::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00082">IVSwitchControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00163">IVTabSwitchControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00268">IVKnobControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00310">IVSliderControl::OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00071">ICornerResizerControl::OnMouseOut()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00050">TestCursorControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l02180">IURLControl::OnMouseOut()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01104">IGraphics::OnMouseOver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01126">IGraphics::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00082">IVSwitchControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00163">IVTabSwitchControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00268">IVKnobControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00310">IVSliderControl::OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00071">ICornerResizerControl::OnMouseOut()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00050">TestCursorControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l02183">IURLControl::OnMouseOut()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01104">IGraphics::OnMouseOver()</a>.</p>
 
 </div>
 </div>
@@ -2762,9 +2801,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00267">267</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00556">mMouseIsOver</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00559">mMouseIsOver</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01104">IGraphics::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00428">IVTabSwitchControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00683">IVKnobControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00845">IVSliderControl::OnMouseOver()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00063">ICornerResizerControl::OnMouseOver()</a>, and <a class="el" href="_i_control_8h_source.html#l02179">IURLControl::OnMouseOver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01104">IGraphics::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00428">IVTabSwitchControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00683">IVKnobControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00845">IVSliderControl::OnMouseOver()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00063">ICornerResizerControl::OnMouseOver()</a>, and <a class="el" href="_i_control_8h_source.html#l02182">IURLControl::OnMouseOver()</a>.</p>
 
 </div>
 </div>
@@ -2935,7 +2974,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_b_meter_control.html#a4a6063c7d56c0b2fcbe7219e48823d50">IBMeterControl</a>, <a class="el" href="class_i_r_t_text_control.html#ac8708487c8a9ac5b166b7c4c473c12e1">IRTTextControl&lt; MAXNC, T &gt;</a>, <a class="el" href="class_i_v_display_control.html#aa1ebd1026d2642b8c8008e2cc50a0433">IVDisplayControl</a>, <a class="el" href="class_i_v_meter_control.html#a998a684e72971c66f9d8d3debaab5871">IVMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_meter_control.html#a998a684e72971c66f9d8d3debaab5871">IVMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_meter_control.html#a998a684e72971c66f9d8d3debaab5871">IVMeterControl&lt; 1 &gt;</a>, <a class="el" href="class_i_v_peak_avg_meter_control.html#aaf8aa2e50feffdd8ceddb327463f6e10">IVPeakAvgMeterControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_peak_avg_meter_control.html#aaf8aa2e50feffdd8ceddb327463f6e10">IVPeakAvgMeterControl&lt; 1 &gt;</a>, <a class="el" href="class_i_v_multi_slider_control.html#a1e9de5be24b77bd0226deb3cafbf2bba">IVMultiSliderControl&lt; MAXNC &gt;</a>, <a class="el" href="class_i_v_multi_slider_control.html#a1e9de5be24b77bd0226deb3cafbf2bba">IVMultiSliderControl&lt; 1 &gt;</a>, and <a class="el" href="class_i_v_scope_control.html#a88e5cb7e6cc911deffae4abc6cf612bb">IVScopeControl&lt; MAXNC, MAXBUF &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00159">159</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00162">162</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00083">IGEditorDelegate::SendControlMsgFromDelegate()</a>.</p>
 
@@ -3022,9 +3061,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_b_button_control.html#a7fd74db895f05362cf42b1ad204ece8c">IBButtonControl</a>, <a class="el" href="class_i_b_switch_control.html#a7bb0bccab53dadb640ec6d7c2d006f8a">IBSwitchControl</a>, <a class="el" href="class_i_b_knob_control.html#a17297ae30fc8eaea611a3537a575183a">IBKnobControl</a>, <a class="el" href="class_i_b_slider_control.html#aa12a3deb213cf6078157d2c1b3a78beb">IBSliderControl</a>, <a class="el" href="class_i_b_text_control.html#a8df73042aaf2298e1ade66ec4555d37d">IBTextControl</a>, <a class="el" href="class_i_b_meter_control.html#a9e80c08ef5355a251d034bc3b08e80db">IBMeterControl</a>, <a class="el" href="class_i_corner_resizer_control.html#ae2aee703e9f12ccc9b285c5083c8fccc">ICornerResizerControl</a>, <a class="el" href="class_i_web_view_control.html#a0e943ff294d18aeee0d74321e5f301df">IWebViewControl</a>, <a class="el" href="class_test_size_control.html#a3ccda3356ac4c52df56af5980e8d099c">TestSizeControl</a>, and <a class="el" href="class_i_bitmap_control.html#ae730f5e4b1600f3bc508f7b29ce22d9e">IBitmapControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00147">147</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00150">150</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00448">SetDelegate()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">IGraphics::SetScreenScale()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00451">SetDelegate()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">IGraphics::SetScreenScale()</a>.</p>
 
 </div>
 </div>
@@ -3056,9 +3095,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_button_control.html#aef16ab07b2216bb6ba4fd926567ad8a0">IVButtonControl</a>, <a class="el" href="class_i_v_switch_control.html#aa6038a0c8e6d4d27aa5369e4590c3ffe">IVSwitchControl</a>, <a class="el" href="class_i_v_slide_switch_control.html#afcdebb1dd6c80907d7a8b93e4e06a40b">IVSlideSwitchControl</a>, <a class="el" href="class_i_v_tab_switch_control.html#a3eb31174d8202c0ce6c91c9cee54bb3d">IVTabSwitchControl</a>, <a class="el" href="class_i_v_knob_control.html#a7f9dbc1f564bbec071eee92f13d62743">IVKnobControl</a>, <a class="el" href="class_i_v_slider_control.html#a098cc6eceb881c13efa3b0cd4e3e4f21">IVSliderControl</a>, <a class="el" href="class_i_v_x_y_pad_control.html#a70b57243ade82d5de9bde4b26e4ae7d1">IVXYPadControl</a>, <a class="el" href="class_i_v_plot_control.html#a2dc35b8a5a166975b85bc55998acdbe7">IVPlotControl</a>, <a class="el" href="class_i_v_group_control.html#ab05f9003b0b653f29ad7de8237d3c6da">IVGroupControl</a>, <a class="el" href="class_i_v_panel_control.html#a4db0f949f46b787dc19d2a3ec1497a8e">IVPanelControl</a>, <a class="el" href="class_i_v_color_swatch_control.html#a2d515753adfa3564d86b3f0ccc8610b2">IVColorSwatchControl</a>, <a class="el" href="class_i_s_v_g_slider_control.html#a62cc26778ec9a81166736857faea9202">ISVGSliderControl</a>, <a class="el" href="class_i_b_slider_control.html#a06aa4ae9464c91a5ed105b6ac8ebc188">IBSliderControl</a>, <a class="el" href="class_i_shader_control.html#a94f761e4589d54c27d0563e2c789d6ef">IShaderControl</a>, <a class="el" href="class_i_v_display_control.html#aba09d9f71e583b6f639f72bcf6c900e2">IVDisplayControl</a>, <a class="el" href="class_i_v_keyboard_control.html#a3b7cb0bb31c48c7126120eec97d0848e">IVKeyboardControl</a>, <a class="el" href="class_i_v_number_box_control.html#a1c09bfebe4807908ba8a10a71102d1b3">IVNumberBoxControl</a>, <a class="el" href="class_i_v_baked_preset_manager_control.html#ab51c758821c34e343c6f93bd281dd879">IVBakedPresetManagerControl</a>, <a class="el" href="class_i_v_scope_control.html#a51b0566c03e0e7b97337e03f2a8d9374">IVScopeControl&lt; MAXNC, MAXBUF &gt;</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#a361a50ca5e9696704a934b23e1abbbf0">IVTabbedPagesControl</a>, <a class="el" href="class_i_web_view_control.html#a20890d0ad8c1a51a651dcfe42df9185f">IWebViewControl</a>, <a class="el" href="class_test_color_control.html#a2f726444ad0d44161392fdae185ddb57">TestColorControl</a>, <a class="el" href="class_test_dir_browse_control.html#ac84cf0759c5e5eeac72679d2c0165339">TestDirBrowseControl</a>, <a class="el" href="class_test_flex_box_control.html#a2a7ee754322614308ca33502eef7a6d1">TestFlexBoxControl</a>, <a class="el" href="class_test_gradient_control.html#a6f9c6c0b13b27380483d552a5e5920d6">TestGradientControl</a>, <a class="el" href="class_test_size_control.html#a074eff36776c031bf6b7400f3a2ef8b4">TestSizeControl</a>, <a class="el" href="class_i_container_base.html#a4de57d1e1a086c3e5bbb3bdae52bc11a">IContainerBase</a>, <a class="el" href="class_i_slider_control_base.html#aa54551d3f8fe6e17019f4c092c95b923">ISliderControlBase</a>, <a class="el" href="class_i_v_track_control_base.html#afc94f4135e921c5bc114f8020a850559">IVTrackControlBase</a>, <a class="el" href="class_i_caption_control.html#a70b13c3979398b0be1ad97e0937a3e10">ICaptionControl</a>, <a class="el" href="class_place_holder.html#a50ac59271644f14595cfefe73c4335ca">PlaceHolder</a>, and <a class="el" href="class_i_graphics_live_edit.html#a0e0db1ceb23a9f30a0f63c0d62e93691">IGraphicsLiveEdit</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00150">150</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00153">153</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00089">IGraphics::Resize()</a>, <a class="el" href="_i_control_8h_source.html#l00448">SetDelegate()</a>, <a class="el" href="_i_control_8h_source.html#l00311">SetRECT()</a>, and <a class="el" href="_i_control_8h_source.html#l00323">SetTargetAndDrawRECTs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00089">IGraphics::Resize()</a>, <a class="el" href="_i_control_8h_source.html#l00451">SetDelegate()</a>, <a class="el" href="_i_control_8h_source.html#l00314">SetRECT()</a>, and <a class="el" href="_i_control_8h_source.html#l00326">SetTargetAndDrawRECTs()</a>.</p>
 
 </div>
 </div>
@@ -3107,7 +3146,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_v_number_box_control.html#af3575adbdb40633f1b79693a9622df86">IVNumberBoxControl</a>, <a class="el" href="class_i_editable_text_control.html#a51989ffed1b019ff0a49138c999d4fcd">IEditableTextControl</a>, and <a class="el" href="class_place_holder.html#aadc2a6041affe245601192e891bda241">PlaceHolder</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00178">178</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00181">181</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00233">IGraphics::SetControlValueAfterTextEdit()</a>.</p>
 
@@ -3208,7 +3247,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00357">357</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00463">GetUI()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00466">GetUI()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>.</p>
 
 </div>
 </div>
@@ -3238,7 +3277,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00334">334</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00122">GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00463">GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00821">IRECT::MH()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00818">IRECT::MW()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00122">GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00466">GetUI()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00821">IRECT::MH()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00818">IRECT::MW()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00603">IGraphics::PromptUserInput()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00508">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00258">OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00668">IVKnobControl::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00830">IVSliderControl::OnMouseDblClick()</a>, <a class="el" href="_i_control_8cpp_source.html#l00252">OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00654">IVKnobControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00818">IVSliderControl::OnMouseDown()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00615">ICaptionControl::OnMouseDown()</a>.</p>
 
@@ -3277,7 +3316,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Ptr to this control, for chaining </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00203">203</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00206">206</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00026">IPopupMenuControl::IPopupMenuControl()</a>, and <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>.</p>
 
@@ -3315,9 +3354,9 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00488">488</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00491">491</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00045">DefaultClickActionFunc()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00026">IPopupMenuControl::IPopupMenuControl()</a>, <a class="el" href="_i_control_8h_source.html#l02011">ILambdaControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00875">IWheelControl::OnMouseUp()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00045">DefaultClickActionFunc()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00026">IPopupMenuControl::IPopupMenuControl()</a>, <a class="el" href="_i_control_8h_source.html#l02014">ILambdaControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00875">IWheelControl::OnMouseUp()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
 </div>
 </div>
@@ -3364,7 +3403,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00493">493</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00496">496</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00425">StartAnimation()</a>.</p>
 
@@ -3403,7 +3442,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Ptr to this control, for chaining </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00208">208</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00211">211</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00508">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00097">IVNumberBoxControl::OnAttached()</a>, <a class="el" href="_i_v_preset_manager_control_8h_source.html#l00073">IVBakedPresetManagerControl::OnAttached()</a>, and <a class="el" href="_i_v_preset_manager_control_8h_source.html#l00188">IVDiskPresetManagerControl::OnAttached()</a>.</p>
 
@@ -3436,7 +3475,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Set the Blend for this control. </p>
 <p >This can be used differently by different controls, or not at all. By default it is used to change the opacity of controls when they are disabled </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00292">292</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00295">295</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3463,7 +3502,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00400">400</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00403">403</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3493,9 +3532,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Used internally to set the mDelegate (and mGraphics) variables. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00448">448</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00451">451</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_editor_delegate_8h_source.html#l00075">IGEditorDelegate::GetUI()</a>, <a class="el" href="_i_control_8h_source.html#l00153">OnInit()</a>, <a class="el" href="_i_control_8h_source.html#l00147">OnRescale()</a>, and <a class="el" href="_i_control_8h_source.html#l00150">OnResize()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_editor_delegate_8h_source.html#l00075">IGEditorDelegate::GetUI()</a>, <a class="el" href="_i_control_8h_source.html#l00156">OnInit()</a>, <a class="el" href="_i_control_8h_source.html#l00150">OnRescale()</a>, and <a class="el" href="_i_control_8h_source.html#l00153">OnResize()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00278">IGraphics::AttachBackground()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00348">IGraphics::AttachBubbleControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00299">IGraphics::AttachControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00292">IGraphics::AttachPanelBackground()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00285">IGraphics::AttachSVGBackground()</a>.</p>
 
@@ -3547,9 +3586,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00198">198</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_control_8h_source.html#l00523">ForValIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00445">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00463">GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">GetValue()</a>, <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00244">IEditorDelegate::SendParameterValueFromUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">IGraphics::UpdatePeers()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_control_8h_source.html#l00526">ForValIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00448">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00466">GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">GetValue()</a>, <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00244">IEditorDelegate::SendParameterValueFromUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">IGraphics::UpdatePeers()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l01182">IVPlotControl::AddPlotFunc()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00504">IPopupMenuControl::CalculateMenuPanels()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01870">IGraphics::CreateTextEntry()</a>, <a class="el" href="_i_control_8cpp_source.html#l00239">Hide()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_test_drop_shadow_control_8h_source.html#l00051">TestDropShadowControl::OnDrop()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00064">TestSVGControl::OnDrop()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00054">TestGesturesControl::OnInit()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00204">IVKeyboardControl::OnMidi()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00812">IWheelControl::OnMidi()</a>, <a class="el" href="_test_text_control_8h_source.html#l00046">TestTextControl::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00419">IVTabSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01626">IBSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00095">IVKeyboardControl::OnMouseDown()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDown()</a>, <a class="el" href="_i_sk_lottie_control_8h_source.html#l00119">ISkLottieControl::OnMouseDown()</a>, <a class="el" href="_test_animation_control_8h_source.html#l00061">TestAnimationControl::OnMouseDown()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00038">TestCursorControl::OnMouseDown()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>, <a class="el" href="_test_font_control_8h_source.html#l00054">TestFontControl::OnMouseDown()</a>, <a class="el" href="_test_gradient_control_8h_source.html#l00045">TestGradientControl::OnMouseDown()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00055">TestLayerControl::OnMouseDown()</a>, <a class="el" href="_test_multi_path_control_8h_source.html#l00168">TestMultiPathControl::OnMouseDown()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00052">TestSVGControl::OnMouseDown()</a>, <a class="el" href="_test_text_control_8h_source.html#l00040">TestTextControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00709">IButtonControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00762">ISwitchControlBase::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01099">IVXYPadControl::OnMouseDrag()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00182">IPopupMenuControl::OnMouseDrag()</a>, <a class="el" href="_i_shader_control_8h_source.html#l00108">IShaderControl::OnMouseDrag()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00140">IVKeyboardControl::OnMouseDrag()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00093">TestMTControl::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00819">IKnobControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00924">ISliderControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8h_source.html#l02025">ILambdaControl::OnMouseDrag()</a>, <a class="el" href="_test_bezier_control_8h_source.html#l00069">TestBezierControl::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00275">OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00163">IVTabSwitchControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01368">IVColorSwatchControl::OnMouseOut()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00129">IVKeyboardControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l01488">IVTrackControlBase::OnMouseOut()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00428">IVTabSwitchControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00991">IVRangeSliderControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01352">IVColorSwatchControl::OnMouseOver()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00191">IPopupMenuControl::OnMouseOver()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00163">IVKeyboardControl::OnMouseOver()</a>, <a class="el" href="_test_bezier_control_8h_source.html#l00076">TestBezierControl::OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l01482">IVTrackControlBase::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01090">IVXYPadControl::OnMouseUp()</a>, <a class="el" href="_i_shader_control_8h_source.html#l00097">IShaderControl::OnMouseUp()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00204">ITextEntryControl::OnMouseUp()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00114">IVKeyboardControl::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00076">TestMTControl::OnMouseUp()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00053">TestTextOrientationControl::OnMouseUp()</a>, <a class="el" href="_test_text_size_control_8h_source.html#l00051">TestTextSizeControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00810">IKnobControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00915">ISliderControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00780">ISwitchControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8h_source.html#l02017">ILambdaControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01731">IBMeterControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_r_t_text_control_8h_source.html#l00038">IRTTextControl&lt; MAXNC, T &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00110">IVDisplayControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00103">IVMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00190">IVPeakAvgMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00073">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00056">TestDirBrowseControl::OnPopupMenuSelection()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00109">TestFlexBoxControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00077">IVButtonControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00437">IVTabSwitchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01109">IVXYPadControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01176">IVPlotControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01257">IVGroupControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01321">IVColorSwatchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01544">ISVGSliderControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01682">IBSliderControl::OnResize()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00046">IVDisplayControl::OnResize()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00187">IVKeyboardControl::OnResize()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00067">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00888">ISliderControlBase::OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l01494">IVTrackControlBase::OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l02163">IEditableTextControl::OnTextEntryCompletion()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00172">IVKeyboardControl::OnTouchCancelled()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">IGraphics::SetAllControlsDirty()</a>, <a class="el" href="_i_control_8h_source.html#l02187">IURLControl::SetCLColor()</a>, <a class="el" href="_i_control_8h_source.html#l00783">IVectorBase::SetColor()</a>, <a class="el" href="_i_control_8cpp_source.html#l00594">ITextToggleControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00710">IVKnobControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00879">IVSliderControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00245">SetDisabled()</a>, <a class="el" href="_i_control_8h_source.html#l02184">IURLControl::SetMOColor()</a>, <a class="el" href="_i_control_8cpp_source.html#l00115">SetParamIdx()</a>, <a class="el" href="_i_control_8cpp_source.html#l00365">SetPTParameterHighlight()</a>, <a class="el" href="_i_control_8cpp_source.html#l00456">ITextControl::SetStr()</a>, <a class="el" href="_i_control_8cpp_source.html#l00469">ITextControl::SetStrFmt()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00397">SnapToMouse()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l01182">IVPlotControl::AddPlotFunc()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00504">IPopupMenuControl::CalculateMenuPanels()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::CreateTextEntry()</a>, <a class="el" href="_i_control_8cpp_source.html#l00239">Hide()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_test_drag_n_drop_control_8h_source.html#l00050">TestDragAndDropControl::OnDrop()</a>, <a class="el" href="_test_drop_shadow_control_8h_source.html#l00051">TestDropShadowControl::OnDrop()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00064">TestSVGControl::OnDrop()</a>, <a class="el" href="_test_drag_n_drop_control_8h_source.html#l00057">TestDragAndDropControl::OnDropMultiple()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00054">TestGesturesControl::OnInit()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00204">IVKeyboardControl::OnMidi()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00812">IWheelControl::OnMidi()</a>, <a class="el" href="_test_text_control_8h_source.html#l00046">TestTextControl::OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00419">IVTabSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01626">IBSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00095">IVKeyboardControl::OnMouseDown()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDown()</a>, <a class="el" href="_i_sk_lottie_control_8h_source.html#l00119">ISkLottieControl::OnMouseDown()</a>, <a class="el" href="_test_animation_control_8h_source.html#l00061">TestAnimationControl::OnMouseDown()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00038">TestCursorControl::OnMouseDown()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>, <a class="el" href="_test_font_control_8h_source.html#l00054">TestFontControl::OnMouseDown()</a>, <a class="el" href="_test_gradient_control_8h_source.html#l00045">TestGradientControl::OnMouseDown()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00055">TestLayerControl::OnMouseDown()</a>, <a class="el" href="_test_multi_path_control_8h_source.html#l00168">TestMultiPathControl::OnMouseDown()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00052">TestSVGControl::OnMouseDown()</a>, <a class="el" href="_test_text_control_8h_source.html#l00040">TestTextControl::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00709">IButtonControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00762">ISwitchControlBase::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01099">IVXYPadControl::OnMouseDrag()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00182">IPopupMenuControl::OnMouseDrag()</a>, <a class="el" href="_i_shader_control_8h_source.html#l00108">IShaderControl::OnMouseDrag()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00140">IVKeyboardControl::OnMouseDrag()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00093">TestMTControl::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00819">IKnobControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00924">ISliderControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8h_source.html#l02028">ILambdaControl::OnMouseDrag()</a>, <a class="el" href="_test_bezier_control_8h_source.html#l00069">TestBezierControl::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00275">OnMouseOut()</a>, <a class="el" href="_i_controls_8h_source.html#l00163">IVTabSwitchControl::OnMouseOut()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01368">IVColorSwatchControl::OnMouseOut()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00129">IVKeyboardControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l01491">IVTrackControlBase::OnMouseOut()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00428">IVTabSwitchControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00991">IVRangeSliderControl::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01352">IVColorSwatchControl::OnMouseOver()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00191">IPopupMenuControl::OnMouseOver()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00163">IVKeyboardControl::OnMouseOver()</a>, <a class="el" href="_test_bezier_control_8h_source.html#l00076">TestBezierControl::OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l01485">IVTrackControlBase::OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01090">IVXYPadControl::OnMouseUp()</a>, <a class="el" href="_i_shader_control_8h_source.html#l00097">IShaderControl::OnMouseUp()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00204">ITextEntryControl::OnMouseUp()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00114">IVKeyboardControl::OnMouseUp()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00124">IVNumberBoxControl::OnMouseUp()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00076">TestMTControl::OnMouseUp()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00053">TestTextOrientationControl::OnMouseUp()</a>, <a class="el" href="_test_text_size_control_8h_source.html#l00051">TestTextSizeControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00810">IKnobControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00915">ISliderControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00780">ISwitchControlBase::OnMouseUp()</a>, <a class="el" href="_i_control_8h_source.html#l02020">ILambdaControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01731">IBMeterControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_r_t_text_control_8h_source.html#l00038">IRTTextControl&lt; MAXNC, T &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00110">IVDisplayControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00103">IVMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00190">IVPeakAvgMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00073">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00056">TestDirBrowseControl::OnPopupMenuSelection()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00109">TestFlexBoxControl::OnPopupMenuSelection()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00077">IVButtonControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00437">IVTabSwitchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01109">IVXYPadControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01176">IVPlotControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01257">IVGroupControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01321">IVColorSwatchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01544">ISVGSliderControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01682">IBSliderControl::OnResize()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00046">IVDisplayControl::OnResize()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00187">IVKeyboardControl::OnResize()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00067">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00888">ISliderControlBase::OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l01497">IVTrackControlBase::OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l02166">IEditableTextControl::OnTextEntryCompletion()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00172">IVKeyboardControl::OnTouchCancelled()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">PromptUserInput()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">IGraphics::SetAllControlsDirty()</a>, <a class="el" href="_i_control_8h_source.html#l02190">IURLControl::SetCLColor()</a>, <a class="el" href="_i_control_8h_source.html#l00786">IVectorBase::SetColor()</a>, <a class="el" href="_i_control_8cpp_source.html#l00594">ITextToggleControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00710">IVKnobControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00879">IVSliderControl::SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00245">SetDisabled()</a>, <a class="el" href="_i_control_8h_source.html#l02187">IURLControl::SetMOColor()</a>, <a class="el" href="_i_control_8cpp_source.html#l00115">SetParamIdx()</a>, <a class="el" href="_i_control_8cpp_source.html#l00365">SetPTParameterHighlight()</a>, <a class="el" href="_i_control_8cpp_source.html#l00456">ITextControl::SetStr()</a>, <a class="el" href="_i_control_8cpp_source.html#l00469">ITextControl::SetStrFmt()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00397">SnapToMouse()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>.</p>
 
 </div>
 </div>
@@ -3591,7 +3630,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00481">IGraphics::DisableControl()</a>, and <a class="el" href="_i_control_8h_source.html#l00661">IContainerBase::SetDisabled()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00481">IGraphics::DisableControl()</a>, and <a class="el" href="_i_control_8h_source.html#l00664">IContainerBase::SetDisabled()</a>.</p>
 
 </div>
 </div>
@@ -3628,9 +3667,9 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00276">276</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00279">279</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00539">mGroup</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00542">mGroup</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00299">IGraphics::AttachControl()</a>.</p>
 
@@ -3668,7 +3707,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00379">379</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00382">382</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3704,7 +3743,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00366">366</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00369">369</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3740,7 +3779,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00362">362</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00365">365</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3768,7 +3807,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00562">562</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00565">565</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3817,9 +3856,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00115">115</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00605">ICaptionControl::ICaptionControl()</a>, and <a class="el" href="_i_control_8h_source.html#l01549">IVTrackControlBase::SetParams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00605">ICaptionControl::ICaptionControl()</a>, and <a class="el" href="_i_control_8h_source.html#l01552">IVTrackControlBase::SetParams()</a>.</p>
 
 </div>
 </div>
@@ -3847,7 +3886,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00460">460</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00463">463</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3896,7 +3935,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00291">291</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8h_source.html#l00311">SetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00319">SetTargetRECT()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8h_source.html#l00314">SetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00322">SetTargetRECT()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00212">IGraphics::SetControlPosition()</a>.</p>
 
@@ -3929,7 +3968,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Set if the control should show parameter labels/units e.g. </p>
 <p >"Hz" in text entry prompts </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00385">385</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00388">388</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -3972,7 +4011,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01371">IGraphics::SetPTParameterHighlight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01377">IGraphics::SetPTParameterHighlight()</a>.</p>
 
 </div>
 </div>
@@ -4008,9 +4047,9 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00311">311</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00314">314</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00556">mMouseIsOver</a>, and <a class="el" href="_i_control_8h_source.html#l00150">OnResize()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00559">mMouseIsOver</a>, and <a class="el" href="_i_control_8h_source.html#l00153">OnResize()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00504">IPopupMenuControl::CalculateMenuPanels()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00291">SetPosition()</a>.</p>
 
@@ -4061,7 +4100,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00303">303</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00323">SetTargetAndDrawRECTs()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00326">SetTargetAndDrawRECTs()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00219">IGraphics::SetControlSize()</a>.</p>
 
@@ -4099,9 +4138,9 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00323">323</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00326">326</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00556">mMouseIsOver</a>, and <a class="el" href="_i_control_8h_source.html#l00150">OnResize()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00559">mMouseIsOver</a>, and <a class="el" href="_i_control_8h_source.html#l00153">OnResize()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00508">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00169">IVTabbedPagesControl::OnAttached()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00056">ICornerResizerControl::OnRescale()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00076">IVNumberBoxControl::OnResize()</a>, <a class="el" href="_i_v_preset_manager_control_8h_source.html#l00130">IVBakedPresetManagerControl::OnResize()</a>, <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00205">IVTabbedPagesControl::OnResize()</a>, <a class="el" href="_i_bubble_control_8h_source.html#l00133">IBubbleControl::ResetBounds()</a>, <a class="el" href="_i_control_8cpp_source.html#l00487">ITextControl::SetBoundsBasedOnStr()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00226">IGraphics::SetControlBounds()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00303">SetSize()</a>.</p>
 
@@ -4139,11 +4178,11 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00319">319</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00322">322</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00556">mMouseIsOver</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00559">mMouseIsOver</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00504">IPopupMenuControl::CalculateMenuPanels()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00077">IVButtonControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00133">IVSwitchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00437">IVTabSwitchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00693">IVKnobControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00854">IVSliderControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01109">IVXYPadControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01176">IVPlotControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01257">IVGroupControl::OnResize()</a>, <a class="el" href="_i_controls_8h_source.html#l00482">IVPanelControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01321">IVColorSwatchControl::OnResize()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00046">IVDisplayControl::OnResize()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00076">IVNumberBoxControl::OnResize()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00067">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnResize()</a>, <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00205">IVTabbedPagesControl::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00888">ISliderControlBase::OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l01494">IVTrackControlBase::OnResize()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00294">IGraphicsLiveEdit::OnResize()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00291">SetPosition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00504">IPopupMenuControl::CalculateMenuPanels()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00077">IVButtonControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00133">IVSwitchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00437">IVTabSwitchControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00693">IVKnobControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00854">IVSliderControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01109">IVXYPadControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01176">IVPlotControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01257">IVGroupControl::OnResize()</a>, <a class="el" href="_i_controls_8h_source.html#l00482">IVPanelControl::OnResize()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01321">IVColorSwatchControl::OnResize()</a>, <a class="el" href="_i_v_display_control_8h_source.html#l00046">IVDisplayControl::OnResize()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00076">IVNumberBoxControl::OnResize()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00067">IVScopeControl&lt; MAXNC, MAXBUF &gt;::OnResize()</a>, <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00205">IVTabbedPagesControl::OnResize()</a>, <a class="el" href="_i_control_8cpp_source.html#l00888">ISliderControlBase::OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l01497">IVTrackControlBase::OnResize()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00294">IGraphicsLiveEdit::OnResize()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00291">SetPosition()</a>.</p>
 
 </div>
 </div>
@@ -4181,7 +4220,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Reimplemented in <a class="el" href="class_i_u_r_l_control.html#a02b155328d0bc9a0ae73994745add44c">IURLControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00288">288</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00291">291</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4217,7 +4256,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00303">303</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00306">306</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4253,7 +4292,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00212">212</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00215">215</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4302,7 +4341,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00147">147</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00812">IWheelControl::OnMidi()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00419">IVTabSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01626">IBSwitchControl::OnMouseDown()</a>, <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00190">IVMultiSliderControl&lt; MAXNC &gt;::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00709">IButtonControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00762">ISwitchControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00584">ITextToggleControl::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01099">IVXYPadControl::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00819">IKnobControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00924">ISliderControlBase::OnMouseDrag()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00875">IWheelControl::OnMouseUp()</a>, <a class="el" href="_i_control_8cpp_source.html#l00842">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00964">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01731">IBMeterControl::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00103">IVMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_v_meter_control_8h_source.html#l00190">IVPeakAvgMeterControl&lt; MAXNC &gt;::OnMsgFromDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00159">SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00557">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00183">SetValueToDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00397">SnapToMouse()</a>, and <a class="el" href="_i_v_multi_slider_control_8h_source.html#l00084">IVMultiSliderControl&lt; MAXNC &gt;::SnapToMouse()</a>.</p>
 
@@ -4355,7 +4394,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00159">159</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00463">GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">GetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00466">GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">GetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00068">IGEditorDelegate::SendControlValueFromDelegate()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00540">IVMenuButtonControl::SetValueFromDelegate()</a>, and <a class="el" href="_i_v_number_box_control_8h_source.html#l00164">IVNumberBoxControl::SetValueFromDelegate()</a>.</p>
 
@@ -4448,7 +4487,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00183">183</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00523">ForValIdx()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00438">IParam::GetDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00235">NVals()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00526">ForValIdx()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00438">IParam::GetDefault()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00238">NVals()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00258">OnMouseDblClick()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00668">IVKnobControl::OnMouseDblClick()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00830">IVSliderControl::OnMouseDblClick()</a>.</p>
 
@@ -4481,7 +4520,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Specify whether this control wants to know about MIDI messages sent to the UI. </p>
 <p >See OnMIDIMsg() </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00420">420</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00423">423</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_v_keyboard_control_8h_source.html#l00743">IWheelControl::IWheelControl()</a>.</p>
 
@@ -4513,7 +4552,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Specify whether this control supports multiple touches. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00426">426</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00429">429</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4597,7 +4636,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00397">397</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00891">IRECT::Constrain()</a>, <a class="el" href="_i_control_8h_source.html#l00523">ForValIdx()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00891">IRECT::Constrain()</a>, <a class="el" href="_i_control_8h_source.html#l00526">ForValIdx()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">SetDirty()</a>, <a class="el" href="_i_control_8cpp_source.html#l00147">SetValue()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00895">ISliderControlBase::OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01018">IVRangeSliderControl::OnMouseDrag()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00924">ISliderControlBase::OnMouseDrag()</a>.</p>
 
@@ -4628,7 +4667,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00425">425</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00493">SetAnimation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00496">SetAnimation()</a>.</p>
 
 </div>
 </div>
@@ -4653,7 +4692,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00542">542</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00545">545</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4677,7 +4716,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00548">548</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00551">551</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4701,7 +4740,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00544">544</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00547">547</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4725,7 +4764,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00546">546</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00549">549</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4749,7 +4788,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00547">547</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00550">550</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4775,9 +4814,9 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Controls can be grouped for hiding and showing panels. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00539">539</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00542">542</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00280">GetGroup()</a>, and <a class="el" href="_i_control_8h_source.html#l00276">SetGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00283">GetGroup()</a>, and <a class="el" href="_i_control_8h_source.html#l00279">SetGroup()</a>.</p>
 
 </div>
 </div>
@@ -4801,7 +4840,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00545">545</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00548">548</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4825,7 +4864,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00551">551</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00554">554</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4849,7 +4888,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00550">550</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00553">553</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4876,9 +4915,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>if mGraphics::mHandleMouseOver = true, this will be true when the mouse is over control. </p>
 <p >If you need finer grained control of mouseovers, you can override <a class="el" href="class_i_control.html#a39df22eddb4d9b0fd2f2504562556c49" title="Implement this method to respond to a mouseover event on this control.">OnMouseOver()</a> and <a class="el" href="class_i_control.html#a2897e1dbb1dc32428cea7bad93e3c97e" title="Implement this method to respond to a mouseout event on this control.">OnMouseOut()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00556">556</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00559">559</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8h_source.html#l00463">IVPanelControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01418">ISVGButtonControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01477">ISVGToggleControl::Draw()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00058">IVNumberBoxControl::Draw()</a>, <a class="el" href="_test_animation_control_8h_source.html#l00053">TestAnimationControl::Draw()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00031">TestCursorControl::Draw()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00042">TestDirBrowseControl::Draw()</a>, <a class="el" href="_test_image_control_8h_source.html#l00032">TestImageControl::Draw()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00033">TestSVGControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00504">IURLControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00071">IVButtonControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00118">IVSwitchControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00175">IVToggleControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00621">IVKnobControl::DrawWidget()</a>, <a class="el" href="_i_control_8h_source.html#l00470">GetMouseIsOver()</a>, <a class="el" href="_i_control_8cpp_source.html#l00275">OnMouseOut()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l00311">SetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00323">SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8h_source.html#l00319">SetTargetRECT()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8h_source.html#l00463">IVPanelControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01418">ISVGButtonControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l01477">ISVGToggleControl::Draw()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00058">IVNumberBoxControl::Draw()</a>, <a class="el" href="_test_animation_control_8h_source.html#l00053">TestAnimationControl::Draw()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00031">TestCursorControl::Draw()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00042">TestDirBrowseControl::Draw()</a>, <a class="el" href="_test_drag_n_drop_control_8h_source.html#l00031">TestDragAndDropControl::Draw()</a>, <a class="el" href="_test_image_control_8h_source.html#l00032">TestImageControl::Draw()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00033">TestSVGControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00504">IURLControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00071">IVButtonControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00118">IVSwitchControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00175">IVToggleControl::DrawWidget()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00621">IVKnobControl::DrawWidget()</a>, <a class="el" href="_i_control_8h_source.html#l00473">GetMouseIsOver()</a>, <a class="el" href="_i_control_8cpp_source.html#l00275">OnMouseOut()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l00314">SetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00326">SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8h_source.html#l00322">SetTargetRECT()</a>.</p>
 
 </div>
 </div>
@@ -4902,7 +4941,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00549">549</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00552">552</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4926,7 +4965,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00554">554</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00557">557</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4950,7 +4989,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00559">559</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00562">562</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4974,7 +5013,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00560">560</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00563">563</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -4998,7 +5037,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00535">535</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00538">538</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -5022,7 +5061,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00536">536</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00539">539</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -5046,7 +5085,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00541">541</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00544">544</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -5070,7 +5109,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00543">543</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00546">546</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -5094,7 +5133,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00557">557</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00560">560</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -5118,7 +5157,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00552">552</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00555">555</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -5142,7 +5181,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00553">553</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00556">556</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

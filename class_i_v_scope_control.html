@@ -167,6 +167,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">OnDrop</a> (const char *str)</td></tr>
 <tr class="memdesc:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when something was drag 'n dropped onto this control.  <a href="class_i_control.html#a5e9270b8ce6d321130bbff7821c63d0d">More...</a><br /></td></tr>
 <tr class="separator:a5e9270b8ce6d321130bbff7821c63d0d inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">OnDropMultiple</a> (const std::vector&lt; const char * &gt; &amp;paths)</td></tr>
+<tr class="memdesc:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to handle multiple items drag 'n dropped onto this control.  <a href="class_i_control.html#a1a78bb5cf3726e81bd32bfa02b14107a">More...</a><br /></td></tr>
+<tr class="separator:a1a78bb5cf3726e81bd32bfa02b14107a inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a57f6186624e970a5d6de172570aee111">OnRescale</a> ()</td></tr>
 <tr class="memdesc:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement to do something when graphics is scaled globally (e.g.  <a href="class_i_control.html#a57f6186624e970a5d6de172570aee111">More...</a><br /></td></tr>
 <tr class="separator:a57f6186624e970a5d6de172570aee111 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -666,7 +669,7 @@ template&lt;int MAXNC = 1, int MAXBUF = 128&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_scope_control_8h_source.html#l00037">37</a> of file <a class="el" href="_i_v_scope_control_8h_source.html">IVScopeControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00771">IVectorBase::AttachIControl()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00774">IVectorBase::AttachIControl()</a>.</p>
 
 </div>
 </div>
@@ -709,7 +712,7 @@ template&lt;int MAXNC = 1, int MAXBUF = 128&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_scope_control_8h_source.html#l00044">44</a> of file <a class="el" href="_i_v_scope_control_8h_source.html">IVScopeControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00872">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00885">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02444">IGraphics::DrawRect()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00054">IVScopeControl&lt; MAXNC, MAXBUF &gt;::DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00797">IVectorBase::GetColor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00875">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02450">IGraphics::DrawRect()</a>, <a class="el" href="_i_v_scope_control_8h_source.html#l00054">IVScopeControl&lt; MAXNC, MAXBUF &gt;::DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00800">IVectorBase::GetColor()</a>.</p>
 
 </div>
 </div>
@@ -745,7 +748,7 @@ template&lt;int MAXNC = 1, int MAXBUF = 128&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_scope_control_8h_source.html#l00054">54</a> of file <a class="el" href="_i_v_scope_control_8h_source.html">IVScopeControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02397">IGraphics::DrawData()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00775">IGraphics::DrawHorizontalLine()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00953">IRECT::FracRectVertical()</a>, <a class="el" href="_i_control_8h_source.html#l00797">IVectorBase::GetColor()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01328">IRECT::GetPadded()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02403">IGraphics::DrawData()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00775">IGraphics::DrawHorizontalLine()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00953">IRECT::FracRectVertical()</a>, <a class="el" href="_i_control_8h_source.html#l00800">IVectorBase::GetColor()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01328">IRECT::GetPadded()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_v_scope_control_8h_source.html#l00044">IVScopeControl&lt; MAXNC, MAXBUF &gt;::Draw()</a>.</p>
 
@@ -799,7 +802,7 @@ template&lt;int MAXNC = 1, int MAXBUF = 128&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_scope_control_8h_source.html#l00073">73</a> of file <a class="el" href="_i_v_scope_control_8h_source.html">IVScopeControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00289">IByteStream::Get()</a>, <a class="el" href="_i_control_8h_source.html#l00358">IControl::IsDisabled()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00289">IByteStream::Get()</a>, <a class="el" href="_i_control_8h_source.html#l00361">IControl::IsDisabled()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -835,7 +838,7 @@ template&lt;int MAXNC = 1, int MAXBUF = 128&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_scope_control_8h_source.html#l00067">67</a> of file <a class="el" href="_i_v_scope_control_8h_source.html">IVScopeControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01154">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00319">IControl::SetTargetRECT()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01157">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00322">IControl::SetTargetRECT()</a>.</p>
 
 </div>
 </div>

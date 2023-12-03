@@ -888,6 +888,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="separator:af45880b0583e05a21ee8d4d3bd774ab5 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb0b6d28e2c93565bf3566e64b0d2ced inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#afb0b6d28e2c93565bf3566e64b0d2ced">OnDrop</a> (const char *str, float x, float y)</td></tr>
 <tr class="separator:afb0b6d28e2c93565bf3566e64b0d2ced inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76ffda7fa9fbec0de0b2380cddd96fe inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ab76ffda7fa9fbec0de0b2380cddd96fe">OnDropMultiple</a> (const std::vector&lt; const char * &gt; &amp;paths, float x, float y)</td></tr>
+<tr class="separator:ab76ffda7fa9fbec0de0b2380cddd96fe inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee2e73ca530755b7344dcbf864d18cb inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#adee2e73ca530755b7344dcbf864d18cb">OnGUIIdle</a> ()</td></tr>
 <tr class="memdesc:adee2e73ca530755b7344dcbf864d18cb inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an idle timer tick call on the GUI thread, only active if USE_IDLE_CALLS is defined.  <a href="class_i_graphics.html#adee2e73ca530755b7344dcbf864d18cb">More...</a><br /></td></tr>
 <tr class="separator:adee2e73ca530755b7344dcbf864d18cb inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1236,7 +1238,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">406</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00540">DrawBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00150">APIBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00708">PathFill()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02582">IGraphics::PathRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02655">IGraphics::PathTransformRestore()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02650">IGraphics::PathTransformSave()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02677">IGraphics::PathTransformTranslate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01961">IGraphics::PopLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01952">IGraphics::PushLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01538">IRECT::Translate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00540">DrawBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00150">APIBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00708">PathFill()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02588">IGraphics::PathRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02661">IGraphics::PathTransformRestore()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02656">IGraphics::PathTransformSave()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02683">IGraphics::PathTransformTranslate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01967">IGraphics::PopLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01958">IGraphics::PushLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01538">IRECT::Translate()</a>.</p>
 
 </div>
 </div>
@@ -1490,7 +1492,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00658">658</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02655">IGraphics::PathTransformRestore()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02650">IGraphics::PathTransformSave()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02661">IGraphics::PathTransformRestore()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02656">IGraphics::PathTransformSave()</a>.</p>
 
 </div>
 </div>
@@ -1561,7 +1563,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00648">648</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02174">IGraphics::DoMeasureTextRotation()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02180">IGraphics::DoMeasureTextRotation()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 </div>
 </div>
@@ -2074,7 +2076,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00391">391</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_private_8h_source.html#l00138">APIBitmap::GetBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01961">IGraphics::PopLayer()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01952">IGraphics::PushLayer()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_private_8h_source.html#l00138">APIBitmap::GetBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01967">IGraphics::PopLayer()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01958">IGraphics::PushLayer()</a>.</p>
 
 </div>
 </div>
@@ -2372,7 +2374,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">273</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01823">IGraphics::SearchImageResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01829">IGraphics::SearchImageResource()</a>.</p>
 
 </div>
 </div>
