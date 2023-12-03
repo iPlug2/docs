@@ -256,6 +256,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_i_plug_processor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_i_plug_processor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_i_plug_processor.html">IPlugProcessor</a></td></tr>
 <tr class="memitem:a510a8d22f5145f08184a464c89e47e31 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a510a8d22f5145f08184a464c89e47e31">SetChannelConnections</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, bool connected)</td></tr>
 <tr class="separator:a510a8d22f5145f08184a464c89e47e31 inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6038e4a4aeb0a79b1ae351c5ee970f inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a1e6038e4a4aeb0a79b1ae351c5ee970f">InitLatencyDelay</a> ()</td></tr>
+<tr class="separator:a1e6038e4a4aeb0a79b1ae351c5ee970f inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcf753a00f37c6e30abd863db973008 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a7fcf753a00f37c6e30abd863db973008">AttachBuffers</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, PLUG_SAMPLE_DST **ppData, int nFrames)</td></tr>
 <tr class="separator:a7fcf753a00f37c6e30abd863db973008 inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57047fb41f68b41afa9ee28903831b7 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#ae57047fb41f68b41afa9ee28903831b7">AttachBuffers</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, PLUG_SAMPLE_SRC **ppData, int nFrames)</td></tr>
@@ -285,9 +287,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a73a8dbca69835e0e4c474114026c9364 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">const WDL_String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a73a8dbca69835e0e4c474114026c9364">GetChannelLabel</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx)</td></tr>
 <tr class="separator:a73a8dbca69835e0e4c474114026c9364 inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_i_plug_processor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_plug_processor')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_plug_processor.html">IPlugProcessor</a></td></tr>
-<tr class="memitem:a80e1561a975a0b02af687aa9dacde08b inherit pro_attribs_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; NChanDelayLine&lt; sample &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a80e1561a975a0b02af687aa9dacde08b">mLatencyDelay</a> = nullptr</td></tr>
-<tr class="memdesc:a80e1561a975a0b02af687aa9dacde08b inherit pro_attribs_class_i_plug_processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">A multi-channel delay line used to delay the bypassed signal when a plug-in with latency is bypassed.  <a href="class_i_plug_processor.html#a80e1561a975a0b02af687aa9dacde08b">More...</a><br /></td></tr>
-<tr class="separator:a80e1561a975a0b02af687aa9dacde08b inherit pro_attribs_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a906e0289e8c91899bc39cae4755dc4ed inherit pro_attribs_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed">mTimeInfo</a></td></tr>
 <tr class="memdesc:a906e0289e8c91899bc39cae4755dc4ed inherit pro_attribs_class_i_plug_processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains detailed information about the transport state.  <a href="class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed">More...</a><br /></td></tr>
 <tr class="separator:a906e0289e8c91899bc39cae4755dc4ed inherit pro_attribs_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -378,7 +377,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00212">212</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00208">208</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -398,7 +397,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00243">243</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00239">239</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -458,7 +457,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00253">253</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00249">249</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -524,7 +523,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00424">424</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00420">420</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -566,7 +565,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00350">350</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00346">346</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -602,7 +601,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00070">70</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00066">66</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -644,7 +643,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00123">123</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00119">119</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -674,7 +673,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00276">276</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00272">272</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +712,7 @@ template&lt;class T &gt; </div>
 
 <p>Implements <a class="el" href="class_i_plug_processor.html#a4e9b417cee5b4baba70468cb15d927c3">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00442">442</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00438">438</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -791,7 +790,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00235">235</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00231">231</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -821,7 +820,7 @@ template&lt;class T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00220">220</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html#l00216">216</a> of file <a class="el" href="_i_plug_v_s_t3___processor_base_8cpp_source.html">IPlugVST3_ProcessorBase.cpp</a>.</p>
 
 </div>
 </div>

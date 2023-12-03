@@ -228,6 +228,8 @@ Static Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a510a8d22f5145f08184a464c89e47e31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a510a8d22f5145f08184a464c89e47e31">SetChannelConnections</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, bool connected)</td></tr>
 <tr class="separator:a510a8d22f5145f08184a464c89e47e31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6038e4a4aeb0a79b1ae351c5ee970f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a1e6038e4a4aeb0a79b1ae351c5ee970f">InitLatencyDelay</a> ()</td></tr>
+<tr class="separator:a1e6038e4a4aeb0a79b1ae351c5ee970f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcf753a00f37c6e30abd863db973008"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a7fcf753a00f37c6e30abd863db973008">AttachBuffers</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, PLUG_SAMPLE_DST **ppData, int nFrames)</td></tr>
 <tr class="separator:a7fcf753a00f37c6e30abd863db973008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57047fb41f68b41afa9ee28903831b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#ae57047fb41f68b41afa9ee28903831b7">AttachBuffers</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, PLUG_SAMPLE_SRC **ppData, int nFrames)</td></tr>
@@ -259,9 +261,6 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a80e1561a975a0b02af687aa9dacde08b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; NChanDelayLine&lt; sample &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a80e1561a975a0b02af687aa9dacde08b">mLatencyDelay</a> = nullptr</td></tr>
-<tr class="memdesc:a80e1561a975a0b02af687aa9dacde08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A multi-channel delay line used to delay the bypassed signal when a plug-in with latency is bypassed.  <a href="class_i_plug_processor.html#a80e1561a975a0b02af687aa9dacde08b">More...</a><br /></td></tr>
-<tr class="separator:a80e1561a975a0b02af687aa9dacde08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a906e0289e8c91899bc39cae4755dc4ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed">mTimeInfo</a></td></tr>
 <tr class="memdesc:a906e0289e8c91899bc39cae4755dc4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains detailed information about the transport state.  <a href="class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed">More...</a><br /></td></tr>
 <tr class="separator:a906e0289e8c91899bc39cae4755dc4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -401,7 +400,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00442">442</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00451">451</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -457,7 +456,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00457">457</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00466">466</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -722,7 +721,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00275">275</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00276">276</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -844,7 +843,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00126">126</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00308">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -902,7 +901,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00120">120</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00308">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1011,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00123">123</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00308">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00107">GetSamplesPerBeat()</a>.</p>
 
@@ -1061,7 +1060,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00136">136</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00308">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1090,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00129">129</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00308">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -1161,6 +1160,33 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00171">171</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">MaxNChannelsForBus()</a>.</p>
+
+</div>
+</div>
+<a id="a1e6038e4a4aeb0a79b1ae351c5ee970f" name="a1e6038e4a4aeb0a79b1ae351c5ee970f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e6038e4a4aeb0a79b1ae351c5ee970f">&#9670;&#160;</a></span>InitLatencyDelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IPlugProcessor::InitLatencyDelay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00442">442</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1764,7 +1790,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00484">484</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00493">493</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1802,7 +1828,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00492">492</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00501">501</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1894,7 +1920,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00510">510</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00519">519</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1932,7 +1958,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00515">515</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00524">524</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -1960,7 +1986,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00532">532</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00541">541</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2176,7 +2202,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00570">570</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00579">579</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
@@ -2204,7 +2230,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00272">272</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00273">273</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2351,9 +2377,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00272">272</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00306">mLatencyDelay</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00609">IPlugAAX::SetLatency()</a>, <a class="el" href="_i_plug_a_u_8cpp_source.html#l02006">IPlugAU::SetLatency()</a>, <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00224">IPlugVST2::SetLatency()</a>, and <a class="el" href="_i_plug_v_s_t3_8cpp_source.html#l00244">IPlugVST3::SetLatency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00604">IPlugAAX::SetLatency()</a>, <a class="el" href="_i_plug_a_u_8cpp_source.html#l02007">IPlugAU::SetLatency()</a>, <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00224">IPlugVST2::SetLatency()</a>, and <a class="el" href="_i_plug_v_s_t3_8cpp_source.html#l00244">IPlugVST3::SetLatency()</a>.</p>
 
 </div>
 </div>
@@ -2381,7 +2405,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00274">274</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00275">275</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2409,7 +2433,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00270">270</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00271">271</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2473,7 +2497,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00273">273</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00274">274</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2500,39 +2524,11 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00553">553</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00562">562</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a80e1561a975a0b02af687aa9dacde08b" name="a80e1561a975a0b02af687aa9dacde08b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80e1561a975a0b02af687aa9dacde08b">&#9670;&#160;</a></span>mLatencyDelay</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::unique_ptr&lt;NChanDelayLine&lt;sample&gt; &gt; IPlugProcessor::mLatencyDelay = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A multi-channel delay line used to delay the bypassed signal when a plug-in with latency is bypassed. </p>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00306">306</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00272">SetLatency()</a>.</p>
-
-</div>
-</div>
 <a id="a906e0289e8c91899bc39cae4755dc4ed" name="a906e0289e8c91899bc39cae4755dc4ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a906e0289e8c91899bc39cae4755dc4ed">&#9670;&#160;</a></span>mTimeInfo</h2>
 
@@ -2555,7 +2551,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Contains detailed information about the transport state. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00308">308</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00309">309</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00126">GetPPQPos()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00120">GetSamplePos()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00123">GetTempo()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00136">GetTimeSig()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00129">GetTransportIsRunning()</a>.</p>
 

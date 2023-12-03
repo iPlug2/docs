@@ -573,6 +573,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_i_plug_processor"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_i_plug_processor')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_i_plug_processor.html">IPlugProcessor</a></td></tr>
 <tr class="memitem:a510a8d22f5145f08184a464c89e47e31 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a510a8d22f5145f08184a464c89e47e31">SetChannelConnections</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, bool connected)</td></tr>
 <tr class="separator:a510a8d22f5145f08184a464c89e47e31 inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e6038e4a4aeb0a79b1ae351c5ee970f inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a1e6038e4a4aeb0a79b1ae351c5ee970f">InitLatencyDelay</a> ()</td></tr>
+<tr class="separator:a1e6038e4a4aeb0a79b1ae351c5ee970f inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcf753a00f37c6e30abd863db973008 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a7fcf753a00f37c6e30abd863db973008">AttachBuffers</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, PLUG_SAMPLE_DST **ppData, int nFrames)</td></tr>
 <tr class="separator:a7fcf753a00f37c6e30abd863db973008 inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57047fb41f68b41afa9ee28903831b7 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#ae57047fb41f68b41afa9ee28903831b7">AttachBuffers</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx, int n, PLUG_SAMPLE_SRC **ppData, int nFrames)</td></tr>
@@ -602,9 +604,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a73a8dbca69835e0e4c474114026c9364 inherit pro_methods_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">const WDL_String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a73a8dbca69835e0e4c474114026c9364">GetChannelLabel</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int idx)</td></tr>
 <tr class="separator:a73a8dbca69835e0e4c474114026c9364 inherit pro_methods_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_i_plug_processor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_plug_processor')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_plug_processor.html">IPlugProcessor</a></td></tr>
-<tr class="memitem:a80e1561a975a0b02af687aa9dacde08b inherit pro_attribs_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; NChanDelayLine&lt; sample &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a80e1561a975a0b02af687aa9dacde08b">mLatencyDelay</a> = nullptr</td></tr>
-<tr class="memdesc:a80e1561a975a0b02af687aa9dacde08b inherit pro_attribs_class_i_plug_processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">A multi-channel delay line used to delay the bypassed signal when a plug-in with latency is bypassed.  <a href="class_i_plug_processor.html#a80e1561a975a0b02af687aa9dacde08b">More...</a><br /></td></tr>
-<tr class="separator:a80e1561a975a0b02af687aa9dacde08b inherit pro_attribs_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a906e0289e8c91899bc39cae4755dc4ed inherit pro_attribs_class_i_plug_processor"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed">mTimeInfo</a></td></tr>
 <tr class="memdesc:a906e0289e8c91899bc39cae4755dc4ed inherit pro_attribs_class_i_plug_processor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contains detailed information about the transport state.  <a href="class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed">More...</a><br /></td></tr>
 <tr class="separator:a906e0289e8c91899bc39cae4755dc4ed inherit pro_attribs_class_i_plug_processor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -659,7 +658,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00122">122</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00117">117</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +697,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00567">567</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00562">562</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -736,7 +735,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00522">522</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00517">517</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -835,7 +834,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00585">585</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00580">580</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00101">IPlugAPIBase::GetAAXViewInterface()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00095">IPluginBase::HasUI()</a>.</p>
 
@@ -864,7 +863,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00127">127</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00122">122</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -902,7 +901,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00579">579</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00574">574</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -940,7 +939,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00476">476</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00471">471</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -978,7 +977,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00439">439</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00434">434</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1016,7 +1015,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00452">452</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00447">447</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1097,7 +1096,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00573">573</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00568">568</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1172,7 +1171,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00537">537</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00532">532</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1216,7 +1215,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00260">260</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00255">255</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1255,7 +1254,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_plug_processor.html#a4e9b417cee5b4baba70468cb15d927c3">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00616">616</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00611">611</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1293,7 +1292,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00497">497</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00492">492</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
@@ -1331,7 +1330,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_processor.html#a3c5c2a1b80ba384c50a2bb4888b63461">IPlugProcessor</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00609">609</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00604">604</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_processor_8cpp_source.html#l00272">IPlugProcessor::SetLatency()</a>.</p>
 
@@ -1377,7 +1376,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00227">227</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00222">222</a> of file <a class="el" href="_i_plug_a_a_x_8cpp_source.html">IPlugAAX.cpp</a>.</p>
 
 </div>
 </div>
