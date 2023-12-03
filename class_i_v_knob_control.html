@@ -147,6 +147,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a340aa78fdbe8bdf330eeb4a0c8a28761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9b87a229a4803e67fb453d9ac4c43ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_knob_control.html#ac9b87a229a4803e67fb453d9ac4c43ec">SetPointerThickness</a> (float thickness)</td></tr>
 <tr class="separator:ac9b87a229a4803e67fb453d9ac4c43ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac3427dd50f60a708e20a8921a89484"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_knob_control.html#aaac3427dd50f60a708e20a8921a89484">GetRadius</a> () const</td></tr>
+<tr class="separator:aaac3427dd50f60a708e20a8921a89484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb41602992b1a32e4e75458d041c5a57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_knob_control.html#afb41602992b1a32e4e75458d041c5a57">GetTrackBounds</a> () const</td></tr>
+<tr class="separator:afb41602992b1a32e4e75458d041c5a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_knob_control_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_knob_control_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_knob_control_base.html">IKnobControlBase</a></td></tr>
 <tr class="memitem:a644ac684218f01f578f2ca1afdefbbdf inherit pub_methods_class_i_knob_control_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_knob_control_base.html#a644ac684218f01f578f2ca1afdefbbdf">IKnobControlBase</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, EDirection direction=EDirection::Vertical, double gearing=DEFAULT_GEARING)</td></tr>
 <tr class="separator:a644ac684218f01f578f2ca1afdefbbdf inherit pub_methods_class_i_knob_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -945,7 +949,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00601">601</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00875">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00898">IVectorBase::DrawValue()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00621">DrawWidget()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00875">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00898">IVectorBase::DrawValue()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00640">DrawWidget()</a>.</p>
 
 </div>
 </div>
@@ -1001,7 +1005,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00641">641</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00651">651</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -1057,7 +1061,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00649">649</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00659">659</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -1089,9 +1093,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_vector_base.html#a4f5560428511e64ebc99836ee7f74e96">IVectorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00621">621</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00640">640</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00917">IVectorBase::DrawPressableShape()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01574">IRECT::GetCentredInside()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_control_8h_source.html#l00361">IControl::IsDisabled()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00821">IRECT::MH()</a>, <a class="el" href="_i_control_8h_source.html#l00559">IControl::mMouseIsOver</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00818">IRECT::MW()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00917">IVectorBase::DrawPressableShape()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01574">IRECT::GetCentredInside()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_control_8h_source.html#l00361">IControl::IsDisabled()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00821">IRECT::MH()</a>, <a class="el" href="_i_control_8h_source.html#l00559">IControl::mMouseIsOver</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00818">IRECT::MW()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00601">Draw()</a>.</p>
 
@@ -1128,6 +1132,44 @@ Protected Attributes</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00609">609</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l01574">IRECT::GetCentredInside()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+
+</div>
+</div>
+<a id="aaac3427dd50f60a708e20a8921a89484" name="aaac3427dd50f60a708e20a8921a89484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaac3427dd50f60a708e20a8921a89484">&#9670;&#160;</a></span>GetRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float IVKnobControl::GetRadius </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00621">621</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afb41602992b1a32e4e75458d041c5a57" name="afb41602992b1a32e4e75458d041c5a57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb41602992b1a32e4e75458d041c5a57">&#9670;&#160;</a></span>GetTrackBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a> IVKnobControl::GetTrackBounds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00635">635</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -1177,7 +1219,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a51b0ac8f885b87591c5814d18df0fa2c">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00699">699</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00709">709</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00862">IRECT::Contains()</a>.</p>
 
@@ -1210,7 +1252,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#acd7d00c3219eacdcc1b5dfd5996ffcae">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00720">720</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00730">730</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00372">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">IParam::GetName()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>.</p>
 
@@ -1268,7 +1310,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a82331ea6cbdead5fc2a7ce6df7c97d40">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00668">668</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00678">678</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00244">IControl::GetValIdxForPos()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">IControl::PromptUserInput()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00183">IControl::SetValueToDefault()</a>.</p>
 
@@ -1326,9 +1368,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a4bf75d9b7be5d293b801b65c8834295e">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00654">654</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00664">664</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00862">IRECT::Contains()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">IControl::PromptUserInput()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00710">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00862">IRECT::Contains()</a>, <a class="el" href="_i_control_8cpp_source.html#l00799">IKnobControlBase::OnMouseDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00334">IControl::PromptUserInput()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00720">SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -1418,9 +1460,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a39df22eddb4d9b0fd2f2504562556c49">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00683">683</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00693">693</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00862">IRECT::Contains()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">IControl::OnMouseOver()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00710">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00862">IRECT::Contains()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">IControl::OnMouseOver()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00720">SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -1476,9 +1518,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a919eb7860ce5559e589f95ceb3309df7">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00677">677</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00687">687</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00810">IKnobControlBase::OnMouseUp()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00710">SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00810">IKnobControlBase::OnMouseUp()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00720">SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -1510,9 +1552,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a0c4927d3332fabe6f7626a03624f390f">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00693">693</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00703">703</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01157">IVectorBase::MakeRects()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00710">SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00322">IControl::SetTargetRECT()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01157">IVectorBase::MakeRects()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00720">SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00322">IControl::SetTargetRECT()</a>.</p>
 
 </div>
 </div>
@@ -1560,11 +1602,11 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#af8c805c09b1a89f44aec43026fcb1fe7">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00710">710</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00720">720</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00372">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00654">OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00683">OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00677">OnMouseUp()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00693">OnResize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00664">OnMouseDown()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00693">OnMouseOver()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00687">OnMouseUp()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00703">OnResize()</a>.</p>
 
 </div>
 </div>
@@ -1673,7 +1715,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00287">287</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00290">290</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1697,7 +1739,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00286">286</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00289">289</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1721,7 +1763,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00286">286</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00289">289</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1745,7 +1787,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00283">283</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00286">286</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1769,7 +1811,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00284">284</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00287">287</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1793,7 +1835,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00285">285</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00288">288</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1817,7 +1859,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00282">282</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00285">285</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1841,7 +1883,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00288">288</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00291">291</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
