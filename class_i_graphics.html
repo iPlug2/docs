@@ -429,6 +429,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memitem:a37af03428d6bd7637999688358d37f63"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a37af03428d6bd7637999688358d37f63">SetTextInClipboard</a> (const char *str)=0</td></tr>
 <tr class="memdesc:a37af03428d6bd7637999688358d37f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set text in the clipboard.  <a href="class_i_graphics.html#a37af03428d6bd7637999688358d37f63">More...</a><br /></td></tr>
 <tr class="separator:a37af03428d6bd7637999688358d37f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071829183885ec7116672576576230ee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a071829183885ec7116672576576230ee">SetFilePathInClipboard</a> (const char *path)</td></tr>
+<tr class="memdesc:a071829183885ec7116672576576230ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a file path in the clipboard.  <a href="class_i_graphics.html#a071829183885ec7116672576576230ee">More...</a><br /></td></tr>
+<tr class="separator:a071829183885ec7116672576576230ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7960f9bd277f40380d86194e0716eddf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a7960f9bd277f40380d86194e0716eddf">UpdateTooltips</a> ()=0</td></tr>
 <tr class="memdesc:a7960f9bd277f40380d86194e0716eddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you modify control tool tips at runtime.  <a href="class_i_graphics.html#a7960f9bd277f40380d86194e0716eddf">More...</a><br /></td></tr>
 <tr class="separator:a7960f9bd277f40380d86194e0716eddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1074,7 +1077,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00947">947</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00952">952</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -1234,7 +1237,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_graphics_canvas.html#a94153d28cb1929ed9783982bad19fd15">IGraphicsCanvas</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01687">1687</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01692">1692</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -1287,7 +1290,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00278">278</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -1337,7 +1340,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00348">348</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -1386,7 +1389,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00299">299</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_control_8h_source.html#l00156">IControl::OnAttached()</a>, <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>, and <a class="el" href="_i_control_8h_source.html#l00276">IControl::SetGroup()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_control_8h_source.html#l00156">IControl::OnAttached()</a>, <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>, and <a class="el" href="_i_control_8h_source.html#l00276">IControl::SetGroup()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, and <a class="el" href="_i_graphics_live_edit_8h_source.html#l00221">IGraphicsLiveEdit::OnPopupMenuSelection()</a>.</p>
 
@@ -1452,7 +1455,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00318">318</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00318">AttachCornerResizer()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01166">GetBounds()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00318">AttachCornerResizer()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01171">GetBounds()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00318">AttachCornerResizer()</a>.</p>
 
@@ -1501,7 +1504,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00323">323</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -1617,7 +1620,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00292">292</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01166">GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01171">GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -1707,7 +1710,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00354">354</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>.</p>
 
@@ -1739,7 +1742,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00285">285</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01166">GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01568">LoadSVG()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01171">GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01568">LoadSVG()</a>, and <a class="el" href="_i_control_8h_source.html#l00448">IControl::SetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -1762,7 +1765,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00368">368</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>.</p>
 
 </div>
 </div>
@@ -1999,7 +2002,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the context can handle mouse overs </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01547">1547</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01552">1552</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -2030,7 +2033,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01979">1979</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00150">APIBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01077">GetScreenScale()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00150">APIBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01082">GetScreenScale()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l01132">IVPlotControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00766">IWheelControl::Draw()</a>, <a class="el" href="_test_drop_shadow_control_8h_source.html#l00033">TestDropShadowControl::Draw()</a>, <a class="el" href="_test_g_f_x_label_8h_source.html#l00031">GFXLabelControl::Draw()</a>, <a class="el" href="_test_keyboard_control_8h_source.html#l00109">TestKeyboardControl::Draw()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00031">TestLayerControl::Draw()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00033">TestMTControl::Draw()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00033">TestSVGControl::Draw()</a>, and <a class="el" href="_i_control_8h_source.html#l02083">ISVGControl::Draw()</a>.</p>
 
@@ -2084,7 +2087,7 @@ Friends</h2></td></tr>
 
 <p>Called when the text entry is dismissed, to reset mInTextEntry. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01106">1106</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01111">1111</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00170">RemoveControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00137">RemoveControls()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00233">SetControlValueAfterTextEdit()</a>.</p>
 
@@ -2133,7 +2136,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00915">915</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00920">920</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -2162,7 +2165,7 @@ Friends</h2></td></tr>
 
 <p>Check to see if any control is captured. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01362">1362</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01367">1367</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_bubble_control_8h_source.html#l00051">IBubbleControl::IBubbleControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01136">OnMouseDrag()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01038">OnMouseUp()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01079">OnTouchCancelled()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00170">RemoveControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00137">RemoveControls()</a>.</p>
 
@@ -2195,7 +2198,7 @@ Friends</h2></td></tr>
 <p>Check to see if the control is already captured. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> is the control is already captured </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01366">1366</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01371">1371</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -2448,7 +2451,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01907">1907</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01010">CreatePopupMenu()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00157">ITextEntryControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00855">IWheelControl::OnMouseDown()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00099">TestFlexBoxControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00603">PromptUserInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01015">CreatePopupMenu()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00157">ITextEntryControl::OnMouseDown()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00855">IWheelControl::OnMouseDown()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00073">TestDirBrowseControl::OnMouseDown()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00099">TestFlexBoxControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00603">PromptUserInput()</a>.</p>
 
 </div>
 </div>
@@ -2515,7 +2518,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01010">1010</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01015">1015</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l01907">CreatePopupMenu()</a>.</p>
 
@@ -2608,7 +2611,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00950">950</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00955">955</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -2943,7 +2946,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00919">919</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00848">BeginFrame()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01771">IRECTList::Bounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00919">Draw()</a>, <a class="el" href="_i_graphics_8h_source.html#l00100">EndFrame()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01758">IRECTList::Get()</a>, <a class="el" href="_i_graphics_8h_source.html#l01740">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01886">IRECTList::Optimize()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01187">IRECT::PixelAlign()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01780">IRECTList::PixelAlign()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01738">IRECTList::Size()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00848">BeginFrame()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01771">IRECTList::Bounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00919">Draw()</a>, <a class="el" href="_i_graphics_8h_source.html#l00100">EndFrame()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01758">IRECTList::Get()</a>, <a class="el" href="_i_graphics_8h_source.html#l01745">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01886">IRECTList::Optimize()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01187">IRECT::PixelAlign()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01780">IRECTList::PixelAlign()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01738">IRECTList::Size()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00919">Draw()</a>.</p>
 
@@ -5445,7 +5448,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01481">1481</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00814">SetMouseCursor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00814">SetMouseCursor()</a>.</p>
 
 </div>
 </div>
@@ -5479,7 +5482,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01541">1541</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01546">1546</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00047">IGraphicsLiveEdit::OnInit()</a>.</p>
 
@@ -5512,9 +5515,9 @@ Friends</h2></td></tr>
 <p>Enable/disable multi touch, if platform supports it. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if platform supports it </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01119">1119</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01124">1124</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01136">PlatformSupportsMultiTouch()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01141">PlatformSupportsMultiTouch()</a>.</p>
 
 </div>
 </div>
@@ -6447,7 +6450,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00500">500</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00280">IControl::GetGroup()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01404">NControls()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00280">IControl::GetGroup()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01409">NControls()</a>.</p>
 
 </div>
 </div>
@@ -6488,7 +6491,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00486">486</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00132">IControl::LinkedToParam()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01404">NControls()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00132">IControl::LinkedToParam()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01409">NControls()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00558">ForMatchingControls()</a>.</p>
 
@@ -6572,7 +6575,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00515">515</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01404">NControls()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01409">NControls()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00573">AssignParamNameToolTips()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00521">ForAllControlsFunc()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00584">UpdatePeers()</a>.</p>
 
@@ -6604,7 +6607,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the drawing frame rate. </p>
 <dl class="section return"><dt>Returns</dt><dd>A whole number representing the desired frame rate at which the graphics context is redrawn. NOTE: the actual frame rate might be different </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01069">1069</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01074">1074</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -6631,7 +6634,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01380">1380</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01385">1385</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -6660,11 +6663,11 @@ template&lt;typename T , typename... Args&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000125">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01740">1740</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01745">1745</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01077">GetScreenScale()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01082">GetScreenScale()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00919">Draw()</a>, <a class="el" href="_i_graphics_8h_source.html#l01090">GetPixelSnapped()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00919">Draw()</a>, <a class="el" href="_i_graphics_8h_source.html#l01095">GetPixelSnapped()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>.</p>
 
 </div>
 </div>
@@ -6694,9 +6697,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Returns an <a class="el" href="struct_i_r_e_c_t.html" title="Used to manage a rectangular area, independent of draw class/platform.">IRECT</a> that represents the entire UI bounds This is useful for programatically arranging UI elements by slicing up the <a class="el" href="struct_i_r_e_c_t.html" title="Used to manage a rectangular area, independent of draw class/platform.">IRECT</a> using the various <a class="el" href="struct_i_r_e_c_t.html" title="Used to manage a rectangular area, independent of draw class/platform.">IRECT</a> methods. </p>
 <dl class="section return"><dt>Returns</dt><dd>An <a class="el" href="struct_i_r_e_c_t.html" title="Used to manage a rectangular area, independent of draw class/platform.">IRECT</a> that corresponds to the entire UI area, with, L = 0, T = 0, R = <a class="el" href="class_i_graphics.html#a4628c02e00b2e883f3d92d26136443ce" title="Gets the width of the graphics context.">Width()</a> and B = <a class="el" href="class_i_graphics.html#a876e2160f3ba0f2e732e07301e4b9e24" title="Gets the height of the graphics context.">Height()</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01166">1166</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01171">1171</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01057">Height()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01053">Width()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01062">Height()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01058">Width()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00318">AttachCornerResizer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00292">AttachPanelBackground()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00285">AttachSVGBackground()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00439">IPopupMenuControl::CreatePopupMenu()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00056">ICornerResizerControl::OnRescale()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00294">IGraphicsLiveEdit::OnResize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00427">ShowFPSDisplay()</a>.</p>
 
@@ -6727,7 +6730,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the special bubble control at index i, if one has been attached </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01389">1389</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01394">1394</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -6756,7 +6759,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Get the bundle ID on macOS and iOS, returns emtpy string on other OSs. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00943">943</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00948">948</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01614">LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01823">SearchImageResource()</a>.</p>
 
@@ -6795,7 +6798,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A pointer to the <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> object at idx or nullptr if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01321">1321</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01326">1326</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00500">ForControlInGroup()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00486">ForControlWithParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00515">ForStandardControlsFunc()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00461">GetControlWithParamIdx()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01211">OnKeyDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01229">OnKeyUp()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01436">PopupHostContextMenuForParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00165">RemoveControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00137">RemoveControls()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01860">StyleAllVectorControls()</a>.</p>
 
@@ -6834,9 +6837,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>integer index of the control in mControls array or -1 if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01326">1326</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01331">1331</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01331">GetIdxOfTaggedControl()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01336">GetIdxOfTaggedControl()</a>.</p>
 
 </div>
 </div>
@@ -6864,7 +6867,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Ptr to the control that launched the text entry </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01103">1103</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01108">1108</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00479">ITextControl::Draw()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00216">ITextEntryControl::OnKeyDown()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01136">OnMouseDrag()</a>.</p>
 
@@ -6903,7 +6906,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The tag assigned to the control when it was attached, or kNoTag (-1) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01345">1345</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01350">1350</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8h_source.html#l00417">IControl::GetTag()</a>.</p>
 
@@ -6936,7 +6939,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00461">461</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00132">IControl::LinkedToParam()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01404">NControls()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00132">IControl::LinkedToParam()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01409">NControls()</a>.</p>
 
 </div>
 </div>
@@ -6967,7 +6970,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00446">446</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01331">GetIdxOfTaggedControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00130">RemoveControlWithTag()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01336">GetIdxOfTaggedControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00130">RemoveControlWithTag()</a>.</p>
 
 </div>
 </div>
@@ -6997,7 +7000,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets a pointer to the delegate class that handles communication to and from this graphics context. </p>
 <dl class="section return"><dt>Returns</dt><dd>pointer to the delegate </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01094">1094</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01099">1099</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00278">AttachBackground()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00348">AttachBubbleControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00299">AttachControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00323">AttachCornerResizer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00292">AttachPanelBackground()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00354">AttachPopupMenuControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00285">AttachSVGBackground()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00368">AttachTextEntryControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01481">EnableLiveEdit()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00952">OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01038">OnMouseUp()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01376">PopupHostContextMenuForParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00253">SetControlValueAfterPopupMenu()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02222">SetQwertyMidiKeyHandlerFunc()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00427">ShowFPSDisplay()</a>.</p>
 
@@ -7091,9 +7094,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the graphics context scaling factor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The scaling applied to the graphics context </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01073">1073</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01078">1078</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01979">CheckLayer()</a>, <a class="el" href="_i_graphics_8h_source.html#l01740">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00056">ICornerResizerControl::OnRescale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01376">PopupHostContextMenuForParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01979">CheckLayer()</a>, <a class="el" href="_i_graphics_8h_source.html#l01745">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00056">ICornerResizerControl::OnRescale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01376">PopupHostContextMenuForParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>.</p>
 
 </div>
 </div>
@@ -7130,9 +7133,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int index or -1 if not found </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01331">1331</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01336">1336</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControlIdx()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00446">GetControlWithTag()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01331">GetControlIdx()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00446">GetControlWithTag()</a>.</p>
 
 </div>
 </div>
@@ -7250,7 +7253,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01555">1555</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01560">1560</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00146">IGraphicsLiveEdit::OnMouseDrag()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00221">IGraphicsLiveEdit::OnPopupMenuSelection()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
@@ -7327,7 +7330,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>An integer representing the control index in IGraphics::mControls which the mouse is over, or -1 if it is not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01550">1550</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01555">1555</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7406,9 +7409,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="struct_i_r_e_c_t.html" title="Used to manage a rectangular area, independent of draw class/platform.">IRECT</a> nearest to the input <a class="el" href="struct_i_r_e_c_t.html" title="Used to manage a rectangular area, independent of draw class/platform.">IRECT</a> that is aligned exactly to backing pixels </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01090">1090</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01095">1095</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01740">GetBackingPixelScale()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01246">IRECT::GetPixelSnapped()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01745">GetBackingPixelScale()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01246">IRECT::GetPixelSnapped()</a>.</p>
 
 </div>
 </div>
@@ -7436,7 +7439,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>A CString representing the Platform API in use e.g. "macOS" </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00889">889</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00894">894</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7466,7 +7469,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the platform level draw context - an HDC or CGContextRef. </p>
 <dl class="section return"><dt>Returns</dt><dd>void pointer to an HDC or CGContext </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00910">910</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00915">915</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00452">IGraphicsSkia::EndFrame()</a>.</p>
 
@@ -7498,7 +7501,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Returns a scaling factor for resizing parent windows via the host/plugin API. </p>
 <dl class="section return"><dt>Returns</dt><dd>A scaling factor for resizing parent windows </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01192">1192</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01197">1197</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
 
@@ -7576,7 +7579,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the special pop-up menu control, if one has been attached </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01383">1383</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01388">1388</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7604,7 +7607,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Get a persistant <a class="el" href="class_i_popup_menu.html" title="A class for setting the contents of a pop up menu.">IPopupMenu</a> (remember to clear it before use) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01097">1097</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01102">1102</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7632,7 +7635,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>An EUIResizerMode Representing whether the graphics context should scale or be resized, e.g. when dragging a corner resizer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01112">1112</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01117">1117</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7660,7 +7663,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>true if resizing is in process </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01115">1115</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01120">1120</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7690,9 +7693,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the screen/display scaling factor, rounded up. </p>
 <dl class="section return"><dt>Returns</dt><dd>The scale factor of the screen/display on which this graphics context is currently located </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01081">1081</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01086">1086</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01077">GetScreenScale()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01082">GetScreenScale()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01468">GetScaledBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">IGraphicsNanoVG::LoadBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>.</p>
 
@@ -7725,7 +7728,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01468">1468</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00138">IBitmap::GetFramesAreHorizontal()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00141">IBitmap::GetResourceName()</a>, <a class="el" href="_i_graphics_8h_source.html#l01081">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00126">IBitmap::N()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00138">IBitmap::GetFramesAreHorizontal()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00141">IBitmap::GetResourceName()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00126">IBitmap::N()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8h_source.html#l00664">IBButtonControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00687">IBSwitchControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00706">IBKnobControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00735">IBSliderControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00753">IBTextControl::OnRescale()</a>, <a class="el" href="_i_controls_8h_source.html#l00793">IBMeterControl::OnRescale()</a>, and <a class="el" href="_i_control_8h_source.html#l02068">IBitmapControl::OnRescale()</a>.</p>
 
@@ -7757,9 +7760,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the screen/display scaling factor, e.g. </p>
 <p >2 for a macOS retina screen, 1.5 on Windows when screen is scaled to 150% </p><dl class="section return"><dt>Returns</dt><dd>The scale factor of the display on which this graphics context is currently located </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01077">1077</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01082">1082</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00495">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00403">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01979">CheckLayer()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00363">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00513">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00452">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01740">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01081">GetRoundedScreenScale()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00495">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00403">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01979">CheckLayer()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00363">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00513">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00452">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01745">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">GetRoundedScreenScale()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>.</p>
 
 </div>
 </div>
@@ -7788,7 +7791,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Gets the name of the shared resources subpath. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01598">1598</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01603">1603</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01614">LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01823">SearchImageResource()</a>.</p>
 
@@ -7818,7 +7821,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the special text entry control, if one has been attached </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01386">1386</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01391">1391</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7883,7 +7886,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the combined draw and screen/display scaling factor. </p>
 <dl class="section return"><dt>Returns</dt><dd>The draw scale * screen scale </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01085">1085</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01090">1090</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01376">PopupHostContextMenuForParam()</a>.</p>
 
@@ -7925,7 +7928,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Populate a vector with the touchIDs active on pControl. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01372">1372</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01377">1377</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_test_multi_touch_control_8h_source.html#l00033">TestMTControl::Draw()</a>.</p>
 
@@ -7954,7 +7957,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01742">1742</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01747">1747</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -7984,7 +7987,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get the UI Appearance (Light/Dark mode) </p>
 <dl class="section return"><dt>Returns</dt><dd>Light/Dark mode </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01538">1538</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01543">1543</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -8042,7 +8045,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a void pointer that can be cast back to HINSTANCE to get the module handle on windows, returns nullptr on other platforms </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00901">901</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00906">906</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">IGraphicsNanoVG::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00290">IGraphicsSkia::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01614">LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01823">SearchImageResource()</a>.</p>
 
@@ -8074,9 +8077,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the height of the graphics context. </p>
 <dl class="section return"><dt>Returns</dt><dd>A whole number representing the height of the graphics context in pixels on a 1:1 screen </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01057">1057</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01062">1062</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01166">GetBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01171">GetBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>.</p>
 
 </div>
 </div>
@@ -8223,7 +8226,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>True if a platform text entry in is progress </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01100">1100</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01105">1105</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01136">OnMouseDrag()</a>.</p>
 
@@ -8253,7 +8256,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if live edit mode is enabled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01161">1161</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01166">1166</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -8495,7 +8498,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01668">1668</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_graphics.html#a7eb2eac86a838af6e6f85cd2242043d4">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01081">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="class_i_graphics.html#aba99ea1dbf73309d1008fdaf101402d8">LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01787">RetainBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01845">SearchBitmapInCache()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01823">SearchImageResource()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_graphics.html#a7eb2eac86a838af6e6f85cd2242043d4">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="class_i_graphics.html#aba99ea1dbf73309d1008fdaf101402d8">LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01787">RetainBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01845">SearchBitmapInCache()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01823">SearchImageResource()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00278">AttachBackground()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01468">GetScaledBitmap()</a>.</p>
 
@@ -8575,7 +8578,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01730">1730</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_graphics.html#a7eb2eac86a838af6e6f85cd2242043d4">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01081">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="class_i_graphics.html#aba99ea1dbf73309d1008fdaf101402d8">LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01787">RetainBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01845">SearchBitmapInCache()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_graphics.html#a7eb2eac86a838af6e6f85cd2242043d4">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="class_i_graphics.html#aba99ea1dbf73309d1008fdaf101402d8">LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01787">RetainBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01845">SearchBitmapInCache()</a>.</p>
 
 </div>
 </div>
@@ -8935,7 +8938,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01614">1614</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00943">GetBundleID()</a>, <a class="el" href="_i_graphics_8h_source.html#l01598">GetSharedResourcesSubPath()</a>, <a class="el" href="_i_graphics_8h_source.html#l00901">GetWinModuleHandle()</a>, <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>, and <a class="el" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00948">GetBundleID()</a>, <a class="el" href="_i_graphics_8h_source.html#l01603">GetSharedResourcesSubPath()</a>, <a class="el" href="_i_graphics_8h_source.html#l00906">GetWinModuleHandle()</a>, <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>, and <a class="el" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01568">LoadSVG()</a>.</p>
 
@@ -9200,7 +9203,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>/c true if multi touch is enabled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01133">1133</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01138">1138</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -9228,7 +9231,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Number of attached bubble controls </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01392">1392</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01397">1397</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -9256,7 +9259,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The number of controls that have been added to this graphics context </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01404">1404</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01409">1409</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00258">IGraphicsLiveEdit::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00500">ForControlInGroup()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00486">ForControlWithParam()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00515">ForStandardControlsFunc()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00461">GetControlWithParamIdx()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00052">IGraphicsLiveEdit::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00137">RemoveControls()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01860">StyleAllVectorControls()</a>.</p>
 
@@ -9320,7 +9323,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01447">1447</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01057">Height()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01053">Width()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01062">Height()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01058">Width()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01136">OnMouseDrag()</a>.</p>
 
@@ -9464,7 +9467,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01211">1211</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, and <a class="el" href="_i_control_8h_source.html#l00120">IControl::OnKeyDown()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, and <a class="el" href="_i_control_8h_source.html#l00120">IControl::OnKeyDown()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00194">IGEditorDelegate::OnKeyDown()</a>.</p>
 
@@ -9513,7 +9516,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01229">1229</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, and <a class="el" href="_i_control_8h_source.html#l00126">IControl::OnKeyUp()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, and <a class="el" href="_i_control_8h_source.html#l00126">IControl::OnKeyUp()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00208">IGEditorDelegate::OnKeyUp()</a>.</p>
 
@@ -9586,7 +9589,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00952">952</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_editor_delegate.html#a271106e21e3e2d7869d152d99c155cad">IEditorDelegate::BeginInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00241">IControl::GetValIdxForPos()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_control_8cpp_source.html#l00252">IControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01436">PopupHostContextMenuForParam()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_editor_delegate.html#a271106e21e3e2d7869d152d99c155cad">IEditorDelegate::BeginInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00241">IControl::GetValIdxForPos()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_control_8cpp_source.html#l00252">IControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01436">PopupHostContextMenuForParam()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01176">OnMouseDblClick()</a>.</p>
 
@@ -9612,7 +9615,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01136">1136</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01362">ControlIsCaptured()</a>, <a class="el" href="_i_graphics_8h_source.html#l01103">GetControlInTextEntry()</a>, <a class="el" href="_i_graphics_8h_source.html#l01100">IsInPlatformTextEntry()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, and <a class="el" href="_i_control_8h_source.html#l00101">IControl::OnMouseDrag()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01367">ControlIsCaptured()</a>, <a class="el" href="_i_graphics_8h_source.html#l01108">GetControlInTextEntry()</a>, <a class="el" href="_i_graphics_8h_source.html#l01105">IsInPlatformTextEntry()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, and <a class="el" href="_i_control_8h_source.html#l00101">IControl::OnMouseDrag()</a>.</p>
 
 </div>
 </div>
@@ -9708,7 +9711,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01038">1038</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01362">ControlIsCaptured()</a>, <a class="el" href="class_i_editor_delegate.html#a36eeb4c645a684ceae07edbe7685fbd0">IEditorDelegate::EndInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01104">OnMouseOver()</a>, and <a class="el" href="_i_control_8h_source.html#l00093">IControl::OnMouseUp()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01367">ControlIsCaptured()</a>, <a class="el" href="class_i_editor_delegate.html#a36eeb4c645a684ceae07edbe7685fbd0">IEditorDelegate::EndInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01104">OnMouseOver()</a>, and <a class="el" href="_i_control_8h_source.html#l00093">IControl::OnMouseUp()</a>.</p>
 
 </div>
 </div>
@@ -9791,7 +9794,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Called when the mouse enters the graphics context, to update the cursor to mCursorType. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01519">1519</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01524">1524</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00814">SetMouseCursor()</a>.</p>
 
@@ -9817,7 +9820,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01079">1079</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01362">ControlIsCaptured()</a>, and <a class="el" href="_i_control_8h_source.html#l00141">IControl::OnTouchCancelled()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01367">ControlIsCaptured()</a>, and <a class="el" href="_i_control_8h_source.html#l00141">IControl::OnTouchCancelled()</a>.</p>
 
 </div>
 </div>
@@ -11410,9 +11413,9 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>/c true if the platform supports multi touch </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01136">1136</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01141">1141</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01119">EnableMultiTouch()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01124">EnableMultiTouch()</a>.</p>
 
 </div>
 </div>
@@ -11501,7 +11504,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01376">1376</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00168">IControl::CreateContextMenu()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01085">GetTotalScale()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00168">IControl::CreateContextMenu()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01090">GetTotalScale()</a>.</p>
 
 </div>
 </div>
@@ -11556,7 +11559,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01436">1436</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01436">PopupHostContextMenuForParam()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01436">PopupHostContextMenuForParam()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00952">OnMouseDown()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01436">PopupHostContextMenuForParam()</a>.</p>
 
@@ -11931,7 +11934,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00170">170</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01106">ClearInTextEntryControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01362">ControlIsCaptured()</a>, <a class="el" href="_i_control_8h_source.html#l00417">IControl::GetTag()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01111">ClearInTextEntryControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01367">ControlIsCaptured()</a>, <a class="el" href="_i_control_8h_source.html#l00417">IControl::GetTag()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
 
 </div>
 </div>
@@ -11955,7 +11958,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00165">165</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00165">RemoveControl()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00165">RemoveControl()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_live_edit_8h_source.html#l00197">IGraphicsLiveEdit::OnKeyDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00221">IGraphicsLiveEdit::OnPopupMenuSelection()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00165">RemoveControl()</a>.</p>
 
@@ -11983,7 +11986,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00137">137</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01106">ClearInTextEntryControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01362">ControlIsCaptured()</a>, <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00417">IControl::GetTag()</a>, <a class="el" href="_i_graphics_8h_source.html#l01404">NControls()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01111">ClearInTextEntryControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01367">ControlIsCaptured()</a>, <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, <a class="el" href="_i_control_8h_source.html#l00417">IControl::GetTag()</a>, <a class="el" href="_i_graphics_8h_source.html#l01409">NControls()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
 
 </div>
 </div>
@@ -12143,7 +12146,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00089">89</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00321">IEditorDelegate::ConstrainEditorResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00552">ForAllControls()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01192">GetPlatformWindowScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01057">Height()</a>, <a class="el" href="_i_graphics_editor_delegate_8h_source.html#l00068">IGEditorDelegate::LayoutUI()</a>, <a class="el" href="_i_control_8h_source.html#l00150">IControl::OnResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>, <a class="el" href="_i_graphics_8h_source.html#l01053">Width()</a>, <a class="el" href="_i_graphics_8h_source.html#l01065">WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01061">WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00321">IEditorDelegate::ConstrainEditorResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00552">ForAllControls()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01197">GetPlatformWindowScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01062">Height()</a>, <a class="el" href="_i_graphics_editor_delegate_8h_source.html#l00068">IGEditorDelegate::LayoutUI()</a>, <a class="el" href="_i_control_8h_source.html#l00150">IControl::OnResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01253">ReleaseMouseCapture()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>, <a class="el" href="_i_graphics_8h_source.html#l01058">Width()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">WindowWidth()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00051">ICornerResizerControl::OnMouseDblClick()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00027">IGEditorDelegate::OpenWindow()</a>, and <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00159">IGEditorDelegate::UnserializeEditorSize()</a>.</p>
 
@@ -12310,7 +12313,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success (if the path was valid) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00894">894</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00899">899</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -12367,7 +12370,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01793">1793</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_graphics.html#afea2763c96575af7140d644e4d748299">DrawBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01947">EndLayer()</a>, <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00132">IBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00138">IBitmap::GetFramesAreHorizontal()</a>, <a class="el" href="_i_graphics_8h_source.html#l01081">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00117">IBitmap::H()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00126">IBitmap::N()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01787">RetainBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00114">IBitmap::W()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_graphics.html#afea2763c96575af7140d644e4d748299">DrawBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01947">EndLayer()</a>, <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00132">IBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00138">IBitmap::GetFramesAreHorizontal()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00117">IBitmap::H()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00126">IBitmap::N()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01787">RetainBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01924">StartLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00114">IBitmap::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>.</p>
 
@@ -12536,7 +12539,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01823">1823</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00943">GetBundleID()</a>, <a class="el" href="_i_graphics_8h_source.html#l01598">GetSharedResourcesSubPath()</a>, <a class="el" href="_i_graphics_8h_source.html#l00901">GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00948">GetBundleID()</a>, <a class="el" href="_i_graphics_8h_source.html#l01603">GetSharedResourcesSubPath()</a>, <a class="el" href="_i_graphics_8h_source.html#l00906">GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a219939770dc84d12c583a7c6c5cd1d59">LocateResource()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01668">LoadBitmap()</a>, and <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">IGraphicsNanoVG::LoadBitmap()</a>.</p>
 
@@ -12586,7 +12589,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00552">ForAllControls()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01481">EnableLiveEdit()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00197">IGraphicsLiveEdit::OnKeyDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00170">RemoveControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00137">RemoveControls()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00130">RemoveControlWithTag()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00226">SetControlBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00212">SetControlPosition()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00219">SetControlSize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00946">SetStrictDrawing()</a>, <a class="el" href="_i_graphics_8h_source.html#l01148">ShowAreaDrawn()</a>, <a class="el" href="_i_graphics_8h_source.html#l01145">ShowControlBounds()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00427">ShowFPSDisplay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01481">EnableLiveEdit()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00197">IGraphicsLiveEdit::OnKeyDown()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00100">IGraphicsLiveEdit::OnMouseUp()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00170">RemoveControl()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00137">RemoveControls()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00130">RemoveControlWithTag()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00226">SetControlBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00212">SetControlPosition()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00219">SetControlSize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00946">SetStrictDrawing()</a>, <a class="el" href="_i_graphics_8h_source.html#l01153">ShowAreaDrawn()</a>, <a class="el" href="_i_graphics_8h_source.html#l01150">ShowControlBounds()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00427">ShowFPSDisplay()</a>.</p>
 
 </div>
 </div>
@@ -12757,7 +12760,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00253">253</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_editor_delegate.html#a36eeb4c645a684ceae07edbe7685fbd0">IEditorDelegate::EndInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_control_8h_source.html#l00181">IControl::OnContextSelection()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00283">IControl::OnPopupMenuSelection()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_editor_delegate.html#a36eeb4c645a684ceae07edbe7685fbd0">IEditorDelegate::EndInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, <a class="el" href="_i_control_8h_source.html#l00235">IControl::NVals()</a>, <a class="el" href="_i_control_8h_source.html#l00181">IControl::OnContextSelection()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00283">IControl::OnPopupMenuSelection()</a>.</p>
 
 </div>
 </div>
@@ -12787,7 +12790,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00233">233</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01106">ClearInTextEntryControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00178">IControl::OnTextEntryCompletion()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">IControl::SetValueFromUserInput()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">IParam::StringToValue()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00286">IParam::ToNormalized()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01111">ClearInTextEntryControl()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00178">IControl::OnTextEntryCompletion()</a>, <a class="el" href="_i_control_8cpp_source.html#l00174">IControl::SetValueFromUserInput()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">IParam::StringToValue()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00286">IParam::ToNormalized()</a>.</p>
 
 </div>
 </div>
@@ -12823,7 +12826,44 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01170">1170</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01175">1175</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+
+</div>
+</div>
+<a id="a071829183885ec7116672576576230ee" name="a071829183885ec7116672576576230ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a071829183885ec7116672576576230ee">&#9670;&#160;</a></span>SetFilePathInClipboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IGraphics::SetFilePathInClipboard </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set a file path in the clipboard. </p>
+<p >Returns false on unsupported platforms </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>A CString that contains a path to a file on disk </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>/c true on success </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00852">852</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -12860,7 +12900,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01178">1178</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01183">1183</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l02222">SetQwertyMidiKeyHandlerFunc()</a>.</p>
 
@@ -12921,7 +12961,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00814">814</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01481">EnableLiveEdit()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00038">TestCursorControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01126">OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00071">ICornerResizerControl::OnMouseOut()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00050">TestCursorControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l02175">IURLControl::OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00063">ICornerResizerControl::OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l02174">IURLControl::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01519">OnSetCursor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01481">EnableLiveEdit()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00038">TestCursorControl::OnMouseDown()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01126">OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00071">ICornerResizerControl::OnMouseOut()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00050">TestCursorControl::OnMouseOut()</a>, <a class="el" href="_i_control_8h_source.html#l02175">IURLControl::OnMouseOut()</a>, <a class="el" href="_i_corner_resizer_control_8h_source.html#l00063">ICornerResizerControl::OnMouseOver()</a>, <a class="el" href="_i_control_8h_source.html#l02174">IURLControl::OnMouseOver()</a>, <a class="el" href="_i_graphics_live_edit_8h_source.html#l00126">IGraphicsLiveEdit::OnMouseOver()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01524">OnSetCursor()</a>.</p>
 
 </div>
 </div>
@@ -12957,7 +12997,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00906">906</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00911">911</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13035,7 +13075,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l02222">2222</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_plug_midi_8h_source.html#l00158">IMidiMsg::MakeNoteOffMsg()</a>, <a class="el" href="_i_plug_midi_8h_source.html#l00145">IMidiMsg::MakeNoteOnMsg()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00267">IEditorDelegate::SendMidiMsgFromUI()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01178">SetKeyHandlerFunc()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00047">Clip()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_plug_midi_8h_source.html#l00158">IMidiMsg::MakeNoteOffMsg()</a>, <a class="el" href="_i_plug_midi_8h_source.html#l00145">IMidiMsg::MakeNoteOnMsg()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00267">IEditorDelegate::SendMidiMsgFromUI()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01183">SetKeyHandlerFunc()</a>.</p>
 
 </div>
 </div>
@@ -13104,7 +13144,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00075">75</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00552">ForAllControls()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, <a class="el" href="_i_graphics_8h_source.html#l01192">GetPlatformWindowScale()</a>, <a class="el" href="_i_control_8h_source.html#l00147">IControl::OnRescale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>, <a class="el" href="_i_graphics_8h_source.html#l01065">WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01061">WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00552">ForAllControls()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, <a class="el" href="_i_graphics_8h_source.html#l01197">GetPlatformWindowScale()</a>, <a class="el" href="_i_control_8h_source.html#l00147">IControl::OnRescale()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -13134,7 +13174,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p>Sets the name of the shared resources subpath. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01601">1601</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01606">1606</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13201,7 +13241,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01559">1559</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01564">1564</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13277,7 +13317,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Called by some platform <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> classes in order to translate the graphics context, in response to e.g. </p>
 <p >iOS onscreen keyboard appearing </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00981">981</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00986">986</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13313,7 +13353,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01174">1174</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01179">1179</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13349,7 +13389,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00898">898</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00903">903</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13383,7 +13423,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01148">1148</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01153">1153</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
 
@@ -13413,7 +13453,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if showning the area drawn on each frame </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01151">1151</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01156">1156</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13502,7 +13542,7 @@ template&lt;typename T , typename... Args&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01145">1145</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01150">1150</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
 
@@ -13532,7 +13572,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if showning the control bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01154">1154</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01159">1159</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13562,7 +13602,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00427">427</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01166">GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">GetDelegate()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01171">GetBounds()</a>, <a class="el" href="_i_graphics_8h_source.html#l01099">GetDelegate()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00563">SetAllControlsDirty()</a>.</p>
 
 </div>
 </div>
@@ -13590,7 +13630,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if performance display is shown </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01309">1309</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01314">1314</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13703,7 +13743,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01924">1924</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_graphics.html#a514ba05782664fefb137edddf6c4accb">CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_8h_source.html#l01740">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01073">GetDrawScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01208">IRECT::GetPixelAligned()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_graphics_8h_source.html#l01077">GetScreenScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01952">PushLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_graphics.html#a514ba05782664fefb137edddf6c4accb">CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_8h_source.html#l01745">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01078">GetDrawScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01208">IRECT::GetPixelAligned()</a>, <a class="el" href="_i_control_8h_source.html#l00307">IControl::GetRECT()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">GetScreenScale()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00815">IRECT::H()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01952">PushLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00812">IRECT::W()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l01132">IVPlotControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00766">IWheelControl::Draw()</a>, <a class="el" href="_test_blend_control_8h_source.html#l00034">TestBlendControl::Draw()</a>, <a class="el" href="_test_drop_shadow_control_8h_source.html#l00033">TestDropShadowControl::Draw()</a>, <a class="el" href="_test_g_f_x_label_8h_source.html#l00031">GFXLabelControl::Draw()</a>, <a class="el" href="_test_keyboard_control_8h_source.html#l00109">TestKeyboardControl::Draw()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00031">TestLayerControl::Draw()</a>, <a class="el" href="_test_mask_control_8h_source.html#l00030">TestMaskControl::Draw()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00033">TestMTControl::Draw()</a>, <a class="el" href="_test_shadow_gradient_control_8h_source.html#l00031">TestShadowGradientControl::Draw()</a>, <a class="el" href="_test_s_v_g_control_8h_source.html#l00033">TestSVGControl::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l02083">ISVGControl::Draw()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01793">ScaleBitmap()</a>.</p>
 
@@ -13735,7 +13775,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l01860">1860</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01321">GetControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01404">NControls()</a>, and <a class="el" href="_i_control_8h_source.html#l00817">IVectorBase::SetStyle()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01326">GetControl()</a>, <a class="el" href="_i_graphics_8h_source.html#l01409">NControls()</a>, and <a class="el" href="_i_control_8h_source.html#l00817">IVectorBase::SetStyle()</a>.</p>
 
 </div>
 </div>
@@ -13763,7 +13803,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if tool tips are enabled </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01109">1109</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01114">1114</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -13897,9 +13937,9 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the width of the graphics context. </p>
 <dl class="section return"><dt>Returns</dt><dd>A whole number representing the width of the graphics context in pixels on a 1:1 screen </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01053">1053</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01058">1058</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01166">GetBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8h_source.html#l01171">GetBounds()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01447">OnDragResize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>.</p>
 
 </div>
 </div>
@@ -13929,7 +13969,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the height of the graphics context including draw scaling. </p>
 <dl class="section return"><dt>Returns</dt><dd>A whole number representing the height of the graphics context with scaling in pixels on a 1:1 screen </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01065">1065</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01070">1070</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00495">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00403">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00363">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00513">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00452">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
 
@@ -13991,7 +14031,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Gets the width of the graphics context including draw scaling. </p>
 <dl class="section return"><dt>Returns</dt><dd>A whole number representing the width of the graphics context with scaling in pixels on a 1:1 screen </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01061">1061</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01066">1066</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00495">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00403">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00363">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00513">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00452">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00089">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
 
@@ -14018,7 +14058,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01818">1818</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01823">1823</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14042,7 +14082,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01817">1817</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01822">1822</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14066,7 +14106,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01819">1819</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01824">1824</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14091,7 +14131,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01823">1823</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01828">1828</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14115,7 +14155,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01809">1809</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01814">1814</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14139,7 +14179,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01810">1810</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01815">1815</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14163,7 +14203,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01812">1812</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01817">1817</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14187,7 +14227,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01813">1813</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01818">1818</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14211,7 +14251,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01808">1808</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01813">1813</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14235,7 +14275,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01821">1821</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01826">1826</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14259,7 +14299,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01811">1811</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01816">1816</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14283,7 +14323,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01824">1824</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01829">1829</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14307,7 +14347,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01825">1825</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01830">1830</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14331,7 +14371,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01814">1814</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01819">1819</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -14355,7 +14395,7 @@ template&lt;typename T , typename... Args&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01815">1815</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01820">1820</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
