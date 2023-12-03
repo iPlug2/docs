@@ -480,6 +480,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">AttachIControl</a> (<a class="el" href="class_i_control.html">IControl</a> *pControl, const char *label)</td></tr>
 <tr class="memdesc:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call in the constructor of your IVControl to link the <a class="el" href="class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...">IVectorBase</a> and <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>.  <a href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">More...</a><br /></td></tr>
 <tr class="separator:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d92cb36120c237dcfeea46f6d95bb2 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ac6d92cb36120c237dcfeea46f6d95bb2">OnStyleChanged</a> ()</td></tr>
+<tr class="memdesc:ac6d92cb36120c237dcfeea46f6d95bb2 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement if extra changes are required in response to style changing.  <a href="class_i_vector_base.html#ac6d92cb36120c237dcfeea46f6d95bb2">More...</a><br /></td></tr>
+<tr class="separator:ac6d92cb36120c237dcfeea46f6d95bb2 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">SetColor</a> (EVColor colorIdx, const <a class="el" href="struct_i_color.html">IColor</a> &amp;color)</td></tr>
 <tr class="memdesc:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set one of the IVColors that style the IVControl.  <a href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">More...</a><br /></td></tr>
 <tr class="separator:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -491,6 +494,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="separator:ac7bbfa5e773c9c8bd2e76319aa5c58b5 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8689638cedbcf7c2161b5a87cf61ae inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a6f8689638cedbcf7c2161b5a87cf61ae">SetLabelStr</a> (const char *label)</td></tr>
 <tr class="separator:a6f8689638cedbcf7c2161b5a87cf61ae inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bffbf7f91d1ea3a0afafc572d39c4a inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#af4bffbf7f91d1ea3a0afafc572d39c4a">GetLabelStr</a> () const</td></tr>
+<tr class="separator:af4bffbf7f91d1ea3a0afafc572d39c4a inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae42dd03fcfe46045c710234197f46a86 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ae42dd03fcfe46045c710234197f46a86">SetValueStr</a> (const char *value)</td></tr>
 <tr class="separator:ae42dd03fcfe46045c710234197f46a86 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eac2c32a6a0f2598900185082a3cebe inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a9eac2c32a6a0f2598900185082a3cebe">SetWidgetFrac</a> (float frac)</td></tr>
@@ -677,7 +682,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A switch with a slide animation when clicked. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00104">104</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00105">105</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a182601d004a92b20794a96efacc46e3e" name="a182601d004a92b20794a96efacc46e3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a182601d004a92b20794a96efacc46e3e">&#9670;&#160;</a></span>IVSlideSwitchControl() <span class="overload">[1/2]</span></h2>
@@ -836,7 +841,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00263">263</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00867">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00880">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00890">IVectorBase::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00273">DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00496">IControl::GetAnimationFunction()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00872">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00885">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00895">IVectorBase::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00273">DrawWidget()</a>, and <a class="el" href="_i_control_8h_source.html#l00496">IControl::GetAnimationFunction()</a>.</p>
 
 </div>
 </div>
@@ -1111,7 +1116,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00124">124</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00125">125</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1140,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00122">122</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1159,7 +1164,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00124">124</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1183,7 +1188,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00122">122</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>

@@ -159,10 +159,12 @@ var searchData=
   ['ivslideswitchcontrol_156',['IVSlideSwitchControl',['../class_i_v_slide_switch_control.html',1,'']]],
   ['ivstyle_157',['IVStyle',['../struct_i_v_style.html',1,'']]],
   ['ivswitchcontrol_158',['IVSwitchControl',['../class_i_v_switch_control.html',1,'']]],
-  ['ivtabswitchcontrol_159',['IVTabSwitchControl',['../class_i_v_tab_switch_control.html',1,'']]],
-  ['ivtogglecontrol_160',['IVToggleControl',['../class_i_v_toggle_control.html',1,'']]],
-  ['ivtrackcontrolbase_161',['IVTrackControlBase',['../class_i_v_track_control_base.html',1,'']]],
-  ['ivxypadcontrol_162',['IVXYPadControl',['../class_i_v_x_y_pad_control.html',1,'']]],
-  ['iwebviewcontrol_163',['IWebViewControl',['../class_i_web_view_control.html',1,'']]],
-  ['iwheelcontrol_164',['IWheelControl',['../class_i_wheel_control.html',1,'']]]
+  ['ivtabbedpagescontrol_159',['IVTabbedPagesControl',['../class_i_v_tabbed_pages_control.html',1,'']]],
+  ['ivtabpage_160',['IVTabPage',['../class_i_v_tab_page.html',1,'']]],
+  ['ivtabswitchcontrol_161',['IVTabSwitchControl',['../class_i_v_tab_switch_control.html',1,'']]],
+  ['ivtogglecontrol_162',['IVToggleControl',['../class_i_v_toggle_control.html',1,'']]],
+  ['ivtrackcontrolbase_163',['IVTrackControlBase',['../class_i_v_track_control_base.html',1,'']]],
+  ['ivxypadcontrol_164',['IVXYPadControl',['../class_i_v_x_y_pad_control.html',1,'']]],
+  ['iwebviewcontrol_165',['IWebViewControl',['../class_i_web_view_control.html',1,'']]],
+  ['iwheelcontrol_166',['IWheelControl',['../class_i_wheel_control.html',1,'']]]
 ];

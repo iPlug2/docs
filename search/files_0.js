@@ -61,5 +61,6 @@ var searchData=
   ['ivnumberboxcontrol_2eh_58',['IVNumberBoxControl.h',['../_i_v_number_box_control_8h.html',1,'']]],
   ['ivpresetmanagercontrol_2eh_59',['IVPresetManagerControl.h',['../_i_v_preset_manager_control_8h.html',1,'']]],
   ['ivscopecontrol_2eh_60',['IVScopeControl.h',['../_i_v_scope_control_8h.html',1,'']]],
-  ['iwebviewcontrol_2eh_61',['IWebViewControl.h',['../_i_web_view_control_8h.html',1,'']]]
+  ['ivtabbedpagescontrol_2eh_61',['IVTabbedPagesControl.h',['../_i_v_tabbed_pages_control_8h.html',1,'']]],
+  ['iwebviewcontrol_2eh_62',['IWebViewControl.h',['../_i_web_view_control_8h.html',1,'']]]
 ];

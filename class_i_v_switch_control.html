@@ -455,6 +455,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">AttachIControl</a> (<a class="el" href="class_i_control.html">IControl</a> *pControl, const char *label)</td></tr>
 <tr class="memdesc:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call in the constructor of your IVControl to link the <a class="el" href="class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...">IVectorBase</a> and <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>.  <a href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">More...</a><br /></td></tr>
 <tr class="separator:aaeaad70c3715e71344c9e589461483c8 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6d92cb36120c237dcfeea46f6d95bb2 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ac6d92cb36120c237dcfeea46f6d95bb2">OnStyleChanged</a> ()</td></tr>
+<tr class="memdesc:ac6d92cb36120c237dcfeea46f6d95bb2 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement if extra changes are required in response to style changing.  <a href="class_i_vector_base.html#ac6d92cb36120c237dcfeea46f6d95bb2">More...</a><br /></td></tr>
+<tr class="separator:ac6d92cb36120c237dcfeea46f6d95bb2 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">SetColor</a> (EVColor colorIdx, const <a class="el" href="struct_i_color.html">IColor</a> &amp;color)</td></tr>
 <tr class="memdesc:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set one of the IVColors that style the IVControl.  <a href="class_i_vector_base.html#a1e72f0aa794ef2f610191a2274372d66">More...</a><br /></td></tr>
 <tr class="separator:a1e72f0aa794ef2f610191a2274372d66 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -466,6 +469,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="separator:ac7bbfa5e773c9c8bd2e76319aa5c58b5 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f8689638cedbcf7c2161b5a87cf61ae inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a6f8689638cedbcf7c2161b5a87cf61ae">SetLabelStr</a> (const char *label)</td></tr>
 <tr class="separator:a6f8689638cedbcf7c2161b5a87cf61ae inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bffbf7f91d1ea3a0afafc572d39c4a inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#af4bffbf7f91d1ea3a0afafc572d39c4a">GetLabelStr</a> () const</td></tr>
+<tr class="separator:af4bffbf7f91d1ea3a0afafc572d39c4a inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae42dd03fcfe46045c710234197f46a86 inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#ae42dd03fcfe46045c710234197f46a86">SetValueStr</a> (const char *value)</td></tr>
 <tr class="separator:ae42dd03fcfe46045c710234197f46a86 inherit pub_methods_class_i_vector_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eac2c32a6a0f2598900185082a3cebe inherit pub_methods_class_i_vector_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_vector_base.html#a9eac2c32a6a0f2598900185082a3cebe">SetWidgetFrac</a> (float frac)</td></tr>
@@ -640,7 +645,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p >A vector switch control. </p>
 <p >Click to cycle through states. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00071">71</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00072">72</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afaf93eeb5ca886aecd08a907a8f1caaa" name="afaf93eeb5ca886aecd08a907a8f1caaa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afaf93eeb5ca886aecd08a907a8f1caaa">&#9670;&#160;</a></span>IVSwitchControl() <span class="overload">[1/2]</span></h2>
@@ -783,7 +788,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00110">110</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00867">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00880">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00890">IVectorBase::DrawValue()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00118">DrawWidget()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00872">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00885">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_control_8h_source.html#l00895">IVectorBase::DrawValue()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00118">DrawWidget()</a>.</p>
 
 </div>
 </div>
@@ -819,7 +824,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00118">118</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00909">IVectorBase::DrawPressableShape()</a>, <a class="el" href="_i_control_8h_source.html#l00358">IControl::IsDisabled()</a>, and <a class="el" href="_i_control_8h_source.html#l00556">IControl::mMouseIsOver</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00914">IVectorBase::DrawPressableShape()</a>, <a class="el" href="_i_control_8h_source.html#l00358">IControl::IsDisabled()</a>, and <a class="el" href="_i_control_8h_source.html#l00556">IControl::mMouseIsOver</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00110">Draw()</a>.</p>
 
@@ -938,7 +943,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a2897e1dbb1dc32428cea7bad93e3c97e">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00081">81</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00082">82</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00275">IControl::OnMouseOut()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00123">SetDirty()</a>.</p>
 
@@ -976,7 +981,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00133">133</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01149">IVectorBase::MakeRects()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00123">SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00319">IControl::SetTargetRECT()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01154">IVectorBase::MakeRects()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00123">SetDirty()</a>, and <a class="el" href="_i_control_8h_source.html#l00319">IControl::SetTargetRECT()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00250">IVSlideSwitchControl::OnResize()</a>.</p>
 
@@ -1032,7 +1037,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00360">IParam::GetDisplay()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8h_source.html#l00081">OnMouseOut()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00133">OnResize()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00290">IVSlideSwitchControl::SetDirty()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8h_source.html#l00082">OnMouseOut()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00133">OnResize()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00290">IVSlideSwitchControl::SetDirty()</a>.</p>
 
 </div>
 </div>
