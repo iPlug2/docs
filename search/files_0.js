@@ -60,7 +60,7 @@ var searchData=
   ['ivmetercontrol_2eh_57',['IVMeterControl.h',['../_i_v_meter_control_8h.html',1,'']]],
   ['ivmultislidercontrol_2eh_58',['IVMultiSliderControl.h',['../_i_v_multi_slider_control_8h.html',1,'']]],
   ['ivnumberboxcontrol_2eh_59',['IVNumberBoxControl.h',['../_i_v_number_box_control_8h.html',1,'']]],
-  ['ivpresetmanagercontrol_2eh_60',['IVPresetManagerControl.h',['../_i_v_preset_manager_control_8h.html',1,'']]],
+  ['ivpresetmanagercontrols_2eh_60',['IVPresetManagerControls.h',['../_i_v_preset_manager_controls_8h.html',1,'']]],
   ['ivscopecontrol_2eh_61',['IVScopeControl.h',['../_i_v_scope_control_8h.html',1,'']]],
   ['ivtabbedpagescontrol_2eh_62',['IVTabbedPagesControl.h',['../_i_v_tabbed_pages_control_8h.html',1,'']]],
   ['iwebviewcontrol_2eh_63',['IWebViewControl.h',['../_i_web_view_control_8h.html',1,'']]]
