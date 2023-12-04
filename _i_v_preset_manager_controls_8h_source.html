@@ -331,33 +331,36 @@ $(function() {
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    {</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      WDL_String fileName;</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <a class="code hl_function" href="class_i_dir_browse_control_base.html#ac7d4b8450459510dc6e678c18c22d3b7">GetSelectedFile</a>(fileName);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      fileName.remove_fileext();</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      mPresetNameButton-&gt;SetLabelStr(fileName.get_filepart());</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>  }</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> GetSubControlBounds(ESubControl control)</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  {</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keyword">auto</span> sections = mRECT;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    </div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    std::array&lt;IRECT, 4&gt; rects = {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a056506eccf013161238f60411ad8d4f8">ReduceFromRight</a>(50),</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      sections,</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    };</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">return</span> rects[(int) control];</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  }</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>* mPresetNameButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_struct" href="struct_i_v_style.html">IVStyle</a> mStyle;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>};</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <span class="keywordflow">if</span> (!mShowFileExtensions)</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        fileName.remove_fileext();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      }</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      mPresetNameButton-&gt;SetLabelStr(fileName.get_filepart());</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  }</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> GetSubControlBounds(ESubControl control)</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  {</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keyword">auto</span> sections = mRECT;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    std::array&lt;IRECT, 4&gt; rects = {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a056506eccf013161238f60411ad8d4f8">ReduceFromRight</a>(50),</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      sections,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    };</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keywordflow">return</span> rects[(int) control];</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  }</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>* mPresetNameButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <a class="code hl_struct" href="struct_i_v_style.html">IVStyle</a> mStyle;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>};</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
 <div class="ttc" id="a_i_plug_plugin_base_8h_html"><div class="ttname"><a href="_i_plug_plugin_base_8h.html">IPlugPluginBase.h</a></div></div>
 <div class="ttc" id="aclass_i_container_base_html"><div class="ttname"><a href="class_i_container_base.html">IContainerBase</a></div><div class="ttdoc">IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In...</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00604">IControl.h:605</a></div></div>
