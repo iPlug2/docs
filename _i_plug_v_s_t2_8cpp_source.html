@@ -982,159 +982,165 @@ $(function() {
 <div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>      <span class="keywordtype">char</span> str[2];</div>
 <div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>      str[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(idx);</div>
 <div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>      str[1] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span> </div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>      <span class="keywordtype">int</span> vk = VSTKeyCodeToVK(value, idx);</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>      <span class="keywordtype">int</span> modifiers = (int)opt;</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span> </div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>      <a class="code hl_struct" href="struct_i_key_press.html">IKeyPress</a> keyPress{ str, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vk),</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>                          <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(modifiers &amp; MODIFIER_SHIFT),</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>                          <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(modifiers &amp; MODIFIER_CONTROL),</div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>                          <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(modifiers &amp; MODIFIER_ALTERNATE) };</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span> </div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>      <span class="keywordtype">bool</span> handled;</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>      <span class="keywordflow">if</span> (opCode == effEditKeyDown)</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>        handled = _this-&gt;OnKeyDown(keyPress);</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>      <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>        handled = _this-&gt;OnKeyUp(keyPress);</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>      </div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>      <span class="comment">// Workaround for Reaper&#39;s funky behaviour</span></div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>      <span class="keywordflow">if</span> (_this-&gt;<a class="code hl_function" href="class_i_plugin_base.html#ada6f2395f2740c6ae50937642c22e683">GetHost</a>() == iplug::EHost::kHostReaper &amp;&amp; value != VKEY_SPACE)</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>      {</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>      }</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span> </div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>      <span class="keywordtype">int</span> vk = VSTKeyCodeToVK(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(value), idx);</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>      <span class="keywordtype">int</span> modifiers = (int)opt;</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span> </div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>      <a class="code hl_struct" href="struct_i_key_press.html">IKeyPress</a> keyPress{ str, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(vk),</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>                          <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(modifiers &amp; MODIFIER_SHIFT),</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>                          <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(modifiers &amp; MODIFIER_CONTROL),</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>                          <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(modifiers &amp; MODIFIER_ALTERNATE) };</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span> </div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>      <span class="keywordflow">return</span> handled ? 1 : 0;</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>    }</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>    <span class="keywordflow">case</span> effEndSetProgram:</div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordflow">case</span> effBeginSetProgram:</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>    <span class="keywordflow">case</span> effGetMidiProgramName:</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>    <span class="keywordflow">case</span> effHasMidiProgramsChanged:</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <span class="keywordflow">case</span> effGetMidiProgramCategory:</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    <span class="keywordflow">case</span> effGetCurrentMidiProgram:</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    <span class="keywordflow">case</span> effSetBypass:</div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    {</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>      <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    }</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>  }</div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>}</div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span> </div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> SAMPLETYPE&gt;</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span><span class="keywordtype">void</span> IPlugVST2::VSTPreProcess(SAMPLETYPE** inputs, SAMPLETYPE** outputs, VstInt32 nFrames)</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>{</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#a81a67a6bf4bb9ffec859fadf2d6c5fd6">DoesMIDIIn</a>())</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    mHostCallback(&amp;mAEffect, __audioMasterWantMidiDeprecated, 0, 0, 0, 0.0f);</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>      <span class="keywordtype">bool</span> handled;</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>      <span class="keywordflow">if</span> (opCode == effEditKeyDown)</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>        handled = _this-&gt;OnKeyDown(keyPress);</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>      <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>        handled = _this-&gt;OnKeyUp(keyPress);</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span> </div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>      <span class="keywordflow">return</span> handled ? 1 : 0;</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>    }</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>    <span class="keywordflow">case</span> effEndSetProgram:</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    <span class="keywordflow">case</span> effBeginSetProgram:</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>    <span class="keywordflow">case</span> effGetMidiProgramName:</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>    <span class="keywordflow">case</span> effHasMidiProgramsChanged:</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    <span class="keywordflow">case</span> effGetMidiProgramCategory:</div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    <span class="keywordflow">case</span> effGetCurrentMidiProgram:</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>    <span class="keywordflow">case</span> effSetBypass:</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    {</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    }</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  }</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>}</div>
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span> </div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  AttachBuffers(ERoute::kInput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kInput), inputs, nFrames);</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  AttachBuffers(ERoute::kOutput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kOutput), outputs, nFrames);</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  VstTimeInfo* pTI = (VstTimeInfo*) mHostCallback(&amp;mAEffect, audioMasterGetTime, 0, kVstPpqPosValid | kVstTempoValid | kVstBarsValid | kVstCyclePosValid | kVstTimeSigValid, 0, 0);</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span> </div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>  <a class="code hl_struct" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a> timeInfo;</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span> </div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  <span class="keywordflow">if</span> (pTI)</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  {</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    timeInfo.mSamplePos = pTI-&gt;samplePos;</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> SAMPLETYPE&gt;</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span><span class="keywordtype">void</span> IPlugVST2::VSTPreProcess(SAMPLETYPE** inputs, SAMPLETYPE** outputs, VstInt32 nFrames)</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>{</div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="class_i_plug_processor.html#a81a67a6bf4bb9ffec859fadf2d6c5fd6">DoesMIDIIn</a>())</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>    mHostCallback(&amp;mAEffect, __audioMasterWantMidiDeprecated, 0, 0, 0, 0.0f);</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span> </div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>  AttachBuffers(ERoute::kInput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kInput), inputs, nFrames);</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>  AttachBuffers(ERoute::kOutput, 0, <a class="code hl_function" href="class_i_plug_processor.html#acb0943c20c855b881cfbaaa291d5e776">MaxNChannels</a>(ERoute::kOutput), outputs, nFrames);</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span> </div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>  VstTimeInfo* pTI = (VstTimeInfo*) mHostCallback(&amp;mAEffect, audioMasterGetTime, 0, kVstPpqPosValid | kVstTempoValid | kVstBarsValid | kVstCyclePosValid | kVstTimeSigValid, 0, 0);</div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span> </div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    <span class="keywordflow">if</span> ((pTI-&gt;flags &amp; kVstPpqPosValid) &amp;&amp; pTI-&gt;ppqPos &gt;= 0.0) timeInfo.mPPQPos = pTI-&gt;ppqPos;</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    if ((pTI-&gt;flags &amp; kVstTempoValid) &amp;&amp; pTI-&gt;tempo &gt; 0.0) timeInfo.mTempo = pTI-&gt;tempo;</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    if ((pTI-&gt;flags &amp; kVstBarsValid) &amp;&amp; pTI-&gt;barStartPos &gt;= 0.0) timeInfo.mLastBar = pTI-&gt;barStartPos;</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    if ((pTI-&gt;flags &amp; kVstCyclePosValid) &amp;&amp; pTI-&gt;cycleStartPos &gt;= 0.0 &amp;&amp; pTI-&gt;cycleEndPos &gt;= 0.0)</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    {</div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>      timeInfo.mCycleStart = pTI-&gt;cycleStartPos;</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>      timeInfo.mCycleEnd = pTI-&gt;cycleEndPos;</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    }</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    <span class="keywordflow">if</span> ((pTI-&gt;flags &amp; kVstTimeSigValid) &amp;&amp; pTI-&gt;timeSigNumerator &gt; 0.0 &amp;&amp; pTI-&gt;timeSigDenominator &gt; 0.0)</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    {</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>      timeInfo.mNumerator = pTI-&gt;timeSigNumerator;</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>      timeInfo.mDenominator = pTI-&gt;timeSigDenominator;</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>    }</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    timeInfo.mTransportIsRunning = pTI-&gt;flags &amp; kVstTransportPlaying;</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    timeInfo.mTransportLoopEnabled = pTI-&gt;flags &amp; kVstTransportCycleActive;</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  }</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span> </div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> renderingOffline = mHostCallback(&amp;mAEffect, audioMasterGetCurrentProcessLevel, 0, 0, 0, 0.0f) == kVstProcessLevelOffline;</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span> </div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>  SetTimeInfo(timeInfo);</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  SetRenderingOffline(renderingOffline);</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a> msg;</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span> </div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  <span class="keywordflow">while</span> (mMidiMsgsFromEditor.Pop(msg))</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  {</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    <a class="code hl_function" href="class_i_plug_processor.html#a3118afd2386fc7244ad4f7eeefcbb9b4">ProcessMidiMsg</a>(msg);</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  }</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>}</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>  <a class="code hl_struct" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a> timeInfo;</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span> </div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>  <span class="keywordflow">if</span> (pTI)</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>  {</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    timeInfo.mSamplePos = pTI-&gt;samplePos;</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span> </div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>    <span class="keywordflow">if</span> ((pTI-&gt;flags &amp; kVstPpqPosValid) &amp;&amp; pTI-&gt;ppqPos &gt;= 0.0) timeInfo.mPPQPos = pTI-&gt;ppqPos;</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    if ((pTI-&gt;flags &amp; kVstTempoValid) &amp;&amp; pTI-&gt;tempo &gt; 0.0) timeInfo.mTempo = pTI-&gt;tempo;</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    if ((pTI-&gt;flags &amp; kVstBarsValid) &amp;&amp; pTI-&gt;barStartPos &gt;= 0.0) timeInfo.mLastBar = pTI-&gt;barStartPos;</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    if ((pTI-&gt;flags &amp; kVstCyclePosValid) &amp;&amp; pTI-&gt;cycleStartPos &gt;= 0.0 &amp;&amp; pTI-&gt;cycleEndPos &gt;= 0.0)</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    {</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>      timeInfo.mCycleStart = pTI-&gt;cycleStartPos;</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>      timeInfo.mCycleEnd = pTI-&gt;cycleEndPos;</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>    }</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    <span class="keywordflow">if</span> ((pTI-&gt;flags &amp; kVstTimeSigValid) &amp;&amp; pTI-&gt;timeSigNumerator &gt; 0.0 &amp;&amp; pTI-&gt;timeSigDenominator &gt; 0.0)</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    {</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>      timeInfo.mNumerator = pTI-&gt;timeSigNumerator;</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>      timeInfo.mDenominator = pTI-&gt;timeSigDenominator;</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>    }</div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    timeInfo.mTransportIsRunning = pTI-&gt;flags &amp; kVstTransportPlaying;</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>    timeInfo.mTransportLoopEnabled = pTI-&gt;flags &amp; kVstTransportCycleActive;</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  }</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span> </div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> renderingOffline = mHostCallback(&amp;mAEffect, audioMasterGetCurrentProcessLevel, 0, 0, 0, 0.0f) == kVstProcessLevelOffline;</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span> </div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  SetTimeInfo(timeInfo);</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  SetRenderingOffline(renderingOffline);</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span> </div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>  <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a> msg;</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span> </div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span><span class="comment">// Deprecated.</span></div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTProcess(AEffect* pEffect, <span class="keywordtype">float</span>** inputs, <span class="keywordtype">float</span>** outputs, VstInt32 nFrames)</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>{</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>  TRACE</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>  _this-&gt;VSTPreProcess(inputs, outputs, nFrames);</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>  ENTER_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  _this-&gt;ProcessBuffersAccumulating(nFrames);</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>  LEAVE_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  _this-&gt;OutputSysexFromEditor();</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>}</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span> </div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTProcessReplacing(AEffect* pEffect, <span class="keywordtype">float</span>** inputs, <span class="keywordtype">float</span>** outputs, VstInt32 nFrames)</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>{</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  TRACE</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>  _this-&gt;VSTPreProcess(inputs, outputs, nFrames);</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  ENTER_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>  _this-&gt;ProcessBuffers((<span class="keywordtype">float</span>) 0.0f, nFrames);</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>  LEAVE_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>  _this-&gt;OutputSysexFromEditor();</div>
-<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>}</div>
-<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span> </div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTProcessDoubleReplacing(AEffect* pEffect, <span class="keywordtype">double</span>** inputs, <span class="keywordtype">double</span>** outputs, VstInt32 nFrames)</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>{</div>
-<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  TRACE</div>
-<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  _this-&gt;VSTPreProcess(inputs, outputs, nFrames);</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>  ENTER_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>  _this-&gt;ProcessBuffers((<span class="keywordtype">double</span>) 0.0, nFrames);</div>
-<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>  LEAVE_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  _this-&gt;OutputSysexFromEditor();</div>
-<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>}</div>
-<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span> </div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span><span class="keywordtype">float</span> VSTCALLBACK IPlugVST2::VSTGetParameter(AEffect *pEffect, VstInt32 idx)</div>
-<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>{</div>
-<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  Trace(TRACELOC, <span class="stringliteral">&quot;%d&quot;</span>, idx);</div>
-<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>  if (idx &gt;= 0 &amp;&amp; idx &lt; _this-&gt;NParams())</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>  {</div>
-<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>    ENTER_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> val = (float) _this-&gt;GetParam(idx)-&gt;GetNormalized();</div>
-<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    LEAVE_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span> </div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>    <span class="keywordflow">return</span> val;</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>  }</div>
-<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>  <span class="keywordflow">return</span> 0.0f;</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>}</div>
-<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span> </div>
-<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTSetParameter(AEffect *pEffect, VstInt32 idx, <span class="keywordtype">float</span> value)</div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>{</div>
-<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  Trace(TRACELOC, <span class="stringliteral">&quot;%d:%f&quot;</span>, idx, value);</div>
-<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
-<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  if (idx &gt;= 0 &amp;&amp; idx &lt; _this-&gt;NParams())</div>
-<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  {</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    ENTER_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    _this-&gt;GetParam(idx)-&gt;SetNormalized(value);</div>
-<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    _this-&gt;<a class="code hl_function" href="class_i_plug_a_p_i_base.html#aa9f50bef5f022a2dedf2d58cee8c8707">SendParameterValueFromAPI</a>(idx, value, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    _this-&gt;OnParamChange(idx, kHost);</div>
-<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    LEAVE_PARAMS_MUTEX_STATIC</div>
-<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  }</div>
-<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>}</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span> </div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span><span class="keywordtype">void</span> IPlugVST2::OutputSysexFromEditor()</div>
-<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>{</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>  <span class="comment">//Output SYSEX from the editor, which has bypassed ProcessSysEx()</span></div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>  <span class="keywordflow">if</span>(mSysExDataFromEditor.ElementsAvailable())</div>
-<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  {</div>
-<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>    <span class="keywordflow">while</span> (mSysExDataFromEditor.Pop(mSysexBuf))</div>
-<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>    {</div>
-<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>      <a class="code hl_struct" href="struct_i_sys_ex.html">ISysEx</a> smsg {mSysexBuf.mOffset, mSysexBuf.mData, mSysexBuf.mSize};</div>
-<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>      <a class="code hl_function" href="class_i_plug_v_s_t2.html#ab19e3e35e32d2c1b47c5d25ea77c33c6">SendSysEx</a>(smsg);</div>
-<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>    }</div>
-<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>  }</div>
-<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>}</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  <span class="keywordflow">while</span> (mMidiMsgsFromEditor.Pop(msg))</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>  {</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>    <a class="code hl_function" href="class_i_plug_processor.html#a3118afd2386fc7244ad4f7eeefcbb9b4">ProcessMidiMsg</a>(msg);</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>  }</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>}</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span> </div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span><span class="comment">// Deprecated.</span></div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTProcess(AEffect* pEffect, <span class="keywordtype">float</span>** inputs, <span class="keywordtype">float</span>** outputs, VstInt32 nFrames)</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>{</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>  TRACE</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>  _this-&gt;VSTPreProcess(inputs, outputs, nFrames);</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>  ENTER_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  _this-&gt;ProcessBuffersAccumulating(nFrames);</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  LEAVE_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  _this-&gt;OutputSysexFromEditor();</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>}</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span> </div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTProcessReplacing(AEffect* pEffect, <span class="keywordtype">float</span>** inputs, <span class="keywordtype">float</span>** outputs, VstInt32 nFrames)</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>{</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>  TRACE</div>
+<div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
+<div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>  _this-&gt;VSTPreProcess(inputs, outputs, nFrames);</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>  ENTER_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>  _this-&gt;ProcessBuffers((<span class="keywordtype">float</span>) 0.0f, nFrames);</div>
+<div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  LEAVE_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>  _this-&gt;OutputSysexFromEditor();</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>}</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span> </div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTProcessDoubleReplacing(AEffect* pEffect, <span class="keywordtype">double</span>** inputs, <span class="keywordtype">double</span>** outputs, VstInt32 nFrames)</div>
+<div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>{</div>
+<div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  TRACE</div>
+<div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
+<div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>  _this-&gt;VSTPreProcess(inputs, outputs, nFrames);</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  ENTER_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  _this-&gt;ProcessBuffers((<span class="keywordtype">double</span>) 0.0, nFrames);</div>
+<div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  LEAVE_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  _this-&gt;OutputSysexFromEditor();</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>}</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span> </div>
+<div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span><span class="keywordtype">float</span> VSTCALLBACK IPlugVST2::VSTGetParameter(AEffect *pEffect, VstInt32 idx)</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>{</div>
+<div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>  Trace(TRACELOC, <span class="stringliteral">&quot;%d&quot;</span>, idx);</div>
+<div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>  if (idx &gt;= 0 &amp;&amp; idx &lt; _this-&gt;NParams())</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>  {</div>
+<div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    ENTER_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> val = (float) _this-&gt;GetParam(idx)-&gt;GetNormalized();</div>
+<div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    LEAVE_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span> </div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>    <span class="keywordflow">return</span> val;</div>
+<div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  }</div>
+<div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span>  <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>}</div>
+<div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span> </div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span><span class="keywordtype">void</span> VSTCALLBACK IPlugVST2::VSTSetParameter(AEffect *pEffect, VstInt32 idx, <span class="keywordtype">float</span> value)</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>{</div>
+<div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>  Trace(TRACELOC, <span class="stringliteral">&quot;%d:%f&quot;</span>, idx, value);</div>
+<div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>  <a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>* _this = (<a class="code hl_class" href="class_i_plug_v_s_t2.html">IPlugVST2</a>*) pEffect-&gt;object;</div>
+<div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>  if (idx &gt;= 0 &amp;&amp; idx &lt; _this-&gt;NParams())</div>
+<div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  {</div>
+<div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    ENTER_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    _this-&gt;GetParam(idx)-&gt;SetNormalized(value);</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>    _this-&gt;<a class="code hl_function" href="class_i_plug_a_p_i_base.html#aa9f50bef5f022a2dedf2d58cee8c8707">SendParameterValueFromAPI</a>(idx, value, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>    _this-&gt;OnParamChange(idx, kHost);</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>    LEAVE_PARAMS_MUTEX_STATIC</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>  }</div>
+<div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>}</div>
+<div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span> </div>
+<div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span><span class="keywordtype">void</span> IPlugVST2::OutputSysexFromEditor()</div>
+<div class="line"><a id="l01046" name="l01046"></a><span class="lineno"> 1046</span>{</div>
+<div class="line"><a id="l01047" name="l01047"></a><span class="lineno"> 1047</span>  <span class="comment">//Output SYSEX from the editor, which has bypassed ProcessSysEx()</span></div>
+<div class="line"><a id="l01048" name="l01048"></a><span class="lineno"> 1048</span>  <span class="keywordflow">if</span>(mSysExDataFromEditor.ElementsAvailable())</div>
+<div class="line"><a id="l01049" name="l01049"></a><span class="lineno"> 1049</span>  {</div>
+<div class="line"><a id="l01050" name="l01050"></a><span class="lineno"> 1050</span>    <span class="keywordflow">while</span> (mSysExDataFromEditor.Pop(mSysexBuf))</div>
+<div class="line"><a id="l01051" name="l01051"></a><span class="lineno"> 1051</span>    {</div>
+<div class="line"><a id="l01052" name="l01052"></a><span class="lineno"> 1052</span>      <a class="code hl_struct" href="struct_i_sys_ex.html">ISysEx</a> smsg {mSysexBuf.mOffset, mSysexBuf.mData, mSysexBuf.mSize};</div>
+<div class="line"><a id="l01053" name="l01053"></a><span class="lineno"> 1053</span>      <a class="code hl_function" href="class_i_plug_v_s_t2.html#ab19e3e35e32d2c1b47c5d25ea77c33c6">SendSysEx</a>(smsg);</div>
+<div class="line"><a id="l01054" name="l01054"></a><span class="lineno"> 1054</span>    }</div>
+<div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>  }</div>
+<div class="line"><a id="l01056" name="l01056"></a><span class="lineno"> 1056</span>}</div>
 <div class="ttc" id="a_i_plug_plugin_base_8h_html"><div class="ttname"><a href="_i_plug_plugin_base_8h.html">IPlugPluginBase.h</a></div></div>
 <div class="ttc" id="a_i_plug_v_s_t2_8h_html"><div class="ttname"><a href="_i_plug_v_s_t2_8h.html">IPlugVST2.h</a></div></div>
 <div class="ttc" id="aclass_i_byte_chunk_html"><div class="ttname"><a href="class_i_byte_chunk.html">IByteChunk</a></div><div class="ttdoc">Manages a block of memory, for plug-in settings store/recall.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00111">IPlugStructs.h:112</a></div></div>
