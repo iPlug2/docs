@@ -233,9 +233,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a131143d0f164f0e21a4994dcff38a6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a050bd8139f379b2eb122119510b3a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#a7a050bd8139f379b2eb122119510b3a4">GetMaxHeight</a> () const</td></tr>
 <tr class="separator:a7a050bd8139f379b2eb122119510b3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8499b0ace19da20c87f974359b7daf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#ab8499b0ace19da20c87f974359b7daf6">ConstrainEditorResize</a> (int &amp;w, int &amp;h) const</td></tr>
-<tr class="memdesc:ab8499b0ace19da20c87f974359b7daf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain the incoming editor width and height values based on the minimum and maximum.  <a href="class_i_editor_delegate.html#ab8499b0ace19da20c87f974359b7daf6">More...</a><br /></td></tr>
-<tr class="separator:ab8499b0ace19da20c87f974359b7daf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54d876905b39ebdac2b51ed25cd6e6a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#ad54d876905b39ebdac2b51ed25cd6e6a">ConstrainEditorResize</a> (int &amp;w, int &amp;h) const</td></tr>
+<tr class="memdesc:ad54d876905b39ebdac2b51ed25cd6e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constrain the incoming editor width and height values based on the minimum and maximum.  <a href="class_i_editor_delegate.html#ad54d876905b39ebdac2b51ed25cd6e6a">More...</a><br /></td></tr>
+<tr class="separator:ad54d876905b39ebdac2b51ed25cd6e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a920d231251e6f14e63f5b09c521ca171"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#a920d231251e6f14e63f5b09c521ca171">SerializeEditorState</a> (<a class="el" href="class_i_byte_chunk.html">IByteChunk</a> &amp;chunk) const</td></tr>
 <tr class="memdesc:a920d231251e6f14e63f5b09c521ca171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the editor state (such as scale) into a binary chunk.  <a href="class_i_editor_delegate.html#a920d231251e6f14e63f5b09c521ca171">More...</a><br /></td></tr>
 <tr class="separator:a920d231251e6f14e63f5b09c521ca171"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,8 +442,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="ab8499b0ace19da20c87f974359b7daf6" name="ab8499b0ace19da20c87f974359b7daf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8499b0ace19da20c87f974359b7daf6">&#9670;&#160;</a></span>ConstrainEditorResize()</h2>
+<a id="ad54d876905b39ebdac2b51ed25cd6e6a" name="ad54d876905b39ebdac2b51ed25cd6e6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54d876905b39ebdac2b51ed25cd6e6a">&#9670;&#160;</a></span>ConstrainEditorResize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -452,7 +452,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IEditorDelegate::ConstrainEditorResize </td>
+          <td class="memname">virtual bool IEditorDelegate::ConstrainEditorResize </td>
           <td>(</td>
           <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>w</em>, </td>
@@ -471,7 +471,7 @@ Friends</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

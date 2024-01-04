@@ -25,7 +25,7 @@ var searchData=
   ['closewindow_22',['CloseWindow',['../class_i_graphics.html#aec2328e51f77ef35eb8e58e6961ee249',1,'IGraphics::CloseWindow()'],['../class_i_editor_delegate.html#a4e002963a0e50d2222ef4b9400403b3b',1,'IEditorDelegate::CloseWindow()'],['../class_i_g_editor_delegate.html#aeace55d6bc036f1f5dbbb44a08c4e43c',1,'IGEditorDelegate::CloseWindow()']]],
   ['comparestate_23',['CompareState',['../class_i_plug_a_p_i_base.html#a97d597338ef580f49e1ee5737756a0cb',1,'IPlugAPIBase']]],
   ['constrain_24',['Constrain',['../class_i_param.html#ac91ad61a52207255d6c9f13cacece76c',1,'IParam::Constrain()'],['../struct_i_r_e_c_t.html#ab9d941f2b9c3057a7a201a9e70440278',1,'IRECT::Constrain()']]],
-  ['constraineditorresize_25',['ConstrainEditorResize',['../class_i_editor_delegate.html#ab8499b0ace19da20c87f974359b7daf6',1,'IEditorDelegate']]],
+  ['constraineditorresize_25',['ConstrainEditorResize',['../class_i_editor_delegate.html#ad54d876905b39ebdac2b51ed25cd6e6a',1,'IEditorDelegate']]],
   ['constrainnormalized_26',['ConstrainNormalized',['../class_i_param.html#a2f344310fbe73f79e84a77181aab9029',1,'IParam']]],
   ['contains_27',['Contains',['../struct_i_r_e_c_t.html#ae9a174b15dfe8e019b91833c1c9faa30',1,'IRECT::Contains(const IRECT &amp;rhs) const'],['../struct_i_r_e_c_t.html#a32b6870c299b851086d0fbe4ac141d17',1,'IRECT::Contains(float x, float y) const']]],
   ['containsedge_28',['ContainsEdge',['../struct_i_r_e_c_t.html#a690dda50abd9bb43283a2aac6b82a004',1,'IRECT']]],
