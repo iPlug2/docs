@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ff404c63f2ac37d28fc3092dc1b2ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa83b1587096c1b4469aeb4af0b31d686"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_tab_switch_control.html#aa83b1587096c1b4469aeb4af0b31d686">DrawButton</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool pressed, bool mouseOver, ETabSegment segment, bool disabled)</td></tr>
 <tr class="separator:aa83b1587096c1b4469aeb4af0b31d686"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7171799d688f6851a588c3675adb577"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_tab_switch_control.html#ad7171799d688f6851a588c3675adb577">DrawButtonText</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool pressed, bool mouseOver, ETabSegment segment, bool disabled, const char *textStr)</td></tr>
+<tr class="separator:ad7171799d688f6851a588c3675adb577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50d4e9acdf04600eeab2a3b50a441209"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_tab_switch_control.html#a50d4e9acdf04600eeab2a3b50a441209">OnMouseDown</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
 <tr class="memdesc:a50d4e9acdf04600eeab2a3b50a441209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse down event on this control.  <a href="class_i_v_tab_switch_control.html#a50d4e9acdf04600eeab2a3b50a441209">More...</a><br /></td></tr>
 <tr class="separator:a50d4e9acdf04600eeab2a3b50a441209"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -955,7 +957,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00350">350</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00875">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00379">DrawWidget()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00875">IVectorBase::DrawBackground()</a>, <a class="el" href="_i_control_8h_source.html#l00888">IVectorBase::DrawLabel()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00387">DrawWidget()</a>.</p>
 
 </div>
 </div>
@@ -1021,6 +1023,74 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad7171799d688f6851a588c3675adb577" name="ad7171799d688f6851a588c3675adb577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7171799d688f6851a588c3675adb577">&#9670;&#160;</a></span>DrawButtonText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IVTabSwitchControl::DrawButtonText </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_graphics.html">IGraphics</a> &amp;&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pressed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>mouseOver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ETabSegment&#160;</td>
+          <td class="paramname"><em>segment</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>textStr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00379">379</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a5ff404c63f2ac37d28fc3092dc1b2ef5" name="a5ff404c63f2ac37d28fc3092dc1b2ef5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ff404c63f2ac37d28fc3092dc1b2ef5">&#9670;&#160;</a></span>DrawWidget()</h2>
 
@@ -1051,9 +1121,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_v_radio_button_control.html#afb146c1785e649e4d05ebd6b90998833">IVRadioButtonControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00379">379</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00387">387</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00670">IGraphics::DrawText()</a>, and <a class="el" href="_i_control_8h_source.html#l00361">IControl::IsDisabled()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00361">IControl::IsDisabled()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00350">Draw()</a>.</p>
 
@@ -1096,9 +1166,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_v_radio_button_control.html#a65223a4f5c37459b4f15fc82a0a4943b">IVRadioButtonControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00403">403</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00415">415</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00492">IVRadioButtonControl::GetButtonForPoint()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00414">IsHit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00419">OnMouseDown()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00428">OnMouseOver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00504">IVRadioButtonControl::GetButtonForPoint()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00426">IsHit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00431">OnMouseDown()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00440">OnMouseOver()</a>.</p>
 
 </div>
 </div>
@@ -1119,7 +1189,7 @@ Protected Attributes</h2></td></tr>
 
 <p>returns the label string on the selected tab </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00451">451</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00463">463</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -1169,9 +1239,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a51b0ac8f885b87591c5814d18df0fa2c">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00414">414</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00426">426</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_controls_8cpp_source.html#l00403">GetButtonForPoint()</a>.</p>
+<p class="reference">References <a class="el" href="_i_controls_8cpp_source.html#l00415">GetButtonForPoint()</a>.</p>
 
 </div>
 </div>
@@ -1260,9 +1330,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a4bf75d9b7be5d293b801b65c8834295e">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00419">419</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00431">431</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_controls_8cpp_source.html#l00403">GetButtonForPoint()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>.</p>
+<p class="reference">References <a class="el" href="_i_controls_8cpp_source.html#l00415">GetButtonForPoint()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>.</p>
 
 </div>
 </div>
@@ -1294,7 +1364,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a2897e1dbb1dc32428cea7bad93e3c97e">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00163">163</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00165">165</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00275">IControl::OnMouseOut()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
@@ -1352,9 +1422,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a39df22eddb4d9b0fd2f2504562556c49">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00428">428</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00440">440</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_controls_8cpp_source.html#l00403">GetButtonForPoint()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">IControl::OnMouseOver()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_controls_8cpp_source.html#l00415">GetButtonForPoint()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">IControl::OnMouseOver()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -1386,7 +1456,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a0c4927d3332fabe6f7626a03624f390f">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00437">437</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00449">449</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l01157">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, <a class="el" href="_i_control_8h_source.html#l00322">IControl::SetTargetRECT()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00999">IRECT::SubRect()</a>.</p>
 
@@ -1413,7 +1483,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00175">175</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00177">177</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1437,7 +1507,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00177">177</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00179">179</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1461,7 +1531,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00174">174</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00176">176</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1485,7 +1555,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00176">176</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00178">178</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
