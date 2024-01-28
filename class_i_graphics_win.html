@@ -156,20 +156,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a63ea4f7e34f7b789c55e4cc306b0c95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a6245150facafffa9aa6355b1fb6b40"><td class="memItemLeft" align="right" valign="top">HMENU&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a7a6245150facafffa9aa6355b1fb6b40">CreateMenu</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> &amp;menu, long *pOffsetIdx)</td></tr>
 <tr class="separator:a7a6245150facafffa9aa6355b1fb6b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ed7a1337916a6fa34d4ea30f370d833"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a0ed7a1337916a6fa34d4ea30f370d833">OpenURL</a> (const char *url, const char *msgWindowTitle, const char *confirmMsg, const char *errMsgOnFailure)</td></tr>
-<tr class="separator:a0ed7a1337916a6fa34d4ea30f370d833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c5563ce949c36f1573914c48ff46d73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a9c5563ce949c36f1573914c48ff46d73">OpenURL</a> (const char *url, const char *msgWindowTitle, const char *confirmMsg, const char *errMsgOnFailure) override</td></tr>
+<tr class="separator:a9c5563ce949c36f1573914c48ff46d73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35ee3086f299206c7a3e1749874c8824"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a35ee3086f299206c7a3e1749874c8824">GetWindow</a> () override</td></tr>
 <tr class="separator:a35ee3086f299206c7a3e1749874c8824"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4199d18b81e1657ec5d407ce411c338e"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a4199d18b81e1657ec5d407ce411c338e">GetParentWindow</a> () const</td></tr>
-<tr class="separator:a4199d18b81e1657ec5d407ce411c338e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b11947983867021f9630e6d62b48a5"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a58b11947983867021f9630e6d62b48a5">GetMainWnd</a> ()</td></tr>
-<tr class="separator:a58b11947983867021f9630e6d62b48a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1dc1d31ca4f0a047a5c736b57f607ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#ab1dc1d31ca4f0a047a5c736b57f607ec">SetMainWndClassName</a> (const char *name)</td></tr>
-<tr class="separator:ab1dc1d31ca4f0a047a5c736b57f607ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac07364d6123529ca7656b86b52f6ae85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#ac07364d6123529ca7656b86b52f6ae85">GetWindowRECT</a> ()</td></tr>
-<tr class="separator:ac07364d6123529ca7656b86b52f6ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a175d9ef82ce8ea090d38fedf1de1df16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a175d9ef82ce8ea090d38fedf1de1df16">SetWindowTitle</a> (const char *str)</td></tr>
-<tr class="separator:a175d9ef82ce8ea090d38fedf1de1df16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac58891c473b524a97bdd6c3692b7af4d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#ac58891c473b524a97bdd6c3692b7af4d">GetPlatformAPIStr</a> () override</td></tr>
 <tr class="separator:ac58891c473b524a97bdd6c3692b7af4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa32a6fb655ea0e5b188a4ca2fcfded96"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#aa32a6fb655ea0e5b188a4ca2fcfded96">GetTextFromClipboard</a> (WDL_String &amp;str) override</td></tr>
@@ -204,6 +194,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:af4b24937b25dd92a9509ff48b06e16c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4507b08bf40925e6c200a2945fe69c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#ad4507b08bf40925e6c200a2945fe69c7">HideTooltip</a> ()</td></tr>
 <tr class="separator:ad4507b08bf40925e6c200a2945fe69c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58b11947983867021f9630e6d62b48a5"><td class="memItemLeft" align="right" valign="top">HWND&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#a58b11947983867021f9630e6d62b48a5">GetMainWnd</a> ()</td></tr>
+<tr class="separator:a58b11947983867021f9630e6d62b48a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07364d6123529ca7656b86b52f6ae85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_win.html#ac07364d6123529ca7656b86b52f6ae85">GetWindowRECT</a> ()</td></tr>
+<tr class="separator:ac07364d6123529ca7656b86b52f6ae85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> platform class for Windows. </p>
@@ -254,7 +248,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00843">843</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00845">845</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -273,7 +267,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00856">856</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00858">858</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -321,7 +315,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01286">1286</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01280">1280</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -351,7 +345,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01359">1359</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01353">1353</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -395,7 +389,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01447">1447</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01441">1441</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -451,7 +445,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01501">1501</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01495">1495</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -508,7 +502,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01226">1226</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01225">1225</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -535,7 +529,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00892">892</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00894">894</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +571,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01331">1331</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01325">1325</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -586,6 +580,9 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">HWND IGraphicsWin::GetMainWnd </td>
@@ -594,9 +591,14 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01244">1244</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01243">1243</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -634,34 +636,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01027">1027</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a4199d18b81e1657ec5d407ce411c338e" name="a4199d18b81e1657ec5d407ce411c338e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4199d18b81e1657ec5d407ce411c338e">&#9670;&#160;</a></span>GetParentWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">HWND IGraphicsWin::GetParentWindow </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8h_source.html#l00073">73</a> of file <a class="el" href="_i_graphics_win_8h_source.html">IGraphicsWin.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01029">1029</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -688,7 +663,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8h_source.html#l00080">80</a> of file <a class="el" href="_i_graphics_win_8h_source.html">IGraphicsWin.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8h_source.html#l00074">74</a> of file <a class="el" href="_i_graphics_win_8h_source.html">IGraphicsWin.h</a>.</p>
 
 </div>
 </div>
@@ -743,7 +718,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01853">1853</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01836">1836</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -779,6 +754,9 @@ Protected Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a> IGraphicsWin::GetWindowRECT </td>
@@ -787,9 +765,14 @@ Protected Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01268">1268</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01267">1267</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +837,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00946">946</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00948">948</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -881,7 +864,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01844">1844</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01827">1827</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -919,7 +902,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00971">971</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00973">973</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -938,15 +921,18 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l02176">2176</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l02166">2166</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a0ed7a1337916a6fa34d4ea30f370d833" name="a0ed7a1337916a6fa34d4ea30f370d833"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ed7a1337916a6fa34d4ea30f370d833">&#9670;&#160;</a></span>OpenURL()</h2>
+<a id="a9c5563ce949c36f1573914c48ff46d73" name="a9c5563ce949c36f1573914c48ff46d73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c5563ce949c36f1573914c48ff46d73">&#9670;&#160;</a></span>OpenURL()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool IGraphicsWin::OpenURL </td>
@@ -978,9 +964,14 @@ Protected Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01801">1801</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01785">1785</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1008,7 +999,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01132">1132</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01134">1134</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1058,7 +1049,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00743">743</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00745">745</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1086,7 +1077,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00899">899</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00901">901</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1104,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01326">1326</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01320">1320</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1157,7 +1148,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01767">1767</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01749">1749</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1195,7 +1186,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01708">1708</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01690">1690</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1251,7 +1242,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01593">1593</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01582">1582</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1280,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01558">1558</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01549">1549</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1317,35 +1308,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01930">1930</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ab1dc1d31ca4f0a047a5c736b57f607ec" name="ab1dc1d31ca4f0a047a5c736b57f607ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1dc1d31ca4f0a047a5c736b57f607ec">&#9670;&#160;</a></span>SetMainWndClassName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsWin::SetMainWndClassName </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8h_source.html#l00075">75</a> of file <a class="el" href="_i_graphics_win_8h_source.html">IGraphicsWin.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01913">1913</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1373,7 +1336,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00994">994</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00996">996</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1401,7 +1364,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01895">1895</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01868">1868</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1429,27 +1392,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01824">1824</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a175d9ef82ce8ea090d38fedf1de1df16" name="a175d9ef82ce8ea090d38fedf1de1df16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a175d9ef82ce8ea090d38fedf1de1df16">&#9670;&#160;</a></span>SetWindowTitle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IGraphicsWin::SetWindowTitle </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01281">1281</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01806">1806</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1527,7 +1470,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01120">1120</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01122">1122</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1554,7 +1497,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01831">1831</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l01814">1814</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>
@@ -1658,7 +1601,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00307">307</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_win_8cpp_source.html#l00305">305</a> of file <a class="el" href="_i_graphics_win_8cpp_source.html">IGraphicsWin.cpp</a>.</p>
 
 </div>
 </div>

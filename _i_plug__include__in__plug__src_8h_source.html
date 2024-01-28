@@ -120,7 +120,7 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (!__GetDpiForWindow)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      HINSTANCE h = LoadLibraryA(<span class="stringliteral">&quot;user32.dll&quot;</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>      HINSTANCE h = LoadLibraryW(L<span class="stringliteral">&quot;user32.dll&quot;</span>);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>      <span class="keywordflow">if</span> (h) *(<span class="keywordtype">void</span> **)&amp;__GetDpiForWindow = GetProcAddress(h, <span class="stringliteral">&quot;GetDpiForWindow&quot;</span>);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      <span class="keywordflow">if</span> (!__GetDpiForWindow)</div>
