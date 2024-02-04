@@ -1,0 +1,5 @@
+<map id="IMultiLineTextControl" name="IMultiLineTextControl">
+<area shape="rect" id="node1" title="A basic control to display some text that needs to span multiple lines." alt="" coords="5,152,151,177"/>
+<area shape="rect" id="node2" href="$class_i_text_control.html" title="A basic control to display some text." alt="" coords="32,79,124,104"/>
+<area shape="rect" id="node3" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="45,5,111,31"/>
+</map>

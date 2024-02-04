@@ -286,6 +286,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affe4aae057ddc015587648bbfa3be593 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#affe4aae057ddc015587648bbfa3be593">MeasureText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const</td></tr>
 <tr class="memdesc:affe4aae057ddc015587648bbfa3be593 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the rectangular region that some text will occupy.  <a href="class_i_graphics.html#affe4aae057ddc015587648bbfa3be593">More...</a><br /></td></tr>
 <tr class="separator:affe4aae057ddc015587648bbfa3be593 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93aee7e07125a7d4ebabf91b7a6d8514 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">DrawMultiLineText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend=0)</td></tr>
+<tr class="memdesc:a93aee7e07125a7d4ebabf91b7a6d8514 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)  <a href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">More...</a><br /></td></tr>
+<tr class="separator:a93aee7e07125a7d4ebabf91b7a6d8514 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e1b75ade14fcae02d24262caa63757d inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_i_color.html">IColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">GetPoint</a> (int x, int y)=0</td></tr>
 <tr class="memdesc:a1e1b75ade14fcae02d24262caa63757d inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color at an X, Y location in the graphics context.  <a href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">More...</a><br /></td></tr>
 <tr class="separator:a1e1b75ade14fcae02d24262caa63757d inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1256,7 +1259,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00403">403</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1693,7 +1696,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00363">363</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00326">OnViewInitialized()</a>.</p>
 
@@ -1728,7 +1731,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00452">452</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00915">IGraphics::GetPlatformContext()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="class_i_graphics.html#a290c693845898cd3b89f33175ac590c8">IGraphics::GetWindow()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00924">IGraphics::GetPlatformContext()</a>, <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="class_i_graphics.html#a290c693845898cd3b89f33175ac590c8">IGraphics::GetWindow()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1985,7 +1988,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00290">290</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00906">IGraphics::GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00915">IGraphics::GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>.</p>
 
 </div>
 </div>

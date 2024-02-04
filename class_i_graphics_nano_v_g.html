@@ -136,6 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8c3cde2de2a57a908c8791abcdec7e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">DrawFastDropShadow</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;innerBounds, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;outerBounds, float xyDrop=5.f, float roundness=0.f, float blur=10.f, <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend=nullptr) override</td></tr>
 <tr class="memdesc:a8c3cde2de2a57a908c8791abcdec7e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">NanoVG only.  <a href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">More...</a><br /></td></tr>
 <tr class="separator:a8c3cde2de2a57a908c8791abcdec7e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732954b3587888ea64def7c3921b6ca8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">DrawMultiLineText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend) override</td></tr>
+<tr class="memdesc:a732954b3587888ea64def7c3921b6ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)  <a href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">More...</a><br /></td></tr>
+<tr class="separator:a732954b3587888ea64def7c3921b6ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21bfa5c579a0cc70766ff60f72af5c97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">PathClear</a> () override</td></tr>
 <tr class="memdesc:a21bfa5c579a0cc70766ff60f72af5c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the stack of path drawing commands.  <a href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">More...</a><br /></td></tr>
 <tr class="separator:a21bfa5c579a0cc70766ff60f72af5c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,6 +292,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affe4aae057ddc015587648bbfa3be593 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#affe4aae057ddc015587648bbfa3be593">MeasureText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const</td></tr>
 <tr class="memdesc:affe4aae057ddc015587648bbfa3be593 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the rectangular region that some text will occupy.  <a href="class_i_graphics.html#affe4aae057ddc015587648bbfa3be593">More...</a><br /></td></tr>
 <tr class="separator:affe4aae057ddc015587648bbfa3be593 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93aee7e07125a7d4ebabf91b7a6d8514 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">DrawMultiLineText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend=0)</td></tr>
+<tr class="memdesc:a93aee7e07125a7d4ebabf91b7a6d8514 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)  <a href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">More...</a><br /></td></tr>
+<tr class="separator:a93aee7e07125a7d4ebabf91b7a6d8514 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e1b75ade14fcae02d24262caa63757d inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_i_color.html">IColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">GetPoint</a> (int x, int y)=0</td></tr>
 <tr class="memdesc:a1e1b75ade14fcae02d24262caa63757d inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color at an X, Y location in the graphics context.  <a href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">More...</a><br /></td></tr>
 <tr class="separator:a1e1b75ade14fcae02d24262caa63757d inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1183,7 +1189,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a42d34a154fd59b2b9ffdb818c358defc">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00133">133</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00135">135</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
 
 </div>
 </div>
@@ -1275,7 +1281,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00495">495</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1390,7 +1396,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">373</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">ApplyShadowMask()</a>.</p>
 
@@ -1875,6 +1881,71 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a732954b3587888ea64def7c3921b6ca8" name="a732954b3587888ea64def7c3921b6ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732954b3587888ea64def7c3921b6ca8">&#9670;&#160;</a></span>DrawMultiLineText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IGraphicsNanoVG::DrawMultiLineText </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_text.html">IText</a> &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramname"><em>bounds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_blend.html">IBlend</a> *&#160;</td>
+          <td class="paramname"><em>pBlend</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>An <a class="el" href="struct_i_text.html" title="IText is used to manage font and text/text entry style for a piece of text on the UI,...">IText</a> struct containing font and text properties and layout info </td></tr>
+    <tr><td class="paramname">str</td><td>The text string to draw </td></tr>
+    <tr><td class="paramname">bounds</td><td>The rectangular region in the graphics where you would like to draw the text </td></tr>
+    <tr><td class="paramname">pBlend</td><td>Optional blend method </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">IGraphics</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00916">916</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00822">IRECT::MH()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00819">IRECT::MW()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00813">IRECT::W()</a>.</p>
+
+</div>
+</div>
 <a id="a191e6644f4d7854b9a852ef772bacaf1" name="a191e6644f4d7854b9a852ef772bacaf1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a191e6644f4d7854b9a852ef772bacaf1">&#9670;&#160;</a></span>DrawResize()</h2>
 
@@ -1903,7 +1974,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">481</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1936,7 +2007,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00513">513</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01070">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01066">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1966,7 +2037,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#ab07c25e58a1fdfd6acce197bf0805ec0">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00135">135</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00137">137</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
 
 </div>
 </div>
@@ -1998,7 +2069,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a223c6189a1906071bcb3018837792946">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00117">117</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00119">119</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
 
 </div>
 </div>
@@ -2195,7 +2266,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">311</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00906">IGraphics::GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00915">IGraphics::GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">LoadBitmap()</a>.</p>
 
@@ -2377,7 +2448,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">273</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01086">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::SearchImageResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01095">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::SearchImageResource()</a>.</p>
 
 </div>
 </div>
@@ -3028,7 +3099,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#a3c4325453e5dc772e44fd390beafce33">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00120">120</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00122">122</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
 
 </div>
 </div>
@@ -3077,7 +3148,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#a27bd9abf9591fad9ddfc9a040a58564c">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00121">121</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8h_source.html#l00123">123</a> of file <a class="el" href="_i_graphics_nano_v_g_8h_source.html">IGraphicsNanoVG.h</a>.</p>
 
 </div>
 </div>
