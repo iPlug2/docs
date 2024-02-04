@@ -204,7 +204,7 @@ var searchData=
   ['getvpadded_201',['GetVPadded',['../struct_i_r_e_c_t.html#a8ba1fdc9d3a380ac175eb8521c1594bc',1,'IRECT']]],
   ['getvshifted_202',['GetVShifted',['../struct_i_r_e_c_t.html#ab6a8fef4b1085272c400f905f6e8af6f',1,'IRECT']]],
   ['getvsliced_203',['GetVSliced',['../struct_i_r_e_c_t.html#a6dd5059e912a648db385cf110c413914',1,'IRECT']]],
-  ['getwantsgestures_204',['GetWantsGestures',['../class_i_control.html#aabc46fbe6f6a65c568c1ad4e407d7577',1,'IControl']]],
+  ['getwantsgestures_204',['GetWantsGestures',['../class_i_control.html#a024f8a69012c873c4b82ce4c730f5432',1,'IControl']]],
   ['getwantsmidi_205',['GetWantsMidi',['../class_i_control.html#a1004d361adb840ed06a4597e937f7473',1,'IControl']]],
   ['getwantsmultitouch_206',['GetWantsMultiTouch',['../class_i_control.html#a2955ff21fb95580ac95fee9817458515',1,'IControl']]],
   ['getwidth_207',['GetWidth',['../class_a_p_i_bitmap.html#aed966b4a83c8b2b3f332b147e0243dfa',1,'APIBitmap']]],

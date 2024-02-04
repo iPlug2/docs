@@ -357,8 +357,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a5f1816c23f0834d817db7bed4e6d9c09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5f1816c23f0834d817db7bed4e6d9c09">AttachGestureRecognizer</a> (EGestureType type, IGestureFunc func)</td></tr>
 <tr class="memdesc:a5f1816c23f0834d817db7bed4e6d9c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a IGestureFunc that should be triggered in response to a certain type of gesture.  <a href="class_i_control.html#a5f1816c23f0834d817db7bed4e6d9c09">More...</a><br /></td></tr>
 <tr class="separator:a5f1816c23f0834d817db7bed4e6d9c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabc46fbe6f6a65c568c1ad4e407d7577"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aabc46fbe6f6a65c568c1ad4e407d7577">GetWantsGestures</a> () const</td></tr>
-<tr class="separator:aabc46fbe6f6a65c568c1ad4e407d7577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024f8a69012c873c4b82ce4c730f5432"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a024f8a69012c873c4b82ce4c730f5432">GetWantsGestures</a> () const</td></tr>
+<tr class="separator:a024f8a69012c873c4b82ce4c730f5432"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af993ada7a3354b806e627197ef4906cb"><td class="memItemLeft" align="right" valign="top">EGestureType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#af993ada7a3354b806e627197ef4906cb">GetLastGesture</a> () const</td></tr>
 <tr class="separator:af993ada7a3354b806e627197ef4906cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b54ab2805c78856fb4cc465f9f04980"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7b54ab2805c78856fb4cc465f9f04980">GetDelegate</a> ()</td></tr>
@@ -1771,8 +1771,8 @@ template&lt;typename T , typename... Args&gt; </div>
 
 </div>
 </div>
-<a id="aabc46fbe6f6a65c568c1ad4e407d7577" name="aabc46fbe6f6a65c568c1ad4e407d7577"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabc46fbe6f6a65c568c1ad4e407d7577">&#9670;&#160;</a></span>GetWantsGestures()</h2>
+<a id="a024f8a69012c873c4b82ce4c730f5432" name="a024f8a69012c873c4b82ce4c730f5432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024f8a69012c873c4b82ce4c730f5432">&#9670;&#160;</a></span>GetWantsGestures()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1781,7 +1781,7 @@ template&lt;typename T , typename... Args&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool IControl::GetWantsGestures </td>
+          <td class="memname">virtual bool IControl::GetWantsGestures </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1789,11 +1789,11 @@ template&lt;typename T , typename... Args&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>/c true if this control supports multiple gestures </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>/c true if this control supports gestures (override if you are not calling <a class="el" href="class_i_control.html#a5f1816c23f0834d817db7bed4e6d9c09" title="Add a IGestureFunc that should be triggered in response to a certain type of gesture.">IControl::AttachGestureRecognizer</a> but are overriding <a class="el" href="class_i_control.html#ab569bb264e2607961551d8389d79b9dc">OnGesture()</a>) </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l00440">440</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
