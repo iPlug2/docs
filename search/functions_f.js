@@ -112,7 +112,7 @@ var searchData=
   ['settextentrylength_109',['SetTextEntryLength',['../class_i_control.html#afa1c3d0392e3c9cc1a0a8df48f91cf46',1,'IControl']]],
   ['settextinclipboard_110',['SetTextInClipboard',['../class_i_graphics.html#a37af03428d6bd7637999688358d37f63',1,'IGraphics']]],
   ['settodefault_111',['SetToDefault',['../class_i_param.html#a0afee79311f2daa98bbd4e9df06ec0d7',1,'IParam']]],
-  ['settooltip_112',['SetTooltip',['../class_i_control.html#adb6996a904a25b17f593c4fc76e06eba',1,'IControl']]],
+  ['settooltip_112',['SetTooltip',['../class_i_control.html#ad9b74810f327007322f12f1110e032a6',1,'IControl']]],
   ['settransform_113',['SetTransform',['../struct_i_pattern.html#ada00eeacd0203d8cd504060e1eab7153',1,'IPattern::SetTransform(float xx, float yx, float xy, float yy, float tx, float ty)'],['../struct_i_pattern.html#af81b978552d3912ccf514771e08082c3',1,'IPattern::SetTransform(const IMatrix &amp;transform)']]],
   ['settranslation_114',['SetTranslation',['../class_i_graphics.html#a55cf65e3df8909d86d19e90905f64004',1,'IGraphics']]],
   ['setuiappearancechangedfunc_115',['SetUIAppearanceChangedFunc',['../class_i_graphics.html#a3ef9c2088066d9f3ec13f3266b7ad3fa',1,'IGraphics']]],
