@@ -104,6 +104,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ada595a08a39bdda1bd11cb1b373e18e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89698f4cea781211ff0ae70a80d9793f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a89698f4cea781211ff0ae70a80d9793f">SetBundleID</a> (const char *bundleID)</td></tr>
 <tr class="separator:a89698f4cea781211ff0ae70a80d9793f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8472d5a807ba2545a3694b7f960375"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#ace8472d5a807ba2545a3694b7f960375">SetAppGroupID</a> (const char *appGroupID)</td></tr>
+<tr class="separator:ace8472d5a807ba2545a3694b7f960375"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a651c64279152d2a7f28319b22aa8ce9d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a651c64279152d2a7f28319b22aa8ce9d">OpenWindow</a> (void *pWindow) override</td></tr>
 <tr class="separator:a651c64279152d2a7f28319b22aa8ce9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ca7e943c787f650b97816b199c4122d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a1ca7e943c787f650b97816b199c4122d">CloseWindow</a> () override</td></tr>
@@ -140,8 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab4f00c65cedab29c4380dccd4534642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b875841cecc365ebc95308b3b5451d7"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a7b875841cecc365ebc95308b3b5451d7">GetWindow</a> () override</td></tr>
 <tr class="separator:a7b875841cecc365ebc95308b3b5451d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a300f72f28fda09a767f4385399db7110"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a300f72f28fda09a767f4385399db7110">GetBundleID</a> () override</td></tr>
-<tr class="separator:a300f72f28fda09a767f4385399db7110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5556ae4ae20ead670b701d2d16ba0f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a5e5556ae4ae20ead670b701d2d16ba0f">GetBundleID</a> () const override</td></tr>
+<tr class="separator:a5e5556ae4ae20ead670b701d2d16ba0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a039748914c8aac3a3cb15ee57de7a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a65a039748914c8aac3a3cb15ee57de7a">GetAppGroupID</a> () const override</td></tr>
+<tr class="separator:a65a039748914c8aac3a3cb15ee57de7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3db92fbba7d268221dccd1e83348d5f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#ae3db92fbba7d268221dccd1e83348d5f">GetTextFromClipboard</a> (WDL_String &amp;str) override</td></tr>
 <tr class="separator:ae3db92fbba7d268221dccd1e83348d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50cfb59ab184702065dcb4f2e4b2b5df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_i_o_s.html#a50cfb59ab184702065dcb4f2e4b2b5df">SetTextInClipboard</a> (const char *str) override</td></tr>
@@ -514,8 +518,35 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a300f72f28fda09a767f4385399db7110" name="a300f72f28fda09a767f4385399db7110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a300f72f28fda09a767f4385399db7110">&#9670;&#160;</a></span>GetBundleID()</h2>
+<a id="a65a039748914c8aac3a3cb15ee57de7a" name="a65a039748914c8aac3a3cb15ee57de7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a039748914c8aac3a3cb15ee57de7a">&#9670;&#160;</a></span>GetAppGroupID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * IGraphicsIOS::GetAppGroupID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00061">61</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+
+</div>
+</div>
+<a id="a5e5556ae4ae20ead670b701d2d16ba0f" name="a5e5556ae4ae20ead670b701d2d16ba0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5556ae4ae20ead670b701d2d16ba0f">&#9670;&#160;</a></span>GetBundleID()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -527,7 +558,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">const char * IGraphicsIOS::GetBundleID </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -537,7 +568,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00059">59</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00060">60</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
 
 </div>
 </div>
@@ -749,7 +780,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00052">52</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00053">53</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
 
 </div>
 </div>
@@ -943,7 +974,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00053">53</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00054">54</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1107,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00069">69</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00072">72</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
 
 </div>
 </div>
@@ -1246,6 +1277,34 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ace8472d5a807ba2545a3694b7f960375" name="ace8472d5a807ba2545a3694b7f960375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace8472d5a807ba2545a3694b7f960375">&#9670;&#160;</a></span>SetAppGroupID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IGraphicsIOS::SetAppGroupID </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>appGroupID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00031">31</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+
+</div>
+</div>
 <a id="a89698f4cea781211ff0ae70a80d9793f" name="a89698f4cea781211ff0ae70a80d9793f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a89698f4cea781211ff0ae70a80d9793f">&#9670;&#160;</a></span>SetBundleID()</h2>
 
@@ -1375,7 +1434,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00046">46</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_i_o_s_8h_source.html#l00047">47</a> of file <a class="el" href="_i_graphics_i_o_s_8h_source.html">IGraphicsIOS.h</a>.</p>
 
 </div>
 </div>

@@ -572,9 +572,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memitem:ae682058e6cf9b415cd97b82b6f90c3b3 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ae682058e6cf9b415cd97b82b6f90c3b3">CachePlatformFont</a> (const char *fontID, const PlatformFontPtr &amp;font)=0</td></tr>
 <tr class="memdesc:ae682058e6cf9b415cd97b82b6f90c3b3 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to indicate that the platform should cache data about the platform font if needed.  <a href="class_i_graphics.html#ae682058e6cf9b415cd97b82b6f90c3b3">More...</a><br /></td></tr>
 <tr class="separator:ae682058e6cf9b415cd97b82b6f90c3b3 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a3b91953e4dc5445487c431c5400623 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a5a3b91953e4dc5445487c431c5400623">GetBundleID</a> ()</td></tr>
-<tr class="memdesc:a5a3b91953e4dc5445487c431c5400623 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bundle ID on macOS and iOS, returns emtpy string on other OSs.  <a href="class_i_graphics.html#a5a3b91953e4dc5445487c431c5400623">More...</a><br /></td></tr>
-<tr class="separator:a5a3b91953e4dc5445487c431c5400623 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171f1716503a3fe1abcee32ab7413b67 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a171f1716503a3fe1abcee32ab7413b67">GetBundleID</a> () const</td></tr>
+<tr class="memdesc:a171f1716503a3fe1abcee32ab7413b67 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bundle ID on macOS and iOS, returns emtpy string on other OSs.  <a href="class_i_graphics.html#a171f1716503a3fe1abcee32ab7413b67">More...</a><br /></td></tr>
+<tr class="separator:a171f1716503a3fe1abcee32ab7413b67 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f3e7c1eadb7b68bcd5e5e51b10305e4 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a2f3e7c1eadb7b68bcd5e5e51b10305e4">GetAppGroupID</a> () const</td></tr>
+<tr class="memdesc:a2f3e7c1eadb7b68bcd5e5e51b10305e4 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the app group ID on macOS and iOS, returns emtpy string on other OSs.  <a href="class_i_graphics.html#a2f3e7c1eadb7b68bcd5e5e51b10305e4">More...</a><br /></td></tr>
+<tr class="separator:a2f3e7c1eadb7b68bcd5e5e51b10305e4 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc5afbac2dbef1437e62f8e1fbb74fe8 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#abc5afbac2dbef1437e62f8e1fbb74fe8">IGraphics</a> (<a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a> &amp;dlg, int w, int h, int fps=DEFAULT_FPS, float scale=1.)</td></tr>
 <tr class="separator:abc5afbac2dbef1437e62f8e1fbb74fe8 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed869d9b67e5baf5cd74f8a749b9253 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top"><a id="abed869d9b67e5baf5cd74f8a749b9253" name="abed869d9b67e5baf5cd74f8a749b9253"></a>
@@ -1281,7 +1284,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00495">495</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01078">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1396,7 +1399,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">373</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01078">IGraphics::WindowWidth()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">ApplyShadowMask()</a>.</p>
 
@@ -1974,7 +1977,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">481</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01078">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -2007,7 +2010,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00513">513</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01091">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01079">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01075">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01082">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01078">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -2448,7 +2451,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">273</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01095">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::SearchImageResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::SearchImageResource()</a>.</p>
 
 </div>
 </div>

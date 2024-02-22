@@ -151,6 +151,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abfe04c1955ffbcdbb3498da33cc6d04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad950105b6ed834900c4ce6db718c8071"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#ad950105b6ed834900c4ce6db718c8071">GetBundleID</a> () const</td></tr>
 <tr class="separator:ad950105b6ed834900c4ce6db718c8071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace30b8a7c2fd2861b596e96f1be03a89"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#ace30b8a7c2fd2861b596e96f1be03a89">GetAppGroupID</a> () const</td></tr>
+<tr class="separator:ace30b8a7c2fd2861b596e96f1be03a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3ac628a82155f8fc396a663ea4c8336"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#af3ac628a82155f8fc396a663ea4c8336">NParamGroups</a> () const</td></tr>
 <tr class="separator:af3ac628a82155f8fc396a663ea4c8336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6008102980dfa13eddf8428bd2a2130c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plugin_base.html#a6008102980dfa13eddf8428bd2a2130c">AddParamGroup</a> (const char *name)</td></tr>
@@ -427,9 +429,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Number of parameter groups </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00111">111</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00114">114</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00106">NParamGroups()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00109">NParamGroups()</a>.</p>
 
 </div>
 </div>
@@ -638,7 +640,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00202">202</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00205">205</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00214">IByteChunk::Clear()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00208">IByteChunk::PutChunk()</a>.</p>
 
@@ -764,7 +766,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plug-in has been set up to do state chunks, via config.h </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00123">123</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00126">126</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00913">LoadBankFromFXB()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00822">LoadPresetFromFXP()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00717">SaveBankAsFXB()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00644">SavePresetAsFXP()</a>.</p>
 
@@ -807,7 +809,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00576">576</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00341">IParam::Bool()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00345">IParam::Int()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00423">IParam::Type()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">IParam::Value()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00341">IParam::Bool()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00345">IParam::Int()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00423">IParam::Type()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">IParam::Value()</a>.</p>
 
 </div>
 </div>
@@ -837,7 +839,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00533">533</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00341">IParam::Bool()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00345">IParam::Int()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00423">IParam::Type()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">IParam::Value()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00341">IParam::Bool()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00345">IParam::Int()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00423">IParam::Type()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">IParam::Value()</a>.</p>
 
 </div>
 </div>
@@ -867,7 +869,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00619">619</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00221">IByteChunk::Size()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00221">IByteChunk::Size()</a>.</p>
 
 </div>
 </div>
@@ -1039,6 +1041,33 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="ace30b8a7c2fd2861b596e96f1be03a89" name="ace30b8a7c2fd2861b596e96f1be03a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace30b8a7c2fd2861b596e96f1be03a89">&#9670;&#160;</a></span>GetAppGroupID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * IPluginBase::GetAppGroupID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00104">104</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+
+</div>
+</div>
 <a id="a40cb4293b700f6cfb6aa600171ed7487" name="a40cb4293b700f6cfb6aa600171ed7487"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40cb4293b700f6cfb6aa600171ed7487">&#9670;&#160;</a></span>GetArchStr()</h2>
 
@@ -1162,7 +1191,7 @@ Friends</h2></td></tr>
 <p>Get the index of the current, active preset. </p>
 <dl class="section return"><dt>Returns</dt><dd>The index of the current preset </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">160</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">163</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00576">DumpMakePresetFromNamedParamsSrc()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00533">DumpMakePresetSrc()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00619">DumpPresetBlob()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00822">LoadPresetFromFXP()</a>, <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00077">IVBakedPresetManagerControl::OnAttached()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00717">SaveBankAsFXB()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00644">SavePresetAsFXP()</a>.</p>
 
@@ -1415,7 +1444,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>CString for the unique group name </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00116">116</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00119">119</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -1541,7 +1570,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p>Get a ptr to a factory preset @ param idx The index number of the preset you are referring to. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00173">173</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00176">176</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -1693,7 +1722,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p>Reimplemented in <a class="el" href="class_i_plug_a_u.html#a2f6a1ca55150f75bd666793cd4a3a60d">IPlugAU</a>, and <a class="el" href="class_i_plug_v_s_t3.html#a0c735db735f4d8fcdcc3a6a6ac9aaa82">IPlugVST3</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00119">119</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00122">122</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -1724,7 +1753,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p>Reimplemented in <a class="el" href="class_i_plug_a_a_x.html#af85d60f2ecb28f9d5c867293edb9b6ac">IPlugAAX</a>, <a class="el" href="class_i_plug_a_p_p.html#abdcef0ce032a0c77aad14f9b9aee1e5b">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#a27e83f46ae08cf37d055260ad4f238c0">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#af596d1f0c964968eb16dd9db0a161311">IPlugAUv3</a>, <a class="el" href="class_i_plug_v_s_t2.html#af7d8b9d8e5cd2d81e8b7840f6b9abbb6">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#ab9dc0c501ac88be53fdb24930eb2c2bc">IPlugVST3</a>, and <a class="el" href="class_i_plug_v_s_t3_controller.html#acd5596a08259cf4789f737dca0a04a74">IPlugVST3Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00167">167</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00170">170</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00913">LoadBankFromFXB()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00822">LoadPresetFromFXP()</a>.</p>
 
@@ -1880,7 +1909,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00913">913</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00123">DoesStateChunks()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00160">IByteChunk::GetBytes()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00132">IByteChunk::GetIPlugVerFromChunk()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00167">InformHostOfPresetChange()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00466">ModifyCurrentPreset()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00229">IByteChunk::Resize()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00505">UnserializePresets()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00126">DoesStateChunks()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00160">IByteChunk::GetBytes()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00132">IByteChunk::GetIPlugVerFromChunk()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00170">InformHostOfPresetChange()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00466">ModifyCurrentPreset()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00229">IByteChunk::Resize()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00505">UnserializePresets()</a>.</p>
 
 </div>
 </div>
@@ -1911,7 +1940,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00822">822</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00123">DoesStateChunks()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00160">IByteChunk::GetBytes()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00132">IByteChunk::GetIPlugVerFromChunk()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00167">InformHostOfPresetChange()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00466">ModifyCurrentPreset()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00229">IByteChunk::Resize()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00146">UnserializeState()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00126">DoesStateChunks()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00160">IByteChunk::GetBytes()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00132">IByteChunk::GetIPlugVerFromChunk()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00170">InformHostOfPresetChange()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00466">ModifyCurrentPreset()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00229">IByteChunk::Resize()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00149">UnserializeState()</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +1981,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00273">273</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">SerializeState()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">SerializeState()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00387">EnsureDefaultPreset()</a>.</p>
 
@@ -2162,7 +2191,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00466">466</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00214">IByteChunk::Clear()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">SerializeState()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00214">IByteChunk::Clear()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">SerializeState()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00913">LoadBankFromFXB()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00822">LoadPresetFromFXP()</a>.</p>
 
@@ -2192,9 +2221,9 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The number of unique parameter groups identified </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00106">106</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00109">109</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8h_source.html#l00111">AddParamGroup()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8h_source.html#l00114">AddParamGroup()</a>.</p>
 
 </div>
 </div>
@@ -2224,9 +2253,9 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 <p>Gets the number of factory presets. </p>
 <p >NOTE: some hosts don't like 0 presets, so even if you don't support factory presets, this method should return 1 </p><dl class="section return"><dt>Returns</dt><dd>The number of factory presets </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00182">182</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00185">185</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00077">IVBakedPresetManagerControl::OnAttached()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00717">SaveBankAsFXB()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00164">SetCurrentPresetIdx()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00077">IVBakedPresetManagerControl::OnAttached()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00717">SaveBankAsFXB()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00167">SetCurrentPresetIdx()</a>.</p>
 
 </div>
 </div>
@@ -2255,7 +2284,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p>[VST2 only] Called when the preset name is changed by the host </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00253">253</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00256">256</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>.</p>
 
@@ -2460,7 +2489,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">411</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00253">OnPresetsModified()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">SerializeState()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00146">UnserializeState()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00256">OnPresetsModified()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">SerializeState()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00149">UnserializeState()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00913">LoadBankFromFXB()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00822">LoadPresetFromFXP()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00440">RestorePreset()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00505">UnserializePresets()</a>.</p>
 
@@ -2493,7 +2522,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00717">717</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00123">DoesStateChunks()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00034">GetPluginVersion()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00119">IByteChunk::InitChunkWithIPlugVer()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00182">NPresets()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00170">IByteChunk::Put()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00147">IByteChunk::PutBytes()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00484">SerializePresets()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00221">IByteChunk::Size()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00126">DoesStateChunks()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00034">GetPluginVersion()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00119">IByteChunk::InitChunkWithIPlugVer()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00185">NPresets()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00170">IByteChunk::Put()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00147">IByteChunk::PutBytes()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00484">SerializePresets()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00221">IByteChunk::Size()</a>.</p>
 
 </div>
 </div>
@@ -2524,7 +2553,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00644">644</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00123">DoesStateChunks()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00160">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00034">GetPluginVersion()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00119">IByteChunk::InitChunkWithIPlugVer()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00170">IByteChunk::Put()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00147">IByteChunk::PutBytes()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">SerializeState()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00221">IByteChunk::Size()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00126">DoesStateChunks()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00163">GetCurrentPresetIdx()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00242">IByteChunk::GetData()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00034">GetPluginVersion()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00457">GetPresetName()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00058">GetUniqueID()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00119">IByteChunk::InitChunkWithIPlugVer()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00170">IByteChunk::Put()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00147">IByteChunk::PutBytes()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">SerializeState()</a>, and <a class="el" href="_i_plug_structs_8h_source.html#l00221">IByteChunk::Size()</a>.</p>
 
 </div>
 </div>
@@ -2557,7 +2586,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">IParam::GetName()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00170">IByteChunk::Put()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">IParam::Value()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">SerializeState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">SerializeState()</a>.</p>
 
 </div>
 </div>
@@ -2628,7 +2657,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if serialization was successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">139</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">142</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00104">SerializeParams()</a>.</p>
 
@@ -2669,7 +2698,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if serialization was successful </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00151">151</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00154">154</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -2705,9 +2734,9 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00164">164</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00167">167</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00182">NPresets()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_plugin_base_8h_source.html#l00185">NPresets()</a>.</p>
 
 </div>
 </div>
@@ -2751,7 +2780,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">IParam::GetName()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00301">IParam::Set()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">IParam::Value()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8h_source.html#l00146">UnserializeState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8h_source.html#l00149">UnserializeState()</a>.</p>
 
 </div>
 </div>
@@ -2794,7 +2823,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00505">505</a> of file <a class="el" href="_i_plug_plugin_base_8cpp_source.html">IPlugPluginBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00214">IByteChunk::Clear()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00200">IByteChunk::GetStr()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00139">SerializeState()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00146">UnserializeState()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00214">IByteChunk::Clear()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00181">IByteChunk::Get()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00200">IByteChunk::GetStr()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00411">RestorePreset()</a>, <a class="el" href="_i_plug_plugin_base_8h_source.html#l00142">SerializeState()</a>, and <a class="el" href="_i_plug_plugin_base_8h_source.html#l00149">UnserializeState()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00913">LoadBankFromFXB()</a>.</p>
 
@@ -2844,7 +2873,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new chunk position (endPos) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00146">146</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00149">149</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00119">UnserializeParams()</a>.</p>
 
@@ -2895,7 +2924,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The new chunk position (endPos) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00156">156</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00159">159</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -2920,7 +2949,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00381">381</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00384">384</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -2944,7 +2973,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00390">390</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00393">393</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -2968,7 +2997,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00380">380</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00383">383</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -2992,7 +3021,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00386">386</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00389">389</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3016,7 +3045,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00387">387</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00390">390</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3040,7 +3069,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00382">382</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00385">385</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3064,7 +3093,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00383">383</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00386">386</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3088,7 +3117,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00384">384</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00387">387</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3112,7 +3141,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00385">385</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00388">388</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3136,7 +3165,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00389">389</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00392">392</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
@@ -3160,7 +3189,7 @@ If <code>TRACER_BUILD</code> is defined, <code>T</code> is appended to the versi
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00388">388</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_plugin_base_8h_source.html#l00391">391</a> of file <a class="el" href="_i_plug_plugin_base_8h_source.html">IPlugPluginBase.h</a>.</p>
 
 </div>
 </div>
