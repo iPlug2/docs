@@ -6,10 +6,11 @@ var searchData=
   ['hasui_3',['HasUI',['../class_i_plugin_base.html#a41c4ed6296384b212698af666a8f5f89',1,'IPluginBase']]],
   ['haswildcardbus_4',['HasWildcardBus',['../class_i_plug_processor.html#ab293edf73c931ea7d372474aa8dc7d94',1,'IPlugProcessor']]],
   ['height_5',['Height',['../class_i_graphics.html#a876e2160f3ba0f2e732e07301e4b9e24',1,'IGraphics']]],
-  ['hide_6',['Hide',['../class_i_v_tabbed_pages_control.html#a9a8d28bc1ecc56cb6eee7bf6a20ba450',1,'IVTabbedPagesControl::Hide()'],['../class_i_container_base.html#a3dde8e81abcd125dc76b10530ebd76ba',1,'IContainerBase::Hide()'],['../class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b',1,'IControl::Hide()']]],
+  ['hide_6',['Hide',['../class_i_web_view_control.html#a53fded006767cdd8790f142cc27d2008',1,'IWebViewControl::Hide()'],['../class_i_container_base.html#a3dde8e81abcd125dc76b10530ebd76ba',1,'IContainerBase::Hide()'],['../class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b',1,'IControl::Hide()'],['../class_i_v_tabbed_pages_control.html#a9a8d28bc1ecc56cb6eee7bf6a20ba450',1,'IVTabbedPagesControl::Hide()'],['../class_i_platform_view_control.html#aba70faf9111411b1233ee8755e260edb',1,'IPlatformViewControl::Hide()']]],
   ['hidecontrol_7',['HideControl',['../class_i_graphics.html#a7d3c658447977fc1d8587ce1a69c29c8',1,'IGraphics']]],
   ['hidemousecursor_8',['HideMouseCursor',['../class_i_graphics.html#abc474503de42d4dfd9827b7c532fb6cb',1,'IGraphics']]],
-  ['hostpath_9',['HostPath',['../_i_plug_paths_8h.html#a795b9d00189ed09568cbd90acf1c0f88',1,'IPlugPaths.h']]],
-  ['hostspecificinit_10',['HostSpecificInit',['../class_i_plug_a_p_i_base.html#ac0d44a1980c7fac83687468fc5a0c02d',1,'IPlugAPIBase::HostSpecificInit()'],['../class_i_plug_v_s_t2.html#a9e8dfdc3c57562d83fe52b985e8d2b10',1,'IPlugVST2::HostSpecificInit()']]],
-  ['hpad_11',['HPad',['../struct_i_r_e_c_t.html#ab1ca899231ba450dc90d735348c9ca5c',1,'IRECT']]]
+  ['hideplatformview_9',['HidePlatformView',['../class_i_graphics.html#a38967afc3d38cfde223b9c57a4bb8a05',1,'IGraphics']]],
+  ['hostpath_10',['HostPath',['../_i_plug_paths_8h.html#a795b9d00189ed09568cbd90acf1c0f88',1,'IPlugPaths.h']]],
+  ['hostspecificinit_11',['HostSpecificInit',['../class_i_plug_a_p_i_base.html#ac0d44a1980c7fac83687468fc5a0c02d',1,'IPlugAPIBase::HostSpecificInit()'],['../class_i_plug_v_s_t2.html#a9e8dfdc3c57562d83fe52b985e8d2b10',1,'IPlugVST2::HostSpecificInit()']]],
+  ['hpad_12',['HPad',['../struct_i_r_e_c_t.html#ab1ca899231ba450dc90d735348c9ca5c',1,'IRECT']]]
 ];

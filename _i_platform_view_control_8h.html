@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>iPlug 2: Class Members</title>
+<title>iPlug 2: IPlatformViewControl.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,7 +55,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -77,24 +76,34 @@ $(function() {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c70994b0d9919a11b368e677cb7f323c.html">IGraphics</a></li><li class="navelem"><a class="el" href="dir_b13fc9fb79eb1e19d3aa0747e2e621c7.html">Controls</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">IPlatformViewControl.h File Reference<div class="ingroups"><a class="el" href="group___controls.html">IGraphics::IControls</a></div></div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
+<div class="textblock"><code>#include &quot;<a class="el" href="_i_control_8h_source.html">IControl.h</a>&quot;</code><br />
+<code>#include &quot;IPlugPlatformView.h&quot;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+</div>
+<p><a href="_i_platform_view_control_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_platform_view_control.html">IPlatformViewControl</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A control that let's you embed a HWND, UIView or NSView inside an <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> UI.  <a href="class_i_platform_view_control.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >A control that let's you embed a HWND, UIView or NSView inside an <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> UI. </p>
 
-<h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
-<li>H()&#160;:&#160;<a class="el" href="class_i_bitmap.html#a81bface3c9e2401aea5ae65b1cf80bdc">IBitmap</a>, <a class="el" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">IRECT</a>, <a class="el" href="struct_i_s_v_g.html#a941e092f9b50848337215899581eb090">ISVG</a></li>
-<li>HAlignTo()&#160;:&#160;<a class="el" href="struct_i_r_e_c_t.html#a83ed78680684eb0fc166246992c3f531">IRECT</a></li>
-<li>HasSidechainInput()&#160;:&#160;<a class="el" href="class_i_plug_processor.html#a3ac385983e4ff5772be8509de6177e21">IPlugProcessor</a></li>
-<li>HasUI()&#160;:&#160;<a class="el" href="class_i_plugin_base.html#a41c4ed6296384b212698af666a8f5f89">IPluginBase</a></li>
-<li>HasWildcardBus()&#160;:&#160;<a class="el" href="class_i_plug_processor.html#ab293edf73c931ea7d372474aa8dc7d94">IPlugProcessor</a></li>
-<li>Height()&#160;:&#160;<a class="el" href="class_i_graphics.html#a876e2160f3ba0f2e732e07301e4b9e24">IGraphics</a></li>
-<li>Hide()&#160;:&#160;<a class="el" href="class_i_container_base.html#a3dde8e81abcd125dc76b10530ebd76ba">IContainerBase</a>, <a class="el" href="class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b">IControl</a>, <a class="el" href="class_i_platform_view_control.html#aba70faf9111411b1233ee8755e260edb">IPlatformViewControl</a>, <a class="el" href="class_i_v_tabbed_pages_control.html#a9a8d28bc1ecc56cb6eee7bf6a20ba450">IVTabbedPagesControl</a>, <a class="el" href="class_i_web_view_control.html#a53fded006767cdd8790f142cc27d2008">IWebViewControl</a></li>
-<li>HideControl()&#160;:&#160;<a class="el" href="class_i_graphics.html#a7d3c658447977fc1d8587ce1a69c29c8">IGraphics</a></li>
-<li>HideMouseCursor()&#160;:&#160;<a class="el" href="class_i_graphics.html#abc474503de42d4dfd9827b7c532fb6cb">IGraphics</a></li>
-<li>HidePlatformView()&#160;:&#160;<a class="el" href="class_i_graphics.html#a38967afc3d38cfde223b9c57a4bb8a05">IGraphics</a></li>
-<li>HostSpecificInit()&#160;:&#160;<a class="el" href="class_i_plug_a_p_i_base.html#ac0d44a1980c7fac83687468fc5a0c02d">IPlugAPIBase</a>, <a class="el" href="class_i_plug_v_s_t2.html#a9e8dfdc3c57562d83fe52b985e8d2b10">IPlugVST2</a></li>
-<li>HPad()&#160;:&#160;<a class="el" href="struct_i_r_e_c_t.html#ab1ca899231ba450dc90d735348c9ca5c">IRECT</a></li>
-</ul>
-</div><!-- contents -->
+<p class="definition">Definition in file <a class="el" href="_i_platform_view_control_8h_source.html">IPlatformViewControl.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
