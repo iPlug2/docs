@@ -101,10 +101,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a4074db49eecc0f7d71a8550ed0182d6c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_web_view_control_8h.html#a4074db49eecc0f7d71a8550ed0182d6c">OnReadyFunc</a> = std::function&lt; void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a> *pWebView)&gt;</td></tr>
-<tr class="separator:a4074db49eecc0f7d71a8550ed0182d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aac42888ae18c117887e7e3bf47519e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_web_view_control_8h.html#a4aac42888ae18c117887e7e3bf47519e">OnMessageFunc</a> = std::function&lt; void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a> *pWebView, const char *jsonMsg)&gt;</td></tr>
-<tr class="separator:a4aac42888ae18c117887e7e3bf47519e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6dfcff41b1ab9f5956fd2e52b2c8881"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_web_view_control_8h.html#af6dfcff41b1ab9f5956fd2e52b2c8881">OnReadyFunc</a> = std::function&lt; void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a> *pControl)&gt;</td></tr>
+<tr class="separator:af6dfcff41b1ab9f5956fd2e52b2c8881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d560a830608368343dcc60cc4c3f8d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_web_view_control_8h.html#af4d560a830608368343dcc60cc4c3f8d">OnMessageFunc</a> = std::function&lt; void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a> *pControl, const char *jsonMsg)&gt;</td></tr>
+<tr class="separator:af4d560a830608368343dcc60cc4c3f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A control that allows the embedding of HTML UI inside an <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> context using a platform-native webview and bi-directional communication with that content NOTE: this control attaches a sub view on top of the <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> view, so it will render all content on-top The platform native webviews run in a separate process and communicate via IPC. </p>
@@ -112,14 +112,14 @@ Typedefs</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a4aac42888ae18c117887e7e3bf47519e" name="a4aac42888ae18c117887e7e3bf47519e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4aac42888ae18c117887e7e3bf47519e">&#9670;&#160;</a></span>OnMessageFunc</h2>
+<a id="af4d560a830608368343dcc60cc4c3f8d" name="af4d560a830608368343dcc60cc4c3f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4d560a830608368343dcc60cc4c3f8d">&#9670;&#160;</a></span>OnMessageFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using OnMessageFunc =  std::function&lt;void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a>* pWebView, const char* jsonMsg)&gt;</td>
+          <td class="memname">using OnMessageFunc =  std::function&lt;void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a>* pControl, const char* jsonMsg)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -128,14 +128,14 @@ Typedefs</h2></td></tr>
 
 </div>
 </div>
-<a id="a4074db49eecc0f7d71a8550ed0182d6c" name="a4074db49eecc0f7d71a8550ed0182d6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4074db49eecc0f7d71a8550ed0182d6c">&#9670;&#160;</a></span>OnReadyFunc</h2>
+<a id="af6dfcff41b1ab9f5956fd2e52b2c8881" name="af6dfcff41b1ab9f5956fd2e52b2c8881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6dfcff41b1ab9f5956fd2e52b2c8881">&#9670;&#160;</a></span>OnReadyFunc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using OnReadyFunc =  std::function&lt;void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a>* pWebView)&gt;</td>
+          <td class="memname">using OnReadyFunc =  std::function&lt;void(<a class="el" href="class_i_web_view_control.html">IWebViewControl</a>* pControl)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
