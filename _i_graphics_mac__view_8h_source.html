@@ -200,7 +200,7 @@ $(function() {
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#define VIEW_BASE NSView</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">@interface </span>IGRAPHICS_VIEW : VIEW_BASE &lt;NSTextFieldDelegate<span class="comment">/*, WKScriptMessageHandler*/</span>&gt;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">@interface </span>IGRAPHICS_VIEW : VIEW_BASE &lt;NSTextFieldDelegate, NSDraggingSource<span class="comment">/*, WKScriptMessageHandler*/</span>&gt;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  CVDisplayLinkRef mDisplayLink;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  dispatch_source_t mDisplaySource;</div>
@@ -261,12 +261,13 @@ $(function() {
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">//drag-and-drop</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>- (NSDragOperation) draggingEntered: (<span class="keywordtype">id</span> &lt;NSDraggingInfo&gt;) sender;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>- (BOOL) performDragOperation: (<span class="keywordtype">id</span>&lt;NSDraggingInfo&gt;) sender;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">//</span></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>- (void) setMouseCursor: (ECursor) cursorType;</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keyword">@end</span></div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>- (NSDragOperation)draggingSession:(NSDraggingSession*) session sourceOperationMaskForDraggingContext:(NSDraggingContext)context;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">//</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>- (void) setMouseCursor: (ECursor) cursorType;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
 <div class="ttc" id="aclass_i_graphics_html"><div class="ttname"><a href="class_i_graphics.html">IGraphics</a></div><div class="ttdoc">The lowest level base class of an IGraphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00082">IGraphics.h:86</a></div></div>
-<div class="ttc" id="aclass_i_graphics_html_ad5f403e5b79d4068985b7b8afcaa8da1"><div class="ttname"><a href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">IGraphics::GetDrawScale</a></div><div class="ttdeci">float GetDrawScale() const</div><div class="ttdoc">Gets the graphics context scaling factor.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l01095">IGraphics.h:1095</a></div></div>
+<div class="ttc" id="aclass_i_graphics_html_ad5f403e5b79d4068985b7b8afcaa8da1"><div class="ttname"><a href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">IGraphics::GetDrawScale</a></div><div class="ttdeci">float GetDrawScale() const</div><div class="ttdoc">Gets the graphics context scaling factor.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l01101">IGraphics.h:1101</a></div></div>
 <div class="ttc" id="aclass_i_graphics_mac_html"><div class="ttname"><a href="class_i_graphics_mac.html">IGraphicsMac</a></div><div class="ttdoc">IGraphics platform class for macOS.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_mac_8h_source.html#l00023">IGraphicsMac.h:24</a></div></div>
 <div class="ttc" id="aclass_i_popup_menu_html"><div class="ttname"><a href="class_i_popup_menu.html">IPopupMenu</a></div><div class="ttdoc">A class for setting the contents of a pop up menu.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_popup_menu_8h_source.html#l00039">IGraphicsPopupMenu.h:40</a></div></div>
 <div class="ttc" id="aclass_i_r_e_c_t_list_html"><div class="ttname"><a href="class_i_r_e_c_t_list.html">IRECTList</a></div><div class="ttdoc">Used to manage a list of rectangular areas and optimize them for drawing to the screen.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l01729">IGraphicsStructs.h:1730</a></div></div>

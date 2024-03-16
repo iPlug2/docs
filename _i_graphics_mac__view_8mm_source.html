@@ -1372,54 +1372,59 @@ $(function() {
 <div class="line"><a id="l01285" name="l01285"></a><span class="lineno"> 1285</span>  <span class="keywordflow">return</span> YES;</div>
 <div class="line"><a id="l01286" name="l01286"></a><span class="lineno"> 1286</span>}</div>
 <div class="line"><a id="l01287" name="l01287"></a><span class="lineno"> 1287</span> </div>
-<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span><span class="preprocessor">#ifdef IGRAPHICS_METAL</span></div>
-<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>- (void) frameDidChange:(NSNotification*) pNotification</div>
-<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>{</div>
-<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>  CGFloat scale = [[<span class="keyword">self</span> window] backingScaleFactor];</div>
+<div class="line"><a id="l01288" name="l01288"></a><span class="lineno"> 1288</span>- (NSDragOperation)draggingSession:(NSDraggingSession*) session sourceOperationMaskForDraggingContext:(NSDraggingContext)context</div>
+<div class="line"><a id="l01289" name="l01289"></a><span class="lineno"> 1289</span>{</div>
+<div class="line"><a id="l01290" name="l01290"></a><span class="lineno"> 1290</span>  <span class="keywordflow">return</span> NSDragOperationCopy;</div>
+<div class="line"><a id="l01291" name="l01291"></a><span class="lineno"> 1291</span>}</div>
 <div class="line"><a id="l01292" name="l01292"></a><span class="lineno"> 1292</span> </div>
-<div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span>  [(CAMetalLayer*)[<span class="keyword">self</span> layer] setDrawableSize:CGSizeMake(self.frame.size.width * scale,</div>
-<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>                                                          self.frame.size.height * scale)];</div>
-<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>}</div>
-<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01293" name="l01293"></a><span class="lineno"> 1293</span><span class="preprocessor">#ifdef IGRAPHICS_METAL</span></div>
+<div class="line"><a id="l01294" name="l01294"></a><span class="lineno"> 1294</span>- (void) frameDidChange:(NSNotification*) pNotification</div>
+<div class="line"><a id="l01295" name="l01295"></a><span class="lineno"> 1295</span>{</div>
+<div class="line"><a id="l01296" name="l01296"></a><span class="lineno"> 1296</span>  CGFloat scale = [[<span class="keyword">self</span> window] backingScaleFactor];</div>
 <div class="line"><a id="l01297" name="l01297"></a><span class="lineno"> 1297</span> </div>
-<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span><span class="comment">//- (void) windowResized: (NSNotification*) notification;</span></div>
-<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span><span class="comment">//{</span></div>
-<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span><span class="comment">//  if(!mGraphics)</span></div>
-<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span><span class="comment">//    return;</span></div>
-<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span><span class="comment">//</span></div>
-<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span><span class="comment">//  NSSize windowSize = [[self window] frame].size;</span></div>
-<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span><span class="comment">//  NSRect viewFrameInWindowCoords = [self convertRect: [self bounds] toView: nil];</span></div>
-<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span><span class="comment">//</span></div>
-<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span><span class="comment">//  float width = windowSize.width - viewFrameInWindowCoords.origin.x;</span></div>
-<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span><span class="comment">//  float height = windowSize.height - viewFrameInWindowCoords.origin.y;</span></div>
-<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span><span class="comment">//</span></div>
-<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span><span class="comment">//  float scaleX = width / mGraphics-&gt;Width();</span></div>
-<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span><span class="comment">//  float scaleY = height / mGraphics-&gt;Height();</span></div>
-<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span><span class="comment">//</span></div>
-<div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span><span class="comment">//  if(mGraphics-&gt;GetUIResizerMode() == EUIResizerMode::Scale)</span></div>
-<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span><span class="comment">//    mGraphics-&gt;Resize(width, height, mGraphics-&gt;GetDrawScale());</span></div>
-<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span><span class="comment">//  else // EUIResizerMode::Size</span></div>
-<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span><span class="comment">//    mGraphics-&gt;Resize(mGraphics-&gt;Width(), mGraphics-&gt;Height(), Clip(std::min(scaleX, scaleY), 0.1f, 10.f));</span></div>
-<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span><span class="comment">//}</span></div>
-<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span><span class="comment">//</span></div>
-<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span><span class="comment">//- (void) windowFullscreened: (NSNotification*) pNotification;</span></div>
-<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span><span class="comment">//{</span></div>
-<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span><span class="comment">//  NSSize windowSize = [[self window] frame].size;</span></div>
-<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span><span class="comment">//  NSRect viewFrameInWindowCoords = [self convertRect: [self bounds] toView: nil];</span></div>
+<div class="line"><a id="l01298" name="l01298"></a><span class="lineno"> 1298</span>  [(CAMetalLayer*)[<span class="keyword">self</span> layer] setDrawableSize:CGSizeMake(self.frame.size.width * scale,</div>
+<div class="line"><a id="l01299" name="l01299"></a><span class="lineno"> 1299</span>                                                          self.frame.size.height * scale)];</div>
+<div class="line"><a id="l01300" name="l01300"></a><span class="lineno"> 1300</span>}</div>
+<div class="line"><a id="l01301" name="l01301"></a><span class="lineno"> 1301</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01302" name="l01302"></a><span class="lineno"> 1302</span> </div>
+<div class="line"><a id="l01303" name="l01303"></a><span class="lineno"> 1303</span><span class="comment">//- (void) windowResized: (NSNotification*) notification;</span></div>
+<div class="line"><a id="l01304" name="l01304"></a><span class="lineno"> 1304</span><span class="comment">//{</span></div>
+<div class="line"><a id="l01305" name="l01305"></a><span class="lineno"> 1305</span><span class="comment">//  if(!mGraphics)</span></div>
+<div class="line"><a id="l01306" name="l01306"></a><span class="lineno"> 1306</span><span class="comment">//    return;</span></div>
+<div class="line"><a id="l01307" name="l01307"></a><span class="lineno"> 1307</span><span class="comment">//</span></div>
+<div class="line"><a id="l01308" name="l01308"></a><span class="lineno"> 1308</span><span class="comment">//  NSSize windowSize = [[self window] frame].size;</span></div>
+<div class="line"><a id="l01309" name="l01309"></a><span class="lineno"> 1309</span><span class="comment">//  NSRect viewFrameInWindowCoords = [self convertRect: [self bounds] toView: nil];</span></div>
+<div class="line"><a id="l01310" name="l01310"></a><span class="lineno"> 1310</span><span class="comment">//</span></div>
+<div class="line"><a id="l01311" name="l01311"></a><span class="lineno"> 1311</span><span class="comment">//  float width = windowSize.width - viewFrameInWindowCoords.origin.x;</span></div>
+<div class="line"><a id="l01312" name="l01312"></a><span class="lineno"> 1312</span><span class="comment">//  float height = windowSize.height - viewFrameInWindowCoords.origin.y;</span></div>
+<div class="line"><a id="l01313" name="l01313"></a><span class="lineno"> 1313</span><span class="comment">//</span></div>
+<div class="line"><a id="l01314" name="l01314"></a><span class="lineno"> 1314</span><span class="comment">//  float scaleX = width / mGraphics-&gt;Width();</span></div>
+<div class="line"><a id="l01315" name="l01315"></a><span class="lineno"> 1315</span><span class="comment">//  float scaleY = height / mGraphics-&gt;Height();</span></div>
+<div class="line"><a id="l01316" name="l01316"></a><span class="lineno"> 1316</span><span class="comment">//</span></div>
+<div class="line"><a id="l01317" name="l01317"></a><span class="lineno"> 1317</span><span class="comment">//  if(mGraphics-&gt;GetUIResizerMode() == EUIResizerMode::Scale)</span></div>
+<div class="line"><a id="l01318" name="l01318"></a><span class="lineno"> 1318</span><span class="comment">//    mGraphics-&gt;Resize(width, height, mGraphics-&gt;GetDrawScale());</span></div>
+<div class="line"><a id="l01319" name="l01319"></a><span class="lineno"> 1319</span><span class="comment">//  else // EUIResizerMode::Size</span></div>
+<div class="line"><a id="l01320" name="l01320"></a><span class="lineno"> 1320</span><span class="comment">//    mGraphics-&gt;Resize(mGraphics-&gt;Width(), mGraphics-&gt;Height(), Clip(std::min(scaleX, scaleY), 0.1f, 10.f));</span></div>
+<div class="line"><a id="l01321" name="l01321"></a><span class="lineno"> 1321</span><span class="comment">//}</span></div>
 <div class="line"><a id="l01322" name="l01322"></a><span class="lineno"> 1322</span><span class="comment">//</span></div>
-<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span><span class="comment">//  float width = windowSize.width - viewFrameInWindowCoords.origin.x;</span></div>
-<div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span><span class="comment">//  float height = windowSize.height - viewFrameInWindowCoords.origin.y;</span></div>
-<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span><span class="comment">//</span></div>
-<div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span><span class="comment">//  float scaleX = width / mGraphics-&gt;Width();</span></div>
-<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span><span class="comment">//  float scaleY = height / mGraphics-&gt;Height();</span></div>
-<div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span><span class="comment">//</span></div>
-<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span><span class="comment">//  if(mGraphics-&gt;GetUIResizerMode() == EUIResizerMode::Scale)</span></div>
-<div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span><span class="comment">//    mGraphics-&gt;Resize(width, height, mGraphics-&gt;GetDrawScale());</span></div>
-<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span><span class="comment">//  else // EUIResizerMode::Size</span></div>
-<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span><span class="comment">//    mGraphics-&gt;Resize(mGraphics-&gt;Width(), mGraphics-&gt;Height(), Clip(std::min(scaleX, scaleY), 0.1f, 10.f));</span></div>
-<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span><span class="comment">//}</span></div>
-<div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span> </div>
-<div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l01323" name="l01323"></a><span class="lineno"> 1323</span><span class="comment">//- (void) windowFullscreened: (NSNotification*) pNotification;</span></div>
+<div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span><span class="comment">//{</span></div>
+<div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span><span class="comment">//  NSSize windowSize = [[self window] frame].size;</span></div>
+<div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span><span class="comment">//  NSRect viewFrameInWindowCoords = [self convertRect: [self bounds] toView: nil];</span></div>
+<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span><span class="comment">//</span></div>
+<div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span><span class="comment">//  float width = windowSize.width - viewFrameInWindowCoords.origin.x;</span></div>
+<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span><span class="comment">//  float height = windowSize.height - viewFrameInWindowCoords.origin.y;</span></div>
+<div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span><span class="comment">//</span></div>
+<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span><span class="comment">//  float scaleX = width / mGraphics-&gt;Width();</span></div>
+<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span><span class="comment">//  float scaleY = height / mGraphics-&gt;Height();</span></div>
+<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span><span class="comment">//</span></div>
+<div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span><span class="comment">//  if(mGraphics-&gt;GetUIResizerMode() == EUIResizerMode::Scale)</span></div>
+<div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span><span class="comment">//    mGraphics-&gt;Resize(width, height, mGraphics-&gt;GetDrawScale());</span></div>
+<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span><span class="comment">//  else // EUIResizerMode::Size</span></div>
+<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span><span class="comment">//    mGraphics-&gt;Resize(mGraphics-&gt;Width(), mGraphics-&gt;Height(), Clip(std::min(scaleX, scaleY), 0.1f, 10.f));</span></div>
+<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span><span class="comment">//}</span></div>
+<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span> </div>
+<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span><span class="keyword">@end</span></div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
 <div class="ttc" id="a_i_plug_logger_8h_html"><div class="ttname"><a href="_i_plug_logger_8h.html">IPlugLogger.h</a></div><div class="ttdoc">IPlug logging a.k.a tracing functionality.</div></div>
 <div class="ttc" id="a_i_plug_parameter_8h_html"><div class="ttname"><a href="_i_plug_parameter_8h.html">IPlugParameter.h</a></div></div>

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['reaperaction_0',['ReaperAction',['../struct_reaper_action.html',1,'']]],
-  ['reaperextbase_1',['ReaperExtBase',['../class_reaper_ext_base.html',1,'']]]
+  ['paramtuple_0',['ParamTuple',['../struct_param_tuple.html',1,'']]],
+  ['placeholder_1',['PlaceHolder',['../class_place_holder.html',1,'']]],
+  ['plot_2',['Plot',['../class_i_v_plot_control.html#struct_i_v_plot_control_1_1_plot',1,'IVPlotControl']]]
 ];
