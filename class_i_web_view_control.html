@@ -98,9 +98,9 @@ Inheritance diagram for IWebViewControl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5aa4bada242b6ca3f8a010124c9cc868"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#a5aa4bada242b6ca3f8a010124c9cc868">IWebViewControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool opaque, OnReadyFunc readyFunc, OnMessageFunc msgFunc=nullptr, bool enableDevTools=false)</td></tr>
-<tr class="memdesc:a5aa4bada242b6ca3f8a010124c9cc868"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs am <a class="el" href="class_i_web_view_control.html" title="A control that allows the embedding of HTML UI inside an IGraphics context using a platform-native we...">IWebViewControl</a>.  <a href="class_i_web_view_control.html#a5aa4bada242b6ca3f8a010124c9cc868">More...</a><br /></td></tr>
-<tr class="separator:a5aa4bada242b6ca3f8a010124c9cc868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7bccd390d6f520885a9a1b209eee762"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#ac7bccd390d6f520885a9a1b209eee762">IWebViewControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, bool opaque, OnReadyFunc readyFunc=nullptr, OnMessageFunc msgFunc=nullptr, bool enableDevTools=false, bool enableScroll=false)</td></tr>
+<tr class="memdesc:ac7bccd390d6f520885a9a1b209eee762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs am <a class="el" href="class_i_web_view_control.html" title="A control that allows the embedding of HTML UI inside an IGraphics context using a platform-native we...">IWebViewControl</a>.  <a href="class_i_web_view_control.html#ac7bccd390d6f520885a9a1b209eee762">More...</a><br /></td></tr>
+<tr class="separator:ac7bccd390d6f520885a9a1b209eee762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2980401fae7c995440679368b6118a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_web_view_control.html#ac2980401fae7c995440679368b6118a2">OnAttached</a> () override</td></tr>
 <tr class="memdesc:ac2980401fae7c995440679368b6118a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after the control has been attached, and its delegate and graphics member variable set.  <a href="class_i_web_view_control.html#ac2980401fae7c995440679368b6118a2">More...</a><br /></td></tr>
 <tr class="separator:ac2980401fae7c995440679368b6118a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -495,8 +495,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00036">36</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5aa4bada242b6ca3f8a010124c9cc868" name="a5aa4bada242b6ca3f8a010124c9cc868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa4bada242b6ca3f8a010124c9cc868">&#9670;&#160;</a></span>IWebViewControl()</h2>
+<a id="ac7bccd390d6f520885a9a1b209eee762" name="ac7bccd390d6f520885a9a1b209eee762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7bccd390d6f520885a9a1b209eee762">&#9670;&#160;</a></span>IWebViewControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -520,7 +520,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">OnReadyFunc&#160;</td>
-          <td class="paramname"><em>readyFunc</em>, </td>
+          <td class="paramname"><em>readyFunc</em> = <code>nullptr</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -532,7 +532,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>enableDevTools</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>enableDevTools</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enableScroll</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -586,7 +592,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00057">57</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00058">58</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 </div>
 </div>
@@ -697,7 +703,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#aa85c9cf798273e449330a4823f24c07d">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00063">63</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_web_view_control_8h_source.html#l00064">64</a> of file <a class="el" href="_i_web_view_control_8h_source.html">IWebViewControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00799">IGraphics::AttachPlatformView()</a>, <a class="el" href="_i_graphics_8h_source.html#l01101">IGraphics::GetDrawScale()</a>, <a class="el" href="_i_control_8h_source.html#l00467">IControl::GetUI()</a>, <a class="el" href="class_i_graphics.html#a290c693845898cd3b89f33175ac590c8">IGraphics::GetWindow()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00816">IRECT::H()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00813">IRECT::W()</a>.</p>
 
