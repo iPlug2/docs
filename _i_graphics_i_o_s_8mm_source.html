@@ -253,10 +253,10 @@ $(function() {
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  [(UIView*) pView setHidden:hide];</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>EMsgBoxResult IGraphicsIOS::ShowMessageBox(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <span class="keywordtype">char</span>* caption, EMsgBoxType type, IMsgBoxCompletionHandlerFunc completionHandler)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>EMsgBoxResult IGraphicsIOS::ShowMessageBox(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <span class="keywordtype">char</span>* title, EMsgBoxType type, IMsgBoxCompletionHandlerFunc completionHandler)</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>{</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  ReleaseMouseCapture();</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  [(IGRAPHICS_VIEW*) mView showMessageBox:str :caption :type :completionHandler];</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  [(IGRAPHICS_VIEW*) mView showMessageBox:str : title : type : completionHandler];</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="keywordflow">return</span> EMsgBoxResult::kNoResult; <span class="comment">// we need to rely on completionHandler</span></div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>

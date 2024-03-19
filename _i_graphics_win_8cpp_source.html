@@ -1207,11 +1207,11 @@ $(function() {
 <div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>}</div>
 <div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span> </div>
-<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>EMsgBoxResult IGraphicsWin::ShowMessageBox(<span class="keyword">const</span> <span class="keywordtype">char</span>* text, <span class="keyword">const</span> <span class="keywordtype">char</span>* caption, EMsgBoxType type, IMsgBoxCompletionHandlerFunc completionHandler)</div>
+<div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>EMsgBoxResult IGraphicsWin::ShowMessageBox(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <span class="keywordtype">char</span>* title, EMsgBoxType type, IMsgBoxCompletionHandlerFunc completionHandler)</div>
 <div class="line"><a id="l01124" name="l01124"></a><span class="lineno"> 1124</span>{</div>
 <div class="line"><a id="l01125" name="l01125"></a><span class="lineno"> 1125</span>  ReleaseMouseCapture();</div>
 <div class="line"><a id="l01126" name="l01126"></a><span class="lineno"> 1126</span>  </div>
-<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>  EMsgBoxResult result = <span class="keyword">static_cast&lt;</span>EMsgBoxResult<span class="keyword">&gt;</span>(MessageBoxW(GetMainWnd(), UTF8AsUTF16(text).Get(), UTF8AsUTF16(caption).Get(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(type)));</div>
+<div class="line"><a id="l01127" name="l01127"></a><span class="lineno"> 1127</span>  EMsgBoxResult result = <span class="keyword">static_cast&lt;</span>EMsgBoxResult<span class="keyword">&gt;</span>(MessageBoxW(GetMainWnd(), UTF8AsUTF16(str).Get(), UTF8AsUTF16(title).Get(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(type)));</div>
 <div class="line"><a id="l01128" name="l01128"></a><span class="lineno"> 1128</span>  </div>
 <div class="line"><a id="l01129" name="l01129"></a><span class="lineno"> 1129</span>  <span class="keywordflow">if</span> (completionHandler)</div>
 <div class="line"><a id="l01130" name="l01130"></a><span class="lineno"> 1130</span>    completionHandler(result);</div>

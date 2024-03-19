@@ -610,31 +610,31 @@ $(function() {
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  mGraphics-&gt;ClearInTextEntryControl();</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>}</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span> </div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>- (void) showMessageBox: (const <span class="keywordtype">char</span>*) str : (const <span class="keywordtype">char</span>*) caption : (EMsgBoxType) type : (IMsgBoxCompletionHandlerFunc) completionHandler</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>- (void) showMessageBox: (const <span class="keywordtype">char</span>*) str : (const <span class="keywordtype">char</span>*) title : (EMsgBoxType) type : (IMsgBoxCompletionHandlerFunc) completionHandler</div>
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>{</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>  [<span class="keyword">self</span> endUserInput];</div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span> </div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  NSString* titleNString = [NSString stringWithUTF8String:str];</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  NSString* captionNString = [NSString stringWithUTF8String:caption];</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  NSString* message = [NSString stringWithUTF8String:str];</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  NSString* titleNs = [NSString stringWithUTF8String:title];</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>  </div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>  UIAlertController* alertController = [UIAlertController alertControllerWithTitle:titleNString message:captionNString preferredStyle:UIAlertControllerStyleAlert];</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>  UIAlertController* alertController = [UIAlertController alertControllerWithTitle:titleNs message:message preferredStyle:UIAlertControllerStyleAlert];</div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  </div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  void (^handlerBlock)(UIAlertAction*) =</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>  ^(UIAlertAction* action) {</div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>    </div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    <span class="keywordflow">if</span>(completionHandler != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    <span class="keywordflow">if</span> (completionHandler != <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    {</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>      EMsgBoxResult result = EMsgBoxResult::kCANCEL;</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>      </div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>      <span class="keywordflow">if</span>([action.title isEqualToString:<span class="stringliteral">@&quot;OK&quot;</span>])</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>      <span class="keywordflow">if</span> ([action.title isEqualToString:<span class="stringliteral">@&quot;OK&quot;</span>])</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>        result = EMsgBoxResult::kOK;</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>      <span class="keywordflow">if</span>([action.title isEqualToString:<span class="stringliteral">@&quot;Cancel&quot;</span>])</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>      <span class="keywordflow">if</span> ([action.title isEqualToString:<span class="stringliteral">@&quot;Cancel&quot;</span>])</div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>        result = EMsgBoxResult::kCANCEL;</div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>      <span class="keywordflow">if</span>([action.title isEqualToString:<span class="stringliteral">@&quot;Yes&quot;</span>])</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>      <span class="keywordflow">if</span> ([action.title isEqualToString:<span class="stringliteral">@&quot;Yes&quot;</span>])</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>        result = EMsgBoxResult::kYES;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>      <span class="keywordflow">if</span>([action.title isEqualToString:<span class="stringliteral">@&quot;No&quot;</span>])</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>      <span class="keywordflow">if</span> ([action.title isEqualToString:<span class="stringliteral">@&quot;No&quot;</span>])</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>        result = EMsgBoxResult::kNO;</div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>      <span class="keywordflow">if</span>([action.title isEqualToString:<span class="stringliteral">@&quot;Retry&quot;</span>])</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>      <span class="keywordflow">if</span> ([action.title isEqualToString:<span class="stringliteral">@&quot;Retry&quot;</span>])</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>        result = EMsgBoxResult::kRETRY;</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>      </div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>      completionHandler(result);</div>
@@ -642,13 +642,13 @@ $(function() {
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>    </div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>  };</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>  </div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  <span class="keywordflow">if</span>(type == kMB_OK || type == kMB_OKCANCEL)</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  <span class="keywordflow">if</span> (type == kMB_OK || type == kMB_OKCANCEL)</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  {</div>
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    UIAlertAction* okAction = [UIAlertAction actionWithTitle:@&quot;OK&quot; style:UIAlertActionStyleDefault handler:handlerBlock];</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    [alertController addAction:okAction];</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>  }</div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>  </div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  <span class="keywordflow">if</span>(type == kMB_YESNO || type == kMB_YESNOCANCEL)</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  <span class="keywordflow">if</span> (type == kMB_YESNO || type == kMB_YESNOCANCEL)</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  {</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    UIAlertAction* yesAction = [UIAlertAction actionWithTitle:@&quot;Yes&quot; style:UIAlertActionStyleDefault handler:handlerBlock];</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    [alertController addAction:yesAction];</div>
@@ -657,13 +657,13 @@ $(function() {
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    [alertController addAction:noAction];</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  }</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  </div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  <span class="keywordflow">if</span>(type == kMB_RETRYCANCEL)</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  <span class="keywordflow">if</span> (type == kMB_RETRYCANCEL)</div>
 <div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  {</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    UIAlertAction* retryAction = [UIAlertAction actionWithTitle:@&quot;Retry&quot; style:UIAlertActionStyleDefault handler:handlerBlock];</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    [alertController addAction:retryAction];</div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  }</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  </div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  <span class="keywordflow">if</span>(type == kMB_OKCANCEL || type == kMB_YESNOCANCEL || type == kMB_RETRYCANCEL)</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  <span class="keywordflow">if</span> (type == kMB_OKCANCEL || type == kMB_YESNOCANCEL || type == kMB_RETRYCANCEL)</div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  {</div>
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@&quot;Cancel&quot; style:UIAlertActionStyleCancel handler:handlerBlock];</div>
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    [alertController addAction:cancelAction];</div>
