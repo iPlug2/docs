@@ -136,7 +136,7 @@ $(function() {
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">/*int maxNInBuses =*/</span> <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kInput, &amp;configWithMostInputBuses);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">int</span> maxNOutBuses = <a class="code hl_function" href="class_i_plug_processor.html#a4b9440ca11ef64f790a9b00b24fe6be0">MaxNBuses</a>(ERoute::kOutput, &amp;configWithMostOutputBuses);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Add the maximum number of input buses in any ioconfig. channel count/API Bus type will be changed later if nessecary</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Add the maximum number of input buses in any ioconfig. channel count/API Bus type will be changed later if necessary</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(configWithMostInputBuses);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
@@ -153,7 +153,7 @@ $(function() {
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Add the maximum number of output buses in any ioconfig. channel count/API Bus type will be changed later if nessecary</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Add the maximum number of output buses in any ioconfig. channel count/API Bus type will be changed later if necessary</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_o_config.html">IOConfig</a>* pConfig = <a class="code hl_function" href="class_i_plug_processor.html#a0f0de1323b84a32ac31f116a82860731">GetIOConfig</a>(configWithMostOutputBuses);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keywordtype">int</span> nOut = pConfig-&gt;<a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(ERoute::kOutput);</div>
