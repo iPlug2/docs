@@ -79,6 +79,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -99,6 +100,13 @@ Inheritance diagram for IPlugProcessor:</div>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:ab7146b9badecfb940657d5823d30dc13"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>TailSize</b> { <b>kTailNone</b> = 0
+, <b>kTailInfinite</b> = std::numeric_limits&lt;int&gt;::max()
+ }</td></tr>
+<tr class="separator:ab7146b9badecfb940657d5823d30dc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7cf28ba673629cac18a071329456df91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a7cf28ba673629cac18a071329456df91">IPlugProcessor</a> (const Config &amp;config, EAPI plugAPI)</td></tr>
@@ -116,9 +124,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3118afd2386fc7244ad4f7eeefcbb9b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a3118afd2386fc7244ad4f7eeefcbb9b4">ProcessMidiMsg</a> (const <a class="el" href="struct_i_midi_msg.html">IMidiMsg</a> &amp;msg)</td></tr>
 <tr class="memdesc:a3118afd2386fc7244ad4f7eeefcbb9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to handle incoming MIDI messages.  <a href="class_i_plug_processor.html#a3118afd2386fc7244ad4f7eeefcbb9b4">More...</a><br /></td></tr>
 <tr class="separator:a3118afd2386fc7244ad4f7eeefcbb9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b522b2995c5b72b94b1aa4ff27af8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#ae2b522b2995c5b72b94b1aa4ff27af8a">ProcessSysEx</a> (<a class="el" href="struct_i_sys_ex.html">ISysEx</a> &amp;msg)</td></tr>
-<tr class="memdesc:ae2b522b2995c5b72b94b1aa4ff27af8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to handle incoming MIDI System Exclusive (SysEx) messages.  <a href="class_i_plug_processor.html#ae2b522b2995c5b72b94b1aa4ff27af8a">More...</a><br /></td></tr>
-<tr class="separator:ae2b522b2995c5b72b94b1aa4ff27af8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4da24a1f38a56c267306b3b983a803b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#ab4da24a1f38a56c267306b3b983a803b">ProcessSysEx</a> (const <a class="el" href="struct_i_sys_ex.html">ISysEx</a> &amp;msg)</td></tr>
+<tr class="memdesc:ab4da24a1f38a56c267306b3b983a803b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method to handle incoming MIDI System Exclusive (SysEx) messages.  <a href="class_i_plug_processor.html#ab4da24a1f38a56c267306b3b983a803b">More...</a><br /></td></tr>
+<tr class="separator:ab4da24a1f38a56c267306b3b983a803b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af41a0640ec2c16542ad88c272eb22f27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#af41a0640ec2c16542ad88c272eb22f27">OnReset</a> ()</td></tr>
 <tr class="memdesc:af41a0640ec2c16542ad88c272eb22f27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override this method in your plug-in class to do something prior to playback etc.  <a href="class_i_plug_processor.html#af41a0640ec2c16542ad88c272eb22f27">More...</a><br /></td></tr>
 <tr class="separator:af41a0640ec2c16542ad88c272eb22f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,8 +148,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8da311b9dc1af92e7b291a8596039b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5e3ea6bb26f3719f69d8bcfa359263e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#ae5e3ea6bb26f3719f69d8bcfa359263e">GetLatency</a> () const</td></tr>
 <tr class="separator:ae5e3ea6bb26f3719f69d8bcfa359263e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2232b7074aa265211b395b8fc3bc2387"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a2232b7074aa265211b395b8fc3bc2387">GetTailSize</a> ()</td></tr>
-<tr class="separator:a2232b7074aa265211b395b8fc3bc2387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d261d256b13198f9126790485f45381"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a1d261d256b13198f9126790485f45381">GetTailSize</a> () const</td></tr>
+<tr class="separator:a1d261d256b13198f9126790485f45381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a022914f59b6b1ebb1aa1907fd190c02e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a022914f59b6b1ebb1aa1907fd190c02e">GetTailIsInfinite</a> () const</td></tr>
+<tr class="separator:a022914f59b6b1ebb1aa1907fd190c02e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a980bfd5a219fe62f1ca3cd065c653f9b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a980bfd5a219fe62f1ca3cd065c653f9b">GetBypassed</a> () const</td></tr>
 <tr class="separator:a980bfd5a219fe62f1ca3cd065c653f9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64dbfd9d587fa9098717dfe17202058c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a64dbfd9d587fa9098717dfe17202058c">GetRenderingOffline</a> () const</td></tr>
@@ -214,9 +224,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3c5c2a1b80ba384c50a2bb4888b63461"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a3c5c2a1b80ba384c50a2bb4888b63461">SetLatency</a> (int latency)</td></tr>
 <tr class="memdesc:a3c5c2a1b80ba384c50a2bb4888b63461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if the latency of your plug-in changes after initialization (perhaps from <a class="el" href="class_i_plug_processor.html#af41a0640ec2c16542ad88c272eb22f27" title="Override this method in your plug-in class to do something prior to playback etc.">OnReset()</a> ) This may not be supported by the host.  <a href="class_i_plug_processor.html#a3c5c2a1b80ba384c50a2bb4888b63461">More...</a><br /></td></tr>
 <tr class="separator:a3c5c2a1b80ba384c50a2bb4888b63461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa7d4d472915d7f2aff449a4d9158de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a0fa7d4d472915d7f2aff449a4d9158de">SetTailSize</a> (int tailSize)</td></tr>
-<tr class="memdesc:a0fa7d4d472915d7f2aff449a4d9158de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this method if you need to update the tail size at runtime, for example if the decay time of your reverb effect changes Some apis have special interpretations of certain numbers.  <a href="class_i_plug_processor.html#a0fa7d4d472915d7f2aff449a4d9158de">More...</a><br /></td></tr>
-<tr class="separator:a0fa7d4d472915d7f2aff449a4d9158de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee51f189c659b06a5efa355291c2daa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_processor.html#a2ee51f189c659b06a5efa355291c2daa">SetTailSize</a> (int tailSize)</td></tr>
+<tr class="memdesc:a2ee51f189c659b06a5efa355291c2daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this method if you need to update the tail size at runtime, for example if the decay time of your reverb effect changes Use kTailInfinite for an infinite tail You may also use kTailNone for no tail (but this is default in any case)  <a href="class_i_plug_processor.html#a2ee51f189c659b06a5efa355291c2daa">More...</a><br /></td></tr>
+<tr class="separator:a2ee51f189c659b06a5efa355291c2daa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -270,8 +280,25 @@ Protected Attributes</h2></td></tr>
 <p >It knows nothing about presets or parameters or user interface. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00040">40</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00041">41</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="ab7146b9badecfb940657d5823d30dc13" name="ab7146b9badecfb940657d5823d30dc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7146b9badecfb940657d5823d30dc13">&#9670;&#160;</a></span>TailSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum IPlugProcessor::TailSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00045">45</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7cf28ba673629cac18a071329456df91" name="a7cf28ba673629cac18a071329456df91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cf28ba673629cac18a071329456df91">&#9670;&#160;</a></span>IPlugProcessor()</h2>
 
@@ -484,7 +511,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plug-in was configured to receive midi at compile time </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00216">216</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00227">227</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00403">GetAUPluginType()</a>.</p>
 
@@ -514,7 +541,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plug-in was configured to receive midi at compile time </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00219">219</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00230">230</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_a_p_p_8cpp_source.html#l00078">IPlugAPP::SendMidiMsg()</a>, and <a class="el" href="_i_plug_a_p_p_8cpp_source.html#l00102">IPlugAPP::SendSysEx()</a>.</p>
 
@@ -544,7 +571,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plug-in was configured to support midi polyphonic expression at compile time </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00222">222</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00233">233</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -566,7 +593,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00403">403</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00216">DoesMIDIIn()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00227">DoesMIDIIn()</a>.</p>
 
 </div>
 </div>
@@ -594,7 +621,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Maximum block size in samples, actual blocksize may vary each <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00104">104</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00112">112</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -683,7 +710,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plugin is currently bypassed </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00113">113</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00124">124</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -721,7 +748,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00276">276</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00287">287</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -750,7 +777,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>const Pointer to an <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a> at idx. Can return nullptr if idx is invalid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00151">151</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00162">162</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00175">GetIOConfigWithChanCounts()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00243">LegalIO()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">MaxNChannelsForBus()</a>.</p>
 
@@ -785,7 +812,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00175">175</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00526">IOConfig::GetBusInfo()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00151">GetIOConfig()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00549">IOConfig::NBuses()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00148">NIOConfigs()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00526">IOConfig::GetBusInfo()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00162">GetIOConfig()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00549">IOConfig::NBuses()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00159">NIOConfigs()</a>.</p>
 
 </div>
 </div>
@@ -813,7 +840,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Plugin latency (in samples) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00107">107</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00115">115</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -841,9 +868,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The number of beats elapsed since start of project timeline. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00126">126</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00137">137</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00320">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -871,7 +898,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plugin is currently rendering off-line </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00116">116</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00127">127</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -899,9 +926,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The number of samples elapsed since start of project timeline. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00120">120</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00131">131</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00320">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -929,7 +956,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>Sample rate (in Hz) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00101">101</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00109">109</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00107">GetSamplesPerBeat()</a>.</p>
 
@@ -953,12 +980,42 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00107">107</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00101">GetSampleRate()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00123">GetTempo()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00109">GetSampleRate()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00134">GetTempo()</a>.</p>
 
 </div>
 </div>
-<a id="a2232b7074aa265211b395b8fc3bc2387" name="a2232b7074aa265211b395b8fc3bc2387"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2232b7074aa265211b395b8fc3bc2387">&#9670;&#160;</a></span>GetTailSize()</h2>
+<a id="a022914f59b6b1ebb1aa1907fd190c02e" name="a022914f59b6b1ebb1aa1907fd190c02e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a022914f59b6b1ebb1aa1907fd190c02e">&#9670;&#160;</a></span>GetTailIsInfinite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IPlugProcessor::GetTailIsInfinite </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plugin has an infinite tail </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00121">121</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00118">GetTailSize()</a>.</p>
+
+</div>
+</div>
+<a id="a1d261d256b13198f9126790485f45381" name="a1d261d256b13198f9126790485f45381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d261d256b13198f9126790485f45381">&#9670;&#160;</a></span>GetTailSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -970,7 +1027,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">int IPlugProcessor::GetTailSize </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -981,7 +1038,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The tail size in samples (useful for reverberation plug-ins, that may need to decay after the transport stops or an audio item ends) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00110">110</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00118">118</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00121">GetTailIsInfinite()</a>.</p>
 
 </div>
 </div>
@@ -1009,9 +1068,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The tempo in beats per minute </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00123">123</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00134">134</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00320">mTimeInfo</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00107">GetSamplesPerBeat()</a>.</p>
 
@@ -1058,9 +1117,9 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00136">136</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00147">147</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00320">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -1088,9 +1147,9 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the transport is running </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00129">129</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00140">140</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00309">mTimeInfo</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00320">mTimeInfo</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1177,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if this plug-in has a side-chain input, which may not necessarily be active in the current I/O config </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00201">201</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00212">212</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_processor_8cpp_source.html#l00152">MaxNBuses()</a>.</p>
 
@@ -1157,7 +1216,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the bus has a wildcard, meaning it should work on any number of channels </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00171">171</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00182">182</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">MaxNChannelsForBus()</a>.</p>
 
@@ -1232,7 +1291,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the host has connected this channel </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00180">180</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00191">191</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00230">NChannelsConnected()</a>.</p>
 
@@ -1262,7 +1321,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plug-in was configured as an instrument at compile time </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00207">207</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00218">218</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1349,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the plug-in was configured as an MFX at compile time </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00210">210</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00221">221</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1391,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00243">243</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00151">GetIOConfig()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00557">IOConfig::GetTotalNChannels()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00148">NIOConfigs()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00162">GetIOConfig()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00557">IOConfig::GetTotalNChannels()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00159">NIOConfigs()</a>.</p>
 
 </div>
 </div>
@@ -1356,7 +1415,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00257">257</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00175">MaxNChannels()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00186">MaxNChannels()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00272">IPlugVST2::HostSpecificInit()</a>.</p>
 
@@ -1400,9 +1459,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00152">152</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00549">IOConfig::NBuses()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00148">NIOConfigs()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_structs_8h_source.html#l00549">IOConfig::NBuses()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00159">NIOConfigs()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00201">HasSidechainInput()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">MaxNChannelsForBus()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00212">HasSidechainInput()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">MaxNChannelsForBus()</a>.</p>
 
 </div>
 </div>
@@ -1437,7 +1496,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Total number of input or output channel buffers (not necessarily connected) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00175">175</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00186">186</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00272">IPlugVST2::HostSpecificInit()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00257">LimitToStereoIO()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00266">SetChannelLabel()</a>.</p>
 
@@ -1481,7 +1540,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">209</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00151">GetIOConfig()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00171">HasWildcardBus()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00152">MaxNBuses()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00536">IOConfig::NChansOnBusSAFE()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00148">NIOConfigs()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00162">GetIOConfig()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00182">HasWildcardBus()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00152">MaxNBuses()</a>, <a class="el" href="_i_plug_structs_8h_source.html#l00536">IOConfig::NChansOnBusSAFE()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00159">NIOConfigs()</a>.</p>
 
 </div>
 </div>
@@ -1510,9 +1569,9 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00230">230</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00180">IsChannelConnected()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00191">IsChannelConnected()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00188">NInChansConnected()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00192">NOutChansConnected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00199">NInChansConnected()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00203">NOutChansConnected()</a>.</p>
 
 </div>
 </div>
@@ -1542,7 +1601,7 @@ Protected Attributes</h2></td></tr>
 <p>Convenience method to find out how many input channels are connected. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of channels connected for input. WARNING: this assumes consecutive channel connections </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00188">188</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00199">199</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_processor_8cpp_source.html#l00230">NChannelsConnected()</a>.</p>
 
@@ -1572,7 +1631,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The number of channel I/O configs derived from the channel io string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00148">148</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00159">159</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00175">GetIOConfigWithChanCounts()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00243">LegalIO()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00152">MaxNBuses()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">MaxNChannelsForBus()</a>.</p>
 
@@ -1604,7 +1663,7 @@ Protected Attributes</h2></td></tr>
 <p>Convenience method to find out how many output channels are connected. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of channels connected for output. WARNING: this assumes consecutive channel connections </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00192">192</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00203">203</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_processor_8cpp_source.html#l00230">NChannelsConnected()</a>.</p>
 
@@ -1642,7 +1701,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00081">81</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00089">89</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -1672,7 +1731,7 @@ Protected Attributes</h2></td></tr>
 <p>Override this method in your plug-in class to do something prior to playback etc. </p>
 <p >(e.g.clear buffers, update internal DSP with the latest sample rate) </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00075">75</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00083">83</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2015,7 +2074,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Override this method to handle incoming MIDI messages. </p>
-<p >The method is called prior to <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a>. You can use <a class="el" href="class_i_midi_queue.html" title="A class to help with queuing timestamped MIDI messages.">IMidiQueue</a> in combination with this method in order to queue the message and process at the appropriate time in <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a> THIS METHOD IS CALLED BY THE HIGH PRIORITY AUDIO THREAD - You should be careful not to do any unbounded, blocking operations such as file I/O which could cause audio dropouts </p><dl class="params"><dt>Parameters</dt><dd>
+<p >The method is called prior to <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a>. You can use IMidiQueue in combination with this method in order to queue the message and process at the appropriate time in <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a> THIS METHOD IS CALLED BY THE HIGH PRIORITY AUDIO THREAD - You should be careful not to do any unbounded, blocking operations such as file I/O which could cause audio dropouts </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>The incoming midi message (includes a timestamp to indicate the offset in the forthcoming block of audio to be processed in <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a>) </td></tr>
   </table>
@@ -2028,8 +2087,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae2b522b2995c5b72b94b1aa4ff27af8a" name="ae2b522b2995c5b72b94b1aa4ff27af8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2b522b2995c5b72b94b1aa4ff27af8a">&#9670;&#160;</a></span>ProcessSysEx()</h2>
+<a id="ab4da24a1f38a56c267306b3b983a803b" name="ab4da24a1f38a56c267306b3b983a803b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4da24a1f38a56c267306b3b983a803b">&#9670;&#160;</a></span>ProcessSysEx()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2040,7 +2099,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">virtual void IPlugProcessor::ProcessSysEx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_i_sys_ex.html">ISysEx</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_i_sys_ex.html">ISysEx</a> &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2055,7 +2114,7 @@ Protected Attributes</h2></td></tr>
 <p>Override this method to handle incoming MIDI System Exclusive (SysEx) messages. </p>
 <p >The method is called prior to <a class="el" href="class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de" title="Override in your plug-in class to process audio In ProcessBlock you are always guaranteed to get vali...">ProcessBlock()</a>. THIS METHOD IS CALLED BY THE HIGH PRIORITY AUDIO THREAD - You should be careful not to do any unbounded, blocking operations such as file I/O which could cause audio dropouts </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00072">72</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00080">80</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2092,7 +2151,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if successful </dd></dl>
 
-<p>Implemented in <a class="el" href="class_i_plug_a_a_x.html#a05a84cb84b8102c0d95af1238f0d9fbe">IPlugAAX</a>, <a class="el" href="class_i_plug_a_p_p.html#a215e72927e405b3cf2c02ff06ed39209">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#a728ccf09551b1b5ce1900e6a642c873c">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a539af1c9e36f09b251eb7c0e64cb16c6">IPlugAUv3</a>, <a class="el" href="class_i_plug_v_s_t2.html#a1fc6db66c5e9bd9dcd3b09cbabf71215">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">IPlugVST3ProcessorBase</a>, and <a class="el" href="class_i_plug_w_a_m.html#a0ae41aa509f8f7bcc4dcb44a21816253">IPlugWAM</a>.</p>
+<p>Implemented in <a class="el" href="class_i_plug_a_a_x.html#a05a84cb84b8102c0d95af1238f0d9fbe">IPlugAAX</a>, <a class="el" href="class_i_plug_a_p_p.html#a215e72927e405b3cf2c02ff06ed39209">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#a728ccf09551b1b5ce1900e6a642c873c">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a539af1c9e36f09b251eb7c0e64cb16c6">IPlugAUv3</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a83f58e5cee8871d9d9890cb8528c1943">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#a1fc6db66c5e9bd9dcd3b09cbabf71215">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">IPlugVST3ProcessorBase</a>, and <a class="el" href="class_i_plug_w_a_m.html#a0ae41aa509f8f7bcc4dcb44a21816253">IPlugWAM</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00091">ProcessMidiMsg()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00096">SendMidiMsgs()</a>.</p>
 
@@ -2172,9 +2231,9 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if successful </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_i_plug_a_p_p.html#a0afb62394c388ecd7654be6378c0c1f0">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#aeee58fb2dcd5ae7ca73abdc0211bebe5">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a2cf91bcf63bbb5f18cd529afad285aeb">IPlugAUv3</a>, <a class="el" href="class_i_plug_v_s_t2.html#ab19e3e35e32d2c1b47c5d25ea77c33c6">IPlugVST2</a>, and <a class="el" href="class_i_plug_w_a_m.html#aa47fe866748000dc8899f5d263e25352">IPlugWAM</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_plug_a_p_p.html#a0afb62394c388ecd7654be6378c0c1f0">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#aeee58fb2dcd5ae7ca73abdc0211bebe5">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a2cf91bcf63bbb5f18cd529afad285aeb">IPlugAUv3</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a19a8f6d271235fe7a24745baf776bab7">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#ab19e3e35e32d2c1b47c5d25ea77c33c6">IPlugVST2</a>, and <a class="el" href="class_i_plug_w_a_m.html#aa47fe866748000dc8899f5d263e25352">IPlugWAM</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00098">98</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00106">106</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2230,7 +2289,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00273">273</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00284">284</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2337,7 +2396,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00266">266</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00175">MaxNChannels()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00186">MaxNChannels()</a>.</p>
 
 </div>
 </div>
@@ -2373,11 +2432,11 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_i_plug_a_a_x.html#ac32027bd9cfa9caa9efd169ee9583f35">IPlugAAX</a>, <a class="el" href="class_i_plug_a_u.html#aca151d30c7cfe77a318a7053c79f45ef">IPlugAU</a>, <a class="el" href="class_i_plug_v_s_t2.html#a6bfc0b7db23a8d84adb0c1a1ac584e20">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#a240d891b8258b019d6e9a2a313f0be1c">IPlugVST3</a>, and <a class="el" href="class_i_plug_w_a_m.html#aca74eaaee0212128d0dd69ebcc595487">IPlugWAM</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_plug_a_a_x.html#ac32027bd9cfa9caa9efd169ee9583f35">IPlugAAX</a>, <a class="el" href="class_i_plug_a_u.html#aca151d30c7cfe77a318a7053c79f45ef">IPlugAU</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a56bbe14a10584f32c91215b670d56f8b">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#a6bfc0b7db23a8d84adb0c1a1ac584e20">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#a240d891b8258b019d6e9a2a313f0be1c">IPlugVST3</a>, and <a class="el" href="class_i_plug_w_a_m.html#aca74eaaee0212128d0dd69ebcc595487">IPlugWAM</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00272">272</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00604">IPlugAAX::SetLatency()</a>, <a class="el" href="_i_plug_a_u_8cpp_source.html#l02007">IPlugAU::SetLatency()</a>, <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00224">IPlugVST2::SetLatency()</a>, and <a class="el" href="_i_plug_v_s_t3_8cpp_source.html#l00244">IPlugVST3::SetLatency()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_a_a_x_8cpp_source.html#l00604">IPlugAAX::SetLatency()</a>, <a class="el" href="_i_plug_a_u_8cpp_source.html#l02010">IPlugAU::SetLatency()</a>, <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00104">IPlugCLAP::SetLatency()</a>, <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00224">IPlugVST2::SetLatency()</a>, and <a class="el" href="_i_plug_v_s_t3_8cpp_source.html#l00249">IPlugVST3::SetLatency()</a>.</p>
 
 </div>
 </div>
@@ -2405,7 +2464,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00275">275</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00286">286</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2433,12 +2492,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00271">271</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00282">282</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
-<a id="a0fa7d4d472915d7f2aff449a4d9158de" name="a0fa7d4d472915d7f2aff449a4d9158de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fa7d4d472915d7f2aff449a4d9158de">&#9670;&#160;</a></span>SetTailSize()</h2>
+<a id="a2ee51f189c659b06a5efa355291c2daa" name="a2ee51f189c659b06a5efa355291c2daa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee51f189c659b06a5efa355291c2daa">&#9670;&#160;</a></span>SetTailSize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2447,7 +2506,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void IPlugProcessor::SetTailSize </td>
+          <td class="memname">virtual void IPlugProcessor::SetTailSize </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>tailSize</em></td><td>)</td>
@@ -2456,20 +2515,24 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Call this method if you need to update the tail size at runtime, for example if the decay time of your reverb effect changes Some apis have special interpretations of certain numbers. </p>
-<p >For VST3 set to 0xffffffff for infinite tail, or 0 for none (default) For VST2 setting to 1 means no tail </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Call this method if you need to update the tail size at runtime, for example if the decay time of your reverb effect changes Use kTailInfinite for an infinite tail You may also use kTailNone for no tail (but this is default in any case) </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tailSize</td><td>the new tailsize in samples </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00241">241</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_plug_c_l_a_p.html#a24aa00376728f2be4a8821ee2b05e929">IPlugCLAP</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00252">252</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00096">IPlugCLAP::SetTailSize()</a>.</p>
 
 </div>
 </div>
@@ -2497,7 +2560,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00274">274</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00285">285</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
 </div>
 </div>
@@ -2551,9 +2614,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Contains detailed information about the transport state. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00309">309</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00320">320</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00126">GetPPQPos()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00120">GetSamplePos()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00123">GetTempo()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00136">GetTimeSig()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00129">GetTransportIsRunning()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00137">GetPPQPos()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00131">GetSamplePos()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00134">GetTempo()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00147">GetTimeSig()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00140">GetTransportIsRunning()</a>.</p>
 
 </div>
 </div>

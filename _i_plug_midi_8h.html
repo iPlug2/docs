@@ -84,7 +84,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a>  </div>
   <div class="headertitle"><div class="title">IPlugMidi.h File Reference<div class="ingroups"><a class="el" href="group___i_plug_structs.html">IPlug::Structs</a></div></div></div>
 </div><!--header-->
 <div class="contents">
@@ -107,14 +108,19 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_sys_ex.html">ISysEx</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct for dealing with SysEx messages.  <a href="struct_i_sys_ex.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_midi_queue.html">IMidiQueue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to help with queuing timestamped MIDI messages.  <a href="class_i_midi_queue.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_midi_queue_base.html">IMidiQueueBase&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A class to help with queuing timestamped MIDI messages.  <a href="class_i_midi_queue_base.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac42c901b241f3189fb2451bfea993e1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_plug_midi_8h.html#ac42c901b241f3189fb2451bfea993e1a">DEFAULT_BLOCK_SIZE</a>&#160;&#160;&#160;512</td></tr>
 <tr class="separator:ac42c901b241f3189fb2451bfea993e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a8987e6ef9b99137f5e7954da2275ebc9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_plug_midi_8h.html#a8987e6ef9b99137f5e7954da2275ebc9">IMidiQueue</a> = <a class="el" href="class_i_midi_queue_base.html">IMidiQueueBase</a>&lt; <a class="el" href="struct_i_midi_msg.html">IMidiMsg</a> &gt;</td></tr>
+<tr class="separator:a8987e6ef9b99137f5e7954da2275ebc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >MIDI and sysex structs/utilites. </p>
@@ -133,7 +139,24 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_midi_8h_source.html#l00672">672</a> of file <a class="el" href="_i_plug_midi_8h_source.html">IPlugMidi.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_midi_8h_source.html#l00675">675</a> of file <a class="el" href="_i_plug_midi_8h_source.html">IPlugMidi.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a8987e6ef9b99137f5e7954da2275ebc9" name="a8987e6ef9b99137f5e7954da2275ebc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8987e6ef9b99137f5e7954da2275ebc9">&#9670;&#160;</a></span>IMidiQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="class_i_midi_queue_base.html">IMidiQueue</a> =  <a class="el" href="class_i_midi_queue_base.html">IMidiQueueBase</a>&lt;<a class="el" href="struct_i_midi_msg.html">IMidiMsg</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_midi_8h_source.html#l00810">810</a> of file <a class="el" href="_i_plug_midi_8h_source.html">IPlugMidi.h</a>.</p>
 
 </div>
 </div>

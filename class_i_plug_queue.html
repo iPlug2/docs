@@ -107,6 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adac69afb9075a41000158d9be1f5b3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42e7a0a531e7576c56791165476dfbad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_queue.html#a42e7a0a531e7576c56791165476dfbad">Pop</a> (T &amp;item)</td></tr>
 <tr class="separator:a42e7a0a531e7576c56791165476dfbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed54aa7bc801f4747252506231e479ee"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
+<tr class="memitem:aed54aa7bc801f4747252506231e479ee"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_plug_queue.html#aed54aa7bc801f4747252506231e479ee">PushFromArgs</a> (Args ...args)</td></tr>
+<tr class="separator:aed54aa7bc801f4747252506231e479ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c5b15deb7b4da604e9ab11b63e9ac1d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_queue.html#a4c5b15deb7b4da604e9ab11b63e9ac1d">ElementsAvailable</a> () const</td></tr>
 <tr class="separator:a4c5b15deb7b4da604e9ab11b63e9ac1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07ef042a4697d8e4628183ccbf888060"><td class="memItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_queue.html#a07ef042a4697d8e4628183ccbf888060">Peek</a> ()</td></tr>
@@ -217,11 +220,11 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo:</a></b></dt><dd></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000029">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00088">88</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00106">106</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
 
 </div>
 </div>
@@ -249,11 +252,11 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd>useful for reading elements while a criterion is met. Can be used like while <a class="el" href="class_i_plug_queue.html#a4c5b15deb7b4da604e9ab11b63e9ac1d">IPlugQueue.ElementsAvailable()</a> &amp;&amp; q.peek().mTime &lt; 100 { elem = q.pop() ... } </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo:</a></b></dt><dd>useful for reading elements while a criterion is met. Can be used like while <a class="el" href="class_i_plug_queue.html#a4c5b15deb7b4da604e9ab11b63e9ac1d">IPlugQueue.ElementsAvailable()</a> &amp;&amp; q.peek().mTime &lt; 100 { elem = q.pop() ... } </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>const T&amp; </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00100">100</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00118">118</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
 
 </div>
 </div>
@@ -339,7 +342,51 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00057">57</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00133">IPlugAPIBase::SendParameterValueFromAPI()</a>.</p>
+</div>
+</div>
+<a id="aed54aa7bc801f4747252506231e479ee" name="aed54aa7bc801f4747252506231e479ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed54aa7bc801f4747252506231e479ee">&#9670;&#160;</a></span>PushFromArgs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename... Args&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_i_plug_queue.html">IPlugQueue</a>&lt; T &gt;::PushFromArgs </td>
+          <td>(</td>
+          <td class="paramtype">Args ...&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000024">Todo:</a></b></dt><dd></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args...</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000025">Todo:</a></b></dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000026">Todo:</a></b></dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00091">91</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00061">IPlugCLAP::BeginInformHostOfParamChange()</a>, <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00075">IPlugCLAP::EndInformHostOfParamChange()</a>, <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00066">IPlugCLAP::InformHostOfParamChange()</a>, and <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00133">IPlugAPIBase::SendParameterValueFromAPI()</a>.</p>
 
 </div>
 </div>
@@ -407,13 +454,13 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000029">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000033">Todo:</a></b></dt><dd></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000030">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000034">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00109">109</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00127">127</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
 
 </div>
 </div>
@@ -441,13 +488,13 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000031">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000035">Todo:</a></b></dt><dd></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000036">Todo:</a></b></dt><dd></dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000033">Todo:</a></b></dt><dd></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000037">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00117">117</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_queue_8h_source.html#l00135">135</a> of file <a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>.</p>
 
 </div>
 </div>

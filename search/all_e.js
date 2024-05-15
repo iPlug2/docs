@@ -48,7 +48,7 @@ var searchData=
   ['probeaudioio_45',['ProbeAudioIO',['../class_i_plug_a_p_p_host.html#a1f3ced1986b5ed9d6a25ccc68aea0fde',1,'IPlugAPPHost']]],
   ['processblock_46',['ProcessBlock',['../class_i_peak_avg_sender.html#a63b7d60fbfa8dbff5c0de31d88bb716f',1,'IPeakAvgSender::ProcessBlock()'],['../class_i_plug_processor.html#afc06f101745ced19a01d8309e79b56de',1,'IPlugProcessor::ProcessBlock()'],['../class_i_buffer_sender.html#a22dd6561c6af499c9bee7195aac310d6',1,'IBufferSender::ProcessBlock()'],['../class_i_peak_sender.html#aa8acfa43c5315c446e113a05df5fe85c',1,'IPeakSender::ProcessBlock()']]],
   ['processmidimsg_47',['ProcessMidiMsg',['../class_i_plug_processor.html#a3118afd2386fc7244ad4f7eeefcbb9b4',1,'IPlugProcessor']]],
-  ['processsysex_48',['ProcessSysEx',['../class_i_plug_processor.html#ae2b522b2995c5b72b94b1aa4ff27af8a',1,'IPlugProcessor']]],
+  ['processsysex_48',['ProcessSysEx',['../class_i_plug_processor.html#ab4da24a1f38a56c267306b3b983a803b',1,'IPlugProcessor']]],
   ['program_49',['Program',['../struct_i_midi_msg.html#a52e547a5242bb3053f0240c9fd8597a9',1,'IMidiMsg']]],
   ['promptforcolor_50',['PromptForColor',['../class_i_graphics.html#a71b874d1960c1bb5c97fdb9ad796acf8',1,'IGraphics']]],
   ['promptfordirectory_51',['PromptForDirectory',['../class_i_graphics.html#a542c8469a9d12e0d34f7921ad4c43343',1,'IGraphics']]],
@@ -57,9 +57,10 @@ var searchData=
   ['pruneuninitializedpresets_54',['PruneUninitializedPresets',['../class_i_plugin_base.html#ae17db0be35230ed71ffc6ef5f9e992df',1,'IPluginBase']]],
   ['push_55',['Push',['../class_i_plug_queue.html#adac69afb9075a41000158d9be1f5b3ef',1,'IPlugQueue']]],
   ['pushdata_56',['PushData',['../class_i_sender.html#a92a9c820f01facfff1cb4af02a35911f',1,'ISender']]],
-  ['pushlayer_57',['PushLayer',['../class_i_graphics.html#a657a1a31242f950063213715c06d8a92',1,'IGraphics']]],
-  ['put_58',['Put',['../class_i_byte_chunk.html#a2dc2a8fb999c033170fe1e39265f7d77',1,'IByteChunk']]],
-  ['putbytes_59',['PutBytes',['../class_i_byte_chunk.html#a7559f9ed06d8c5d3b2015487a2f6d31a',1,'IByteChunk']]],
-  ['putchunk_60',['PutChunk',['../class_i_byte_chunk.html#af6d52f5125503573d3450d44f87b9b42',1,'IByteChunk']]],
-  ['putstr_61',['PutStr',['../class_i_byte_chunk.html#a2e91d645f493d431a89143006021197d',1,'IByteChunk']]]
+  ['pushfromargs_57',['PushFromArgs',['../class_i_plug_queue.html#aed54aa7bc801f4747252506231e479ee',1,'IPlugQueue']]],
+  ['pushlayer_58',['PushLayer',['../class_i_graphics.html#a657a1a31242f950063213715c06d8a92',1,'IGraphics']]],
+  ['put_59',['Put',['../class_i_byte_chunk.html#a2dc2a8fb999c033170fe1e39265f7d77',1,'IByteChunk']]],
+  ['putbytes_60',['PutBytes',['../class_i_byte_chunk.html#a7559f9ed06d8c5d3b2015487a2f6d31a',1,'IByteChunk']]],
+  ['putchunk_61',['PutChunk',['../class_i_byte_chunk.html#af6d52f5125503573d3450d44f87b9b42',1,'IByteChunk']]],
+  ['putstr_62',['PutStr',['../class_i_byte_chunk.html#a2e91d645f493d431a89143006021197d',1,'IByteChunk']]]
 ];
