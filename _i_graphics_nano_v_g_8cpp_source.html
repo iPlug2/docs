@@ -567,516 +567,520 @@ $(function() {
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span> </div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a191e6644f4d7854b9a852ef772bacaf1">  481</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a191e6644f4d7854b9a852ef772bacaf1">IGraphicsNanoVG::DrawResize</a>()</div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>{</div>
-<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>  <span class="keywordflow">if</span> (mMainFrameBuffer != <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>    nvgDeleteFramebuffer(mMainFrameBuffer);</div>
-<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>  </div>
-<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>  <span class="keywordflow">if</span> (mVG)</div>
-<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>  {</div>
-<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>    mMainFrameBuffer = nvgCreateFramebuffer(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), 0);</div>
-<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>  </div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>    <span class="keywordflow">if</span> (mMainFrameBuffer == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>      DBGMSG(<span class="stringliteral">&quot;Could not init FBO.\n&quot;</span>);</div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>  }</div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>}</div>
-<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span> </div>
-<div class="line"><a id="l00495" name="l00495"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#aaddf2ad51039903dd21b0d2bcbcf913c">  495</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#aaddf2ad51039903dd21b0d2bcbcf913c">IGraphicsNanoVG::BeginFrame</a>()</div>
-<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>{</div>
-<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>  mInDraw = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>  <a class="code hl_function" href="class_i_graphics.html#af2a102272f5f0951a36c7ca32601cca1">IGraphics::BeginFrame</a>(); <span class="comment">// start perf graph timing</span></div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span> </div>
-<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
-<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>    glViewport(0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>    glClearColor(0.f, 0.f, 0.f, 0.f);</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);</div>
-<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span><span class="preprocessor">  #if defined OS_MAC</span></div>
-<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &amp;mInitialFBO); <span class="comment">// stash apple fbo</span></div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span><span class="preprocessor">  #endif</span></div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>  </div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>  nvgBindFramebuffer(mMainFrameBuffer); <span class="comment">// begin main frame buffer update</span></div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>  nvgBeginFrame(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
-<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>}</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span> </div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#ab6468a0f3f84e18f8a7f88bb61b0de7f">  513</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#ab6468a0f3f84e18f8a7f88bb61b0de7f">IGraphicsNanoVG::EndFrame</a>()</div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>{</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  nvgEndFrame(mVG); <span class="comment">// end main frame buffer update</span></div>
-<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>  nvgBindFramebuffer(<span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  nvgBeginFrame(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  </div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  NVGpaint img = nvgImagePattern(mVG, 0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), 0, mMainFrameBuffer-&gt;image, 1.0f);</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span> </div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  nvgSave(mVG);</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  nvgResetTransform(mVG);</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  nvgTranslate(mVG, mXTranslation, mYTranslation);</div>
-<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>  nvgBeginPath(mVG);</div>
-<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  nvgRect(mVG, 0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>());</div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>  nvgFillPaint(mVG, img);</div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>  nvgFill(mVG);</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>  nvgRestore(mVG);</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>  </div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span><span class="preprocessor">#if defined OS_MAC &amp;&amp; defined IGRAPHICS_GL</span></div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  glBindFramebuffer(GL_FRAMEBUFFER, mInitialFBO); <span class="comment">// restore apple fbo</span></div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  nvgEndFrame(mVG);</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  </div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>  mInDraw = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>  ClearFBOStack();</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>}</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span> </div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#aff9afca0a24a33e4f34aa790bf2e89d6">  540</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#aff9afca0a24a33e4f34aa790bf2e89d6">IGraphicsNanoVG::DrawBitmap</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_i_bitmap.html">IBitmap</a>&amp; bitmap, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; dest, <span class="keywordtype">int</span> srcX, <span class="keywordtype">int</span> srcY, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>{</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>  <a class="code hl_class" href="class_a_p_i_bitmap.html">APIBitmap</a>* pAPIBitmap = bitmap.<a class="code hl_function" href="class_i_bitmap.html#ac55f07496b70b12b2a3d27c4ec4f4b8a">GetAPIBitmap</a>();</div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>  </div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>  assert(pAPIBitmap);</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    </div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>  <span class="comment">// First generate a scaled image paint</span></div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>  NVGpaint imgPaint;</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>  <span class="keywordtype">double</span> scale = 1.0 / (pAPIBitmap-&gt;<a class="code hl_function" href="class_a_p_i_bitmap.html#a5f03cfafe3518157da6217c7c3f58171">GetScale</a>() * pAPIBitmap-&gt;<a class="code hl_function" href="class_a_p_i_bitmap.html#aeb0c58a4d254838d768783bb1ce45f38">GetDrawScale</a>());</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span> </div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>  nvgTransformScale(imgPaint.xform, scale, scale);</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span> </div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  imgPaint.xform[4] = dest.L - srcX;</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>  imgPaint.xform[5] = dest.T - srcY;</div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>  imgPaint.extent[0] = bitmap.<a class="code hl_function" href="class_i_bitmap.html#a04ab741b9052cab58021ca135f23a083">W</a>() * bitmap.<a class="code hl_function" href="class_i_bitmap.html#a70a3b8059f0cdb99073e8dd351926332">GetScale</a>();</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>  imgPaint.extent[1] = bitmap.<a class="code hl_function" href="class_i_bitmap.html#a81bface3c9e2401aea5ae65b1cf80bdc">H</a>() * bitmap.<a class="code hl_function" href="class_i_bitmap.html#a70a3b8059f0cdb99073e8dd351926332">GetScale</a>();</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>  imgPaint.image = pAPIBitmap-&gt;<a class="code hl_function" href="class_a_p_i_bitmap.html#a8cbde88cc5ba66a1dff6ec025d39071f">GetBitmap</a>();</div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>  imgPaint.radius = imgPaint.feather = 0.f;</div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  imgPaint.innerColor = imgPaint.outerColor = nvgRGBAf(1, 1, 1, <a class="code hl_function" href="group___i_graphics_structs.html#gad3789b954df5c92ab742a855dc095c71">BlendWeight</a>(pBlend));</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    </div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <span class="comment">// Now draw</span></div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    </div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>  nvgBeginPath(mVG); <span class="comment">// Clears any existing path</span></div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>  nvgRect(mVG, dest.L, dest.T, dest.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), dest.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  nvgFillPaint(mVG, imgPaint);</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  nvgFill(mVG);</div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>  nvgBeginPath(mVG); <span class="comment">// Clears the bitmap rect from the path state</span></div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>}</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">  571</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">IGraphicsNanoVG::PathClear</a>()</div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>{</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>  nvgBeginPath(mVG);</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>}</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a8962b809b433e00f1899c24559d47646">  576</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a8962b809b433e00f1899c24559d47646">IGraphicsNanoVG::PathClose</a>()</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>{</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>  nvgClosePath(mVG);</div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>}</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a56a77fde0c7302c45f475c5ddae1a8c8">  581</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a56a77fde0c7302c45f475c5ddae1a8c8">IGraphicsNanoVG::PathArc</a>(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> a1, <span class="keywordtype">float</span> a2, EWinding winding)</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>{</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>  nvgArc(mVG, cx, cy, r, DegToRad(a1 - 90.f), DegToRad(a2 - 90.f), winding == EWinding::CW ? NVG_CW : NVG_CCW);</div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>}</div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">  586</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">IGraphicsNanoVG::PathMoveTo</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>{</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  nvgMoveTo(mVG, x, y);</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>}</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">  591</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">IGraphicsNanoVG::PathLineTo</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>{</div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  nvgLineTo(mVG, x, y);</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>}</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span> </div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a6c4b9737df381e86abab540231558218">  596</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a6c4b9737df381e86abab540231558218">IGraphicsNanoVG::PathCubicBezierTo</a>(<span class="keywordtype">float</span> c1x, <span class="keywordtype">float</span> c1y, <span class="keywordtype">float</span> c2x, <span class="keywordtype">float</span> c2y, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2)</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>{</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>  nvgBezierTo(mVG, c1x, c1y, c2x, c2y, x2, y2);</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>}</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#abebcbdf22359cb6108dc50ccbdd418d1">  601</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#abebcbdf22359cb6108dc50ccbdd418d1">IGraphicsNanoVG::PathQuadraticBezierTo</a>(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2)</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>{</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  nvgQuadTo(mVG, cx, cy, x2, y2);</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>}</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a454f95ac697d5391fa15d73030dce56f">  606</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a454f95ac697d5391fa15d73030dce56f">IGraphicsNanoVG::PathSetWinding</a>(<span class="keywordtype">bool</span> clockwise)</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>{</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  nvgPathWinding(mVG, clockwise ? NVG_CW : NVG_CCW);</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>}</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span> </div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a7273cf6122beb04f5b001947653297ae">  611</a></span><a class="code hl_struct" href="struct_i_color.html">IColor</a> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a7273cf6122beb04f5b001947653297ae">IGraphicsNanoVG::GetPoint</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>{</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>  <span class="keywordflow">return</span> COLOR_BLACK; <span class="comment">//TODO:</span></div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>}</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span> </div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="keywordtype">void</span> IGraphicsNanoVG::PrepareAndMeasureText(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; r, <span class="keywordtype">double</span>&amp; x, <span class="keywordtype">double</span> &amp; y)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>  <span class="keywordtype">float</span> fbounds[4];</div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>  </div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>  assert(nvgFindFont(mVG, text.mFont) != -1 &amp;&amp; <span class="stringliteral">&quot;No font found - did you forget to load it?&quot;</span>);</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>  </div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>  nvgFontBlur(mVG, 0);</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>  nvgFontSize(mVG, text.mSize);</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  nvgFontFace(mVG, text.mFont);</div>
+<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>  ActivateGLContext();</div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>  </div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>  <span class="keywordflow">if</span> (mMainFrameBuffer != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>    nvgDeleteFramebuffer(mMainFrameBuffer);</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>  </div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>  <span class="keywordflow">if</span> (mVG)</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>  {</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>    mMainFrameBuffer = nvgCreateFramebuffer(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), 0);</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>  </div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>    <span class="keywordflow">if</span> (mMainFrameBuffer == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>      DBGMSG(<span class="stringliteral">&quot;Could not init FBO.\n&quot;</span>);</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>  }</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>  </div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>  DeactivateGLContext();</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>}</div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span> </div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#aaddf2ad51039903dd21b0d2bcbcf913c">  499</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#aaddf2ad51039903dd21b0d2bcbcf913c">IGraphicsNanoVG::BeginFrame</a>()</div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>{</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>  mInDraw = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>  <a class="code hl_function" href="class_i_graphics.html#af2a102272f5f0951a36c7ca32601cca1">IGraphics::BeginFrame</a>(); <span class="comment">// start perf graph timing</span></div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span> </div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    glViewport(0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>    glClearColor(0.f, 0.f, 0.f, 0.f);</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="preprocessor">  #if defined OS_MAC</span></div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    glGetIntegerv(GL_FRAMEBUFFER_BINDING, &amp;mInitialFBO); <span class="comment">// stash apple fbo</span></div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span><span class="preprocessor">  #endif</span></div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  </div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  nvgBindFramebuffer(mMainFrameBuffer); <span class="comment">// begin main frame buffer update</span></div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  nvgBeginFrame(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>}</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#ab6468a0f3f84e18f8a7f88bb61b0de7f">  517</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#ab6468a0f3f84e18f8a7f88bb61b0de7f">IGraphicsNanoVG::EndFrame</a>()</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>{</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  nvgEndFrame(mVG); <span class="comment">// end main frame buffer update</span></div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  nvgBindFramebuffer(<span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  nvgBeginFrame(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  </div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  NVGpaint img = nvgImagePattern(mVG, 0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), 0, mMainFrameBuffer-&gt;image, 1.0f);</div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span> </div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>  nvgSave(mVG);</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>  nvgResetTransform(mVG);</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>  nvgTranslate(mVG, mXTranslation, mYTranslation);</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>  nvgBeginPath(mVG);</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>  nvgRect(mVG, 0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>());</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  nvgFillPaint(mVG, img);</div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  nvgFill(mVG);</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>  nvgRestore(mVG);</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>  </div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span><span class="preprocessor">#if defined OS_MAC &amp;&amp; defined IGRAPHICS_GL</span></div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>  glBindFramebuffer(GL_FRAMEBUFFER, mInitialFBO); <span class="comment">// restore apple fbo</span></div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span> </div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  nvgEndFrame(mVG);</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>  </div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>  mInDraw = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>  ClearFBOStack();</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>}</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span> </div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#aff9afca0a24a33e4f34aa790bf2e89d6">  544</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#aff9afca0a24a33e4f34aa790bf2e89d6">IGraphicsNanoVG::DrawBitmap</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_i_bitmap.html">IBitmap</a>&amp; bitmap, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; dest, <span class="keywordtype">int</span> srcX, <span class="keywordtype">int</span> srcY, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>{</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>  <a class="code hl_class" href="class_a_p_i_bitmap.html">APIBitmap</a>* pAPIBitmap = bitmap.<a class="code hl_function" href="class_i_bitmap.html#ac55f07496b70b12b2a3d27c4ec4f4b8a">GetAPIBitmap</a>();</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>  </div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>  assert(pAPIBitmap);</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    </div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>  <span class="comment">// First generate a scaled image paint</span></div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  NVGpaint imgPaint;</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  <span class="keywordtype">double</span> scale = 1.0 / (pAPIBitmap-&gt;<a class="code hl_function" href="class_a_p_i_bitmap.html#a5f03cfafe3518157da6217c7c3f58171">GetScale</a>() * pAPIBitmap-&gt;<a class="code hl_function" href="class_a_p_i_bitmap.html#aeb0c58a4d254838d768783bb1ce45f38">GetDrawScale</a>());</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>  nvgTransformScale(imgPaint.xform, scale, scale);</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span> </div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>  imgPaint.xform[4] = dest.L - srcX;</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>  imgPaint.xform[5] = dest.T - srcY;</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  imgPaint.extent[0] = bitmap.<a class="code hl_function" href="class_i_bitmap.html#a04ab741b9052cab58021ca135f23a083">W</a>() * bitmap.<a class="code hl_function" href="class_i_bitmap.html#a70a3b8059f0cdb99073e8dd351926332">GetScale</a>();</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>  imgPaint.extent[1] = bitmap.<a class="code hl_function" href="class_i_bitmap.html#a81bface3c9e2401aea5ae65b1cf80bdc">H</a>() * bitmap.<a class="code hl_function" href="class_i_bitmap.html#a70a3b8059f0cdb99073e8dd351926332">GetScale</a>();</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  imgPaint.image = pAPIBitmap-&gt;<a class="code hl_function" href="class_a_p_i_bitmap.html#a8cbde88cc5ba66a1dff6ec025d39071f">GetBitmap</a>();</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>  imgPaint.radius = imgPaint.feather = 0.f;</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>  imgPaint.innerColor = imgPaint.outerColor = nvgRGBAf(1, 1, 1, <a class="code hl_function" href="group___i_graphics_structs.html#gad3789b954df5c92ab742a855dc095c71">BlendWeight</a>(pBlend));</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    </div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  <span class="comment">// Now draw</span></div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    </div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  nvgBeginPath(mVG); <span class="comment">// Clears any existing path</span></div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>  nvgRect(mVG, dest.L, dest.T, dest.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), dest.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>  nvgFillPaint(mVG, imgPaint);</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>  nvgFill(mVG);</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  nvgBeginPath(mVG); <span class="comment">// Clears the bitmap rect from the path state</span></div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>}</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span> </div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">  575</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">IGraphicsNanoVG::PathClear</a>()</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>{</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  nvgBeginPath(mVG);</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>}</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a8962b809b433e00f1899c24559d47646">  580</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a8962b809b433e00f1899c24559d47646">IGraphicsNanoVG::PathClose</a>()</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>{</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>  nvgClosePath(mVG);</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>}</div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span> </div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a56a77fde0c7302c45f475c5ddae1a8c8">  585</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a56a77fde0c7302c45f475c5ddae1a8c8">IGraphicsNanoVG::PathArc</a>(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> r, <span class="keywordtype">float</span> a1, <span class="keywordtype">float</span> a2, EWinding winding)</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>{</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  nvgArc(mVG, cx, cy, r, DegToRad(a1 - 90.f), DegToRad(a2 - 90.f), winding == EWinding::CW ? NVG_CW : NVG_CCW);</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>}</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span> </div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">  590</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">IGraphicsNanoVG::PathMoveTo</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>{</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  nvgMoveTo(mVG, x, y);</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>}</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">  595</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">IGraphicsNanoVG::PathLineTo</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y)</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>{</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>  nvgLineTo(mVG, x, y);</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>}</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a6c4b9737df381e86abab540231558218">  600</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a6c4b9737df381e86abab540231558218">IGraphicsNanoVG::PathCubicBezierTo</a>(<span class="keywordtype">float</span> c1x, <span class="keywordtype">float</span> c1y, <span class="keywordtype">float</span> c2x, <span class="keywordtype">float</span> c2y, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2)</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>{</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  nvgBezierTo(mVG, c1x, c1y, c2x, c2y, x2, y2);</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>}</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#abebcbdf22359cb6108dc50ccbdd418d1">  605</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#abebcbdf22359cb6108dc50ccbdd418d1">IGraphicsNanoVG::PathQuadraticBezierTo</a>(<span class="keywordtype">float</span> cx, <span class="keywordtype">float</span> cy, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2)</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>{</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  nvgQuadTo(mVG, cx, cy, x2, y2);</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>}</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span> </div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a454f95ac697d5391fa15d73030dce56f">  610</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a454f95ac697d5391fa15d73030dce56f">IGraphicsNanoVG::PathSetWinding</a>(<span class="keywordtype">bool</span> clockwise)</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>{</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>  nvgPathWinding(mVG, clockwise ? NVG_CW : NVG_CCW);</div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>}</div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span> </div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a7273cf6122beb04f5b001947653297ae">  615</a></span><a class="code hl_struct" href="struct_i_color.html">IColor</a> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a7273cf6122beb04f5b001947653297ae">IGraphicsNanoVG::GetPoint</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>{</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>  <span class="keywordflow">return</span> COLOR_BLACK; <span class="comment">//TODO:</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>}</div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="keywordtype">void</span> IGraphicsNanoVG::PrepareAndMeasureText(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; r, <span class="keywordtype">double</span>&amp; x, <span class="keywordtype">double</span> &amp; y)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>  <span class="keywordtype">float</span> fbounds[4];</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>  </div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  assert(nvgFindFont(mVG, text.mFont) != -1 &amp;&amp; <span class="stringliteral">&quot;No font found - did you forget to load it?&quot;</span>);</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>  </div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>  <span class="keywordtype">int</span> align = 0;</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>  </div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>  <span class="keywordflow">switch</span> (text.mAlign)</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  {</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>    <span class="keywordflow">case</span> EAlign::Near:     align = NVG_ALIGN_LEFT;     x = r.L;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    <span class="keywordflow">case</span> EAlign::Center:   align = NVG_ALIGN_CENTER;   x = r.<a class="code hl_function" href="struct_i_r_e_c_t.html#ae7ab9b583d33dab5f0da516a9f3a2b17">MW</a>();     <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>    <span class="keywordflow">case</span> EAlign::Far:      align = NVG_ALIGN_RIGHT;    x = r.R;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  }</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>  </div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>  <span class="keywordflow">switch</span> (text.mVAlign)</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>  {</div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>    <span class="keywordflow">case</span> EVAlign::Top:     align |= NVG_ALIGN_TOP;     y = r.T;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    <span class="keywordflow">case</span> EVAlign::Middle:  align |= NVG_ALIGN_MIDDLE;  y = r.<a class="code hl_function" href="struct_i_r_e_c_t.html#a60f96f3391687e546155197b4544111b">MH</a>();     <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>    <span class="keywordflow">case</span> EVAlign::Bottom:  align |= NVG_ALIGN_BOTTOM;  y = r.B;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  }</div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>  </div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>  nvgTextAlign(mVG, align);</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>  nvgTextBounds(mVG, x, y, str, NULL, fbounds);</div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  </div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  r = <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(fbounds[0], fbounds[1], fbounds[2], fbounds[3]);</div>
-<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>}</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
-<div class="line"><a id="l00648" name="l00648"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#ad51242368c659a2adc6f191d6a821636">  648</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#ad51242368c659a2adc6f191d6a821636">IGraphicsNanoVG::DoMeasureText</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> r = bounds;</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>  <span class="keywordtype">double</span> x, y;</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>  PrepareAndMeasureText(text, str, bounds, x, y);</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>  <a class="code hl_function" href="class_i_graphics.html#a4aa1c246f3d75dc4ed9b9c76585d749d">DoMeasureTextRotation</a>(text, r, bounds);</div>
-<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>  </div>
-<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>  <span class="keywordflow">return</span> bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>}</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span> </div>
-<div class="line"><a id="l00658" name="l00658"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a8bb214d04764c48b8b1efc0791ce9ac1">  658</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a8bb214d04764c48b8b1efc0791ce9ac1">IGraphicsNanoVG::DoDrawText</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>{</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> measured = bounds;</div>
-<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>  <span class="keywordtype">double</span> x, y;</div>
-<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>  </div>
-<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>  PrepareAndMeasureText(text, str, measured, x, y);</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>  <a class="code hl_function" href="class_i_graphics.html#ac28803e8d8aa7ab50c414caea51e4f32">PathTransformSave</a>();</div>
-<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>  DoTextRotation(text, bounds, measured);</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>  nvgFillColor(mVG, NanoVGColor(text.mFGColor, pBlend));</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
-<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>  nvgText(mVG, x, y, str, NULL);</div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
-<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>  <a class="code hl_function" href="class_i_graphics.html#a64183939403574b2b16da84955bdcd79">PathTransformRestore</a>();</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>}</div>
-<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span> </div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">  673</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">IGraphicsNanoVG::PathStroke</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_pattern.html">IPattern</a>&amp; pattern, <span class="keywordtype">float</span> thickness, <span class="keyword">const</span> <a class="code hl_struct" href="group___i_graphics_structs.html#struct_i_stroke_options">IStrokeOptions</a>&amp; options, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
-<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>{</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>  <span class="comment">// First set options</span></div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>  <span class="keywordflow">switch</span> (options.mCapOption)</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>  {</div>
-<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    <span class="keywordflow">case</span> ELineCap::Butt:   nvgLineCap(mVG, NVG_BUTT);     <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>    <span class="keywordflow">case</span> ELineCap::Round:  nvgLineCap(mVG, NVG_ROUND);    <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    <span class="keywordflow">case</span> ELineCap::Square: nvgLineCap(mVG, NVG_SQUARE);   <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  }</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  </div>
-<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>  <span class="keywordflow">switch</span> (options.mJoinOption)</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  {</div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    <span class="keywordflow">case</span> ELineJoin::Miter: nvgLineJoin(mVG, NVG_MITER);   <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>    <span class="keywordflow">case</span> ELineJoin::Round: nvgLineJoin(mVG, NVG_ROUND);   <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    <span class="keywordflow">case</span> ELineJoin::Bevel: nvgLineJoin(mVG, NVG_BEVEL);   <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>  }</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>  </div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>  nvgMiterLimit(mVG, options.mMiterLimit);</div>
-<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>  nvgStrokeWidth(mVG, thickness);</div>
-<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span> </div>
-<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  <span class="comment">// NanoVG does not support dashed paths</span></div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <span class="keywordflow">if</span> (pattern.mType == EPatternType::Solid)</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>    nvgStrokeColor(mVG, NanoVGColor(pattern.<a class="code hl_function" href="struct_i_pattern.html#a114e025f9f5bb5ba522b9fc80ea362ef">GetStop</a>(0).mColor, pBlend));</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>    nvgStrokePaint(mVG, NanoVGPaint(mVG, pattern, pBlend));</div>
-<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  </div>
-<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>  nvgPathWinding(mVG, NVG_CCW);</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>  nvgStroke(mVG);</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
-<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    </div>
-<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  <span class="keywordflow">if</span> (!options.mPreserve)</div>
-<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>    nvgBeginPath(mVG); <span class="comment">// Clears the path state</span></div>
-<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>}</div>
-<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span> </div>
-<div class="line"><a id="l00708" name="l00708"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a3300cfbc3237debb0fb12cb40f8cc64e">  708</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a3300cfbc3237debb0fb12cb40f8cc64e">IGraphicsNanoVG::PathFill</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_pattern.html">IPattern</a>&amp; pattern, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_fill_options.html">IFillOptions</a>&amp; options, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>{</div>
-<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>  <span class="keywordflow">switch</span>(options.mFillRule)</div>
-<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>  {</div>
-<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>    <span class="comment">// This concept of fill vs. even/odd winding does not really translate to nanovg.</span></div>
-<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>    <span class="comment">// Instead the caller is responsible for settting winding correctly for each subpath</span></div>
-<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    <span class="comment">// based on whether it&#39;s a solid (NVG_CCW) or hole (NVG_CW).</span></div>
-<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>    <span class="keywordflow">case</span> EFillRule::Winding:</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>      nvgPathWinding(mVG, NVG_CCW);</div>
-<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>    <span class="keywordflow">case</span> EFillRule::EvenOdd:</div>
-<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>      nvgPathWinding(mVG, NVG_CW);</div>
-<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>    <span class="keywordflow">case</span> EFillRule::Preserve:</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>      <span class="comment">// don&#39;t set a winding rule for the path, to preserve individual windings on subpaths</span></div>
-<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>  nvgFontBlur(mVG, 0);</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>  nvgFontSize(mVG, text.mSize);</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>  nvgFontFace(mVG, text.mFont);</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  </div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  <span class="keywordtype">int</span> align = 0;</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  </div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>  <span class="keywordflow">switch</span> (text.mAlign)</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  {</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    <span class="keywordflow">case</span> EAlign::Near:     align = NVG_ALIGN_LEFT;     x = r.L;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keywordflow">case</span> EAlign::Center:   align = NVG_ALIGN_CENTER;   x = r.<a class="code hl_function" href="struct_i_r_e_c_t.html#ae7ab9b583d33dab5f0da516a9f3a2b17">MW</a>();     <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="keywordflow">case</span> EAlign::Far:      align = NVG_ALIGN_RIGHT;    x = r.R;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>  }</div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>  </div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span>  <span class="keywordflow">switch</span> (text.mVAlign)</div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  {</div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    <span class="keywordflow">case</span> EVAlign::Top:     align |= NVG_ALIGN_TOP;     y = r.T;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>    <span class="keywordflow">case</span> EVAlign::Middle:  align |= NVG_ALIGN_MIDDLE;  y = r.<a class="code hl_function" href="struct_i_r_e_c_t.html#a60f96f3391687e546155197b4544111b">MH</a>();     <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <span class="keywordflow">case</span> EVAlign::Bottom:  align |= NVG_ALIGN_BOTTOM;  y = r.B;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  }</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  </div>
+<div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>  nvgTextAlign(mVG, align);</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>  nvgTextBounds(mVG, x, y, str, NULL, fbounds);</div>
+<div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  </div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>  r = <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(fbounds[0], fbounds[1], fbounds[2], fbounds[3]);</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>}</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span> </div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#ad51242368c659a2adc6f191d6a821636">  652</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#ad51242368c659a2adc6f191d6a821636">IGraphicsNanoVG::DoMeasureText</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> r = bounds;</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>  <span class="keywordtype">double</span> x, y;</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>  PrepareAndMeasureText(text, str, bounds, x, y);</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>  <a class="code hl_function" href="class_i_graphics.html#a4aa1c246f3d75dc4ed9b9c76585d749d">DoMeasureTextRotation</a>(text, r, bounds);</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>  </div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>  <span class="keywordflow">return</span> bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>}</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span> </div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a8bb214d04764c48b8b1efc0791ce9ac1">  662</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a8bb214d04764c48b8b1efc0791ce9ac1">IGraphicsNanoVG::DoDrawText</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>{</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> measured = bounds;</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>  <span class="keywordtype">double</span> x, y;</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>  </div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>  PrepareAndMeasureText(text, str, measured, x, y);</div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>  <a class="code hl_function" href="class_i_graphics.html#ac28803e8d8aa7ab50c414caea51e4f32">PathTransformSave</a>();</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>  DoTextRotation(text, bounds, measured);</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>  nvgFillColor(mVG, NanoVGColor(text.mFGColor, pBlend));</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>  nvgText(mVG, x, y, str, NULL);</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>  <a class="code hl_function" href="class_i_graphics.html#a64183939403574b2b16da84955bdcd79">PathTransformRestore</a>();</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>}</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span> </div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">  677</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">IGraphicsNanoVG::PathStroke</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_pattern.html">IPattern</a>&amp; pattern, <span class="keywordtype">float</span> thickness, <span class="keyword">const</span> <a class="code hl_struct" href="group___i_graphics_structs.html#struct_i_stroke_options">IStrokeOptions</a>&amp; options, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>{</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>  <span class="comment">// First set options</span></div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>  <span class="keywordflow">switch</span> (options.mCapOption)</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  {</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>    <span class="keywordflow">case</span> ELineCap::Butt:   nvgLineCap(mVG, NVG_BUTT);     <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <span class="keywordflow">case</span> ELineCap::Round:  nvgLineCap(mVG, NVG_ROUND);    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    <span class="keywordflow">case</span> ELineCap::Square: nvgLineCap(mVG, NVG_SQUARE);   <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>  }</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>  </div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>  <span class="keywordflow">switch</span> (options.mJoinOption)</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>  {</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    <span class="keywordflow">case</span> ELineJoin::Miter: nvgLineJoin(mVG, NVG_MITER);   <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>    <span class="keywordflow">case</span> ELineJoin::Round: nvgLineJoin(mVG, NVG_ROUND);   <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    <span class="keywordflow">case</span> ELineJoin::Bevel: nvgLineJoin(mVG, NVG_BEVEL);   <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>  }</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  </div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  nvgMiterLimit(mVG, options.mMiterLimit);</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>  nvgStrokeWidth(mVG, thickness);</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span> </div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>  <span class="comment">// NanoVG does not support dashed paths</span></div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>  <span class="keywordflow">if</span> (pattern.mType == EPatternType::Solid)</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>    nvgStrokeColor(mVG, NanoVGColor(pattern.<a class="code hl_function" href="struct_i_pattern.html#a114e025f9f5bb5ba522b9fc80ea362ef">GetStop</a>(0).mColor, pBlend));</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>    nvgStrokePaint(mVG, NanoVGPaint(mVG, pattern, pBlend));</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>  nvgPathWinding(mVG, NVG_CCW);</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>  nvgStroke(mVG);</div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>    </div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>  <span class="keywordflow">if</span> (!options.mPreserve)</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>    nvgBeginPath(mVG); <span class="comment">// Clears the path state</span></div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>}</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span> </div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a3300cfbc3237debb0fb12cb40f8cc64e">  712</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a3300cfbc3237debb0fb12cb40f8cc64e">IGraphicsNanoVG::PathFill</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_pattern.html">IPattern</a>&amp; pattern, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_fill_options.html">IFillOptions</a>&amp; options, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>{</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>  <span class="keywordflow">switch</span>(options.mFillRule)</div>
+<div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>  {</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>    <span class="comment">// This concept of fill vs. even/odd winding does not really translate to nanovg.</span></div>
+<div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>    <span class="comment">// Instead the caller is responsible for settting winding correctly for each subpath</span></div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>    <span class="comment">// based on whether it&#39;s a solid (NVG_CCW) or hole (NVG_CW).</span></div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>    <span class="keywordflow">case</span> EFillRule::Winding:</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>      nvgPathWinding(mVG, NVG_CCW);</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>    <span class="keywordflow">case</span> EFillRule::EvenOdd:</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>      nvgPathWinding(mVG, NVG_CW);</div>
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>  }</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  </div>
-<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>  <span class="keywordflow">if</span> (pattern.mType == EPatternType::Solid)</div>
-<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>    nvgFillColor(mVG, NanoVGColor(pattern.<a class="code hl_function" href="struct_i_pattern.html#a114e025f9f5bb5ba522b9fc80ea362ef">GetStop</a>(0).mColor, pBlend));</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    nvgFillPaint(mVG, NanoVGPaint(mVG, pattern, pBlend));</div>
-<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  </div>
-<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>  nvgFill(mVG);</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span> </div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>  <span class="keywordflow">if</span> (!options.mPreserve)</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    nvgBeginPath(mVG); <span class="comment">// Clears the path state</span></div>
-<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>}</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>    <span class="keywordflow">case</span> EFillRule::Preserve:</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>      <span class="comment">// don&#39;t set a winding rule for the path, to preserve individual windings on subpaths</span></div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>  }</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>  </div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>  <span class="keywordflow">if</span> (pattern.mType == EPatternType::Solid)</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    nvgFillColor(mVG, NanoVGColor(pattern.<a class="code hl_function" href="struct_i_pattern.html#a114e025f9f5bb5ba522b9fc80ea362ef">GetStop</a>(0).mColor, pBlend));</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    nvgFillPaint(mVG, NanoVGPaint(mVG, pattern, pBlend));</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>  </div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>  NanoVGSetBlendMode(mVG, pBlend);</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>  nvgFill(mVG);</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
 <div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a7674eb1b2d7f0c79886297292183d8cf">  740</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a7674eb1b2d7f0c79886297292183d8cf">IGraphicsNanoVG::LoadAPIFont</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fontID, <span class="keyword">const</span> PlatformFontPtr&amp; font)</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>{</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>  StaticStorage&lt;IFontData&gt;::Accessor storage(sFontCache);</div>
-<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>  IFontData* cached = storage.Find(fontID);</div>
-<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>    </div>
-<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>  <span class="keywordflow">if</span> (cached)</div>
-<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>  {</div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>    nvgCreateFontFaceMem(mVG, fontID, cached-&gt;Get(), cached-&gt;GetSize(), cached-&gt;GetFaceIdx(), 0);</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>  }</div>
-<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>    </div>
-<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>  IFontDataPtr data = font-&gt;GetFontData();</div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span> </div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>  <span class="keywordflow">if</span> (data-&gt;IsValid() &amp;&amp; nvgCreateFontFaceMem(mVG, fontID, data-&gt;Get(), data-&gt;GetSize(), data-&gt;GetFaceIdx(), 0) != -1)</div>
-<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>  {</div>
-<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>    storage.Add(data.release(), fontID);</div>
-<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>  }</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span> </div>
-<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>}</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span> </div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span><span class="keywordtype">void</span> IGraphicsNanoVG::UpdateLayer()</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>{</div>
-<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>  <span class="keywordflow">if</span> (mLayers.empty())</div>
-<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>  {</div>
-<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>    nvgEndFrame(mVG);</div>
-<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>    glViewport(0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    nvgBindFramebuffer(mMainFrameBuffer);</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    nvgBeginFrame(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
-<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>  }</div>
-<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  {</div>
-<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    nvgEndFrame(mVG);</div>
-<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
-<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> scale = <a class="code hl_function" href="class_i_graphics.html#a407a30ad8dc12d5e9d282e6175402c78">GetBackingPixelScale</a>();</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    glViewport(0, 0, mLayers.top()-&gt;Bounds().W() * scale, mLayers.top()-&gt;Bounds().H() * scale);</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>    nvgBindFramebuffer(<span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>Bitmap*<span class="keyword">&gt;</span>(mLayers.top()-&gt;GetAPIBitmap())-&gt;GetFBO());</div>
-<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    nvgBeginFrame(mVG, mLayers.top()-&gt;Bounds().W() * <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>(), mLayers.top()-&gt;Bounds().H() * <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>  }</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>}</div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span> </div>
-<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span><span class="keywordtype">void</span> IGraphicsNanoVG::PathTransformSetMatrix(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_matrix.html">IMatrix</a>&amp; m)</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>{</div>
-<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  <span class="keywordtype">double</span> xTranslate = 0.0;</div>
-<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>  <span class="keywordtype">double</span> yTranslate = 0.0;</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>  </div>
-<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>  <span class="keywordflow">if</span> (!mLayers.empty())</div>
-<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>  {</div>
-<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> bounds = mLayers.top()-&gt;Bounds();</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    </div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    xTranslate = -bounds.L;</div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    yTranslate = -bounds.T;</div>
-<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>  }</div>
-<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>  </div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>  nvgResetTransform(mVG);</div>
-<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>  nvgScale(mVG, <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>(), <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>());</div>
-<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>  nvgTranslate(mVG, xTranslate, yTranslate);</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  nvgTransform(mVG, m.mXX, m.mYX, m.mXY, m.mYY, m.mTX, m.mTY);</div>
-<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>}</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span> </div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="keywordtype">void</span> IGraphicsNanoVG::SetClipRegion(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; r)</div>
-<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>{</div>
-<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>  nvgScissor(mVG, r.L, r.T, r.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), r.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
-<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>}</div>
-<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span> </div>
-<div class="line"><a id="l00809" name="l00809"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a6869ce59e10c0bb6cd3c5e270c439d78">  809</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a6869ce59e10c0bb6cd3c5e270c439d78">IGraphicsNanoVG::DrawDottedLine</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; color, <span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend, <span class="keywordtype">float</span> thickness, <span class="keywordtype">float</span> dashLen)</div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>{</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> xd = x1 - x2;</div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> yd = y1 - y2;</div>
-<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> len = std::sqrt(xd * xd + yd * yd);</div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>  </div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> segs = std::round(len / dashLen);</div>
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> incr = 1.f / segs;</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span> </div>
-<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>  <span class="keywordtype">float</span> xs = x1;</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>  <span class="keywordtype">float</span> ys = y1;</div>
-<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span> </div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(xs, ys);</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span> </div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; static_cast&lt;int&gt;(segs); i+=2)</div>
-<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>  {</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>    <span class="keywordtype">float</span> progress = incr * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(i);</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>  </div>
-<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    <span class="keywordtype">float</span> xe = x1 + progress * (x2 - x1);</div>
-<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>    <span class="keywordtype">float</span> ye = y1 + progress * (y2 - y1);</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    </div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">PathLineTo</a>(xe, ye);</div>
-<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    </div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    progress += incr;</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>  <span class="keywordflow">if</span> (!options.mPreserve)</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    nvgBeginPath(mVG); <span class="comment">// Clears the path state</span></div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>}</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span> </div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a7674eb1b2d7f0c79886297292183d8cf">  744</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a7674eb1b2d7f0c79886297292183d8cf">IGraphicsNanoVG::LoadAPIFont</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* fontID, <span class="keyword">const</span> PlatformFontPtr&amp; font)</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>{</div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>  StaticStorage&lt;IFontData&gt;::Accessor storage(sFontCache);</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>  IFontData* cached = storage.Find(fontID);</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>    </div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>  <span class="keywordflow">if</span> (cached)</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>  {</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    nvgCreateFontFaceMem(mVG, fontID, cached-&gt;Get(), cached-&gt;GetSize(), cached-&gt;GetFaceIdx(), 0);</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>  }</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>    </div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>  IFontDataPtr data = font-&gt;GetFontData();</div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span> </div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>  <span class="keywordflow">if</span> (data-&gt;IsValid() &amp;&amp; nvgCreateFontFaceMem(mVG, fontID, data-&gt;Get(), data-&gt;GetSize(), data-&gt;GetFaceIdx(), 0) != -1)</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>  {</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    storage.Add(data.release(), fontID);</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  }</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span> </div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>}</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span><span class="keywordtype">void</span> IGraphicsNanoVG::UpdateLayer()</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>{</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  <span class="keywordflow">if</span> (mLayers.empty())</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>  {</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    nvgEndFrame(mVG);</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    glViewport(0, 0, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>() * <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>    nvgBindFramebuffer(mMainFrameBuffer);</div>
+<div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>    nvgBeginFrame(mVG, <a class="code hl_function" href="class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6">WindowWidth</a>(), <a class="code hl_function" href="class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55">WindowHeight</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
+<div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>  }</div>
+<div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>  {</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    nvgEndFrame(mVG);</div>
+<div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
+<div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>    <span class="keyword">const</span> <span class="keywordtype">double</span> scale = <a class="code hl_function" href="class_i_graphics.html#a407a30ad8dc12d5e9d282e6175402c78">GetBackingPixelScale</a>();</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    glViewport(0, 0, mLayers.top()-&gt;Bounds().W() * scale, mLayers.top()-&gt;Bounds().H() * scale);</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    nvgBindFramebuffer(<span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span>Bitmap*<span class="keyword">&gt;</span>(mLayers.top()-&gt;GetAPIBitmap())-&gt;GetFBO());</div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    nvgBeginFrame(mVG, mLayers.top()-&gt;Bounds().W() * <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>(), mLayers.top()-&gt;Bounds().H() * <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>(), <a class="code hl_function" href="class_i_graphics.html#ab676d94318f98607f37b64f17531d28f">GetScreenScale</a>());</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>  }</div>
+<div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>}</div>
+<div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span> </div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span><span class="keywordtype">void</span> IGraphicsNanoVG::PathTransformSetMatrix(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_matrix.html">IMatrix</a>&amp; m)</div>
+<div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>{</div>
+<div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>  <span class="keywordtype">double</span> xTranslate = 0.0;</div>
+<div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>  <span class="keywordtype">double</span> yTranslate = 0.0;</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>  </div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>  <span class="keywordflow">if</span> (!mLayers.empty())</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>  {</div>
+<div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> bounds = mLayers.top()-&gt;Bounds();</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>    </div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    xTranslate = -bounds.L;</div>
+<div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    yTranslate = -bounds.T;</div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>  }</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  </div>
+<div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>  nvgResetTransform(mVG);</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  nvgScale(mVG, <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>(), <a class="code hl_function" href="class_i_graphics.html#ad5f403e5b79d4068985b7b8afcaa8da1">GetDrawScale</a>());</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>  nvgTranslate(mVG, xTranslate, yTranslate);</div>
+<div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>  nvgTransform(mVG, m.mXX, m.mYX, m.mXY, m.mYY, m.mTX, m.mTY);</div>
+<div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>}</div>
+<div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span> </div>
+<div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span><span class="keywordtype">void</span> IGraphicsNanoVG::SetClipRegion(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; r)</div>
+<div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>{</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>  nvgScissor(mVG, r.L, r.T, r.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), r.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>}</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span> </div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a6869ce59e10c0bb6cd3c5e270c439d78">  813</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a6869ce59e10c0bb6cd3c5e270c439d78">IGraphicsNanoVG::DrawDottedLine</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; color, <span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend, <span class="keywordtype">float</span> thickness, <span class="keywordtype">float</span> dashLen)</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>{</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> xd = x1 - x2;</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> yd = y1 - y2;</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> len = std::sqrt(xd * xd + yd * yd);</div>
+<div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>  </div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> segs = std::round(len / dashLen);</div>
+<div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> incr = 1.f / segs;</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span> </div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  <span class="keywordtype">float</span> xs = x1;</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>  <span class="keywordtype">float</span> ys = y1;</div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span> </div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(xs, ys);</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span> </div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; static_cast&lt;int&gt;(segs); i+=2)</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>  {</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>    <span class="keywordtype">float</span> progress = incr * <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(i);</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>  </div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>    <span class="keywordtype">float</span> xe = x1 + progress * (x2 - x1);</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>    <span class="keywordtype">float</span> ye = y1 + progress * (y2 - y1);</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    </div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    xs = x1 + progress * (x2 - x1);</div>
-<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    ys = y1 + progress * (y2 - y1);</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    </div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(xs, ys);</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>  }</div>
-<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>  </div>
-<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">PathStroke</a>(color, thickness, <a class="code hl_struct" href="group___i_graphics_structs.html#struct_i_stroke_options">IStrokeOptions</a>(), pBlend);</div>
-<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>}</div>
-<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span> </div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a36c7bff7e8865dcc75b878d9938c471b">  843</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a36c7bff7e8865dcc75b878d9938c471b">IGraphicsNanoVG::DrawDottedRect</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; color, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend, <span class="keywordtype">float</span> thickness, <span class="keywordtype">float</span> dashLen)</div>
-<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>{</div>
-<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> xsegs = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::ceil(bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>() / (dashLen * 2.f)));</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> ysegs = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::ceil(bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>() / (dashLen * 2.f)));</div>
-<div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>  </div>
-<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>  <span class="keywordtype">float</span> x1 = bounds.L;</div>
-<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>  <span class="keywordtype">float</span> y1 = bounds.T;</div>
-<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>  </div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>  <span class="keywordtype">float</span> x2 = x1;</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>  <span class="keywordtype">float</span> y2 = y1;</div>
-<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>  </div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(x1, y1);</div>
-<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span> </div>
-<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
-<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  {</div>
-<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xsegs; i++)</div>
-<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>    {</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>      x2 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(x1 + dashLen, bounds.L, bounds.R);</div>
-<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">PathLineTo</a>(x2, y2);</div>
-<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>      x1 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(x2 + dashLen, bounds.L, bounds.R);</div>
-<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(x1, y1);</div>
-<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    }</div>
-<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    </div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    x2 = x1;</div>
-<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>    </div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ysegs; i++)</div>
-<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    {</div>
-<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>      y2 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(y1 + dashLen, bounds.T, bounds.B);</div>
-<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">PathLineTo</a>(x2, y2);</div>
-<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>      y1 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(y2 + dashLen, bounds.T, bounds.B);</div>
-<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(x1, y1);</div>
-<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>    }</div>
-<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>    </div>
-<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>    y2 = y1;</div>
-<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>    </div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    dashLen = -dashLen;</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>  }</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>  </div>
-<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">PathStroke</a>(color, thickness, <a class="code hl_struct" href="group___i_graphics_structs.html#struct_i_stroke_options">IStrokeOptions</a>(), pBlend);</div>
-<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>}</div>
-<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span> </div>
-<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span><span class="keywordtype">void</span> IGraphicsNanoVG::DeleteFBO(NVGframebuffer* pBuffer)</div>
-<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>{</div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>  <span class="keywordflow">if</span> (!mInDraw)</div>
-<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>    nvgDeleteFramebuffer(pBuffer);</div>
-<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>  <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>  {</div>
-<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    WDL_MutexLock lock(&amp;mFBOMutex);</div>
-<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>    mFBOStack.push(pBuffer);</div>
-<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>  }</div>
-<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>}</div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span> </div>
-<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span><span class="keywordtype">void</span> IGraphicsNanoVG::ClearFBOStack()</div>
-<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>{</div>
-<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>  WDL_MutexLock lock(&amp;mFBOMutex);</div>
-<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>  <span class="keywordflow">while</span> (!mFBOStack.empty())</div>
-<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  {</div>
-<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>    nvgDeleteFramebuffer(mFBOStack.top());</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>    mFBOStack.pop();</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  }</div>
-<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>}</div>
-<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span> </div>
-<div class="line"><a id="l00905" name="l00905"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">  905</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">IGraphicsNanoVG::DrawFastDropShadow</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; innerBounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; outerBounds, <span class="keywordtype">float</span> xyDrop, <span class="keywordtype">float</span> roundness, <span class="keywordtype">float</span> blur, <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
-<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>{</div>
-<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>  NVGpaint shadowPaint = nvgBoxGradient(mVG, innerBounds.L + xyDrop, innerBounds.T + xyDrop, innerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), innerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>(), roundness, blur, NanoVGColor(COLOR_BLACK_DROP_SHADOW, pBlend), NanoVGColor(COLOR_TRANSPARENT, <span class="keyword">nullptr</span>));</div>
-<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>  nvgBeginPath(mVG);</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  nvgRect(mVG, outerBounds.L, outerBounds.T, outerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), outerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
-<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>  nvgFillPaint(mVG, shadowPaint);</div>
-<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
-<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  nvgFill(mVG);</div>
-<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  nvgBeginPath(mVG);</div>
-<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>}</div>
-<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span> </div>
-<div class="line"><a id="l00916" name="l00916"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">  916</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">IGraphicsNanoVG::DrawMultiLineText</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
-<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>{</div>
-<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>  nvgSave(mVG);</div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>  nvgFontSize(mVG, text.mSize);</div>
-<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>  nvgFontFace(mVG, text.mFont);</div>
-<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span> </div>
-<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>  <span class="keywordtype">float</span> x = 0.0, y = 0.0;</div>
-<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> width = bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
-<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>  <span class="keywordtype">int</span> align = 0;</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>  <span class="keywordtype">float</span> yOffsetScale = 0.0;</div>
-<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>  </div>
-<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>  <span class="keywordflow">switch</span> (text.mAlign)</div>
-<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>  {</div>
-<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    <span class="keywordflow">case</span> EAlign::Near:     align = NVG_ALIGN_LEFT;     x = bounds.L;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>    <span class="keywordflow">case</span> EAlign::Center:   align = NVG_ALIGN_CENTER;   x = bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ae7ab9b583d33dab5f0da516a9f3a2b17">MW</a>();     <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>    <span class="keywordflow">case</span> EAlign::Far:      align = NVG_ALIGN_RIGHT;    x = bounds.R;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  }</div>
-<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    </div>
-<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>  <span class="keywordflow">switch</span> (text.mVAlign)</div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  {</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    <span class="keywordflow">case</span> EVAlign::Top:</div>
-<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    {</div>
-<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>      align |= NVG_ALIGN_TOP;</div>
-<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>      y = bounds.T;</div>
-<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>      yOffsetScale = 0.0;</div>
-<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>    }</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    <span class="keywordflow">case</span> EVAlign::Middle:</div>
-<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    {</div>
-<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>      align |= NVG_ALIGN_MIDDLE;</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>      y = bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a60f96f3391687e546155197b4544111b">MH</a>();</div>
-<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>      yOffsetScale = 0.5;</div>
-<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>    }</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>    <span class="keywordflow">case</span> EVAlign::Bottom:</div>
-<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>    {</div>
-<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>      align |= NVG_ALIGN_BOTTOM;</div>
-<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>      y = bounds.B;</div>
-<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>      yOffsetScale = 1.0;</div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>    }</div>
-<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  }</div>
-<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  </div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>  nvgTextAlign(mVG, align);</div>
-<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  </div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  NVGtextRow rows[3];</div>
-<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* start;</div>
-<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* end;</div>
-<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>  <span class="keywordtype">int</span> nRows = 0;</div>
-<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>  <span class="keywordtype">int</span> lines = 0;</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  <span class="keywordtype">float</span> lineHeight;</div>
-<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  nvgTextMetrics(mVG, NULL, NULL, &amp;lineHeight);</div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  nvgFillColor(mVG, NanoVGColor(text.mFGColor, pBlend));</div>
-<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span> </div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> run : {0, 1})</div>
-<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  {</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>    start = str;</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>    end = str + strlen(str);</div>
-<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keywordflow">while</span> ((nRows = nvgTextBreakLines(mVG, start, end, width, rows, 3))) {</div>
-<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nRows; i++) {</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>        <span class="keywordflow">if</span> (run == 0)</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>        {</div>
-<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>          lines++;</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>        }</div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">PathLineTo</a>(xe, ye);</div>
+<div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    </div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    progress += incr;</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    </div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>    xs = x1 + progress * (x2 - x1);</div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    ys = y1 + progress * (y2 - y1);</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    </div>
+<div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(xs, ys);</div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>  }</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>  </div>
+<div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">PathStroke</a>(color, thickness, <a class="code hl_struct" href="group___i_graphics_structs.html#struct_i_stroke_options">IStrokeOptions</a>(), pBlend);</div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>}</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span> </div>
+<div class="line"><a id="l00847" name="l00847"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a36c7bff7e8865dcc75b878d9938c471b">  847</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a36c7bff7e8865dcc75b878d9938c471b">IGraphicsNanoVG::DrawDottedRect</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_color.html">IColor</a>&amp; color, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend, <span class="keywordtype">float</span> thickness, <span class="keywordtype">float</span> dashLen)</div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>{</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> xsegs = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::ceil(bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>() / (dashLen * 2.f)));</div>
+<div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> ysegs = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::ceil(bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>() / (dashLen * 2.f)));</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>  </div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>  <span class="keywordtype">float</span> x1 = bounds.L;</div>
+<div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>  <span class="keywordtype">float</span> y1 = bounds.T;</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>  </div>
+<div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>  <span class="keywordtype">float</span> x2 = x1;</div>
+<div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span>  <span class="keywordtype">float</span> y2 = y1;</div>
+<div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span>  </div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(x1, y1);</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span> </div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>  {</div>
+<div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; xsegs; i++)</div>
+<div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>    {</div>
+<div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>      x2 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(x1 + dashLen, bounds.L, bounds.R);</div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">PathLineTo</a>(x2, y2);</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>      x1 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(x2 + dashLen, bounds.L, bounds.R);</div>
+<div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(x1, y1);</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    }</div>
+<div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    </div>
+<div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>    x2 = x1;</div>
+<div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>    </div>
+<div class="line"><a id="l00872" name="l00872"></a><span class="lineno">  872</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ysegs; i++)</div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    {</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span>      y2 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(y1 + dashLen, bounds.T, bounds.B);</div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">PathLineTo</a>(x2, y2);</div>
+<div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>      y1 = <a class="code hl_function" href="group___i_plug_utilities.html#ga027ce10e55fc63bbe14430bb99ac9042">Clip</a>(y2 + dashLen, bounds.T, bounds.B);</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>      <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">PathMoveTo</a>(x1, y1);</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    }</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>    </div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    y2 = y1;</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>    </div>
+<div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>    dashLen = -dashLen;</div>
+<div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>  }</div>
+<div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>  </div>
+<div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>  <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">PathStroke</a>(color, thickness, <a class="code hl_struct" href="group___i_graphics_structs.html#struct_i_stroke_options">IStrokeOptions</a>(), pBlend);</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>}</div>
+<div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span> </div>
+<div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span><span class="keywordtype">void</span> IGraphicsNanoVG::DeleteFBO(NVGframebuffer* pBuffer)</div>
+<div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>{</div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>  <span class="keywordflow">if</span> (!mInDraw)</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>    nvgDeleteFramebuffer(pBuffer);</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>  {</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>    WDL_MutexLock lock(&amp;mFBOMutex);</div>
+<div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span>    mFBOStack.push(pBuffer);</div>
+<div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>  }</div>
+<div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span>}</div>
+<div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span> </div>
+<div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span><span class="keywordtype">void</span> IGraphicsNanoVG::ClearFBOStack()</div>
+<div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>{</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>  WDL_MutexLock lock(&amp;mFBOMutex);</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="keywordflow">while</span> (!mFBOStack.empty())</div>
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  {</div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>    nvgDeleteFramebuffer(mFBOStack.top());</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    mFBOStack.pop();</div>
+<div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>  }</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>}</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span> </div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">  909</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">IGraphicsNanoVG::DrawFastDropShadow</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; innerBounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; outerBounds, <span class="keywordtype">float</span> xyDrop, <span class="keywordtype">float</span> roundness, <span class="keywordtype">float</span> blur, <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>{</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  NVGpaint shadowPaint = nvgBoxGradient(mVG, innerBounds.L + xyDrop, innerBounds.T + xyDrop, innerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), innerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>(), roundness, blur, NanoVGColor(COLOR_BLACK_DROP_SHADOW, pBlend), NanoVGColor(COLOR_TRANSPARENT, <span class="keyword">nullptr</span>));</div>
+<div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>  nvgBeginPath(mVG);</div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>  nvgRect(mVG, outerBounds.L, outerBounds.T, outerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>(), outerBounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ac7252cd16f74972ce29d481f47d4a784">H</a>());</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span>  nvgFillPaint(mVG, shadowPaint);</div>
+<div class="line"><a id="l00915" name="l00915"></a><span class="lineno">  915</span>  nvgGlobalCompositeOperation(mVG, NVG_SOURCE_OVER);</div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>  nvgFill(mVG);</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span>  nvgBeginPath(mVG);</div>
+<div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>}</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span> </div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno"><a class="line" href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">  920</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">IGraphicsNanoVG::DrawMultiLineText</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_text.html">IText</a>&amp; text, <span class="keyword">const</span> <span class="keywordtype">char</span>* str, <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_blend.html">IBlend</a>* pBlend)</div>
+<div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>{</div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>  nvgSave(mVG);</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>  nvgFontSize(mVG, text.mSize);</div>
+<div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>  nvgFontFace(mVG, text.mFont);</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span> </div>
+<div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>  <span class="keywordtype">float</span> x = 0.0, y = 0.0;</div>
+<div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>  <span class="keyword">const</span> <span class="keywordtype">float</span> width = bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24">W</a>();</div>
+<div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>  <span class="keywordtype">int</span> align = 0;</div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>  <span class="keywordtype">float</span> yOffsetScale = 0.0;</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span>  </div>
+<div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>  <span class="keywordflow">switch</span> (text.mAlign)</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  {</div>
+<div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>    <span class="keywordflow">case</span> EAlign::Near:     align = NVG_ALIGN_LEFT;     x = bounds.L;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>    <span class="keywordflow">case</span> EAlign::Center:   align = NVG_ALIGN_CENTER;   x = bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#ae7ab9b583d33dab5f0da516a9f3a2b17">MW</a>();     <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>    <span class="keywordflow">case</span> EAlign::Far:      align = NVG_ALIGN_RIGHT;    x = bounds.R;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>  }</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>    </div>
+<div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>  <span class="keywordflow">switch</span> (text.mVAlign)</div>
+<div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>  {</div>
+<div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>    <span class="keywordflow">case</span> EVAlign::Top:</div>
+<div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>    {</div>
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>      align |= NVG_ALIGN_TOP;</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>      y = bounds.T;</div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>      yOffsetScale = 0.0;</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    }</div>
+<div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    <span class="keywordflow">case</span> EVAlign::Middle:</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    {</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>      align |= NVG_ALIGN_MIDDLE;</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>      y = bounds.<a class="code hl_function" href="struct_i_r_e_c_t.html#a60f96f3391687e546155197b4544111b">MH</a>();</div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>      yOffsetScale = 0.5;</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>    }</div>
+<div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>    <span class="keywordflow">case</span> EVAlign::Bottom:</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>    {</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>      align |= NVG_ALIGN_BOTTOM;</div>
+<div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>      y = bounds.B;</div>
+<div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>      yOffsetScale = 1.0;</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>      <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>    }</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  }</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>  </div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>  nvgTextAlign(mVG, align);</div>
+<div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>  </div>
+<div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>  NVGtextRow rows[3];</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* start;</div>
+<div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* end;</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <span class="keywordtype">int</span> nRows = 0;</div>
+<div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  <span class="keywordtype">int</span> lines = 0;</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  <span class="keywordtype">float</span> lineHeight;</div>
+<div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  nvgTextMetrics(mVG, NULL, NULL, &amp;lineHeight);</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  nvgFillColor(mVG, NanoVGColor(text.mFGColor, pBlend));</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span> </div>
+<div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> run : {0, 1})</div>
+<div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>  {</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>    start = str;</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    end = str + strlen(str);</div>
+<div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>    <span class="keywordflow">while</span> ((nRows = nvgTextBreakLines(mVG, start, end, width, rows, 3))) {</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; nRows; i++) {</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>        <span class="keywordflow">if</span> (run == 0)</div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>        {</div>
-<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>          NVGtextRow* row = &amp;rows[i];</div>
-<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>          nvgText(mVG, x, y - ((lines*lineHeight)*yOffsetScale), row-&gt;start, row-&gt;end);</div>
-<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>          y += lineHeight;</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        }</div>
-<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>      }</div>
-<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>      start = rows[nRows-1].next;</div>
-<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>    }</div>
-<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>  }</div>
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>  </div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  nvgRestore(mVG);</div>
-<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>}</div>
+<div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>          lines++;</div>
+<div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>        }</div>
+<div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>        {</div>
+<div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>          NVGtextRow* row = &amp;rows[i];</div>
+<div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>          nvgText(mVG, x, y - ((lines*lineHeight)*yOffsetScale), row-&gt;start, row-&gt;end);</div>
+<div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>          y += lineHeight;</div>
+<div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span>        }</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span>      }</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>      start = rows[nRows-1].next;</div>
+<div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>    }</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  }</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>  </div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>  nvgRestore(mVG);</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>}</div>
 <div class="ttc" id="a_i_plug_paths_8h_html_a0238ef4a2d49efc240321b8b5ce290fe"><div class="ttname"><a href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource</a></div><div class="ttdeci">const void * LoadWinResource(const char *resID, const char *type, int &amp;sizeInBytes, void *pHInstance)</div><div class="ttdoc">Load a resource from the binary (windows only).</div></div>
 <div class="ttc" id="a_i_text_entry_control_8h_html"><div class="ttname"><a href="_i_text_entry_control_8h.html">ITextEntryControl.h</a></div><div class="ttdoc">A Text entry widget drawn by IGraphics to optionally override platform text entries.</div></div>
 <div class="ttc" id="aclass_a_p_i_bitmap_html"><div class="ttname"><a href="class_a_p_i_bitmap.html">APIBitmap</a></div><div class="ttdoc">A base class interface for a bitmap abstraction around the different drawing back end bitmap represen...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_private_8h_source.html#l00091">IGraphicsPrivate.h:92</a></div></div>
@@ -1115,34 +1119,34 @@ $(function() {
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a028c55acbc1453f99906dec908909069"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a028c55acbc1453f99906dec908909069">IGraphicsNanoVG::GetDrawingAPIStr</a></div><div class="ttdeci">const char * GetDrawingAPIStr() override</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00245">IGraphicsNanoVG.cpp:245</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a05f3e9de20f9c654598f96eabdcf1012"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a05f3e9de20f9c654598f96eabdcf1012">IGraphicsNanoVG::ApplyShadowMask</a></div><div class="ttdeci">void ApplyShadowMask(ILayerPtr &amp;layer, RawBitmapData &amp;mask, const IShadow &amp;shadow) override</div><div class="ttdoc">Implemented by a graphics backend to apply a calculated shadow mask to a layer, according to the shad...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00406">IGraphicsNanoVG.cpp:406</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a191e6644f4d7854b9a852ef772bacaf1"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a191e6644f4d7854b9a852ef772bacaf1">IGraphicsNanoVG::DrawResize</a></div><div class="ttdeci">void DrawResize() override</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG.cpp:481</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a21bfa5c579a0cc70766ff60f72af5c97"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">IGraphicsNanoVG::PathClear</a></div><div class="ttdeci">void PathClear() override</div><div class="ttdoc">Clear the stack of path drawing commands.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00571">IGraphicsNanoVG.cpp:571</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a21bfa5c579a0cc70766ff60f72af5c97"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a21bfa5c579a0cc70766ff60f72af5c97">IGraphicsNanoVG::PathClear</a></div><div class="ttdeci">void PathClear() override</div><div class="ttdoc">Clear the stack of path drawing commands.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00575">IGraphicsNanoVG.cpp:575</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a276e806e1b2391de94fbb98149de490c"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a276e806e1b2391de94fbb98149de490c">IGraphicsNanoVG::LoadBitmap</a></div><div class="ttdeci">IBitmap LoadBitmap(const char *name, int nStates, bool framesAreHorizontal, int targetScale) override</div><div class="ttdoc">Load a bitmap image from disk or from windows resource.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00273">IGraphicsNanoVG.cpp:273</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a3300cfbc3237debb0fb12cb40f8cc64e"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a3300cfbc3237debb0fb12cb40f8cc64e">IGraphicsNanoVG::PathFill</a></div><div class="ttdeci">void PathFill(const IPattern &amp;pattern, const IFillOptions &amp;options, const IBlend *pBlend) override</div><div class="ttdoc">Fill the current current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00708">IGraphicsNanoVG.cpp:708</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a3300cfbc3237debb0fb12cb40f8cc64e"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a3300cfbc3237debb0fb12cb40f8cc64e">IGraphicsNanoVG::PathFill</a></div><div class="ttdeci">void PathFill(const IPattern &amp;pattern, const IFillOptions &amp;options, const IBlend *pBlend) override</div><div class="ttdoc">Fill the current current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00712">IGraphicsNanoVG.cpp:712</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a353afc69453449ba46a6ed3a9fe30968"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a353afc69453449ba46a6ed3a9fe30968">IGraphicsNanoVG::GetLayerBitmapData</a></div><div class="ttdeci">void GetLayerBitmapData(const ILayerPtr &amp;layer, RawBitmapData &amp;data) override</div><div class="ttdoc">Get the contents of a layer as Raw RGBA bitmap data NOTE: you should only call this within IControl::...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00391">IGraphicsNanoVG.cpp:391</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a36c7bff7e8865dcc75b878d9938c471b"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a36c7bff7e8865dcc75b878d9938c471b">IGraphicsNanoVG::DrawDottedRect</a></div><div class="ttdeci">void DrawDottedRect(const IColor &amp;color, const IRECT &amp;bounds, const IBlend *pBlend, float thickness, float dashLen) override</div><div class="ttdoc">Draw a dotted rectangle to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00843">IGraphicsNanoVG.cpp:843</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a454f95ac697d5391fa15d73030dce56f"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a454f95ac697d5391fa15d73030dce56f">IGraphicsNanoVG::PathSetWinding</a></div><div class="ttdeci">void PathSetWinding(bool clockwise) override</div><div class="ttdoc">NanoVG only.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00606">IGraphicsNanoVG.cpp:606</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a36c7bff7e8865dcc75b878d9938c471b"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a36c7bff7e8865dcc75b878d9938c471b">IGraphicsNanoVG::DrawDottedRect</a></div><div class="ttdeci">void DrawDottedRect(const IColor &amp;color, const IRECT &amp;bounds, const IBlend *pBlend, float thickness, float dashLen) override</div><div class="ttdoc">Draw a dotted rectangle to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00847">IGraphicsNanoVG.cpp:847</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a454f95ac697d5391fa15d73030dce56f"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a454f95ac697d5391fa15d73030dce56f">IGraphicsNanoVG::PathSetWinding</a></div><div class="ttdeci">void PathSetWinding(bool clockwise) override</div><div class="ttdoc">NanoVG only.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00610">IGraphicsNanoVG.cpp:610</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a4b8f3acfbd5fe542305158c887dae138"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a4b8f3acfbd5fe542305158c887dae138">IGraphicsNanoVG::LoadAPIBitmap</a></div><div class="ttdeci">APIBitmap * LoadAPIBitmap(const char *fileNameOrResID, int scale, EResourceLocation location, const char *ext) override</div><div class="ttdoc">Drawing API method to load a bitmap, called internally.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00311">IGraphicsNanoVG.cpp:311</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a52724181bac1c25a7ef8b845a547e362"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">IGraphicsNanoVG::PathStroke</a></div><div class="ttdeci">void PathStroke(const IPattern &amp;pattern, float thickness, const IStrokeOptions &amp;options, const IBlend *pBlend) override</div><div class="ttdoc">Stroke the current current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00673">IGraphicsNanoVG.cpp:673</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a56a77fde0c7302c45f475c5ddae1a8c8"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a56a77fde0c7302c45f475c5ddae1a8c8">IGraphicsNanoVG::PathArc</a></div><div class="ttdeci">void PathArc(float cx, float cy, float r, float a1, float a2, EWinding winding) override</div><div class="ttdoc">Add an arc to the current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00581">IGraphicsNanoVG.cpp:581</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a5bc540f7945059c7f5b9c0e5ad16c5fb"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">IGraphicsNanoVG::PathLineTo</a></div><div class="ttdeci">void PathLineTo(float x, float y) override</div><div class="ttdoc">Add a line to the current path from the current point to the specified location.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00591">IGraphicsNanoVG.cpp:591</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a52724181bac1c25a7ef8b845a547e362"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a52724181bac1c25a7ef8b845a547e362">IGraphicsNanoVG::PathStroke</a></div><div class="ttdeci">void PathStroke(const IPattern &amp;pattern, float thickness, const IStrokeOptions &amp;options, const IBlend *pBlend) override</div><div class="ttdoc">Stroke the current current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00677">IGraphicsNanoVG.cpp:677</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a56a77fde0c7302c45f475c5ddae1a8c8"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a56a77fde0c7302c45f475c5ddae1a8c8">IGraphicsNanoVG::PathArc</a></div><div class="ttdeci">void PathArc(float cx, float cy, float r, float a1, float a2, EWinding winding) override</div><div class="ttdoc">Add an arc to the current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00585">IGraphicsNanoVG.cpp:585</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a5bc540f7945059c7f5b9c0e5ad16c5fb"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a5bc540f7945059c7f5b9c0e5ad16c5fb">IGraphicsNanoVG::PathLineTo</a></div><div class="ttdeci">void PathLineTo(float x, float y) override</div><div class="ttdoc">Add a line to the current path from the current point to the specified location.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00595">IGraphicsNanoVG.cpp:595</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_a5fb91502ae0fde739f222ae22c105c02"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a5fb91502ae0fde739f222ae22c105c02">IGraphicsNanoVG::OnViewDestroyed</a></div><div class="ttdeci">void OnViewDestroyed() override</div><div class="ttdoc">Called after a platform view is destroyed, so that drawing classes can e.g.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00462">IGraphicsNanoVG.cpp:462</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a6869ce59e10c0bb6cd3c5e270c439d78"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a6869ce59e10c0bb6cd3c5e270c439d78">IGraphicsNanoVG::DrawDottedLine</a></div><div class="ttdeci">void DrawDottedLine(const IColor &amp;color, float x1, float y1, float x2, float y2, const IBlend *pBlend, float thickness, float dashLen) override</div><div class="ttdoc">Draw a dotted line to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00809">IGraphicsNanoVG.cpp:809</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a6c4b9737df381e86abab540231558218"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a6c4b9737df381e86abab540231558218">IGraphicsNanoVG::PathCubicBezierTo</a></div><div class="ttdeci">void PathCubicBezierTo(float c1x, float c1y, float c2x, float c2y, float x2, float y2) override</div><div class="ttdoc">Add a cubic bezier to the current path from the current point to the specified location.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00596">IGraphicsNanoVG.cpp:596</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a7273cf6122beb04f5b001947653297ae"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a7273cf6122beb04f5b001947653297ae">IGraphicsNanoVG::GetPoint</a></div><div class="ttdeci">IColor GetPoint(int x, int y) override</div><div class="ttdoc">Get the color at an X, Y location in the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00611">IGraphicsNanoVG.cpp:611</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a732954b3587888ea64def7c3921b6ca8"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">IGraphicsNanoVG::DrawMultiLineText</a></div><div class="ttdeci">void DrawMultiLineText(const IText &amp;text, const char *str, IRECT &amp;bounds, const IBlend *pBlend) override</div><div class="ttdoc">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00916">IGraphicsNanoVG.cpp:916</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a7674eb1b2d7f0c79886297292183d8cf"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a7674eb1b2d7f0c79886297292183d8cf">IGraphicsNanoVG::LoadAPIFont</a></div><div class="ttdeci">bool LoadAPIFont(const char *fontID, const PlatformFontPtr &amp;font) override</div><div class="ttdoc">Drawing API method to load a font from a PlatformFontPtr, called internally.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00740">IGraphicsNanoVG.cpp:740</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a8962b809b433e00f1899c24559d47646"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a8962b809b433e00f1899c24559d47646">IGraphicsNanoVG::PathClose</a></div><div class="ttdeci">void PathClose() override</div><div class="ttdoc">Close the path that is being specified.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00576">IGraphicsNanoVG.cpp:576</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a8bb214d04764c48b8b1efc0791ce9ac1"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a8bb214d04764c48b8b1efc0791ce9ac1">IGraphicsNanoVG::DoDrawText</a></div><div class="ttdeci">void DoDrawText(const IText &amp;text, const char *str, const IRECT &amp;bounds, const IBlend *pBlend) override</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00658">IGraphicsNanoVG.cpp:658</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a8c3cde2de2a57a908c8791abcdec7e56"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">IGraphicsNanoVG::DrawFastDropShadow</a></div><div class="ttdeci">void DrawFastDropShadow(const IRECT &amp;innerBounds, const IRECT &amp;outerBounds, float xyDrop=5.f, float roundness=0.f, float blur=10.f, IBlend *pBlend=nullptr) override</div><div class="ttdoc">NanoVG only.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00905">IGraphicsNanoVG.cpp:905</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a9707dceabbf3c35feba08736e2d3b7d0"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">IGraphicsNanoVG::PathMoveTo</a></div><div class="ttdeci">void PathMoveTo(float x, float y) override</div><div class="ttdoc">Move the current point in the current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00586">IGraphicsNanoVG.cpp:586</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a6869ce59e10c0bb6cd3c5e270c439d78"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a6869ce59e10c0bb6cd3c5e270c439d78">IGraphicsNanoVG::DrawDottedLine</a></div><div class="ttdeci">void DrawDottedLine(const IColor &amp;color, float x1, float y1, float x2, float y2, const IBlend *pBlend, float thickness, float dashLen) override</div><div class="ttdoc">Draw a dotted line to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00813">IGraphicsNanoVG.cpp:813</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a6c4b9737df381e86abab540231558218"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a6c4b9737df381e86abab540231558218">IGraphicsNanoVG::PathCubicBezierTo</a></div><div class="ttdeci">void PathCubicBezierTo(float c1x, float c1y, float c2x, float c2y, float x2, float y2) override</div><div class="ttdoc">Add a cubic bezier to the current path from the current point to the specified location.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00600">IGraphicsNanoVG.cpp:600</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a7273cf6122beb04f5b001947653297ae"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a7273cf6122beb04f5b001947653297ae">IGraphicsNanoVG::GetPoint</a></div><div class="ttdeci">IColor GetPoint(int x, int y) override</div><div class="ttdoc">Get the color at an X, Y location in the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00615">IGraphicsNanoVG.cpp:615</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a732954b3587888ea64def7c3921b6ca8"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">IGraphicsNanoVG::DrawMultiLineText</a></div><div class="ttdeci">void DrawMultiLineText(const IText &amp;text, const char *str, IRECT &amp;bounds, const IBlend *pBlend) override</div><div class="ttdoc">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00920">IGraphicsNanoVG.cpp:920</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a7674eb1b2d7f0c79886297292183d8cf"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a7674eb1b2d7f0c79886297292183d8cf">IGraphicsNanoVG::LoadAPIFont</a></div><div class="ttdeci">bool LoadAPIFont(const char *fontID, const PlatformFontPtr &amp;font) override</div><div class="ttdoc">Drawing API method to load a font from a PlatformFontPtr, called internally.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00744">IGraphicsNanoVG.cpp:744</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a8962b809b433e00f1899c24559d47646"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a8962b809b433e00f1899c24559d47646">IGraphicsNanoVG::PathClose</a></div><div class="ttdeci">void PathClose() override</div><div class="ttdoc">Close the path that is being specified.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00580">IGraphicsNanoVG.cpp:580</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a8bb214d04764c48b8b1efc0791ce9ac1"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a8bb214d04764c48b8b1efc0791ce9ac1">IGraphicsNanoVG::DoDrawText</a></div><div class="ttdeci">void DoDrawText(const IText &amp;text, const char *str, const IRECT &amp;bounds, const IBlend *pBlend) override</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00662">IGraphicsNanoVG.cpp:662</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a8c3cde2de2a57a908c8791abcdec7e56"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a8c3cde2de2a57a908c8791abcdec7e56">IGraphicsNanoVG::DrawFastDropShadow</a></div><div class="ttdeci">void DrawFastDropShadow(const IRECT &amp;innerBounds, const IRECT &amp;outerBounds, float xyDrop=5.f, float roundness=0.f, float blur=10.f, IBlend *pBlend=nullptr) override</div><div class="ttdoc">NanoVG only.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00909">IGraphicsNanoVG.cpp:909</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_a9707dceabbf3c35feba08736e2d3b7d0"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#a9707dceabbf3c35feba08736e2d3b7d0">IGraphicsNanoVG::PathMoveTo</a></div><div class="ttdeci">void PathMoveTo(float x, float y) override</div><div class="ttdoc">Move the current point in the current path.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00590">IGraphicsNanoVG.cpp:590</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_aa31b81ffdd0c60e19c18dcfa836b9253"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#aa31b81ffdd0c60e19c18dcfa836b9253">IGraphicsNanoVG::OnViewInitialized</a></div><div class="ttdeci">void OnViewInitialized(void *pContext) override</div><div class="ttdoc">Called after platform view initialization, so that drawing classes can e.g.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00450">IGraphicsNanoVG.cpp:450</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_aaddf2ad51039903dd21b0d2bcbcf913c"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#aaddf2ad51039903dd21b0d2bcbcf913c">IGraphicsNanoVG::BeginFrame</a></div><div class="ttdeci">void BeginFrame() override</div><div class="ttdoc">Called at the beginning of drawing.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00495">IGraphicsNanoVG.cpp:495</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_ab6468a0f3f84e18f8a7f88bb61b0de7f"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#ab6468a0f3f84e18f8a7f88bb61b0de7f">IGraphicsNanoVG::EndFrame</a></div><div class="ttdeci">void EndFrame() override</div><div class="ttdoc">Called by some drawing API classes to finally blit the draw bitmap onto the screen or perform other c...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00513">IGraphicsNanoVG.cpp:513</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_aaddf2ad51039903dd21b0d2bcbcf913c"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#aaddf2ad51039903dd21b0d2bcbcf913c">IGraphicsNanoVG::BeginFrame</a></div><div class="ttdeci">void BeginFrame() override</div><div class="ttdoc">Called at the beginning of drawing.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG.cpp:499</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_ab6468a0f3f84e18f8a7f88bb61b0de7f"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#ab6468a0f3f84e18f8a7f88bb61b0de7f">IGraphicsNanoVG::EndFrame</a></div><div class="ttdeci">void EndFrame() override</div><div class="ttdoc">Called by some drawing API classes to finally blit the draw bitmap onto the screen or perform other c...</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG.cpp:517</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_ab877056719c3593c5218026ef16b28e3"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#ab877056719c3593c5218026ef16b28e3">IGraphicsNanoVG::CreateAPIBitmap</a></div><div class="ttdeci">APIBitmap * CreateAPIBitmap(int width, int height, float scale, double drawScale, bool cacheable=false) override</div><div class="ttdoc">Creates a new API bitmap, either in memory or as a GPU texture.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG.cpp:373</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_abebcbdf22359cb6108dc50ccbdd418d1"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#abebcbdf22359cb6108dc50ccbdd418d1">IGraphicsNanoVG::PathQuadraticBezierTo</a></div><div class="ttdeci">void PathQuadraticBezierTo(float cx, float cy, float x2, float y2) override</div><div class="ttdoc">Add a quadratic bezier to the current path from the current point to the specified location.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00601">IGraphicsNanoVG.cpp:601</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_abebcbdf22359cb6108dc50ccbdd418d1"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#abebcbdf22359cb6108dc50ccbdd418d1">IGraphicsNanoVG::PathQuadraticBezierTo</a></div><div class="ttdeci">void PathQuadraticBezierTo(float cx, float cy, float x2, float y2) override</div><div class="ttdoc">Add a quadratic bezier to the current path from the current point to the specified location.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00605">IGraphicsNanoVG.cpp:605</a></div></div>
 <div class="ttc" id="aclass_i_graphics_nano_v_g_html_ad4291d4c78bf8b152f7b82f366bf8e98"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#ad4291d4c78bf8b152f7b82f366bf8e98">IGraphicsNanoVG::BitmapExtSupported</a></div><div class="ttdeci">bool BitmapExtSupported(const char *ext) override</div><div class="ttdoc">Checks a file extension and reports whether this drawing API supports loading that extension.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00266">IGraphicsNanoVG.cpp:266</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_ad51242368c659a2adc6f191d6a821636"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#ad51242368c659a2adc6f191d6a821636">IGraphicsNanoVG::DoMeasureText</a></div><div class="ttdeci">float DoMeasureText(const IText &amp;text, const char *str, IRECT &amp;bounds) const override</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00648">IGraphicsNanoVG.cpp:648</a></div></div>
-<div class="ttc" id="aclass_i_graphics_nano_v_g_html_aff9afca0a24a33e4f34aa790bf2e89d6"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#aff9afca0a24a33e4f34aa790bf2e89d6">IGraphicsNanoVG::DrawBitmap</a></div><div class="ttdeci">void DrawBitmap(const IBitmap &amp;bitmap, const IRECT &amp;dest, int srcX, int srcY, const IBlend *pBlend) override</div><div class="ttdoc">Draw a bitmap (raster) image to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00540">IGraphicsNanoVG.cpp:540</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_ad51242368c659a2adc6f191d6a821636"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#ad51242368c659a2adc6f191d6a821636">IGraphicsNanoVG::DoMeasureText</a></div><div class="ttdeci">float DoMeasureText(const IText &amp;text, const char *str, IRECT &amp;bounds) const override</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00652">IGraphicsNanoVG.cpp:652</a></div></div>
+<div class="ttc" id="aclass_i_graphics_nano_v_g_html_aff9afca0a24a33e4f34aa790bf2e89d6"><div class="ttname"><a href="class_i_graphics_nano_v_g.html#aff9afca0a24a33e4f34aa790bf2e89d6">IGraphicsNanoVG::DrawBitmap</a></div><div class="ttdeci">void DrawBitmap(const IBitmap &amp;bitmap, const IRECT &amp;dest, int srcX, int srcY, const IBlend *pBlend) override</div><div class="ttdoc">Draw a bitmap (raster) image to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_nano_v_g_8cpp_source.html#l00544">IGraphicsNanoVG.cpp:544</a></div></div>
 <div class="ttc" id="aclass_i_layer_html"><div class="ttname"><a href="class_i_layer.html">ILayer</a></div><div class="ttdoc">An abstraction that is used to store a temporary raster image/framebuffer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l02317">IGraphicsStructs.h:2318</a></div></div>
 <div class="ttc" id="agroup___i_graphics_structs_html_ga9b7871899f7948866b57786e8dbf678b"><div class="ttname"><a href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a></div><div class="ttdeci">std::unique_ptr&lt; ILayer &gt; ILayerPtr</div><div class="ttdoc">ILayerPtr is a managed pointer for transferring the ownership of layers.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l02359">IGraphicsStructs.h:2359</a></div></div>
 <div class="ttc" id="agroup___i_graphics_structs_html_gad3789b954df5c92ab742a855dc095c71"><div class="ttname"><a href="group___i_graphics_structs.html#gad3789b954df5c92ab742a855dc095c71">BlendWeight</a></div><div class="ttdeci">float BlendWeight(const IBlend *pBlend)</div><div class="ttdoc">Helper function to extract the blend weight value from an IBlend ptr if it is valid.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00560">IGraphicsStructs.h:560</a></div></div>
