@@ -242,6 +242,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a48e5538db6500f5856d919d204a89418 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a48e5538db6500f5856d919d204a89418">OnPopupMenuSelection</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pSelectedMenu, int valIdx)</td></tr>
 <tr class="memdesc:a48e5538db6500f5856d919d204a89418 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_control.html#a48e5538db6500f5856d919d204a89418">More...</a><br /></td></tr>
 <tr class="separator:a48e5538db6500f5856d919d204a89418 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc84855d13a752e4829c08b556e6dd2 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5bc84855d13a752e4829c08b556e6dd2">OnDeleteFromPopupMenu</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pMenu, int itemIdx)</td></tr>
+<tr class="memdesc:a5bc84855d13a752e4829c08b556e6dd2 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu deletion interactions (on IOS) after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_control.html#a5bc84855d13a752e4829c08b556e6dd2">More...</a><br /></td></tr>
+<tr class="separator:a5bc84855d13a752e4829c08b556e6dd2 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac605973190fc20fdb94929f119fbb875 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ac605973190fc20fdb94929f119fbb875">OnTextEntryCompletion</a> (const char *str, int valIdx)</td></tr>
 <tr class="memdesc:ac605973190fc20fdb94929f119fbb875 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle text input after <a class="el" href="class_i_graphics.html#a1e848b57678588b4d0a1f9153a7f670b" title="Create a text entry box.">IGraphics::CreateTextEntry</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_control.html#ac605973190fc20fdb94929f119fbb875">More...</a><br /></td></tr>
 <tr class="separator:ac605973190fc20fdb94929f119fbb875 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -681,7 +684,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">    pPage-&gt;AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_panel_control.html">IPanelControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), COLOR_BLUE));</div>
 <div class="line">  })}</div>
 <div class="line">}, <span class="stringliteral">&quot;Tabbed Pages Demo&quot;</span>));</div>
-<div class="ttc" id="aclass_i_panel_control_html"><div class="ttname"><a href="class_i_panel_control.html">IPanelControl</a></div><div class="ttdoc">A basic control to fill a rectangle with a color or gradient.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l01968">IControl.h:1969</a></div></div>
+<div class="ttc" id="aclass_i_panel_control_html"><div class="ttname"><a href="class_i_panel_control.html">IPanelControl</a></div><div class="ttdoc">A basic control to fill a rectangle with a color or gradient.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l01973">IControl.h:1974</a></div></div>
 <div class="ttc" id="aclass_i_v_tab_page_html"><div class="ttname"><a href="class_i_v_tab_page.html">IVTabPage</a></div><div class="ttdoc">A control used as the base class for a tabbed page of subcontrols.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00029">IVTabbedPagesControl.h:30</a></div></div>
 <div class="ttc" id="aclass_i_v_tabbed_pages_control_html"><div class="ttname"><a href="class_i_v_tabbed_pages_control.html">IVTabbedPagesControl</a></div><div class="ttdoc">A control to manage tabbed pages of sub controls Basic usage example:</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00106">IVTabbedPagesControl.h:107</a></div></div>
 <div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00748">IGraphicsStructs.h:749</a></div></div>
@@ -821,7 +824,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00153">153</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00889">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02504">IGraphics::DrawRoundRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02576">IGraphics::FillRoundRect()</a>, <a class="el" href="_i_control_8h_source.html#l00801">IVectorBase::GetColor()</a>, and <a class="el" href="_i_control_8h_source.html#l00853">IVectorBase::GetRoundedCornerRadius()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00894">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02512">IGraphics::DrawRoundRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02584">IGraphics::FillRoundRect()</a>, <a class="el" href="_i_control_8h_source.html#l00806">IVectorBase::GetColor()</a>, and <a class="el" href="_i_control_8h_source.html#l00858">IVectorBase::GetRoundedCornerRadius()</a>.</p>
 
 </div>
 </div>
@@ -942,7 +945,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00131">131</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>, and <a class="el" href="_i_control_8h_source.html#l00674">IContainerBase::Hide()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>, and <a class="el" href="_i_control_8h_source.html#l00679">IContainerBase::Hide()</a>.</p>
 
 </div>
 </div>
@@ -1003,7 +1006,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00169">169</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00834">IVectorBase::GetStyle()</a>, <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>, <a class="el" href="_i_control_8h_source.html#l00674">IContainerBase::Hide()</a>, and <a class="el" href="_i_control_8h_source.html#l00327">IControl::SetTargetAndDrawRECTs()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00839">IVectorBase::GetStyle()</a>, <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>, <a class="el" href="_i_control_8h_source.html#l00679">IContainerBase::Hide()</a>, and <a class="el" href="_i_control_8h_source.html#l00332">IControl::SetTargetAndDrawRECTs()</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1040,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00205">205</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01158">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8h_source.html#l00327">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8h_source.html#l00323">IControl::SetTargetRECT()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l01163">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8h_source.html#l00332">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8h_source.html#l00328">IControl::SetTargetRECT()</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1073,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00191">191</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00513">IControl::As()</a>, <a class="el" href="_i_control_8h_source.html#l00834">IVectorBase::GetStyle()</a>, and <a class="el" href="_i_control_8h_source.html#l00825">IVectorBase::SetStyle()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_control_8h_source.html#l00839">IVectorBase::GetStyle()</a>, and <a class="el" href="_i_control_8h_source.html#l00830">IVectorBase::SetStyle()</a>.</p>
 
 </div>
 </div>

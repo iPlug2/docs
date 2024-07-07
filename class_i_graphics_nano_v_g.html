@@ -622,6 +622,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memitem:a6428d50325773e674ef13e9312936f1c inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a6428d50325773e674ef13e9312936f1c">SetControlValueAfterPopupMenu</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pMenu)</td></tr>
 <tr class="memdesc:a6428d50325773e674ef13e9312936f1c inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by PopupMenuControl in order to update a control with a new value after returning from the non-blocking menu.  <a href="class_i_graphics.html#a6428d50325773e674ef13e9312936f1c">More...</a><br /></td></tr>
 <tr class="separator:a6428d50325773e674ef13e9312936f1c inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a159028725f47a51160cf69da2a51e603 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a159028725f47a51160cf69da2a51e603">DeleteFromPopupMenu</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pMenu, int itemIdx)</td></tr>
+<tr class="memdesc:a159028725f47a51160cf69da2a51e603 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by IOS platform (or other supported platforms) in order to update a control with a deletion interaction on a popup menu.  <a href="class_i_graphics.html#a159028725f47a51160cf69da2a51e603">More...</a><br /></td></tr>
+<tr class="separator:a159028725f47a51160cf69da2a51e603 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd37a46dc9c22498faa67874f3f59019 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#abd37a46dc9c22498faa67874f3f59019">SetScaleConstraints</a> (float lo, float hi)</td></tr>
 <tr class="memdesc:abd37a46dc9c22498faa67874f3f59019 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum and maximum (draw) scaling values.  <a href="class_i_graphics.html#abd37a46dc9c22498faa67874f3f59019">More...</a><br /></td></tr>
 <tr class="separator:abd37a46dc9c22498faa67874f3f59019 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1256,7 +1259,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">406</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00544">DrawBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00150">APIBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00712">PathFill()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02635">IGraphics::PathRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02708">IGraphics::PathTransformRestore()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02703">IGraphics::PathTransformSave()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02730">IGraphics::PathTransformTranslate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02014">IGraphics::PopLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02005">IGraphics::PushLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01539">IRECT::Translate()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00544">DrawBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00150">APIBitmap::GetDrawScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00147">APIBitmap::GetScale()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00712">PathFill()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02643">IGraphics::PathRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02716">IGraphics::PathTransformRestore()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02711">IGraphics::PathTransformSave()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02738">IGraphics::PathTransformTranslate()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02022">IGraphics::PopLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02013">IGraphics::PushLayer()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01539">IRECT::Translate()</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1293,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">499</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00867">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01093">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01089">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00875">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1405,7 +1408,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">373</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01093">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01089">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">ApplyShadowMask()</a>.</p>
 
@@ -1510,7 +1513,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00662">662</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02708">IGraphics::PathTransformRestore()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02703">IGraphics::PathTransformSave()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02716">IGraphics::PathTransformRestore()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02711">IGraphics::PathTransformSave()</a>.</p>
 
 </div>
 </div>
@@ -1581,7 +1584,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00652">652</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02227">IGraphics::DoMeasureTextRotation()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00813">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02235">IGraphics::DoMeasureTextRotation()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00813">IRECT::W()</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +1986,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">481</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01093">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01089">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -2016,7 +2019,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">517</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01093">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01089">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -2159,7 +2162,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00391">391</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_private_8h_source.html#l00138">APIBitmap::GetBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02014">IGraphics::PopLayer()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02005">IGraphics::PushLayer()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_private_8h_source.html#l00138">APIBitmap::GetBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00144">APIBitmap::GetHeight()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00141">APIBitmap::GetWidth()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02022">IGraphics::PopLayer()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02013">IGraphics::PushLayer()</a>.</p>
 
 </div>
 </div>
@@ -2457,7 +2460,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00273">273</a> of file <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html">IGraphicsNanoVG.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01109">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01876">IGraphics::SearchImageResource()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00266">BitmapExtSupported()</a>, <a class="el" href="_i_graphics_8h_source.html#l01114">IGraphics::GetRoundedScreenScale()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01884">IGraphics::SearchImageResource()</a>.</p>
 
 </div>
 </div>

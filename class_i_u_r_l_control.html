@@ -226,6 +226,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:a48e5538db6500f5856d919d204a89418 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a48e5538db6500f5856d919d204a89418">OnPopupMenuSelection</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pSelectedMenu, int valIdx)</td></tr>
 <tr class="memdesc:a48e5538db6500f5856d919d204a89418 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu selection after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_control.html#a48e5538db6500f5856d919d204a89418">More...</a><br /></td></tr>
 <tr class="separator:a48e5538db6500f5856d919d204a89418 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc84855d13a752e4829c08b556e6dd2 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a5bc84855d13a752e4829c08b556e6dd2">OnDeleteFromPopupMenu</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pMenu, int itemIdx)</td></tr>
+<tr class="memdesc:a5bc84855d13a752e4829c08b556e6dd2 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle popup menu deletion interactions (on IOS) after <a class="el" href="class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b" title="Shows a pop up/contextual menu in relation to a rectangular region of the graphics context.">IGraphics::CreatePopupMenu</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_control.html#a5bc84855d13a752e4829c08b556e6dd2">More...</a><br /></td></tr>
+<tr class="separator:a5bc84855d13a752e4829c08b556e6dd2 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac605973190fc20fdb94929f119fbb875 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ac605973190fc20fdb94929f119fbb875">OnTextEntryCompletion</a> (const char *str, int valIdx)</td></tr>
 <tr class="memdesc:ac605973190fc20fdb94929f119fbb875 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to handle text input after <a class="el" href="class_i_graphics.html#a1e848b57678588b4d0a1f9153a7f670b" title="Create a text entry box.">IGraphics::CreateTextEntry</a>/IControl<a class="el" href="class_i_control.html#a8adc93eefc60c189e4baffc21d21916e" title="Call this method in response to a mouse event to create an edit box so the user can enter a value,...">PromptUserInput</a>.  <a href="class_i_control.html#ac605973190fc20fdb94929f119fbb875">More...</a><br /></td></tr>
 <tr class="separator:ac605973190fc20fdb94929f119fbb875 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -532,7 +535,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A control to show a clickable URL, that changes color after clicking. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02222">2222</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02227">2227</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad8a3cc56cc2a951851b33647a7a3f654" name="ad8a3cc56cc2a951851b33647a7a3f654"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8a3cc56cc2a951851b33647a7a3f654">&#9670;&#160;</a></span>IURLControl()</h2>
@@ -631,7 +634,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00504">504</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02416">IGraphics::DrawLine()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00670">IGraphics::DrawText()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02569">IGraphics::FillRect()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00816">IRECT::H()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00678">IGraphics::MeasureText()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00822">IRECT::MH()</a>, <a class="el" href="_i_control_8h_source.html#l00560">IControl::mMouseIsOver</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00819">IRECT::MW()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00813">IRECT::W()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02424">IGraphics::DrawLine()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00678">IGraphics::DrawText()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02577">IGraphics::FillRect()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00816">IRECT::H()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00686">IGraphics::MeasureText()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00822">IRECT::MH()</a>, <a class="el" href="_i_control_8h_source.html#l00565">IControl::mMouseIsOver</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00819">IRECT::MW()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00813">IRECT::W()</a>.</p>
 
 </div>
 </div>
@@ -689,7 +692,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00550">550</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00467">IControl::GetUI()</a>, <a class="el" href="class_i_graphics.html#a0d23572c0f154262ff7dc7387bf7c3d1">IGraphics::OpenURL()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01278">IGraphics::ReleaseMouseCapture()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="class_i_graphics.html#a0d23572c0f154262ff7dc7387bf7c3d1">IGraphics::OpenURL()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01286">IGraphics::ReleaseMouseCapture()</a>.</p>
 
 </div>
 </div>
@@ -721,9 +724,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a2897e1dbb1dc32428cea7bad93e3c97e">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02231">2231</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02236">2236</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00467">IControl::GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00275">IControl::OnMouseOut()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00828">IGraphics::SetMouseCursor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00275">IControl::OnMouseOut()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00828">IGraphics::SetMouseCursor()</a>.</p>
 
 </div>
 </div>
@@ -779,9 +782,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a39df22eddb4d9b0fd2f2504562556c49">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02230">2230</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02235">2235</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00467">IControl::GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">IControl::OnMouseOver()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00828">IGraphics::SetMouseCursor()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="_i_control_8cpp_source.html#l00267">IControl::OnMouseOver()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00828">IGraphics::SetMouseCursor()</a>.</p>
 
 </div>
 </div>
@@ -811,7 +814,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets the color of the text when the URL has been clicked. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02238">2238</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02243">2243</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
@@ -843,7 +846,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Sets the color of the text on Mouse Over. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02235">2235</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02240">2240</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
@@ -908,7 +911,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02242">2242</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02247">2247</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -932,7 +935,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02243">2243</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02248">2248</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -956,7 +959,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02242">2242</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02247">2247</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -980,7 +983,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02242">2242</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02247">2247</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1007,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02241">2241</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l02246">2246</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

@@ -106,6 +106,7 @@ Public Types</h2></td></tr>
 , <b>kChecked</b> = 1 &lt;&lt; 2
 , <br />
 &#160;&#160;<b>kSeparator</b> = 1 &lt;&lt; 3
+, <b>kDeletable</b> = 1 &lt;&lt; 4
 <br />
  }</td></tr>
 <tr class="separator:ae43c3dfec7870e2eb8980929d4e9ac77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +135,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="separator:a26bb7ed214d6aab7e33897b03bce9bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4653622814f0d7146c246bd368ef5919"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#a4653622814f0d7146c246bd368ef5919">GetIsSeparator</a> () const</td></tr>
 <tr class="separator:a4653622814f0d7146c246bd368ef5919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20291602b9b6b66fb28f9ea6d525825b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#a20291602b9b6b66fb28f9ea6d525825b">GetIsDeletable</a> () const</td></tr>
+<tr class="separator:a20291602b9b6b66fb28f9ea6d525825b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15ba6e2a84580cc344142f7cda54faf3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#a15ba6e2a84580cc344142f7cda54faf3">GetTag</a> () const</td></tr>
 <tr class="separator:a15ba6e2a84580cc344142f7cda54faf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9949d19d479fafc9ece7ca5fa49134a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#a9949d19d479fafc9ece7ca5fa49134a9">GetSubmenu</a> () const</td></tr>
@@ -144,6 +147,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="separator:a308c64d97eeeb8ad997d3681e0332495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd2832a0571c9ca17e76b28a0aea35a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#acd2832a0571c9ca17e76b28a0aea35a9">SetChecked</a> (bool state)</td></tr>
 <tr class="separator:acd2832a0571c9ca17e76b28a0aea35a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf54145cefd5cf3ba4f264b2c510ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#aebf54145cefd5cf3ba4f264b2c510ef0">SetDeletable</a> (bool state)</td></tr>
+<tr class="separator:aebf54145cefd5cf3ba4f264b2c510ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5055d5119d9efbab905b9f60e25d7721"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#a5055d5119d9efbab905b9f60e25d7721">SetTitle</a> (bool state)</td></tr>
 <tr class="separator:a5055d5119d9efbab905b9f60e25d7721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae18e0ffe4c8c2eda1046015633b83b26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_popup_menu_1_1_item.html#ae18e0ffe4c8c2eda1046015633b83b26">SetSubmenu</a> (<a class="el" href="class_i_popup_menu.html">IPopupMenu</a> *pSubmenu)</td></tr>
@@ -227,7 +232,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00056">56</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00057">57</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -265,7 +270,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00063">63</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00064">64</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +297,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00073">73</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00074">74</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +325,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00081">81</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00082">82</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -347,7 +352,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00080">80</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00081">81</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -374,7 +379,34 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00086">86</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00088">88</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+
+</div>
+</div>
+<a id="a20291602b9b6b66fb28f9ea6d525825b" name="a20291602b9b6b66fb28f9ea6d525825b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20291602b9b6b66fb28f9ea6d525825b">&#9670;&#160;</a></span>GetIsDeletable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IPopupMenu::Item::GetIsDeletable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00085">85</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -401,7 +433,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00083">83</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00084">84</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +460,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00082">82</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00083">83</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -455,7 +487,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00085">85</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00087">87</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -482,7 +514,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00084">84</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00086">86</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -509,7 +541,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00078">78</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00079">79</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -537,7 +569,35 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00097">97</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00099">99</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+
+</div>
+</div>
+<a id="aebf54145cefd5cf3ba4f264b2c510ef0" name="aebf54145cefd5cf3ba4f264b2c510ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf54145cefd5cf3ba4f264b2c510ef0">&#9670;&#160;</a></span>SetDeletable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IPopupMenu::Item::SetDeletable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00100">100</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +625,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00096">96</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00098">98</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -603,7 +663,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00102">102</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00105">105</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -631,7 +691,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00099">99</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00102">102</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -659,7 +719,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00077">77</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00078">78</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -687,7 +747,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00098">98</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00101">101</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -712,7 +772,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00112">112</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00115">115</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -736,7 +796,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00111">111</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00114">114</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -760,7 +820,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00113">113</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00116">116</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
@@ -784,7 +844,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00110">110</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_popup_menu_8h_source.html#l00113">113</a> of file <a class="el" href="_i_graphics_popup_menu_8h_source.html">IGraphicsPopupMenu.h</a>.</p>
 
 </div>
 </div>
