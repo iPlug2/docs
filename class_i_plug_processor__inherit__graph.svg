@@ -46,7 +46,7 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 697;
+var viewWidth = 694;
 var viewHeight = 137;
 var sectionId = 'dynsection-0';
 </script>
@@ -153,80 +153,65 @@ var sectionId = 'dynsection-0';
 <path fill="none" stroke="#63b8ff" d="M330.19,-105.06C352.9,-95.43 382.84,-82.74 402.61,-74.36"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="328.94,-101.79 321.1,-108.92 331.67,-108.24 328.94,-101.79"/>
 </g>
-<!-- Node9 -->
-<g id="node9" class="node">
-<title>Node9</title>
-<g id="a_node9"><a xlink:href="class_i_plug_v_s_t3_processor_base.html" target="_top" xlink:title="Shared VST3 processor code.">
+<!-- Node8 -->
+<g id="node8" class="node">
+<title>Node8</title>
+<g id="a_node8"><a xlink:href="class_i_plug_v_s_t3_processor_base.html" target="_top" xlink:title="Shared VST3 processor code.">
 <polygon fill="white" stroke="#666666" points="605,-74 474,-74 474,-55 605,-55 605,-74"/>
 <text text-anchor="middle" x="539.5" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugVST3ProcessorBase</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node9 -->
-<g id="edge8" class="edge">
-<title>Node1&#45;&gt;Node9</title>
+<!-- Node1&#45;&gt;Node8 -->
+<g id="edge7" class="edge">
+<title>Node1&#45;&gt;Node8</title>
 <path fill="none" stroke="#63b8ff" d="M350.54,-107.06C394.97,-97.28 458,-83.42 498.82,-74.45"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="349.88,-103.62 340.86,-109.18 351.38,-110.45 349.88,-103.62"/>
 </g>
-<!-- Node12 -->
-<g id="node12" class="node">
-<title>Node12</title>
-<g id="a_node12"><a xlink:href="class_i_plug_w_a_m.html" target="_top" xlink:title="WebAudioModule (WAM) API base class.">
+<!-- Node11 -->
+<g id="node11" class="node">
+<title>Node11</title>
+<g id="a_node11"><a xlink:href="class_i_plug_w_a_m.html" target="_top" xlink:title="WebAudioModule (WAM) API base class.">
 <polygon fill="white" stroke="#666666" points="686,-74 623,-74 623,-55 686,-55 686,-74"/>
 <text text-anchor="middle" x="654.5" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugWAM</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node12 -->
-<g id="edge11" class="edge">
-<title>Node1&#45;&gt;Node12</title>
+<!-- Node1&#45;&gt;Node11 -->
+<g id="edge10" class="edge">
+<title>Node1&#45;&gt;Node11</title>
 <path fill="none" stroke="#63b8ff" d="M351.52,-112.18C414.44,-104.41 522.43,-90.24 614.5,-74 617.16,-73.53 619.91,-73.01 622.66,-72.47"/>
 <polygon fill="#63b8ff" stroke="#63b8ff" points="351.31,-108.68 341.81,-113.37 352.16,-115.62 351.31,-108.68"/>
 </g>
-<!-- Node8 -->
-<g id="node8" class="node">
-<title>Node8</title>
-<g id="a_node8"><a xlink:href="class_i_plug_reaper_v_s_t2.html" target="_top" xlink:title="Reaper specific VST2.4 API base class for an IPlug plug&#45;in.">
-<polygon fill="white" stroke="#666666" points="471,-19 376,-19 376,0 471,0 471,-19"/>
-<text text-anchor="middle" x="423.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugReaperVST2</text>
+<!-- Node9 -->
+<g id="node9" class="node">
+<title>Node9</title>
+<g id="a_node9"><a xlink:href="class_i_plug_v_s_t3.html" target="_top" xlink:title="VST3 base class for a non&#45;distributed IPlug VST3 plug&#45;in.">
+<polygon fill="white" stroke="#666666" points="519.5,-19 455.5,-19 455.5,0 519.5,0 519.5,-19"/>
+<text text-anchor="middle" x="487.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugVST3</text>
 </a>
 </g>
 </g>
-<!-- Node7&#45;&gt;Node8 -->
-<g id="edge7" class="edge">
-<title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="#63b8ff" d="M423.5,-43.35C423.5,-35.1 423.5,-25.97 423.5,-19.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="420,-43.23 423.5,-53.23 427,-43.23 420,-43.23"/>
+<!-- Node8&#45;&gt;Node9 -->
+<g id="edge8" class="edge">
+<title>Node8&#45;&gt;Node9</title>
+<path fill="none" stroke="#63b8ff" d="M523.09,-46.78C514.21,-37.72 503.59,-26.9 496.27,-19.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="520.35,-48.98 529.85,-53.67 525.35,-44.08 520.35,-48.98"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
-<g id="a_node10"><a xlink:href="class_i_plug_v_s_t3.html" target="_top" xlink:title="VST3 base class for a non&#45;distributed IPlug VST3 plug&#45;in.">
-<polygon fill="white" stroke="#666666" points="562.5,-19 498.5,-19 498.5,0 562.5,0 562.5,-19"/>
-<text text-anchor="middle" x="530.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugVST3</text>
+<g id="a_node10"><a xlink:href="class_i_plug_v_s_t3_processor.html" target="_top" xlink:title="VST3 Processor API&#45;base class for a distributed IPlug VST3 plug&#45;in.">
+<polygon fill="white" stroke="#666666" points="645.5,-19 537.5,-19 537.5,0 645.5,0 645.5,-19"/>
+<text text-anchor="middle" x="591.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugVST3Processor</text>
 </a>
 </g>
 </g>
-<!-- Node9&#45;&gt;Node10 -->
+<!-- Node8&#45;&gt;Node10 -->
 <g id="edge9" class="edge">
-<title>Node9&#45;&gt;Node10</title>
-<path fill="none" stroke="#63b8ff" d="M536.13,-43.64C534.71,-35.31 533.14,-26.05 532.02,-19.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="532.64,-43.98 537.76,-53.26 539.54,-42.81 532.64,-43.98"/>
-</g>
-<!-- Node11 -->
-<g id="node11" class="node">
-<title>Node11</title>
-<g id="a_node11"><a xlink:href="class_i_plug_v_s_t3_processor.html" target="_top" xlink:title="VST3 Processor API&#45;base class for a distributed IPlug VST3 plug&#45;in.">
-<polygon fill="white" stroke="#666666" points="688.5,-19 580.5,-19 580.5,0 688.5,0 688.5,-19"/>
-<text text-anchor="middle" x="634.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IPlugVST3Processor</text>
-</a>
-</g>
-</g>
-<!-- Node9&#45;&gt;Node11 -->
-<g id="edge10" class="edge">
-<title>Node9&#45;&gt;Node11</title>
-<path fill="none" stroke="#63b8ff" d="M565.49,-49C582.49,-39.52 604.15,-27.43 618.62,-19.36"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="563.96,-45.84 556.94,-53.77 567.38,-51.96 563.96,-45.84"/>
+<title>Node8&#45;&gt;Node10</title>
+<path fill="none" stroke="#63b8ff" d="M555.91,-46.78C564.79,-37.72 575.41,-26.9 582.73,-19.44"/>
+<polygon fill="#63b8ff" stroke="#63b8ff" points="553.65,-44.08 549.15,-53.67 558.65,-48.98 553.65,-44.08"/>
 </g>
 </g>
 </svg>

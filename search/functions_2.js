@@ -41,12 +41,11 @@ var searchData=
   ['createcontextmenu_38',['CreateContextMenu',['../class_i_control.html#aa73805d1f6e1abf46781e8b976538beb',1,'IControl']]],
   ['creategraphics_39',['CreateGraphics',['../class_i_g_editor_delegate.html#ae328fe3757d5405a6f4252537a782b25',1,'IGEditorDelegate']]],
   ['createlineargradient_40',['CreateLinearGradient',['../struct_i_pattern.html#a7d87f119ecd420d14b421d66c453c746',1,'IPattern::CreateLinearGradient(float x1, float y1, float x2, float y2, const std::initializer_list&lt; IColorStop &gt; &amp;stops={})'],['../struct_i_pattern.html#ab77820cc737585c5cca9ce8156e1112b',1,'IPattern::CreateLinearGradient(const IRECT &amp;bounds, EDirection direction, const std::initializer_list&lt; IColorStop &gt; &amp;stops={})']]],
-  ['createparameterpopup_41',['CreateParameterPopup',['../class_i_plug_reaper_v_s_t2.html#a04629368ddb152a39932de321a283106',1,'IPlugReaperVST2']]],
-  ['createplatformpopupmenu_42',['CreatePlatformPopupMenu',['../class_i_graphics.html#aa7dc8a78a1ea1b8a766b596face37e0b',1,'IGraphics']]],
-  ['createplatformtextentry_43',['CreatePlatformTextEntry',['../class_i_graphics.html#a2b3f8305b9c11ac81d6cb29d43ca67e5',1,'IGraphics']]],
-  ['createpopupmenu_44',['CreatePopupMenu',['../class_i_popup_menu_control.html#a156a775223cc27f9da8aefb9b3760827',1,'IPopupMenuControl::CreatePopupMenu()'],['../class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b',1,'IGraphics::CreatePopupMenu(IControl &amp;control, IPopupMenu &amp;menu, const IRECT &amp;bounds, int valIdx=0)'],['../class_i_graphics.html#a051667c6331487eb3d7fb8391cfe59ce',1,'IGraphics::CreatePopupMenu(IControl &amp;control, IPopupMenu &amp;menu, float x, float y, int valIdx=0)']]],
-  ['createradialgradient_45',['CreateRadialGradient',['../struct_i_pattern.html#ac6dafb58e144051cbff6f6541ea016a8',1,'IPattern']]],
-  ['createsweepgradient_46',['CreateSweepGradient',['../struct_i_pattern.html#aa06a49ff658b38ab582379f839b32876',1,'IPattern']]],
-  ['createtextentry_47',['CreateTextEntry',['../class_i_graphics.html#a1e848b57678588b4d0a1f9153a7f670b',1,'IGraphics']]],
-  ['createtimer_48',['CreateTimer',['../class_i_plug_a_p_i_base.html#a221b8f83954ff8c0cc8c84acf9527e6a',1,'IPlugAPIBase']]]
+  ['createplatformpopupmenu_41',['CreatePlatformPopupMenu',['../class_i_graphics.html#aa7dc8a78a1ea1b8a766b596face37e0b',1,'IGraphics']]],
+  ['createplatformtextentry_42',['CreatePlatformTextEntry',['../class_i_graphics.html#a2b3f8305b9c11ac81d6cb29d43ca67e5',1,'IGraphics']]],
+  ['createpopupmenu_43',['CreatePopupMenu',['../class_i_popup_menu_control.html#a156a775223cc27f9da8aefb9b3760827',1,'IPopupMenuControl::CreatePopupMenu()'],['../class_i_graphics.html#a1e810f7c16d23717ad4e9e546f4f522b',1,'IGraphics::CreatePopupMenu(IControl &amp;control, IPopupMenu &amp;menu, const IRECT &amp;bounds, int valIdx=0)'],['../class_i_graphics.html#a051667c6331487eb3d7fb8391cfe59ce',1,'IGraphics::CreatePopupMenu(IControl &amp;control, IPopupMenu &amp;menu, float x, float y, int valIdx=0)']]],
+  ['createradialgradient_44',['CreateRadialGradient',['../struct_i_pattern.html#ac6dafb58e144051cbff6f6541ea016a8',1,'IPattern']]],
+  ['createsweepgradient_45',['CreateSweepGradient',['../struct_i_pattern.html#aa06a49ff658b38ab582379f839b32876',1,'IPattern']]],
+  ['createtextentry_46',['CreateTextEntry',['../class_i_graphics.html#a1e848b57678588b4d0a1f9153a7f670b',1,'IGraphics']]],
+  ['createtimer_47',['CreateTimer',['../class_i_plug_a_p_i_base.html#a221b8f83954ff8c0cc8c84acf9527e6a',1,'IPlugAPIBase']]]
 ];
