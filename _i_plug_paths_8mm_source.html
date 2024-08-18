@@ -117,7 +117,7 @@ $(function() {
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  @autoreleasepool</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier: [NSString stringWithCString:bundleID encoding:NSUTF8StringEncoding]];</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier: [NSString stringWithUTF8String:bundleID]];</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">if</span> (pBundle)</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  @autoreleasepool</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier: [NSString stringWithCString:bundleID encoding:NSUTF8StringEncoding]];</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier: [NSString stringWithUTF8String:bundleID]];</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">if</span> (pBundle)</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
@@ -153,7 +153,7 @@ $(function() {
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  @autoreleasepool</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier:[NSString stringWithCString:bundleID encoding:NSUTF8StringEncoding]];</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier:[NSString stringWithUTF8String:bundleID]];</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    NSString* pResPath = [pBundle resourcePath];</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    path.Set([pResPath UTF8String]);</div>
@@ -230,10 +230,10 @@ $(function() {
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">bool</span> isAppExtension = IsOOPAuv3AppExtension();</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    </div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier:[NSString stringWithCString:bundleID encoding:NSUTF8StringEncoding]];</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    NSBundle* pBundle = [NSBundle bundleWithIdentifier:[NSString stringWithUTF8String:bundleID]];</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    NSString* pFile = [[NSString stringWithCString:fileName encoding:NSUTF8StringEncoding] stringByDeletingPathExtension];</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    NSString* pExt = [NSString stringWithCString:searchExt encoding:NSUTF8StringEncoding];</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    NSString* pFile = [[NSString stringWithUTF8String:fileName] stringByDeletingPathExtension];</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    NSString* pExt = [NSString stringWithUTF8String:searchExt];</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">if</span> (isCorrectType &amp;&amp; pBundle &amp;&amp; pFile)</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
@@ -248,7 +248,7 @@ $(function() {
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      <span class="keywordflow">if</span> (pPath &amp;&amp; [[NSFileManager defaultManager] fileExistsAtPath : pPath] == YES)</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      {</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        fullPath.Set([pPath cStringUsingEncoding:NSUTF8StringEncoding]);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        fullPath.Set([pPath UTF8String]);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      }</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    }</div>
@@ -268,23 +268,23 @@ $(function() {
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keywordtype">bool</span> isCorrectType = !strcasecmp(ext, searchExt);</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    NSString* pExt = [NSString stringWithCString:searchExt encoding:NSUTF8StringEncoding];</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    NSString* pFile = [[[NSString stringWithCString:fileName encoding:NSUTF8StringEncoding] lastPathComponent] stringByDeletingPathExtension];</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    NSString* pExt = [NSString stringWithUTF8String:searchExt];</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    NSString* pFile = [[[NSString stringWithUTF8String:fileName] lastPathComponent] stringByDeletingPathExtension];</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>      </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">if</span> (isCorrectType &amp;&amp; pFile)</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      WDL_String musicPath;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      SharedMusicPath(musicPath);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keywordflow">if</span>(subfolder)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="keywordflow">if</span> (subfolder)</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        NSString* pPluginName = [NSString stringWithCString: subfolder encoding:NSUTF8StringEncoding];</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        NSString* pMusicLocation = [NSString stringWithCString: musicPath.Get() encoding:NSUTF8StringEncoding];</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        NSString* pPath = [[[[pMusicLocation stringByAppendingPathComponent:pPluginName] stringByAppendingPathComponent:<span class="stringliteral">@&quot;Resources&quot;</span>] stringByAppendingPathComponent: pFile] stringByAppendingPathExtension:pExt];</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        NSString* pPluginName = [NSString stringWithUTF8String:subfolder];</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        NSString* pMusicLocation = [NSString stringWithUTF8String:musicPath.Get()];</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        NSString* pPath = [[[[pMusicLocation stringByAppendingPathComponent: pPluginName] stringByAppendingPathComponent:<span class="stringliteral">@&quot;Resources&quot;</span>] stringByAppendingPathComponent: pFile] stringByAppendingPathExtension:pExt];</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">if</span>([[NSFileManager defaultManager] fileExistsAtPath : pPath] == YES)</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">if</span> ([[NSFileManager defaultManager] fileExistsAtPath : pPath] == YES)</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          fullPath.Set([pPath cString]);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>          fullPath.Set([pPath UTF8String]);</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>          <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      }</div>
@@ -310,7 +310,7 @@ $(function() {
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      <span class="keywordflow">return</span> EResourceLocation::kAbsolutePath;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="comment">// finally check name, which might be a full path - if the plug-in is trying to load a resource at runtime (e.g. skin-able UI)</span></div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    NSString* pPath = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    NSString* pPath = [NSString stringWithUTF8String:name];</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    </div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">if</span>([[NSFileManager defaultManager] fileExistsAtPath : pPath] == YES)</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    {</div>
@@ -402,12 +402,12 @@ $(function() {
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    NSBundle* pBundle;</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    </div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    <span class="keywordflow">if</span>(isAppExtension)</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      pBundle = [NSBundle bundleWithIdentifier:[NSString stringWithCString:bundleID encoding:NSUTF8StringEncoding]];</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>      pBundle = [NSBundle bundleWithIdentifier:[NSString stringWithUTF8String:bundleID]];</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>      pBundle = [NSBundle mainBundle];</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    NSString* pFile = [[NSString stringWithCString:fileName encoding:NSUTF8StringEncoding] stringByDeletingPathExtension];</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    NSString* pExt = [NSString stringWithCString:searchExt encoding:NSUTF8StringEncoding];</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    NSString* pFile = [[NSString stringWithUTF8String:fileName] stringByDeletingPathExtension];</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    NSString* pExt = [NSString stringWithUTF8String:searchExt];</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    </div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keywordflow">if</span> (isCorrectType &amp;&amp; pBundle &amp;&amp; pFile)</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    {</div>
@@ -429,7 +429,7 @@ $(function() {
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      </div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      <span class="keywordflow">if</span> (pPath &amp;&amp; [[NSFileManager defaultManager] fileExistsAtPath : pPath] == YES)</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>      {</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        fullPath.Set([pPath cStringUsingEncoding:NSUTF8StringEncoding]);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>        fullPath.Set([pPath UTF8String]);</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>      }</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    }</div>
