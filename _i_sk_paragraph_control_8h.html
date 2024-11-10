@@ -83,7 +83,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">ISkParagraphControl.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -99,16 +101,14 @@ $(function() {
 <code>#include &quot;include/core/SkShader.h&quot;</code><br />
 <code>#include &quot;include/core/SkStream.h&quot;</code><br />
 <code>#include &quot;include/core/SkTextBlob.h&quot;</code><br />
-<code>#include &quot;include/core/SkTime.h&quot;</code><br />
 <code>#include &quot;include/core/SkTypeface.h&quot;</code><br />
 <code>#include &quot;include/effects/SkGradientShader.h&quot;</code><br />
-<code>#include &quot;include/utils/SkRandom.h&quot;</code><br />
+<code>#include &quot;modules/skparagraph/include/DartTypes.h&quot;</code><br />
+<code>#include &quot;modules/skparagraph/include/FontCollection.h&quot;</code><br />
 <code>#include &quot;modules/skparagraph/include/Paragraph.h&quot;</code><br />
-<code>#include &quot;modules/skparagraph/include/TypefaceFontProvider.h&quot;</code><br />
-<code>#include &quot;modules/skparagraph/src/ParagraphBuilderImpl.h&quot;</code><br />
-<code>#include &quot;modules/skparagraph/src/ParagraphImpl.h&quot;</code><br />
-<code>#include &quot;modules/skparagraph/src/TextLine.h&quot;</code><br />
-<code>#include &quot;modules/skparagraph/utils/TestFontCollection.h&quot;</code><br />
+<code>#include &quot;modules/skparagraph/include/ParagraphBuilder.h&quot;</code><br />
+<code>#include &quot;modules/skparagraph/include/ParagraphStyle.h&quot;</code><br />
+<code>#include &quot;modules/skunicode/include/SkUnicode_icu.h&quot;</code><br />
 </div>
 <p><a href="_i_sk_paragraph_control_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -117,12 +117,88 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sk_paragraph_control.html">ISkParagraphControl</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A control that demonstrates how to draw rich text using SkParagraph.  <a href="class_i_sk_paragraph_control.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4cb606cfc29609776da489b1f5bd639a"><td class="memItemLeft" align="right" valign="top">static sk_sp&lt; SkFontMgr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_sk_paragraph_control_8h.html#a4cb606cfc29609776da489b1f5bd639a">fontmgr_factory</a> ()</td></tr>
+<tr class="separator:a4cb606cfc29609776da489b1f5bd639a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9626c738773d09dee5dd41e426c7b35c"><td class="memItemLeft" align="right" valign="top">sk_sp&lt; SkFontMgr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_sk_paragraph_control_8h.html#a9626c738773d09dee5dd41e426c7b35c">SkFontMgr_RefDefault</a> ()</td></tr>
+<tr class="separator:a9626c738773d09dee5dd41e426c7b35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7ef3986f950924d4f27e3ab99f4f3bce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_sk_paragraph_control_8h.html#a7ef3986f950924d4f27e3ab99f4f3bce">g_factory_called</a> = false</td></tr>
+<tr class="separator:a7ef3986f950924d4f27e3ab99f4f3bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A control that demonstrates how to draw rich text using SkParagraph. </p>
 
 <p class="definition">Definition in file <a class="el" href="_i_sk_paragraph_control_8h_source.html">ISkParagraphControl.h</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a4cb606cfc29609776da489b1f5bd639a" name="a4cb606cfc29609776da489b1f5bd639a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb606cfc29609776da489b1f5bd639a">&#9670;&#160;</a></span>fontmgr_factory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static sk_sp&lt; SkFontMgr &gt; fontmgr_factory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_sk_paragraph_control_8h_source.html#l00057">57</a> of file <a class="el" href="_i_sk_paragraph_control_8h_source.html">ISkParagraphControl.h</a>.</p>
+
+</div>
+</div>
+<a id="a9626c738773d09dee5dd41e426c7b35c" name="a9626c738773d09dee5dd41e426c7b35c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9626c738773d09dee5dd41e426c7b35c">&#9670;&#160;</a></span>SkFontMgr_RefDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sk_sp&lt; SkFontMgr &gt; SkFontMgr_RefDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_sk_paragraph_control_8h_source.html#l00069">69</a> of file <a class="el" href="_i_sk_paragraph_control_8h_source.html">ISkParagraphControl.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7ef3986f950924d4f27e3ab99f4f3bce" name="a7ef3986f950924d4f27e3ab99f4f3bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef3986f950924d4f27e3ab99f4f3bce">&#9670;&#160;</a></span>g_factory_called</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_factory_called = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_sk_paragraph_control_8h_source.html#l00067">67</a> of file <a class="el" href="_i_sk_paragraph_control_8h_source.html">ISkParagraphControl.h</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
