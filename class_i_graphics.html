@@ -203,9 +203,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affe4aae057ddc015587648bbfa3be593"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#affe4aae057ddc015587648bbfa3be593">MeasureText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const</td></tr>
 <tr class="memdesc:affe4aae057ddc015587648bbfa3be593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure the rectangular region that some text will occupy.  <a href="class_i_graphics.html#affe4aae057ddc015587648bbfa3be593">More...</a><br /></td></tr>
 <tr class="separator:affe4aae057ddc015587648bbfa3be593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93aee7e07125a7d4ebabf91b7a6d8514"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">DrawMultiLineText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend=0)</td></tr>
-<tr class="memdesc:a93aee7e07125a7d4ebabf91b7a6d8514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)  <a href="class_i_graphics.html#a93aee7e07125a7d4ebabf91b7a6d8514">More...</a><br /></td></tr>
-<tr class="separator:a93aee7e07125a7d4ebabf91b7a6d8514"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88dd543ef65a6c8381d38efeeaba642"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ad88dd543ef65a6c8381d38efeeaba642">DrawMultiLineText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend=0)</td></tr>
+<tr class="memdesc:ad88dd543ef65a6c8381d38efeeaba642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw some multi-line text to the graphics context in a specific rectangle (NanoVG only)  <a href="class_i_graphics.html#ad88dd543ef65a6c8381d38efeeaba642">More...</a><br /></td></tr>
+<tr class="separator:ad88dd543ef65a6c8381d38efeeaba642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e1b75ade14fcae02d24262caa63757d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_i_color.html">IColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">GetPoint</a> (int x, int y)=0</td></tr>
 <tr class="memdesc:a1e1b75ade14fcae02d24262caa63757d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the color at an X, Y location in the graphics context.  <a href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">More...</a><br /></td></tr>
 <tr class="separator:a1e1b75ade14fcae02d24262caa63757d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1819,7 +1819,7 @@ Friends</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l00875">875</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00433">IGraphicsSkia::BeginFrame()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00946">Draw()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00497">IGraphicsSkia::BeginFrame()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00946">Draw()</a>.</p>
 
 </div>
 </div>
@@ -2933,7 +2933,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02243">CalculateTextRotation()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l01539">IRECT::Translate()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_canvas_8cpp_source.html#l00306">IGraphicsCanvas::DoMeasureText()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00652">IGraphicsNanoVG::DoMeasureText()</a>, and <a class="el" href="_i_graphics_skia_8cpp_source.html#l00677">IGraphicsSkia::DoMeasureText()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_canvas_8cpp_source.html#l00306">IGraphicsCanvas::DoMeasureText()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00652">IGraphicsNanoVG::DoMeasureText()</a>, and <a class="el" href="_i_graphics_skia_8cpp_source.html#l00727">IGraphicsSkia::DoMeasureText()</a>.</p>
 
 </div>
 </div>
@@ -4486,8 +4486,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a93aee7e07125a7d4ebabf91b7a6d8514" name="a93aee7e07125a7d4ebabf91b7a6d8514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93aee7e07125a7d4ebabf91b7a6d8514">&#9670;&#160;</a></span>DrawMultiLineText()</h2>
+<a id="ad88dd543ef65a6c8381d38efeeaba642" name="ad88dd543ef65a6c8381d38efeeaba642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88dd543ef65a6c8381d38efeeaba642">&#9670;&#160;</a></span>DrawMultiLineText()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4510,7 +4510,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;&#160;</td>
           <td class="paramname"><em>bounds</em>, </td>
         </tr>
         <tr>
@@ -4543,7 +4543,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_i_graphics_nano_v_g.html#a732954b3587888ea64def7c3921b6ca8">IGraphicsNanoVG</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_graphics_nano_v_g.html#a6749bd07eba7b4915831266f05cd9e54">IGraphicsNanoVG</a>, and <a class="el" href="class_i_graphics_skia.html#aa4008c39b9a31aaeddebe1f834701d3d">IGraphicsSkia</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00363">363</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
@@ -5253,7 +5253,7 @@ Friends</h2></td></tr>
 
 <p class="reference">References <a class="el" href="class_i_graphics.html#abfee1fdc10a629de6ef03cad85ad5a65">DoDrawText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00038">IVLabelControl::Draw()</a>, <a class="el" href="_i_f_p_s_display_control_8h_source.html#l00073">IFPSDisplayControl::Draw()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00101">ITextEntryControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00234">IVKeyboardControl::Draw()</a>, <a class="el" href="_test_animation_control_8h_source.html#l00053">TestAnimationControl::Draw()</a>, <a class="el" href="_test_blend_control_8h_source.html#l00034">TestBlendControl::Draw()</a>, <a class="el" href="_test_color_control_8h_source.html#l00042">TestColorControl::Draw()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00031">TestCursorControl::Draw()</a>, <a class="el" href="_test_custom_shader_control_8h_source.html#l00244">TestCustomShaderControl::Draw()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00042">TestDirBrowseControl::Draw()</a>, <a class="el" href="_test_drag_n_drop_control_8h_source.html#l00031">TestDragAndDropControl::Draw()</a>, <a class="el" href="_test_draw_context_control_8h_source.html#l00031">TestDrawContextControl::Draw()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00043">TestFlexBoxControl::Draw()</a>, <a class="el" href="_test_font_control_8h_source.html#l00035">TestFontControl::Draw()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00034">TestGesturesControl::Draw()</a>, <a class="el" href="_test_g_f_x_label_8h_source.html#l00031">GFXLabelControl::Draw()</a>, <a class="el" href="_test_image_control_8h_source.html#l00032">TestImageControl::Draw()</a>, <a class="el" href="_test_keyboard_control_8h_source.html#l00109">TestKeyboardControl::Draw()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00031">TestLayerControl::Draw()</a>, <a class="el" href="_test_m_p_s_control_8h_source.html#l00077">TestMPSControl::Draw()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00033">TestMTControl::Draw()</a>, <a class="el" href="_test_size_control_8h_source.html#l00032">TestSizeControl::Draw()</a>, <a class="el" href="_test_text_control_8h_source.html#l00032">TestTextControl::Draw()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00036">TestTextOrientationControl::Draw()</a>, <a class="el" href="_test_text_size_control_8h_source.html#l00037">TestTextSizeControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00479">ITextControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00504">IURLControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00675">PlaceHolder::Draw()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00349">IPopupMenuControl::DrawCellText()</a>, <a class="el" href="_i_control_8h_source.html#l00894">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8h_source.html#l00363">DrawMultiLineText()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00694">DrawText()</a>, <a class="el" href="_i_control_8h_source.html#l00904">IVectorBase::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00180">IVToggleControl::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00486">IVRadioButtonControl::DrawWidget()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l01328">IVColorSwatchControl::DrawWidget()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00038">IVLabelControl::Draw()</a>, <a class="el" href="_i_f_p_s_display_control_8h_source.html#l00073">IFPSDisplayControl::Draw()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00101">ITextEntryControl::Draw()</a>, <a class="el" href="_i_v_keyboard_control_8h_source.html#l00234">IVKeyboardControl::Draw()</a>, <a class="el" href="_test_animation_control_8h_source.html#l00053">TestAnimationControl::Draw()</a>, <a class="el" href="_test_blend_control_8h_source.html#l00034">TestBlendControl::Draw()</a>, <a class="el" href="_test_color_control_8h_source.html#l00042">TestColorControl::Draw()</a>, <a class="el" href="_test_cursor_control_8h_source.html#l00031">TestCursorControl::Draw()</a>, <a class="el" href="_test_custom_shader_control_8h_source.html#l00244">TestCustomShaderControl::Draw()</a>, <a class="el" href="_test_dir_browse_control_8h_source.html#l00042">TestDirBrowseControl::Draw()</a>, <a class="el" href="_test_drag_n_drop_control_8h_source.html#l00031">TestDragAndDropControl::Draw()</a>, <a class="el" href="_test_draw_context_control_8h_source.html#l00031">TestDrawContextControl::Draw()</a>, <a class="el" href="_test_flex_box_control_8h_source.html#l00043">TestFlexBoxControl::Draw()</a>, <a class="el" href="_test_font_control_8h_source.html#l00035">TestFontControl::Draw()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00034">TestGesturesControl::Draw()</a>, <a class="el" href="_test_g_f_x_label_8h_source.html#l00031">GFXLabelControl::Draw()</a>, <a class="el" href="_test_image_control_8h_source.html#l00032">TestImageControl::Draw()</a>, <a class="el" href="_test_keyboard_control_8h_source.html#l00109">TestKeyboardControl::Draw()</a>, <a class="el" href="_test_layer_control_8h_source.html#l00031">TestLayerControl::Draw()</a>, <a class="el" href="_test_m_p_s_control_8h_source.html#l00077">TestMPSControl::Draw()</a>, <a class="el" href="_test_multi_touch_control_8h_source.html#l00033">TestMTControl::Draw()</a>, <a class="el" href="_test_size_control_8h_source.html#l00032">TestSizeControl::Draw()</a>, <a class="el" href="_test_text_control_8h_source.html#l00032">TestTextControl::Draw()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00036">TestTextOrientationControl::Draw()</a>, <a class="el" href="_test_text_size_control_8h_source.html#l00037">TestTextSizeControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00479">ITextControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00504">IURLControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00675">PlaceHolder::Draw()</a>, <a class="el" href="_i_popup_menu_control_8cpp_source.html#l00349">IPopupMenuControl::DrawCellText()</a>, <a class="el" href="_i_control_8h_source.html#l00894">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l01050">IGraphicsSkia::DrawMultiLineText()</a>, <a class="el" href="_i_graphics_8h_source.html#l00363">DrawMultiLineText()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00694">DrawText()</a>, <a class="el" href="_i_control_8h_source.html#l00904">IVectorBase::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00180">IVToggleControl::DrawValue()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00486">IVRadioButtonControl::DrawWidget()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l01328">IVColorSwatchControl::DrawWidget()</a>.</p>
 
 </div>
 </div>
@@ -7673,7 +7673,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00935">935</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00481">IGraphicsSkia::EndFrame()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00545">IGraphicsSkia::EndFrame()</a>.</p>
 
 </div>
 </div>
@@ -7964,7 +7964,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01110">1110</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00433">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02040">CheckLayer()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00392">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00481">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01783">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01114">GetRoundedScreenScale()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01985">StartLayer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00497">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02040">CheckLayer()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00456">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00545">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01783">GetBackingPixelScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01114">GetRoundedScreenScale()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01985">StartLayer()</a>.</p>
 
 </div>
 </div>
@@ -8219,7 +8219,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Get a pointer to the platform view e.g. </p>
 <p >HWND or NSView for this graphics context return void pointer to platform window or view handle </p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00481">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_web_view_control_8h_source.html#l00064">IWebViewControl::OnAttached()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00851">WindowIsOpen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00545">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_web_view_control_8h_source.html#l00064">IWebViewControl::OnAttached()</a>, and <a class="el" href="_i_graphics_8h_source.html#l00851">WindowIsOpen()</a>.</p>
 
 </div>
 </div>
@@ -8249,7 +8249,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l00926">926</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">IGraphicsNanoVG::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00315">IGraphicsSkia::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01674">LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01884">SearchImageResource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00311">IGraphicsNanoVG::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00379">IGraphicsSkia::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l01674">LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01884">SearchImageResource()</a>.</p>
 
 </div>
 </div>
@@ -11447,7 +11447,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l02716">2716</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">IGraphicsNanoVG::ApplyShadowMask()</a>, <a class="el" href="_i_graphics_canvas_8cpp_source.html#l00315">IGraphicsCanvas::DoDrawText()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00662">IGraphicsNanoVG::DoDrawText()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00689">IGraphicsSkia::DoDrawText()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00034">TestGesturesControl::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02782">DrawFittedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02061">DrawFittedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02053">DrawLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02407">DrawRotatedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02073">DrawRotatedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02805">DrawRotatedSVG()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02792">DrawSVG()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02675">PathEllipse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">IGraphicsNanoVG::ApplyShadowMask()</a>, <a class="el" href="_i_graphics_canvas_8cpp_source.html#l00315">IGraphicsCanvas::DoDrawText()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00662">IGraphicsNanoVG::DoDrawText()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00739">IGraphicsSkia::DoDrawText()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00034">TestGesturesControl::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02782">DrawFittedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02061">DrawFittedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02053">DrawLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02407">DrawRotatedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02073">DrawRotatedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02805">DrawRotatedSVG()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02792">DrawSVG()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02675">PathEllipse()</a>.</p>
 
 </div>
 </div>
@@ -11502,7 +11502,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8cpp_source.html#l02711">2711</a> of file <a class="el" href="_i_graphics_8cpp_source.html">IGraphics.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">IGraphicsNanoVG::ApplyShadowMask()</a>, <a class="el" href="_i_graphics_canvas_8cpp_source.html#l00315">IGraphicsCanvas::DoDrawText()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00662">IGraphicsNanoVG::DoDrawText()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00689">IGraphicsSkia::DoDrawText()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00034">TestGesturesControl::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02782">DrawFittedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02061">DrawFittedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02053">DrawLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02407">DrawRotatedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02073">DrawRotatedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02805">DrawRotatedSVG()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02792">DrawSVG()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02675">PathEllipse()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00406">IGraphicsNanoVG::ApplyShadowMask()</a>, <a class="el" href="_i_graphics_canvas_8cpp_source.html#l00315">IGraphicsCanvas::DoDrawText()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00662">IGraphicsNanoVG::DoDrawText()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00739">IGraphicsSkia::DoDrawText()</a>, <a class="el" href="_test_gestures_control_8h_source.html#l00034">TestGesturesControl::Draw()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02782">DrawFittedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02061">DrawFittedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02053">DrawLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02407">DrawRotatedBitmap()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02073">DrawRotatedLayer()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02805">DrawRotatedSVG()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02792">DrawSVG()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02675">PathEllipse()</a>.</p>
 
 </div>
 </div>
@@ -12255,7 +12255,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l01286">ReleaseMouseCapture()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00462">IGraphicsNanoVG::OnViewDestroyed()</a>, and <a class="el" href="_i_graphics_skia_8cpp_source.html#l00376">IGraphicsSkia::OnViewDestroyed()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00462">IGraphicsNanoVG::OnViewDestroyed()</a>, and <a class="el" href="_i_graphics_skia_8cpp_source.html#l00440">IGraphicsSkia::OnViewDestroyed()</a>.</p>
 
 </div>
 </div>
@@ -14316,7 +14316,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01098">1098</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00433">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00392">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00481">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00090">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00497">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00456">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00545">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00090">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
 
 </div>
 </div>
@@ -14378,7 +14378,7 @@ template&lt;typename T , typename... Args&gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01094">1094</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00433">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00392">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00481">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00090">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00499">IGraphicsNanoVG::BeginFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00497">IGraphicsSkia::BeginFrame()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00373">IGraphicsNanoVG::CreateAPIBitmap()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00481">IGraphicsNanoVG::DrawResize()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00456">IGraphicsSkia::DrawResize()</a>, <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00517">IGraphicsNanoVG::EndFrame()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00545">IGraphicsSkia::EndFrame()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00090">Resize()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00075">SetScreenScale()</a>.</p>
 
 </div>
 </div>
