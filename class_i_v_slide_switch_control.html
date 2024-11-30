@@ -101,8 +101,10 @@ Inheritance diagram for IVSlideSwitchControl:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a182601d004a92b20794a96efacc46e3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#a182601d004a92b20794a96efacc46e3e">IVSlideSwitchControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, int paramIdx=kNoParameter, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, bool valueInButton=false, EDirection direction=EDirection::Horizontal)</td></tr>
+<tr class="memdesc:a182601d004a92b20794a96efacc46e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked.">IVSlideSwitchControl</a>, with a parameter.  <a href="class_i_v_slide_switch_control.html#a182601d004a92b20794a96efacc46e3e">More...</a><br /></td></tr>
 <tr class="separator:a182601d004a92b20794a96efacc46e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a803eaa2b9b0263a49da5c4efb5099420"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#a803eaa2b9b0263a49da5c4efb5099420">IVSlideSwitchControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, IActionFunction aF=<a class="el" href="group___i_graphics_structs.html#ga1cec482c9598f399615d7c1c9e0013d2">EmptyClickActionFunc</a>, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, bool valueInButton=false, EDirection direction=EDirection::Horizontal, int numStates=2, int initialState=0)</td></tr>
+<tr class="memdesc:a803eaa2b9b0263a49da5c4efb5099420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked.">IVSlideSwitchControl</a>, with an action function.  <a href="class_i_v_slide_switch_control.html#a803eaa2b9b0263a49da5c4efb5099420">More...</a><br /></td></tr>
 <tr class="separator:a803eaa2b9b0263a49da5c4efb5099420"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f2bd6fc3b584d945a77dabe4bdf6f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_slide_switch_control.html#ab4f2bd6fc3b584d945a77dabe4bdf6f5">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
 <tr class="memdesc:ab4f2bd6fc3b584d945a77dabe4bdf6f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_v_slide_switch_control.html#ab4f2bd6fc3b584d945a77dabe4bdf6f5">More...</a><br /></td></tr>
@@ -740,7 +742,28 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construct a new <a class="el" href="class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked.">IVSlideSwitchControl</a>, with a parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">paramIdx</td><td>The parameter index to link this control to </td></tr>
+    <tr><td class="paramname">label</td><td>The label for the vector control, leave empty for no label </td></tr>
+    <tr><td class="paramname">style</td><td>The styling of this vector control </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_i_v_style.html" title="A struct encapsulating a set of properties used to configure IVControls.">IVStyle</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valueInButton</td><td>if the value inside or outside the button </td></tr>
+    <tr><td class="paramname">direction</td><td>The direction of the buttons </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00192">192</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00431">IControl::GetAnimationProgress()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01479">IRECT::LinearInterpolateBetween()</a>, <a class="el" href="_i_control_8h_source.html#l00211">IControl::SetActionFunction()</a>, and <a class="el" href="_i_control_8h_source.html#l00497">IControl::SetAnimation()</a>.</p>
 
 </div>
 </div>
@@ -806,7 +829,36 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construct a new <a class="el" href="class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked.">IVSlideSwitchControl</a>, with an action function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bounds</td><td>The control's bounds </td></tr>
+    <tr><td class="paramname">aF</td><td>An action function to execute when a button is clicked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd>IActionFunction </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">label</td><td>The label for the vector control, leave empty for no label </td></tr>
+    <tr><td class="paramname">style</td><td>The styling of this vector control </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="struct_i_v_style.html" title="A struct encapsulating a set of properties used to configure IVControls.">IVStyle</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">valueInButton</td><td>if the value inside or outside the button </td></tr>
+    <tr><td class="paramname">direction</td><td>The direction of the buttons </td></tr>
+    <tr><td class="paramname">numStates</td><td>How many states the switch has </td></tr>
+    <tr><td class="paramname">initialState</td><td>The initial state of the switch </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l00214">214</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00431">IControl::GetAnimationProgress()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l01479">IRECT::LinearInterpolateBetween()</a>, <a class="el" href="_i_control_8h_source.html#l00211">IControl::SetActionFunction()</a>, <a class="el" href="_i_control_8h_source.html#l00497">IControl::SetAnimation()</a>, <a class="el" href="_i_control_8h_source.html#l00216">IControl::SetAnimationEndActionFunction()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>.</p>
 
 </div>
 </div>
@@ -1122,7 +1174,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00125">125</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00141">141</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1146,7 +1198,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00139">139</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1170,7 +1222,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00124">124</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00140">140</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -1194,7 +1246,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00123">123</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00139">139</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
