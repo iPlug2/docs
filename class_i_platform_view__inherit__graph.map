@@ -1,0 +1,4 @@
+<map id="IPlatformView" name="IPlatformView">
+<area shape="rect" id="node1" title="IPlatformView is a base interface for hosting a platform view inside an IPlug plug&#45;in&#39;s UI." alt="" coords="26,5,130,31"/>
+<area shape="rect" id="node2" href="$class_i_platform_view_control.html" title="A control that let&#39;s you embed a HWND, UIView or NSView inside an IGraphics UI." alt="" coords="5,79,151,104"/>
+</map>

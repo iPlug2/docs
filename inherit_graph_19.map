@@ -1,6 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_i_graphics.html" title="The lowest level base class of an IGraphics context." alt="" coords="5,55,84,80"/>
-<area shape="rect" id="node2" href="$class_i_graphics_canvas.html" title="IGraphics draw class HTML5 canvas." alt="" coords="135,5,257,31"/>
-<area shape="rect" id="node3" href="$class_i_graphics_nano_v_g.html" title="IGraphics draw class using NanoVG" alt="" coords="132,55,260,80"/>
-<area shape="rect" id="node4" href="$class_i_graphics_skia.html" title="IGraphics draw class using Skia." alt="" coords="144,104,248,129"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,104,197,129"/>
+<area shape="rect" id="node2" href="$class_i_graphics_i_o_s.html" title="IGraphics platform class for IOS." alt="" coords="249,5,351,31"/>
+<area shape="rect" id="node3" href="$class_i_graphics_linux.html" title="IGraphics platform class for linux." alt="" coords="245,55,355,80"/>
+<area shape="rect" id="node4" href="$class_i_graphics_mac.html" title="IGraphics platform class for macOS." alt="" coords="249,104,351,129"/>
+<area shape="rect" id="node5" href="$class_i_graphics_web.html" title="IGraphics platform class for the web." alt="" coords="248,153,352,179"/>
+<area shape="rect" id="node6" href="$class_i_graphics_win.html" title="IGraphics platform class for Windows." alt="" coords="250,203,350,228"/>
 </map>

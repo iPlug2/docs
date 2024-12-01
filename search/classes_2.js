@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['dataobject_0',['DataObject',['../class_drag_and_drop_helpers_1_1_data_object.html',1,'DragAndDropHelpers']]],
-  ['dropsource_1',['DropSource',['../class_drag_and_drop_helpers_1_1_drop_source.html',1,'DragAndDropHelpers']]]
+  ['cocoaeditordelegate_0',['CocoaEditorDelegate',['../class_cocoa_editor_delegate.html',1,'']]],
+  ['controlramp_1',['ControlRamp',['../struct_control_ramp.html',1,'']]],
+  ['controlrampprocessor_2',['ControlRampProcessor',['../class_control_ramp_processor.html',1,'']]]
 ];

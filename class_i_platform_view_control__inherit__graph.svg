@@ -35,8 +35,8 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="146,-74 68,-74 68,-55 146,-55 146,-74"/>
+<g id="a_node3"><a xlink:href="class_i_platform_view.html" target="_top" xlink:title="IPlatformView is a base interface for hosting a platform view inside an IPlug plug&#45;in&#39;s UI.">
+<polygon fill="white" stroke="#666666" points="146,-74 68,-74 68,-55 146,-55 146,-74"/>
 <text text-anchor="middle" x="107" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">IPlatformView</text>
 </a>
 </g>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gfxlabelcontrol_0',['GFXLabelControl',['../class_g_f_x_label_control.html',1,'']]]
+  ['fastsinoscillator_0',['FastSinOscillator',['../class_fast_sin_oscillator.html',1,'']]],
+  ['filefont_1',['FileFont',['../class_i_graphics_web_1_1_file_font.html',1,'IGraphicsWeb']]]
 ];

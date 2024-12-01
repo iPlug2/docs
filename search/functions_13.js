@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['w_0',['W',['../class_i_bitmap.html#a04ab741b9052cab58021ca135f23a083',1,'IBitmap::W()'],['../struct_i_s_v_g.html#af77a8172a98ebf044bdbb5595ac95aa1',1,'ISVG::W()'],['../struct_i_r_e_c_t.html#a9d21ea21ff622e370664267c12cc7c24',1,'IRECT::W()']]],
-  ['wasempty_1',['WasEmpty',['../class_i_plug_queue.html#a3abcfc0a8a27a189485780bed83870e4',1,'IPlugQueue']]],
-  ['wasfull_2',['WasFull',['../class_i_plug_queue.html#ae0f205712815ab214f059e9e381e22f9',1,'IPlugQueue']]],
-  ['webviewcachepath_3',['WebViewCachePath',['../_i_plug_paths_8h.html#afd1c96003e52f6c8cce65b4fda6797a6',1,'IPlugPaths.h']]],
-  ['width_4',['Width',['../class_i_graphics.html#a4628c02e00b2e883f3d92d26136443ce',1,'IGraphics']]],
-  ['windowheight_5',['WindowHeight',['../class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55',1,'IGraphics']]],
-  ['windowisopen_6',['WindowIsOpen',['../class_i_graphics.html#ac69c4e6d882df4591a2e53fe9f9bec31',1,'IGraphics']]],
-  ['windowwidth_7',['WindowWidth',['../class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6',1,'IGraphics']]],
-  ['withcontrast_8',['WithContrast',['../struct_i_color.html#a5a213695bd442721ffe8203ccc5d36e8',1,'IColor']]],
-  ['withopacity_9',['WithOpacity',['../struct_i_color.html#a7466c8367557bd52c8ecca07b07856e3',1,'IColor']]]
+  ['valignto_0',['VAlignTo',['../struct_i_r_e_c_t.html#a65fcc349ac670a381563dc97e47df5fa',1,'IRECT']]],
+  ['value_1',['Value',['../class_i_param.html#ae10065765d66c36c96bbe5a3bfb5c3a1',1,'IParam']]],
+  ['valuetonormalized_2',['ValueToNormalized',['../struct_i_param_1_1_shape.html#a58e5545683605dcb5bc4b0b819a2769a',1,'IParam::Shape::ValueToNormalized()'],['../struct_i_param_1_1_shape_linear.html#a5c9051d3da907d16c5b92a0254d1c982',1,'IParam::ShapeLinear::ValueToNormalized()'],['../struct_i_param_1_1_shape_pow_curve.html#a901053b2a19e398e3bbd9920663cc4bc',1,'IParam::ShapePowCurve::ValueToNormalized()'],['../struct_i_param_1_1_shape_exp.html#a9044a36459b4ff199f5b435dd95c46bf',1,'IParam::ShapeExp::ValueToNormalized()']]],
+  ['velocity_3',['Velocity',['../struct_i_midi_msg.html#a48a0722d5b146477adc69df59bb2c217',1,'IMidiMsg']]],
+  ['vpad_4',['VPad',['../struct_i_r_e_c_t.html#a1880a60e2931ad6609b98965a8bc2fdf',1,'IRECT']]],
+  ['vst3presetspath_5',['VST3PresetsPath',['../_i_plug_paths_8h.html#a6083eab93c92e02063862624d2d27934',1,'IPlugPaths.h']]]
 ];

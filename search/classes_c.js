@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['shape_0',['Shape',['../struct_i_param_1_1_shape.html',1,'IParam']]],
-  ['shapeexp_1',['ShapeExp',['../struct_i_param_1_1_shape_exp.html',1,'IParam']]],
-  ['shapelinear_2',['ShapeLinear',['../struct_i_param_1_1_shape_linear.html',1,'IParam']]],
-  ['shapepowcurve_3',['ShapePowCurve',['../struct_i_param_1_1_shape_pow_curve.html',1,'IParam']]],
-  ['sysexdata_4',['SysExData',['../struct_sys_ex_data.html',1,'']]]
+  ['oscdevice_0',['OSCDevice',['../class_o_s_c_device.html',1,'']]],
+  ['oscinterface_1',['OSCInterface',['../class_o_s_c_interface.html',1,'']]],
+  ['oscmessageread_2',['OscMessageRead',['../class_osc_message_read.html',1,'']]],
+  ['oscmessagewrite_3',['OscMessageWrite',['../class_osc_message_write.html',1,'']]],
+  ['oscreceiver_4',['OSCReceiver',['../class_o_s_c_receiver.html',1,'']]],
+  ['oscsender_5',['OSCSender',['../class_o_s_c_sender.html',1,'']]],
+  ['oversampler_6',['OverSampler',['../class_over_sampler.html',1,'']]]
 ];

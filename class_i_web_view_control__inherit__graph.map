@@ -1,5 +1,5 @@
 <map id="IWebViewControl" name="IWebViewControl">
 <area shape="rect" id="node1" title="A control that allows the embedding of HTML UI inside an IGraphics context using a platform&#45;native we..." alt="" coords="27,79,149,104"/>
 <area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="5,5,72,31"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,5,178,31"/>
+<area shape="rect" id="node3" href="$class_i_web_view.html" title="IWebView is a base interface for hosting a platform web view inside an IPlug plug&#45;in&#39;s UI." alt="" coords="97,5,178,31"/>
 </map>

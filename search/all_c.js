@@ -9,12 +9,14 @@ var searchData=
   ['ndisplaytexts_6',['NDisplayTexts',['../class_i_param.html#ae58e05fe93c03b24529274ceafe10e2f',1,'IParam']]],
   ['ninchansconnected_7',['NInChansConnected',['../class_i_plug_processor.html#ac6626a7d0156157a4035a66770871f40',1,'IPlugProcessor']]],
   ['nioconfigs_8',['NIOConfigs',['../class_i_plug_processor.html#a9890c0c4e7f5490af81b5d67e6dc4f71',1,'IPlugProcessor']]],
-  ['normalizedtovalue_9',['NormalizedToValue',['../struct_i_param_1_1_shape_linear.html#a91bfb5192d98ee94cb6d261dfffb7e39',1,'IParam::ShapeLinear::NormalizedToValue()'],['../struct_i_param_1_1_shape_exp.html#a7e8d85077319d54d6f937be3a53ac520',1,'IParam::ShapeExp::NormalizedToValue()'],['../struct_i_param_1_1_shape_pow_curve.html#ad4718bb24af2031347fda19365fca935',1,'IParam::ShapePowCurve::NormalizedToValue()'],['../struct_i_param_1_1_shape.html#a05133d1fbd4f2389aa2ca3e85576b2d6',1,'IParam::Shape::NormalizedToValue()']]],
-  ['notenumber_10',['NoteNumber',['../struct_i_midi_msg.html#adc037a9a3ede8a0ff25c352814c0bf3f',1,'IMidiMsg']]],
-  ['noutchansconnected_11',['NOutChansConnected',['../class_i_plug_processor.html#a3a81ec2ca88a2df6b8237560748a86f8',1,'IPlugProcessor']]],
-  ['nparamgroups_12',['NParamGroups',['../class_i_plugin_base.html#af3ac628a82155f8fc396a663ea4c8336',1,'IPluginBase']]],
-  ['nparams_13',['NParams',['../class_i_editor_delegate.html#a093f1d5c684bfe5e1a43081adb360933',1,'IEditorDelegate']]],
-  ['npresets_14',['NPresets',['../class_i_plugin_base.html#aed12d103d1c786391d515b1da093113e',1,'IPluginBase']]],
-  ['nstops_15',['NStops',['../struct_i_pattern.html#a2b61c9e1945ad938a6bc566a68d96348',1,'IPattern']]],
-  ['nvals_16',['NVals',['../class_i_control.html#aeaddaffd7a530a015b6992fb9aef13db',1,'IControl']]]
+  ['noisegate_9',['NoiseGate',['../class_noise_gate.html',1,'']]],
+  ['noisegate_2eh_10',['NoiseGate.h',['../_noise_gate_8h.html',1,'']]],
+  ['normalizedtovalue_11',['NormalizedToValue',['../struct_i_param_1_1_shape.html#a05133d1fbd4f2389aa2ca3e85576b2d6',1,'IParam::Shape::NormalizedToValue()'],['../struct_i_param_1_1_shape_exp.html#a7e8d85077319d54d6f937be3a53ac520',1,'IParam::ShapeExp::NormalizedToValue()'],['../struct_i_param_1_1_shape_pow_curve.html#ad4718bb24af2031347fda19365fca935',1,'IParam::ShapePowCurve::NormalizedToValue()'],['../struct_i_param_1_1_shape_linear.html#a91bfb5192d98ee94cb6d261dfffb7e39',1,'IParam::ShapeLinear::NormalizedToValue()']]],
+  ['notenumber_12',['NoteNumber',['../struct_i_midi_msg.html#adc037a9a3ede8a0ff25c352814c0bf3f',1,'IMidiMsg']]],
+  ['noutchansconnected_13',['NOutChansConnected',['../class_i_plug_processor.html#a3a81ec2ca88a2df6b8237560748a86f8',1,'IPlugProcessor']]],
+  ['nparamgroups_14',['NParamGroups',['../class_i_plugin_base.html#af3ac628a82155f8fc396a663ea4c8336',1,'IPluginBase']]],
+  ['nparams_15',['NParams',['../class_i_editor_delegate.html#a093f1d5c684bfe5e1a43081adb360933',1,'IEditorDelegate']]],
+  ['npresets_16',['NPresets',['../class_i_plugin_base.html#aed12d103d1c786391d515b1da093113e',1,'IPluginBase']]],
+  ['nstops_17',['NStops',['../struct_i_pattern.html#a2b61c9e1945ad938a6bc566a68d96348',1,'IPattern']]],
+  ['nvals_18',['NVals',['../class_i_control.html#aeaddaffd7a530a015b6992fb9aef13db',1,'IControl']]]
 ];
