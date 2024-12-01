@@ -1,5 +1,5 @@
 <map id="IWebView" name="IWebView">
 <area shape="rect" id="node1" title="IWebView is a base interface for hosting a platform web view inside an IPlug plug&#45;in&#39;s UI." alt="" coords="109,5,190,31"/>
 <area shape="rect" id="node2" href="$class_i_web_view_control.html" title="A control that allows the embedding of HTML UI inside an IGraphics context using a platform&#45;native we..." alt="" coords="5,79,128,104"/>
-<area shape="rect" id="node3" href="$class_web_view_editor_delegate.html" title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin." alt="" coords="153,79,314,104"/>
+<area shape="rect" id="node3" href="$class_web_view_editor_delegate.html" title="An editor delegate base class that uses a platform native webview for the UI." alt="" coords="153,79,314,104"/>
 </map>

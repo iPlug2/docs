@@ -1,5 +1,5 @@
 <map id="WebViewEditorDelegate" name="WebViewEditorDelegate">
-<area shape="rect" id="node1" title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin." alt="" coords="40,79,201,104"/>
+<area shape="rect" id="node1" title="An editor delegate base class that uses a platform native webview for the UI." alt="" coords="40,79,201,104"/>
 <area shape="rect" id="node2" href="$class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="5,5,116,31"/>
 <area shape="rect" id="node3" href="$class_i_web_view.html" title="IWebView is a base interface for hosting a platform web view inside an IPlug plug&#45;in&#39;s UI." alt="" coords="140,5,221,31"/>
 </map>

@@ -1714,7 +1714,7 @@
 <!-- Node98 -->
 <g id="node113" class="node">
 <title>Node98</title>
-<g id="a_node113"><a xlink:href="class_cocoa_editor_delegate.html" target="_top" xlink:title="This EditorDelegate communicates...">
+<g id="a_node113"><a xlink:href="class_cocoa_editor_delegate.html" target="_top" xlink:title="An editor delegate base class that uses Apple frameworks for the UI, either in Objective C,...">
 <polygon fill="white" stroke="#666666" points="280,-37 173,-37 173,-18 280,-18 280,-37"/>
 <text text-anchor="middle" x="226.5" y="-25" font-family="Helvetica,sans-Serif" font-size="10.00">CocoaEditorDelegate</text>
 </a>
@@ -1729,7 +1729,7 @@
 <!-- Node99 -->
 <g id="node114" class="node">
 <title>Node99</title>
-<g id="a_node114"><a xlink:href="class_i_g_editor_delegate.html" target="_top" xlink:title="An editor delegate base class for a SOMETHING that uses IGraphics for it&#39;s UI.">
+<g id="a_node114"><a xlink:href="class_i_g_editor_delegate.html" target="_top" xlink:title="An editor delegate base class that uses IGraphics for the UI.">
 <polygon fill="white" stroke="#666666" points="271.5,-74 181.5,-74 181.5,-55 271.5,-55 271.5,-74"/>
 <text text-anchor="middle" x="226.5" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">IGEditorDelegate</text>
 </a>
@@ -1744,7 +1744,7 @@
 <!-- Node96 -->
 <g id="node115" class="node">
 <title>Node96</title>
-<g id="a_node115"><a xlink:href="class_web_view_editor_delegate.html" target="_top" xlink:title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin.">
+<g id="a_node115"><a xlink:href="class_web_view_editor_delegate.html" target="_top" xlink:title="An editor delegate base class that uses a platform native webview for the UI.">
 <polygon fill="white" stroke="#666666" points="287,-111 166,-111 166,-92 287,-92 287,-111"/>
 <text text-anchor="middle" x="226.5" y="-99" font-family="Helvetica,sans-Serif" font-size="10.00">WebViewEditorDelegate</text>
 </a>

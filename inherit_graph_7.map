@@ -111,9 +111,9 @@
 <area shape="rect" id="node88" href="$class_i_v_l_e_d_meter_control.html" title="Vectorial multi&#45;channel capable meter control with segmented LEDs, log response." alt="" coords="1175,1311,1317,1351"/>
 <area shape="rect" id="node90" href="$class_i_v_multi_toggle_control.html" title="A vectorial multi&#45;toggle control, could be used for a trigger in a step sequencer or tarnce gate." alt="" coords="960,1375,1103,1415"/>
 <area shape="rect" id="node112" href="$class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="31,2911,141,2936"/>
-<area shape="rect" id="node113" href="$class_cocoa_editor_delegate.html" title="This EditorDelegate communicates..." alt="" coords="236,2960,379,2985"/>
-<area shape="rect" id="node114" href="$class_i_g_editor_delegate.html" title="An editor delegate base class for a SOMETHING that uses IGraphics for it&#39;s UI." alt="" coords="247,2911,367,2936"/>
-<area shape="rect" id="node115" href="$class_web_view_editor_delegate.html" title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin." alt="" coords="227,2861,388,2887"/>
+<area shape="rect" id="node113" href="$class_cocoa_editor_delegate.html" title="An editor delegate base class that uses Apple frameworks for the UI, either in Objective C,..." alt="" coords="236,2960,379,2985"/>
+<area shape="rect" id="node114" href="$class_i_g_editor_delegate.html" title="An editor delegate base class that uses IGraphics for the UI." alt="" coords="247,2911,367,2936"/>
+<area shape="rect" id="node115" href="$class_web_view_editor_delegate.html" title="An editor delegate base class that uses a platform native webview for the UI." alt="" coords="227,2861,388,2887"/>
 <area shape="rect" id="node116" href="$class_i_multi_touch_control_base.html" title="A base class for controls that can do do multitouch." alt="" coords="5,2763,167,2788"/>
 <area shape="rect" id="node117" href="$class_i_platform_view.html" title="IPlatformView is a base interface for hosting a platform view inside an IPlug plug&#45;in&#39;s UI." alt="" coords="34,5,138,31"/>
 <area shape="rect" id="node118" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="260,1047,355,1072"/>

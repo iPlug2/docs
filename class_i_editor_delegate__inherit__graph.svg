@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_cocoa_editor_delegate.html" target="_top" xlink:title="This EditorDelegate communicates...">
+<g id="a_node2"><a xlink:href="class_cocoa_editor_delegate.html" target="_top" xlink:title="An editor delegate base class that uses Apple frameworks for the UI, either in Objective C,...">
 <polygon fill="white" stroke="#666666" points="107,-19 0,-19 0,0 107,0 107,-19"/>
 <text text-anchor="middle" x="53.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">CocoaEditorDelegate</text>
 </a>
@@ -35,7 +35,7 @@
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="class_i_g_editor_delegate.html" target="_top" xlink:title="An editor delegate base class for a SOMETHING that uses IGraphics for it&#39;s UI.">
+<g id="a_node3"><a xlink:href="class_i_g_editor_delegate.html" target="_top" xlink:title="An editor delegate base class that uses IGraphics for the UI.">
 <polygon fill="white" stroke="#666666" points="215.5,-19 125.5,-19 125.5,0 215.5,0 215.5,-19"/>
 <text text-anchor="middle" x="170.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IGEditorDelegate</text>
 </a>
@@ -50,7 +50,7 @@
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="class_web_view_editor_delegate.html" target="_top" xlink:title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin.">
+<g id="a_node4"><a xlink:href="class_web_view_editor_delegate.html" target="_top" xlink:title="An editor delegate base class that uses a platform native webview for the UI.">
 <polygon fill="white" stroke="#666666" points="355,-19 234,-19 234,0 355,0 355,-19"/>
 <text text-anchor="middle" x="294.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">WebViewEditorDelegate</text>
 </a>

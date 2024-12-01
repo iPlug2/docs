@@ -1,6 +1,6 @@
 <map id="IEditorDelegate" name="IEditorDelegate">
 <area shape="rect" id="node1" title="This pure virtual interface delegates communication in both directions between a UI editor and someth..." alt="" coords="177,5,288,31"/>
-<area shape="rect" id="node2" href="$class_cocoa_editor_delegate.html" title="This EditorDelegate communicates..." alt="" coords="5,79,148,104"/>
-<area shape="rect" id="node3" href="$class_i_g_editor_delegate.html" title="An editor delegate base class for a SOMETHING that uses IGraphics for it&#39;s UI." alt="" coords="173,79,293,104"/>
-<area shape="rect" id="node4" href="$class_web_view_editor_delegate.html" title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin." alt="" coords="317,79,479,104"/>
+<area shape="rect" id="node2" href="$class_cocoa_editor_delegate.html" title="An editor delegate base class that uses Apple frameworks for the UI, either in Objective C,..." alt="" coords="5,79,148,104"/>
+<area shape="rect" id="node3" href="$class_i_g_editor_delegate.html" title="An editor delegate base class that uses IGraphics for the UI." alt="" coords="173,79,293,104"/>
+<area shape="rect" id="node4" href="$class_web_view_editor_delegate.html" title="An editor delegate base class that uses a platform native webview for the UI." alt="" coords="317,79,479,104"/>
 </map>

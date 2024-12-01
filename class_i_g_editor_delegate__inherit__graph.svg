@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="An editor delegate base class for a SOMETHING that uses IGraphics for it&#39;s UI.">
+<g id="a_node1"><a xlink:title="An editor delegate base class that uses IGraphics for the UI.">
 <polygon fill="#999999" stroke="#666666" points="90,-19 0,-19 0,0 90,0 90,-19"/>
 <text text-anchor="middle" x="45" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IGEditorDelegate</text>
 </a>

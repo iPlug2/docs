@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="This Editor Delegate allows using a platform native web view as the UI for an iPlug plugin.">
+<g id="a_node1"><a xlink:title="An editor delegate base class that uses a platform native webview for the UI.">
 <polygon fill="#999999" stroke="#666666" points="147,-19 26,-19 26,0 147,0 147,-19"/>
 <text text-anchor="middle" x="86.5" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">WebViewEditorDelegate</text>
 </a>
