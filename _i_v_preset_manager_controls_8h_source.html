@@ -243,154 +243,170 @@ $(function() {
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                 , <span class="keyword">public</span> <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>{</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keyword">enum class</span> ESubControl</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    LeftButton = 0,</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    RightButton,</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    PresetMenu,</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    LoadButton</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  };</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <a class="code hl_class" href="class_i_v_disk_preset_manager_control.html">IVDiskPresetManagerControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds, <span class="keyword">const</span> <span class="keywordtype">char</span>* presetPath, <span class="keyword">const</span> <span class="keywordtype">char</span>* fileExtension, <span class="keywordtype">bool</span> showFileExtensions = <span class="keyword">true</span>, <span class="keyword">const</span> <span class="keywordtype">char</span>* label = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_v_style.html">IVStyle</a>&amp; style = DEFAULT_STYLE.WithDrawShadows(<span class="keyword">false</span>).WithLabelText(DEFAULT_LABEL_TEXT.WithVAlign(EVAlign::Middle)))</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  : <a class="code hl_class" href="class_i_dir_browse_control_base.html">IDirBrowseControlBase</a>(bounds, fileExtension, showFileExtensions)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  , <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a>(style)</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_function" href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">AttachIControl</a>(<span class="keyword">this</span>, label);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    mIgnoreMouse = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <a class="code hl_function" href="class_i_dir_browse_control_base.html#ae6796cbfed086549f4ab50f57a50d510">AddPath</a>(presetPath, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <a class="code hl_function" href="class_i_dir_browse_control_base.html#abfcd3943d771dee725acd81b0fffda52">SetupMenu</a>();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  }</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  </div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">  189</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">Draw</a>(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g)<span class="keyword"> override </span></div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <a class="code hl_function" href="class_i_vector_base.html#ac0f3b5b90568f751a2a4e2b12f4f18e8">DrawLabel</a>(g);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  }</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a697f259954def2d3d152e0eb154fa35b">  194</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a697f259954def2d3d152e0eb154fa35b">OnPopupMenuSelection</a>(<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>* pSelectedMenu, <span class="keywordtype">int</span> valIdx)<span class="keyword"> override</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">if</span> (pSelectedMenu)</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    {</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <a class="code hl_class" href="class_i_popup_menu_1_1_item.html">IPopupMenu::Item</a>* pItem = pSelectedMenu-&gt;GetChosenItem();</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <span class="keywordflow">if</span> (pItem)</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>      {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        mSelectedItemIndex = mItems.Find(pItem);</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        LoadPresetAtCurrentIndex();</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>      }</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  }</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">  208</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">OnAttached</a>()<span class="keyword"> override</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keyword">auto</span> prevPresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <span class="keywordflow">if</span> (NItems())</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>      {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        mSelectedItemIndex--;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">if</span> (mSelectedItemIndex &lt; 0)</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>          mSelectedItemIndex = NItems() - 1;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        LoadPresetAtCurrentIndex();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      }</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    };</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keyword">auto</span> nextPresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <span class="keywordflow">if</span> (NItems())</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        mSelectedItemIndex++;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="keyword">using </span>OnLoadFunc = std::function&lt;void(<span class="keyword">const</span> WDL_String&amp; path)&gt;;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="keyword">enum class</span> ESubControl</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    LeftButton = 0,</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    RightButton,</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    PresetMenu,</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    LoadButton</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  };</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <a class="code hl_class" href="class_i_v_disk_preset_manager_control.html">IVDiskPresetManagerControl</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>&amp; bounds,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                             <span class="keyword">const</span> <span class="keywordtype">char</span>* presetPath,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                             <span class="keyword">const</span> <span class="keywordtype">char</span>* fileExtension,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                             <span class="keywordtype">bool</span> showFileExtensions = <span class="keyword">true</span>,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                             <span class="keyword">const</span> <span class="keywordtype">char</span>* label = <span class="stringliteral">&quot;&quot;</span>,</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                             <span class="keyword">const</span> <a class="code hl_struct" href="struct_i_v_style.html">IVStyle</a>&amp; style = DEFAULT_STYLE.WithDrawShadows(<span class="keyword">false</span>).WithLabelText(DEFAULT_LABEL_TEXT.WithVAlign(EVAlign::Middle)),</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                             OnLoadFunc onLoadFunc = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  : <a class="code hl_class" href="class_i_dir_browse_control_base.html">IDirBrowseControlBase</a>(bounds, fileExtension, showFileExtensions)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  , <a class="code hl_class" href="class_i_vector_base.html">IVectorBase</a>(style)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  , mOnLoadFunc(onLoadFunc)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <a class="code hl_function" href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">AttachIControl</a>(<span class="keyword">this</span>, label);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    mIgnoreMouse = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_function" href="class_i_dir_browse_control_base.html#ae6796cbfed086549f4ab50f57a50d510">AddPath</a>(presetPath, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_function" href="class_i_dir_browse_control_base.html#abfcd3943d771dee725acd81b0fffda52">SetupMenu</a>();</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">  198</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">Draw</a>(<a class="code hl_class" href="class_i_graphics.html">IGraphics</a>&amp; g)<span class="keyword"> override </span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <a class="code hl_function" href="class_i_vector_base.html#ac0f3b5b90568f751a2a4e2b12f4f18e8">DrawLabel</a>(g);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a697f259954def2d3d152e0eb154fa35b">  203</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a697f259954def2d3d152e0eb154fa35b">OnPopupMenuSelection</a>(<a class="code hl_class" href="class_i_popup_menu.html">IPopupMenu</a>* pSelectedMenu, <span class="keywordtype">int</span> valIdx)<span class="keyword"> override</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keywordflow">if</span> (pSelectedMenu)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <a class="code hl_class" href="class_i_popup_menu_1_1_item.html">IPopupMenu::Item</a>* pItem = pSelectedMenu-&gt;GetChosenItem();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <span class="keywordflow">if</span> (pItem)</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>      {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        mSelectedItemIndex = mItems.Find(pItem);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        LoadPresetAtCurrentIndex();</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>      }</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">  217</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">OnAttached</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keyword">auto</span> prevPresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keywordflow">if</span> (NItems())</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>      {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        mSelectedItemIndex--;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">if</span> (mSelectedItemIndex &lt; 0)</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>          mSelectedItemIndex = NItems() - 1;</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        </div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordflow">if</span> (mSelectedItemIndex &gt;= NItems())</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>          mSelectedItemIndex = 0;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        LoadPresetAtCurrentIndex();</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      }</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    };</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keyword">auto</span> loadPresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>      WDL_String fileName, path;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      pCaller-&gt;GetUI()-&gt;PromptForFile(fileName, path, EFileAction::Open, mExtension.Get());</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>      <span class="keywordflow">if</span> (path.GetLength())</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>      {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#a40e69f11681c2f987424f856a29fc403">ClearPathList</a>();</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#ae6796cbfed086549f4ab50f57a50d510">AddPath</a>(path.Get(), <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#abfcd3943d771dee725acd81b0fffda52">SetupMenu</a>();</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      }</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordflow">if</span> (fileName.GetLength())</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#acfae90a96a7a3dae75a4d5447370b240">SetSelectedFile</a>(fileName.Get());</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        LoadPresetAtCurrentIndex();</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      }</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    };</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">auto</span> choosePresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <a class="code hl_function" href="class_i_dir_browse_control_base.html#a8117b71119ecde29f4246188e1176b00">CheckSelectedItem</a>();</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      pCaller-&gt;GetUI()-&gt;CreatePopupMenu(*<span class="keyword">this</span>, mMainMenu, pCaller-&gt;GetRECT());</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    };</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;&lt;&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(prevPresetFunc);</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;&gt;&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(nextPresetFunc);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;Load&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(loadPresetFunc);</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    AddChildControl(mPresetNameButton = <span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;Choose Preset...&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(choosePresetFunc);</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">OnResize</a>();</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>  }</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">  265</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">OnResize</a>()<span class="keyword"> override</span></div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <a class="code hl_function" href="class_i_vector_base.html#a2cda013efaff29ffaa0142b5e9bde145">MakeRects</a>(mRECT);</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    ForAllChildrenFunc([&amp;](<span class="keywordtype">int</span> childIdx, <a class="code hl_class" href="class_i_control.html">IControl</a>* pChild){</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      pChild-&gt;<a class="code hl_function" href="class_i_control.html#adbacb08c7d1ca89c7ca29a464bdfd15a">SetTargetAndDrawRECTs</a>(GetSubControlBounds((ESubControl) childIdx));</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    });</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        LoadPresetAtCurrentIndex();</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      }</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    };</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">auto</span> nextPresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      <span class="keywordflow">if</span> (NItems())</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        mSelectedItemIndex++;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">if</span> (mSelectedItemIndex &gt;= NItems())</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>          mSelectedItemIndex = 0;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        LoadPresetAtCurrentIndex();</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      }</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    };</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keyword">auto</span> loadPresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      WDL_String fileName, path;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      pCaller-&gt;GetUI()-&gt;PromptForFile(fileName, path, EFileAction::Open, mExtension.Get());</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>      <span class="keywordflow">if</span> (path.GetLength())</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#a40e69f11681c2f987424f856a29fc403">ClearPathList</a>();</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#ae6796cbfed086549f4ab50f57a50d510">AddPath</a>(path.Get(), <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#abfcd3943d771dee725acd81b0fffda52">SetupMenu</a>();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keywordflow">if</span> (fileName.GetLength())</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <a class="code hl_function" href="class_i_dir_browse_control_base.html#acfae90a96a7a3dae75a4d5447370b240">SetSelectedFile</a>(fileName.Get());</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        LoadPresetAtCurrentIndex();</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      }</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    };</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">auto</span> choosePresetFunc = [&amp;](<a class="code hl_class" href="class_i_control.html">IControl</a>* pCaller) {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <a class="code hl_function" href="class_i_dir_browse_control_base.html#a8117b71119ecde29f4246188e1176b00">CheckSelectedItem</a>();</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      pCaller-&gt;GetUI()-&gt;CreatePopupMenu(*<span class="keyword">this</span>, mMainMenu, pCaller-&gt;GetRECT());</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    };</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;&lt;&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(prevPresetFunc);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;&gt;&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(nextPresetFunc);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    AddChildControl(<span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;Load&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(loadPresetFunc);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    AddChildControl(mPresetNameButton = <span class="keyword">new</span> <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>(<a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a>(), <a class="code hl_function" href="group___i_graphics_structs.html#ga4811fc1cdfe2f505c6ad07024731bc41">SplashClickActionFunc</a>, <span class="stringliteral">&quot;Choose Preset...&quot;</span>, mStyle))-&gt;<a class="code hl_function" href="class_i_control.html#aab8710f9ff5fbbda6719c67022754dbf">SetAnimationEndActionFunction</a>(choosePresetFunc);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">OnResize</a>();</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <span class="keywordtype">void</span> LoadPresetAtCurrentIndex()</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  {</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordflow">if</span> (mSelectedItemIndex &gt; -1 &amp;&amp; </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        mSelectedItemIndex &lt; mItems.GetSize())</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    {</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      WDL_String fileName;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <a class="code hl_function" href="class_i_dir_browse_control_base.html#ac7d4b8450459510dc6e678c18c22d3b7">GetSelectedFile</a>(fileName);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <span class="keywordflow">if</span> (!mShowFileExtensions)</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        fileName.remove_fileext();</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>      }</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>      mPresetNameButton-&gt;SetLabelStr(fileName.get_filepart());</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>      <span class="comment">// If it&#39;s just a single folder, we can set the</span></div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      <span class="comment">// chosen item index to mSelectedItemIndex</span></div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <span class="comment">// in order to pop up the menu at the</span></div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      <span class="comment">// correct location</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      <span class="keywordflow">if</span> (!mMainMenu.HasSubMenus())</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      {</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>        mMainMenu.SetChosenItemIdx(mSelectedItemIndex);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      }</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    }</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> GetSubControlBounds(ESubControl control)</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keyword">auto</span> sections = mWidgetBounds;</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    </div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    std::array&lt;IRECT, 4&gt; rects = {</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a056506eccf013161238f60411ad8d4f8">ReduceFromRight</a>(50),</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      sections,</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    };</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    </div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="keywordflow">return</span> rects[(int) control];</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">  274</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">OnResize</a>()<span class="keyword"> override</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <a class="code hl_function" href="class_i_vector_base.html#a2cda013efaff29ffaa0142b5e9bde145">MakeRects</a>(mRECT);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    ForAllChildrenFunc([&amp;](<span class="keywordtype">int</span> childIdx, <a class="code hl_class" href="class_i_control.html">IControl</a>* pChild){</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      pChild-&gt;<a class="code hl_function" href="class_i_control.html#adbacb08c7d1ca89c7ca29a464bdfd15a">SetTargetAndDrawRECTs</a>(GetSubControlBounds((ESubControl) childIdx));</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    });</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  }</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  <span class="keywordtype">void</span> LoadPresetAtCurrentIndex()</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">if</span> (mSelectedItemIndex &gt; -1 &amp;&amp; </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        mSelectedItemIndex &lt; mItems.GetSize())</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      WDL_String fileName;</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>      <a class="code hl_function" href="class_i_dir_browse_control_base.html#ac7d4b8450459510dc6e678c18c22d3b7">GetSelectedFile</a>(fileName);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>      <span class="keywordflow">if</span> (!mShowFileExtensions)</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>      {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        fileName.remove_fileext();</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>      mPresetNameButton-&gt;SetLabelStr(fileName.get_filepart());</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      <span class="keywordflow">if</span> (mOnLoadFunc)</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      {</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        mOnLoadFunc(fileName);</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>      }</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>      <span class="comment">// If it&#39;s just a single folder, we can set the</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      <span class="comment">// chosen item index to mSelectedItemIndex</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      <span class="comment">// in order to pop up the menu at the</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>      <span class="comment">// correct location</span></div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      <span class="keywordflow">if</span> (!mMainMenu.HasSubMenus())</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      {</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        mMainMenu.SetChosenItemIdx(mSelectedItemIndex);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      }</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    }</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  }</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>* mPresetNameButton = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>};</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>END_IGRAPHICS_NAMESPACE</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>END_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  <a class="code hl_struct" href="struct_i_r_e_c_t.html">IRECT</a> GetSubControlBounds(ESubControl control)</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keyword">auto</span> sections = mWidgetBounds;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    std::array&lt;IRECT, 4&gt; rects = {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2">ReduceFromLeft</a>(50),</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      sections.<a class="code hl_function" href="struct_i_r_e_c_t.html#a056506eccf013161238f60411ad8d4f8">ReduceFromRight</a>(50),</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      sections,</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>    };</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="keywordflow">return</span> rects[(int) control];</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  }</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>  <a class="code hl_class" href="class_i_v_button_control.html">IVButtonControl</a>* mPresetNameButton = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  OnLoadFunc mOnLoadFunc;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>};</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>END_IGRAPHICS_NAMESPACE</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
 <div class="ttc" id="a_i_control_8h_html"><div class="ttname"><a href="_i_control_8h.html">IControl.h</a></div><div class="ttdoc">This file contains the base IControl implementation, along with some base classes for specific types ...</div></div>
 <div class="ttc" id="a_i_plug_plugin_base_8h_html"><div class="ttname"><a href="_i_plug_plugin_base_8h.html">IPlugPluginBase.h</a></div></div>
 <div class="ttc" id="aclass_i_container_base_html"><div class="ttname"><a href="class_i_container_base.html">IContainerBase</a></div><div class="ttdoc">IContainerBase allows a control to nest sub controls and it clips the drawing of those subcontrols In...</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00610">IControl.h:611</a></div></div>
@@ -420,10 +436,10 @@ $(function() {
 <div class="ttc" id="aclass_i_v_baked_preset_manager_control_html_ab51c758821c34e343c6f93bd281dd879"><div class="ttname"><a href="class_i_v_baked_preset_manager_control.html#ab51c758821c34e343c6f93bd281dd879">IVBakedPresetManagerControl::OnResize</a></div><div class="ttdeci">void OnResize() override</div><div class="ttdoc">Called when IControl is constructed or resized using SetRect().</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00136">IVPresetManagerControls.h:136</a></div></div>
 <div class="ttc" id="aclass_i_v_button_control_html"><div class="ttname"><a href="class_i_v_button_control.html">IVButtonControl</a></div><div class="ttdoc">A vector button/momentary switch control.</div><div class="ttdef"><b>Definition:</b> <a href="_i_controls_8h_source.html#l00051">IControls.h:53</a></div></div>
 <div class="ttc" id="aclass_i_v_disk_preset_manager_control_html"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html">IVDiskPresetManagerControl</a></div><div class="ttdoc">A &quot;meta control&quot; for a &quot;preset manager&quot; for disk-based preset files It adds several child buttons.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00167">IVPresetManagerControls.h:169</a></div></div>
-<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a221063854e77f858cb6e1f04fdc30500"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">IVDiskPresetManagerControl::OnAttached</a></div><div class="ttdeci">void OnAttached() override</div><div class="ttdoc">Called after the control has been attached, and its delegate and graphics member variable set.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00208">IVPresetManagerControls.h:208</a></div></div>
-<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a269ccce5a6c200b8c4566f15d3a45c1c"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">IVDiskPresetManagerControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00189">IVPresetManagerControls.h:189</a></div></div>
-<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a697f259954def2d3d152e0eb154fa35b"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a697f259954def2d3d152e0eb154fa35b">IVDiskPresetManagerControl::OnPopupMenuSelection</a></div><div class="ttdeci">void OnPopupMenuSelection(IPopupMenu *pSelectedMenu, int valIdx) override</div><div class="ttdoc">Implement this method to handle popup menu selection after IGraphics::CreatePopupMenu/IControlPromptU...</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00194">IVPresetManagerControls.h:194</a></div></div>
-<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a977c1b64545c2d01e358fdc5add7a94b"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">IVDiskPresetManagerControl::OnResize</a></div><div class="ttdeci">void OnResize() override</div><div class="ttdoc">Called when IControl is constructed or resized using SetRect().</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00265">IVPresetManagerControls.h:265</a></div></div>
+<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a221063854e77f858cb6e1f04fdc30500"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a221063854e77f858cb6e1f04fdc30500">IVDiskPresetManagerControl::OnAttached</a></div><div class="ttdeci">void OnAttached() override</div><div class="ttdoc">Called after the control has been attached, and its delegate and graphics member variable set.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00217">IVPresetManagerControls.h:217</a></div></div>
+<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a269ccce5a6c200b8c4566f15d3a45c1c"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">IVDiskPresetManagerControl::Draw</a></div><div class="ttdeci">void Draw(IGraphics &amp;g) override</div><div class="ttdoc">Draw the control to the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00198">IVPresetManagerControls.h:198</a></div></div>
+<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a697f259954def2d3d152e0eb154fa35b"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a697f259954def2d3d152e0eb154fa35b">IVDiskPresetManagerControl::OnPopupMenuSelection</a></div><div class="ttdeci">void OnPopupMenuSelection(IPopupMenu *pSelectedMenu, int valIdx) override</div><div class="ttdoc">Implement this method to handle popup menu selection after IGraphics::CreatePopupMenu/IControlPromptU...</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00203">IVPresetManagerControls.h:203</a></div></div>
+<div class="ttc" id="aclass_i_v_disk_preset_manager_control_html_a977c1b64545c2d01e358fdc5add7a94b"><div class="ttname"><a href="class_i_v_disk_preset_manager_control.html#a977c1b64545c2d01e358fdc5add7a94b">IVDiskPresetManagerControl::OnResize</a></div><div class="ttdeci">void OnResize() override</div><div class="ttdoc">Called when IControl is constructed or resized using SetRect().</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_preset_manager_controls_8h_source.html#l00274">IVPresetManagerControls.h:274</a></div></div>
 <div class="ttc" id="aclass_i_vector_base_html"><div class="ttname"><a href="class_i_vector_base.html">IVectorBase</a></div><div class="ttdoc">A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00761">IControl.h:762</a></div></div>
 <div class="ttc" id="aclass_i_vector_base_html_a2cda013efaff29ffaa0142b5e9bde145"><div class="ttname"><a href="class_i_vector_base.html#a2cda013efaff29ffaa0142b5e9bde145">IVectorBase::MakeRects</a></div><div class="ttdeci">IRECT MakeRects(const IRECT &amp;parent, bool hasHandle=false)</div><div class="ttdoc">Calculate the rectangles for the various areas, depending on the style.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l01163">IControl.h:1163</a></div></div>
 <div class="ttc" id="aclass_i_vector_base_html_aaeaad70c3715e71344c9e589461483c8"><div class="ttname"><a href="class_i_vector_base.html#aaeaad70c3715e71344c9e589461483c8">IVectorBase::AttachIControl</a></div><div class="ttdeci">void AttachIControl(IControl *pControl, const char *label)</div><div class="ttdoc">Call in the constructor of your IVControl to link the IVectorBase and IControl.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l00780">IControl.h:780</a></div></div>

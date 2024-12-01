@@ -105,6 +105,8 @@ Public Types</h2></td></tr>
 , <b>LoadButton</b>
  }</td></tr>
 <tr class="separator:a4519ff5b13451a04c5d207e3e2deb011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99806cb8ac1c5da2c35c483c8652697"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_disk_preset_manager_control.html#ac99806cb8ac1c5da2c35c483c8652697">OnLoadFunc</a> = std::function&lt; void(const WDL_String &amp;path)&gt;</td></tr>
+<tr class="separator:ac99806cb8ac1c5da2c35c483c8652697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_class_i_container_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_i_container_base')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="class_i_container_base.html">IContainerBase</a></td></tr>
 <tr class="memitem:a7dacb8b44cc22044689f8f77c72a4288 inherit pub_types_class_i_container_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_container_base.html#a7dacb8b44cc22044689f8f77c72a4288">AttachFunc</a> = std::function&lt; void(<a class="el" href="class_i_container_base.html">IContainerBase</a> *pContainer, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds)&gt;</td></tr>
 <tr class="separator:a7dacb8b44cc22044689f8f77c72a4288 inherit pub_types_class_i_container_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,8 +115,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae2b4aa2c564d721d2536a60e891a9b1a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_disk_preset_manager_control.html#ae2b4aa2c564d721d2536a60e891a9b1a">IVDiskPresetManagerControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const char *presetPath, const char *fileExtension, bool showFileExtensions=true, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE.WithDrawShadows(false).WithLabelText(DEFAULT_LABEL_TEXT.WithVAlign(EVAlign::Middle)))</td></tr>
-<tr class="separator:ae2b4aa2c564d721d2536a60e891a9b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2559eccbc872b3f145e34e1d9be5a156"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_disk_preset_manager_control.html#a2559eccbc872b3f145e34e1d9be5a156">IVDiskPresetManagerControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const char *presetPath, const char *fileExtension, bool showFileExtensions=true, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE.WithDrawShadows(false).WithLabelText(DEFAULT_LABEL_TEXT.WithVAlign(EVAlign::Middle)), OnLoadFunc onLoadFunc=nullptr)</td></tr>
+<tr class="separator:a2559eccbc872b3f145e34e1d9be5a156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269ccce5a6c200b8c4566f15d3a45c1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">Draw</a> (<a class="el" href="class_i_graphics.html">IGraphics</a> &amp;g) override</td></tr>
 <tr class="memdesc:a269ccce5a6c200b8c4566f15d3a45c1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the control to the graphics context.  <a href="class_i_v_disk_preset_manager_control.html#a269ccce5a6c200b8c4566f15d3a45c1c">More...</a><br /></td></tr>
 <tr class="separator:a269ccce5a6c200b8c4566f15d3a45c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -720,7 +722,24 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p >A "meta control" for a "preset manager" for disk-based preset files It adds several child buttons. </p>
 
 <p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00167">167</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
-</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="ac99806cb8ac1c5da2c35c483c8652697" name="ac99806cb8ac1c5da2c35c483c8652697"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac99806cb8ac1c5da2c35c483c8652697">&#9670;&#160;</a></span>OnLoadFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using IVDiskPresetManagerControl::OnLoadFunc =  std::function&lt;void(const WDL_String&amp; path)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00171">171</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a4519ff5b13451a04c5d207e3e2deb011" name="a4519ff5b13451a04c5d207e3e2deb011"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4519ff5b13451a04c5d207e3e2deb011">&#9670;&#160;</a></span>ESubControl</h2>
 
@@ -741,13 +760,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00171">171</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00173">173</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ae2b4aa2c564d721d2536a60e891a9b1a" name="ae2b4aa2c564d721d2536a60e891a9b1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2b4aa2c564d721d2536a60e891a9b1a">&#9670;&#160;</a></span>IVDiskPresetManagerControl()</h2>
+<a id="a2559eccbc872b3f145e34e1d9be5a156" name="a2559eccbc872b3f145e34e1d9be5a156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2559eccbc872b3f145e34e1d9be5a156">&#9670;&#160;</a></span>IVDiskPresetManagerControl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -789,7 +808,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;&#160;</td>
-          <td class="paramname"><em>style</em> = <code>DEFAULT_STYLE.WithDrawShadows(false).WithLabelText(DEFAULT_LABEL_TEXT.WithVAlign(EVAlign::Middle))</code>&#160;</td>
+          <td class="paramname"><em>style</em> = <code>DEFAULT_STYLE.WithDrawShadows(false).WithLabelText(DEFAULT_LABEL_TEXT.WithVAlign(EVAlign::Middle))</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OnLoadFunc&#160;</td>
+          <td class="paramname"><em>onLoadFunc</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -804,7 +829,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00179">179</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00181">181</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
 </div>
 </div>
@@ -843,7 +868,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_container_base.html#ac2941612560428b465692bf592a526c1">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00189">189</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00198">198</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00894">IVectorBase::DrawLabel()</a>.</p>
 
@@ -872,7 +897,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00274">274</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00283">283</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
 </div>
 </div>
@@ -904,9 +929,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_container_base.html#a57875515fbe62983285da0f01888f8fc">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00208">208</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00217">217</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l01029">IDirBrowseControlBase::AddPath()</a>, <a class="el" href="_i_control_8cpp_source.html#l01122">IDirBrowseControlBase::CheckSelectedItem()</a>, <a class="el" href="_i_control_8cpp_source.html#l01079">IDirBrowseControlBase::ClearPathList()</a>, <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00265">OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l00216">IControl::SetAnimationEndActionFunction()</a>, <a class="el" href="_i_control_8cpp_source.html#l01087">IDirBrowseControlBase::SetSelectedFile()</a>, <a class="el" href="_i_control_8cpp_source.html#l01052">IDirBrowseControlBase::SetupMenu()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l01029">IDirBrowseControlBase::AddPath()</a>, <a class="el" href="_i_control_8cpp_source.html#l01122">IDirBrowseControlBase::CheckSelectedItem()</a>, <a class="el" href="_i_control_8cpp_source.html#l01079">IDirBrowseControlBase::ClearPathList()</a>, <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00274">OnResize()</a>, <a class="el" href="_i_control_8h_source.html#l00216">IControl::SetAnimationEndActionFunction()</a>, <a class="el" href="_i_control_8cpp_source.html#l01087">IDirBrowseControlBase::SetSelectedFile()</a>, <a class="el" href="_i_control_8cpp_source.html#l01052">IDirBrowseControlBase::SetupMenu()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
 </div>
 </div>
@@ -955,7 +980,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a48e5538db6500f5856d919d204a89418">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00194">194</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00203">203</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
 </div>
 </div>
@@ -987,11 +1012,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_container_base.html#a4de57d1e1a086c3e5bbb3bdae52bc11a">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00265">265</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00274">274</a> of file <a class="el" href="_i_v_preset_manager_controls_8h_source.html">IVPresetManagerControls.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l01163">IVectorBase::MakeRects()</a>, and <a class="el" href="_i_control_8h_source.html#l00332">IControl::SetTargetAndDrawRECTs()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00208">OnAttached()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00217">OnAttached()</a>.</p>
 
 </div>
 </div>
