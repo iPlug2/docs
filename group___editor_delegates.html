@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>iPlug 2: IPlugDelegate_select.h File Reference</title>
+<title>iPlug 2: IPlug::EditorDelegates</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -55,6 +55,7 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -76,51 +77,29 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_a8a4892678035c62db3a4af7d9811050.html">IPlug</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
-  <div class="headertitle"><div class="title">IPlugDelegate_select.h File Reference</div></div>
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle"><div class="title">IPlug::EditorDelegates</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Used for choosing an editor delegate.  
-<a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>&quot;</code><br />
-</div>
-<p><a href="_i_plug_delegate__select_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a1ba3186605212160c7609d4e20398e20"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_plug_delegate__select_8h.html#a1ba3186605212160c7609d4e20398e20">EDITOR_DELEGATE_CLASS</a> = iplug::IEditorDelegate</td></tr>
-<tr class="separator:a1ba3186605212160c7609d4e20398e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An editor delegate base class that uses Apple frameworks for the UI, either in Objective C, or Swift.  <a href="class_cocoa_editor_delegate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html">WebViewEditorDelegate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An editor delegate base class that uses a platform native webview for the UI.  <a href="class_web_view_editor_delegate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html">IEditorDelegate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This pure virtual interface delegates communication in both directions between a UI editor and something else (which is usually a plug-in) It is also the class that owns parameter objects (for historical reasons) - although it's not necessary to allocate them.  <a href="class_i_editor_delegate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">An editor delegate base class that uses <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> for the UI.  <a href="class_i_g_editor_delegate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Used for choosing an editor delegate. </p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_editor_delegate.html" title="This pure virtual interface delegates communication in both directions between a UI editor and someth...">IEditorDelegate</a> </dd></dl>
-
-<p class="definition">Definition in file <a class="el" href="_i_plug_delegate__select_8h_source.html">IPlugDelegate_select.h</a>.</p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a1ba3186605212160c7609d4e20398e20" name="a1ba3186605212160c7609d4e20398e20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ba3186605212160c7609d4e20398e20">&#9670;&#160;</a></span>EDITOR_DELEGATE_CLASS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using EDITOR_DELEGATE_CLASS =  iplug::IEditorDelegate</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_delegate__select_8h_source.html#l00025">25</a> of file <a class="el" href="_i_plug_delegate__select_8h_source.html">IPlugDelegate_select.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

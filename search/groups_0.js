@@ -9,6 +9,7 @@ var searchData=
   ['igraphics_3a_3astructs_6',['IGraphics::Structs',['../group___i_graphics_structs.html',1,'']]],
   ['iplug_3a_3aapiclasses_7',['IPlug::APIClasses',['../group___a_p_i_classes.html',1,'']]],
   ['iplug_3a_3aconstants_8',['IPlug::Constants',['../group___i_plug_constants.html',1,'']]],
-  ['iplug_3a_3astructs_9',['IPlug::Structs',['../group___i_plug_structs.html',1,'']]],
-  ['iplug_3a_3autilities_10',['IPlug::Utilities',['../group___i_plug_utilities.html',1,'']]]
+  ['iplug_3a_3aeditordelegates_9',['IPlug::EditorDelegates',['../group___editor_delegates.html',1,'']]],
+  ['iplug_3a_3astructs_10',['IPlug::Structs',['../group___i_plug_structs.html',1,'']]],
+  ['iplug_3a_3autilities_11',['IPlug::Utilities',['../group___i_plug_utilities.html',1,'']]]
 ];
