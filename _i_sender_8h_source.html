@@ -118,16 +118,16 @@ $(function() {
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  std::array&lt;T, MAXNC&gt; vals;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_struct" href="struct_i_sender_data.html">ISenderData</a>()</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    memset(vals.data(), 0, <span class="keyword">sizeof</span>(vals));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  : vals{}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  {</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_struct" href="struct_i_sender_data.html">ISenderData</a>(<span class="keywordtype">int</span> ctrlTag, <span class="keywordtype">int</span> nChans, <span class="keywordtype">int</span> chanOffset)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  : ctrlTag(ctrlTag)</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  , nChans(nChans)</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  , chanOffset(chanOffset)</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    memset(vals.data(), 0, <span class="keyword">sizeof</span>(vals));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  , vals{}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_struct" href="struct_i_sender_data.html">ISenderData</a>(<span class="keywordtype">int</span> ctrlTag, <span class="keyword">const</span> std::array&lt;T, MAXNC&gt;&amp; vals, <span class="keywordtype">int</span> nChans = MAXNC, <span class="keywordtype">int</span> chanOffset = 0)</div>
