@@ -1,5 +1,5 @@
 <map id="IVectorBase" name="IVectorBase">
-<area shape="rect" id="node1" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="5,499,100,524"/>
+<area shape="rect" id="node1" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="5,524,100,549"/>
 <area shape="rect" id="node2" href="$class_i_f_p_s_display_control.html" title="Performance display meter, based on code from NanoVG This is a special control that lives outside the..." alt="" coords="181,5,316,31"/>
 <area shape="rect" id="node3" href="$class_i_v_baked_preset_manager_control.html" title="A &quot;meta control&quot; for a &quot;preset manager&quot; for &quot;baked in&quot; factory presets It adds several child buttons." alt="" coords="148,55,349,80"/>
 <area shape="rect" id="node4" href="$class_i_v_button_control.html" title="A vector button/momentary switch control." alt="" coords="191,104,306,129"/>
@@ -15,21 +15,22 @@
 <area shape="rect" id="node14" href="$class_i_v_plot_control.html" title="A vector plot to display functions and waveforms." alt="" coords="199,597,298,623"/>
 <area shape="rect" id="node15" href="$class_i_v_scope_control.html" title="Vectorial multi&#45;channel capable oscilloscope control." alt="" coords="161,647,337,687"/>
 <area shape="rect" id="node16" href="$class_i_v_slider_control.html" title="A vector slider control." alt="" coords="194,712,303,737"/>
-<area shape="rect" id="node17" href="$class_i_v_switch_control.html" title="A vector switch control." alt="" coords="191,761,307,787"/>
-<area shape="rect" id="node20" href="$class_i_v_tab_page.html" title="A control used as the base class for a tabbed page of subcontrols." alt="" coords="205,811,292,836"/>
-<area shape="rect" id="node21" href="$class_i_v_tab_switch_control.html" title="A vector &quot;tab&quot; multi switch control." alt="" coords="179,860,318,885"/>
-<area shape="rect" id="node23" href="$class_i_v_tabbed_pages_control.html" title="A control to manage tabbed pages of sub controls Basic usage example:" alt="" coords="171,909,327,935"/>
-<area shape="rect" id="node24" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="179,959,318,984"/>
-<area shape="rect" id="node33" href="$class_i_v_x_y_pad_control.html" title="A vector XY Pad slider control." alt="" coords="190,1008,307,1033"/>
-<area shape="rect" id="node18" href="$class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked." alt="" coords="414,712,559,737"/>
-<area shape="rect" id="node19" href="$class_i_v_toggle_control.html" title="A vector toggle control." alt="" coords="429,761,544,787"/>
-<area shape="rect" id="node22" href="$class_i_v_radio_button_control.html" title="A vector &quot;radio buttons&quot; switch control." alt="" coords="413,811,560,836"/>
-<area shape="rect" id="node25" href="$class_i_v_meter_control.html" title=" " alt="" coords="397,860,576,885"/>
-<area shape="rect" id="node27" href="$class_i_v_meter_control.html" title=" " alt="" coords="417,909,556,935"/>
-<area shape="rect" id="node28" href="$class_i_v_multi_slider_control.html" title=" " alt="" coords="403,959,570,984"/>
-<area shape="rect" id="node29" href="$class_i_v_meter_control.html" title="Vectorial multi&#45;channel capable meter control, linear or log response." alt="" coords="397,1008,576,1033"/>
-<area shape="rect" id="node30" href="$class_i_v_multi_slider_control.html" title="A vectorial multi&#45;slider control." alt="" coords="418,1058,555,1098"/>
-<area shape="rect" id="node32" href="$class_i_v_range_slider_control.html" title="A vector range slider control, with two handles." alt="" coords="413,1123,560,1148"/>
-<area shape="rect" id="node26" href="$class_i_v_peak_avg_meter_control.html" title=" " alt="" coords="624,935,815,960"/>
-<area shape="rect" id="node31" href="$class_i_v_multi_toggle_control.html" title="A vectorial multi&#45;toggle control, could be used for a trigger in a step sequencer or tarnce gate." alt="" coords="648,1058,791,1098"/>
+<area shape="rect" id="node17" href="$class_i_v_spectrum_analyzer_control.html" title="Vectorial multi&#45;channel capable spectrum analyzer controlDerived from work by Alex Harker and Matthew..." alt="" coords="151,762,346,802"/>
+<area shape="rect" id="node18" href="$class_i_v_switch_control.html" title="A vector switch control." alt="" coords="191,827,307,852"/>
+<area shape="rect" id="node21" href="$class_i_v_tab_page.html" title="A control used as the base class for a tabbed page of subcontrols." alt="" coords="205,876,292,901"/>
+<area shape="rect" id="node22" href="$class_i_v_tab_switch_control.html" title="A vector &quot;tab&quot; multi switch control." alt="" coords="179,925,318,951"/>
+<area shape="rect" id="node24" href="$class_i_v_tabbed_pages_control.html" title="A control to manage tabbed pages of sub controls Basic usage example:" alt="" coords="171,975,327,1000"/>
+<area shape="rect" id="node25" href="$class_i_v_track_control_base.html" title="A base class for mult&#45;strip/track controls, such as multi&#45;sliders, meters Track refers to the channel..." alt="" coords="179,1024,318,1049"/>
+<area shape="rect" id="node34" href="$class_i_v_x_y_pad_control.html" title="A vector XY Pad slider control." alt="" coords="190,1073,307,1099"/>
+<area shape="rect" id="node19" href="$class_i_v_slide_switch_control.html" title="A switch with a slide animation when clicked." alt="" coords="414,777,559,803"/>
+<area shape="rect" id="node20" href="$class_i_v_toggle_control.html" title="A vector toggle control." alt="" coords="429,827,544,852"/>
+<area shape="rect" id="node23" href="$class_i_v_radio_button_control.html" title="A vector &quot;radio buttons&quot; switch control." alt="" coords="413,876,560,901"/>
+<area shape="rect" id="node26" href="$class_i_v_meter_control.html" title=" " alt="" coords="397,925,576,951"/>
+<area shape="rect" id="node28" href="$class_i_v_meter_control.html" title=" " alt="" coords="417,975,556,1000"/>
+<area shape="rect" id="node29" href="$class_i_v_multi_slider_control.html" title=" " alt="" coords="403,1024,570,1049"/>
+<area shape="rect" id="node30" href="$class_i_v_meter_control.html" title="Vectorial multi&#45;channel capable meter control, linear or log response." alt="" coords="397,1073,576,1099"/>
+<area shape="rect" id="node31" href="$class_i_v_multi_slider_control.html" title="A vectorial multi&#45;slider control." alt="" coords="418,1123,555,1163"/>
+<area shape="rect" id="node33" href="$class_i_v_range_slider_control.html" title="A vector range slider control, with two handles." alt="" coords="413,1188,560,1213"/>
+<area shape="rect" id="node27" href="$class_i_v_peak_avg_meter_control.html" title=" " alt="" coords="624,1000,815,1025"/>
+<area shape="rect" id="node32" href="$class_i_v_multi_toggle_control.html" title="A vectorial multi&#45;toggle control, could be used for a trigger in a step sequencer or tarnce gate." alt="" coords="648,1123,791,1163"/>
 </map>

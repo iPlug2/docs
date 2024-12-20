@@ -1,4 +1,5 @@
 <map id="IBufferSender&lt; MAXNC, QUEUE_SIZE, MAXBUF &gt;" name="IBufferSender&lt; MAXNC, QUEUE_SIZE, MAXBUF &gt;">
-<area shape="rect" id="node1" title="IBufferSender is a utility class which can be used to defer buffer data for sending to the GUI." alt="" coords="5,93,187,133"/>
-<area shape="rect" id="node2" href="$class_i_sender.html" title="ISender is a utility class which can be used to defer data from the realtime audio processing and sen..." alt="" coords="7,5,185,45"/>
+<area shape="rect" id="node1" title="IBufferSender is a utility class which can be used to defer buffer data for sending to the GUI." alt="" coords="25,93,207,133"/>
+<area shape="rect" id="node3" href="$class_i_spectrum_sender.html" title="ISpectrumSender is designed for sending Spectral Data from the plug&#45;in to the UI." alt="" coords="5,181,227,221"/>
+<area shape="rect" id="node2" href="$class_i_sender.html" title="ISender is a utility class which can be used to defer data from the realtime audio processing and sen..." alt="" coords="27,5,205,45"/>
 </map>

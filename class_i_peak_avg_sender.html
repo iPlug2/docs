@@ -123,6 +123,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92a9c820f01facfff1cb4af02a35911f inherit pub_methods_class_i_sender"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#a92a9c820f01facfff1cb4af02a35911f">PushData</a> (const <a class="el" href="struct_i_sender_data.html">ISenderData</a>&lt; MAXNC, T &gt; &amp;d)</td></tr>
 <tr class="memdesc:a92a9c820f01facfff1cb4af02a35911f inherit pub_methods_class_i_sender"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a data element onto the queue.  <a href="class_i_sender.html#a92a9c820f01facfff1cb4af02a35911f">More...</a><br /></td></tr>
 <tr class="separator:a92a9c820f01facfff1cb4af02a35911f inherit pub_methods_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72921db73b016904ac9980940741c63e inherit pub_methods_class_i_sender"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#a72921db73b016904ac9980940741c63e">PrepareDataForUI</a> (<a class="el" href="struct_i_sender_data.html">ISenderData</a>&lt; MAXNC, T &gt; &amp;d)</td></tr>
+<tr class="memdesc:a72921db73b016904ac9980940741c63e inherit pub_methods_class_i_sender"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called on the main thread and can be used to transform the data, e.g.  <a href="class_i_sender.html#a72921db73b016904ac9980940741c63e">More...</a><br /></td></tr>
+<tr class="separator:a72921db73b016904ac9980940741c63e inherit pub_methods_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad61c80e910d77b335ee04174949355e6 inherit pub_methods_class_i_sender"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#ad61c80e910d77b335ee04174949355e6">TransmitData</a> (<a class="el" href="class_i_editor_delegate.html">IEditorDelegate</a> &amp;dlg)</td></tr>
 <tr class="memdesc:ad61c80e910d77b335ee04174949355e6 inherit pub_methods_class_i_sender"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops elements off the queue and sends messages to controls.  <a href="class_i_sender.html#ad61c80e910d77b335ee04174949355e6">More...</a><br /></td></tr>
 <tr class="separator:ad61c80e910d77b335ee04174949355e6 inherit pub_methods_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,7 +143,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt;<br />
 class IPeakAvgSender&lt; MAXNC, QUEUE_SIZE &gt;</div><p ><a class="el" href="class_i_peak_avg_sender.html" title="IPeakAvgSender is a utility class which can be used to defer peak &amp; avg/RMS data from sample buffers ...">IPeakAvgSender</a> is a utility class which can be used to defer peak &amp; avg/RMS data from sample buffers for sending to the GUI It also features an envelope follower to control meter ballistics. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00187">187</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00192">192</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7254072745a7f5bdb243ad5add06ff73" name="a7254072745a7f5bdb243ad5add06ff73"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7254072745a7f5bdb243ad5add06ff73">&#9670;&#160;</a></span>IPeakAvgSender()</h2>
@@ -202,7 +205,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00226">226</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00231">231</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -273,9 +276,9 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00284">284</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00289">289</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_sender_8h_source.html#l00070">ISender&lt; MAXNC, QUEUE_SIZE, T &gt;::PushData()</a>.</p>
+<p class="reference">References <a class="el" href="_i_sender_8h_source.html#l00071">ISender&lt; MAXNC, QUEUE_SIZE, T &gt;::PushData()</a>.</p>
 
 </div>
 </div>
@@ -305,7 +308,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00238">238</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00243">243</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -345,7 +348,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00247">247</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00252">252</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -385,7 +388,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00253">253</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00258">258</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -425,7 +428,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00271">271</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00276">276</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -465,7 +468,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00259">259</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00264">264</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>

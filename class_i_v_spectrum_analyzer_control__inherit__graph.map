@@ -1,0 +1,5 @@
+<map id="IVSpectrumAnalyzerControl&lt; MAXNC, MAX_FFT_SIZE &gt;" name="IVSpectrumAnalyzerControl&lt; MAXNC, MAX_FFT_SIZE &gt;">
+<area shape="rect" id="node1" title="Vectorial multi&#45;channel capable spectrum analyzer controlDerived from work by Alex Harker and Matthew..." alt="" coords="5,79,200,119"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="17,5,84,31"/>
+<area shape="rect" id="node3" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="109,5,203,31"/>
+</map>
