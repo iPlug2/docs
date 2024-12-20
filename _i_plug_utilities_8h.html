@@ -84,6 +84,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">IPlugUtilities.h File Reference</div></div>
 </div><!--header-->
@@ -112,6 +113,65 @@ Macros</h2></td></tr>
 <tr class="separator:gaa3effd6091f4e75a421555aa0e385b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9c1aaa6c0f6eeb9e1b1e41d60b8f602f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga9c1aaa6c0f6eeb9e1b1e41d60b8f602f">GET_PARAM_FROM_VARARG</a>(paramType,  vp,  v)</td></tr>
 <tr class="separator:ga9c1aaa6c0f6eeb9e1b1e41d60b8f602f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga2fa74f1da42684c60b9d26621f57719f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>EDOMVirtualKey</b> { <br />
+&#160;&#160;<b>DOM_VK_BACK_SPACE</b> = 0x08
+, <b>DOM_VK_TAB</b> = 0x09
+, <b>DOM_VK_RETURN</b> = 0x0D
+, <b>DOM_VK_SHIFT</b> = 0x10
+, <br />
+&#160;&#160;<b>DOM_VK_CONTROL</b> = 0x11
+, <b>DOM_VK_ALT</b> = 0x12
+, <b>DOM_VK_PAUSE</b> = 0x13
+, <b>DOM_VK_CAPS_LOCK</b> = 0x14
+, <br />
+&#160;&#160;<b>DOM_VK_ESCAPE</b> = 0x1B
+, <b>DOM_VK_SPACE</b> = 0x20
+, <b>DOM_VK_PAGE_UP</b> = 0x21
+, <b>DOM_VK_PAGE_DOWN</b> = 0x22
+, <br />
+&#160;&#160;<b>DOM_VK_END</b> = 0x23
+, <b>DOM_VK_HOME</b> = 0x24
+, <b>DOM_VK_LEFT</b> = 0x25
+, <b>DOM_VK_UP</b> = 0x26
+, <br />
+&#160;&#160;<b>DOM_VK_RIGHT</b> = 0x27
+, <b>DOM_VK_DOWN</b> = 0x28
+, <b>DOM_VK_INSERT</b> = 0x2D
+, <b>DOM_VK_DELETE</b> = 0x2E
+, <br />
+&#160;&#160;<b>DOM_VK_F1</b> = 0x70
+, <b>DOM_VK_F2</b> = 0x71
+, <b>DOM_VK_F3</b> = 0x72
+, <b>DOM_VK_F4</b> = 0x73
+, <br />
+&#160;&#160;<b>DOM_VK_F5</b> = 0x74
+, <b>DOM_VK_F6</b> = 0x75
+, <b>DOM_VK_F7</b> = 0x76
+, <b>DOM_VK_F8</b> = 0x77
+, <br />
+&#160;&#160;<b>DOM_VK_F9</b> = 0x78
+, <b>DOM_VK_F10</b> = 0x79
+, <b>DOM_VK_F11</b> = 0x7A
+, <b>DOM_VK_F12</b> = 0x7B
+, <br />
+&#160;&#160;<b>DOM_VK_NUMPAD0</b> = 0x60
+, <b>DOM_VK_NUMPAD1</b> = 0x61
+, <b>DOM_VK_NUMPAD2</b> = 0x62
+, <b>DOM_VK_NUMPAD3</b> = 0x63
+, <br />
+&#160;&#160;<b>DOM_VK_NUMPAD4</b> = 0x64
+, <b>DOM_VK_NUMPAD5</b> = 0x65
+, <b>DOM_VK_NUMPAD6</b> = 0x66
+, <b>DOM_VK_NUMPAD7</b> = 0x67
+, <br />
+&#160;&#160;<b>DOM_VK_NUMPAD8</b> = 0x68
+, <b>DOM_VK_NUMPAD9</b> = 0x69
+<br />
+ }</td></tr>
+<tr class="separator:ga2fa74f1da42684c60b9d26621f57719f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -155,6 +215,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga20ba62a6dfbe2a9f7320be1d2a62e0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga28394071b1c01aea84410b1aa6772eab"><td class="memItemLeft" align="right" valign="top">static FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga28394071b1c01aea84410b1aa6772eab">fopenUTF8</a> (const char *path, const char *mode)</td></tr>
 <tr class="separator:ga28394071b1c01aea84410b1aa6772eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8623189218d27e098e294f6644d7134d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga8623189218d27e098e294f6644d7134d">DOMKeyToVirtualKey</a> (uint32_t domKeyCode)</td></tr>
+<tr class="memdesc:ga8623189218d27e098e294f6644d7134d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a DOM virtual key code to an iPlug2 virtual key code.  <a href="group___i_plug_utilities.html#ga8623189218d27e098e294f6644d7134d">More...</a><br /></td></tr>
+<tr class="separator:ga8623189218d27e098e294f6644d7134d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Utility functions and macros. </p>

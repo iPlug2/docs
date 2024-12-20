@@ -123,6 +123,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e9dd0ce06c50a11a847912627ee2e58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#a2e9dd0ce06c50a11a847912627ee2e58">SendMidiMsgFromDelegate</a> (const <a class="el" href="struct_i_midi_msg.html">IMidiMsg</a> &amp;msg) override</td></tr>
 <tr class="memdesc:a2e9dd0ce06c50a11a847912627ee2e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">SendMidiMsgFromDelegate (Abbreviation: SMMFD) WARNING: should not be called on the realtime audio thread.  <a href="class_web_view_editor_delegate.html#a2e9dd0ce06c50a11a847912627ee2e58">More...</a><br /></td></tr>
 <tr class="separator:a2e9dd0ce06c50a11a847912627ee2e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0409d9f9308b183d65ca0279fc522b0f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#a0409d9f9308b183d65ca0279fc522b0f">OnKeyDown</a> (const <a class="el" href="struct_i_key_press.html">IKeyPress</a> &amp;key) override</td></tr>
+<tr class="memdesc:a0409d9f9308b183d65ca0279fc522b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">KeyDown handler, in order to get keystrokes from certain hosts/plugin formats that send key press messages through the plug-in API, rather than the view.  <a href="class_web_view_editor_delegate.html#a0409d9f9308b183d65ca0279fc522b0f">More...</a><br /></td></tr>
+<tr class="separator:a0409d9f9308b183d65ca0279fc522b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620213861bf551712a2c5bc6b0b45a47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#a620213861bf551712a2c5bc6b0b45a47">OnKeyUp</a> (const <a class="el" href="struct_i_key_press.html">IKeyPress</a> &amp;key) override</td></tr>
+<tr class="memdesc:a620213861bf551712a2c5bc6b0b45a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">KeyDown handler, in order to get keystrokes from certain hosts/plugin formats that send key press messages through the plug-in API rather than the view.  <a href="class_web_view_editor_delegate.html#a620213861bf551712a2c5bc6b0b45a47">More...</a><br /></td></tr>
+<tr class="separator:a620213861bf551712a2c5bc6b0b45a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2faf82d3de4533b0df91bc02f83f252e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#a2faf82d3de4533b0df91bc02f83f252e">SendJSONFromDelegate</a> (const nlohmann::json &amp;jsonMessage)</td></tr>
 <tr class="separator:a2faf82d3de4533b0df91bc02f83f252e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5f3f92e632911b7260f83b32e40d0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#a1b5f3f92e632911b7260f83b32e40d0b">OnMessageFromWebView</a> (const char *jsonStr) override</td></tr>
@@ -386,8 +392,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a4462ee2a6d05fa52c191e8fba0498021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae28491963a94dc0fe19d6e054b593c98"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#ae28491963a94dc0fe19d6e054b593c98">mEditorInitFunc</a> = nullptr</td></tr>
 <tr class="separator:ae28491963a94dc0fe19d6e054b593c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace36c41658592d2a57d5c2084cd07aed"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#ace36c41658592d2a57d5c2084cd07aed">mHelperView</a> = nullptr</td></tr>
-<tr class="separator:ace36c41658592d2a57d5c2084cd07aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec09894634ad5fdd7c7b1fdde43d756"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_view_editor_delegate.html#a0ec09894634ad5fdd7c7b1fdde43d756">mView</a> = nullptr</td></tr>
+<tr class="separator:a0ec09894634ad5fdd7c7b1fdde43d756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -475,9 +481,87 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00216">216</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00226">226</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 <p class="reference">References <a class="el" href="class_i_web_view.html#a6e9cd7be0aac34e02fdc3ef2aad7e13e">IWebView::LoadFile()</a>.</p>
+
+</div>
+</div>
+<a id="a0409d9f9308b183d65ca0279fc522b0f" name="a0409d9f9308b183d65ca0279fc522b0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0409d9f9308b183d65ca0279fc522b0f">&#9670;&#160;</a></span>OnKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebViewEditorDelegate::OnKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_key_press.html">IKeyPress</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>KeyDown handler, in order to get keystrokes from certain hosts/plugin formats that send key press messages through the plug-in API, rather than the view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Information about the key that was pressed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the key was handled by the plug-in </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_i_editor_delegate.html#abc3ab8f425c820d3e5c67d78b717e989">IEditorDelegate</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00125">OnMessageFromWebView()</a>.</p>
+
+</div>
+</div>
+<a id="a620213861bf551712a2c5bc6b0b45a47" name="a620213861bf551712a2c5bc6b0b45a47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620213861bf551712a2c5bc6b0b45a47">&#9670;&#160;</a></span>OnKeyUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebViewEditorDelegate::OnKeyUp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_i_key_press.html">IKeyPress</a> &amp;&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>KeyDown handler, in order to get keystrokes from certain hosts/plugin formats that send key press messages through the plug-in API rather than the view. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Information about the key that was released </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the key was handled by the plug-in </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_i_editor_delegate.html#aa8898cf282f32a34b89cf9e32b834207">IEditorDelegate</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00125">OnMessageFromWebView()</a>.</p>
 
 </div>
 </div>
@@ -509,9 +593,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_web_view.html#ade38e7c591a4a5bf7b3807a548ee5d6f">IWebView</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00120">120</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00125">125</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
-<p class="reference">References <a class="el" href="class_i_editor_delegate.html#a271106e21e3e2d7869d152d99c155cad">IEditorDelegate::BeginInformHostOfParamChangeFromUI()</a>, <a class="el" href="class_i_editor_delegate.html#a36eeb4c645a684ceae07edbe7685fbd0">IEditorDelegate::EndInformHostOfParamChangeFromUI()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00282">IEditorDelegate::SendArbitraryMsgFromUI()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00268">IEditorDelegate::SendMidiMsgFromUI()</a>, and <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00245">IEditorDelegate::SendParameterValueFromUI()</a>.</p>
+<p class="reference">References <a class="el" href="class_i_editor_delegate.html#a271106e21e3e2d7869d152d99c155cad">IEditorDelegate::BeginInformHostOfParamChangeFromUI()</a>, <a class="el" href="class_i_editor_delegate.html#a36eeb4c645a684ceae07edbe7685fbd0">IEditorDelegate::EndInformHostOfParamChangeFromUI()</a>, <a class="el" href="class_web_view_editor_delegate.html#a0409d9f9308b183d65ca0279fc522b0f">OnKeyDown()</a>, <a class="el" href="class_web_view_editor_delegate.html#a620213861bf551712a2c5bc6b0b45a47">OnKeyUp()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00282">IEditorDelegate::SendArbitraryMsgFromUI()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00268">IEditorDelegate::SendMidiMsgFromUI()</a>, and <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00245">IEditorDelegate::SendParameterValueFromUI()</a>.</p>
 
 </div>
 </div>
@@ -583,7 +667,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_web_view.html#a90df4019683392186171a7a32b0fe1d4">IWebView</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00183">183</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00193">193</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">IParam::GetJSON()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00078">IEditorDelegate::GetParam()</a>, <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00086">IEditorDelegate::NParams()</a>, and <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00100">IEditorDelegate::OnUIOpen()</a>.</p>
 
@@ -616,7 +700,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_web_view.html#aa4184d0c34f9247187bec90ed73b6c2e">IWebView</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00175">175</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00185">185</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -849,7 +933,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00115">115</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00120">120</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -975,7 +1059,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00204">204</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00214">214</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -1000,31 +1084,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00232">232</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
-
-</div>
-</div>
-<a id="ace36c41658592d2a57d5c2084cd07aed" name="ace36c41658592d2a57d5c2084cd07aed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace36c41658592d2a57d5c2084cd07aed">&#9670;&#160;</a></span>mHelperView</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void* WebViewEditorDelegate::mHelperView = nullptr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00233">233</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00242">242</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -1048,7 +1108,31 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00231">231</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00241">241</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
+
+</div>
+</div>
+<a id="a0ec09894634ad5fdd7c7b1fdde43d756" name="a0ec09894634ad5fdd7c7b1fdde43d756"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec09894634ad5fdd7c7b1fdde43d756">&#9670;&#160;</a></span>mView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* WebViewEditorDelegate::mView = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00243">243</a> of file <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html">IPlugWebViewEditorDelegate.h</a>.</p>
 
 </div>
 </div>
