@@ -126,8 +126,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0ff0d6a6d9182638d5adf3b81278e07f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a0ff0d6a6d9182638d5adf3b81278e07f">ISpectrumSender</a> (int fftSize=1024, int overlap=2, EWindowType window=EWindowType::Hann, EOutputType outputType=EOutputType::MagPhase)</td></tr>
-<tr class="separator:a0ff0d6a6d9182638d5adf3b81278e07f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34cbeac0db0ed69943e357399eaa6ee0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a34cbeac0db0ed69943e357399eaa6ee0">ISpectrumSender</a> (int fftSize=1024, int overlap=2, EWindowType window=EWindowType::Hann, EOutputType outputType=EOutputType::MagPhase, double minThresholdDb=90.0)</td></tr>
+<tr class="separator:a34cbeac0db0ed69943e357399eaa6ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc71d8fdb481edc67db2c4e705e7b69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#aadc71d8fdb481edc67db2c4e705e7b69">SetFFTSize</a> (int fftSize)</td></tr>
 <tr class="separator:aadc71d8fdb481edc67db2c4e705e7b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bafc1343dfdd607e0c55d4cc12adec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a1bafc1343dfdd607e0c55d4cc12adec3">SetFFTSizeAndOverlap</a> (int fftSize, int overlap)</td></tr>
@@ -169,8 +169,8 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_class_i_buffer_sender"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_i_buffer_sender')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_i_buffer_sender.html">IBufferSender&lt; MAXNC, QUEUE_SIZE, MAXBUF &gt;</a></td></tr>
-<tr class="memitem:a2bb3b35fed7ea935582f03fe04900c82 inherit pub_attribs_class_i_buffer_sender"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_buffer_sender.html#a2bb3b35fed7ea935582f03fe04900c82">NegativeInfinity</a> = -std::numeric_limits&lt;double&gt;::infinity()</td></tr>
-<tr class="separator:a2bb3b35fed7ea935582f03fe04900c82 inherit pub_attribs_class_i_buffer_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ffa5d88a742a5b135c606a54d8bee7b inherit pub_attribs_class_i_buffer_sender"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_buffer_sender.html#a0ffa5d88a742a5b135c606a54d8bee7b">kNoThresholdDb</a> = -100</td></tr>
+<tr class="separator:a0ffa5d88a742a5b135c606a54d8bee7b inherit pub_attribs_class_i_buffer_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_class_i_sender"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_i_sender')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_i_sender.html">ISender&lt; MAXNC, QUEUE_SIZE, T &gt;</a></td></tr>
 <tr class="memitem:aed4e25d47ab3555cda2bc259e8aa1b1f inherit pub_static_attribs_class_i_sender"><td class="memItemLeft" align="right" valign="top">static constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#aed4e25d47ab3555cda2bc259e8aa1b1f">kUpdateMessage</a> = 0</td></tr>
 <tr class="separator:aed4e25d47ab3555cda2bc259e8aa1b1f inherit pub_static_attribs_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,7 +179,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt;<br />
 class ISpectrumSender&lt; MAXNC, QUEUE_SIZE, MAX_FFT_SIZE &gt;</div><p ><a class="el" href="class_i_spectrum_sender.html" title="ISpectrumSender is designed for sending Spectral Data from the plug-in to the UI.">ISpectrumSender</a> is designed for sending Spectral Data from the plug-in to the UI. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00505">505</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00509">509</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a01e44f08c7cf7f60c225e5fd2a881fff" name="a01e44f08c7cf7f60c225e5fd2a881fff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01e44f08c7cf7f60c225e5fd2a881fff">&#9670;&#160;</a></span>TBufferSender</h2>
@@ -195,7 +195,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00509">509</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00513">513</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -213,7 +213,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00508">508</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00512">512</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -240,7 +240,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00519">519</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00523">523</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -266,13 +266,13 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00511">511</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00515">515</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0ff0d6a6d9182638d5adf3b81278e07f" name="a0ff0d6a6d9182638d5adf3b81278e07f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ff0d6a6d9182638d5adf3b81278e07f">&#9670;&#160;</a></span>ISpectrumSender()</h2>
+<a id="a34cbeac0db0ed69943e357399eaa6ee0" name="a34cbeac0db0ed69943e357399eaa6ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34cbeac0db0ed69943e357399eaa6ee0">&#9670;&#160;</a></span>ISpectrumSender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -304,7 +304,13 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">EOutputType&#160;</td>
-          <td class="paramname"><em>outputType</em> = <code>EOutputType::MagPhase</code>&#160;</td>
+          <td class="paramname"><em>outputType</em> = <code>EOutputType::MagPhase</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>minThresholdDb</em> = <code>90.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -319,7 +325,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00524">524</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00528">528</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -349,7 +355,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00594">594</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00598">598</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +384,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00599">599</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00603">603</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -408,7 +414,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00561">561</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00565">565</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -438,7 +444,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00533">533</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00537">537</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -478,7 +484,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00541">541</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00545">545</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +514,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00556">556</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00560">560</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -538,7 +544,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00550">550</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00554">554</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
