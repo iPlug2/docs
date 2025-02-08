@@ -99,6 +99,9 @@ Inheritance diagram for IPlugCocoaViewController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Instance Methods</h2></td></tr>
+<tr class="memitem:adbdfffcb812f37e470f9c6d0aaf85d9f"><td class="memItemLeft" align="right" valign="top"><a id="adbdfffcb812f37e470f9c6d0aaf85d9f" name="adbdfffcb812f37e470f9c6d0aaf85d9f"></a>
+(id)&#160;</td><td class="memItemRight" valign="bottom">- <b>initWithEditorDelegateAndBundleID:editorDelegate:</b></td></tr>
+<tr class="separator:adbdfffcb812f37e470f9c6d0aaf85d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ef8f70a5246bd90fdca2f67556b0be8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a5ef8f70a5246bd90fdca2f67556b0be8">setEditorDelegate:</a></td></tr>
 <tr class="separator:a5ef8f70a5246bd90fdca2f67556b0be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d77a4465f898d7f005af5df38bd68bf"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a5d77a4465f898d7f005af5df38bd68bf">onMessage:msgTag:ctrlTag:</a></td></tr>
@@ -153,17 +156,42 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a855176295f324a2b1d71f644271d65c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb3ba07cfe512ccda0d462cf0fb7af1"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a4eb3ba07cfe512ccda0d462cf0fb7af1">getParameterGroup:</a></td></tr>
 <tr class="separator:a4eb3ba07cfe512ccda0d462cf0fb7af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b5cd33ea6f2da2150ec0b6cb8963fee"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a8b5cd33ea6f2da2150ec0b6cb8963fee">setBundleID:</a></td></tr>
+<tr class="separator:a8b5cd33ea6f2da2150ec0b6cb8963fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3a5a8aef5ef86e990a370553fc1800"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a1f3a5a8aef5ef86e990a370553fc1800">getBundleID</a></td></tr>
+<tr class="separator:a1f3a5a8aef5ef86e990a370553fc1800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ad398104fdca6bc314ef9046ae4a90326"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_plug_cocoa_view_controller.html#ad398104fdca6bc314ef9046ae4a90326">editorDelegate</a></td></tr>
 <tr class="separator:ad398104fdca6bc314ef9046ae4a90326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838c3d1aa76039dbe5e1c964fe31f211"><td class="memItemLeft" align="right" valign="top">NSString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_plug_cocoa_view_controller.html#a838c3d1aa76039dbe5e1c964fe31f211">bundleID</a></td></tr>
+<tr class="separator:a838c3d1aa76039dbe5e1c964fe31f211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >An objc view controller base which reproduces some functionality from EditorDelegate in objc. </p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8h_source.html#l00030">30</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8h_source.html">IPlugCocoaViewController.h</a>.</p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a id="a1f3a5a8aef5ef86e990a370553fc1800" name="a1f3a5a8aef5ef86e990a370553fc1800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f3a5a8aef5ef86e990a370553fc1800">&#9670;&#160;</a></span>getBundleID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) getBundleID </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
 <a id="a373415c83ca660e095a71b8a8fb88d8a" name="a373415c83ca660e095a71b8a8fb88d8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a373415c83ca660e095a71b8a8fb88d8a">&#9670;&#160;</a></span>getParameterDefault:</h2>
 
@@ -442,6 +470,26 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b5cd33ea6f2da2150ec0b6cb8963fee" name="a8b5cd33ea6f2da2150ec0b6cb8963fee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b5cd33ea6f2da2150ec0b6cb8963fee">&#9670;&#160;</a></span>setBundleID:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setBundleID: </td>
+          <td></td>
+          <td class="paramtype">(const char*)&#160;</td>
+          <td class="paramname"><em>bundleID</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
 <a id="a5ef8f70a5246bd90fdca2f67556b0be8" name="a5ef8f70a5246bd90fdca2f67556b0be8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ef8f70a5246bd90fdca2f67556b0be8">&#9670;&#160;</a></span>setEditorDelegate:</h2>
 
@@ -463,6 +511,30 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a838c3d1aa76039dbe5e1c964fe31f211" name="a838c3d1aa76039dbe5e1c964fe31f211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a838c3d1aa76039dbe5e1c964fe31f211">&#9670;&#160;</a></span>bundleID</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString*) bundleID</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8h_source.html#l00033">33</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8h_source.html">IPlugCocoaViewController.h</a>.</p>
+
+</div>
+</div>
 <a id="ad398104fdca6bc314ef9046ae4a90326" name="ad398104fdca6bc314ef9046ae4a90326"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad398104fdca6bc314ef9046ae4a90326">&#9670;&#160;</a></span>editorDelegate</h2>
 
