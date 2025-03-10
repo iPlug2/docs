@@ -172,19 +172,19 @@ $(function() {
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;SendArbitraryMsgFromUI(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(msgTag), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ctrlTag), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>([msg length]), [msg bytes]);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>-(void)sendMidiMsgFromUI: (UInt8) status : (UInt8) data1 : (UInt8) data2 : (NSInteger) offset</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>-(void) sendMidiMsgFromUI: (UInt8) status : (UInt8) data1 : (UInt8) data2 : (NSInteger) offset</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>{</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a> msg { <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(offset), status, data1, data2 };</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;SendMidiMsgFromUI(msg);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>-(void)sendSysexMsgFromUI: (NSData*) msg : (NSInteger) offset</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>-(void) sendSysexMsgFromUI: (NSData*) msg : (NSInteger) offset</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_struct" href="struct_i_sys_ex.html">ISysEx</a> smsg { <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(offset), <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>uint8_t*<span class="keyword">&gt;</span>([msg bytes]), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>([msg length]) };</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;SendSysexMsgFromUI(smsg);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>- (NSInteger)parameterCount</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>- (NSInteger) parameterCount</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>{</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;NParams();</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
@@ -227,19 +227,100 @@ $(function() {
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">return</span> group;</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>}</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>- (void) setBundleID: (const <span class="keywordtype">char</span> *) _bundleID</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>- (NSInteger) getParameterNumDisplayTexts:(NSInteger)paramIdx</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>{</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  bundleID = [NSString stringWithUTF8String:_bundleID];</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>- (NSString*) getBundleID</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>{</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordflow">return</span> bundleID;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="keywordflow">if</span> (paramIdx &lt; 0 || paramIdx &gt;= [self parameterCount]) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_class" href="class_i_param.html">IParam</a>* pParam = ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;GetParam(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(paramIdx));</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keywordflow">return</span> pParam-&gt;<a class="code hl_function" href="class_i_param.html#ae58e05fe93c03b24529274ceafe10e2f">NDisplayTexts</a>();</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>}</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>- (NSString*) getParameterDisplayText:(NSInteger)paramIdx</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                                index:(NSInteger)displayIndex</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>{</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordflow">if</span> (paramIdx &lt; 0 || paramIdx &gt;= [self parameterCount]) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">return</span> <span class="stringliteral">@&quot;&quot;</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_class" href="class_i_param.html">IParam</a>* pParam = ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;GetParam(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(paramIdx));</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">// We don’t care about the numeric value here,</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="comment">// but we have to call GetDisplayTextAtIdx:</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="keywordtype">double</span> dummyValue = 0.0;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* text = pParam-&gt;<a class="code hl_function" href="class_i_param.html#ac5dad6e9fde1f0fc1a2dba2daac1f901">GetDisplayTextAtIdx</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(displayIndex), &amp;dummyValue);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">if</span> (!text) {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">return</span> <span class="stringliteral">@&quot;&quot;</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordflow">return</span> [NSString stringWithUTF8String:text];</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>- (double) getParameterDisplayTextValue:(NSInteger)paramIdx</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                  index:(NSInteger)displayIndex</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>{</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordflow">if</span> (paramIdx &lt; 0 || paramIdx &gt;= [self parameterCount]) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <a class="code hl_class" href="class_i_param.html">IParam</a>* pParam = ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;GetParam(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(paramIdx));</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordtype">double</span> outVal = 0.0;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  pParam-&gt;<a class="code hl_function" href="class_i_param.html#ac5dad6e9fde1f0fc1a2dba2daac1f901">GetDisplayTextAtIdx</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(displayIndex), &amp;outVal);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="keywordflow">return</span> outVal;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>- (int) getParameterFlags:(NSInteger) paramIdx</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>{</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="keywordflow">if</span> (paramIdx &lt; 0 || paramIdx &gt;= [self parameterCount]) {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_class" href="class_i_param.html">IParam</a>* pParam = ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;GetParam(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(paramIdx));</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordflow">return</span> pParam-&gt;<a class="code hl_function" href="class_i_param.html#a14ad710e41e8fb235238a928a2dd320c">GetFlags</a>();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>- (int) getParameterShapeID:(NSInteger)paramIdx</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>{</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keywordflow">if</span> (paramIdx &lt; 0 || paramIdx &gt;= [self parameterCount]) {</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_class" href="class_i_param.html">IParam</a>* pParam = ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;GetParam(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(paramIdx));</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="keywordflow">return</span> pParam-&gt;<a class="code hl_function" href="class_i_param.html#aec284c04bc14778243018061b9ca5be8">GetShapeID</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>- (double) getParameterShapeValue:(NSInteger)paramIdx</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>{</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="keywordflow">if</span> (paramIdx &lt; 0 || paramIdx &gt;= [self parameterCount]) {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <a class="code hl_class" href="class_i_param.html">IParam</a>* pParam = ((<a class="code hl_class" href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a>*) editorDelegate)-&gt;GetParam(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(paramIdx));</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordflow">return</span> pParam-&gt;<a class="code hl_function" href="class_i_param.html#ad71b0b23c5c62ff26bd54fea6e49c89e">GetShapeValue</a>();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>}</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>- (void) setBundleID: (const <span class="keywordtype">char</span> *) _bundleID</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>{</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  bundleID = [NSString stringWithUTF8String:_bundleID];</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>- (NSString*) getBundleID</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>{</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <span class="keywordflow">return</span> bundleID;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">@end</span></div>
 <div class="ttc" id="a_i_plug_cocoa_editor_delegate_8h_html"><div class="ttname"><a href="_i_plug_cocoa_editor_delegate_8h.html">IPlugCocoaEditorDelegate.h</a></div></div>
 <div class="ttc" id="aclass_cocoa_editor_delegate_html"><div class="ttname"><a href="class_cocoa_editor_delegate.html">CocoaEditorDelegate</a></div><div class="ttdoc">An editor delegate base class that uses Apple frameworks for the UI, either in Objective C,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_cocoa_editor_delegate_8h_source.html#l00024">IPlugCocoaEditorDelegate.h:25</a></div></div>
+<div class="ttc" id="aclass_i_param_html"><div class="ttname"><a href="class_i_param.html">IParam</a></div><div class="ttdoc">IPlug's parameter class.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8h_source.html#l00030">IPlugParameter.h:31</a></div></div>
+<div class="ttc" id="aclass_i_param_html_a14ad710e41e8fb235238a928a2dd320c"><div class="ttname"><a href="class_i_param.html#a14ad710e41e8fb235238a928a2dd320c">IParam::GetFlags</a></div><div class="ttdeci">int GetFlags() const</div><div class="ttdoc">Returns the parameter's flags.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8h_source.html#l00476">IPlugParameter.h:476</a></div></div>
+<div class="ttc" id="aclass_i_param_html_ac5dad6e9fde1f0fc1a2dba2daac1f901"><div class="ttname"><a href="class_i_param.html#ac5dad6e9fde1f0fc1a2dba2daac1f901">IParam::GetDisplayTextAtIdx</a></div><div class="ttdeci">const char * GetDisplayTextAtIdx(int idx, double *pValue=nullptr) const</div><div class="ttdoc">Get the display text at a particular index.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8cpp_source.html#l00337">IPlugParameter.cpp:337</a></div></div>
+<div class="ttc" id="aclass_i_param_html_ad71b0b23c5c62ff26bd54fea6e49c89e"><div class="ttname"><a href="class_i_param.html#ad71b0b23c5c62ff26bd54fea6e49c89e">IParam::GetShapeValue</a></div><div class="ttdeci">double GetShapeValue() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8cpp_source.html#l00435">IPlugParameter.cpp:435</a></div></div>
+<div class="ttc" id="aclass_i_param_html_ae58e05fe93c03b24529274ceafe10e2f"><div class="ttname"><a href="class_i_param.html#ae58e05fe93c03b24529274ceafe10e2f">IParam::NDisplayTexts</a></div><div class="ttdeci">int NDisplayTexts() const</div><div class="ttdoc">Get the number of display texts for the parameter.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8cpp_source.html#l00322">IPlugParameter.cpp:322</a></div></div>
+<div class="ttc" id="aclass_i_param_html_aec284c04bc14778243018061b9ca5be8"><div class="ttname"><a href="class_i_param.html#aec284c04bc14778243018061b9ca5be8">IParam::GetShapeID</a></div><div class="ttdeci">EShapeIDs GetShapeID() const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8cpp_source.html#l00423">IPlugParameter.cpp:423</a></div></div>
 <div class="ttc" id="ainterface_i_plug_cocoa_view_controller_html"><div class="ttname"><a href="interface_i_plug_cocoa_view_controller.html">IPlugCocoaViewController</a></div><div class="ttdoc">An objc view controller base which reproduces some functionality from EditorDelegate in objc.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_cocoa_view_controller_8h_source.html#l00030">IPlugCocoaViewController.h:31</a></div></div>
 <div class="ttc" id="astruct_i_midi_msg_html"><div class="ttname"><a href="struct_i_midi_msg.html">IMidiMsg</a></div><div class="ttdoc">Encapsulates a MIDI message and provides helper functions.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_midi_8h_source.html#l00030">IPlugMidi.h:31</a></div></div>
 <div class="ttc" id="astruct_i_sys_ex_html"><div class="ttname"><a href="struct_i_sys_ex.html">ISysEx</a></div><div class="ttdoc">A struct for dealing with SysEx messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_midi_8h_source.html#l00538">IPlugMidi.h:539</a></div></div>

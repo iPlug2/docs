@@ -177,6 +177,13 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a23af93b4d1449fe2c2f88be964baef7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags to determine characteristics of the parameter.  <a href="class_i_param.html#a23af93b4d1449fe2c2f88be964baef7d">More...</a><br /></td></tr>
 <tr class="separator:a23af93b4d1449fe2c2f88be964baef7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6857072493bf8c971efa7204f0c217c6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_param.html#a6857072493bf8c971efa7204f0c217c6">EShapeIDs</a> { <b>kShapeLinear</b> = 0
+, <b>kShapePowCurve</b> = 1
+, <b>kShapeExponential</b> = 2
+, <b>kShapeUnknown</b>
+ }</td></tr>
+<tr class="memdesc:a6857072493bf8c971efa7204f0c217c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">IDs for the shapes.  <a href="class_i_param.html#a6857072493bf8c971efa7204f0c217c6">More...</a><br /></td></tr>
+<tr class="separator:a6857072493bf8c971efa7204f0c217c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67c7e4a038bcb1cad795a641d4afc985"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_param.html#a67c7e4a038bcb1cad795a641d4afc985">DisplayFunc</a> = std::function&lt; void(double, WDL_String &amp;)&gt;</td></tr>
 <tr class="memdesc:a67c7e4a038bcb1cad795a641d4afc985"><td class="mdescLeft">&#160;</td><td class="mdescRight">DisplayFunc allows custom parameter display functions, defined by a lambda matching this signature.  <a href="class_i_param.html#a67c7e4a038bcb1cad795a641d4afc985">More...</a><br /></td></tr>
 <tr class="separator:a67c7e4a038bcb1cad795a641d4afc985"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -362,6 +369,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a222d5fac157ad3ed6335278c3f42d34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a300375b3aecbd66558114fcff013d98d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_param.html#a300375b3aecbd66558114fcff013d98d">GetMeta</a> () const</td></tr>
 <tr class="separator:a300375b3aecbd66558114fcff013d98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec284c04bc14778243018061b9ca5be8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_param.html#a6857072493bf8c971efa7204f0c217c6">EShapeIDs</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_param.html#aec284c04bc14778243018061b9ca5be8">GetShapeID</a> () const</td></tr>
+<tr class="separator:aec284c04bc14778243018061b9ca5be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad71b0b23c5c62ff26bd54fea6e49c89e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_param.html#ad71b0b23c5c62ff26bd54fea6e49c89e">GetShapeValue</a> () const</td></tr>
+<tr class="separator:ad71b0b23c5c62ff26bd54fea6e49c89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affa1b88e8337f41a1d724a97c4961b9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_param.html#affa1b88e8337f41a1d724a97c4961b9e">GetJSON</a> (WDL_String &amp;json, int idx) const</td></tr>
 <tr class="memdesc:affa1b88e8337f41a1d724a97c4961b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a JSON description of the parameter.  <a href="class_i_param.html#affa1b88e8337f41a1d724a97c4961b9e">More...</a><br /></td></tr>
 <tr class="separator:affa1b88e8337f41a1d724a97c4961b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,7 +399,7 @@ Public Member Functions</h2></td></tr>
 
 <p>DisplayFunc allows custom parameter display functions, defined by a lambda matching this signature. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00061">61</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00070">70</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -480,6 +491,24 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6857072493bf8c971efa7204f0c217c6" name="a6857072493bf8c971efa7204f0c217c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6857072493bf8c971efa7204f0c217c6">&#9670;&#160;</a></span>EShapeIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_i_param.html#a6857072493bf8c971efa7204f0c217c6">IParam::EShapeIDs</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IDs for the shapes. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00061">61</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a533b2bc5926e2b5aaa808a6a29731584" name="a533b2bc5926e2b5aaa808a6a29731584"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a533b2bc5926e2b5aaa808a6a29731584">&#9670;&#160;</a></span>IParam()</h2>
@@ -527,7 +556,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's value as a boolean. </p>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if value &gt;= 0.5, else otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00341">341</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00350">350</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00581">IPluginBase::DumpMakePresetFromNamedParamsSrc()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00538">IPluginBase::DumpMakePresetSrc()</a>.</p>
 
@@ -566,11 +595,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double The resulting constrained value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00270">270</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00279">279</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00049">Clip()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00051">kFlagStepped</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8h_source.html#l00294">FromNormalized()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00301">Set()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">StringToValue()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00286">ToNormalized()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8h_source.html#l00303">FromNormalized()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00310">Set()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">StringToValue()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00295">ToNormalized()</a>.</p>
 
 </div>
 </div>
@@ -607,9 +636,9 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double The resulting constrained value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00278">278</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00287">287</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00286">ToNormalized()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00295">ToNormalized()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00830">IKnobControlBase::OnMouseDrag()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00935">ISliderControlBase::OnMouseDrag()</a>.</p>
 
@@ -642,7 +671,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double Gain calculated as an approximation of \( 10^{\frac{x}{20}} \) </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group___i_plug_constants.html#ga498109434db2f6278a1f0b7a87bf5896" title="Magic number for dB to gain conversion.">IAMP_DB</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00351">351</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00360">360</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -673,7 +702,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This is only used for AU plugins to determine the mapping of parameters </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>EDisplayType </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00433">433</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00442">442</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -710,11 +739,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding real value, for this parameter </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00294">294</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00303">303</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00270">Constrain()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00279">Constrain()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00262">GetDisplay()</a>, <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00066">IPlugCLAP::InformHostOfParamChange()</a>, <a class="el" href="_i_control_8cpp_source.html#l00853">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00975">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00305">SetNormalized()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00164">IVNumberBoxControl::SetValueFromDelegate()</a>, and <a class="el" href="_i_v_number_box_control_8h_source.html#l00175">IVNumberBoxControl::SetValueFromUserInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00262">GetDisplay()</a>, <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00066">IPlugCLAP::InformHostOfParamChange()</a>, <a class="el" href="_i_control_8cpp_source.html#l00853">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00975">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00314">SetNormalized()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00164">IVNumberBoxControl::SetValueFromDelegate()</a>, and <a class="el" href="_i_v_number_box_control_8h_source.html#l00175">IVNumberBoxControl::SetValueFromUserInput()</a>.</p>
 
 </div>
 </div>
@@ -782,7 +811,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> If the parameter should be automateable <br  />
  </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00470">470</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00479">479</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00049">kFlagCannotAutomate</a>.</p>
 
@@ -814,7 +843,7 @@ Public Member Functions</h2></td></tr>
 <p>Get parameter's label (unit suffix) </p>
 <dl class="section return"><dt>Returns</dt><dd>CString Parameter's label (unit suffix) or <code>nullptr</code> if it is not set </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00397">397</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00406">406</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -852,11 +881,11 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>double The parameter's default value <br  />
  </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00438">438</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00447">447</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00438">GetDefault()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00286">ToNormalized()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00447">GetDefault()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00295">ToNormalized()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8h_source.html#l00438">GetDefault()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">GetJSON()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00048">IVNumberBoxControl::OnInit()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00183">IControl::SetValueToDefault()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8h_source.html#l00447">GetDefault()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">GetJSON()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00048">IVNumberBoxControl::OnInit()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00183">IControl::SetValueToDefault()</a>.</p>
 
 </div>
 </div>
@@ -911,7 +940,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00262">262</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00294">FromNormalized()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00327">GetDisplayText()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00053">kFlagNegateDisplay</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00055">kFlagSignDisplay</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00303">FromNormalized()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00327">GetDisplayText()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00053">kFlagNegateDisplay</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00055">kFlagSignDisplay</a>.</p>
 
 </div>
 </div>
@@ -958,11 +987,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00360">360</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00369">369</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00360">GetDisplay()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00369">GetDisplay()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00360">GetDisplay()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00372">GetDisplayWithLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00630">IGraphics::PromptUserInput()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00369">GetDisplay()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00381">GetDisplayWithLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00630">IGraphics::PromptUserInput()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00123">IVSwitchControl::SetDirty()</a>.</p>
 
 </div>
 </div>
@@ -992,7 +1021,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's precision. </p>
 <dl class="section return"><dt>Returns</dt><dd>int The number of decimal places that should be used to display the parameter's real value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00463">463</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00472">472</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -1112,9 +1141,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00372">372</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00381">381</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00360">GetDisplay()</a>, and <a class="el" href="_i_plug_parameter_8cpp_source.html#l00312">GetLabel()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00369">GetDisplay()</a>, and <a class="el" href="_i_plug_parameter_8cpp_source.html#l00312">GetLabel()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00520">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00144">IVSwitchControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00747">IVKnobControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00916">IVSliderControl::OnInit()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00737">IVKnobControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00906">IVSliderControl::SetDirty()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00552">IVMenuButtonControl::SetValueFromDelegate()</a>, <a class="el" href="_i_controls_8cpp_source.html#l00569">IVMenuButtonControl::SetValueFromUserInput()</a>, <a class="el" href="_i_control_8cpp_source.html#l00055">ShowBubbleHorizontalActionFunc()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00066">ShowBubbleVerticalActionFunc()</a>.</p>
 
@@ -1146,7 +1175,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's flags. </p>
 <dl class="section return"><dt>Returns</dt><dd>int The parameter's flags as an integer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00467">467</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00476">476</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1240,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">386</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00438">GetDefault()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00446">GetMax()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00442">GetMin()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">GetName()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00423">Type()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00447">GetDefault()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00455">GetMax()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00451">GetMin()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">GetName()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00432">Type()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00193">WebViewEditorDelegate::OnWebContentLoaded()</a>.</p>
 
@@ -1239,7 +1268,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00327">GetDisplayText()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00372">GetDisplayWithLabel()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00630">IGraphics::PromptUserInput()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00623">ICaptionControl::Draw()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00381">GetDisplayWithLabel()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00630">IGraphics::PromptUserInput()</a>.</p>
 
 </div>
 </div>
@@ -1269,7 +1298,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's maximum value. </p>
 <dl class="section return"><dt>Returns</dt><dd>The maximum real value of the parameter's range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00446">446</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00455">455</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">GetJSON()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00061">IParam::ShapeExp::Init()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00051">IParam::ShapePowCurve::NormalizedToValue()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00048">IVNumberBoxControl::OnInit()</a>, and <a class="el" href="_i_plug_parameter_8cpp_source.html#l00056">IParam::ShapePowCurve::ValueToNormalized()</a>.</p>
 
@@ -1299,7 +1328,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> If the parameter is flagged as a "meta" parameter, e.g. one that could modify other parameters </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00482">482</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00491">491</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00057">kFlagMeta</a>.</p>
 
@@ -1331,7 +1360,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's minimum value. </p>
 <dl class="section return"><dt>Returns</dt><dd>The minimum real value of the parameter's range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00442">442</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00451">451</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">GetJSON()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00061">IParam::ShapeExp::Init()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00051">IParam::ShapePowCurve::NormalizedToValue()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00048">IVNumberBoxControl::OnInit()</a>, and <a class="el" href="_i_plug_parameter_8cpp_source.html#l00056">IParam::ShapePowCurve::ValueToNormalized()</a>.</p>
 
@@ -1385,7 +1414,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> If the parameter should be displayed as a negative value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00476">476</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00485">485</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00053">kFlagNegateDisplay</a>.</p>
 
@@ -1417,9 +1446,9 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's normalized value. </p>
 <dl class="section return"><dt>Returns</dt><dd>double The resulting normalized value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00355">355</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00364">364</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00286">ToNormalized()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00295">ToNormalized()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_cocoa_editor_delegate_8mm_source.html#l00048">CocoaEditorDelegate::OnParamChangeUI()</a>.</p>
 
@@ -1451,9 +1480,49 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's range. </p>
 <dl class="section return"><dt>Returns</dt><dd>double The difference between the parameter's maximum and minimum bounds </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00455">455</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00464">464</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00765">ISwitchControlBase::OnInit()</a>, and <a class="el" href="_i_control_8h_source.html#l01588">IVTrackControlBase::SetParams()</a>.</p>
+
+</div>
+</div>
+<a id="aec284c04bc14778243018061b9ca5be8" name="aec284c04bc14778243018061b9ca5be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec284c04bc14778243018061b9ca5be8">&#9670;&#160;</a></span>GetShapeID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_param.html#a6857072493bf8c971efa7204f0c217c6">IParam::EShapeIDs</a> IParam::GetShapeID </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_i_param_1_1_shape.html" title="Base struct for parameter shaping.">Shape</a> ID </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00423">423</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad71b0b23c5c62ff26bd54fea6e49c89e" name="ad71b0b23c5c62ff26bd54fea6e49c89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad71b0b23c5c62ff26bd54fea6e49c89e">&#9670;&#160;</a></span>GetShapeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double IParam::GetShapeValue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Value for PowCurve, else zero </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00435">435</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
 </div>
 </div>
@@ -1481,7 +1550,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> If the parameter should be displayed as a signed value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00479">479</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00488">488</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00055">kFlagSignDisplay</a>.</p>
 
@@ -1513,7 +1582,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's step size. </p>
 <dl class="section return"><dt>Returns</dt><dd>The parameter's step size </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00459">459</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00468">468</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00830">IKnobControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00935">ISliderControlBase::OnMouseDrag()</a>, <a class="el" href="_i_control_8cpp_source.html#l00853">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00975">ISliderControlBase::OnMouseWheel()</a>, and <a class="el" href="_i_control_8h_source.html#l01588">IVTrackControlBase::SetParams()</a>.</p>
 
@@ -1544,7 +1613,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> If the parameter should be discrete (stepped) <br  />
  </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00473">473</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00482">482</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00051">kFlagStepped</a>.</p>
 
@@ -1603,7 +1672,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00214">214</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00337">GetDisplayTextAtIdx()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00140">InitDouble()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00322">NDisplayTexts()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00248">SetDisplayText()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00423">Type()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00337">GetDisplayTextAtIdx()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00140">InitDouble()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00322">NDisplayTexts()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00248">SetDisplayText()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00432">Type()</a>.</p>
 
 </div>
 </div>
@@ -1870,7 +1939,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00140">140</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="struct_i_param_1_1_shape.html#a4b0d8af4f339324f839236b635a10da8">IParam::Shape::Clone()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00301">Set()</a>.</p>
+<p class="reference">References <a class="el" href="struct_i_param_1_1_shape.html#a4b0d8af4f339324f839236b635a10da8">IParam::Shape::Clone()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00310">Set()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00214">Init()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00209">InitAngleDegrees()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00173">InitFrequency()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00199">InitGain()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00133">InitInt()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00183">InitMilliseconds()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00204">InitPercentage()</a>, and <a class="el" href="_i_plug_parameter_8cpp_source.html#l00178">InitSeconds()</a>.</p>
 
@@ -2622,7 +2691,7 @@ Public Member Functions</h2></td></tr>
 <p>Returns the parameter's value as an integer. </p>
 <dl class="section return"><dt>Returns</dt><dd>Current value of the parameter as an integer </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00345">345</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00354">354</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00581">IPluginBase::DumpMakePresetFromNamedParamsSrc()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00538">IPluginBase::DumpMakePresetSrc()</a>.</p>
 
@@ -2713,7 +2782,7 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00418">418</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">GetName()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00337">Value()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00307">GetName()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00346">Value()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00256">IPluginBase::PrintParamValues()</a>.</p>
 
@@ -2751,11 +2820,11 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00301">301</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00310">310</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00270">Constrain()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00279">Constrain()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00140">InitDouble()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00305">SetNormalized()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00124">IPluginBase::UnserializeParams()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8cpp_source.html#l00140">InitDouble()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00314">SetNormalized()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00124">IPluginBase::UnserializeParams()</a>.</p>
 
 </div>
 </div>
@@ -2791,9 +2860,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00316">316</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00325">325</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00312">SetToDefault()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00321">SetToDefault()</a>.</p>
 
 </div>
 </div>
@@ -2829,7 +2898,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00333">333</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00342">342</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -2934,7 +3003,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00329">329</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00338">338</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -2970,9 +3039,9 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00305">305</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00314">314</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00294">FromNormalized()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00301">Set()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00303">FromNormalized()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00310">Set()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00246">IPluginBase::RandomiseParamValues()</a>, and <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00245">IEditorDelegate::SendParameterValueFromUI()</a>.</p>
 
@@ -3010,7 +3079,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00309">309</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00318">318</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">StringToValue()</a>.</p>
 
@@ -3042,9 +3111,9 @@ Public Member Functions</h2></td></tr>
 <p>Replaces the parameter's current value with the default one <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00312">312</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00321">321</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00227">IPluginBase::DefaultParamValues()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00316">SetDefault()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00227">IPluginBase::DefaultParamValues()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00325">SetDefault()</a>.</p>
 
 </div>
 </div>
@@ -3075,9 +3144,9 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">358</a> of file <a class="el" href="_i_plug_parameter_8cpp_source.html">IPlugParameter.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00270">Constrain()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00053">kFlagNegateDisplay</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00344">MapDisplayText()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00322">NDisplayTexts()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00423">Type()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00279">Constrain()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00053">kFlagNegateDisplay</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00344">MapDisplayText()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00322">NDisplayTexts()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00432">Type()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00235">IGraphics::SetControlValueAfterTextEdit()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00309">SetString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l00235">IGraphics::SetControlValueAfterTextEdit()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00318">SetString()</a>.</p>
 
 </div>
 </div>
@@ -3114,11 +3183,11 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The corresponding normalized value, for this parameter </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00286">286</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00295">295</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00049">Clip()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00270">Constrain()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00049">Clip()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00279">Constrain()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8h_source.html#l00278">ConstrainNormalized()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00438">GetDefault()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00355">GetNormalized()</a>, <a class="el" href="_i_control_8cpp_source.html#l00853">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00975">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00082">WebViewEditorDelegate::SendParameterValueFromDelegate()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00235">IGraphics::SetControlValueAfterTextEdit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_parameter_8h_source.html#l00287">ConstrainNormalized()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00447">GetDefault()</a>, <a class="el" href="_i_plug_parameter_8h_source.html#l00364">GetNormalized()</a>, <a class="el" href="_i_control_8cpp_source.html#l00853">IKnobControlBase::OnMouseWheel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00975">ISliderControlBase::OnMouseWheel()</a>, <a class="el" href="_i_graphics_editor_delegate_8cpp_source.html#l00098">IGEditorDelegate::SendParameterValueFromDelegate()</a>, <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00082">WebViewEditorDelegate::SendParameterValueFromDelegate()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l00235">IGraphics::SetControlValueAfterTextEdit()</a>.</p>
 
 </div>
 </div>
@@ -3149,7 +3218,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>EParamType Type of the parameter, <em>kTypeNone</em> if not initialized </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_i_param.html#ae847ed0479b75abb032132e462bb07f0" title="Defines types or parameter.">EParamType</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00423">423</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00432">432</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00581">IPluginBase::DumpMakePresetFromNamedParamsSrc()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00538">IPluginBase::DumpMakePresetSrc()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00386">GetJSON()</a>, <a class="el" href="_i_plug_c_l_a_p_8cpp_source.html#l00066">IPlugCLAP::InformHostOfParamChange()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00214">Init()</a>, <a class="el" href="_i_text_entry_control_8cpp_source.html#l00216">ITextEntryControl::OnKeyDown()</a>, <a class="el" href="_i_control_8cpp_source.html#l00648">ICaptionControl::OnResize()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l00630">IGraphics::PromptUserInput()</a>, and <a class="el" href="_i_plug_parameter_8cpp_source.html#l00358">StringToValue()</a>.</p>
 
@@ -3182,7 +3251,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>This is only used for AU plugins to determine the appearance of parameters, based on the kind of data they represent </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>EParamUnit </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00428">428</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00437">437</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 </div>
 </div>
@@ -3212,7 +3281,7 @@ Public Member Functions</h2></td></tr>
 <p>Gets a readable value of the parameter. </p>
 <dl class="section return"><dt>Returns</dt><dd>double Current value of the parameter </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00337">337</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_parameter_8h_source.html#l00346">346</a> of file <a class="el" href="_i_plug_parameter_8h_source.html">IPlugParameter.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00154">IPluginBase::CloneParamRange()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00581">IPluginBase::DumpMakePresetFromNamedParamsSrc()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00538">IPluginBase::DumpMakePresetSrc()</a>, <a class="el" href="_i_plug_parameter_8cpp_source.html#l00418">PrintDetails()</a>, <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00109">IPluginBase::SerializeParams()</a>, and <a class="el" href="_i_plug_plugin_base_8cpp_source.html#l00124">IPluginBase::UnserializeParams()</a>.</p>
 

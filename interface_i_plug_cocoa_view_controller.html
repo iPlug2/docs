@@ -156,6 +156,18 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a855176295f324a2b1d71f644271d65c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4eb3ba07cfe512ccda0d462cf0fb7af1"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a4eb3ba07cfe512ccda0d462cf0fb7af1">getParameterGroup:</a></td></tr>
 <tr class="separator:a4eb3ba07cfe512ccda0d462cf0fb7af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe78d1fd1ea562a486e4537004706a3"><td class="memItemLeft" align="right" valign="top">(NSInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#adfe78d1fd1ea562a486e4537004706a3">getParameterNumDisplayTexts:</a></td></tr>
+<tr class="separator:adfe78d1fd1ea562a486e4537004706a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8435bc530ba9076261df7db32f98a32e"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a8435bc530ba9076261df7db32f98a32e">getParameterDisplayText:index:</a></td></tr>
+<tr class="separator:a8435bc530ba9076261df7db32f98a32e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d6641288386fd4811e538f35a6ddaa8"><td class="memItemLeft" align="right" valign="top">(double)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a5d6641288386fd4811e538f35a6ddaa8">getParameterDisplayTextValue:index:</a></td></tr>
+<tr class="separator:a5d6641288386fd4811e538f35a6ddaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0157296cead98194ccf0c2e67df7b91"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#ae0157296cead98194ccf0c2e67df7b91">getParameterFlags:</a></td></tr>
+<tr class="separator:ae0157296cead98194ccf0c2e67df7b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b78aecaae79dd5b084b9ea6ce1035e"><td class="memItemLeft" align="right" valign="top">(int)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a73b78aecaae79dd5b084b9ea6ce1035e">getParameterShapeID:</a></td></tr>
+<tr class="separator:a73b78aecaae79dd5b084b9ea6ce1035e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a5bc52a92fd497a4c92e2f15011e5e"><td class="memItemLeft" align="right" valign="top">(double)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#ac0a5bc52a92fd497a4c92e2f15011e5e">getParameterShapeValue:</a></td></tr>
+<tr class="separator:ac0a5bc52a92fd497a4c92e2f15011e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b5cd33ea6f2da2150ec0b6cb8963fee"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a8b5cd33ea6f2da2150ec0b6cb8963fee">setBundleID:</a></td></tr>
 <tr class="separator:a8b5cd33ea6f2da2150ec0b6cb8963fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f3a5a8aef5ef86e990a370553fc1800"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_plug_cocoa_view_controller.html#a1f3a5a8aef5ef86e990a370553fc1800">getBundleID</a></td></tr>
@@ -200,6 +212,86 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">- (double) getParameterDefault: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>paramIdx</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
+<a id="a8435bc530ba9076261df7db32f98a32e" name="a8435bc530ba9076261df7db32f98a32e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8435bc530ba9076261df7db32f98a32e">&#9670;&#160;</a></span>getParameterDisplayText:index:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) getParameterDisplayText: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>paramIdx</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">index:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>displayIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
+<a id="a5d6641288386fd4811e538f35a6ddaa8" name="a5d6641288386fd4811e538f35a6ddaa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d6641288386fd4811e538f35a6ddaa8">&#9670;&#160;</a></span>getParameterDisplayTextValue:index:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (double) getParameterDisplayTextValue: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>paramIdx</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">index:</td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>displayIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
+<a id="ae0157296cead98194ccf0c2e67df7b91" name="ae0157296cead98194ccf0c2e67df7b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0157296cead98194ccf0c2e67df7b91">&#9670;&#160;</a></span>getParameterFlags:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) getParameterFlags: </td>
           <td></td>
           <td class="paramtype">(NSInteger)&#160;</td>
           <td class="paramname"><em>paramIdx</em></td>
@@ -300,6 +392,66 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">- (NSString *) getParameterName: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>paramIdx</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
+<a id="adfe78d1fd1ea562a486e4537004706a3" name="adfe78d1fd1ea562a486e4537004706a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe78d1fd1ea562a486e4537004706a3">&#9670;&#160;</a></span>getParameterNumDisplayTexts:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSInteger) getParameterNumDisplayTexts: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>paramIdx</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
+<a id="a73b78aecaae79dd5b084b9ea6ce1035e" name="a73b78aecaae79dd5b084b9ea6ce1035e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b78aecaae79dd5b084b9ea6ce1035e">&#9670;&#160;</a></span>getParameterShapeID:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (int) getParameterShapeID: </td>
+          <td></td>
+          <td class="paramtype">(NSInteger)&#160;</td>
+          <td class="paramname"><em>paramIdx</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html#l00001">1</a> of file <a class="el" href="_i_plug_cocoa_view_controller_8mm_source.html">IPlugCocoaViewController.mm</a>.</p>
+
+</div>
+</div>
+<a id="ac0a5bc52a92fd497a4c92e2f15011e5e" name="ac0a5bc52a92fd497a4c92e2f15011e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0a5bc52a92fd497a4c92e2f15011e5e">&#9670;&#160;</a></span>getParameterShapeValue:</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (double) getParameterShapeValue: </td>
           <td></td>
           <td class="paramtype">(NSInteger)&#160;</td>
           <td class="paramname"><em>paramIdx</em></td>
