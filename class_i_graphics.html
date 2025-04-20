@@ -839,8 +839,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memitem:a66fb499abd593492216041145220041a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a66fb499abd593492216041145220041a">ReleaseMouseCapture</a> ()</td></tr>
 <tr class="memdesc:a66fb499abd593492216041145220041a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to tell the graphics context to stop tracking mouse interaction with a control.  <a href="class_i_graphics.html#a66fb499abd593492216041145220041a">More...</a><br /></td></tr>
 <tr class="separator:a66fb499abd593492216041145220041a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c6ae54796c26b135204f4fac048780"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ad3c6ae54796c26b135204f4fac048780">CanEnableMouseOver</a> () const</td></tr>
-<tr class="separator:ad3c6ae54796c26b135204f4fac048780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade11d88ae76579124d51421ffe65039a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ade11d88ae76579124d51421ffe65039a">MouseOverEnabled</a> () const</td></tr>
+<tr class="separator:ade11d88ae76579124d51421ffe65039a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f52276b6439688b467ba2c33fe0e043"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a9f52276b6439688b467ba2c33fe0e043">GetMouseOver</a> () const</td></tr>
 <tr class="separator:a9f52276b6439688b467ba2c33fe0e043"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a876018fa6ca2f0aed0ffd5acda0c665d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a876018fa6ca2f0aed0ffd5acda0c665d">GetMouseDownPoint</a> (float &amp;x, float &amp;y) const</td></tr>
@@ -1995,34 +1995,6 @@ Friends</h2></td></tr>
 <p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l00833">IRECT::MH()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00830">IRECT::MW()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l02036">IMatrix::Rotate()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l02059">IMatrix::TransformPoint()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00842">IRECT::Union()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l02238">DoMeasureTextRotation()</a>.</p>
-
-</div>
-</div>
-<a id="ad3c6ae54796c26b135204f4fac048780" name="ad3c6ae54796c26b135204f4fac048780"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3c6ae54796c26b135204f4fac048780">&#9670;&#160;</a></span>CanEnableMouseOver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool IGraphics::CanEnableMouseOver </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the context can handle mouse overs </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01591">1591</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>
@@ -9430,6 +9402,34 @@ template&lt;typename T , typename... Args&gt; </div>
 <p class="reference">References <a class="el" href="class_i_graphics.html#a056c8ae37821338c32091e6b228429a9">DoMeasureText()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_test_flex_box_control_8h_source.html#l00043">TestFlexBoxControl::Draw()</a>, <a class="el" href="_test_g_f_x_label_8h_source.html#l00031">GFXLabelControl::Draw()</a>, <a class="el" href="_test_text_orientation_control_8h_source.html#l00036">TestTextOrientationControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00504">IURLControl::Draw()</a>, <a class="el" href="_i_control_8cpp_source.html#l00675">PlaceHolder::Draw()</a>, <a class="el" href="_i_control_8h_source.html#l01163">IVectorBase::MakeRects()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00487">ITextControl::SetBoundsBasedOnStr()</a>.</p>
+
+</div>
+</div>
+<a id="ade11d88ae76579124d51421ffe65039a" name="ade11d88ae76579124d51421ffe65039a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade11d88ae76579124d51421ffe65039a">&#9670;&#160;</a></span>MouseOverEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IGraphics::MouseOverEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the context has mouse overs enabled </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_8h_source.html#l01591">1591</a> of file <a class="el" href="_i_graphics_8h_source.html">IGraphics.h</a>.</p>
 
 </div>
 </div>

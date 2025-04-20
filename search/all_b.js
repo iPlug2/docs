@@ -31,8 +31,9 @@ var searchData=
   ['midvpad_28',['MidVPad',['../struct_i_r_e_c_t.html#a7a682efd4cd97489e3b9aa1ab1cef0f4',1,'IRECT']]],
   ['mmouseisover_29',['mMouseIsOver',['../class_i_control.html#a3696450db56287d1fe69191856759004',1,'IControl']]],
   ['modifycurrentpreset_30',['ModifyCurrentPreset',['../class_i_plugin_base.html#a6156ddabd91f844046efcb278f702454',1,'IPluginBase']]],
-  ['movemousecursor_31',['MoveMouseCursor',['../class_i_graphics.html#a2202799550a398f712f9319df844c847',1,'IGraphics']]],
-  ['mtimeinfo_32',['mTimeInfo',['../class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed',1,'IPlugProcessor']]],
-  ['multitouchenabled_33',['MultiTouchEnabled',['../class_i_graphics.html#a449053912b022f873d5461ce058b5a3a',1,'IGraphics']]],
-  ['mw_34',['MW',['../struct_i_r_e_c_t.html#ae7ab9b583d33dab5f0da516a9f3a2b17',1,'IRECT']]]
+  ['mouseoverenabled_31',['MouseOverEnabled',['../class_i_graphics.html#ade11d88ae76579124d51421ffe65039a',1,'IGraphics']]],
+  ['movemousecursor_32',['MoveMouseCursor',['../class_i_graphics.html#a2202799550a398f712f9319df844c847',1,'IGraphics']]],
+  ['mtimeinfo_33',['mTimeInfo',['../class_i_plug_processor.html#a906e0289e8c91899bc39cae4755dc4ed',1,'IPlugProcessor']]],
+  ['multitouchenabled_34',['MultiTouchEnabled',['../class_i_graphics.html#a449053912b022f873d5461ce058b5a3a',1,'IGraphics']]],
+  ['mw_35',['MW',['../struct_i_r_e_c_t.html#ae7ab9b583d33dab5f0da516a9f3a2b17',1,'IRECT']]]
 ];
