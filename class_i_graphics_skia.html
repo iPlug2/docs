@@ -174,6 +174,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69a9f6454a3b7bb09d95453124664889"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_a_p_i_bitmap.html">APIBitmap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#a69a9f6454a3b7bb09d95453124664889">CreateAPIBitmap</a> (int width, int height, float scale, double drawScale, bool cacheable=false) override</td></tr>
 <tr class="memdesc:a69a9f6454a3b7bb09d95453124664889"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new API bitmap, either in memory or as a GPU texture.  <a href="class_i_graphics_skia.html#a69a9f6454a3b7bb09d95453124664889">More...</a><br /></td></tr>
 <tr class="separator:a69a9f6454a3b7bb09d95453124664889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55eaf5941948b0879e8113ff8dffe4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#ad55eaf5941948b0879e8113ff8dffe4d">ApplyLayerDropShadow</a> (<a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;layer, const <a class="el" href="struct_i_shadow.html">IShadow</a> &amp;shadow) override</td></tr>
+<tr class="memdesc:ad55eaf5941948b0879e8113ff8dffe4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a drop shadow directly onto a layer.  <a href="class_i_graphics_skia.html#ad55eaf5941948b0879e8113ff8dffe4d">More...</a><br /></td></tr>
+<tr class="separator:ad55eaf5941948b0879e8113ff8dffe4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a119938718af00886761e06e1937314b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#a119938718af00886761e06e1937314b7">GetLayerBitmapData</a> (const <a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;layer, RawBitmapData &amp;data) override</td></tr>
 <tr class="memdesc:a119938718af00886761e06e1937314b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the contents of a layer as Raw RGBA bitmap data NOTE: you should only call this within <a class="el" href="class_i_control.html#ab9d872edcc790c0506d5b90c07a968de" title="Draw the control to the graphics context.">IControl::Draw()</a>  <a href="class_i_graphics_skia.html#a119938718af00886761e06e1937314b7">More...</a><br /></td></tr>
 <tr class="separator:a119938718af00886761e06e1937314b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -378,7 +381,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ec5c9122ace2b58b5ab00aa628be698 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a2ec5c9122ace2b58b5ab00aa628be698">DrawRotatedLayer</a> (const <a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;layer, double angle)</td></tr>
 <tr class="memdesc:a2ec5c9122ace2b58b5ab00aa628be698 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a layer to the main <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> context, with rotation.  <a href="class_i_graphics.html#a2ec5c9122ace2b58b5ab00aa628be698">More...</a><br /></td></tr>
 <tr class="separator:a2ec5c9122ace2b58b5ab00aa628be698 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d98cb5d1729e74bfa83208ab8af2e6f inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a9d98cb5d1729e74bfa83208ab8af2e6f">ApplyLayerDropShadow</a> (<a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;layer, const <a class="el" href="struct_i_shadow.html">IShadow</a> &amp;shadow)</td></tr>
+<tr class="memitem:a9d98cb5d1729e74bfa83208ab8af2e6f inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a9d98cb5d1729e74bfa83208ab8af2e6f">ApplyLayerDropShadow</a> (<a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;layer, const <a class="el" href="struct_i_shadow.html">IShadow</a> &amp;shadow)</td></tr>
 <tr class="memdesc:a9d98cb5d1729e74bfa83208ab8af2e6f inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies a drop shadow directly onto a layer.  <a href="class_i_graphics.html#a9d98cb5d1729e74bfa83208ab8af2e6f">More...</a><br /></td></tr>
 <tr class="separator:a9d98cb5d1729e74bfa83208ab8af2e6f inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c93b8a237c99caf10a0281cc97e0327 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a8c93b8a237c99caf10a0281cc97e0327">GetLayerBitmapData</a> (const <a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;layer, RawBitmapData &amp;data)=0</td></tr>
@@ -1134,7 +1137,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00344">344</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00345">345</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -1153,7 +1156,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00366">366</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00367">367</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -1185,6 +1188,57 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="class_i_graphics.html#a42d34a154fd59b2b9ffdb818c358defc">IGraphics</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8h_source.html#l00120">120</a> of file <a class="el" href="_i_graphics_skia_8h_source.html">IGraphicsSkia.h</a>.</p>
+
+</div>
+</div>
+<a id="ad55eaf5941948b0879e8113ff8dffe4d" name="ad55eaf5941948b0879e8113ff8dffe4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55eaf5941948b0879e8113ff8dffe4d">&#9670;&#160;</a></span>ApplyLayerDropShadow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IGraphicsSkia::ApplyLayerDropShadow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>layer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_i_shadow.html">IShadow</a> &amp;&#160;</td>
+          <td class="paramname"><em>shadow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies a drop shadow directly onto a layer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">layer</td><td>- the layer to add the shadow to </td></tr>
+    <tr><td class="paramname">shadow</td><td>- the shadow to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_i_graphics.html#a9d98cb5d1729e74bfa83208ab8af2e6f">IGraphics</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00982">982</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02086">IGraphics::ApplyLayerDropShadow()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l02288">IPattern::GetStop()</a>.</p>
 
 </div>
 </div>
@@ -1240,7 +1294,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a62bbfa473b05138994e220cf24afdf3f">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00996">996</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01045">1045</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -1272,7 +1326,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#af2a102272f5f0951a36c7ca32601cca1">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00497">497</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00498">498</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00875">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
@@ -1306,7 +1360,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a7eb2eac86a838af6e6f85cd2242043d4">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00372">372</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00373">373</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00160">ToLower()</a>.</p>
 
@@ -1385,7 +1439,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a514ba05782664fefb137edddf6c4accb">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00947">947</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00948">948</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -1466,7 +1520,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#abfee1fdc10a629de6ef03cad85ad5a65">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00739">739</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00740">740</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02719">IGraphics::PathTransformRestore()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l02714">IGraphics::PathTransformSave()</a>.</p>
 
@@ -1537,7 +1591,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a056c8ae37821338c32091e6b228429a9">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00727">727</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00728">728</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02238">IGraphics::DoMeasureTextRotation()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
 
@@ -1609,7 +1663,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#afea2763c96575af7140d644e4d748299">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00588">588</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00589">589</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00049">Clip()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00136">IBitmap::GetAPIBitmap()</a>, <a class="el" href="_i_graphics_private_8h_source.html#l00142">APIBitmap::GetBitmap()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00133">IBitmap::GetDrawScale()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00130">IBitmap::GetScale()</a>.</p>
 
@@ -1677,7 +1731,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#a716cb6f5934b0337b81eb3e0e39e796a">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01039">1039</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01088">1088</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_structs_8h_source.html#l01562">IRECT::GetTranslated()</a>.</p>
 
@@ -1742,7 +1796,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#ad88dd543ef65a6c8381d38efeeaba642">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01050">1050</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01099">1099</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00678">IGraphics::DrawText()</a>, <a class="el" href="_i_graphics_structs_8h_source.html#l00827">IRECT::H()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00824">IRECT::W()</a>.</p>
 
@@ -1774,11 +1828,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00456">456</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00457">457</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00415">OnViewInitialized()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00416">OnViewInitialized()</a>.</p>
 
 </div>
 </div>
@@ -1809,7 +1863,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#a464ebf8919fb061181211ecbedf0b2da">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00545">545</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00546">546</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00935">IGraphics::GetPlatformContext()</a>, <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::GetScreenScale()</a>, <a class="el" href="class_i_graphics.html#a290c693845898cd3b89f33175ac590c8">IGraphics::GetWindow()</a>, <a class="el" href="_i_graphics_8h_source.html#l01098">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01094">IGraphics::WindowWidth()</a>.</p>
 
@@ -1903,7 +1957,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a44c574012a59b541e6f18e8ecf1f7671">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01120">1120</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01169">1169</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +2006,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a8c93b8a237c99caf10a0281cc97e0327">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00981">981</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l01030">1030</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2002,7 +2056,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a1e1b75ade14fcae02d24262caa63757d">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00652">652</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00653">653</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2066,7 +2120,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#aba99ea1dbf73309d1008fdaf101402d8">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00379">379</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00380">380</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00926">IGraphics::GetWinModuleHandle()</a>, and <a class="el" href="_i_plug_paths_8h.html#a0238ef4a2d49efc240321b8b5ce290fe">LoadWinResource()</a>.</p>
 
@@ -2132,7 +2186,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#af7f799b234dcfd826815a8a8b1028d64">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00410">410</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00411">411</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2182,7 +2236,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#ab6cbb9c4ec9e06b0ba49bb04369f51d8">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00661">661</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00662">662</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2214,7 +2268,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#a5f0194539a63198b7b868ffb7f424ecd">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00440">440</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00441">441</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00194">IGraphics::RemoveAllControls()</a>.</p>
 
@@ -2249,9 +2303,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#aa5f2041fa51eac4d3b654748c3916e14">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00415">415</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00416">416</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_skia_8cpp_source.html#l00456">DrawResize()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_skia_8cpp_source.html#l00457">DrawResize()</a>.</p>
 
 </div>
 </div>
@@ -2327,7 +2381,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#aafdafe42c5a776a8aeadd4c1aeb87bd9">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00622">622</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00623">623</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2522,7 +2576,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a185b056c70c54319c85c72246cd79458">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00801">801</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00802">802</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2746,7 +2800,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a5b28bcb1e3e7e72307ceee71ab7fbb5a">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00757">757</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00758">758</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>
@@ -2777,7 +2831,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html#a95d25b3727d935b6b6905133ace19c04">IGraphics</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00970">970</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00971">971</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
 </div>
 </div>

@@ -16,7 +16,7 @@ var searchData=
   ['amp_5fdb_13',['AMP_DB',['../group___i_plug_constants.html#ga82f7dcd25140746791e65301eabe3c14',1,'IPlugConstants.h']]],
   ['amptodb_14',['AmpToDB',['../group___i_plug_utilities.html#ga216035c9b6b2b5bfc30d78fbda3d8bc0',1,'IPlugUtilities.h']]],
   ['apibitmap_15',['APIBitmap',['../class_a_p_i_bitmap.html',1,'APIBitmap'],['../class_a_p_i_bitmap.html#a8a0071da3f2f6b904ad09b3bf1c6c841',1,'APIBitmap::APIBitmap()']]],
-  ['applylayerdropshadow_16',['ApplyLayerDropShadow',['../class_i_graphics.html#a9d98cb5d1729e74bfa83208ab8af2e6f',1,'IGraphics']]],
+  ['applylayerdropshadow_16',['ApplyLayerDropShadow',['../class_i_graphics_skia.html#ad55eaf5941948b0879e8113ff8dffe4d',1,'IGraphicsSkia::ApplyLayerDropShadow()'],['../class_i_graphics.html#a9d98cb5d1729e74bfa83208ab8af2e6f',1,'IGraphics::ApplyLayerDropShadow(ILayerPtr &amp;layer, const IShadow &amp;shadow)']]],
   ['applyshadowmask_17',['ApplyShadowMask',['../class_i_graphics.html#a62bbfa473b05138994e220cf24afdf3f',1,'IGraphics::ApplyShadowMask()'],['../class_i_graphics_skia.html#a4b59268677e8292e1b87cbbd6259aaf6',1,'IGraphicsSkia::ApplyShadowMask()'],['../class_i_graphics_nano_v_g.html#a05f3e9de20f9c654598f96eabdcf1012',1,'IGraphicsNanoVG::ApplyShadowMask()'],['../class_i_graphics_canvas.html#af6815a4819c949cf7baf0709293197b6',1,'IGraphicsCanvas::ApplyShadowMask()']]],
   ['appstate_18',['AppState',['../struct_i_plug_a_p_p_host_1_1_app_state.html',1,'IPlugAPPHost']]],
   ['appsupportpath_19',['AppSupportPath',['../_i_plug_paths_8h.html#adc3ebe2c27a9fae07f5fe4bdf22e6f55',1,'IPlugPaths.h']]],
