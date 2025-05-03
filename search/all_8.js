@@ -105,7 +105,7 @@ var searchData=
   ['initpitch_102',['InitPitch',['../class_i_param.html#adff5cb7a85f5642ac757a872791b9b3a',1,'IParam']]],
   ['initseconds_103',['InitSeconds',['../class_i_param.html#a9c5f7075133955d444a5fb3edabd57a5',1,'IParam']]],
   ['inset_104',['Inset',['../struct_i_r_e_c_t.html#a4f76a23dd9a0204a19b4b322dd943a08',1,'IRECT']]],
-  ['installedfont_105',['InstalledFont',['../class_i_graphics_win_1_1_installed_font.html',1,'IGraphicsWin']]],
+  ['installedwinfont_105',['InstalledWinFont',['../class_installed_win_font.html',1,'']]],
   ['int_106',['Int',['../class_i_param.html#ac623e04da5a2606287ace7c3f0afdcb8',1,'IParam']]],
   ['intersect_107',['Intersect',['../struct_i_r_e_c_t.html#a33156845f30bc7c14178b5366ae8aa93',1,'IRECT']]],
   ['intersects_108',['Intersects',['../struct_i_r_e_c_t.html#abd53f9b54480a042fd5e77cab73fbc9b',1,'IRECT']]],

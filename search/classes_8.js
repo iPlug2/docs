@@ -61,7 +61,7 @@ var searchData=
   ['imousemod_58',['IMouseMod',['../struct_i_mouse_mod.html',1,'']]],
   ['imultilinetextcontrol_59',['IMultiLineTextControl',['../class_i_multi_line_text_control.html',1,'']]],
   ['imultitouchcontrolbase_60',['IMultiTouchControlBase',['../class_i_multi_touch_control_base.html',1,'']]],
-  ['installedfont_61',['InstalledFont',['../class_i_graphics_win_1_1_installed_font.html',1,'IGraphicsWin']]],
+  ['installedwinfont_61',['InstalledWinFont',['../class_installed_win_font.html',1,'']]],
   ['ioconfig_62',['IOConfig',['../struct_i_o_config.html',1,'']]],
   ['ioscillator_63',['IOscillator',['../class_i_oscillator.html',1,'']]],
   ['ioscillator_3c_20double_20_3e_64',['IOscillator&lt; double &gt;',['../class_i_oscillator.html',1,'']]],
