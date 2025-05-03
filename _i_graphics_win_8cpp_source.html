@@ -1177,25 +1177,25 @@ $(function() {
 <div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>  wglMakeCurrent(NULL, NULL);</div>
 <div class="line"><a id="l01091" name="l01091"></a><span class="lineno"> 1091</span>  wglDeleteContext(mHGLRC);</div>
 <div class="line"><a id="l01092" name="l01092"></a><span class="lineno"> 1092</span>}</div>
-<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span> </div>
-<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span><span class="keywordtype">void</span> IGraphicsWin::ActivateGLContext()</div>
-<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span>{</div>
-<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
-<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>  mStartHDC = wglGetCurrentDC();</div>
-<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>  mStartHGLRC = wglGetCurrentContext();</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>  HDC dc = GetDC(mPlugWnd);</div>
-<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>  wglMakeCurrent(dc, mHGLRC);</div>
-<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>}</div>
-<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span> </div>
-<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span><span class="keywordtype">void</span> IGraphicsWin::DeactivateGLContext()</div>
-<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span>{</div>
-<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
-<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span>  ReleaseDC(mPlugWnd, (HDC) GetPlatformContext());</div>
-<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>  wglMakeCurrent(mStartHDC, mStartHGLRC); <span class="comment">// return current ctxt to start</span></div>
-<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span>}</div>
-<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01093" name="l01093"></a><span class="lineno"> 1093</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01094" name="l01094"></a><span class="lineno"> 1094</span> </div>
+<div class="line"><a id="l01095" name="l01095"></a><span class="lineno"> 1095</span><span class="keywordtype">void</span> IGraphicsWin::ActivateGLContext()</div>
+<div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>{</div>
+<div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
+<div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>  mStartHDC = wglGetCurrentDC();</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>  mStartHGLRC = wglGetCurrentContext();</div>
+<div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>  HDC dc = GetDC(mPlugWnd);</div>
+<div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>  wglMakeCurrent(dc, mHGLRC);</div>
+<div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01103" name="l01103"></a><span class="lineno"> 1103</span>}</div>
+<div class="line"><a id="l01104" name="l01104"></a><span class="lineno"> 1104</span> </div>
+<div class="line"><a id="l01105" name="l01105"></a><span class="lineno"> 1105</span><span class="keywordtype">void</span> IGraphicsWin::DeactivateGLContext()</div>
+<div class="line"><a id="l01106" name="l01106"></a><span class="lineno"> 1106</span>{</div>
+<div class="line"><a id="l01107" name="l01107"></a><span class="lineno"> 1107</span><span class="preprocessor">#ifdef IGRAPHICS_GL</span></div>
+<div class="line"><a id="l01108" name="l01108"></a><span class="lineno"> 1108</span>  ReleaseDC(mPlugWnd, (HDC) GetPlatformContext());</div>
+<div class="line"><a id="l01109" name="l01109"></a><span class="lineno"> 1109</span>  wglMakeCurrent(mStartHDC, mStartHGLRC); <span class="comment">// return current ctxt to start</span></div>
+<div class="line"><a id="l01110" name="l01110"></a><span class="lineno"> 1110</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l01111" name="l01111"></a><span class="lineno"> 1111</span>}</div>
 <div class="line"><a id="l01112" name="l01112"></a><span class="lineno"> 1112</span> </div>
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span>EMsgBoxResult IGraphicsWin::ShowMessageBox(<span class="keyword">const</span> <span class="keywordtype">char</span>* str, <span class="keyword">const</span> <span class="keywordtype">char</span>* title, EMsgBoxType type, IMsgBoxCompletionHandlerFunc completionHandler)</div>
 <div class="line"><a id="l01114" name="l01114"></a><span class="lineno"> 1114</span>{</div>
