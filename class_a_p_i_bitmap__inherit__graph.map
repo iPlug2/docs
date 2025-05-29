@@ -1,6 +1,5 @@
 <map id="APIBitmap" name="APIBitmap">
-<area shape="rect" id="node1" title="A base class interface for a bitmap abstraction around the different drawing back end bitmap represen..." alt="" coords="243,5,329,31"/>
-<area shape="rect" id="node2" href="$class_i_graphics_canvas_1_1_bitmap.html" title=" " alt="" coords="5,79,175,104"/>
-<area shape="rect" id="node3" href="$class_i_graphics_nano_v_g_1_1_bitmap.html" title=" " alt="" coords="199,79,373,104"/>
-<area shape="rect" id="node4" href="$class_i_graphics_skia_1_1_bitmap.html" title=" " alt="" coords="397,79,548,104"/>
+<area shape="rect" id="node1" title="A base class interface for a bitmap abstraction around the different drawing back end bitmap represen..." alt="" coords="143,5,229,31"/>
+<area shape="rect" id="node2" href="$class_i_graphics_nano_v_g_1_1_bitmap.html" title=" " alt="" coords="5,79,180,104"/>
+<area shape="rect" id="node3" href="$class_i_graphics_skia_1_1_bitmap.html" title=" " alt="" coords="204,79,355,104"/>
 </map>

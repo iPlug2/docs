@@ -1,6 +1,5 @@
 <map id="IGraphics" name="IGraphics">
-<area shape="rect" id="node1" title="The lowest level base class of an IGraphics context." alt="" coords="177,5,255,31"/>
-<area shape="rect" id="node2" href="$class_i_graphics_canvas.html" title="IGraphics draw class HTML5 canvas." alt="" coords="5,79,128,104"/>
-<area shape="rect" id="node3" href="$class_i_graphics_nano_v_g.html" title="IGraphics draw class using NanoVG" alt="" coords="152,79,280,104"/>
-<area shape="rect" id="node4" href="$class_i_graphics_skia.html" title="IGraphics draw class using Skia." alt="" coords="304,79,408,104"/>
+<area shape="rect" id="node1" title="The lowest level base class of an IGraphics context." alt="" coords="99,5,178,31"/>
+<area shape="rect" id="node2" href="$class_i_graphics_nano_v_g.html" title="IGraphics draw class using NanoVG" alt="" coords="5,79,133,104"/>
+<area shape="rect" id="node3" href="$class_i_graphics_skia.html" title="IGraphics draw class using Skia." alt="" coords="157,79,261,104"/>
 </map>

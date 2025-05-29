@@ -1,6 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_a_p_i_bitmap.html" title="A base class interface for a bitmap abstraction around the different drawing back end bitmap represen..." alt="" coords="5,55,91,80"/>
-<area shape="rect" id="node2" href="$class_i_graphics_canvas_1_1_bitmap.html" title=" " alt="" coords="141,5,311,31"/>
-<area shape="rect" id="node3" href="$class_i_graphics_nano_v_g_1_1_bitmap.html" title=" " alt="" coords="139,55,313,80"/>
-<area shape="rect" id="node4" href="$class_i_graphics_skia_1_1_bitmap.html" title=" " alt="" coords="151,104,301,129"/>
+<area shape="rect" id="node1" href="$class_a_p_i_bitmap.html" title="A base class interface for a bitmap abstraction around the different drawing back end bitmap represen..." alt="" coords="5,31,91,56"/>
+<area shape="rect" id="node2" href="$class_i_graphics_nano_v_g_1_1_bitmap.html" title=" " alt="" coords="139,5,313,31"/>
+<area shape="rect" id="node3" href="$class_i_graphics_skia_1_1_bitmap.html" title=" " alt="" coords="151,55,301,80"/>
 </map>
