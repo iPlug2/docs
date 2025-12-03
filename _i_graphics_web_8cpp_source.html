@@ -618,7 +618,7 @@ $(function() {
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  <span class="keywordtype">int</span> screenScale = (int) std::ceil(std::max(emscripten_get_device_pixel_ratio(), 1.));</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>  </div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>  <span class="comment">// Don&#39;t draw if there are no graphics or if assets are still loading</span></div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  <span class="keywordflow">if</span> (!gGraphics || !gGraphics-&gt;AssetsLoaded())</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>  <span class="keywordflow">if</span> (gGraphics == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>  </div>
 <div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>  <span class="keywordflow">if</span> (screenScale != gGraphics-&gt;GetScreenScale())</div>
