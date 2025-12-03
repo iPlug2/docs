@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>iPlug 2: Structure of an iPlug2 project</title>
+<title>iPlug 2: iPlug2 Project Structure</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,71 +78,197 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">Structure of an iPlug2 project </div></div>
+  <div class="headertitle"><div class="title">iPlug2 Project Structure </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >TODO: explain</p>
+<div class="textblock"><p >This document describes the modern structure of an iPlug2 project using <code>Examples/IPlugEffect</code> as a reference. Each iPlug2 project follows a standardized folder layout that supports cross-platform development and multiple plugin formats.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Project Root Files</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect-app.props   </td><td class="markdownTableBodyNone">Visual Studio 2022 property sheet to provide settings that are shared between standalone x86/x64    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect.cpp</code>   </td><td class="markdownTableBodyNone">Main plugin implementation source file containing the plugin logic and audio processing code    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect-app.vcxproj   </td><td class="markdownTableBodyNone">VS2022 project for standalone    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect.h</code>   </td><td class="markdownTableBodyNone">Plugin class header file with parameter definitions, class declaration, and public interface    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect-app.vcxproj.filters   </td><td class="markdownTableBodyNone">VS2022 settings file (don't edit manually)    </td></tr>
+<td class="markdownTableBodyNone"><code>config.h</code>   </td><td class="markdownTableBodyNone">Plugin configuration header defining plugin metadata, capabilities, and build settings    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect-app.vcxproj.user   </td><td class="markdownTableBodyNone">VS2022 settings file (don't edit manually)    </td></tr>
+<td class="markdownTableBodyNone"><code>README.md</code>   </td><td class="markdownTableBodyNone">Project description and basic information    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect-vst2.props   </td><td class="markdownTableBodyNone">VS2022 property sheet to provide settings that are shared between VST2 x86/x64    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect.sln</code>   </td><td class="markdownTableBodyNone">Visual Studio solution file for Windows builds (all plugin formats)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect-vst2.vcxproj   </td><td class="markdownTableBodyNone">VS2022 project for VST2    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect.code-workspace</code>   </td><td class="markdownTableBodyNone">VS Code workspace configuration file    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect-vst2.vcxproj.user   </td><td class="markdownTableBodyNone">VS2022 settings file (don't edit manually)    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect.RPP</code>   </td><td class="markdownTableBodyNone">REAPER project file for testing the plugin    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect-vst3.props   </td><td class="markdownTableBodyNone">VS2022 property sheet to provide settings that are shared between VST3 x86/x64    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect.xcworkspace/</code>   </td><td class="markdownTableBodyNone">Xcode workspace for macOS/iOS development (contains multiple projects)   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Configuration Files (&lt;tt&gt;config/&lt;/tt&gt;)</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect-vst3.vcxproj   </td><td class="markdownTableBodyNone">VS2022 project for VST3    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-mac.xcconfig</code>   </td><td class="markdownTableBodyNone">Xcode configuration file for macOS builds, includes common settings from <code>../../common-mac.xcconfig</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect-vst3.vcxproj.filters   </td><td class="markdownTableBodyNone">VS2022 settings file (don't edit manually)    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-ios.xcconfig</code>   </td><td class="markdownTableBodyNone">Xcode configuration file for iOS builds    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect-vst3.vcxproj.user   </td><td class="markdownTableBodyNone">VS2022 settings file (don't edit manually)    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-win.props</code>   </td><td class="markdownTableBodyNone">Visual Studio property sheet for Windows builds, includes common settings from <code>../../common-win.props</code>    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect.cpp   </td><td class="markdownTableBodyNone">Source code - plugin's implementation    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-web.mk</code>   </td><td class="markdownTableBodyNone">Makefile configuration for Web Audio Module (WAM) builds using Emscripten   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Project Files (&lt;tt&gt;projects/&lt;/tt&gt;)</h1>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Windows Visual Studio Projects</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect.exp   </td><td class="markdownTableBodyNone">macOS auv2 symbol exports file    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-app.vcxproj</code>   </td><td class="markdownTableBodyNone">Standalone application project for Windows    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect.h   </td><td class="markdownTableBodyNone">Source code - plugin's interface    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-vst2.vcxproj</code>   </td><td class="markdownTableBodyNone">VST2 plugin project for Windows    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect.rc   </td><td class="markdownTableBodyNone">Windows .rc resource file    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-vst3.vcxproj</code>   </td><td class="markdownTableBodyNone">VST3 plugin project for Windows    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect.sln   </td><td class="markdownTableBodyNone">VS2022 solution for Windows VST2, VST3 and standalone builds    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-clap.vcxproj</code>   </td><td class="markdownTableBodyNone">CLAP plugin project for Windows    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">IPlugEffect.xcconfig   </td><td class="markdownTableBodyNone">Xcode xcconfig file to provide settings that span various targets (includes ../../common-mac.xcconfig)    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-aax.vcxproj</code>   </td><td class="markdownTableBodyNone">AAX plugin project for Windows    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">IPlugEffect.xcodeproj   </td><td class="markdownTableBodyNone">Main xcode project (3.2) for all macOS builds    </td></tr>
+<td class="markdownTableBodyNone"><code>*.vcxproj.filters</code>   </td><td class="markdownTableBodyNone">Visual Studio filter files (auto-generated, defines source file organization in IDE)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">resource.h   </td><td class="markdownTableBodyNone">Source code - plugin's characteristices    </td></tr>
+<td class="markdownTableBodyNone"><code>*.vcxproj.user</code>   </td><td class="markdownTableBodyNone">Visual Studio user settings files (auto-generated, contains local build preferences)   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md12"></a>
+macOS Xcode Projects</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect-macOS.xcodeproj/</code>   </td><td class="markdownTableBodyNone">Main Xcode project for macOS builds (APP, VST2, VST3, AU, CLAP, AAX targets)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">resources/English.lproj/   </td><td class="markdownTableBodyNone">Interface Builder folder for macOS standalone menu    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS.xcodeproj/</code>   </td><td class="markdownTableBodyNone">Xcode project for iOS builds (AUv3 and standalone app)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">resources/English.lproj/InfoPlist.strings   </td><td class="markdownTableBodyNone">Interface Builder file for macOS standalone menu    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-macOS.entitlements</code>   </td><td class="markdownTableBodyNone">macOS app entitlements file for sandboxing and security    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">resources/English.lproj/MainMenu.xib   </td><td class="markdownTableBodyNone">Interface Builder file for macOS standalone menu    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS.entitlements</code>   </td><td class="markdownTableBodyNone">iOS app entitlements file for App Store distribution   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Web Audio Module (WAM)</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">resources/img/knob.png   </td><td class="markdownTableBodyNone">Plugin GUI image resource    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-wam-controller.mk</code>   </td><td class="markdownTableBodyNone">Makefile for WAM controller build (UI)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">resources/IPlugEffect-AU-Info.plist   </td><td class="markdownTableBodyNone">info.plist for AU    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-wam-processor.mk</code>   </td><td class="markdownTableBodyNone">Makefile for WAM processor build (AudioWorklet)   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md14"></a>
+Resource Files (&lt;tt&gt;resources/&lt;/tt&gt;)</h1>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Platform-Specific Resources</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">resources/IPlugEffect-macOS-Info.plist   </td><td class="markdownTableBodyNone">info.plist for macOS app    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-macOS-Info.plist</code>   </td><td class="markdownTableBodyNone">macOS standalone app bundle Info.plist    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">resources/IPlugEffect-VST2-Info.plist   </td><td class="markdownTableBodyNone">info.plist for VST2    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS-Info.plist</code>   </td><td class="markdownTableBodyNone">iOS standalone app bundle Info.plist    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">resources/IPlugEffect-VST3-Info.plist   </td><td class="markdownTableBodyNone">info.plist for VST3    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-AU-Info.plist</code>   </td><td class="markdownTableBodyNone">Audio Unit plugin Info.plist (macOS)    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">resources/IPlugEffect.icns   </td><td class="markdownTableBodyNone">macOS icon for all bundles .vst/vst3/.component/.app/.dpm    </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-VST2-Info.plist</code>   </td><td class="markdownTableBodyNone">VST2 plugin bundle Info.plist (macOS)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">resources/IPlugEffect.ico   </td><td class="markdownTableBodyNone">Windows icon for standalone   </td></tr>
+<td class="markdownTableBodyNone"><code>IPlugEffect-VST3-Info.plist</code>   </td><td class="markdownTableBodyNone">VST3 plugin bundle Info.plist (macOS)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>IPlugEffect-CLAP-Info.plist</code>   </td><td class="markdownTableBodyNone">CLAP plugin bundle Info.plist (macOS)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect-AAX-Info.plist</code>   </td><td class="markdownTableBodyNone">AAX plugin bundle Info.plist (macOS)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>IPlugEffect-macOS-AUv3-Info.plist</code>   </td><td class="markdownTableBodyNone">AUv3 plugin Info.plist (macOS)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect-macOS-AUv3Framework-Info.plist</code>   </td><td class="markdownTableBodyNone">AUv3 framework Info.plist (macOS)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS-AUv3-Info.plist</code>   </td><td class="markdownTableBodyNone">AUv3 plugin Info.plist (iOS)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS-AUv3Framework-Info.plist</code>   </td><td class="markdownTableBodyNone">AUv3 framework Info.plist (iOS)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>IPlugEffect-Pages.xml</code>   </td><td class="markdownTableBodyNone">AAX plugin page layout definition   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Windows Resources</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>main.rc</code>   </td><td class="markdownTableBodyNone">Windows resource file defining version info, icons, and metadata (also used by macOS via SWELL)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>resource.h</code>   </td><td class="markdownTableBodyNone">Windows resource header with resource ID definitions    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect.ico</code>   </td><td class="markdownTableBodyNone">Windows application icon   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md17"></a>
+macOS/iOS Interface Files</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>main.rc_mac_dlg</code>   </td><td class="markdownTableBodyNone">SWELL dialog resource generated from main.rc    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>main.rc_mac_menu</code>   </td><td class="markdownTableBodyNone">SWELL menu resource generated from main.rc    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect-macOS-MainMenu.xib</code>   </td><td class="markdownTableBodyNone">macOS standalone app menu bar definition    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS.storyboard</code>   </td><td class="markdownTableBodyNone">iOS app main storyboard    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS-LaunchScreen.storyboard</code>   </td><td class="markdownTableBodyNone">iOS app launch screen    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>IPlugEffect-iOS-MainInterface.storyboard</code>   </td><td class="markdownTableBodyNone">iOS app main interface    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugAUViewController_vIPlugEffect.xib</code>   </td><td class="markdownTableBodyNone">Audio Unit view controller interface    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>AUv3Framework.h</code>   </td><td class="markdownTableBodyNone">AUv3 framework header    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>IPlugEffect.icns</code>   </td><td class="markdownTableBodyNone">macOS bundle icon (for .app, .vst, .vst3, .component bundles)   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md18"></a>
+App Icons and Assets</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Images.xcassets/</code>   </td><td class="markdownTableBodyNone">iOS app icon asset catalog    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>Images.xcassets/IPlugEffectiOSAppIcon.appiconset/</code>   </td><td class="markdownTableBodyNone">iOS app icons in various sizes   </td></tr>
+</table>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Fonts and Image Resources</h2>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>fonts/Roboto-Regular.ttf</code>   </td><td class="markdownTableBodyNone">Default font used by the plugin UI    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>img/</code>   </td><td class="markdownTableBodyNone">Directory for plugin-specific image resources (knobs, backgrounds, etc.)   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md20"></a>
+Build Scripts (&lt;tt&gt;scripts/&lt;/tt&gt;)</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>postbuild-win.bat</code>   </td><td class="markdownTableBodyNone">Windows post-build script (runs after compilation, e.g., for code signing)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>prebuild-win.bat</code>   </td><td class="markdownTableBodyNone">Windows pre-build script (runs before compilation)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>prepare_resources-win.py</code>   </td><td class="markdownTableBodyNone">Python script to prepare Windows resources before build    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>prepare_resources-mac.py</code>   </td><td class="markdownTableBodyNone">Python script to prepare macOS resources before build    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>prepare_resources-ios.py</code>   </td><td class="markdownTableBodyNone">Python script to prepare iOS resources before build    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>makedist-web.sh</code>   </td><td class="markdownTableBodyNone">Shell script to build/create Web Audio Module (WAM) package   </td></tr>
 </table>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
