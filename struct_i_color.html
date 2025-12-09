@@ -134,6 +134,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9884c1a4f8fea10762f719f6932bbdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Hue, Saturation and Luminance of the color.  <a href="struct_i_color.html#a9884c1a4f8fea10762f719f6932bbdb1">More...</a><br /></td></tr>
 <tr class="separator:a9884c1a4f8fea10762f719f6932bbdb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78e2ca9c5fd2956a4b35d79772087553"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_color.html#a78e2ca9c5fd2956a4b35d79772087553">GetLuminosity</a> () const</td></tr>
+<tr class="memdesc:a78e2ca9c5fd2956a4b35d79772087553"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the lightness of the color (HSL lightness component)  <a href="struct_i_color.html#a78e2ca9c5fd2956a4b35d79772087553">More...</a><br /></td></tr>
 <tr class="separator:a78e2ca9c5fd2956a4b35d79772087553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a724e096ed1e4730987760984070ae8ac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_color.html#a724e096ed1e4730987760984070ae8ac">ToColorCode</a> () const</td></tr>
 <tr class="memdesc:a724e096ed1e4730987760984070ae8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the <a class="el" href="struct_i_color.html" title="Used to manage color data, independent of draw class/platform.">IColor</a> to a single int (no alpha)  <a href="struct_i_color.html#a724e096ed1e4730987760984070ae8ac">More...</a><br /></td></tr>
@@ -659,9 +660,9 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000091">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000092">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Gets the lightness of the color (HSL lightness component) </p>
+<dl class="section return"><dt>Returns</dt><dd>The lightness value (0-255), calculated as (min(R,G,B) + max(R,G,B)) / 2 </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00345">345</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 

@@ -124,6 +124,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afb8b0afb31588b14b223ea8f1a68250c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after a platform view is destroyed, so that drawing classes can e.g.  <a href="class_i_graphics_skia.html#afb8b0afb31588b14b223ea8f1a68250c">More...</a><br /></td></tr>
 <tr class="separator:afb8b0afb31588b14b223ea8f1a68250c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15eb0f27e495f5446057ebe9604dda1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#a15eb0f27e495f5446057ebe9604dda1b">DrawResize</a> () override</td></tr>
+<tr class="memdesc:a15eb0f27e495f5446057ebe9604dda1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to update the drawing surface after a resize.  <a href="class_i_graphics_skia.html#a15eb0f27e495f5446057ebe9604dda1b">More...</a><br /></td></tr>
 <tr class="separator:a15eb0f27e495f5446057ebe9604dda1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc211e5dbaf1d754b9e046d108fc7e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#adc211e5dbaf1d754b9e046d108fc7e56">DrawBitmap</a> (const <a class="el" href="class_i_bitmap.html">IBitmap</a> &amp;bitmap, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;dest, int srcX, int srcY, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend) override</td></tr>
 <tr class="memdesc:adc211e5dbaf1d754b9e046d108fc7e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a bitmap (raster) image to the graphics context.  <a href="class_i_graphics_skia.html#adc211e5dbaf1d754b9e046d108fc7e56">More...</a><br /></td></tr>
@@ -503,8 +504,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PathTransform
 <tr class="memitem:a324015b47c2337fc734f49c808b9c379 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual ECursor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a324015b47c2337fc734f49c808b9c379">SetMouseCursor</a> (ECursor cursorType=ECursor::ARROW)</td></tr>
 <tr class="memdesc:a324015b47c2337fc734f49c808b9c379 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the mouse cursor to one of ECursor (implementations should return the result of the base implementation)  <a href="class_i_graphics.html#a324015b47c2337fc734f49c808b9c379">More...</a><br /></td></tr>
 <tr class="separator:a324015b47c2337fc734f49c808b9c379 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade42e8d5a3441092bdb868b11c7806c9 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ade42e8d5a3441092bdb868b11c7806c9">ForceEndUserEdit</a> ()=0</td></tr>
-<tr class="memdesc:ade42e8d5a3441092bdb868b11c7806c9 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call to force end text entry (will cancel any half input text.  <a href="class_i_graphics.html#ade42e8d5a3441092bdb868b11c7806c9">More...</a><br /></td></tr>
+<tr class="memitem:ade42e8d5a3441092bdb868b11c7806c9 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top"><a id="ade42e8d5a3441092bdb868b11c7806c9" name="ade42e8d5a3441092bdb868b11c7806c9"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ForceEndUserEdit</b> ()=0</td></tr>
+<tr class="memdesc:ade42e8d5a3441092bdb868b11c7806c9 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call to force end text entry (will cancel any partial text input) <br /></td></tr>
 <tr class="separator:ade42e8d5a3441092bdb868b11c7806c9 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52e9057fbbb06a8b551b719de4fcc461 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a52e9057fbbb06a8b551b719de4fcc461">OpenWindow</a> (void *pParentWnd)=0</td></tr>
 <tr class="memdesc:a52e9057fbbb06a8b551b719de4fcc461 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a new platform view for this graphics context.  <a href="class_i_graphics.html#a52e9057fbbb06a8b551b719de4fcc461">More...</a><br /></td></tr>
@@ -530,8 +532,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memitem:a1ef20bf321cddcef9c30ec8f7ae001ba inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a1ef20bf321cddcef9c30ec8f7ae001ba">InitiateExternalFileDragDrop</a> (const char *path, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;iconBounds)</td></tr>
 <tr class="memdesc:a1ef20bf321cddcef9c30ec8f7ae001ba inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate an drag-n-drop operation of an existing file, to be dropped outside of the current window.  <a href="class_i_graphics.html#a1ef20bf321cddcef9c30ec8f7ae001ba">More...</a><br /></td></tr>
 <tr class="separator:a1ef20bf321cddcef9c30ec8f7ae001ba inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7960f9bd277f40380d86194e0716eddf inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a7960f9bd277f40380d86194e0716eddf">UpdateTooltips</a> ()=0</td></tr>
-<tr class="memdesc:a7960f9bd277f40380d86194e0716eddf inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you modify control tool tips at runtime.  <a href="class_i_graphics.html#a7960f9bd277f40380d86194e0716eddf">More...</a><br /></td></tr>
+<tr class="memitem:a7960f9bd277f40380d86194e0716eddf inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top"><a id="a7960f9bd277f40380d86194e0716eddf" name="a7960f9bd277f40380d86194e0716eddf"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateTooltips</b> ()=0</td></tr>
+<tr class="memdesc:a7960f9bd277f40380d86194e0716eddf inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this if you modify control tool tips at runtime to refresh the platform tooltip state. <br /></td></tr>
 <tr class="separator:a7960f9bd277f40380d86194e0716eddf inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe2b417e275ced32e4f7cadc6d435bf inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual EMsgBoxResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#abbe2b417e275ced32e4f7cadc6d435bf">ShowMessageBox</a> (const char *str, const char *title, EMsgBoxType type, IMsgBoxCompletionHandlerFunc completionHandler=nullptr)=0</td></tr>
 <tr class="memdesc:abbe2b417e275ced32e4f7cadc6d435bf inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pop up a modal platform message box dialog.  <a href="class_i_graphics.html#abbe2b417e275ced32e4f7cadc6d435bf">More...</a><br /></td></tr>
@@ -546,7 +549,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memdesc:a71b874d1960c1bb5c97fdb9ad796acf8 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a platform color chooser dialog.  <a href="class_i_graphics.html#a71b874d1960c1bb5c97fdb9ad796acf8">More...</a><br /></td></tr>
 <tr class="separator:a71b874d1960c1bb5c97fdb9ad796acf8 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d23572c0f154262ff7dc7387bf7c3d1 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a0d23572c0f154262ff7dc7387bf7c3d1">OpenURL</a> (const char *url, const char *msgWindowTitle=0, const char *confirmMsg=0, const char *errMsgOnFailure=0)=0</td></tr>
-<tr class="memdesc:a0d23572c0f154262ff7dc7387bf7c3d1 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a URL in the platform’s default browser.  <a href="class_i_graphics.html#a0d23572c0f154262ff7dc7387bf7c3d1">More...</a><br /></td></tr>
+<tr class="memdesc:a0d23572c0f154262ff7dc7387bf7c3d1 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a URL in the platform's default browser.  <a href="class_i_graphics.html#a0d23572c0f154262ff7dc7387bf7c3d1">More...</a><br /></td></tr>
 <tr class="separator:a0d23572c0f154262ff7dc7387bf7c3d1 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4a69b94b206c2f294cdbcf8a2118a77 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#ab4a69b94b206c2f294cdbcf8a2118a77">GetPlatformAPIStr</a> ()</td></tr>
 <tr class="separator:ab4a69b94b206c2f294cdbcf8a2118a77 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -629,6 +632,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="memdesc:abd37a46dc9c22498faa67874f3f59019 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum and maximum (draw) scaling values.  <a href="class_i_graphics.html#abd37a46dc9c22498faa67874f3f59019">More...</a><br /></td></tr>
 <tr class="separator:abd37a46dc9c22498faa67874f3f59019 inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a095c4538eeda7ff3647214563bb559ec inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a095c4538eeda7ff3647214563bb559ec">Resize</a> (int w, int h, float scale, bool needsPlatformResize=true)</td></tr>
+<tr class="memdesc:a095c4538eeda7ff3647214563bb559ec inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the graphics context to new dimensions and scale.  <a href="class_i_graphics.html#a095c4538eeda7ff3647214563bb559ec">More...</a><br /></td></tr>
 <tr class="separator:a095c4538eeda7ff3647214563bb559ec inherit pub_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe74f3e589d8c2d0b9f9c79ac25bbb0 inherit pub_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#adbe74f3e589d8c2d0b9f9c79ac25bbb0">SetStrictDrawing</a> (bool strict)</td></tr>
 <tr class="memdesc:adbe74f3e589d8c2d0b9f9c79ac25bbb0 inherit pub_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables strict drawing mode.  <a href="class_i_graphics.html#adbe74f3e589d8c2d0b9f9c79ac25bbb0">More...</a><br /></td></tr>
@@ -989,8 +993,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>CloseWindow</
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2f6784941508803735ca98c103236371"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#a2f6784941508803735ca98c103236371">DoMeasureText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const override</td></tr>
+<tr class="memdesc:a2f6784941508803735ca98c103236371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to measure text dimensions.  <a href="class_i_graphics_skia.html#a2f6784941508803735ca98c103236371">More...</a><br /></td></tr>
 <tr class="separator:a2f6784941508803735ca98c103236371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22c49cf7d0d107079643ad56480d4b22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#a22c49cf7d0d107079643ad56480d4b22">DoDrawText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend) override</td></tr>
+<tr class="memdesc:a22c49cf7d0d107079643ad56480d4b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to draw text.  <a href="class_i_graphics_skia.html#a22c49cf7d0d107079643ad56480d4b22">More...</a><br /></td></tr>
 <tr class="separator:a22c49cf7d0d107079643ad56480d4b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a477929f44c522ea83ba2cc44127eb2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_skia.html#a7a477929f44c522ea83ba2cc44127eb2">LoadAPIFont</a> (const char *fontID, const PlatformFontPtr &amp;font) override</td></tr>
 <tr class="memdesc:a7a477929f44c522ea83ba2cc44127eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Drawing API method to load a font from a PlatformFontPtr, called internally.  <a href="class_i_graphics_skia.html#a7a477929f44c522ea83ba2cc44127eb2">More...</a><br /></td></tr>
@@ -1047,12 +1053,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a7285ac6a3514a343f697cd2eabd5e768 inherit pro_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Search the static storage cache for a bitmap image resource matching the target scale.  <a href="class_i_graphics.html#a7285ac6a3514a343f697cd2eabd5e768">More...</a><br /></td></tr>
 <tr class="separator:a7285ac6a3514a343f697cd2eabd5e768 inherit pro_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056c8ae37821338c32091e6b228429a9 inherit pro_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a056c8ae37821338c32091e6b228429a9">DoMeasureText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds) const =0</td></tr>
+<tr class="memdesc:a056c8ae37821338c32091e6b228429a9 inherit pro_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to measure text dimensions.  <a href="class_i_graphics.html#a056c8ae37821338c32091e6b228429a9">More...</a><br /></td></tr>
 <tr class="separator:a056c8ae37821338c32091e6b228429a9 inherit pro_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfee1fdc10a629de6ef03cad85ad5a65 inherit pro_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#abfee1fdc10a629de6ef03cad85ad5a65">DoDrawText</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const char *str, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="struct_i_blend.html">IBlend</a> *pBlend=nullptr)=0</td></tr>
+<tr class="memdesc:abfee1fdc10a629de6ef03cad85ad5a65 inherit pro_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method to draw text.  <a href="class_i_graphics.html#abfee1fdc10a629de6ef03cad85ad5a65">More...</a><br /></td></tr>
 <tr class="separator:abfee1fdc10a629de6ef03cad85ad5a65 inherit pro_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4aa1c246f3d75dc4ed9b9c76585d749d inherit pro_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a4aa1c246f3d75dc4ed9b9c76585d749d">DoMeasureTextRotation</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;rect) const</td></tr>
+<tr class="memdesc:a4aa1c246f3d75dc4ed9b9c76585d749d inherit pro_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures text bounds accounting for rotation.  <a href="class_i_graphics.html#a4aa1c246f3d75dc4ed9b9c76585d749d">More...</a><br /></td></tr>
 <tr class="separator:a4aa1c246f3d75dc4ed9b9c76585d749d inherit pro_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a7fc3df60465be431ea704623a1f1a inherit pro_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a55a7fc3df60465be431ea704623a1f1a">CalculateTextRotation</a> (const <a class="el" href="struct_i_text.html">IText</a> &amp;text, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;rect, double &amp;tx, double &amp;ty) const</td></tr>
+<tr class="memdesc:a55a7fc3df60465be431ea704623a1f1a inherit pro_methods_class_i_graphics"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates rotation parameters for text drawing.  <a href="class_i_graphics.html#a55a7fc3df60465be431ea704623a1f1a">More...</a><br /></td></tr>
 <tr class="separator:a55a7fc3df60465be431ea704623a1f1a inherit pro_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a407a30ad8dc12d5e9d282e6175402c78 inherit pro_methods_class_i_graphics"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics.html#a407a30ad8dc12d5e9d282e6175402c78">GetBackingPixelScale</a> () const</td></tr>
 <tr class="separator:a407a30ad8dc12d5e9d282e6175402c78 inherit pro_methods_class_i_graphics"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1327,7 +1337,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00499">499</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00880">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01121">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01109">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l00880">IGraphics::BeginFrame()</a>, <a class="el" href="_i_graphics_8h_source.html#l01122">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01106">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>
@@ -1423,13 +1433,7 @@ Additional Inherited Members</h2></td></tr>
     <tr><td class="paramname">width</td><td>The desired width </td></tr>
     <tr><td class="paramname">height</td><td>The desired height </td></tr>
     <tr><td class="paramname">scale</td><td>The scale in relation to 1:1 pixels </td></tr>
-    <tr><td class="paramname">drawScale</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000032">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+    <tr><td class="paramname">drawScale</td><td>The current draw scale for the graphics context </td></tr>
     <tr><td class="paramname">cacheable</td><td>Used to make sure the underlying bitmap can be shared between plug-in instances </td></tr>
   </table>
   </dd>
@@ -1487,35 +1491,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000046">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Internal method to draw text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td></td></tr>
+    <tr><td class="paramname">text</td><td>The text style to use for drawing </td></tr>
+    <tr><td class="paramname">str</td><td>The string to draw </td></tr>
+    <tr><td class="paramname">bounds</td><td>The bounding rectangle for the text </td></tr>
+    <tr><td class="paramname">pBlend</td><td>Optional blend mode </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000047">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000048">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bounds</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000049">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pBlend</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000050">Todo:</a></b></dt><dd></dd></dl>
 
 <p>Implements <a class="el" href="class_i_graphics.html#abfee1fdc10a629de6ef03cad85ad5a65">IGraphics</a>.</p>
 
@@ -1564,29 +1550,17 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000042">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Internal method to measure text dimensions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td></td></tr>
+    <tr><td class="paramname">text</td><td>The text style to use for measurement </td></tr>
+    <tr><td class="paramname">str</td><td>The string to measure </td></tr>
+    <tr><td class="paramname">bounds</td><td>Output rectangle updated with the measured text bounds </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000043">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">str</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000044">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">bounds</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000045">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>The width of the text </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The width of the measured text </dd></dl>
 
 <p>Implements <a class="el" href="class_i_graphics.html#a056c8ae37821338c32091e6b228429a9">IGraphics</a>.</p>
 
@@ -1823,13 +1797,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000023">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Called to update the drawing surface after a resize. </p>
 
 <p>Reimplemented from <a class="el" href="class_i_graphics.html">IGraphics</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00457">457</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01121">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01109">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l01122">IGraphics::GetScreenScale()</a>, <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01106">IGraphics::WindowWidth()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_skia_8cpp_source.html#l00416">OnViewInitialized()</a>.</p>
 
@@ -1864,7 +1839,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_skia_8cpp_source.html#l00547">547</a> of file <a class="el" href="_i_graphics_skia_8cpp_source.html">IGraphicsSkia.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00935">IGraphics::GetPlatformContext()</a>, <a class="el" href="_i_graphics_8h_source.html#l01121">IGraphics::GetScreenScale()</a>, <a class="el" href="class_i_graphics.html#a290c693845898cd3b89f33175ac590c8">IGraphics::GetWindow()</a>, <a class="el" href="_i_graphics_8h_source.html#l01109">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01105">IGraphics::WindowWidth()</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8h_source.html#l00935">IGraphics::GetPlatformContext()</a>, <a class="el" href="_i_graphics_8h_source.html#l01122">IGraphics::GetScreenScale()</a>, <a class="el" href="class_i_graphics.html#a290c693845898cd3b89f33175ac590c8">IGraphics::GetWindow()</a>, <a class="el" href="_i_graphics_8h_source.html#l01110">IGraphics::WindowHeight()</a>, and <a class="el" href="_i_graphics_8h_source.html#l01106">IGraphics::WindowWidth()</a>.</p>
 
 </div>
 </div>

@@ -112,12 +112,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ad5ba98c7cfa1fa2258d041c3ae5e2cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the matrix for a skew transform.  <a href="struct_i_matrix.html#ad5ba98c7cfa1fa2258d041c3ae5e2cf6">More...</a><br /></td></tr>
 <tr class="separator:ad5ba98c7cfa1fa2258d041c3ae5e2cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaf6b5b07e03a5fd7fc131659f92d8ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_matrix.html#afaf6b5b07e03a5fd7fc131659f92d8ca">TransformPoint</a> (double &amp;x, double &amp;y, double x0, double y0) const</td></tr>
-<tr class="memdesc:afaf6b5b07e03a5fd7fc131659f92d8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the point x, y.  <a href="struct_i_matrix.html#afaf6b5b07e03a5fd7fc131659f92d8ca">More...</a><br /></td></tr>
+<tr class="memdesc:afaf6b5b07e03a5fd7fc131659f92d8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms a point using this matrix.  <a href="struct_i_matrix.html#afaf6b5b07e03a5fd7fc131659f92d8ca">More...</a><br /></td></tr>
 <tr class="separator:afaf6b5b07e03a5fd7fc131659f92d8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f6766f3c47165f574d7ef7ab7db53e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_matrix.html#a73f6766f3c47165f574d7ef7ab7db53e">TransformPoint</a> (double &amp;x, double &amp;y) const</td></tr>
 <tr class="memdesc:a73f6766f3c47165f574d7ef7ab7db53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms the point x, y with the matrix.  <a href="struct_i_matrix.html#a73f6766f3c47165f574d7ef7ab7db53e">More...</a><br /></td></tr>
 <tr class="separator:a73f6766f3c47165f574d7ef7ab7db53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7951a277660fe257034eb191c2be87c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_matrix.html">IMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_matrix.html#a7951a277660fe257034eb191c2be87c9">Transform</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;before, const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;after)</td></tr>
+<tr class="memdesc:a7951a277660fe257034eb191c2be87c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up a transformation matrix to map one rectangle to another.  <a href="struct_i_matrix.html#a7951a277660fe257034eb191c2be87c9">More...</a><br /></td></tr>
 <tr class="separator:a7951a277660fe257034eb191c2be87c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66bbf587b5f9c13f46a48d2f12cd18d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_matrix.html">IMatrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_matrix.html#a66bbf587b5f9c13f46a48d2f12cd18d8">Transform</a> (const <a class="el" href="struct_i_matrix.html">IMatrix</a> &amp;m)</td></tr>
 <tr class="memdesc:a66bbf587b5f9c13f46a48d2f12cd18d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform this matrix with another.  <a href="struct_i_matrix.html#a66bbf587b5f9c13f46a48d2f12cd18d8">More...</a><br /></td></tr>
@@ -498,22 +499,16 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000104">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Sets up a transformation matrix to map one rectangle to another. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">before</td><td></td></tr>
+    <tr><td class="paramname">before</td><td>The source rectangle </td></tr>
+    <tr><td class="paramname">after</td><td>The destination rectangle </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000105">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">after</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000106">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_i_matrix.html" title="Used to store transformation matrices.">IMatrix</a>&amp; The result of the transform </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to this matrix after transformation </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02077">2077</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
@@ -618,24 +613,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Transforms the point x, y. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000101">Todo:</a></b></dt><dd></dd></dl>
+<p>Transforms a point using this matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>The x coordinate to transform </td></tr>
-    <tr><td class="paramname">y</td><td>The y coordinate to transform </td></tr>
-    <tr><td class="paramname">x0</td><td></td></tr>
+    <tr><td class="paramname">x</td><td>Output x coordinate after transformation </td></tr>
+    <tr><td class="paramname">y</td><td>Output y coordinate after transformation </td></tr>
+    <tr><td class="paramname">x0</td><td>Input x coordinate </td></tr>
+    <tr><td class="paramname">y0</td><td>Input y coordinate </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000102">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">y0</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000103">Todo:</a></b></dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02059">2059</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
