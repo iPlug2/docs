@@ -206,7 +206,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a42747917c3106035b7265145e4bc624e"><td class="mdescLeft">&#160;</td><td class="mdescRight">SendMidiMsgFromUI (Abbreviation: SMMFUI) This method should be used when sending a MIDI message from the UI.  <a href="class_i_editor_delegate.html#a42747917c3106035b7265145e4bc624e">More...</a><br /></td></tr>
 <tr class="separator:a42747917c3106035b7265145e4bc624e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0a2c692543f2793bf68b3f24b20b8fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#ab0a2c692543f2793bf68b3f24b20b8fa">SendSysexMsgFromUI</a> (const <a class="el" href="struct_i_sys_ex.html">ISysEx</a> &amp;msg)</td></tr>
-<tr class="memdesc:ab0a2c692543f2793bf68b3f24b20b8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">SendMidiMsgFromUI (Abbreviation: SSMFUI) If a plug-in can send Sysex data as a result of actions in the user interface, this method can be used.  <a href="class_i_editor_delegate.html#ab0a2c692543f2793bf68b3f24b20b8fa">More...</a><br /></td></tr>
+<tr class="memdesc:ab0a2c692543f2793bf68b3f24b20b8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">SendSysexMsgFromUI (Abbreviation: SSMFUI) If a plug-in can send Sysex data as a result of actions in the user interface, this method can be used.  <a href="class_i_editor_delegate.html#ab0a2c692543f2793bf68b3f24b20b8fa">More...</a><br /></td></tr>
 <tr class="separator:ab0a2c692543f2793bf68b3f24b20b8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5b4aa88ab199c88796c1df421c5f8c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#aa5b4aa88ab199c88796c1df421c5f8c3">SendArbitraryMsgFromUI</a> (int msgTag, int ctrlTag=kNoTag, int dataSize=0, const void *pData=nullptr)</td></tr>
 <tr class="memdesc:aa5b4aa88ab199c88796c1df421c5f8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">SendArbitraryMsgFromUI (Abbreviation: SAMFUI)  <a href="class_i_editor_delegate.html#aa5b4aa88ab199c88796c1df421c5f8c3">More...</a><br /></td></tr>
@@ -220,6 +220,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a787a79aaae0a471906b92a4b9c93aeac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#a787a79aaae0a471906b92a4b9c93aeac">SetEditorSize</a> (int width, int height)</td></tr>
 <tr class="separator:a787a79aaae0a471906b92a4b9c93aeac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7210e7a0b067602ee62941a53b6d0e29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#a7210e7a0b067602ee62941a53b6d0e29">SetSizeConstraints</a> (int widthLo, int widthHi, int heightLo, int heightHi)</td></tr>
+<tr class="memdesc:a7210e7a0b067602ee62941a53b6d0e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the minimum and maximum size constraints for the editor window.  <a href="class_i_editor_delegate.html#a7210e7a0b067602ee62941a53b6d0e29">More...</a><br /></td></tr>
 <tr class="separator:a7210e7a0b067602ee62941a53b6d0e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac22075cdea78bd44f48db4fca95c3198"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_editor_delegate.html#ac22075cdea78bd44f48db4fca95c3198">GetEditorWidth</a> () const</td></tr>
 <tr class="separator:ac22075cdea78bd44f48db4fca95c3198"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -486,7 +487,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if the parameters fell withing the permitted range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00322">322</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00321">321</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00049">Clip()</a>.</p>
 
@@ -520,7 +521,7 @@ Friends</h2></td></tr>
 
 <p>This method is needed, for remote editors to avoid a feedback loop. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00286">286</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00285">285</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -550,7 +551,7 @@ Friends</h2></td></tr>
 
 <p>This method is needed, for remote editors to avoid a feedback loop. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00289">289</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00288">288</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -693,7 +694,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The height of the plug-in editor in pixels </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00311">311</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00310">310</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -721,7 +722,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>The width of the plug-in editor in pixels </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00308">308</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00307">307</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -748,7 +749,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00316">316</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00315">315</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -775,7 +776,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00314">314</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00313">313</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -802,7 +803,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00315">315</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00314">314</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -829,7 +830,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00313">313</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00312">312</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -1656,7 +1657,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00282">282</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00281">281</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_web_view_editor_delegate_8h_source.html#l00125">WebViewEditorDelegate::OnMessageFromWebView()</a>, <a class="el" href="_i_v_spectrum_analyzer_control_8h_source.html#l00120">IVSpectrumAnalyzerControl&lt; MAXNC, MAX_FFT_SIZE &gt;::OnPopupMenuSelection()</a>, and <a class="el" href="_i_v_keyboard_control_8h_source.html#l00837">IWheelControl::OnPopupMenuSelection()</a>.</p>
 
@@ -2064,16 +2065,15 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>SendMidiMsgFromUI (Abbreviation: SSMFUI) If a plug-in can send Sysex data as a result of actions in the user interface, this method can be used. </p>
-<p >Unlike SendMidiMsgFromUI, Sysex messages will not be received in IPlugProcessor::ProcessSysex() Since it is extremely unlikely that you would want to use Sysex to communicate between editor and processor </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000015">Todo:</a></b></dt><dd>is this correct? </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>SendSysexMsgFromUI (Abbreviation: SSMFUI) If a plug-in can send Sysex data as a result of actions in the user interface, this method can be used. </p>
+<p >Unlike SendMidiMsgFromUI, Sysex messages will not be received in IPlugProcessor::ProcessSysex() </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">msg</td><td>The Sysex message to send. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00275">275</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00274">274</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2112,7 +2112,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_g_editor_delegate.html#a5a1b7051d97c8b4225aef6d4b81afcd5">IGEditorDelegate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00339">339</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00338">338</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2150,7 +2150,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00292">292</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00291">291</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2188,7 +2188,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_g_editor_delegate.html#a4ee1d776b1c601f86823a7c5c69a646e">IGEditorDelegate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00349">349</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00348">348</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2237,37 +2237,19 @@ Friends</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000016">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">widthLo</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">widthHi</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">heightLo</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">heightHi</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000020">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00299">299</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p>Sets the minimum and maximum size constraints for the editor window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">widthLo</td><td>Minimum width </td></tr>
+    <tr><td class="paramname">widthHi</td><td>Maximum width </td></tr>
+    <tr><td class="paramname">heightLo</td><td>Minimum height </td></tr>
+    <tr><td class="paramname">heightHi</td><td>Maximum height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00298">298</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2317,7 +2299,7 @@ Friends</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_i_g_editor_delegate.html#a7d6588ee94116e011ed6133d68da7881">IGEditorDelegate</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00345">345</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00344">344</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2342,7 +2324,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00352">352</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00351">351</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2366,7 +2348,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00361">361</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00360">360</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2390,7 +2372,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00351">351</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00350">350</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2414,7 +2396,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00357">357</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00356">356</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2438,7 +2420,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00358">358</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00357">357</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2462,7 +2444,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00362">362</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00361">361</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2486,7 +2468,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00353">353</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00352">352</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2510,7 +2492,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00354">354</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00353">353</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2534,7 +2516,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00355">355</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00354">354</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2558,7 +2540,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00356">356</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00355">355</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2582,7 +2564,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00360">360</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00359">359</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>
@@ -2606,7 +2588,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00359">359</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_editor_delegate_8h_source.html#l00358">358</a> of file <a class="el" href="_i_plug_editor_delegate_8h_source.html">IPlugEditorDelegate.h</a>.</p>
 
 </div>
 </div>

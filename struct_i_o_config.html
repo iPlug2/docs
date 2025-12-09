@@ -94,17 +94,22 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afc2288468108e1575d46b113b57842ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">AddBusInfo</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int NChans)</td></tr>
+<tr class="memdesc:afc2288468108e1575d46b113b57842ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds bus information for this <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a>.  <a href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">More...</a><br /></td></tr>
 <tr class="separator:afc2288468108e1575d46b113b57842ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab86c9a39c3c12b1b781ce4e035257089"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_i_bus_info.html">IBusInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">GetBusInfo</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int index) const</td></tr>
+<tr class="memdesc:ab86c9a39c3c12b1b781ce4e035257089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets bus information for a specific bus.  <a href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">More...</a><br /></td></tr>
 <tr class="separator:ab86c9a39c3c12b1b781ce4e035257089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1129be2e6b8c20c0dfcac22313978948"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">NChansOnBusSAFE</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, int index) const</td></tr>
+<tr class="memdesc:a1129be2e6b8c20c0dfcac22313978948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of channels on a bus with bounds checking.  <a href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">More...</a><br /></td></tr>
 <tr class="separator:a1129be2e6b8c20c0dfcac22313978948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1652d01a2e41a1b2245d523919e4b19a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction) const</td></tr>
+<tr class="memdesc:a1652d01a2e41a1b2245d523919e4b19a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of buses for a given direction.  <a href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">More...</a><br /></td></tr>
 <tr class="separator:a1652d01a2e41a1b2245d523919e4b19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5760ae609f24e1ab4ff55007f92212e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">GetTotalNChannels</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction) const</td></tr>
-<tr class="memdesc:a5760ae609f24e1ab4ff55007f92212e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of channels across all direction buses for this <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a>.  <a href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">More...</a><br /></td></tr>
+<tr class="memdesc:a5760ae609f24e1ab4ff55007f92212e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of channels across all buses for this <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a>.  <a href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">More...</a><br /></td></tr>
 <tr class="separator:a5760ae609f24e1ab4ff55007f92212e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ccbb1f63f1bb98579443b669100c0e5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">ContainsWildcard</a> (<a class="el" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction) const</td></tr>
+<tr class="memdesc:a7ccbb1f63f1bb98579443b669100c0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if any bus in the given direction has a wildcard channel count.  <a href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">More...</a><br /></td></tr>
 <tr class="separator:a7ccbb1f63f1bb98579443b669100c0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -178,30 +183,17 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000052">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">direction</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000053">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">NChans</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000054">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">label</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000055">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00517">517</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
+<p>Adds bus information for this <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The signal direction (kInput or kOutput) </td></tr>
+    <tr><td class="paramname">NChans</td><td>The number of channels on this bus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00516">516</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
 
 </div>
 </div>
@@ -228,21 +220,19 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000069">Todo:</a></b></dt><dd><br  />
- </dd></dl>
+
+<p>Checks if any bus in the given direction has a wildcard channel count. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">direction</td><td></td></tr>
+    <tr><td class="paramname">direction</td><td>The signal direction (kInput or kOutput) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000070">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>true </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000071">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>false </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000072">Todo:</a></b></dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if any bus has a wildcard (negative) channel count </dd>
+<dd>
+false if all buses have explicit channel counts </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00571">571</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00570">570</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
 
 </div>
 </div>
@@ -279,25 +269,18 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000056">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">direction</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000057">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000058">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>IBusInfo* </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000059">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00526">526</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
+<p>Gets bus information for a specific bus. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The signal direction (kInput or kOutput) </td></tr>
+    <tr><td class="paramname">index</td><td>The bus index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the bus information </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00525">525</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00175">IPlugProcessor::GetIOConfigWithChanCounts()</a>.</p>
 
@@ -327,18 +310,16 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the total number of channels across all direction buses for this <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a>. </p>
+<p>Get the total number of channels across all buses for this <a class="el" href="struct_i_o_config.html" title="An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...">IOConfig</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">direction</td><td></td></tr>
+    <tr><td class="paramname">direction</td><td>The signal direction (kInput or kOutput) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000067">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000068">Todo:</a></b></dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The total number of channels across all buses in the given direction </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00557">557</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00556">556</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00243">IPlugProcessor::LegalIO()</a>.</p>
 
@@ -367,19 +348,17 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000064">Todo:</a></b></dt><dd><br  />
- </dd></dl>
+
+<p>Gets the number of buses for a given direction. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">direction</td><td></td></tr>
+    <tr><td class="paramname">direction</td><td>The signal direction (kInput or kOutput) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000065">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000066">Todo:</a></b></dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of buses </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00549">549</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00548">548</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00175">IPlugProcessor::GetIOConfigWithChanCounts()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00152">IPlugProcessor::MaxNBuses()</a>.</p>
 
@@ -418,25 +397,18 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000060">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">direction</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000061">Todo:</a></b></dt><dd></dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000062">Todo:</a></b></dt><dd></dd></dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000063">Todo:</a></b></dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00536">536</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
+<p>Gets the number of channels on a bus with bounds checking. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>The signal direction (kInput or kOutput) </td></tr>
+    <tr><td class="paramname">index</td><td>The bus index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of channels on the bus, or 0 if index is out of bounds </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_structs_8h_source.html#l00535">535</a> of file <a class="el" href="_i_plug_structs_8h_source.html">IPlugStructs.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00209">IPlugProcessor::MaxNChannelsForBus()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00281">IPlugProcessor::ParseChannelIOStr()</a>.</p>
 

@@ -484,101 +484,101 @@ $(function() {
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    mBusInfo[1].Empty(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>  }</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  </div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">  517</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">AddBusInfo</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> NChans)</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  {</div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>    mBusInfo[direction].Add(<span class="keyword">new</span> <a class="code hl_class" href="class_i_bus_info.html">IBusInfo</a>(direction, NChans));</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  }</div>
-<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  </div>
-<div class="line"><a id="l00526" name="l00526"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">  526</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="class_i_bus_info.html">IBusInfo</a>* <a class="code hl_function" href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">GetBusInfo</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    assert(index &gt;= 0 &amp;&amp; index &lt; mBusInfo[direction].GetSize());</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    <span class="keywordflow">return</span> mBusInfo[direction].Get(index);</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  }</div>
-<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>  </div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">  536</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">NChansOnBusSAFE</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    <span class="keywordtype">int</span> NChans = 0;</div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    </div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>    <span class="keywordflow">if</span>(index &gt;= 0 &amp;&amp; index &lt; mBusInfo[direction].GetSize())</div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>      NChans = mBusInfo[direction].Get(index)-&gt;NChans();</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span> </div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    <span class="keywordflow">return</span> NChans;</div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>  }</div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>  </div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">  549</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    <span class="keywordflow">return</span> mBusInfo[direction].GetSize();</div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  }</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>  </div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">  557</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">GetTotalNChannels</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    <span class="keywordtype">int</span> total = 0;</div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    </div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; mBusInfo[direction].GetSize(); i++)</div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>      total += mBusInfo[direction].Get(i)-&gt;NChans();</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    </div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    <span class="keywordflow">return</span> total;</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  }</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  </div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">  571</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">ContainsWildcard</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction)<span class="keyword"> const</span></div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span><span class="keyword">  </span>{</div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = 0; i &lt; mBusInfo[direction].GetSize(); i++)</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>    {</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>      <span class="keywordflow">if</span>(mBusInfo[direction].Get(i)-&gt;NChans() &lt; 0)</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    }</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span> </div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  }</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>};</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span> </div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno"><a class="line" href="group___i_plug_structs.html">  584</a></span><span class="keyword">struct </span><a class="code hl_struct" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>{</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  <span class="keywordtype">double</span> mTempo = DEFAULT_TEMPO;</div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  <span class="keywordtype">double</span> mSamplePos = -1.0;</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  <span class="keywordtype">double</span> mPPQPos = -1.0;</div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  <span class="keywordtype">double</span> mLastBar = -1.0;</div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>  <span class="keywordtype">double</span> mCycleStart = -1.0;</div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  <span class="keywordtype">double</span> mCycleEnd = -1.0;</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span> </div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  <span class="keywordtype">int</span> mNumerator = 4;</div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>  <span class="keywordtype">int</span> mDenominator = 4;</div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span> </div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>  <span class="keywordtype">bool</span> mTransportIsRunning = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>  <span class="keywordtype">bool</span> mTransportLoopEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>};</div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno"><a class="line" href="struct_i_preset.html">  601</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_i_preset.html">IPreset</a></div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>{</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <span class="keywordtype">bool</span> mInitialized = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>  <span class="keywordtype">char</span> mName[MAX_PRESET_NAME_LEN];</div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  <a class="code hl_class" href="class_i_byte_chunk.html">IByteChunk</a> mChunk;</div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  <a class="code hl_struct" href="struct_i_preset.html">IPreset</a>()</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>  {</div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    snprintf(mName, MAX_PRESET_NAME_LEN, <span class="stringliteral">&quot;%s&quot;</span>, UNUSED_PRESET_NAME);</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>  }</div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>};</div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span> </div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno"><a class="line" href="struct_i_key_press.html">  615</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_i_key_press.html">IKeyPress</a></div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>{</div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>  <span class="keywordtype">int</span> VK; <span class="comment">// Windows VK_XXX</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>  <span class="keywordtype">char</span> utf8[5] = { 0 }; <span class="comment">// UTF8 key</span></div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>  <span class="keywordtype">bool</span> S, C, A; <span class="comment">// SHIFT / CTRL(WIN) or CMD (MAC) / ALT</span></div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno"><a class="line" href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">  627</a></span>  <a class="code hl_function" href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">IKeyPress</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _utf8, <span class="keywordtype">int</span> vk, <span class="keywordtype">bool</span> s = <span class="keyword">false</span>, <span class="keywordtype">bool</span> c = <span class="keyword">false</span>, <span class="keywordtype">bool</span> a = <span class="keyword">false</span>)</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    : VK(vk)</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>    , S(s), C(c), A(a)</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  {</div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>    strcpy(utf8, _utf8);</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>  }</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>  <span class="keywordtype">void</span> DBGPrint()<span class="keyword"> const </span>{ DBGMSG(<span class="stringliteral">&quot;VK: %i\n&quot;</span>, VK); }</div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>};</div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span> </div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span>END_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span> </div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">  516</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">AddBusInfo</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> NChans)</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  {</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>    mBusInfo[direction].Add(<span class="keyword">new</span> <a class="code hl_class" href="class_i_bus_info.html">IBusInfo</a>(direction, NChans));</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  }</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  </div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">  525</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="class_i_bus_info.html">IBusInfo</a>* <a class="code hl_function" href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">GetBusInfo</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>    assert(index &gt;= 0 &amp;&amp; index &lt; mBusInfo[direction].GetSize());</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>    <span class="keywordflow">return</span> mBusInfo[direction].Get(index);</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>  }</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  </div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">  535</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">NChansOnBusSAFE</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction, <span class="keywordtype">int</span> index)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>    <span class="keywordtype">int</span> NChans = 0;</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>    </div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>    <span class="keywordflow">if</span>(index &gt;= 0 &amp;&amp; index &lt; mBusInfo[direction].GetSize())</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>      NChans = mBusInfo[direction].Get(index)-&gt;NChans();</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span> </div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>    <span class="keywordflow">return</span> NChans;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>  }</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>  </div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">  548</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">NBuses</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    <span class="keywordflow">return</span> mBusInfo[direction].GetSize();</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  </div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">  556</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">GetTotalNChannels</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>    <span class="keywordtype">int</span> total = 0;</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    </div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; mBusInfo[direction].GetSize(); i++)</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>      total += mBusInfo[direction].Get(i)-&gt;NChans();</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>    </div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    <span class="keywordflow">return</span> total;</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>  }</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  </div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno"><a class="line" href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">  570</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">ContainsWildcard</a>(<a class="code hl_enumeration" href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a> direction)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span><span class="keyword">  </span>{</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    <span class="keywordflow">for</span>(<span class="keyword">auto</span> i = 0; i &lt; mBusInfo[direction].GetSize(); i++)</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    {</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>      <span class="keywordflow">if</span>(mBusInfo[direction].Get(i)-&gt;NChans() &lt; 0)</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    }</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  }</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>};</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno"><a class="line" href="group___i_plug_structs.html">  583</a></span><span class="keyword">struct </span><a class="code hl_struct" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a></div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>{</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>  <span class="keywordtype">double</span> mTempo = DEFAULT_TEMPO;</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>  <span class="keywordtype">double</span> mSamplePos = -1.0;</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>  <span class="keywordtype">double</span> mPPQPos = -1.0;</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>  <span class="keywordtype">double</span> mLastBar = -1.0;</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  <span class="keywordtype">double</span> mCycleStart = -1.0;</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>  <span class="keywordtype">double</span> mCycleEnd = -1.0;</div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span> </div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  <span class="keywordtype">int</span> mNumerator = 4;</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>  <span class="keywordtype">int</span> mDenominator = 4;</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span> </div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>  <span class="keywordtype">bool</span> mTransportIsRunning = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>  <span class="keywordtype">bool</span> mTransportLoopEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>};</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno"><a class="line" href="struct_i_preset.html">  600</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_i_preset.html">IPreset</a></div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>{</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  <span class="keywordtype">bool</span> mInitialized = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <span class="keywordtype">char</span> mName[MAX_PRESET_NAME_LEN];</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  <a class="code hl_class" href="class_i_byte_chunk.html">IByteChunk</a> mChunk;</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>  <a class="code hl_struct" href="struct_i_preset.html">IPreset</a>()</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  {</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>    snprintf(mName, MAX_PRESET_NAME_LEN, <span class="stringliteral">&quot;%s&quot;</span>, UNUSED_PRESET_NAME);</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  }</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>};</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span> </div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno"><a class="line" href="struct_i_key_press.html">  614</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_i_key_press.html">IKeyPress</a></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>{</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>  <span class="keywordtype">int</span> VK; <span class="comment">// Windows VK_XXX</span></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>  <span class="keywordtype">char</span> utf8[5] = { 0 }; <span class="comment">// UTF8 key</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>  <span class="keywordtype">bool</span> S, C, A; <span class="comment">// SHIFT / CTRL(WIN) or CMD (MAC) / ALT</span></div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span> </div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno"><a class="line" href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">  626</a></span>  <a class="code hl_function" href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">IKeyPress</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _utf8, <span class="keywordtype">int</span> vk, <span class="keywordtype">bool</span> s = <span class="keyword">false</span>, <span class="keywordtype">bool</span> c = <span class="keyword">false</span>, <span class="keywordtype">bool</span> a = <span class="keyword">false</span>)</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>    : VK(vk)</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    , S(s), C(c), A(a)</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  {</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>    strcpy(utf8, _utf8);</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  }</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span> </div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>  <span class="keywordtype">void</span> DBGPrint()<span class="keyword"> const </span>{ DBGMSG(<span class="stringliteral">&quot;VK: %i\n&quot;</span>, VK); }</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>};</div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span> </div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span> </div>
 <div class="ttc" id="a_i_plug_constants_8h_html"><div class="ttname"><a href="_i_plug_constants_8h.html">IPlugConstants.h</a></div><div class="ttdoc">IPlug Constant definitions, Types, magic numbers.</div></div>
 <div class="ttc" id="a_i_plug_midi_8h_html"><div class="ttname"><a href="_i_plug_midi_8h.html">IPlugMidi.h</a></div><div class="ttdoc">MIDI and sysex structs/utilites.</div></div>
 <div class="ttc" id="a_i_plug_platform_8h_html"><div class="ttname"><a href="_i_plug_platform_8h.html">IPlugPlatform.h</a></div><div class="ttdoc">Include to get consistently named preprocessor macros for different platforms and logging functionali...</div></div>
@@ -615,20 +615,20 @@ $(function() {
 <div class="ttc" id="aclass_i_byte_stream_html_ae771489258509c15da6550aabb7d365e"><div class="ttname"><a href="class_i_byte_stream.html#ae771489258509c15da6550aabb7d365e">IByteStream::GetData</a></div><div class="ttdeci">const uint8_t * GetData()</div><div class="ttdoc">Gets a const ptr to the stream data.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00320">IPlugStructs.h:320</a></div></div>
 <div class="ttc" id="agroup___i_plug_constants_html_ga2d2950b86093091e6a4fcf3fa7c6732a"><div class="ttname"><a href="group___i_plug_constants.html#ga2d2950b86093091e6a4fcf3fa7c6732a">ERoute</a></div><div class="ttdeci">ERoute</div><div class="ttdoc">Used to identify whether a bus/channel connection is an input or an output.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_constants_8h_source.html#l00169">IPlugConstants.h:170</a></div></div>
 <div class="ttc" id="agroup___i_plug_structs_html_struct_i_channel_data"><div class="ttname"><a href="group___i_plug_structs.html#struct_i_channel_data">IChannelData</a></div><div class="ttdoc">Used to manage scratch buffers for each channel of I/O, which may involve converting from single to d...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00474">IPlugStructs.h:475</a></div></div>
-<div class="ttc" id="agroup___i_plug_structs_html_struct_i_time_info"><div class="ttname"><a href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a></div><div class="ttdoc">Encapsulates information about the host transport state.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00584">IPlugStructs.h:585</a></div></div>
+<div class="ttc" id="agroup___i_plug_structs_html_struct_i_time_info"><div class="ttname"><a href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a></div><div class="ttdoc">Encapsulates information about the host transport state.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00583">IPlugStructs.h:584</a></div></div>
 <div class="ttc" id="astruct_i_byte_getter_html"><div class="ttname"><a href="struct_i_byte_getter.html">IByteGetter</a></div><div class="ttdoc">A helper class for IByteChunk and IByteStream that avoids code duplication.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00064">IPlugStructs.h:65</a></div></div>
 <div class="ttc" id="astruct_i_byte_getter_html_a24d90f103a5c009b18b82d07e0cbe16c"><div class="ttname"><a href="struct_i_byte_getter.html#a24d90f103a5c009b18b82d07e0cbe16c">IByteGetter::GetStr</a></div><div class="ttdeci">static int GetStr(const uint8_t *pSrc, int srcSize, WDL_String &amp;str, int startPos)</div><div class="ttdoc">Get a string from a byte array, to a WDL_String, returning the new position for subsequent calls.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00090">IPlugStructs.h:90</a></div></div>
 <div class="ttc" id="astruct_i_byte_getter_html_a38bdb5f88a9d7e8ba580421d9b9e4e86"><div class="ttname"><a href="struct_i_byte_getter.html#a38bdb5f88a9d7e8ba580421d9b9e4e86">IByteGetter::GetBytes</a></div><div class="ttdeci">static int GetBytes(const uint8_t *pSrc, int srcSize, void *pDst, int nBytesToCopy, int startPos)</div><div class="ttdoc">Copy raw bytes from a byte array, returning the new position for subsequent calls.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00073">IPlugStructs.h:73</a></div></div>
-<div class="ttc" id="astruct_i_key_press_html"><div class="ttname"><a href="struct_i_key_press.html">IKeyPress</a></div><div class="ttdoc">Used for key press info, such as ASCII representation, virtual key (mapped to win32 codes) and modifi...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00615">IPlugStructs.h:616</a></div></div>
-<div class="ttc" id="astruct_i_key_press_html_ae9028d797b78e26bbb254506728c4647"><div class="ttname"><a href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">IKeyPress::IKeyPress</a></div><div class="ttdeci">IKeyPress(const char *_utf8, int vk, bool s=false, bool c=false, bool a=false)</div><div class="ttdoc">IKeyPress Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00627">IPlugStructs.h:627</a></div></div>
+<div class="ttc" id="astruct_i_key_press_html"><div class="ttname"><a href="struct_i_key_press.html">IKeyPress</a></div><div class="ttdoc">Used for key press info, such as ASCII representation, virtual key (mapped to win32 codes) and modifi...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00614">IPlugStructs.h:615</a></div></div>
+<div class="ttc" id="astruct_i_key_press_html_ae9028d797b78e26bbb254506728c4647"><div class="ttname"><a href="struct_i_key_press.html#ae9028d797b78e26bbb254506728c4647">IKeyPress::IKeyPress</a></div><div class="ttdeci">IKeyPress(const char *_utf8, int vk, bool s=false, bool c=false, bool a=false)</div><div class="ttdoc">IKeyPress Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00626">IPlugStructs.h:626</a></div></div>
 <div class="ttc" id="astruct_i_o_config_html"><div class="ttname"><a href="struct_i_o_config.html">IOConfig</a></div><div class="ttdoc">An IOConfig is used to store bus info for each input/output configuration defined in the channel io s...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00503">IPlugStructs.h:504</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_a1129be2e6b8c20c0dfcac22313978948"><div class="ttname"><a href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">IOConfig::NChansOnBusSAFE</a></div><div class="ttdeci">int NChansOnBusSAFE(ERoute direction, int index) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00536">IPlugStructs.h:536</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_a1652d01a2e41a1b2245d523919e4b19a"><div class="ttname"><a href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">IOConfig::NBuses</a></div><div class="ttdeci">int NBuses(ERoute direction) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00549">IPlugStructs.h:549</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_a5760ae609f24e1ab4ff55007f92212e1"><div class="ttname"><a href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">IOConfig::GetTotalNChannels</a></div><div class="ttdeci">int GetTotalNChannels(ERoute direction) const</div><div class="ttdoc">Get the total number of channels across all direction buses for this IOConfig.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00557">IPlugStructs.h:557</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_a7ccbb1f63f1bb98579443b669100c0e5"><div class="ttname"><a href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">IOConfig::ContainsWildcard</a></div><div class="ttdeci">bool ContainsWildcard(ERoute direction) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00571">IPlugStructs.h:571</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_ab86c9a39c3c12b1b781ce4e035257089"><div class="ttname"><a href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">IOConfig::GetBusInfo</a></div><div class="ttdeci">const IBusInfo * GetBusInfo(ERoute direction, int index) const</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00526">IPlugStructs.h:526</a></div></div>
-<div class="ttc" id="astruct_i_o_config_html_afc2288468108e1575d46b113b57842ae"><div class="ttname"><a href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">IOConfig::AddBusInfo</a></div><div class="ttdeci">void AddBusInfo(ERoute direction, int NChans)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00517">IPlugStructs.h:517</a></div></div>
-<div class="ttc" id="astruct_i_preset_html"><div class="ttname"><a href="struct_i_preset.html">IPreset</a></div><div class="ttdoc">A struct used for specifying baked-in factory presets.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00601">IPlugStructs.h:602</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_a1129be2e6b8c20c0dfcac22313978948"><div class="ttname"><a href="struct_i_o_config.html#a1129be2e6b8c20c0dfcac22313978948">IOConfig::NChansOnBusSAFE</a></div><div class="ttdeci">int NChansOnBusSAFE(ERoute direction, int index) const</div><div class="ttdoc">Gets the number of channels on a bus with bounds checking.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00535">IPlugStructs.h:535</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_a1652d01a2e41a1b2245d523919e4b19a"><div class="ttname"><a href="struct_i_o_config.html#a1652d01a2e41a1b2245d523919e4b19a">IOConfig::NBuses</a></div><div class="ttdeci">int NBuses(ERoute direction) const</div><div class="ttdoc">Gets the number of buses for a given direction.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00548">IPlugStructs.h:548</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_a5760ae609f24e1ab4ff55007f92212e1"><div class="ttname"><a href="struct_i_o_config.html#a5760ae609f24e1ab4ff55007f92212e1">IOConfig::GetTotalNChannels</a></div><div class="ttdeci">int GetTotalNChannels(ERoute direction) const</div><div class="ttdoc">Get the total number of channels across all buses for this IOConfig.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00556">IPlugStructs.h:556</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_a7ccbb1f63f1bb98579443b669100c0e5"><div class="ttname"><a href="struct_i_o_config.html#a7ccbb1f63f1bb98579443b669100c0e5">IOConfig::ContainsWildcard</a></div><div class="ttdeci">bool ContainsWildcard(ERoute direction) const</div><div class="ttdoc">Checks if any bus in the given direction has a wildcard channel count.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00570">IPlugStructs.h:570</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_ab86c9a39c3c12b1b781ce4e035257089"><div class="ttname"><a href="struct_i_o_config.html#ab86c9a39c3c12b1b781ce4e035257089">IOConfig::GetBusInfo</a></div><div class="ttdeci">const IBusInfo * GetBusInfo(ERoute direction, int index) const</div><div class="ttdoc">Gets bus information for a specific bus.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00525">IPlugStructs.h:525</a></div></div>
+<div class="ttc" id="astruct_i_o_config_html_afc2288468108e1575d46b113b57842ae"><div class="ttname"><a href="struct_i_o_config.html#afc2288468108e1575d46b113b57842ae">IOConfig::AddBusInfo</a></div><div class="ttdeci">void AddBusInfo(ERoute direction, int NChans)</div><div class="ttdoc">Adds bus information for this IOConfig.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00516">IPlugStructs.h:516</a></div></div>
+<div class="ttc" id="astruct_i_preset_html"><div class="ttname"><a href="struct_i_preset.html">IPreset</a></div><div class="ttdoc">A struct used for specifying baked-in factory presets.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00600">IPlugStructs.h:601</a></div></div>
 <div class="ttc" id="astruct_param_tuple_html"><div class="ttname"><a href="struct_param_tuple.html">ParamTuple</a></div><div class="ttdoc">In certain cases we need to queue parameter changes for transferral between threads.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00032">IPlugStructs.h:33</a></div></div>
 <div class="ttc" id="astruct_sys_ex_data_html"><div class="ttname"><a href="struct_sys_ex_data.html">SysExData</a></div><div class="ttdoc">This structure is used when queueing Sysex messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00044">IPlugStructs.h:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

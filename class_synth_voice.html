@@ -467,13 +467,7 @@ Friends</h2></td></tr>
 <p>Trigger is called by the <a class="el" href="class_voice_allocator.html">VoiceAllocator</a> when a new voice should start, or if the voice limit has been hit and an existing voice needs to re-trigger. </p>
 <p >While the VoiceInputs are sufficient to control a voice from the <a class="el" href="class_voice_allocator.html">VoiceAllocator</a>, this method can be used to do additional tasks like resetting oscillators. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">level</td><td>Normalised starting level for this voice, derived from the velocity of the keypress, or in the case of a re-trigger the existing level </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>check </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
+    <tr><td class="paramname">level</td><td>Normalised starting level for this voice, derived from the velocity of the keypress (range 0.0-1.0), or in the case of a re-trigger the existing level </td></tr>
     <tr><td class="paramname">isRetrigger</td><td>If this is <code>true</code> it means the voice is being re-triggered, and you should accommodate for this in your algorithm </td></tr>
   </table>
   </dd>
