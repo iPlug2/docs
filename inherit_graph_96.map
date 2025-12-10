@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,175,31"/>
-<area shape="rect" id="node2" href="$class_i_plug_v_s_t3_preset_parameter.html" title="VST3 preset parameter helper." alt="" coords="223,5,405,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,124,31"/>
+<area shape="rect" id="node2" href="$interface_i_plug_cocoa_view_controller.html" title="An objc view controller base which reproduces some functionality from EditorDelegate in objc." alt="" coords="172,5,345,31"/>
 </map>

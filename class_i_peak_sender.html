@@ -120,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a969329ff6714cfa7ed8429702146f499 inherit pub_methods_class_i_sender"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#a969329ff6714cfa7ed8429702146f499">TransmitDataToControlsWithTags</a> (<a class="el" href="class_i_editor_delegate.html">IEditorDelegate</a> &amp;dlg, const std::initializer_list&lt; int &gt; &amp;ctrlTags)</td></tr>
 <tr class="memdesc:a969329ff6714cfa7ed8429702146f499 inherit pub_methods_class_i_sender"><td class="mdescLeft">&#160;</td><td class="mdescRight">This variation can be used if you need to supply multiple controls with the same <a class="el" href="struct_i_sender_data.html" title="ISenderData is used to represent a typed data packet, that may contain values for multiple channels.">ISenderData</a>, overriding the tags in the data packet.  <a href="class_i_sender.html#a969329ff6714cfa7ed8429702146f499">More...</a><br /></td></tr>
 <tr class="separator:a969329ff6714cfa7ed8429702146f499 inherit pub_methods_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a56e8a0097a2a10ab3a91edad7aa7b3 inherit pub_methods_class_i_sender"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_sender_data.html">ISenderData</a>&lt; MAXNC, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#a4a56e8a0097a2a10ab3a91edad7aa7b3">GetLastData</a> ()</td></tr>
+<tr class="memdesc:a4a56e8a0097a2a10ab3a91edad7aa7b3 inherit pub_methods_class_i_sender"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the last data item sent to the UI <br  />
+  <a href="class_i_sender.html#a4a56e8a0097a2a10ab3a91edad7aa7b3">More...</a><br /></td></tr>
+<tr class="separator:a4a56e8a0097a2a10ab3a91edad7aa7b3 inherit pub_methods_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -129,12 +133,14 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_i_sender"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_i_sender')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_i_sender.html">ISender&lt; MAXNC, QUEUE_SIZE, T &gt;</a></td></tr>
 <tr class="memitem:a4691e699304a93e10b4dcb899b5e0e13 inherit pro_attribs_class_i_sender"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_plug_queue.html">IPlugQueue</a>&lt; <a class="el" href="struct_i_sender_data.html">ISenderData</a>&lt; MAXNC, T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#a4691e699304a93e10b4dcb899b5e0e13">mQueue</a> {QUEUE_SIZE}</td></tr>
 <tr class="separator:a4691e699304a93e10b4dcb899b5e0e13 inherit pro_attribs_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf37f8cfaead94024a912b635c48b5a9 inherit pro_attribs_class_i_sender"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_i_sender_data.html">ISenderData</a>&lt; MAXNC, T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sender.html#acf37f8cfaead94024a912b635c48b5a9">mLastData</a></td></tr>
+<tr class="separator:acf37f8cfaead94024a912b635c48b5a9 inherit pro_attribs_class_i_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt;<br />
 class IPeakSender&lt; MAXNC, QUEUE_SIZE &gt;</div><p ><a class="el" href="class_i_peak_sender.html" title="IPeakSender is a utility class which can be used to defer peak data from sample buffers for sending t...">IPeakSender</a> is a utility class which can be used to defer peak data from sample buffers for sending to the GUI It sends the average peak value over a certain time window. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00119">119</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00124">124</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a88c0661d7c9699ebd5789160a981987c" name="a88c0661d7c9699ebd5789160a981987c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88c0661d7c9699ebd5789160a981987c">&#9670;&#160;</a></span>IPeakSender()</h2>
@@ -172,7 +178,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00122">122</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00127">127</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +249,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00147">147</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00152">152</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_sender_8h_source.html#l00071">ISender&lt; MAXNC, QUEUE_SIZE, T &gt;::PushData()</a>.</p>
 
@@ -275,7 +281,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00129">129</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00134">134</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
@@ -315,7 +321,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64&gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00135">135</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00140">140</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>
