@@ -193,23 +193,34 @@ $(function() {
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  UIView* view = pluginVC.view;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  view.frame = auView.bounds;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  [auView addSubview: view];</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  view.translatesAutoresizingMaskIntoConstraints = NO;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat: @&quot;H:|[view]|&quot; options:0 metrics:nil views:NSDictionaryOfVariableBindings(view)];</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  [auView addConstraints: constraints];</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  constraints = [NSLayoutConstraint constraintsWithVisualFormat: @&quot;V:|[view]|&quot; options:0 metrics:nil views:NSDictionaryOfVariableBindings(view)];</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  [auView addConstraints: constraints];</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>}</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>- (UIRectEdge) preferredScreenEdgesDeferringSystemGestures</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keywordflow">return</span> UIRectEdgeAll;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">@end</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#if TARGET_OS_VISION &amp;&amp; defined(VISIONOS_TRANSPARENT_VC)</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  self.view.opaque = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  self.view.backgroundColor = UIColor.clearColor;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  view.translatesAutoresizingMaskIntoConstraints = NO;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  NSArray* constraints = [NSLayoutConstraint constraintsWithVisualFormat: @&quot;H:|[view]|&quot; options:0 metrics:nil views:NSDictionaryOfVariableBindings(view)];</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  [auView addConstraints: constraints];</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  constraints = [NSLayoutConstraint constraintsWithVisualFormat: @&quot;V:|[view]|&quot; options:0 metrics:nil views:NSDictionaryOfVariableBindings(view)];</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  [auView addConstraints: constraints];</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>- (UIRectEdge) preferredScreenEdgesDeferringSystemGestures</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordflow">return</span> UIRectEdgeAll;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#if TARGET_OS_VISION &amp;&amp; defined(VISIONOS_TRANSPARENT_VC)</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>- (UIContainerBackgroundStyle) preferredContainerBackgroundStyle</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>{</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keywordflow">return</span> UIContainerBackgroundStyleHidden;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">@end</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
