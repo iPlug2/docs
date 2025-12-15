@@ -126,8 +126,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa7ead107d4f5fd587497b7dd531a4a0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#aa7ead107d4f5fd587497b7dd531a4a0d">ISpectrumSender</a> (int fftSize=1024, int overlap=2, EWindowType window=EWindowType::Hann, EOutputType outputType=EOutputType::MagPhase, double minThresholdDb=-100.0)</td></tr>
-<tr class="separator:aa7ead107d4f5fd587497b7dd531a4a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab749ff36737e4ab5768a293c0046e579"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#ab749ff36737e4ab5768a293c0046e579">ISpectrumSender</a> (int fftSize=1024, int overlap=1, EWindowType window=EWindowType::Hann, EOutputType outputType=EOutputType::MagPhase, double minThresholdDb=-100.0)</td></tr>
+<tr class="separator:ab749ff36737e4ab5768a293c0046e579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadc71d8fdb481edc67db2c4e705e7b69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#aadc71d8fdb481edc67db2c4e705e7b69">SetFFTSize</a> (int fftSize)</td></tr>
 <tr class="separator:aadc71d8fdb481edc67db2c4e705e7b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bafc1343dfdd607e0c55d4cc12adec3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a1bafc1343dfdd607e0c55d4cc12adec3">SetFFTSizeAndOverlap</a> (int fftSize, int overlap)</td></tr>
@@ -142,6 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad567b361e646cab18a3ca48fde94259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e703ea4d5f2891fdf123a597d6f06ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a9e703ea4d5f2891fdf123a597d6f06ed">GetOverlap</a> () const</td></tr>
 <tr class="separator:a9e703ea4d5f2891fdf123a597d6f06ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b48e6ea57b7a9b40eb8bff2fa5400e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a16b48e6ea57b7a9b40eb8bff2fa5400e">GetHopSize</a> () const</td></tr>
+<tr class="separator:a16b48e6ea57b7a9b40eb8bff2fa5400e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b62a55cdb87ce9690fbfbce21ee785d"><td class="memItemLeft" align="right" valign="top">EWindowType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_spectrum_sender.html#a4b62a55cdb87ce9690fbfbce21ee785d">GetWindowType</a> () const</td></tr>
+<tr class="separator:a4b62a55cdb87ce9690fbfbce21ee785d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_buffer_sender"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_buffer_sender')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_buffer_sender.html">IBufferSender&lt; MAXNC, QUEUE_SIZE, MAXBUF &gt;</a></td></tr>
 <tr class="memitem:a93aabbab6b4a27f314d095d2dd24be1a inherit pub_methods_class_i_buffer_sender"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_buffer_sender.html#a93aabbab6b4a27f314d095d2dd24be1a">IBufferSender</a> (double minThresholdDb=-90., int bufferSize=MAXBUF)</td></tr>
 <tr class="separator:a93aabbab6b4a27f314d095d2dd24be1a inherit pub_methods_class_i_buffer_sender"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,8 +284,8 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa7ead107d4f5fd587497b7dd531a4a0d" name="aa7ead107d4f5fd587497b7dd531a4a0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7ead107d4f5fd587497b7dd531a4a0d">&#9670;&#160;</a></span>ISpectrumSender()</h2>
+<a id="ab749ff36737e4ab5768a293c0046e579" name="ab749ff36737e4ab5768a293c0046e579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab749ff36737e4ab5768a293c0046e579">&#9670;&#160;</a></span>ISpectrumSender()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +305,7 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>overlap</em> = <code>2</code>, </td>
+          <td class="paramname"><em>overlap</em> = <code>1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -368,6 +372,35 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 
 </div>
 </div>
+<a id="a16b48e6ea57b7a9b40eb8bff2fa5400e" name="a16b48e6ea57b7a9b40eb8bff2fa5400e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b48e6ea57b7a9b40eb8bff2fa5400e">&#9670;&#160;</a></span>GetHopSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_i_spectrum_sender.html">ISpectrumSender</a>&lt; MAXNC, QUEUE_SIZE, MAX_FFT_SIZE &gt;::GetHopSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00612">612</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+
+</div>
+</div>
 <a id="a9e703ea4d5f2891fdf123a597d6f06ed" name="a9e703ea4d5f2891fdf123a597d6f06ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e703ea4d5f2891fdf123a597d6f06ed">&#9670;&#160;</a></span>GetOverlap()</h2>
 
@@ -394,6 +427,35 @@ template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </di
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00607">607</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
+
+</div>
+</div>
+<a id="a4b62a55cdb87ce9690fbfbce21ee785d" name="a4b62a55cdb87ce9690fbfbce21ee785d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b62a55cdb87ce9690fbfbce21ee785d">&#9670;&#160;</a></span>GetWindowType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int MAXNC = 1, int QUEUE_SIZE = 64, int MAX_FFT_SIZE = 4096&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">EWindowType <a class="el" href="class_i_spectrum_sender.html">ISpectrumSender</a>&lt; MAXNC, QUEUE_SIZE, MAX_FFT_SIZE &gt;::GetWindowType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_sender_8h_source.html#l00617">617</a> of file <a class="el" href="_i_sender_8h_source.html">ISender.h</a>.</p>
 
 </div>
 </div>

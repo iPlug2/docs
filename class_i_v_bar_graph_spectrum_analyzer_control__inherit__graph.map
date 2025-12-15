@@ -1,0 +1,5 @@
+<map id="IVBarGraphSpectrumAnalyzerControl&lt; MAXNC, MAX_FFT_SIZE &gt;" name="IVBarGraphSpectrumAnalyzerControl&lt; MAXNC, MAX_FFT_SIZE &gt;">
+<area shape="rect" id="node1" title="Vectorial bar graph spectrum analyzer control with segmented LEDs." alt="" coords="5,79,241,119"/>
+<area shape="rect" id="node2" href="$class_i_control.html" title="The lowest level base class of an IGraphics control." alt="" coords="38,5,105,31"/>
+<area shape="rect" id="node3" href="$class_i_vector_base.html" title="A base interface to be combined with IControl for vectorial controls &quot;IVControls&quot;,..." alt="" coords="129,5,224,31"/>
+</map>
