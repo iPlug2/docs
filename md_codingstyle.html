@@ -86,7 +86,7 @@ $(function() {
 <li>Indentation uses 2 spaces - no tabs <br  />
 </li>
 <li>Files should be unix format line endings, unless they are windows specific</li>
-<li>C++11 stuff: <code>override</code> keyword, <code>final</code> keyword, <code>auto</code> where sensible</li>
+<li>C++17: <code>override</code> keyword, <code>final</code> keyword, <code>auto</code> where sensible, <code>std::optional</code>, <code>std::string_view</code></li>
 <li>Do not use the STL, unless API classes depend on it. <code>WDL_String</code> is used rather than <code>std::string</code>, setters that require string arguments take <code>const char*</code> UTF8 cstrings</li>
 <li>IPlug should be able to produce very small binaries, and not include large dependencies or unnecessary code</li>
 <li>Doxygen description uses JAVADOC brief style.</li>
