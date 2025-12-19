@@ -8,5 +8,6 @@ var searchData=
   ['blendweight_5',['BlendWeight',['../group___i_graphics_structs.html#gad3789b954df5c92ab742a855dc095c71',1,'IGraphicsStructs.h']]],
   ['bool_6',['Bool',['../class_i_param.html#aa9ed6c429ec406d6704dd52026f292b6',1,'IParam']]],
   ['bounds_7',['Bounds',['../class_i_r_e_c_t_list.html#a07ad9451d0545a045063ac0470a05fde',1,'IRECTList::Bounds()'],['../class_i_layer.html#a913cc5e66119beb3293d99bfb019b0f6',1,'ILayer::Bounds()']]],
-  ['bundleresourcepath_8',['BundleResourcePath',['../_i_plug_paths_8h.html#af14eac4a6241279b7096931f567f4af0',1,'IPlugPaths.h']]]
+  ['building_20iplug2_20projects_20with_20cmake_8',['Building iPlug2 Projects with CMake',['../md_cmake.html',1,'']]],
+  ['bundleresourcepath_9',['BundleResourcePath',['../_i_plug_paths_8h.html#af14eac4a6241279b7096931f567f4af0',1,'IPlugPaths.h']]]
 ];
