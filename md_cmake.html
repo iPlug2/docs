@@ -413,7 +413,7 @@ Format Names</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>AU</code>   </td><td class="markdownTableBodyNone">Audio Unit v2   </td><td class="markdownTableBodyNone">macOS only    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>AUV3</code>   </td><td class="markdownTableBodyNone">Audio Unit v3 (opt-in)   </td><td class="markdownTableBodyNone">macOS, iOS    </td></tr>
+<td class="markdownTableBodyNone"><code>AUV3</code>   </td><td class="markdownTableBodyNone">Audio Unit v3   </td><td class="markdownTableBodyNone">macOS, iOS    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>WAM</code>   </td><td class="markdownTableBodyNone">Web Audio Module   </td><td class="markdownTableBodyNone">Emscripten only   </td></tr>
 </table>
@@ -423,13 +423,18 @@ Format Groups</h2>
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">Group   </th><th class="markdownTableHeadNone">Expands To   </th><th class="markdownTableHeadNone">Notes    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>ALL</code>   </td><td class="markdownTableBodyNone">APP, VST3, CLAP, AAX, AU, WAM   </td><td class="markdownTableBodyNone">Default. Excludes AUv3    </td></tr>
+<td class="markdownTableBodyNone"><code>ALL</code>   </td><td class="markdownTableBodyNone">APP, VST2, VST3, CLAP, AAX, AU, AUV3, WAM   </td><td class="markdownTableBodyNone">Default. All formats    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code>ALL_AUV3</code>   </td><td class="markdownTableBodyNone">APP, VST3, CLAP, AAX, AU, AUV3, WAM   </td><td class="markdownTableBodyNone">Includes AUv3 with embedding    </td></tr>
+<td class="markdownTableBodyNone"><code>ALL_PLUGINS</code>   </td><td class="markdownTableBodyNone">VST2, VST3, CLAP, AAX, AU, AUV3, WAM   </td><td class="markdownTableBodyNone">All plugin formats (no APP)    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>DESKTOP</code>   </td><td class="markdownTableBodyNone">APP, VST3, CLAP, AAX, AU   </td><td class="markdownTableBodyNone">No iOS/Web/AUv3   </td></tr>
+<td class="markdownTableBodyNone"><code>ALL_DESKTOP</code>   </td><td class="markdownTableBodyNone">APP, VST2, VST3, CLAP, AAX, AU, AUV3   </td><td class="markdownTableBodyNone">All desktop formats (no WAM)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>MINIMAL_PLUGINS</code>   </td><td class="markdownTableBodyNone">VST3, CLAP, AU   </td><td class="markdownTableBodyNone">Core plugin formats only    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>DESKTOP</code>   </td><td class="markdownTableBodyNone">APP, VST3, CLAP, AAX, AU   </td><td class="markdownTableBodyNone">Desktop without VST2/AUv3    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>WEB</code>   </td><td class="markdownTableBodyNone">WAM   </td><td class="markdownTableBodyNone">Web formats only   </td></tr>
 </table>
-<p ><b>Note:</b> AUv3 is opt-in because it requires additional setup (framework, appex, embedding in APP). Use <code>ALL_AUV3</code> or explicitly add <code>AUV3</code> to include it.</p>
 <h2><a class="anchor" id="autotoc_md52"></a>
 Examples</h2>
 <p ><b>Standard <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> plugin:</b></p>
@@ -441,7 +446,7 @@ Examples</h2>
 <div class="line">  RESOURCES</div>
 <div class="line">    resources/fonts/Roboto-Regular.ttf</div>
 <div class="line">)</div>
-</div><!-- fragment --><p ><b>Plugin with AUv3 support:</b></p>
+</div><!-- fragment --><p ><b>Desktop plugin with AUv3 (no WAM):</b></p>
 <div class="fragment"><div class="line">iplug_add_plugin(${PROJECT_NAME}</div>
 <div class="line">  SOURCES</div>
 <div class="line">    MyPlugin.cpp</div>
@@ -449,15 +454,15 @@ Examples</h2>
 <div class="line">    resources/resource.h</div>
 <div class="line">  RESOURCES</div>
 <div class="line">    resources/fonts/Roboto-Regular.ttf</div>
-<div class="line">  FORMATS ALL_AUV3</div>
+<div class="line">  FORMATS ALL_DESKTOP</div>
 <div class="line">)</div>
-</div><!-- fragment --><p ><b>Desktop-only plugin (no WAM/iOS):</b></p>
+</div><!-- fragment --><p ><b>Minimal plugin (VST3, CLAP, AU only):</b></p>
 <div class="fragment"><div class="line">iplug_add_plugin(${PROJECT_NAME}</div>
 <div class="line">  SOURCES</div>
 <div class="line">    MyPlugin.cpp</div>
 <div class="line">    MyPlugin.h</div>
 <div class="line">    resources/resource.h</div>
-<div class="line">  FORMATS DESKTOP</div>
+<div class="line">  FORMATS MINIMAL_PLUGINS</div>
 <div class="line">)</div>
 </div><!-- fragment --><p ><b>Plugin with extra libraries:</b></p>
 <div class="fragment"><div class="line">iplug_add_plugin(${PROJECT_NAME}</div>
