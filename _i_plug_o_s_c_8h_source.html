@@ -97,162 +97,65 @@ $(function() {
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;ctime&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;jnetlib/jnetlib.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;IPlugOSC_internal.h&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="_i_plug_platform_8h.html">IPlugPlatform.h</a>&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="_i_plug_logger_8h.html">IPlugLogger.h</a>&quot;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;IPlugOSC_msg.h&quot;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="_i_plug_timer_8h.html">IPlugTimer.h</a>&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>BEGIN_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifndef OSC_TIMER_RATE</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> OSC_TIMER_RATE = 100;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">using </span>OSCLogFunc = std::function&lt;void(WDL_String&amp; log)&gt;;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_o_s_c_device.html">   42</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* dest, <span class="keywordtype">int</span> maxpacket, <span class="keywordtype">int</span> sendsleep, <span class="keyword">struct</span> sockaddr_in* listen_addr);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="class_o_s_c_device.html">~OSCDevice</a>();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_device.html#aee31463b442755fe5b0ceb1432013356">RunInput</a>();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_device.html#a14cf8b128e159a947dbf3cdd9b6310d2">RunOutput</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_device.html#ad30aad0b2f1ce177f5e9a0dd387020be">AddInstance</a>(<span class="keywordtype">void</span> (*callback)(<span class="keywordtype">void</span>* d1, <span class="keywordtype">int</span> dev_idx, <span class="keywordtype">int</span> msglen, <span class="keywordtype">void</span>* msg), <span class="keywordtype">void</span>* d1, <span class="keywordtype">int</span> dev_idx);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_device.html#a00bbc84ed428993318b4c498f7169882">OnMessage</a>(<span class="keywordtype">char</span> type, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* msg, <span class="keywordtype">int</span> len);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>BEGIN_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">using </span>OSCMessageReceivedFunc = std::function&lt;void(<a class="code hl_class" href="class_osc_message_read.html">OscMessageRead</a>&amp; msg)&gt;;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_o_s_c_sender.html">   32</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_s_c_sender.html">OSCSender</a> : <span class="keyword">private</span> <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_class" href="class_o_s_c_sender.html">OSCSender</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ip = <span class="stringliteral">&quot;127.0.0.1&quot;</span>, <span class="keywordtype">int</span> port = 8000, OSCLogFunc logFunc = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_sender.html#a4d686d18ee2f7fa833b4f9192f4052b3">SetDestination</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ip, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_sender.html#acfd70bef7f431fa5758599805f3d9df4">SendOSCMessage</a>(<a class="code hl_class" href="class_osc_message_write.html">OscMessageWrite</a>&amp; msg);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_o_s_c_sender.html#ab0d7a41bf9fea15b8f97618a54f44d0c">   52</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_sender.html#ab0d7a41bf9fea15b8f97618a54f44d0c">SetLogFunc</a>(OSCLogFunc logFunc) { OSCInterface::SetLogFunc(logFunc); }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">int</span> mPort = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  WDL_String mDestIP;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* mDevice = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_o_s_c_receiver.html">   61</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_s_c_receiver.html">OSCReceiver</a> : <span class="keyword">private</span> <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_class" href="class_o_s_c_receiver.html">OSCReceiver</a>(<span class="keywordtype">int</span> port = 8000, OSCLogFunc logFunc = <span class="keyword">nullptr</span>, OSCMessageReceivedFunc receiveFunc = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_device.html#abaeb0d3387e902ef8c961fb792ee7aaf">SendOSC</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* src, <span class="keywordtype">int</span> len);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keyword">struct </span>rec</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    void (*callback)(<span class="keywordtype">void</span>* d1, <span class="keywordtype">int</span> dev_idx, <span class="keywordtype">int</span> msglen, <span class="keywordtype">void</span>* msg);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span>* data1;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordtype">int</span> dev_idx;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  };</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  WDL_TypedBuf&lt;rec&gt; mInstances;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordtype">double</span> mLastOpenTime = 0;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">bool</span> mHasInput = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">bool</span> mHasOutput = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  SOCKET mSendSocket;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">int</span> mMaxMacketSize, mSendSleep;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  WDL_String mDestination;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keyword">struct </span>sockaddr_in mSendAddress, mReceiveAddress;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  WDL_Queue mSendQueue, mReceiveQueue;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>};</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_o_s_c_interface.html">   97</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keyword">struct </span>incomingEvent</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* dev_ptr;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordtype">int</span> sz; <span class="comment">// size of msg</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> msg[3];</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  };</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a>(OSCLogFunc logFunc = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="class_o_s_c_interface.html">~OSCInterface</a>();</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a>&amp; operator=(<span class="keyword">const</span> <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* <a class="code hl_function" href="class_o_s_c_interface.html#a11afbf28f5b83cc097d1b0ef55fab2f1">CreateReceiver</a>(WDL_String&amp; log, <span class="keywordtype">int</span> port = 8000);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* <a class="code hl_function" href="class_o_s_c_interface.html#a248c80f38f6f9460a2684fdeb0590c6e">CreateSender</a>(WDL_String&amp; log, <span class="keyword">const</span> <span class="keywordtype">char</span>* ip = <span class="stringliteral">&quot;127.0.0.1&quot;</span>, <span class="keywordtype">int</span> port = 8000);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_o_s_c_interface.html#a5efe5256f4f01bc4918f241e0efb9560">  131</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_interface.html#a5efe5256f4f01bc4918f241e0efb9560">OnOSCMessage</a>(<a class="code hl_class" href="class_osc_message_read.html">OscMessageRead</a>&amp; msg) {};</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_o_s_c_interface.html#a0f1fe9c2a5ce071f9b1a4030c5b12dd0">  135</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_interface.html#a0f1fe9c2a5ce071f9b1a4030c5b12dd0">SetLogFunc</a>(OSCLogFunc logFunc) { mLogFunc = logFunc; }</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> MessageCallback(<span class="keywordtype">void</span> *d1, <span class="keywordtype">int</span> dev_idx, <span class="keywordtype">int</span> msglen, <span class="keywordtype">void</span> *msg);</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordtype">void</span> OnTimer(<a class="code hl_struct" href="struct_timer.html">Timer</a>&amp; timer);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="comment">// these are non-owned refs</span></div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  WDL_PtrList&lt;OSCDevice&gt; mDevices;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  OSCLogFunc mLogFunc;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keyword">static</span> std::unique_ptr&lt;Timer&gt; mTimer;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keyword">static</span> <span class="keywordtype">int</span> sInstances;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  WDL_HeapBuf mIncomingEvents;  <span class="comment">// incomingEvent list, each is 8-byte aligned</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  WDL_Mutex mIncomingEvents_mutex;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>};</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="class_o_s_c_sender.html">  154</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_s_c_sender.html">OSCSender</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>{</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <a class="code hl_class" href="class_o_s_c_sender.html">OSCSender</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* destIP = <span class="stringliteral">&quot;127.0.0.1&quot;</span>, <span class="keywordtype">int</span> port = 8000, OSCLogFunc logFunc = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_sender.html#a4d686d18ee2f7fa833b4f9192f4052b3">SetDestination</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ip, <span class="keywordtype">int</span> port);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  </div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_sender.html#acfd70bef7f431fa5758599805f3d9df4">SendOSCMessage</a>(<a class="code hl_class" href="class_osc_message_write.html">OscMessageWrite</a>&amp; msg);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keywordtype">int</span> mPort = 0;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  WDL_String mDestIP;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* mDevice = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>};</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_o_s_c_receiver.html">  177</a></span><span class="keyword">class </span><a class="code hl_class" href="class_o_s_c_receiver.html">OSCReceiver</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_o_s_c_interface.html">OSCInterface</a></div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>{</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <a class="code hl_class" href="class_o_s_c_receiver.html">OSCReceiver</a>(<span class="keywordtype">int</span> port = 8000, OSCLogFunc logFunc = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_receiver.html#a53a4d2a1a7a074cdd0caa212bffaaaae">SetReceivePort</a>(<span class="keywordtype">int</span> port);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_o_s_c_receiver.html#ac3ba267e668028cebffc1aac2e942bc2">  190</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_receiver.html#ac3ba267e668028cebffc1aac2e942bc2">OnOSCMessage</a>(<a class="code hl_class" href="class_osc_message_read.html">OscMessageRead</a>&amp; msg) = 0;</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* mDevice = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordtype">int</span> mPort = 0;</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keywordtype">char</span> mReadBuf[MAX_OSC_MSG_LEN] = {};</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>};</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>END_IPLUG_NAMESPACE</div>
-<div class="ttc" id="a_i_plug_logger_8h_html"><div class="ttname"><a href="_i_plug_logger_8h.html">IPlugLogger.h</a></div><div class="ttdoc">IPlug logging a.k.a tracing functionality.</div></div>
-<div class="ttc" id="a_i_plug_platform_8h_html"><div class="ttname"><a href="_i_plug_platform_8h.html">IPlugPlatform.h</a></div><div class="ttdoc">Include to get consistently named preprocessor macros for different platforms and logging functionali...</div></div>
-<div class="ttc" id="a_i_plug_timer_8h_html"><div class="ttname"><a href="_i_plug_timer_8h.html">IPlugTimer.h</a></div><div class="ttdoc">This file includes classes for implementing timers - in order to get a regular callback on the main t...</div></div>
-<div class="ttc" id="aclass_o_s_c_device_html"><div class="ttname"><a href="class_o_s_c_device.html">OSCDevice</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00042">IPlugOSC.h:43</a></div></div>
-<div class="ttc" id="aclass_o_s_c_device_html_a00bbc84ed428993318b4c498f7169882"><div class="ttname"><a href="class_o_s_c_device.html#a00bbc84ed428993318b4c498f7169882">OSCDevice::OnMessage</a></div><div class="ttdeci">void OnMessage(char type, const unsigned char *msg, int len)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00178">IPlugOSC.cpp:178</a></div></div>
-<div class="ttc" id="aclass_o_s_c_device_html_a14cf8b128e159a947dbf3cdd9b6310d2"><div class="ttname"><a href="class_o_s_c_device.html#a14cf8b128e159a947dbf3cdd9b6310d2">OSCDevice::RunOutput</a></div><div class="ttdeci">void RunOutput()</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00099">IPlugOSC.cpp:99</a></div></div>
-<div class="ttc" id="aclass_o_s_c_device_html_abaeb0d3387e902ef8c961fb792ee7aaf"><div class="ttname"><a href="class_o_s_c_device.html#abaeb0d3387e902ef8c961fb792ee7aaf">OSCDevice::SendOSC</a></div><div class="ttdeci">void SendOSC(const char *src, int len)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00186">IPlugOSC.cpp:186</a></div></div>
-<div class="ttc" id="aclass_o_s_c_device_html_ad30aad0b2f1ce177f5e9a0dd387020be"><div class="ttname"><a href="class_o_s_c_device.html#ad30aad0b2f1ce177f5e9a0dd387020be">OSCDevice::AddInstance</a></div><div class="ttdeci">void AddInstance(void(*callback)(void *d1, int dev_idx, int msglen, void *msg), void *d1, int dev_idx)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00172">IPlugOSC.cpp:172</a></div></div>
-<div class="ttc" id="aclass_o_s_c_device_html_aee31463b442755fe5b0ceb1432013356"><div class="ttname"><a href="class_o_s_c_device.html#aee31463b442755fe5b0ceb1432013356">OSCDevice::RunInput</a></div><div class="ttdeci">void RunInput()</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00078">IPlugOSC.cpp:78</a></div></div>
-<div class="ttc" id="aclass_o_s_c_interface_html"><div class="ttname"><a href="class_o_s_c_interface.html">OSCInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00097">IPlugOSC.h:98</a></div></div>
-<div class="ttc" id="aclass_o_s_c_interface_html_a0f1fe9c2a5ce071f9b1a4030c5b12dd0"><div class="ttname"><a href="class_o_s_c_interface.html#a0f1fe9c2a5ce071f9b1a4030c5b12dd0">OSCInterface::SetLogFunc</a></div><div class="ttdeci">void SetLogFunc(OSCLogFunc logFunc)</div><div class="ttdoc">Set the Log Func object.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00135">IPlugOSC.h:135</a></div></div>
-<div class="ttc" id="aclass_o_s_c_interface_html_a11afbf28f5b83cc097d1b0ef55fab2f1"><div class="ttname"><a href="class_o_s_c_interface.html#a11afbf28f5b83cc097d1b0ef55fab2f1">OSCInterface::CreateReceiver</a></div><div class="ttdeci">OSCDevice * CreateReceiver(WDL_String &amp;log, int port=8000)</div><div class="ttdoc">Create a Receiver object.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00309">IPlugOSC.cpp:309</a></div></div>
-<div class="ttc" id="aclass_o_s_c_interface_html_a248c80f38f6f9460a2684fdeb0590c6e"><div class="ttname"><a href="class_o_s_c_interface.html#a248c80f38f6f9460a2684fdeb0590c6e">OSCInterface::CreateSender</a></div><div class="ttdeci">OSCDevice * CreateSender(WDL_String &amp;log, const char *ip=&quot;127.0.0.1&quot;, int port=8000)</div><div class="ttdoc">Create a Sender object.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00367">IPlugOSC.cpp:367</a></div></div>
-<div class="ttc" id="aclass_o_s_c_interface_html_a5efe5256f4f01bc4918f241e0efb9560"><div class="ttname"><a href="class_o_s_c_interface.html#a5efe5256f4f01bc4918f241e0efb9560">OSCInterface::OnOSCMessage</a></div><div class="ttdeci">virtual void OnOSCMessage(OscMessageRead &amp;msg)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00131">IPlugOSC.h:131</a></div></div>
-<div class="ttc" id="aclass_o_s_c_receiver_html"><div class="ttname"><a href="class_o_s_c_receiver.html">OSCReceiver</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00177">IPlugOSC.h:178</a></div></div>
-<div class="ttc" id="aclass_o_s_c_receiver_html_a53a4d2a1a7a074cdd0caa212bffaaaae"><div class="ttname"><a href="class_o_s_c_receiver.html#a53a4d2a1a7a074cdd0caa212bffaaaae">OSCReceiver::SetReceivePort</a></div><div class="ttdeci">void SetReceivePort(int port)</div><div class="ttdoc">Set the Receive Port object.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00455">IPlugOSC.cpp:455</a></div></div>
-<div class="ttc" id="aclass_o_s_c_receiver_html_ac3ba267e668028cebffc1aac2e942bc2"><div class="ttname"><a href="class_o_s_c_receiver.html#ac3ba267e668028cebffc1aac2e942bc2">OSCReceiver::OnOSCMessage</a></div><div class="ttdeci">virtual void OnOSCMessage(OscMessageRead &amp;msg)=0</div></div>
-<div class="ttc" id="aclass_o_s_c_sender_html"><div class="ttname"><a href="class_o_s_c_sender.html">OSCSender</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00154">IPlugOSC.h:155</a></div></div>
-<div class="ttc" id="aclass_o_s_c_sender_html_a4d686d18ee2f7fa833b4f9192f4052b3"><div class="ttname"><a href="class_o_s_c_sender.html#a4d686d18ee2f7fa833b4f9192f4052b3">OSCSender::SetDestination</a></div><div class="ttdeci">void SetDestination(const char *ip, int port)</div><div class="ttdoc">Set the Destination object.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00422">IPlugOSC.cpp:422</a></div></div>
-<div class="ttc" id="aclass_o_s_c_sender_html_acfd70bef7f431fa5758599805f3d9df4"><div class="ttname"><a href="class_o_s_c_sender.html#acfd70bef7f431fa5758599805f3d9df4">OSCSender::SendOSCMessage</a></div><div class="ttdeci">void SendOSCMessage(OscMessageWrite &amp;msg)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00442">IPlugOSC.cpp:442</a></div></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_receiver.html#a53a4d2a1a7a074cdd0caa212bffaaaae">SetReceivePort</a>(<span class="keywordtype">int</span> port);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_o_s_c_receiver.html#a4597d27e4d47ac7954541ef5e50314f0">   75</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_receiver.html#a4597d27e4d47ac7954541ef5e50314f0">SetLogFunc</a>(OSCLogFunc logFunc) { OSCInterface::SetLogFunc(logFunc); }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_o_s_c_receiver.html#a7740fedb846201275f2ca51a2ed42222">   78</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_receiver.html#a7740fedb846201275f2ca51a2ed42222">OnOSCMessage</a>(<a class="code hl_class" href="class_osc_message_read.html">OscMessageRead</a>&amp; msg)</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">if</span> (mReceiveFunc)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      mReceiveFunc(msg);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  OSCMessageReceivedFunc mReceiveFunc = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* mDevice = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">int</span> mPort = 0;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>END_IPLUG_NAMESPACE</div>
+<div class="ttc" id="aclass_o_s_c_device_html"><div class="ttname"><a href="class_o_s_c_device.html">OSCDevice</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8h_source.html#l00041">IPlugOSC_internal.h:42</a></div></div>
+<div class="ttc" id="aclass_o_s_c_interface_html"><div class="ttname"><a href="class_o_s_c_interface.html">OSCInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8h_source.html#l00075">IPlugOSC_internal.h:76</a></div></div>
+<div class="ttc" id="aclass_o_s_c_receiver_html"><div class="ttname"><a href="class_o_s_c_receiver.html">OSCReceiver</a></div><div class="ttdoc">OSCReceiver interface, implement in order to receive OSC messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00061">IPlugOSC.h:62</a></div></div>
+<div class="ttc" id="aclass_o_s_c_receiver_html_a4597d27e4d47ac7954541ef5e50314f0"><div class="ttname"><a href="class_o_s_c_receiver.html#a4597d27e4d47ac7954541ef5e50314f0">OSCReceiver::SetLogFunc</a></div><div class="ttdeci">void SetLogFunc(OSCLogFunc logFunc)</div><div class="ttdoc">Set a log function after construction.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00075">IPlugOSC.h:75</a></div></div>
+<div class="ttc" id="aclass_o_s_c_receiver_html_a53a4d2a1a7a074cdd0caa212bffaaaae"><div class="ttname"><a href="class_o_s_c_receiver.html#a53a4d2a1a7a074cdd0caa212bffaaaae">OSCReceiver::SetReceivePort</a></div><div class="ttdeci">void SetReceivePort(int port)</div><div class="ttdoc">Set the port number on which to listen for OSC messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00046">IPlugOSC.cpp:46</a></div></div>
+<div class="ttc" id="aclass_o_s_c_receiver_html_a7740fedb846201275f2ca51a2ed42222"><div class="ttname"><a href="class_o_s_c_receiver.html#a7740fedb846201275f2ca51a2ed42222">OSCReceiver::OnOSCMessage</a></div><div class="ttdeci">virtual void OnOSCMessage(OscMessageRead &amp;msg)</div><div class="ttdoc">Override to handle incoming OSC messages in a derived class.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00078">IPlugOSC.h:78</a></div></div>
+<div class="ttc" id="aclass_o_s_c_sender_html"><div class="ttname"><a href="class_o_s_c_sender.html">OSCSender</a></div><div class="ttdoc">OSCSender interface, implement in order to send OSC messages.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00032">IPlugOSC.h:33</a></div></div>
+<div class="ttc" id="aclass_o_s_c_sender_html_a4d686d18ee2f7fa833b4f9192f4052b3"><div class="ttname"><a href="class_o_s_c_sender.html#a4d686d18ee2f7fa833b4f9192f4052b3">OSCSender::SetDestination</a></div><div class="ttdeci">void SetDestination(const char *ip, int port)</div><div class="ttdoc">Set the destination ip and port.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00012">IPlugOSC.cpp:12</a></div></div>
+<div class="ttc" id="aclass_o_s_c_sender_html_ab0d7a41bf9fea15b8f97618a54f44d0c"><div class="ttname"><a href="class_o_s_c_sender.html#ab0d7a41bf9fea15b8f97618a54f44d0c">OSCSender::SetLogFunc</a></div><div class="ttdeci">void SetLogFunc(OSCLogFunc logFunc)</div><div class="ttdoc">Set a log function after construction.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8h_source.html#l00052">IPlugOSC.h:52</a></div></div>
+<div class="ttc" id="aclass_o_s_c_sender_html_acfd70bef7f431fa5758599805f3d9df4"><div class="ttname"><a href="class_o_s_c_sender.html#acfd70bef7f431fa5758599805f3d9df4">OSCSender::SendOSCMessage</a></div><div class="ttdeci">void SendOSCMessage(OscMessageWrite &amp;msg)</div><div class="ttdoc">Send an OSC message.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c_8cpp_source.html#l00031">IPlugOSC.cpp:31</a></div></div>
 <div class="ttc" id="aclass_osc_message_read_html"><div class="ttname"><a href="class_osc_message_read.html">OscMessageRead</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__msg_8h_source.html#l00060">IPlugOSC_msg.h:61</a></div></div>
 <div class="ttc" id="aclass_osc_message_write_html"><div class="ttname"><a href="class_osc_message_write.html">OscMessageWrite</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__msg_8h_source.html#l00037">IPlugOSC_msg.h:38</a></div></div>
-<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdoc">Base class for timer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_timer_8h_source.html#l00039">IPlugTimer.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

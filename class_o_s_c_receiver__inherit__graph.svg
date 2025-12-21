@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="OSCReceiver interface, implement in order to receive OSC messages.">
 <polygon fill="#999999" stroke="#666666" points="76,-19 0,-19 0,0 76,0 76,-19"/>
 <text text-anchor="middle" x="38" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">OSCReceiver</text>
 </a>
@@ -21,7 +21,7 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="class_o_s_c_interface.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#666666" points="76,-74 0,-74 0,-55 76,-55 76,-74"/>
+<polygon fill="white" stroke="#bfbfbf" points="76,-74 0,-74 0,-55 76,-55 76,-74"/>
 <text text-anchor="middle" x="38" y="-62" font-family="Helvetica,sans-Serif" font-size="10.00">OSCInterface</text>
 </a>
 </g>
@@ -29,8 +29,8 @@
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="#63b8ff" d="M38,-43.35C38,-35.1 38,-25.97 38,-19.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="34.5,-43.23 38,-53.23 41.5,-43.23 34.5,-43.23"/>
+<path fill="none" stroke="#8b1a1a" d="M38,-43.35C38,-35.1 38,-25.97 38,-19.44"/>
+<polygon fill="#8b1a1a" stroke="#8b1a1a" points="34.5,-43.23 38,-53.23 41.5,-43.23 34.5,-43.23"/>
 </g>
 </g>
 </svg>

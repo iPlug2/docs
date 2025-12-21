@@ -20,8 +20,8 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_o_s_c_receiver.html" target="_top" xlink:title=" ">
-<polygon fill="white" stroke="#bfbfbf" points="76,-19 0,-19 0,0 76,0 76,-19"/>
+<g id="a_node2"><a xlink:href="class_o_s_c_receiver.html" target="_top" xlink:title="OSCReceiver interface, implement in order to receive OSC messages.">
+<polygon fill="white" stroke="#666666" points="76,-19 0,-19 0,0 76,0 76,-19"/>
 <text text-anchor="middle" x="38" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">OSCReceiver</text>
 </a>
 </g>
@@ -29,13 +29,13 @@
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="#63b8ff" d="M68.32,-46.22C60.74,-37.28 51.79,-26.74 45.59,-19.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="65.45,-48.24 74.59,-53.59 70.79,-43.71 65.45,-48.24"/>
+<path fill="none" stroke="#8b1a1a" d="M68.32,-46.22C60.74,-37.28 51.79,-26.74 45.59,-19.44"/>
+<polygon fill="#8b1a1a" stroke="#8b1a1a" points="65.45,-48.24 74.59,-53.59 70.79,-43.71 65.45,-48.24"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="class_o_s_c_sender.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="class_o_s_c_sender.html" target="_top" xlink:title="OSCSender interface, implement in order to send OSC messages.">
 <polygon fill="white" stroke="#666666" points="162,-19 94,-19 94,0 162,0 162,-19"/>
 <text text-anchor="middle" x="128" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">OSCSender</text>
 </a>
@@ -44,8 +44,8 @@
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="#63b8ff" d="M97.68,-46.22C105.26,-37.28 114.21,-26.74 120.41,-19.44"/>
-<polygon fill="#63b8ff" stroke="#63b8ff" points="95.21,-43.71 91.41,-53.59 100.55,-48.24 95.21,-43.71"/>
+<path fill="none" stroke="#8b1a1a" d="M97.68,-46.22C105.26,-37.28 114.21,-26.74 120.41,-19.44"/>
+<polygon fill="#8b1a1a" stroke="#8b1a1a" points="95.21,-43.71 91.41,-53.59 100.55,-48.24 95.21,-43.71"/>
 </g>
 </g>
 </svg>

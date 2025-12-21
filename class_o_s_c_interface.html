@@ -81,14 +81,12 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="class_o_s_c_interface-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">OSCInterface Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for OSCInterface:</div>
 <div class="dyncontent">
@@ -99,7 +97,6 @@ Inheritance diagram for OSCInterface:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acbe262cc2cac5725936f0d9ff15675a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#acbe262cc2cac5725936f0d9ff15675a0">OSCInterface</a> (OSCLogFunc logFunc=nullptr)</td></tr>
-<tr class="memdesc:acbe262cc2cac5725936f0d9ff15675a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_o_s_c_interface.html">OSCInterface</a> object.  <a href="class_o_s_c_interface.html#acbe262cc2cac5725936f0d9ff15675a0">More...</a><br /></td></tr>
 <tr class="separator:acbe262cc2cac5725936f0d9ff15675a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad00eff39414cf0b67b05f68b70d70ec6"><td class="memItemLeft" align="right" valign="top"><a id="ad00eff39414cf0b67b05f68b70d70ec6" name="ad00eff39414cf0b67b05f68b70d70ec6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>OSCInterface</b> (const <a class="el" href="class_o_s_c_interface.html">OSCInterface</a> &amp;)=delete</td></tr>
@@ -108,37 +105,34 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="class_o_s_c_interface.html">OSCInterface</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_o_s_c_interface.html">OSCInterface</a> &amp;)=delete</td></tr>
 <tr class="separator:a9b9ee3a3b46770ca2422238d2a0b8e3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11afbf28f5b83cc097d1b0ef55fab2f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_s_c_device.html">OSCDevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a11afbf28f5b83cc097d1b0ef55fab2f1">CreateReceiver</a> (WDL_String &amp;log, int port=8000)</td></tr>
-<tr class="memdesc:a11afbf28f5b83cc097d1b0ef55fab2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Receiver object.  <a href="class_o_s_c_interface.html#a11afbf28f5b83cc097d1b0ef55fab2f1">More...</a><br /></td></tr>
 <tr class="separator:a11afbf28f5b83cc097d1b0ef55fab2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a248c80f38f6f9460a2684fdeb0590c6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_s_c_device.html">OSCDevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a248c80f38f6f9460a2684fdeb0590c6e">CreateSender</a> (WDL_String &amp;log, const char *ip=&quot;127.0.0.1&quot;, int port=8000)</td></tr>
-<tr class="memdesc:a248c80f38f6f9460a2684fdeb0590c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Sender object.  <a href="class_o_s_c_interface.html#a248c80f38f6f9460a2684fdeb0590c6e">More...</a><br /></td></tr>
 <tr class="separator:a248c80f38f6f9460a2684fdeb0590c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5efe5256f4f01bc4918f241e0efb9560"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a5efe5256f4f01bc4918f241e0efb9560">OnOSCMessage</a> (<a class="el" href="class_osc_message_read.html">OscMessageRead</a> &amp;msg)</td></tr>
 <tr class="separator:a5efe5256f4f01bc4918f241e0efb9560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1fe9c2a5ce071f9b1a4030c5b12dd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a0f1fe9c2a5ce071f9b1a4030c5b12dd0">SetLogFunc</a> (OSCLogFunc logFunc)</td></tr>
-<tr class="memdesc:a0f1fe9c2a5ce071f9b1a4030c5b12dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Log Func object.  <a href="class_o_s_c_interface.html#a0f1fe9c2a5ce071f9b1a4030c5b12dd0">More...</a><br /></td></tr>
 <tr class="separator:a0f1fe9c2a5ce071f9b1a4030c5b12dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ae9d6d60d4212d170f3a03849f5590262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#ae9d6d60d4212d170f3a03849f5590262">RemoveDevice</a> (<a class="el" href="class_o_s_c_device.html">OSCDevice</a> *device)</td></tr>
+<tr class="memdesc:ae9d6d60d4212d170f3a03849f5590262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a device from the device list and delete it.  <a href="class_o_s_c_interface.html#ae9d6d60d4212d170f3a03849f5590262">More...</a><br /></td></tr>
+<tr class="separator:ae9d6d60d4212d170f3a03849f5590262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a694e40c9bdab4460e4f4587d7480798a"><td class="memItemLeft" align="right" valign="top">OSCLogFunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a694e40c9bdab4460e4f4587d7480798a">mLogFunc</a></td></tr>
 <tr class="separator:a694e40c9bdab4460e4f4587d7480798a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c9f4df72a95169c07cdceb21877a7e3"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="struct_timer.html">Timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a6c9f4df72a95169c07cdceb21877a7e3">mTimer</a></td></tr>
+<tr class="separator:a6c9f4df72a95169c07cdceb21877a7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa178d099fea87e75f87783ae99df93d7"><td class="memItemLeft" align="right" valign="top">WDL_HeapBuf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#aa178d099fea87e75f87783ae99df93d7">mIncomingEvents</a></td></tr>
 <tr class="separator:aa178d099fea87e75f87783ae99df93d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad91849bbd9a2ceec3a80e84593b2e519"><td class="memItemLeft" align="right" valign="top">WDL_Mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#ad91849bbd9a2ceec3a80e84593b2e519">mIncomingEvents_mutex</a></td></tr>
 <tr class="separator:ad91849bbd9a2ceec3a80e84593b2e519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:acee2f0837dd4695e35347f4d1ff87d70"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="struct_timer.html">Timer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#acee2f0837dd4695e35347f4d1ff87d70">mTimer</a></td></tr>
-<tr class="separator:acee2f0837dd4695e35347f4d1ff87d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69641a5ac932530bececf2cddfd14439"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a69641a5ac932530bececf2cddfd14439">sInstances</a> = 0</td></tr>
-<tr class="separator:a69641a5ac932530bececf2cddfd14439"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd></dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00097">97</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00075">75</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acbe262cc2cac5725936f0d9ff15675a0" name="acbe262cc2cac5725936f0d9ff15675a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbe262cc2cac5725936f0d9ff15675a0">&#9670;&#160;</a></span>OSCInterface()</h2>
@@ -156,15 +150,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_o_s_c_interface.html">OSCInterface</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logFunc</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00290">290</a> of file <a class="el" href="_i_plug_o_s_c_8cpp_source.html">IPlugOSC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00286">286</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -191,7 +177,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00301">301</a> of file <a class="el" href="_i_plug_o_s_c_8cpp_source.html">IPlugOSC.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00295">295</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -222,21 +208,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a Receiver object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log</td><td></td></tr>
-    <tr><td class="paramname">port</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>OSCDevice* </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00309">309</a> of file <a class="el" href="_i_plug_o_s_c_8cpp_source.html">IPlugOSC.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00172">OSCDevice::AddInstance()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00455">OSCReceiver::SetReceivePort()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00317">317</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -272,21 +244,7 @@ Static Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a Sender object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">log</td><td></td></tr>
-    <tr><td class="paramname">port</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>OSCDevice* </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00367">367</a> of file <a class="el" href="_i_plug_o_s_c_8cpp_source.html">IPlugOSC.cpp</a>.</p>
-
-<p class="reference">References <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00172">OSCDevice::AddInstance()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00422">OSCSender::SetDestination()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00374">374</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -313,17 +271,48 @@ Static Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd></dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_o_s_c_receiver.html#a7740fedb846201275f2ca51a2ed42222">OSCReceiver</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00096">96</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+
+</div>
+</div>
+<a id="ae9d6d60d4212d170f3a03849f5590262" name="ae9d6d60d4212d170f3a03849f5590262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d6d60d4212d170f3a03849f5590262">&#9670;&#160;</a></span>RemoveDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSCInterface::RemoveDevice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_s_c_device.html">OSCDevice</a> *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove a device from the device list and delete it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">msg</td><td></td></tr>
+    <tr><td class="paramname">device</td><td>The device to remove </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_o_s_c_receiver.html#ac3ba267e668028cebffc1aac2e942bc2">OSCReceiver</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00307">307</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00131">131</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00012">OSCSender::SetDestination()</a>, and <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00046">OSCReceiver::SetReceivePort()</a>.</p>
 
 </div>
 </div>
@@ -351,15 +340,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the Log Func object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">logFunc</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00135">135</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00097">97</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -384,7 +365,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00149">149</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00114">114</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -408,7 +389,7 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00150">150</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00115">115</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -432,12 +413,12 @@ Static Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00146">146</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00112">112</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
-<a id="acee2f0837dd4695e35347f4d1ff87d70" name="acee2f0837dd4695e35347f4d1ff87d70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acee2f0837dd4695e35347f4d1ff87d70">&#9670;&#160;</a></span>mTimer</h2>
+<a id="a6c9f4df72a95169c07cdceb21877a7e3" name="a6c9f4df72a95169c07cdceb21877a7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c9f4df72a95169c07cdceb21877a7e3">&#9670;&#160;</a></span>mTimer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -446,47 +427,23 @@ Static Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt; <a class="el" href="struct_timer.html">Timer</a> &gt; OSCInterface::mTimer</td>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="struct_timer.html">Timer</a>&gt; OSCInterface::mTimer</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00147">147</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
-
-</div>
-</div>
-<a id="a69641a5ac932530bececf2cddfd14439" name="a69641a5ac932530bececf2cddfd14439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69641a5ac932530bececf2cddfd14439">&#9670;&#160;</a></span>sInstances</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int OSCInterface::sInstances = 0</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c_8h_source.html#l00148">148</a> of file <a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00113">113</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_i_plug_o_s_c_8h_source.html">IPlugOSC.h</a></li>
-<li><a class="el" href="_i_plug_o_s_c_8cpp_source.html">IPlugOSC.cpp</a></li>
+<li><a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a></li>
+<li><a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
