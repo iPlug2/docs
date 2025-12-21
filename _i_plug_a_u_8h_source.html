@@ -277,132 +277,137 @@ $(function() {
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> GetStrFromDict(CFDictionaryRef pDict, <span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">char</span>* value);</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> GetDataFromDict(CFDictionaryRef pDict, <span class="keyword">const</span> <span class="keywordtype">char</span>* key, <a class="code hl_class" href="class_i_byte_chunk.html">IByteChunk</a>* pChunk);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="preprocessor">#pragma mark -</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keywordtype">bool</span> mActive = <span class="keyword">false</span>; <span class="comment">// TODO: is this necessary? is it correct?</span></div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keywordtype">double</span> mLastRenderSampleTime = -1.0;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  WDL_String mCocoaViewFactoryClassName;</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  AudioComponentInstance mCI = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  HostCallbackInfo mHostCallbacks;</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  WDL_PtrList&lt;BusChannels&gt; mInBuses, mOutBuses;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  WDL_PtrList&lt;InputBusConnection&gt; mInBusConnections;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  WDL_PtrList&lt;PropertyListener&gt; mPropertyListeners;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  WDL_TypedBuf&lt;AudioSampleType&gt; mInScratchBuf;</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  WDL_TypedBuf&lt;AudioSampleType&gt; mOutScratchBuf;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  WDL_PtrList&lt;AURenderCallbackStruct&gt; mRenderNotify;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  AUMIDIOutputCallbackStruct mMidiCallback;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  AudioTimeStamp mLastRenderTimeStamp;</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  WDL_String mTrackName;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Plug, <span class="keywordtype">bool</span> DoesMIDIIn&gt;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_i_plug_a_u_factory.html">IPlugAUFactory</a>;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>};</div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><a class="code hl_class" href="class_i_plug_a_u.html">IPlugAU</a>* MakePlug(<span class="keywordtype">void</span>* memory);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Plug, <span class="keywordtype">bool</span> MIDIIn&gt;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="class_i_plug_a_u_factory.html">  229</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_plug_a_u_factory.html">IPlugAUFactory</a></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>{</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <span class="keyword">static</span> <span class="keywordtype">void</span>* Construct(<span class="keywordtype">void</span>* pMemory, AudioComponentInstance compInstance)</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">return</span> MakePlug(pMemory);</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  }</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> Destruct(<span class="keywordtype">void</span>* pMemory)</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  {</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    ((Plug*) pMemory)-&gt;~Plug();</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  }</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keyword">static</span> AudioComponentMethod Lookup(SInt16 selector)</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keyword">using </span>Method = AudioComponentMethod;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">switch</span> (selector)</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    {</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <span class="keywordflow">case</span> kAudioUnitInitializeSelect:              <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodInitialize;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <span class="keywordflow">case</span> kAudioUnitUninitializeSelect:            <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodUninitialize;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <span class="keywordflow">case</span> kAudioUnitGetPropertyInfoSelect:         <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodGetPropertyInfo;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <span class="keywordflow">case</span> kAudioUnitGetPropertySelect:             <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodGetProperty;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keywordflow">case</span> kAudioUnitSetPropertySelect:             <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodSetProperty;</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="keywordflow">case</span> kAudioUnitAddPropertyListenerSelect:     <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodAddPropertyListener;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="keywordflow">case</span> kAudioUnitRemovePropertyListenerSelect:  <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRemovePropertyListener;</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keywordflow">case</span> kAudioUnitRemovePropertyListenerWithUserDataSelect:</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRemovePropertyListenerWithUserData;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>        </div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordflow">case</span> kAudioUnitAddRenderNotifySelect:         <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodAddRenderNotify;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <span class="keywordflow">case</span> kAudioUnitRemoveRenderNotifySelect:      <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRemoveRenderNotify;</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>      <span class="keywordflow">case</span> kAudioUnitGetParameterSelect:            <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodGetParameter;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="keywordflow">case</span> kAudioUnitSetParameterSelect:            <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodSetParameter;</div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keywordflow">case</span> kAudioUnitScheduleParametersSelect:      <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodScheduleParameters;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="keywordflow">case</span> kAudioUnitRenderSelect:                  <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRender;</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="keywordflow">case</span> kAudioUnitResetSelect:                   <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodReset;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <span class="keywordflow">case</span> kMusicDeviceMIDIEventSelect:             <span class="keywordflow">return</span> MIDIIn ? (Method)IPlugAU::AUMethodMIDIEvent : NULL;</div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keywordflow">case</span> kMusicDeviceSysExSelect:                 <span class="keywordflow">return</span> MIDIIn ? (Method)IPlugAU::AUMethodSysEx : NULL;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    }</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  }</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  </div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keyword">static</span> OSStatus Open(<span class="keywordtype">void</span>* pSelf, AudioUnit compInstance)</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  {</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    AudioComponentPlugInInstance* acpi = (AudioComponentPlugInInstance*) pSelf;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    assert(acpi);</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    (*acpi-&gt;mConstruct)(&amp;acpi-&gt;mInstanceStorage, compInstance);</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <a class="code hl_class" href="class_i_plug_a_u.html">IPlugAU</a>* plug = (<a class="code hl_class" href="class_i_plug_a_u.html">IPlugAU</a>*) &amp;acpi-&gt;mInstanceStorage;</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    plug-&gt;mCI = compInstance;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    plug-&gt;<a class="code hl_function" href="class_i_plugin_base.html#ae17db0be35230ed71ffc6ef5f9e992df">PruneUninitializedPresets</a>();</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    </div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keywordflow">return</span> noErr;</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>  }</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="keyword">static</span> OSStatus Close(<span class="keywordtype">void</span>* pSelf)</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    AudioComponentPlugInInstance* acpi = (AudioComponentPlugInInstance*) pSelf;</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    assert(acpi);</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    (*acpi-&gt;mDestruct)(&amp;acpi-&gt;mInstanceStorage);</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    free(pSelf);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">return</span> noErr;</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  }</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  </div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keyword">static</span> AudioComponentPlugInInterface* Factory(<span class="keyword">const</span> AudioComponentDescription* pInDesc)</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordtype">void</span> *ptr = malloc(offsetof(AudioComponentPlugInInstance, mInstanceStorage) + <span class="keyword">sizeof</span>(Plug));</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    AudioComponentPlugInInstance* acpi = <span class="keyword">reinterpret_cast&lt;</span>AudioComponentPlugInInstance*<span class="keyword">&gt;</span>(ptr);</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    acpi-&gt;mPlugInInterface.Open = Open;</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    acpi-&gt;mPlugInInterface.Close = Close;</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    acpi-&gt;mPlugInInterface.Lookup = Lookup;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>    acpi-&gt;mPlugInInterface.reserved = NULL;</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    acpi-&gt;mConstruct = Construct;</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    acpi-&gt;mDestruct = Destruct;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    acpi-&gt;mPad[0] = NULL;</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    acpi-&gt;mPad[1] = NULL;</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordflow">return</span> (AudioComponentPlugInInterface*)acpi;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>};</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>END_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#pragma mark - Specialist Use</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="class_i_plug_a_u.html#a57a5ec531c4aa7896be8a3ab8434ea61">  208</a></span>  <span class="keyword">const</span> AudioTimeStamp&amp; <a class="code hl_function" href="class_i_plug_a_u.html#a57a5ec531c4aa7896be8a3ab8434ea61">GetLastAudioTimeStamp</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mLastRenderTimeStamp; }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="preprocessor">#pragma mark -</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordtype">bool</span> mActive = <span class="keyword">false</span>; <span class="comment">// TODO: is this necessary? is it correct?</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="keywordtype">double</span> mLastRenderSampleTime = -1.0;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  WDL_String mCocoaViewFactoryClassName;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  AudioComponentInstance mCI = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  HostCallbackInfo mHostCallbacks;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  WDL_PtrList&lt;BusChannels&gt; mInBuses, mOutBuses;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  WDL_PtrList&lt;InputBusConnection&gt; mInBusConnections;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  WDL_PtrList&lt;PropertyListener&gt; mPropertyListeners;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  WDL_TypedBuf&lt;AudioSampleType&gt; mInScratchBuf;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  WDL_TypedBuf&lt;AudioSampleType&gt; mOutScratchBuf;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  WDL_PtrList&lt;AURenderCallbackStruct&gt; mRenderNotify;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  AUMIDIOutputCallbackStruct mMidiCallback;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  AudioTimeStamp mLastRenderTimeStamp;</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  WDL_String mTrackName;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keyword">template</span> &lt;<span class="keyword">class</span> Plug, <span class="keywordtype">bool</span> DoesMIDIIn&gt;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keyword">friend</span> <span class="keyword">class </span><a class="code hl_class" href="class_i_plug_a_u_factory.html">IPlugAUFactory</a>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>};</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><a class="code hl_class" href="class_i_plug_a_u.html">IPlugAU</a>* MakePlug(<span class="keywordtype">void</span>* memory);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Plug, <span class="keywordtype">bool</span> MIDIIn&gt;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="class_i_plug_a_u_factory.html">  237</a></span><span class="keyword">class </span><a class="code hl_class" href="class_i_plug_a_u_factory.html">IPlugAUFactory</a></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>{</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keyword">static</span> <span class="keywordtype">void</span>* Construct(<span class="keywordtype">void</span>* pMemory, AudioComponentInstance compInstance)</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  {</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">return</span> MakePlug(pMemory);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  }</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> Destruct(<span class="keywordtype">void</span>* pMemory)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    ((Plug*) pMemory)-&gt;~Plug();</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <span class="keyword">static</span> AudioComponentMethod Lookup(SInt16 selector)</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  {</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    <span class="keyword">using </span>Method = AudioComponentMethod;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    </div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">switch</span> (selector)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    {</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keywordflow">case</span> kAudioUnitInitializeSelect:              <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodInitialize;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <span class="keywordflow">case</span> kAudioUnitUninitializeSelect:            <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodUninitialize;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <span class="keywordflow">case</span> kAudioUnitGetPropertyInfoSelect:         <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodGetPropertyInfo;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="keywordflow">case</span> kAudioUnitGetPropertySelect:             <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodGetProperty;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <span class="keywordflow">case</span> kAudioUnitSetPropertySelect:             <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodSetProperty;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="keywordflow">case</span> kAudioUnitAddPropertyListenerSelect:     <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodAddPropertyListener;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keywordflow">case</span> kAudioUnitRemovePropertyListenerSelect:  <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRemovePropertyListener;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <span class="keywordflow">case</span> kAudioUnitRemovePropertyListenerWithUserDataSelect:</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRemovePropertyListenerWithUserData;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <span class="keywordflow">case</span> kAudioUnitAddRenderNotifySelect:         <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodAddRenderNotify;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <span class="keywordflow">case</span> kAudioUnitRemoveRenderNotifySelect:      <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRemoveRenderNotify;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <span class="keywordflow">case</span> kAudioUnitGetParameterSelect:            <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodGetParameter;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keywordflow">case</span> kAudioUnitSetParameterSelect:            <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodSetParameter;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <span class="keywordflow">case</span> kAudioUnitScheduleParametersSelect:      <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodScheduleParameters;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">case</span> kAudioUnitRenderSelect:                  <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodRender;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <span class="keywordflow">case</span> kAudioUnitResetSelect:                   <span class="keywordflow">return</span> (Method)IPlugAU::AUMethodReset;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>      <span class="keywordflow">case</span> kMusicDeviceMIDIEventSelect:             <span class="keywordflow">return</span> MIDIIn ? (Method)IPlugAU::AUMethodMIDIEvent : NULL;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>      <span class="keywordflow">case</span> kMusicDeviceSysExSelect:                 <span class="keywordflow">return</span> MIDIIn ? (Method)IPlugAU::AUMethodSysEx : NULL;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  }</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>  </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keyword">static</span> OSStatus Open(<span class="keywordtype">void</span>* pSelf, AudioUnit compInstance)</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    AudioComponentPlugInInstance* acpi = (AudioComponentPlugInInstance*) pSelf;</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    assert(acpi);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    (*acpi-&gt;mConstruct)(&amp;acpi-&gt;mInstanceStorage, compInstance);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <a class="code hl_class" href="class_i_plug_a_u.html">IPlugAU</a>* plug = (<a class="code hl_class" href="class_i_plug_a_u.html">IPlugAU</a>*) &amp;acpi-&gt;mInstanceStorage;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    plug-&gt;mCI = compInstance;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    plug-&gt;<a class="code hl_function" href="class_i_plugin_base.html#ae17db0be35230ed71ffc6ef5f9e992df">PruneUninitializedPresets</a>();</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="keywordflow">return</span> noErr;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>  }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <span class="keyword">static</span> OSStatus Close(<span class="keywordtype">void</span>* pSelf)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    AudioComponentPlugInInstance* acpi = (AudioComponentPlugInInstance*) pSelf;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    assert(acpi);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    (*acpi-&gt;mDestruct)(&amp;acpi-&gt;mInstanceStorage);</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    free(pSelf);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="keywordflow">return</span> noErr;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <span class="keyword">static</span> AudioComponentPlugInInterface* Factory(<span class="keyword">const</span> AudioComponentDescription* pInDesc)</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    <span class="keywordtype">void</span> *ptr = malloc(offsetof(AudioComponentPlugInInstance, mInstanceStorage) + <span class="keyword">sizeof</span>(Plug));</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    AudioComponentPlugInInstance* acpi = <span class="keyword">reinterpret_cast&lt;</span>AudioComponentPlugInInstance*<span class="keyword">&gt;</span>(ptr);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    acpi-&gt;mPlugInInterface.Open = Open;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    acpi-&gt;mPlugInInterface.Close = Close;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    acpi-&gt;mPlugInInterface.Lookup = Lookup;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    acpi-&gt;mPlugInInterface.reserved = NULL;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    acpi-&gt;mConstruct = Construct;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    acpi-&gt;mDestruct = Destruct;</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    acpi-&gt;mPad[0] = NULL;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    acpi-&gt;mPad[1] = NULL;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <span class="keywordflow">return</span> (AudioComponentPlugInInterface*)acpi;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>};</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
 <div class="ttc" id="a_i_plug_a_p_i_base_8h_html"><div class="ttname"><a href="_i_plug_a_p_i_base_8h.html">IPlugAPIBase.h</a></div></div>
 <div class="ttc" id="a_i_plug_processor_8h_html"><div class="ttname"><a href="_i_plug_processor_8h.html">IPlugProcessor.h</a></div></div>
 <div class="ttc" id="aclass_i_byte_chunk_html"><div class="ttname"><a href="class_i_byte_chunk.html">IByteChunk</a></div><div class="ttdoc">Manages a block of memory, for plug-in settings store/recall.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00111">IPlugStructs.h:112</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_p_i_base_html"><div class="ttname"><a href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a></div><div class="ttdoc">The base class of an IPlug plug-in, which interacts with the different plug-in APIs.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_i_base_8h_source.html#l00042">IPlugAPIBase.h:43</a></div></div>
-<div class="ttc" id="aclass_i_plug_a_u_factory_html"><div class="ttname"><a href="class_i_plug_a_u_factory.html">IPlugAUFactory</a></div><div class="ttdoc">AudioUnit v2 Factory Class Template.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8h_source.html#l00229">IPlugAU.h:230</a></div></div>
+<div class="ttc" id="aclass_i_plug_a_u_factory_html"><div class="ttname"><a href="class_i_plug_a_u_factory.html">IPlugAUFactory</a></div><div class="ttdoc">AudioUnit v2 Factory Class Template.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8h_source.html#l00237">IPlugAU.h:238</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html"><div class="ttname"><a href="class_i_plug_a_u.html">IPlugAU</a></div><div class="ttdoc">AudioUnit v2 API base class for an IPlug plug-in.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8h_source.html#l00054">IPlugAU.h:56</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_a268d045b3e22c69b3b5a298fcf58b784"><div class="ttname"><a href="class_i_plug_a_u.html#a268d045b3e22c69b3b5a298fcf58b784">IPlugAU::BeginInformHostOfParamChange</a></div><div class="ttdeci">void BeginInformHostOfParamChange(int idx) override</div><div class="ttdoc">Implemented by the API class, called by the UI (or by a delegate) at the beginning of a parameter cha...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8cpp_source.html#l01901">IPlugAU.cpp:1901</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_a27e83f46ae08cf37d055260ad4f238c0"><div class="ttname"><a href="class_i_plug_a_u.html#a27e83f46ae08cf37d055260ad4f238c0">IPlugAU::InformHostOfPresetChange</a></div><div class="ttdeci">void InformHostOfPresetChange() override</div><div class="ttdoc">Implemented by the API class, called by the UI (etc) when the plug-in initiates a program/preset chan...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8cpp_source.html#l01919">IPlugAU.cpp:1919</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_a2f6a1ca55150f75bd666793cd4a3a60d"><div class="ttname"><a href="class_i_plug_a_u.html#a2f6a1ca55150f75bd666793cd4a3a60d">IPlugAU::InformHostOfParameterDetailsChange</a></div><div class="ttdeci">void InformHostOfParameterDetailsChange() override</div><div class="ttdoc">Implemented by the API class, call this if you update parameter labels and hopefully the host should ...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8cpp_source.html#l01925">IPlugAU.cpp:1925</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_a4bd6490da165438702027d6220b09c37"><div class="ttname"><a href="class_i_plug_a_u.html#a4bd6490da165438702027d6220b09c37">IPlugAU::InformHostOfParamChange</a></div><div class="ttdeci">void InformHostOfParamChange(int idx, double normalizedValue) override</div><div class="ttdoc">Implemented by the API class, called by the UI via SetParameterValue() with the value of a parameter ...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8cpp_source.html#l01907">IPlugAU.cpp:1907</a></div></div>
+<div class="ttc" id="aclass_i_plug_a_u_html_a57a5ec531c4aa7896be8a3ab8434ea61"><div class="ttname"><a href="class_i_plug_a_u.html#a57a5ec531c4aa7896be8a3ab8434ea61">IPlugAU::GetLastAudioTimeStamp</a></div><div class="ttdeci">const AudioTimeStamp &amp; GetLastAudioTimeStamp() const</div><div class="ttdoc">Get the AudioTimeStamp from the last render callback.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8h_source.html#l00208">IPlugAU.h:208</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_a728ccf09551b1b5ce1900e6a642c873c"><div class="ttname"><a href="class_i_plug_a_u.html#a728ccf09551b1b5ce1900e6a642c873c">IPlugAU::SendMidiMsg</a></div><div class="ttdeci">bool SendMidiMsg(const IMidiMsg &amp;msg) override</div><div class="ttdoc">Send a single MIDI message // TODO: info about what thread should this be called on or not called on!</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8cpp_source.html#l02016">IPlugAU.cpp:2016</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_a882b53d2243f0c0ae91c205271e115e9"><div class="ttname"><a href="class_i_plug_a_u.html#a882b53d2243f0c0ae91c205271e115e9">IPlugAU::EndInformHostOfParamChange</a></div><div class="ttdeci">void EndInformHostOfParamChange(int idx) override</div><div class="ttdoc">Implemented by the API class, called by the UI (or by a delegate) at the end of a parameter change ge...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8cpp_source.html#l01913">IPlugAU.cpp:1913</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_u_html_abbe86b0e398d5cd2b7b9e23be352d08e"><div class="ttname"><a href="class_i_plug_a_u.html#abbe86b0e398d5cd2b7b9e23be352d08e">IPlugAU::GetTrackName</a></div><div class="ttdeci">virtual void GetTrackName(WDL_String &amp;str) override</div><div class="ttdoc">Get the name of the track that the plug-in is inserted on.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_u_8h_source.html#l00071">IPlugAU.h:71</a></div></div>

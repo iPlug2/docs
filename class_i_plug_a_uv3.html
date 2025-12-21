@@ -148,6 +148,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa7d16bdadb3a70e3791c6938f0504e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66ff5b0a2b2a1ff501165545565a0fa2"><td class="memItemLeft" align="right" valign="top">virtual void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_uv3.html#a66ff5b0a2b2a1ff501165545565a0fa2">GetNamedMessageChannel</a> (const char *name)</td></tr>
 <tr class="separator:a66ff5b0a2b2a1ff501165545565a0fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f8aa050c8e2f5d0ce416cab5fefdef7"><td class="memItemLeft" align="right" valign="top">const AudioTimeStamp &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_uv3.html#a6f8aa050c8e2f5d0ce416cab5fefdef7">GetLastAudioTimeStamp</a> () const</td></tr>
+<tr class="memdesc:a6f8aa050c8e2f5d0ce416cab5fefdef7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the AudioTimeStamp from the last render callback.  <a href="class_i_plug_a_uv3.html#a6f8aa050c8e2f5d0ce416cab5fefdef7">More...</a><br /></td></tr>
+<tr class="separator:a6f8aa050c8e2f5d0ce416cab5fefdef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_plug_a_p_i_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_plug_a_p_i_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a></td></tr>
 <tr class="memitem:a44a45fef2238ec447876d8edc5ba2b5b inherit pub_methods_class_i_plug_a_p_i_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_i_base.html#a44a45fef2238ec447876d8edc5ba2b5b">IPlugAPIBase</a> (Config config, EAPI plugAPI)</td></tr>
 <tr class="separator:a44a45fef2238ec447876d8edc5ba2b5b inherit pub_methods_class_i_plug_a_p_i_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -814,6 +817,37 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00048">48</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+
+</div>
+</div>
+<a id="a6f8aa050c8e2f5d0ce416cab5fefdef7" name="a6f8aa050c8e2f5d0ce416cab5fefdef7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f8aa050c8e2f5d0ce416cab5fefdef7">&#9670;&#160;</a></span>GetLastAudioTimeStamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const AudioTimeStamp &amp; IPlugAUv3::GetLastAudioTimeStamp </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the AudioTimeStamp from the last render callback. </p>
+<dl class="section return"><dt>Returns</dt><dd>The most recent render timestamp </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For specialist use when hosting AUs within AUs. Thread safety: returns snapshot, may be stale if called off audio thread. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00090">90</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
