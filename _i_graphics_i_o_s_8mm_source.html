@@ -197,7 +197,7 @@ $(function() {
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  mView = (<span class="keywordtype">void</span>*) view;</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_class" href="class_i_graphics_1_1_scoped_g_l_context.html">IGraphics::ScopedGLContext</a> scopedGLContext{<span class="keyword">this</span>};</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  OnViewInitialized((<span class="keywordtype">void</span>*) [view metalLayer]);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  OnViewInitialized((<span class="keywordtype">void</span>*) [view layer]);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#if !TARGET_OS_VISION</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  CGFloat  scale = [UIScreen mainScreen].scale;</div>
@@ -466,13 +466,26 @@ $(function() {
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>  }</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>}</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="preprocessor">#if defined IGRAPHICS_NANOVG</span></div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span><span class="preprocessor">  #include &quot;IGraphicsNanoVG.cpp&quot;</span></div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span><span class="preprocessor">#elif defined IGRAPHICS_SKIA</span></div>
-<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span><span class="preprocessor">  #include &quot;IGraphicsSkia.cpp&quot;</span></div>
-<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="preprocessor">  #error Either NO_IGRAPHICS or one and only one choice of graphics library must be defined!</span></div>
-<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="keywordtype">void</span> IGraphicsIOS::ActivateGLContext()</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>{</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>  IGRAPHICS_VIEW* pView = (IGRAPHICS_VIEW*) mView;</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>  [pView activateGLContext];</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>}</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span><span class="keywordtype">void</span> IGraphicsIOS::DeactivateGLContext()</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>{</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>  IGRAPHICS_VIEW* pView = (IGRAPHICS_VIEW*) mView;</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  [pView deactivateGLContext];</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>}</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span> </div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span><span class="preprocessor">#if defined IGRAPHICS_NANOVG</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="preprocessor">  #include &quot;IGraphicsNanoVG.cpp&quot;</span></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span><span class="preprocessor">#elif defined IGRAPHICS_SKIA</span></div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="preprocessor">  #include &quot;IGraphicsSkia.cpp&quot;</span></div>
+<div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span><span class="preprocessor">  #error Either NO_IGRAPHICS or one and only one choice of graphics library must be defined!</span></div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_i_g_editor_delegate_html"><div class="ttname"><a href="class_i_g_editor_delegate.html">IGEditorDelegate</a></div><div class="ttdoc">An editor delegate base class that uses IGraphics for the UI.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_editor_delegate_8h_source.html#l00030">IGraphicsEditorDelegate.h:31</a></div></div>
 <div class="ttc" id="aclass_i_graphics_1_1_scoped_g_l_context_html"><div class="ttname"><a href="class_i_graphics_1_1_scoped_g_l_context.html">IGraphics::ScopedGLContext</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8h_source.html#l00974">IGraphics.h:975</a></div></div>
 <div class="ttc" id="aclass_i_graphics_html_a50390d533f1478ce1373ff601479cb80"><div class="ttname"><a href="class_i_graphics.html#a50390d533f1478ce1373ff601479cb80">IGraphics::AttachGestureRecognizer</a></div><div class="ttdeci">virtual void AttachGestureRecognizer(EGestureType type)</div><div class="ttdoc">Registers a gesture recognizer with the graphics context.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_8cpp_source.html#l02396">IGraphics.cpp:2396</a></div></div>
