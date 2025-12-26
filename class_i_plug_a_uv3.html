@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cf91bcf63bbb5f18cd529afad285aeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_uv3.html#a2cf91bcf63bbb5f18cd529afad285aeb">SendSysEx</a> (const <a class="el" href="struct_i_sys_ex.html">ISysEx</a> &amp;msg) override</td></tr>
 <tr class="memdesc:a2cf91bcf63bbb5f18cd529afad285aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a single MIDI System Exclusive (SysEx) message // TODO: info about what thread should this be called on or not called on!  <a href="class_i_plug_a_uv3.html#a2cf91bcf63bbb5f18cd529afad285aeb">More...</a><br /></td></tr>
 <tr class="separator:a2cf91bcf63bbb5f18cd529afad285aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a72a223983cc65fc192cab5b0f1e195"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_uv3.html#a5a72a223983cc65fc192cab5b0f1e195">EditorResize</a> (int viewWidth, int viewHeight) override</td></tr>
+<tr class="memdesc:a5a72a223983cc65fc192cab5b0f1e195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementations call into the APIs resize hooks returns a bool to indicate whether the DAW or plugin class has resized the host window.  <a href="class_i_plug_a_uv3.html#a5a72a223983cc65fc192cab5b0f1e195">More...</a><br /></td></tr>
+<tr class="separator:a5a72a223983cc65fc192cab5b0f1e195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2556311b224829db50243c8769e1024d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_uv3.html#a2556311b224829db50243c8769e1024d">ProcessWithEvents</a> (AudioTimeStamp const *timestamp, uint32_t frameCount, AURenderEvent const *events, <a class="el" href="group___i_plug_structs.html#struct_i_time_info">ITimeInfo</a> &amp;timeInfo)</td></tr>
 <tr class="separator:a2556311b224829db50243c8769e1024d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9b3a3ef480042615a31a7d89da47c9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_uv3.html#ab9b3a3ef480042615a31a7d89da47c9d">SetParameterFromValueObserver</a> (uint64_t address, float value)</td></tr>
@@ -690,7 +693,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00070">70</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00071">71</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
@@ -710,7 +713,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00275">275</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00283">283</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -740,7 +743,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00293">293</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00301">301</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -779,6 +782,48 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00035">35</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+
+</div>
+</div>
+<a id="a5a72a223983cc65fc192cab5b0f1e195" name="a5a72a223983cc65fc192cab5b0f1e195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a72a223983cc65fc192cab5b0f1e195">&#9670;&#160;</a></span>EditorResize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IPlugAUv3::EditorResize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementations call into the APIs resize hooks returns a bool to indicate whether the DAW or plugin class has resized the host window. </p>
+
+<p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00075">75</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -847,7 +892,7 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The most recent render timestamp </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>For specialist use when hosting AUs within AUs. Thread safety: returns snapshot, may be stale if called off audio thread. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00090">90</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00091">91</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
@@ -875,7 +920,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00085">85</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00086">86</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
@@ -903,7 +948,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00076">76</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00077">77</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
@@ -933,7 +978,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00255">255</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00263">263</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -953,7 +998,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00245">245</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00253">253</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -981,7 +1026,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00077">77</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00078">78</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
@@ -1011,7 +1056,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00265">265</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00273">273</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -1121,7 +1166,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00312">312</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00320">320</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -1163,7 +1208,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00121">121</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00129">129</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -1232,7 +1277,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00235">235</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00243">243</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
@@ -1319,7 +1364,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00081">81</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8h_source.html#l00082">82</a> of file <a class="el" href="_i_plug_a_uv3_8h_source.html">IPlugAUv3.h</a>.</p>
 
 </div>
 </div>
@@ -1349,7 +1394,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00220">220</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_uv3_8mm_source.html#l00228">228</a> of file <a class="el" href="_i_plug_a_uv3_8mm_source.html">IPlugAUv3.mm</a>.</p>
 
 </div>
 </div>
