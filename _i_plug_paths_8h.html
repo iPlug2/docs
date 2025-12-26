@@ -217,7 +217,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WebViewCachePath</b> 
 </div><div class="memdoc">
 
 <p>Get the path to the plug-in bundle resource path. </p>
-<p >On macOS and iOS if this is called in an AUv3 app extension it will return the bundle of the parent app iOS bundles are flat, so the path is just to the .app where as macOS bundles contain a resources subfolder On Windows this is only useful for VST3 plug-ins which have a "bundle" with a resource path since v3.6 </p><dl class="params"><dt>Parameters</dt><dd>
+<p >On macOS AUv3, this returns the AUv3 Framework bundle's resources (not the container app) for sandbox compatibility - the appex cannot access the container app's resources. On iOS, if this is called in an AUv3 app extension it will return the bundle of the parent app. iOS bundles are flat, so the path is just to the .app, whereas macOS bundles contain a resources subfolder. On Windows this is only useful for VST3 plug-ins which have a "bundle" with a resource path since v3.6. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>WDL_String reference where the path will be put on success or empty string on failure </td></tr>
     <tr><td class="paramname">pExtra</td><td>This should either be a const char* to bundleID (macOS/iOS) or an HMODULE handle (windows) </td></tr>
