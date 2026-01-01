@@ -82,9 +82,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >This document covers building iPlug2 plugin projects using CMake on all supported platforms.</p>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md46"></a>
 Prerequisites</h1>
-<h2><a class="anchor" id="autotoc_md21"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 macOS</h2>
 <ul>
 <li><b>CMake</b> 3.14 or later</li>
@@ -93,7 +93,7 @@ macOS</h2>
 </ul>
 <div class="fragment"><div class="line"># Install via Homebrew</div>
 <div class="line">brew install cmake ninja</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md48"></a>
 Windows</h2>
 <ul>
 <li><b>CMake</b> 3.14 or later</li>
@@ -105,7 +105,7 @@ Windows</h2>
 <li><a href="https://cmake.org/download/">cmake.org</a></li>
 <li><code>winget install Kitware.CMake</code> / <code>winget install Ninja-build.Ninja</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md23"></a>
+<h2><a class="anchor" id="autotoc_md49"></a>
 Web (Emscripten)</h2>
 <ul>
 <li><b>Emscripten SDK</b> for WebAssembly builds</li>
@@ -117,15 +117,15 @@ Web (Emscripten)</h2>
 <div class="line">./emsdk install latest</div>
 <div class="line">./emsdk activate latest</div>
 <div class="line">source ./emsdk_env.sh</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md50"></a>
 Generators</h1>
 <p >CMake supports multiple build system generators:</p>
-<h2><a class="anchor" id="autotoc_md25"></a>
+<h2><a class="anchor" id="autotoc_md51"></a>
 Ninja (Recommended)</h2>
 <p >Fast, cross-platform. Works on macOS and Windows.</p>
 <div class="fragment"><div class="line">cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..</div>
 <div class="line">ninja</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md52"></a>
 Visual Studio (Windows)</h2>
 <p >Multi-configuration generator. Supports x64 and ARM64EC architectures.</p>
 <div class="fragment"><div class="line"># x64 (default)</div>
@@ -136,13 +136,13 @@ Visual Studio (Windows)</h2>
 <div class="line"> </div>
 <div class="line"># Build from command line</div>
 <div class="line">cmake --build . --config Release</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md53"></a>
 Xcode (macOS/iOS/visionOS)</h2>
 <p >Multi-configuration generator for Apple platforms.</p>
 <div class="fragment"><div class="line">cmake -G Xcode ..</div>
 <div class="line">cmake --build . --config Release</div>
 <div class="line"># Or open the .xcodeproj in Xcode</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md54"></a>
 Quick Start</h1>
 <div class="fragment"><div class="line"># From your plugin project directory</div>
 <div class="line">mkdir build &amp;&amp; cd build</div>
@@ -154,7 +154,7 @@ Quick Start</h1>
 <div class="line"> </div>
 <div class="line"># Build</div>
 <div class="line">cmake --build . --config Release</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md55"></a>
 Supported Platforms &amp; Targets</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -184,16 +184,16 @@ Supported Platforms &amp; Targets</h1>
 <li>AUv3 is embedded in the standalone APP on macOS</li>
 <li>Linux is not yet supported</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md30"></a>
+<h1><a class="anchor" id="autotoc_md56"></a>
 Build Commands</h1>
-<h2><a class="anchor" id="autotoc_md31"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 Build All Targets</h2>
 <div class="fragment"><div class="line"># Ninja</div>
 <div class="line">ninja</div>
 <div class="line"> </div>
 <div class="line"># Visual Studio / Xcode</div>
 <div class="line">cmake --build . --config Release</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md32"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md58"></a>
 Build Specific Targets</h2>
 <div class="fragment"><div class="line"># Ninja</div>
 <div class="line">ninja MyPlugin-app       # Standalone app</div>
@@ -205,9 +205,9 @@ Build Specific Targets</h2>
 <div class="line"> </div>
 <div class="line"># Visual Studio / Xcode</div>
 <div class="line">cmake --build . --config Release --target MyPlugin-vst3</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md59"></a>
 Build Options</h1>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md60"></a>
 Common Options</h2>
 <div class="fragment"><div class="line"># Debug build (default)</div>
 <div class="line">cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug ..</div>
@@ -217,7 +217,7 @@ Common Options</h2>
 <div class="line"> </div>
 <div class="line"># Enable tracer/profiling</div>
 <div class="line">cmake -G Ninja -DIPLUG2_TRACER=ON ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md61"></a>
 macOS Options</h2>
 <div class="fragment"><div class="line"># Universal binaries (Intel + Apple Silicon)</div>
 <div class="line">cmake -G Ninja -DIPLUG2_UNIVERSAL=ON ..</div>
@@ -227,12 +227,12 @@ macOS Options</h2>
 <div class="line"> </div>
 <div class="line"># Deployment target (default: 10.13)</div>
 <div class="line">cmake -G Ninja -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md36"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md62"></a>
 Windows Options</h2>
 <p >Architecture is set via the <code>-A</code> flag with Visual Studio generator:</p>
 <div class="fragment"><div class="line">cmake -G &quot;Visual Studio 17 2022&quot; -A x64 ..      # 64-bit Intel/AMD</div>
 <div class="line">cmake -G &quot;Visual Studio 17 2022&quot; -A ARM64EC ..  # ARM64 with x64 emulation compatibility</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md37"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md63"></a>
 Debugging Options</h2>
 <p >Set a host application for debugging plugins:</p>
 <div class="fragment"><div class="line"># Windows (Visual Studio)</div>
@@ -250,7 +250,7 @@ Debugging Options</h2>
 </table>
 <p ><b>Windows:</b> Sets <code>VS_DEBUGGER_COMMAND</code> for plugin targets, allowing F5 to launch host and attach debugger. If REAPER is installed at <code>C:/Program Files/REAPER (x64)/reaper.exe</code>, it is automatically used as the default.</p>
 <p ><b>macOS:</b> Generates Xcode schemes for plugin targets. If <code>IPLUG2_DEBUG_HOST</code> is set, schemes use that executable. Otherwise, schemes are generated with no executable set, allowing you to choose "Ask on Launch" or configure manually in Xcode.</p>
-<h2><a class="anchor" id="autotoc_md38"></a>
+<h2><a class="anchor" id="autotoc_md64"></a>
 iOS Options</h2>
 <div class="fragment"><div class="line"># iOS Device</div>
 <div class="line">cmake -G Xcode -DCMAKE_SYSTEM_NAME=iOS -DIPLUG2_IOS_PLATFORM=OS ..</div>
@@ -260,7 +260,7 @@ iOS Options</h2>
 <div class="line"> </div>
 <div class="line"># Deployment target (default: 14)</div>
 <div class="line">cmake -G Xcode -DCMAKE_SYSTEM_NAME=iOS -DIPLUG2_IOS_DEPLOYMENT_TARGET=15 ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md39"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md65"></a>
 visionOS Options</h2>
 <p >Requires Xcode 15+ with visionOS SDK.</p>
 <div class="fragment"><div class="line"># visionOS Device</div>
@@ -280,7 +280,7 @@ visionOS Options</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>VISIONOS_SIMULATOR</code>   </td><td class="markdownTableBodyNone">xrsimulator   </td><td class="markdownTableBodyNone">visionOS Simulator   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md40"></a>
+<h2><a class="anchor" id="autotoc_md66"></a>
 Web/Emscripten Options</h2>
 <div class="fragment"><div class="line"># Configure with Emscripten toolchain</div>
 <div class="line">emcmake cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..</div>
@@ -289,10 +289,10 @@ Web/Emscripten Options</h2>
 <div class="line">ninja MyPlugin-wam       # Audio processor (WASM)</div>
 <div class="line">ninja MyPlugin-web       # UI controller (WASM)</div>
 <div class="line">ninja MyPlugin-wam-dist  # Complete distribution package</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md41"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md67"></a>
 IGraphics Backends</h1>
 <p >iPlug2 provides <code>${IGRAPHICS_LIB}</code> which is set based on cache variables, allowing backend switching at configure time.</p>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md68"></a>
 Cache Variables</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -302,7 +302,7 @@ Cache Variables</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>IGRAPHICS_RENDERER</code>   </td><td class="markdownTableBodyNone"><code>GL2</code>, <code>GL3</code>, <code>METAL</code>, <code>CPU</code>   </td><td class="markdownTableBodyNone"><code>GL2</code> (Windows), <code>METAL</code> (macOS/iOS)   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md43"></a>
+<h2><a class="anchor" id="autotoc_md69"></a>
 Configure at Build Time</h2>
 <div class="fragment"><div class="line"># Default: NanoVG with GL2 (Windows) or Metal (macOS)</div>
 <div class="line">cmake -G Ninja ..</div>
@@ -312,7 +312,7 @@ Configure at Build Time</h2>
 <div class="line"> </div>
 <div class="line"># NanoVG with Metal (macOS)</div>
 <div class="line">cmake -G Ninja -DIGRAPHICS_BACKEND=NANOVG -DIGRAPHICS_RENDERER=METAL ..</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md44"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md70"></a>
 Available Targets</h2>
 <div class="fragment"><div class="line"># NanoVG (lightweight, included in iPlug2)</div>
 <div class="line">iPlug2::IGraphics::NanoVG        # GL2 (default)</div>
@@ -323,7 +323,7 @@ Available Targets</h2>
 <div class="line">iPlug2::IGraphics::Skia::GL3     # OpenGL 3</div>
 <div class="line">iPlug2::IGraphics::Skia::Metal   # Metal (macOS/iOS)</div>
 <div class="line">iPlug2::IGraphics::Skia::CPU     # Software rendering</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md45"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md71"></a>
 Project Structure</h1>
 <p >A minimal CMake-enabled iPlug2 project:</p>
 <div class="fragment"><div class="line">MyPlugin/</div>
@@ -337,10 +337,10 @@ Project Structure</h1>
 <div class="line">    ├── MyPlugin-CLAP-Info.plist</div>
 <div class="line">    ├── fonts/</div>
 <div class="line">    └── ...</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md46"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md72"></a>
 The &lt;tt&gt;iplug_add_plugin&lt;/tt&gt; Macro</h1>
 <p >The <code>iplug_add_plugin()</code> macro simplifies plugin project configuration, reducing ~190 lines of boilerplate to ~15 lines.</p>
-<h2><a class="anchor" id="autotoc_md47"></a>
+<h2><a class="anchor" id="autotoc_md73"></a>
 Basic Usage</h2>
 <div class="fragment"><div class="line">cmake_minimum_required(VERSION 3.14)</div>
 <div class="line">project(MyPlugin VERSION 1.0.0)</div>
@@ -360,7 +360,7 @@ Basic Usage</h2>
 <div class="line">  RESOURCES</div>
 <div class="line">    resources/fonts/Roboto-Regular.ttf</div>
 <div class="line">)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md48"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md74"></a>
 Syntax</h2>
 <div class="fragment"><div class="line">iplug_add_plugin(&lt;name&gt;</div>
 <div class="line">  SOURCES &lt;file1&gt; [file2 ...]</div>
@@ -373,7 +373,7 @@ Syntax</h2>
 <div class="line">  [UI &lt;IGRAPHICS|WEBVIEW|NONE&gt;]</div>
 <div class="line">  [WAM_SITE_ORIGIN &lt;origin&gt;]</div>
 <div class="line">)</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md49"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md75"></a>
 Parameters</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -397,7 +397,7 @@ Parameters</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>WAM_SITE_ORIGIN</code>   </td><td class="markdownTableBodyNone">WAM site origin for CORS   </td><td class="markdownTableBodyNone"><code>"/"</code>   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md50"></a>
+<h2><a class="anchor" id="autotoc_md76"></a>
 Format Names</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -417,7 +417,7 @@ Format Names</h2>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code>WAM</code>   </td><td class="markdownTableBodyNone">Web Audio Module   </td><td class="markdownTableBodyNone">Emscripten only   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md77"></a>
 Format Groups</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -435,7 +435,7 @@ Format Groups</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>WEB</code>   </td><td class="markdownTableBodyNone">WAM   </td><td class="markdownTableBodyNone">Web formats only   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md52"></a>
+<h2><a class="anchor" id="autotoc_md78"></a>
 Examples</h2>
 <p ><b>Standard <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> plugin:</b></p>
 <div class="fragment"><div class="line">iplug_add_plugin(${PROJECT_NAME}</div>
@@ -496,9 +496,9 @@ Examples</h2>
 <div class="line">)</div>
 </div><!-- fragment --><p >Note: <code>WEB_RESOURCES</code> preserves subdirectory structure. Files in <code>resources/web/assets/</code> will be placed in <code>Resources/web/assets/</code> in the bundle.</p>
 <p >See <code>Examples/IPlugEffect/CMakeLists.txt</code> for a complete working example.</p>
-<h1><a class="anchor" id="autotoc_md53"></a>
+<h1><a class="anchor" id="autotoc_md79"></a>
 Build Output</h1>
-<h2><a class="anchor" id="autotoc_md54"></a>
+<h2><a class="anchor" id="autotoc_md80"></a>
 macOS</h2>
 <div class="fragment"><div class="line">build/out/</div>
 <div class="line">├── MyPlugin.app/                    # Standalone (with embedded AUv3)</div>
@@ -513,7 +513,7 @@ macOS</h2>
 <div class="line">├── MyPlugin.component/              # AUv2</div>
 <div class="line">├── MyPluginAU.framework/            # AUv3 framework</div>
 <div class="line">└── MyPlugin.appex/                  # AUv3 appex</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md55"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md81"></a>
 Windows</h2>
 <div class="fragment"><div class="line">build/out/</div>
 <div class="line">├── MyPlugin.exe                     # Standalone app</div>
@@ -526,7 +526,7 @@ Windows</h2>
 <div class="line">    └── Contents/</div>
 <div class="line">        └── x64/                     # or ARM64EC</div>
 <div class="line">            └── MyPlugin.aaxplugin</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md56"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md82"></a>
 Web</h2>
 <div class="fragment"><div class="line">build/out/MyPlugin/</div>
 <div class="line">├── scripts/</div>
@@ -537,9 +537,9 @@ Web</h2>
 <div class="line">├── index.html              # Test page</div>
 <div class="line">├── descriptor.json         # WAM metadata</div>
 <div class="line">└── styles/                 # CSS assets</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md57"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md83"></a>
 Deployment</h1>
-<h2><a class="anchor" id="autotoc_md58"></a>
+<h2><a class="anchor" id="autotoc_md84"></a>
 Default Deployment Paths</h2>
 <p >Plugins are automatically deployed (symlinked or copied) to standard locations:</p>
 <p ><b>macOS:</b></p><ul>
@@ -559,7 +559,7 @@ Default Deployment Paths</h2>
 <blockquote class="doxtable">
 <p >&zwj;<b>Note:</b> VST3/CLAP use per-user paths by default (spec-compliant, hosts scan both locations). For system-wide installation, use <code>-DIPLUG_VST3_DEPLOY_PATH="%COMMONPROGRAMFILES%\VST3"</code>. </p>
 </blockquote>
-<h2><a class="anchor" id="autotoc_md59"></a>
+<h2><a class="anchor" id="autotoc_md85"></a>
 Deployment Options</h2>
 <div class="fragment"><div class="line"># Disable automatic deployment</div>
 <div class="line">cmake -G Ninja -DIPLUG_DEPLOY_PLUGINS=OFF ..</div>
@@ -569,9 +569,9 @@ Deployment Options</h2>
 <div class="line"> </div>
 <div class="line"># Custom deployment paths</div>
 <div class="line">cmake -G Ninja -DIPLUG_VST3_DEPLOY_PATH=/custom/path ..</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md60"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md86"></a>
 Platform-Specific Notes</h1>
-<h2><a class="anchor" id="autotoc_md61"></a>
+<h2><a class="anchor" id="autotoc_md87"></a>
 macOS</h2>
 <p ><b>Code Signing (required for AUv3):</b></p>
 <div class="fragment"><div class="line"># Sign from innermost to outermost</div>
@@ -592,27 +592,27 @@ macOS</h2>
 <div class="fragment"><div class="line">auval -a                              # List all registered AUs</div>
 <div class="line">auval -v aufx &lt;subtype&gt; &lt;manufacturer&gt;  # Validate effect</div>
 <div class="line">auval -v aumu &lt;subtype&gt; &lt;manufacturer&gt;  # Validate instrument</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md62"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md88"></a>
 Windows</h2>
 <ul>
 <li>MSVC uses static runtime (<code>/MT</code> for Release, <code>/MTd</code> for Debug)</li>
 <li>Multi-config generators (Visual Studio) require <code>--config</code> flag when building</li>
 <li>Use ARM64EC for ARM64 Windows (provides x64 plugin compatibility)</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md63"></a>
+<h2><a class="anchor" id="autotoc_md89"></a>
 iOS</h2>
 <ul>
 <li>Minimum deployment target: iOS 14 (configurable)</li>
 <li>Device builds require code signing</li>
 <li>AUv3 is embedded in the standalone app</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md64"></a>
+<h2><a class="anchor" id="autotoc_md90"></a>
 visionOS</h2>
 <ul>
 <li>Requires Xcode 15+ with visionOS SDK installed</li>
 <li>Minimum deployment target: 1.0</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md65"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 Web/Emscripten</h2>
 <p >WAM plugins consist of two WASM modules:</p><ol type="1">
 <li><b>WAM Processor</b> (<code>-wam</code>) - DSP/audio (runs in AudioWorklet)</li>
@@ -632,30 +632,30 @@ Web/Emscripten</h2>
 </div><!-- fragment --><p ><b>Notes:</b></p><ul>
 <li>WAM SDK must be downloaded via <code>Dependencies/download-iplug-sdks.sh</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md66"></a>
+<h2><a class="anchor" id="autotoc_md92"></a>
 Linux</h2>
 <p >Linux is not yet supported. CMake configuration will show an error message.</p>
-<h1><a class="anchor" id="autotoc_md67"></a>
+<h1><a class="anchor" id="autotoc_md93"></a>
 Troubleshooting</h1>
-<h2><a class="anchor" id="autotoc_md68"></a>
+<h2><a class="anchor" id="autotoc_md94"></a>
 General</h2>
 <ul>
 <li><b>Missing symbols</b>: Verify all required frameworks/libraries are linked</li>
 <li><b>Source files not found</b>: Check paths in <code>target_sources()</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md69"></a>
+<h2><a class="anchor" id="autotoc_md95"></a>
 macOS</h2>
 <ul>
 <li><b>AUv3 not registering</b>: Ensure app is signed and has been run at least once</li>
 <li>**"Bundle format unrecognized"**: Check PkgInfo files exist; use <code>cp -R</code> for frameworks</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md70"></a>
+<h2><a class="anchor" id="autotoc_md96"></a>
 Windows</h2>
 <ul>
 <li><b>Link errors with runtime</b>: Ensure all libraries use same runtime (<code>/MT</code> vs <code>/MD</code>)</li>
 <li><b>Missing DLLs</b>: Use static runtime or deploy required DLLs</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md71"></a>
+<h1><a class="anchor" id="autotoc_md97"></a>
 Examples</h1>
 <p >The following examples include CMakeLists.txt and are built automatically from the root:</p>
 <p ><b>Standard <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a>:</b> IPlugEffect, IPlugInstrument, IPlugControls, IPlugConvoEngine, IPlugChunks, IPlugDrumSynth, IPlugMidiEffect, IPlugOSCEditor, IPlugResponsiveUI, IPlugSideChain, IPlugSurroundEffect, IPlugVisualizer</p>
@@ -663,7 +663,7 @@ Examples</h1>
 <p ><b>Swift/Cocoa (Xcode generator only):</b> IPlugSwiftUI, IPlugCocoaUI - Automatically included when using <code>-G Xcode</code> on macOS.</p>
 <p ><b>REAPER:</b> IPlugReaperExtension, IPlugReaperPlugin</p>
 <p ><b>Tests:</b> IGraphicsTest, IGraphicsStressTest, MetaParamTest</p>
-<h1><a class="anchor" id="autotoc_md72"></a>
+<h1><a class="anchor" id="autotoc_md98"></a>
 See Also</h1>
 <ul>
 <li><a href="https://iplug2.github.io/docs">iPlug2 Documentation</a></li>
