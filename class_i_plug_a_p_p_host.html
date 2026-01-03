@@ -102,6 +102,21 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a20fb9894a8ec85babe919d793dd97528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#a20fb9894a8ec85babe919d793dd97528">SetScreenshotPath</a> (const char *path)</td></tr>
+<tr class="memdesc:a20fb9894a8ec85babe919d793dd97528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set screenshot path for CLI screenshot mode.  <a href="class_i_plug_a_p_p_host.html#a20fb9894a8ec85babe919d793dd97528">More...</a><br /></td></tr>
+<tr class="separator:a20fb9894a8ec85babe919d793dd97528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c10e9a8f2865ff20fc3a47998483177"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#a4c10e9a8f2865ff20fc3a47998483177">GetScreenshotPath</a> () const</td></tr>
+<tr class="memdesc:a4c10e9a8f2865ff20fc3a47998483177"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get screenshot path (empty if not in screenshot mode)  <a href="class_i_plug_a_p_p_host.html#a4c10e9a8f2865ff20fc3a47998483177">More...</a><br /></td></tr>
+<tr class="separator:a4c10e9a8f2865ff20fc3a47998483177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e01a486f2a380926e8e351ecf3f31f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#af3e01a486f2a380926e8e351ecf3f31f">IsScreenshotMode</a> () const</td></tr>
+<tr class="memdesc:af3e01a486f2a380926e8e351ecf3f31f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if in screenshot mode.  <a href="class_i_plug_a_p_p_host.html#af3e01a486f2a380926e8e351ecf3f31f">More...</a><br /></td></tr>
+<tr class="separator:af3e01a486f2a380926e8e351ecf3f31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc6130d416dfa335145ab743029127f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#a7bc6130d416dfa335145ab743029127f">SetNoIO</a> (bool noIO)</td></tr>
+<tr class="memdesc:a7bc6130d416dfa335145ab743029127f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set no-I/O mode (disables audio and MIDI initialization)  <a href="class_i_plug_a_p_p_host.html#a7bc6130d416dfa335145ab743029127f">More...</a><br /></td></tr>
+<tr class="separator:a7bc6130d416dfa335145ab743029127f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06bafe9d9fc57acc90c7844c3fa42f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#aa06bafe9d9fc57acc90c7844c3fa42f4">IsNoIO</a> () const</td></tr>
+<tr class="memdesc:aa06bafe9d9fc57acc90c7844c3fa42f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if I/O is disabled.  <a href="class_i_plug_a_p_p_host.html#aa06bafe9d9fc57acc90c7844c3fa42f4">More...</a><br /></td></tr>
+<tr class="separator:aa06bafe9d9fc57acc90c7844c3fa42f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a507f2a2429f8f14d4820016a15bb4e15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#a507f2a2429f8f14d4820016a15bb4e15">PopulateSampleRateList</a> (HWND hwndDlg, RtAudio::DeviceInfo *pInputDevInfo, RtAudio::DeviceInfo *pOutputDevInfo)</td></tr>
 <tr class="separator:a507f2a2429f8f14d4820016a15bb4e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8957dd253c519e5e7b02a0fae69572f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_p_host.html#a8957dd253c519e5e7b02a0fae69572f8">PopulateAudioInputList</a> (HWND hwndDlg, RtAudio::DeviceInfo *pInfo)</td></tr>
@@ -285,7 +300,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00686">686</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00701">701</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -315,7 +330,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00348">348</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00351">351</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -334,7 +349,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00556">556</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00567">567</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -418,7 +433,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00782">782</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00797">797</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -545,7 +560,37 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00214">214</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00234">234</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
+
+</div>
+</div>
+<a id="a4c10e9a8f2865ff20fc3a47998483177" name="a4c10e9a8f2865ff20fc3a47998483177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c10e9a8f2865ff20fc3a47998483177">&#9670;&#160;</a></span>GetScreenshotPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * IPlugAPPHost::GetScreenshotPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get screenshot path (empty if not in screenshot mode) </p>
+<dl class="section return"><dt>Returns</dt><dd>The screenshot path or empty string </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00168">168</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
 
 </div>
 </div>
@@ -606,7 +651,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00574">574</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00585">585</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -625,7 +670,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00636">636</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00647">647</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -645,6 +690,66 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00086">86</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa06bafe9d9fc57acc90c7844c3fa42f4" name="aa06bafe9d9fc57acc90c7844c3fa42f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06bafe9d9fc57acc90c7844c3fa42f4">&#9670;&#160;</a></span>IsNoIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IPlugAPPHost::IsNoIO </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if I/O is disabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if audio and MIDI I/O is disabled </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00180">180</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
+
+</div>
+</div>
+<a id="af3e01a486f2a380926e8e351ecf3f31f" name="af3e01a486f2a380926e8e351ecf3f31f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e01a486f2a380926e8e351ecf3f31f">&#9670;&#160;</a></span>IsScreenshotMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IPlugAPPHost::IsScreenshotMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if in screenshot mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if a screenshot should be taken and app should exit </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00172">172</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
 
 </div>
 </div>
@@ -694,7 +799,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00542">542</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00548">548</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -738,7 +843,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00750">750</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00765">765</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -768,7 +873,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00364">364</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00367">367</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +913,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00178">178</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00184">184</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +943,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00064">64</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00070">70</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -868,7 +973,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00088">88</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00094">94</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -888,7 +993,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00113">113</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00119">119</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -908,7 +1013,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00204">204</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00210">210</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -944,7 +1049,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00033">33</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00039">39</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1099,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00290">290</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html#l00296">296</a> of file <a class="el" href="_i_plug_a_p_p__dialog_8cpp_source.html">IPlugAPP_dialog.cpp</a>.</p>
 
 </div>
 </div>
@@ -1032,7 +1137,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00313">313</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00316">316</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -1062,7 +1167,79 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00466">466</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00477">477</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7bc6130d416dfa335145ab743029127f" name="a7bc6130d416dfa335145ab743029127f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc6130d416dfa335145ab743029127f">&#9670;&#160;</a></span>SetNoIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IPlugAPPHost::SetNoIO </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>noIO</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set no-I/O mode (disables audio and MIDI initialization) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">noIO</td><td>true to disable I/O </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00176">176</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
+
+</div>
+</div>
+<a id="a20fb9894a8ec85babe919d793dd97528" name="a20fb9894a8ec85babe919d793dd97528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20fb9894a8ec85babe919d793dd97528">&#9670;&#160;</a></span>SetScreenshotPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IPlugAPPHost::SetScreenshotPath </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set screenshot path for CLI screenshot mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to save the screenshot to (empty to disable) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00164">164</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1258,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00406">406</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00413">413</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -1100,7 +1277,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00374">374</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html#l00377">377</a> of file <a class="el" href="_i_plug_a_p_p__host_8cpp_source.html">IPlugAPP_host.cpp</a>.</p>
 
 </div>
 </div>
@@ -1144,7 +1321,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00253">253</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_p__host_8h_source.html#l00275">275</a> of file <a class="el" href="_i_plug_a_p_p__host_8h_source.html">IPlugAPP_host.h</a>.</p>
 
 </div>
 </div>
