@@ -11,5 +11,7 @@ var searchData=
   ['updatelayer_8',['UpdateLayer',['../class_i_graphics_skia.html#aa2202e05616e447155c403eb9586dd09',1,'IGraphicsSkia::UpdateLayer()'],['../class_i_graphics.html#a95d25b3727d935b6b6905133ace19c04',1,'IGraphics::UpdateLayer()']]],
   ['updatepeers_9',['UpdatePeers',['../class_i_graphics.html#a3fb076035b69c9b96197e36983221acf',1,'IGraphics']]],
   ['updatetooltips_10',['UpdateTooltips',['../class_i_graphics.html#a7960f9bd277f40380d86194e0716eddf',1,'IGraphics']]],
-  ['userhomepath_11',['UserHomePath',['../_i_plug_paths_8h.html#a03a8b65ce1ec3f165019023f43b3dd07',1,'IPlugPaths.h']]]
+  ['userhomepath_11',['UserHomePath',['../_i_plug_paths_8h.html#a03a8b65ce1ec3f165019023f43b3dd07',1,'IPlugPaths.h']]],
+  ['utf16toutf8string_12',['UTF16ToUTF8String',['../group___i_plug_utilities.html#ga4fade1b1df9457d8ea4053e62f011668',1,'UTF16ToUTF8String(const std::u16string &amp;u16str):&#160;IPlugUtilities.h'],['../group___i_plug_utilities.html#ga0409d2edbe21f5a179ccc717833b68e2',1,'UTF16ToUTF8String(char16_t c):&#160;IPlugUtilities.h'],['../group___i_plug_utilities.html#ga5488dd66d0c6856f01ffc94230928ac6',1,'UTF16ToUTF8String(const char16_t *begin, const char16_t *end):&#160;IPlugUtilities.h']]],
+  ['utf8toutf16string_13',['UTF8ToUTF16String',['../group___i_plug_utilities.html#ga50a44791223b39e5963ba843ed871030',1,'IPlugUtilities.h']]]
 ];

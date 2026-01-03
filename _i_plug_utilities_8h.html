@@ -98,8 +98,10 @@ $(function() {
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 <code>#include &quot;heapbuf.h&quot;</code><br />
 <code>#include &quot;wdlstring.h&quot;</code><br />
+<code>#include &quot;wdlutf8.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_plug_constants_8h_source.html">IPlugConstants.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_plug_platform_8h_source.html">IPlugPlatform.h</a>&quot;</code><br />
 </div>
@@ -215,8 +217,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga20ba62a6dfbe2a9f7320be1d2a62e0c8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga20ba62a6dfbe2a9f7320be1d2a62e0c8">MidiNoteName</a> (double midiPitch, WDL_String &amp;noteName, bool cents=false, bool middleCisC4=false)</td></tr>
 <tr class="memdesc:ga20ba62a6dfbe2a9f7320be1d2a62e0c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MIDI pitch number to a human-readable note name.  <a href="group___i_plug_utilities.html#ga20ba62a6dfbe2a9f7320be1d2a62e0c8">More...</a><br /></td></tr>
 <tr class="separator:ga20ba62a6dfbe2a9f7320be1d2a62e0c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga28394071b1c01aea84410b1aa6772eab"><td class="memItemLeft" align="right" valign="top">static FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga28394071b1c01aea84410b1aa6772eab">fopenUTF8</a> (const char *path, const char *mode)</td></tr>
-<tr class="separator:ga28394071b1c01aea84410b1aa6772eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50a44791223b39e5963ba843ed871030"><td class="memItemLeft" align="right" valign="top">static std::u16string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga50a44791223b39e5963ba843ed871030">UTF8ToUTF16String</a> (const char *utf8)</td></tr>
+<tr class="memdesc:ga50a44791223b39e5963ba843ed871030"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert UTF-8 string to UTF-16 std::u16string using WDL functions.  <a href="group___i_plug_utilities.html#ga50a44791223b39e5963ba843ed871030">More...</a><br /></td></tr>
+<tr class="separator:ga50a44791223b39e5963ba843ed871030"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fade1b1df9457d8ea4053e62f011668"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga4fade1b1df9457d8ea4053e62f011668">UTF16ToUTF8String</a> (const std::u16string &amp;u16str)</td></tr>
+<tr class="memdesc:ga4fade1b1df9457d8ea4053e62f011668"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert UTF-16 std::u16string to UTF-8 std::string using WDL functions.  <a href="group___i_plug_utilities.html#ga4fade1b1df9457d8ea4053e62f011668">More...</a><br /></td></tr>
+<tr class="separator:ga4fade1b1df9457d8ea4053e62f011668"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0409d2edbe21f5a179ccc717833b68e2"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga0409d2edbe21f5a179ccc717833b68e2">UTF16ToUTF8String</a> (char16_t c)</td></tr>
+<tr class="memdesc:ga0409d2edbe21f5a179ccc717833b68e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert single UTF-16 char16_t to UTF-8 std::string using WDL functions.  <a href="group___i_plug_utilities.html#ga0409d2edbe21f5a179ccc717833b68e2">More...</a><br /></td></tr>
+<tr class="separator:ga0409d2edbe21f5a179ccc717833b68e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5488dd66d0c6856f01ffc94230928ac6"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga5488dd66d0c6856f01ffc94230928ac6">UTF16ToUTF8String</a> (const char16_t *begin, const char16_t *end)</td></tr>
+<tr class="memdesc:ga5488dd66d0c6856f01ffc94230928ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert UTF-16 char16_t pointer range to UTF-8 std::string using WDL functions.  <a href="group___i_plug_utilities.html#ga5488dd66d0c6856f01ffc94230928ac6">More...</a><br /></td></tr>
+<tr class="separator:ga5488dd66d0c6856f01ffc94230928ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8623189218d27e098e294f6644d7134d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_plug_utilities.html#ga8623189218d27e098e294f6644d7134d">DOMKeyToVirtualKey</a> (uint32_t domKeyCode)</td></tr>
 <tr class="memdesc:ga8623189218d27e098e294f6644d7134d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a DOM virtual key code to an iPlug2 virtual key code.  <a href="group___i_plug_utilities.html#ga8623189218d27e098e294f6644d7134d">More...</a><br /></td></tr>
 <tr class="separator:ga8623189218d27e098e294f6644d7134d"><td class="memSeparator" colspan="2">&#160;</td></tr>

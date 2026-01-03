@@ -627,7 +627,7 @@ $(function() {
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>  {</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    sDumped = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    <span class="keywordtype">int</span> i, n = NParams();</div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    FILE* fp = fopenUTF8(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>    FILE* fp = fopen(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    </div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    <span class="keywordflow">if</span> (!fp)</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>      <span class="keywordflow">return</span>;</div>
@@ -671,7 +671,7 @@ $(function() {
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  {</div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>    sDumped = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>    <span class="keywordtype">int</span> i, n = NParams();</div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    FILE* fp = fopenUTF8(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>    FILE* fp = fopen(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>    </div>
 <div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    <span class="keywordflow">if</span> (!fp)</div>
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>      <span class="keywordflow">return</span>;</div>
@@ -708,7 +708,7 @@ $(function() {
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span> </div>
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno"><a class="line" href="class_i_plugin_base.html#a8f65056cc0e10bc0ae58d6cdc9293892">  627</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_plugin_base.html#a8f65056cc0e10bc0ae58d6cdc9293892">IPluginBase::DumpPresetBlob</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filename)<span class="keyword"> const</span></div>
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="keyword"></span>{</div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  FILE* fp = fopenUTF8(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>  FILE* fp = fopen(filename, <span class="stringliteral">&quot;a&quot;</span>);</div>
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  </div>
 <div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  <span class="keywordflow">if</span> (!fp)</div>
 <div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>    <span class="keywordflow">return</span>;</div>
@@ -735,7 +735,7 @@ $(function() {
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>  <span class="keywordflow">if</span> (CStringHasContents(file))</div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>  {</div>
-<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    FILE* fp = fopenUTF8(file, <span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>    FILE* fp = fopen(file, <span class="stringliteral">&quot;wb&quot;</span>);</div>
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    </div>
 <div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    <a class="code hl_class" href="class_i_byte_chunk.html">IByteChunk</a> pgm;</div>
 <div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    </div>
@@ -808,7 +808,7 @@ $(function() {
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span><span class="keyword"></span>{</div>
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>  <span class="keywordflow">if</span> (CStringHasContents(file))</div>
 <div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>  {</div>
-<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>    FILE* fp = fopenUTF8(file, <span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>    FILE* fp = fopen(file, <span class="stringliteral">&quot;wb&quot;</span>);</div>
 <div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>    </div>
 <div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    <a class="code hl_class" href="class_i_byte_chunk.html">IByteChunk</a> bnk;</div>
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>    </div>
@@ -913,7 +913,7 @@ $(function() {
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>{</div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  <span class="keywordflow">if</span> (CStringHasContents(file))</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>  {</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    FILE* fp = fopenUTF8(file, <span class="stringliteral">&quot;rb&quot;</span>);</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    FILE* fp = fopen(file, <span class="stringliteral">&quot;rb&quot;</span>);</div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>    </div>
 <div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    <span class="keywordflow">if</span> (fp)</div>
 <div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    {</div>
@@ -1004,7 +1004,7 @@ $(function() {
 <div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>{</div>
 <div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span>  <span class="keywordflow">if</span> (CStringHasContents(file))</div>
 <div class="line"><a id="l00924" name="l00924"></a><span class="lineno">  924</span>  {</div>
-<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    FILE* fp = fopenUTF8(file, <span class="stringliteral">&quot;rb&quot;</span>);</div>
+<div class="line"><a id="l00925" name="l00925"></a><span class="lineno">  925</span>    FILE* fp = fopen(file, <span class="stringliteral">&quot;rb&quot;</span>);</div>
 <div class="line"><a id="l00926" name="l00926"></a><span class="lineno">  926</span>    </div>
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span>    <span class="keywordflow">if</span> (fp)</div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>    {</div>
@@ -1208,8 +1208,8 @@ $(function() {
 <div class="ttc" id="aclass_i_plugin_base_html_aed12d103d1c786391d515b1da093113e"><div class="ttname"><a href="class_i_plugin_base.html#aed12d103d1c786391d515b1da093113e">IPluginBase::NPresets</a></div><div class="ttdeci">int NPresets() const</div><div class="ttdoc">Gets the number of factory presets.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_plugin_base_8h_source.html#l00189">IPlugPluginBase.h:189</a></div></div>
 <div class="ttc" id="aclass_i_plugin_base_html_aee0fc9efcf598d160e1f5f48eb4d6139"><div class="ttname"><a href="class_i_plugin_base.html#aee0fc9efcf598d160e1f5f48eb4d6139">IPluginBase::SaveBankAsFXB</a></div><div class="ttdeci">bool SaveBankAsFXB(const char *file) const</div><div class="ttdoc">Save current bank as a VST2 format bank [VST2 only].</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_plugin_base_8cpp_source.html#l00725">IPlugPluginBase.cpp:725</a></div></div>
 <div class="ttc" id="aclass_i_plugin_base_html_afe2433eb98528511d585a3fd6c278f63"><div class="ttname"><a href="class_i_plugin_base.html#afe2433eb98528511d585a3fd6c278f63">IPluginBase::MakePreset</a></div><div class="ttdeci">void MakePreset(const char *name,...)</div><div class="ttdoc">Create a baked-in factory preset, specifiying parameter values sequentially usage: MakePreset(name,...</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_plugin_base_8cpp_source.html#l00295">IPlugPluginBase.cpp:295</a></div></div>
-<div class="ttc" id="agroup___i_plug_utilities_html_ga43ecc2082b7a85f6b85df07e9c9427ac"><div class="ttname"><a href="group___i_plug_utilities.html#ga43ecc2082b7a85f6b85df07e9c9427ac">GetDecimalVersion</a></div><div class="ttdeci">static int GetDecimalVersion(int versionInteger)</div><div class="ttdoc">Helper function to get the version number as a decimal integer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_utilities_8h_source.html#l00125">IPlugUtilities.h:125</a></div></div>
-<div class="ttc" id="agroup___i_plug_utilities_html_gabe3e4ce0ef0ed6b5a3b7d8d059b66f37"><div class="ttname"><a href="group___i_plug_utilities.html#gabe3e4ce0ef0ed6b5a3b7d8d059b66f37">GetVersionStr</a></div><div class="ttdeci">static void GetVersionStr(int versionInteger, WDL_String &amp;str)</div><div class="ttdoc">Helper function to get the semantic version number as a string from an integer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_utilities_8h_source.html#l00135">IPlugUtilities.h:135</a></div></div>
+<div class="ttc" id="agroup___i_plug_utilities_html_ga43ecc2082b7a85f6b85df07e9c9427ac"><div class="ttname"><a href="group___i_plug_utilities.html#ga43ecc2082b7a85f6b85df07e9c9427ac">GetDecimalVersion</a></div><div class="ttdeci">static int GetDecimalVersion(int versionInteger)</div><div class="ttdoc">Helper function to get the version number as a decimal integer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_utilities_8h_source.html#l00127">IPlugUtilities.h:127</a></div></div>
+<div class="ttc" id="agroup___i_plug_utilities_html_gabe3e4ce0ef0ed6b5a3b7d8d059b66f37"><div class="ttname"><a href="group___i_plug_utilities.html#gabe3e4ce0ef0ed6b5a3b7d8d059b66f37">GetVersionStr</a></div><div class="ttdeci">static void GetVersionStr(int versionInteger, WDL_String &amp;str)</div><div class="ttdoc">Helper function to get the semantic version number as a string from an integer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_utilities_8h_source.html#l00137">IPlugUtilities.h:137</a></div></div>
 <div class="ttc" id="astruct_i_param_1_1_shape_html"><div class="ttname"><a href="struct_i_param_1_1_shape.html">IParam::Shape</a></div><div class="ttdoc">Base struct for parameter shaping.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_parameter_8h_source.html#l00075">IPlugParameter.h:76</a></div></div>
 <div class="ttc" id="astruct_i_preset_html"><div class="ttname"><a href="struct_i_preset.html">IPreset</a></div><div class="ttdoc">A struct used for specifying baked-in factory presets.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_structs_8h_source.html#l00600">IPlugStructs.h:601</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
