@@ -1,0 +1,7 @@
+<map id="IPlugWasmDSP" name="IPlugWasmDSP">
+<area shape="rect" id="node1" title="Hybrid DSP class &#45; AudioWorklet processor for split DSP/UI builds." alt="" coords="111,225,227,251"/>
+<area shape="rect" id="node2" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs." alt="" coords="51,152,155,177"/>
+<area shape="rect" id="node3" href="$class_i_plugin_base.html" title="Base class that contains plug&#45;in info and state manipulation methods." alt="" coords="57,79,149,104"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,201,31"/>
+<area shape="rect" id="node5" href="$class_i_plug_processor.html" title="The base class for IPlug Audio Processing." alt="" coords="180,152,291,177"/>
+</map>

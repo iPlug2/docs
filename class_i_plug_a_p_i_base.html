@@ -423,6 +423,8 @@ Friends</h2></td></tr>
 <tr class="separator:a2d4fc6b14a76b015f28958e3c22ac175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fa1421720653a92c2cfe94eb231dc41"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_i_base.html#a3fa1421720653a92c2cfe94eb231dc41">IPlugWEB</a></td></tr>
 <tr class="separator:a3fa1421720653a92c2cfe94eb231dc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1634edaf16ad775f165e91f156d15640"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_a_p_i_base.html#a1634edaf16ad775f165e91f156d15640">IPlugWasmDSP</a></td></tr>
+<tr class="separator:a1634edaf16ad775f165e91f156d15640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The base class of an IPlug plug-in, which interacts with the different plug-in APIs. </p>
@@ -1289,9 +1291,11 @@ Friends</h2></td></tr>
 
 <p>Override this method to get an "idle"" call on the main thread. </p>
 
-<p>Reimplemented in <a class="el" href="class_i_plug_web.html#a8b5af3d18331367991434d3cc0f7b0e0">IPlugWeb</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_plug_wasm_u_i.html#a9d5a6166c5b04e5e16216947c9939208">IPlugWasmUI</a>, and <a class="el" href="class_i_plug_web.html#a8b5af3d18331367991434d3cc0f7b0e0">IPlugWeb</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00111">111</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_wasm_d_s_p_8cpp_source.html#l00092">IPlugWasmDSP::OnIdleTick()</a>.</p>
 
 </div>
 </div>
@@ -1813,6 +1817,30 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00225">225</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
+
+</div>
+</div>
+<a id="a1634edaf16ad775f165e91f156d15640" name="a1634edaf16ad775f165e91f156d15640"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1634edaf16ad775f165e91f156d15640">&#9670;&#160;</a></span>IPlugWasmDSP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="class_i_plug_wasm_d_s_p.html">IPlugWasmDSP</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_a_p_i_base_8h_source.html#l00227">227</a> of file <a class="el" href="_i_plug_a_p_i_base_8h_source.html">IPlugAPIBase.h</a>.</p>
 
 </div>
 </div>

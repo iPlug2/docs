@@ -96,7 +96,7 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for IPlugProcessor:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_i_plug_processor__inherit__graph.svg" width="100%" height="437"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_i_plug_processor__inherit__graph.svg" width="536" height="431"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -1316,6 +1316,8 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00218">218</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="_i_plug_wasm_d_s_p_8h_source.html#l00085">IPlugWasmDSP::IsPlugInstrument()</a>, and <a class="el" href="_i_plug_wasm_d_s_p_8cpp_source.html#l00074">IPlugWasmDSP::ProcessBlock()</a>.</p>
+
 </div>
 </div>
 <a id="a446a979fea07f7e21a3c8e60cde1e7e6" name="a446a979fea07f7e21a3c8e60cde1e7e6"></a>
@@ -1491,7 +1493,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00186">186</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00272">IPlugVST2::HostSpecificInit()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00257">LimitToStereoIO()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00266">SetChannelLabel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_wasm_d_s_p_8h_source.html#l00079">IPlugWasmDSP::GetNumInputChannels()</a>, <a class="el" href="_i_plug_wasm_d_s_p_8h_source.html#l00082">IPlugWasmDSP::GetNumOutputChannels()</a>, <a class="el" href="_i_plug_v_s_t2_8cpp_source.html#l00272">IPlugVST2::HostSpecificInit()</a>, <a class="el" href="_i_plug_processor_8cpp_source.html#l00257">LimitToStereoIO()</a>, <a class="el" href="_i_plug_wasm_d_s_p_8cpp_source.html#l00074">IPlugWasmDSP::ProcessBlock()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00266">SetChannelLabel()</a>.</p>
 
 </div>
 </div>
@@ -1564,7 +1566,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="reference">References <a class="el" href="_i_plug_processor_8h_source.html#l00191">IsChannelConnected()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00199">NInChansConnected()</a>, and <a class="el" href="_i_plug_processor_8h_source.html#l00203">NOutChansConnected()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_plug_processor_8h_source.html#l00199">NInChansConnected()</a>, <a class="el" href="_i_plug_processor_8h_source.html#l00203">NOutChansConnected()</a>, and <a class="el" href="_i_plug_wasm_d_s_p_8cpp_source.html#l00074">IPlugWasmDSP::ProcessBlock()</a>.</p>
 
 </div>
 </div>
@@ -1725,6 +1727,8 @@ Protected Attributes</h2></td></tr>
 <p >(e.g.clear buffers, update internal DSP with the latest sample rate) </p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00083">83</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_wasm_d_s_p_8cpp_source.html#l00063">IPlugWasmDSP::Init()</a>.</p>
 
 </div>
 </div>
@@ -1933,6 +1937,8 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="class_i_plug_wasm_d_s_p.html#ad5479a0fe85ea2e732dbe0a171845ad8">IPlugWasmDSP</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00070">70</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 
@@ -2144,7 +2150,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if successful </dd></dl>
 
-<p>Implemented in <a class="el" href="class_i_plug_a_a_x.html#a05a84cb84b8102c0d95af1238f0d9fbe">IPlugAAX</a>, <a class="el" href="class_i_plug_a_p_p.html#a215e72927e405b3cf2c02ff06ed39209">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#a728ccf09551b1b5ce1900e6a642c873c">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a539af1c9e36f09b251eb7c0e64cb16c6">IPlugAUv3</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a83f58e5cee8871d9d9890cb8528c1943">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#a1fc6db66c5e9bd9dcd3b09cbabf71215">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">IPlugVST3ProcessorBase</a>, and <a class="el" href="class_i_plug_w_a_m.html#a0ae41aa509f8f7bcc4dcb44a21816253">IPlugWAM</a>.</p>
+<p>Implemented in <a class="el" href="class_i_plug_a_a_x.html#a05a84cb84b8102c0d95af1238f0d9fbe">IPlugAAX</a>, <a class="el" href="class_i_plug_a_p_p.html#a215e72927e405b3cf2c02ff06ed39209">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#a728ccf09551b1b5ce1900e6a642c873c">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a539af1c9e36f09b251eb7c0e64cb16c6">IPlugAUv3</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a83f58e5cee8871d9d9890cb8528c1943">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#a1fc6db66c5e9bd9dcd3b09cbabf71215">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3_processor_base.html#ad123ab66833e9664c82cbd5e414697af">IPlugVST3ProcessorBase</a>, <a class="el" href="class_i_plug_w_a_m.html#a0ae41aa509f8f7bcc4dcb44a21816253">IPlugWAM</a>, and <a class="el" href="class_i_plug_wasm_d_s_p.html#a716c722aaccf6f162c4b9bdcd317f91c">IPlugWasmDSP</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_processor_8cpp_source.html#l00091">ProcessMidiMsg()</a>, and <a class="el" href="_i_plug_processor_8cpp_source.html#l00096">SendMidiMsgs()</a>.</p>
 
@@ -2224,7 +2230,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> if successful </dd></dl>
 
-<p>Reimplemented in <a class="el" href="class_i_plug_a_p_p.html#a0afb62394c388ecd7654be6378c0c1f0">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#aeee58fb2dcd5ae7ca73abdc0211bebe5">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a2cf91bcf63bbb5f18cd529afad285aeb">IPlugAUv3</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a19a8f6d271235fe7a24745baf776bab7">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#ab19e3e35e32d2c1b47c5d25ea77c33c6">IPlugVST2</a>, and <a class="el" href="class_i_plug_w_a_m.html#aa47fe866748000dc8899f5d263e25352">IPlugWAM</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_plug_a_p_p.html#a0afb62394c388ecd7654be6378c0c1f0">IPlugAPP</a>, <a class="el" href="class_i_plug_a_u.html#aeee58fb2dcd5ae7ca73abdc0211bebe5">IPlugAU</a>, <a class="el" href="class_i_plug_a_uv3.html#a2cf91bcf63bbb5f18cd529afad285aeb">IPlugAUv3</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a19a8f6d271235fe7a24745baf776bab7">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#ab19e3e35e32d2c1b47c5d25ea77c33c6">IPlugVST2</a>, <a class="el" href="class_i_plug_w_a_m.html#aa47fe866748000dc8899f5d263e25352">IPlugWAM</a>, and <a class="el" href="class_i_plug_wasm_d_s_p.html#a386f8f79a4a9c67357c9c2c7f2468a0a">IPlugWasmDSP</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8h_source.html#l00106">106</a> of file <a class="el" href="_i_plug_processor_8h_source.html">IPlugProcessor.h</a>.</p>
 
@@ -2425,7 +2431,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="class_i_plug_a_a_x.html#ac32027bd9cfa9caa9efd169ee9583f35">IPlugAAX</a>, <a class="el" href="class_i_plug_a_u.html#aca151d30c7cfe77a318a7053c79f45ef">IPlugAU</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a56bbe14a10584f32c91215b670d56f8b">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#a6bfc0b7db23a8d84adb0c1a1ac584e20">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#a240d891b8258b019d6e9a2a313f0be1c">IPlugVST3</a>, and <a class="el" href="class_i_plug_w_a_m.html#aca74eaaee0212128d0dd69ebcc595487">IPlugWAM</a>.</p>
+<p>Reimplemented in <a class="el" href="class_i_plug_a_a_x.html#ac32027bd9cfa9caa9efd169ee9583f35">IPlugAAX</a>, <a class="el" href="class_i_plug_a_u.html#aca151d30c7cfe77a318a7053c79f45ef">IPlugAU</a>, <a class="el" href="class_i_plug_c_l_a_p.html#a56bbe14a10584f32c91215b670d56f8b">IPlugCLAP</a>, <a class="el" href="class_i_plug_v_s_t2.html#a6bfc0b7db23a8d84adb0c1a1ac584e20">IPlugVST2</a>, <a class="el" href="class_i_plug_v_s_t3.html#a240d891b8258b019d6e9a2a313f0be1c">IPlugVST3</a>, <a class="el" href="class_i_plug_w_a_m.html#aca74eaaee0212128d0dd69ebcc595487">IPlugWAM</a>, and <a class="el" href="class_i_plug_wasm_d_s_p.html#aaf2231149011c98fef29a66009ce0229">IPlugWasmDSP</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_i_plug_processor_8cpp_source.html#l00272">272</a> of file <a class="el" href="_i_plug_processor_8cpp_source.html">IPlugProcessor.cpp</a>.</p>
 

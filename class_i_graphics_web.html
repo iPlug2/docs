@@ -111,8 +111,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad1d5a0ff1d9eb3bb38bf0f7dd15c76cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_web.html#ad1d5a0ff1d9eb3bb38bf0f7dd15c76cb">IGraphicsWeb</a> (<a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a> &amp;dlg, int w, int h, int fps, float scale)</td></tr>
-<tr class="separator:ad1d5a0ff1d9eb3bb38bf0f7dd15c76cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b8c9a68761054e4129675a5a3ecc8bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_web.html#a2b8c9a68761054e4129675a5a3ecc8bd">IGraphicsWeb</a> (<a class="el" href="class_i_g_editor_delegate.html">IGEditorDelegate</a> &amp;dlg, int w, int h, int fps, float scale, val canvas=val::undefined())</td></tr>
+<tr class="memdesc:a2b8c9a68761054e4129675a5a3ecc8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_i_graphics_web.html#a2b8c9a68761054e4129675a5a3ecc8bd">More...</a><br /></td></tr>
+<tr class="separator:a2b8c9a68761054e4129675a5a3ecc8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af113eaec8346b118f4316cddb2999eaf"><td class="memItemLeft" align="right" valign="top">val&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_web.html#af113eaec8346b118f4316cddb2999eaf">GetCanvas</a> () const</td></tr>
+<tr class="memdesc:af113eaec8346b118f4316cddb2999eaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the canvas element for this instance.  <a href="class_i_graphics_web.html#af113eaec8346b118f4316cddb2999eaf">More...</a><br /></td></tr>
+<tr class="separator:af113eaec8346b118f4316cddb2999eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93fa582ed2eee775d772c4321343117c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_web.html#a93fa582ed2eee775d772c4321343117c">IsInShadowDOM</a> () const</td></tr>
+<tr class="memdesc:a93fa582ed2eee775d772c4321343117c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if this instance is running inside Shadow DOM.  <a href="class_i_graphics_web.html#a93fa582ed2eee775d772c4321343117c">More...</a><br /></td></tr>
+<tr class="separator:a93fa582ed2eee775d772c4321343117c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af97439ec2dc4bfaa4f488635dcbd9864"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_web.html#af97439ec2dc4bfaa4f488635dcbd9864">DrawResize</a> () override</td></tr>
 <tr class="separator:af97439ec2dc4bfaa4f488635dcbd9864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17ce02bf45750752c823eb19ea7ad01a"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_graphics_web.html#a17ce02bf45750752c823eb19ea7ad01a">GetPlatformAPIStr</a> () override</td></tr>
@@ -176,10 +183,10 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> platform class for the web. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00043">43</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00039">39</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad1d5a0ff1d9eb3bb38bf0f7dd15c76cb" name="ad1d5a0ff1d9eb3bb38bf0f7dd15c76cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1d5a0ff1d9eb3bb38bf0f7dd15c76cb">&#9670;&#160;</a></span>IGraphicsWeb()</h2>
+<a id="a2b8c9a68761054e4129675a5a3ecc8bd" name="a2b8c9a68761054e4129675a5a3ecc8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b8c9a68761054e4129675a5a3ecc8bd">&#9670;&#160;</a></span>IGraphicsWeb()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +219,13 @@ Protected Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>scale</em>&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">val&#160;</td>
+          <td class="paramname"><em>canvas</em> = <code>val::undefined()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,7 +235,20 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00415">415</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p>Constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dlg</td><td>The editor delegate </td></tr>
+    <tr><td class="paramname">w</td><td>Width in logical pixels </td></tr>
+    <tr><td class="paramname">h</td><td>Height in logical pixels </td></tr>
+    <tr><td class="paramname">fps</td><td>Frames per second (0 = use default) </td></tr>
+    <tr><td class="paramname">scale</td><td>Draw scale </td></tr>
+    <tr><td class="paramname">canvas</td><td>Optional canvas element. If undefined, falls back to document.getElementById("canvas") </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00429">429</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -241,7 +267,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00437">437</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00548">548</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -269,7 +295,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00063">63</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00072">72</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +339,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00680">680</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00817">817</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +395,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00623">623</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00751">751</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -396,7 +422,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00692">692</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00829">829</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -423,7 +449,36 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00061">61</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00070">70</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+
+</div>
+</div>
+<a id="af113eaec8346b118f4316cddb2999eaf" name="af113eaec8346b118f4316cddb2999eaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af113eaec8346b118f4316cddb2999eaf">&#9670;&#160;</a></span>GetCanvas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">val IGraphicsWeb::GetCanvas </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the canvas element for this instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00056">56</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -461,7 +516,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00521">521</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00646">646</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +543,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00054">54</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00063">63</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -516,7 +571,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00066">66</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00075">75</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -543,7 +598,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00064">64</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00073">73</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -581,7 +636,36 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00464">464</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00589">589</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a93fa582ed2eee775d772c4321343117c" name="a93fa582ed2eee775d772c4321343117c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93fa582ed2eee775d772c4321343117c">&#9670;&#160;</a></span>IsInShadowDOM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IGraphicsWeb::IsInShadowDOM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if this instance is running inside Shadow DOM. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00059">59</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +703,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00057">57</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00066">66</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -646,7 +730,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00528">528</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00653">653</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -696,7 +780,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00685">685</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00822">822</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -724,7 +808,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00441">441</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00554">554</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -751,7 +835,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00076">76</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00085">85</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -795,7 +879,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00605">605</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00733">733</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +917,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00592">592</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00720">720</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -889,7 +973,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00580">580</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00708">708</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -917,7 +1001,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00495">495</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00620">620</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -945,7 +1029,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00067">67</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00076">76</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1079,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00549">549</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8cpp_source.html#l00677">677</a> of file <a class="el" href="_i_graphics_web_8cpp_source.html">IGraphicsWeb.cpp</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1106,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00068">68</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00077">77</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -1049,7 +1133,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00065">65</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00074">74</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1150,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00080">80</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00089">89</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1166,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00081">81</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_web_8h_source.html#l00090">90</a> of file <a class="el" href="_i_graphics_web_8h_source.html">IGraphicsWeb.h</a>.</p>
 
 </div>
 </div>

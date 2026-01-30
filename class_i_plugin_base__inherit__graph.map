@@ -1,7 +1,7 @@
 <map id="IPluginBase" name="IPluginBase">
-<area shape="rect" id="node1" title="Base class that contains plug&#45;in info and state manipulation methods." alt="" coords="249,252,341,277"/>
-<area shape="rect" id="node3" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs." alt="" coords="389,252,493,277"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,252,201,277"/>
+<area shape="rect" id="node1" title="Base class that contains plug&#45;in info and state manipulation methods." alt="" coords="249,301,341,327"/>
+<area shape="rect" id="node3" href="$class_i_plug_a_p_i_base.html" title="The base class of an IPlug plug&#45;in, which interacts with the different plug&#45;in APIs." alt="" coords="389,301,493,327"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,301,201,327"/>
 <area shape="rect" id="node4" href="$class_i_plug_a_a_x.html" title="AAX API base class for an IPlug plug&#45;in." alt="" coords="574,5,653,31"/>
 <area shape="rect" id="node5" href="$class_i_plug_a_p_p.html" title="Standalone application base class for an IPlug plug&#45;in." alt="" coords="574,55,653,80"/>
 <area shape="rect" id="node6" href="$class_i_plug_a_u.html" title="AudioUnit v2 API base class for an IPlug plug&#45;in." alt="" coords="578,104,649,129"/>
@@ -12,5 +12,7 @@
 <area shape="rect" id="node11" href="$class_i_plug_v_s_t3_controller.html" title="VST3 Controller API&#45;base class for a distributed IPlug VST3 plug&#45;in." alt="" coords="543,351,683,376"/>
 <area shape="rect" id="node12" href="$class_i_plug_v_s_t3_processor.html" title="VST3 Processor API&#45;base class for a distributed IPlug VST3 plug&#45;in." alt="" coords="541,400,685,425"/>
 <area shape="rect" id="node13" href="$class_i_plug_w_a_m.html" title="WebAudioModule (WAM) API base class." alt="" coords="571,449,655,475"/>
-<area shape="rect" id="node14" href="$class_i_plug_web.html" title="This is used for the UI &quot;editor&quot; &#45; controller side of a WAM or remote editors that communicate with d..." alt="" coords="574,499,653,524"/>
+<area shape="rect" id="node14" href="$class_i_plug_wasm_d_s_p.html" title="Hybrid DSP class &#45; AudioWorklet processor for split DSP/UI builds." alt="" coords="555,499,671,524"/>
+<area shape="rect" id="node15" href="$class_i_plug_wasm_u_i.html" title="Hybrid UI class &#45; IGraphics side for split DSP/UI builds." alt="" coords="562,548,665,573"/>
+<area shape="rect" id="node16" href="$class_i_plug_web.html" title="This is used for the UI &quot;editor&quot; &#45; controller side of a WAM or remote editors that communicate with d..." alt="" coords="574,597,653,623"/>
 </map>
