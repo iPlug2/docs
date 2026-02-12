@@ -117,7 +117,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a172d7d91c5c54e976ef1e872110ea82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the visibility of the main extension window.  <a href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">More...</a><br /></td></tr>
 <tr class="separator:a172d7d91c5c54e976ef1e872110ea82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf43ad762c5869825913e0ebbf6bb41a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#aaf43ad762c5869825913e0ebbf6bb41a">ToggleDocking</a> ()</td></tr>
+<tr class="memdesc:aaf43ad762c5869825913e0ebbf6bb41a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles between docked and floating state.  <a href="class_reaper_ext_base.html#aaf43ad762c5869825913e0ebbf6bb41a">More...</a><br /></td></tr>
 <tr class="separator:aaf43ad762c5869825913e0ebbf6bb41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17bec0a7b8228f4bbd279c21e5093a5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a17bec0a7b8228f4bbd279c21e5093a5b">IsDocked</a> () const</td></tr>
+<tr class="memdesc:a17bec0a7b8228f4bbd279c21e5093a5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the window is currently docked.  <a href="class_reaper_ext_base.html#a17bec0a7b8228f4bbd279c21e5093a5b">More...</a><br /></td></tr>
+<tr class="separator:a17bec0a7b8228f4bbd279c21e5093a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef588fbf55443e8170150f6c7eb126c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#aef588fbf55443e8170150f6c7eb126c0">SetDockId</a> (const char *id)</td></tr>
+<tr class="memdesc:aef588fbf55443e8170150f6c7eb126c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the unique identifier used for dock state persistence.  <a href="class_reaper_ext_base.html#aef588fbf55443e8170150f6c7eb126c0">More...</a><br /></td></tr>
+<tr class="separator:aef588fbf55443e8170150f6c7eb126c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -129,7 +136,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Reaper extension base class interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00027">27</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00038">38</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a466290703976374e0665126cb7de9670" name="a466290703976374e0665126cb7de9670"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a466290703976374e0665126cb7de9670">&#9670;&#160;</a></span>ReaperExtBase()</h2>
@@ -147,7 +154,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00001">1</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00005">5</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -174,7 +181,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00008">8</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00015">15</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -203,7 +210,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00035">35</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00046">46</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -247,7 +254,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00037">37</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00049">49</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +282,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00037">37</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00048">48</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -313,7 +320,38 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00101">101</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00203">203</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a17bec0a7b8228f4bbd279c21e5093a5b" name="a17bec0a7b8228f4bbd279c21e5093a5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17bec0a7b8228f4bbd279c21e5093a5b">&#9670;&#160;</a></span>IsDocked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReaperExtBase::IsDocked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns true if the window is currently docked. </p>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00069">69</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_reaper_ext_base_8cpp_source.html#l00097">ShowHideMainWindow()</a>, and <a class="el" href="_reaper_ext_base_8cpp_source.html#l00111">ToggleDocking()</a>.</p>
 
 </div>
 </div>
@@ -342,7 +380,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Called during idle processing - override to perform periodic tasks. </p>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00042">42</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00053">53</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -395,7 +433,43 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00081">81</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00183">183</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aef588fbf55443e8170150f6c7eb126c0" name="aef588fbf55443e8170150f6c7eb126c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef588fbf55443e8170150f6c7eb126c0">&#9670;&#160;</a></span>SetDockId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReaperExtBase::SetDockId </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the unique identifier used for dock state persistence. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Unique identifier string (defaults to PLUG_CLASS_NAME) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00073">73</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -416,7 +490,9 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Toggles the visibility of the main extension window. </p>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00054">54</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00097">97</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_reaper_ext_base_8h_source.html#l00069">IsDocked()</a>.</p>
 
 </div>
 </div>
@@ -444,7 +520,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00114">114</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00216">216</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -463,7 +539,11 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00064">64</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p>Toggles between docked and floating state. </p>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00111">111</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_reaper_ext_base_8h_source.html#l00069">IsDocked()</a>.</p>
 
 </div>
 </div>

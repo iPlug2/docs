@@ -99,57 +99,82 @@ $(function() {
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="_i_plug_timer_8h.html">IPlugTimer.h</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_i_plug_delegate__select_8h.html">IPlugDelegate_select.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">struct </span>reaper_plugin_info_t;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>BEGIN_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_reaper_ext_base.html">   27</a></span><span class="keyword">class </span><a class="code hl_class" href="class_reaper_ext_base.html">ReaperExtBase</a> : <span class="keyword">public</span> EDITOR_DELEGATE_CLASS</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_class" href="class_reaper_ext_base.html">ReaperExtBase</a>(reaper_plugin_info_t* pRec);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="class_reaper_ext_base.html">~ReaperExtBase</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="comment">//IEditorDelegate</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordtype">void</span> BeginInformHostOfParamChangeFromUI(<span class="keywordtype">int</span> paramIdx)<span class="keyword"> override </span>{}; <span class="comment">// NO-OP</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">void</span> EndInformHostOfParamChangeFromUI(<span class="keywordtype">int</span> paramIdx)<span class="keyword"> override </span>{}; <span class="comment">// NO-OP</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordtype">bool</span> EditorResizeFromUI(<span class="keywordtype">int</span> viewWidth, <span class="keywordtype">int</span> viewHeight, <span class="keywordtype">bool</span> needsPlatformResize) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">   42</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">OnIdle</a>() {}; <span class="comment">// NO-OP</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484">RegisterAction</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* actionName, std::function&lt;<span class="keywordtype">void</span>()&gt; func, <span class="keywordtype">bool</span> addMenuItem = <span class="keyword">false</span>, <span class="keywordtype">int</span>* pToggle = <span class="keyword">nullptr</span><span class="comment">/*, IKeyPress keyCmd*/</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">ShowHideMainWindow</a>();</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordtype">void</span> ToggleDocking();</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// Reaper calls back to this when it wants to execute an action registered by the extension plugin</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> HookCommandProc(<span class="keywordtype">int</span> command, <span class="keywordtype">int</span> flag);</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// Reaper calls back to this when it wants to know an actions toggle state</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">static</span> <span class="keywordtype">int</span> ToggleActionCallback(<span class="keywordtype">int</span> command);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keyword">static</span> WDL_DLGRET MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">void</span> OnTimer(<a class="code hl_struct" href="struct_timer.html">Timer</a>&amp; t);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;wdlstring.h&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">struct </span>reaper_plugin_info_t;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>BEGIN_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#pragma pack(push, 4)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_reaper_ext_base_8h.html">   29</a></span><span class="keyword">struct </span><a class="code hl_struct" href="_reaper_ext_base_8h.html#struct_reaper_ext_dock_state">ReaperExtDockState</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  RECT r;          <span class="comment">// Window rect when floating</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordtype">int</span> state;       <span class="comment">// Bit 0 = visible, Bit 1 = docked</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">int</span> whichdock;   <span class="comment">// Docker index when docked</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#pragma pack(pop)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_reaper_ext_base.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="class_reaper_ext_base.html">ReaperExtBase</a> : <span class="keyword">public</span> EDITOR_DELEGATE_CLASS</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="class_reaper_ext_base.html">ReaperExtBase</a>(reaper_plugin_info_t* pRec);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="class_reaper_ext_base.html">~ReaperExtBase</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="comment">//IEditorDelegate</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">void</span> BeginInformHostOfParamChangeFromUI(<span class="keywordtype">int</span> paramIdx)<span class="keyword"> override </span>{}; <span class="comment">// NO-OP</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">void</span> EndInformHostOfParamChangeFromUI(<span class="keywordtype">int</span> paramIdx)<span class="keyword"> override </span>{}; <span class="comment">// NO-OP</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">bool</span> EditorResizeFromUI(<span class="keywordtype">int</span> viewWidth, <span class="keywordtype">int</span> viewHeight, <span class="keywordtype">bool</span> needsPlatformResize) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">   53</a></span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">OnIdle</a>() {}; <span class="comment">// NO-OP</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484">RegisterAction</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* actionName, std::function&lt;<span class="keywordtype">void</span>()&gt; func, <span class="keywordtype">bool</span> addMenuItem = <span class="keyword">false</span>, <span class="keywordtype">int</span>* pToggle = <span class="keyword">nullptr</span><span class="comment">/*, IKeyPress keyCmd*/</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">ShowHideMainWindow</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#aaf43ad762c5869825913e0ebbf6bb41a">ToggleDocking</a>();</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  reaper_plugin_info_t* mRec = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  std::unique_ptr&lt;Timer&gt; mTimer;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordtype">bool</span> mDocked = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_reaper_ext_base.html#a17bec0a7b8228f4bbd279c21e5093a5b">   69</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_reaper_ext_base.html#a17bec0a7b8228f4bbd279c21e5093a5b">IsDocked</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (mDockState.state &amp; 2) == 2; }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_reaper_ext_base.html#aef588fbf55443e8170150f6c7eb126c0">   73</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_reaper_ext_base.html#aef588fbf55443e8170150f6c7eb126c0">SetDockId</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <span class="keywordtype">id</span>) { mDockId.Set(<span class="keywordtype">id</span>); }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">// Reaper calls back to this when it wants to execute an action registered by the extension plugin</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> HookCommandProc(<span class="keywordtype">int</span> command, <span class="keywordtype">int</span> flag);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="comment">// Reaper calls back to this when it wants to know an actions toggle state</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">static</span> <span class="keywordtype">int</span> ToggleActionCallback(<span class="keywordtype">int</span> command);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">static</span> WDL_DLGRET MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">void</span> OnTimer(<a class="code hl_struct" href="struct_timer.html">Timer</a>&amp; t);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">void</span> CreateMainWindow();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">void</span> DestroyMainWindow();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordtype">void</span> SaveDockState();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordtype">void</span> LoadDockState();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  reaper_plugin_info_t* mRec = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  std::unique_ptr&lt;Timer&gt; mTimer;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_struct" href="_reaper_ext_base_8h.html#struct_reaper_ext_dock_state">ReaperExtDockState</a> mDockState = {};</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  WDL_FastString mDockId;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordtype">bool</span> mSaveStateOnDestroy = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordtype">bool</span> mStateLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>};</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_plug_delegate__select_8h_html"><div class="ttname"><a href="_i_plug_delegate__select_8h.html">IPlugDelegate_select.h</a></div><div class="ttdoc">Used for choosing an editor delegate.</div></div>
 <div class="ttc" id="a_i_plug_timer_8h_html"><div class="ttname"><a href="_i_plug_timer_8h.html">IPlugTimer.h</a></div><div class="ttdoc">This file includes classes for implementing timers - in order to get a regular callback on the main t...</div></div>
-<div class="ttc" id="aclass_reaper_ext_base_html"><div class="ttname"><a href="class_reaper_ext_base.html">ReaperExtBase</a></div><div class="ttdoc">Reaper extension base class interface.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00027">ReaperExtBase.h:28</a></div></div>
-<div class="ttc" id="aclass_reaper_ext_base_html_a172d7d91c5c54e976ef1e872110ea82d"><div class="ttname"><a href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">ReaperExtBase::ShowHideMainWindow</a></div><div class="ttdeci">void ShowHideMainWindow()</div><div class="ttdoc">Toggles the visibility of the main extension window.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8cpp_source.html#l00054">ReaperExtBase.cpp:54</a></div></div>
-<div class="ttc" id="aclass_reaper_ext_base_html_af36768e35c40037fce7c77c0406e2484"><div class="ttname"><a href="class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484">ReaperExtBase::RegisterAction</a></div><div class="ttdeci">void RegisterAction(const char *actionName, std::function&lt; void()&gt; func, bool addMenuItem=false, int *pToggle=nullptr)</div><div class="ttdoc">Registers an action with the REAPER extension system.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8cpp_source.html#l00081">ReaperExtBase.cpp:81</a></div></div>
-<div class="ttc" id="aclass_reaper_ext_base_html_afc2682c54bba3b9b10a32da359e8b619"><div class="ttname"><a href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">ReaperExtBase::OnIdle</a></div><div class="ttdeci">virtual void OnIdle()</div><div class="ttdoc">Called during idle processing - override to perform periodic tasks.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00042">ReaperExtBase.h:42</a></div></div>
+<div class="ttc" id="a_reaper_ext_base_8h_html_struct_reaper_ext_dock_state"><div class="ttname"><a href="_reaper_ext_base_8h.html#struct_reaper_ext_dock_state">ReaperExtDockState</a></div><div class="ttdoc">State structure for dock window persistence - matches SWS pattern.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00029">ReaperExtBase.h:30</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html"><div class="ttname"><a href="class_reaper_ext_base.html">ReaperExtBase</a></div><div class="ttdoc">Reaper extension base class interface.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00038">ReaperExtBase.h:39</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html_a172d7d91c5c54e976ef1e872110ea82d"><div class="ttname"><a href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">ReaperExtBase::ShowHideMainWindow</a></div><div class="ttdeci">void ShowHideMainWindow()</div><div class="ttdoc">Toggles the visibility of the main extension window.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8cpp_source.html#l00097">ReaperExtBase.cpp:97</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html_a17bec0a7b8228f4bbd279c21e5093a5b"><div class="ttname"><a href="class_reaper_ext_base.html#a17bec0a7b8228f4bbd279c21e5093a5b">ReaperExtBase::IsDocked</a></div><div class="ttdeci">bool IsDocked() const</div><div class="ttdoc">Returns true if the window is currently docked.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00069">ReaperExtBase.h:69</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html_aaf43ad762c5869825913e0ebbf6bb41a"><div class="ttname"><a href="class_reaper_ext_base.html#aaf43ad762c5869825913e0ebbf6bb41a">ReaperExtBase::ToggleDocking</a></div><div class="ttdeci">void ToggleDocking()</div><div class="ttdoc">Toggles between docked and floating state.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8cpp_source.html#l00111">ReaperExtBase.cpp:111</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html_aef588fbf55443e8170150f6c7eb126c0"><div class="ttname"><a href="class_reaper_ext_base.html#aef588fbf55443e8170150f6c7eb126c0">ReaperExtBase::SetDockId</a></div><div class="ttdeci">void SetDockId(const char *id)</div><div class="ttdoc">Sets the unique identifier used for dock state persistence.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00073">ReaperExtBase.h:73</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html_af36768e35c40037fce7c77c0406e2484"><div class="ttname"><a href="class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484">ReaperExtBase::RegisterAction</a></div><div class="ttdeci">void RegisterAction(const char *actionName, std::function&lt; void()&gt; func, bool addMenuItem=false, int *pToggle=nullptr)</div><div class="ttdoc">Registers an action with the REAPER extension system.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8cpp_source.html#l00183">ReaperExtBase.cpp:183</a></div></div>
+<div class="ttc" id="aclass_reaper_ext_base_html_afc2682c54bba3b9b10a32da359e8b619"><div class="ttname"><a href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">ReaperExtBase::OnIdle</a></div><div class="ttdeci">virtual void OnIdle()</div><div class="ttdoc">Called during idle processing - override to perform periodic tasks.</div><div class="ttdef"><b>Definition:</b> <a href="_reaper_ext_base_8h_source.html#l00053">ReaperExtBase.h:53</a></div></div>
 <div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdoc">Base class for timer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_timer_8h_source.html#l00039">IPlugTimer.h:40</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
