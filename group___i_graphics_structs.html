@@ -179,6 +179,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ga59a0a82f346d3d814b544291c2ec684b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0787e6c5df93d46d6e6d704bdaeb541c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#ga0787e6c5df93d46d6e6d704bdaeb541c">IUIAppearanceChangedFunc</a> = std::function&lt; void(EUIAppearance appearance)&gt;</td></tr>
 <tr class="separator:ga0787e6c5df93d46d6e6d704bdaeb541c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4ef5bff098ca62da4401801c874cafb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#gad4ef5bff098ca62da4401801c874cafb">ILiveEditEventFunc</a> = std::function&lt; void(const char *eventJson)&gt;</td></tr>
+<tr class="separator:gad4ef5bff098ca62da4401801c874cafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1d85da00a3e02f979725359f52c59f86"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#ga1d85da00a3e02f979725359f52c59f86">ITouchID</a> = uintptr_t</td></tr>
 <tr class="separator:ga1d85da00a3e02f979725359f52c59f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa78d989900b64f9356a9694bd05b3d99"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#gaa78d989900b64f9356a9694bd05b3d99">MTLTexturePtr</a> = void *</td></tr>
@@ -367,7 +369,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <div class="textblock"><p >Used to manage stroke behaviour for path based drawing back ends. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00589">589</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00590">590</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
@@ -417,7 +419,7 @@ mPreserve = false</td>
 </div><div class="memdoc">
 <div class="textblock"><p >Used to group mouse coordinates with mouse modifier information. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l01720">1720</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l01721">1721</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
@@ -467,7 +469,7 @@ y = 0.0</td>
 </div><div class="memdoc">
 <div class="textblock"><p >Used to describe a particular gesture. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l01728">1728</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l01729">1729</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
@@ -675,7 +677,23 @@ y = 0.f</td>
 
 <p>ILayerPtr is a managed pointer for transferring the ownership of layers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02370">2370</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02371">2371</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+
+</div>
+</div>
+<a id="gad4ef5bff098ca62da4401801c874cafb" name="gad4ef5bff098ca62da4401801c874cafb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4ef5bff098ca62da4401801c874cafb">&#9670;&#160;</a></span>ILiveEditEventFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using ILiveEditEventFunc =  std::function&lt;void(const char* eventJson)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00056">56</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -723,7 +741,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00056">56</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00057">57</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -755,7 +773,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00081">81</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00082">82</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -771,7 +789,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00079">79</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00080">80</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -787,7 +805,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00082">82</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00083">83</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -826,7 +844,7 @@ y = 0.f</td>
 <dl class="section return"><dt>Returns</dt><dd>float The blend weight value <br  />
  </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00560">560</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00561">561</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00547">IGraphicsNanoVG::DrawBitmap()</a>.</p>
 
@@ -929,7 +947,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00510">510</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00511">511</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -953,7 +971,7 @@ y = 0.f</td>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00055">55</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00381">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00316">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00833">IRECT::MH()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00381">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00316">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00834">IRECT::MH()</a>.</p>
 
 </div>
 </div>
@@ -977,7 +995,7 @@ y = 0.f</td>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00066">66</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00381">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00316">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00830">IRECT::MW()</a>.</p>
+<p class="reference">References <a class="el" href="_i_plug_parameter_8h_source.html#l00381">IParam::GetDisplayWithLabel()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8h_source.html#l00316">IControl::GetRECT()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, and <a class="el" href="_i_graphics_structs_8h_source.html#l00831">IRECT::MW()</a>.</p>
 
 </div>
 </div>
@@ -1027,7 +1045,7 @@ y = 0.f</td>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00047">47</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_graphics_8h_source.html#l01618">IGraphics::GetMouseDownPoint()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="_i_control_8h_source.html#l00497">IControl::SetAnimation()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_graphics_8h_source.html#l01621">IGraphics::GetMouseDownPoint()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="_i_control_8h_source.html#l00497">IControl::SetAnimation()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00520">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00097">IVNumberBoxControl::OnAttached()</a>, <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00077">IVBakedPresetManagerControl::OnAttached()</a>, and <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00217">IVDiskPresetManagerControl::OnAttached()</a>.</p>
 
@@ -1059,7 +1077,7 @@ y = 0.f</td>
 
 <p>Helper to get a CString based on ETextStyle. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00648">648</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00649">649</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1076,7 +1094,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00570">570</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00571">571</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1092,7 +1110,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00569">569</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00570">570</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1126,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00568">568</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00569">569</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1124,7 +1142,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00567">567</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00568">568</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1140,7 +1158,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00566">566</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00567">567</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1174,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00565">565</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00566">566</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1172,7 +1190,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00571">571</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00572">572</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1188,7 +1206,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00572">572</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00573">573</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1204,7 +1222,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00527">527</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00528">528</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1220,7 +1238,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02466">2466</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02467">2467</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1262,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02471">2471</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02472">2472</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1268,7 +1286,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02472">2472</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02473">2473</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1292,7 +1310,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02473">2473</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02474">2474</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1308,7 +1326,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00528">528</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00529">529</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1332,7 +1350,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02475">2475</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02476">2476</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1348,7 +1366,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00531">531</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00532">532</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1364,7 +1382,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00526">526</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00527">527</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1388,7 +1406,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02468">2468</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02469">2469</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1404,7 +1422,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00532">532</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00533">533</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1428,7 +1446,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02479">2479</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02480">2480</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1444,7 +1462,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02480">2480</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02481">2481</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1460,7 +1478,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00529">529</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00530">530</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1484,7 +1502,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02474">2474</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02475">2475</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1526,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02476">2476</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02477">2477</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1524,7 +1542,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00533">533</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00534">534</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1548,7 +1566,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02470">2470</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02471">2471</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1572,7 +1590,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02469">2469</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02470">2470</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1588,7 +1606,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02574">2574</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02575">2575</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1604,7 +1622,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00743">743</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00744">744</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1620,7 +1638,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00538">538</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00539">539</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1636,7 +1654,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00539">539</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00540">540</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1652,7 +1670,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00540">540</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00541">541</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1668,7 +1686,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02481">2481</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02482">2482</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1692,7 +1710,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02478">2478</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02479">2479</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1716,7 +1734,7 @@ y = 0.f</td>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02477">2477</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02478">2478</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1732,7 +1750,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00534">534</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00535">535</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1748,7 +1766,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00535">535</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00536">536</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
@@ -1764,7 +1782,7 @@ y = 0.f</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00536">536</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l00537">537</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
 
 </div>
 </div>
