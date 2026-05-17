@@ -242,11 +242,36 @@ Template Files</h1>
 </table>
 <p >Placeholders like <code>NAME_PLACEHOLDER</code> are replaced with the plugin name during build.</p>
 <h1><a class="anchor" id="autotoc_md108"></a>
+IGraphics Popup Menu Styling</h1>
+<p >When an <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> control opens a platform popup menu in a web build, iPlug2 renders it with the browser's HTML Popover API. The generated menu supports submenus, pointer input, Escape dismissal, and keyboard navigation with arrow keys and Enter/Space. A custom <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> popup menu control attached with <code>AttachPopupMenuControl()</code> still overrides the web platform menu.</p>
+<p >Add CSS custom properties to the template stylesheet, or to any stylesheet loaded by the host page:</p>
+<div class="fragment"><div class="line">:root {</div>
+<div class="line">  --iplug-popup-menu-background: #1e1e1e;</div>
+<div class="line">  --iplug-popup-menu-color: #ddd;</div>
+<div class="line">  --iplug-popup-menu-border: 1px solid #555;</div>
+<div class="line">  --iplug-popup-menu-border-radius: 6px;</div>
+<div class="line">  --iplug-popup-menu-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);</div>
+<div class="line">  --iplug-popup-menu-font: 13px -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;</div>
+<div class="line">  --iplug-popup-menu-padding: 4px 0;</div>
+<div class="line">  --iplug-popup-menu-max-height: 70vh;</div>
+<div class="line">  --iplug-popup-menu-hover-background: #3b82f6;</div>
+<div class="line">  --iplug-popup-menu-hover-color: #fff;</div>
+<div class="line">  --iplug-popup-menu-item-padding: 5px 12px;</div>
+<div class="line">  --iplug-popup-menu-disabled-opacity: 0.45;</div>
+<div class="line">  --iplug-popup-menu-min-width: 160px;</div>
+<div class="line">  --iplug-popup-menu-title-padding: 6px 12px 2px;</div>
+<div class="line">  --iplug-popup-menu-title-color: #888;</div>
+<div class="line">  --iplug-popup-menu-title-font-size: 11px;</div>
+<div class="line">  --iplug-popup-menu-separator-margin: 4px 8px;</div>
+<div class="line">  --iplug-popup-menu-separator-color: #444;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p >For more specific styling, the DOM uses these class hooks: <code>.iplug-popup-menu</code>, <code>.iplug-popup-menu__panel</code>, <code>.iplug-popup-menu__item</code>, <code>.iplug-popup-menu__check</code>, <code>.iplug-popup-menu__submenu-indicator</code>, <code>.iplug-popup-menu__title</code>, and <code>.iplug-popup-menu__separator</code>.</p>
+<h1><a class="anchor" id="autotoc_md109"></a>
 Debugging</h1>
-<h2><a class="anchor" id="autotoc_md109"></a>
+<h2><a class="anchor" id="autotoc_md110"></a>
 Console Messages</h2>
 <p >Both DSP and UI modules log to the browser console. DSP messages are prefixed with the plugin name.</p>
-<h2><a class="anchor" id="autotoc_md110"></a>
+<h2><a class="anchor" id="autotoc_md111"></a>
 Common Issues</h2>
 <p >**"SharedArrayBuffer is not defined"** Server missing COOP/COEP headers. Plugin will work but visualization data uses slower <code>postMessage</code> path.</p>
 <p >**"Module not found in globalThis"** DSP module failed to load. Check browser console for WASM compilation errors.</p>
@@ -255,7 +280,7 @@ Common Issues</h2>
 <li>Disabling SIMD if causing issues</li>
 <li>Checking for allocations in <code>ProcessBlock</code></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md111"></a>
+<h2><a class="anchor" id="autotoc_md112"></a>
 Local Development Server</h2>
 <p >Python 3 with COOP/COEP headers:</p>
 <div class="fragment"><div class="line"><span class="comment">#!/usr/bin/env python3</span></div>
@@ -277,7 +302,7 @@ Local Development Server</h2>
 <div class="line">print(f<span class="stringliteral">&#39;Serving at http://localhost:{port}&#39;</span>)</div>
 <div class="line">HTTPServer((<span class="stringliteral">&#39;localhost&#39;</span>, port), CORPHandler).serve_forever()</div>
 </div><!-- fragment --><p >Save as <code>serve.py</code> and run: <code>python3 serve.py 8080</code></p>
-<h1><a class="anchor" id="autotoc_md112"></a>
+<h1><a class="anchor" id="autotoc_md113"></a>
 Multi-Instance Support</h1>
 <p >The WASM DSP module supports multiple plugin instances running in the same AudioWorklet context. This enables:</p>
 <ul>
@@ -285,7 +310,7 @@ Multi-Instance Support</h1>
 <li>Plugin chains where audio flows through multiple effects</li>
 <li>Hosting multiple plugins in a single web page</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md113"></a>
+<h2><a class="anchor" id="autotoc_md114"></a>
 How It Works</h2>
 <p >Each <code>AudioWorkletProcessor</code> creates its own DSP instance:</p>
 <div class="fragment"><div class="line">// In AudioWorkletProcessor constructor</div>
@@ -300,7 +325,7 @@ How It Works</h2>
 <li><code>destroyInstance(id)</code> - cleans up instance</li>
 <li>All other functions take <code>instanceId</code> as first parameter</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md114"></a>
+<h2><a class="anchor" id="autotoc_md115"></a>
 Instance Lifecycle</h2>
 <ol type="1">
 <li><b>Create</b>: Processor constructor calls <code>Module.createInstance()</code></li>
@@ -308,7 +333,7 @@ Instance Lifecycle</h2>
 <li><b>Use</b>: All WASM calls include instance ID</li>
 <li><b>Destroy</b>: On cleanup, call <code>Module.destroyInstance(instanceId)</code></li>
 </ol>
-<h2><a class="anchor" id="autotoc_md115"></a>
+<h2><a class="anchor" id="autotoc_md116"></a>
 Memory Considerations</h2>
 <p >Each instance has its own:</p><ul>
 <li>Plugin state and parameters</li>
@@ -316,7 +341,7 @@ Memory Considerations</h2>
 <li>Message port for DSP→UI communication</li>
 </ul>
 <p >The WASM module code is shared across all instances, but each instance has isolated state.</p>
-<h1><a class="anchor" id="autotoc_md116"></a>
+<h1><a class="anchor" id="autotoc_md117"></a>
 Comparison with WAM Builds</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -334,7 +359,7 @@ Comparison with WAM Builds</h1>
 </table>
 <p >Use <b>WASM Split</b> for: standalone web plugins, embedding in web apps, simple deployment.</p>
 <p >Use <b>WAM</b> for: DAW integration, WAM-compatible hosts, standardized plugin format.</p>
-<h1><a class="anchor" id="autotoc_md117"></a>
+<h1><a class="anchor" id="autotoc_md118"></a>
 See Also</h1>
 <ul>
 <li>How to setup iPlug2 with emscripten</li>
