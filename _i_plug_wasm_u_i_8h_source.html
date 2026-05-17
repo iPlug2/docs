@@ -123,16 +123,18 @@ $(function() {
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="comment">// These are exposed via EMSCRIPTEN_BINDINGS</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> SendDSPIdleTick();</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  WDL_String mControllerName;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><a class="code hl_class" href="class_i_plug_wasm_u_i.html">IPlugWasmUI</a>* MakePlug(<span class="keyword">const</span> InstanceInfo&amp; info);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">bool</span> EditorResize(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">void</span> SendDSPIdleTick();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  WDL_String mControllerName;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><a class="code hl_class" href="class_i_plug_wasm_u_i.html">IPlugWasmUI</a>* MakePlug(<span class="keyword">const</span> InstanceInfo&amp; info);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif </span><span class="comment">// _IPLUG_HYBRID_UI_</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif </span><span class="comment">// _IPLUG_HYBRID_UI_</span></div>
 <div class="ttc" id="a_i_plug_a_p_i_base_8h_html"><div class="ttname"><a href="_i_plug_a_p_i_base_8h.html">IPlugAPIBase.h</a></div></div>
 <div class="ttc" id="aclass_i_plug_a_p_i_base_html"><div class="ttname"><a href="class_i_plug_a_p_i_base.html">IPlugAPIBase</a></div><div class="ttdoc">The base class of an IPlug plug-in, which interacts with the different plug-in APIs.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_i_base_8h_source.html#l00042">IPlugAPIBase.h:43</a></div></div>
 <div class="ttc" id="aclass_i_plug_wasm_u_i_html"><div class="ttname"><a href="class_i_plug_wasm_u_i.html">IPlugWasmUI</a></div><div class="ttdoc">Hybrid UI class - IGraphics side for split DSP/UI builds.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_wasm_u_i_8h_source.html#l00031">IPlugWasmUI.h:32</a></div></div>
