@@ -139,12 +139,14 @@ Headless Plugins</h2>
 <p >For plugins without <a class="el" href="class_i_graphics.html" title="The lowest level base class of an IGraphics context.">IGraphics</a> (<code>PLUG_HAS_UI=0</code>), only the DSP module is built. The template auto-generates parameter controls.</p>
 <h1><a class="anchor" id="autotoc_md99"></a>
 Building with CMake</h1>
-<div class="fragment"><div class="line">cd Examples/IPlugEffect</div>
-<div class="line">mkdir build &amp;&amp; cd build</div>
-<div class="line">cmake .. -DTARGET_WASM=ON -G Ninja</div>
-<div class="line">ninja</div>
-</div><!-- fragment --><p >Or with Xcode generator: </p><div class="fragment"><div class="line">cmake .. -DTARGET_WASM=ON -G Xcode</div>
-</div><!-- fragment --><p >CMake targets:</p><ul>
+<p >From the iPlug2 repository root:</p>
+<div class="fragment"><div class="line">cmake --preset web</div>
+<div class="line">cmake --build --preset web --target IPlugEffect-wasm-dist</div>
+</div><!-- fragment --><p >For faster local UI iteration, use the fast UI preset. This keeps the build type at <code>Release</code> so the DSP module still uses the normal release optimization, but builds the Wasm UI module with <code>-O0</code>:</p>
+<div class="fragment"><div class="line">cmake --preset web-fast-ui</div>
+<div class="line">cmake --build --preset web-fast-ui --target IPlugEffect-wasm-ui</div>
+</div><!-- fragment --><p >By default the CMake Wasm UI uses <code>IPLUG2_WASM_UI_OPTIMIZATION=-O3</code> for release builds. Set <code>-DIPLUG2_WASM_UI_OPTIMIZATION=-O0</code> directly if you want the fastest compile/link path in a custom build directory.</p>
+<p >CMake targets:</p><ul>
 <li><code>IPlugEffect-wasm-dsp</code> - DSP module</li>
 <li><code>IPlugEffect-wasm-ui</code> - UI module</li>
 <li><code>IPlugEffect-wasm-dist</code> - Full distribution bundle</li>
