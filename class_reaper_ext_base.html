@@ -110,9 +110,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc2682c54bba3b9b10a32da359e8b619"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">OnIdle</a> ()</td></tr>
 <tr class="memdesc:afc2682c54bba3b9b10a32da359e8b619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called during idle processing - override to perform periodic tasks.  <a href="class_reaper_ext_base.html#afc2682c54bba3b9b10a32da359e8b619">More...</a><br /></td></tr>
 <tr class="separator:afc2682c54bba3b9b10a32da359e8b619"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af36768e35c40037fce7c77c0406e2484"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484">RegisterAction</a> (const char *actionName, std::function&lt; void()&gt; func, bool addMenuItem=false, int *pToggle=nullptr)</td></tr>
-<tr class="memdesc:af36768e35c40037fce7c77c0406e2484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an action with the REAPER extension system.  <a href="class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484">More...</a><br /></td></tr>
-<tr class="separator:af36768e35c40037fce7c77c0406e2484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ea2fe04a96f381cfc11d879c0f6b24"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a51ea2fe04a96f381cfc11d879c0f6b24">OnActionRun</a> (int commandId, int flag)</td></tr>
+<tr class="memdesc:a51ea2fe04a96f381cfc11d879c0f6b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after any action in the main section runs (via "hookpostcommand").  <a href="class_reaper_ext_base.html#a51ea2fe04a96f381cfc11d879c0f6b24">More...</a><br /></td></tr>
+<tr class="separator:a51ea2fe04a96f381cfc11d879c0f6b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595698b9fd283b635c2b5ec2756cd161"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a595698b9fd283b635c2b5ec2756cd161">SaveProjectState</a> (ProjectStateContext *ctx)</td></tr>
+<tr class="memdesc:a595698b9fd283b635c2b5ec2756cd161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called (via "projectconfig") when the project is being saved, so the extension can persist state into the .RPP.  <a href="class_reaper_ext_base.html#a595698b9fd283b635c2b5ec2756cd161">More...</a><br /></td></tr>
+<tr class="separator:a595698b9fd283b635c2b5ec2756cd161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd1aa4eb4b34390b7356c47755a09ba"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a8cd1aa4eb4b34390b7356c47755a09ba">LoadProjectStateLine</a> (const char *line)</td></tr>
+<tr class="memdesc:a8cd1aa4eb4b34390b7356c47755a09ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called (via "projectconfig") for each project line not consumed by Reaper.  <a href="class_reaper_ext_base.html#a8cd1aa4eb4b34390b7356c47755a09ba">More...</a><br /></td></tr>
+<tr class="separator:a8cd1aa4eb4b34390b7356c47755a09ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9e86891d2b38af736c02e9d23637372"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#ad9e86891d2b38af736c02e9d23637372">OnBeginLoadProjectState</a> (bool isUndo)</td></tr>
+<tr class="memdesc:ad9e86891d2b38af736c02e9d23637372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called (via "projectconfig") before project state is loaded (also on "new project").  <a href="class_reaper_ext_base.html#ad9e86891d2b38af736c02e9d23637372">More...</a><br /></td></tr>
+<tr class="separator:ad9e86891d2b38af736c02e9d23637372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeacdb3d8de999bbed2da331da8ef4405"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#aeacdb3d8de999bbed2da331da8ef4405">RegisterAction</a> (const char *actionName, std::function&lt; void()&gt; func, bool addMenuItem=false, int *pToggle=nullptr, const char *contextMenuId=nullptr)</td></tr>
+<tr class="memdesc:aeacdb3d8de999bbed2da331da8ef4405"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an action with the REAPER extension system.  <a href="class_reaper_ext_base.html#aeacdb3d8de999bbed2da331da8ef4405">More...</a><br /></td></tr>
+<tr class="separator:aeacdb3d8de999bbed2da331da8ef4405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a172d7d91c5c54e976ef1e872110ea82d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">ShowHideMainWindow</a> ()</td></tr>
 <tr class="memdesc:a172d7d91c5c54e976ef1e872110ea82d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles the visibility of the main extension window.  <a href="class_reaper_ext_base.html#a172d7d91c5c54e976ef1e872110ea82d">More...</a><br /></td></tr>
 <tr class="separator:a172d7d91c5c54e976ef1e872110ea82d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,11 +144,21 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:ab77d0efe30cbd07aa6447c2ec51216a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c7109c4e0a0fe3a7d0344323ee95c48"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a2c7109c4e0a0fe3a7d0344323ee95c48">ToggleActionCallback</a> (int command)</td></tr>
 <tr class="separator:a2c7109c4e0a0fe3a7d0344323ee95c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac504783ec31b364c8884ca00e02ce6f4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#ac504783ec31b364c8884ca00e02ce6f4">MenuHook</a> (const char *menuidstr, void *menu, int flag)</td></tr>
+<tr class="separator:ac504783ec31b364c8884ca00e02ce6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32aa39e6bcdaa07a319045ab71aad5d0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a32aa39e6bcdaa07a319045ab71aad5d0">PostCommandProc</a> (int command, int flag)</td></tr>
+<tr class="separator:a32aa39e6bcdaa07a319045ab71aad5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16e5f24c5bd49a8c75963f51e999332f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#a16e5f24c5bd49a8c75963f51e999332f">BeginLoadProjectState</a> (bool isUndo, project_config_extension_t *reg)</td></tr>
+<tr class="separator:a16e5f24c5bd49a8c75963f51e999332f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76c2f1410b0d4f4d4659274c7a8cce3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#ae76c2f1410b0d4f4d4659274c7a8cce3">ProcessExtensionLine</a> (const char *line, ProjectStateContext *ctx, bool isUndo, project_config_extension_t *reg)</td></tr>
+<tr class="separator:ae76c2f1410b0d4f4d4659274c7a8cce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea04c7979dd1cf19103a02d8496796a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reaper_ext_base.html#aeea04c7979dd1cf19103a02d8496796a">SaveExtensionConfig</a> (ProjectStateContext *ctx, bool isUndo, project_config_extension_t *reg)</td></tr>
+<tr class="separator:aeea04c7979dd1cf19103a02d8496796a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Reaper extension base class interface. </p>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00038">38</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00040">40</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a466290703976374e0665126cb7de9670" name="a466290703976374e0665126cb7de9670"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a466290703976374e0665126cb7de9670">&#9670;&#160;</a></span>ReaperExtBase()</h2>
@@ -210,7 +232,45 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00046">46</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00048">48</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+
+</div>
+</div>
+<a id="a16e5f24c5bd49a8c75963f51e999332f" name="a16e5f24c5bd49a8c75963f51e999332f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e5f24c5bd49a8c75963f51e999332f">&#9670;&#160;</a></span>BeginLoadProjectState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReaperExtBase::BeginLoadProjectState </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isUndo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">project_config_extension_t *&#160;</td>
+          <td class="paramname"><em>reg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00235">235</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +342,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00048">48</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00050">50</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -320,7 +380,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00203">203</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00255">255</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -349,9 +409,173 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Returns true if the window is currently docked. </p>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00069">69</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00094">94</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_reaper_ext_base_8cpp_source.html#l00097">ShowHideMainWindow()</a>, and <a class="el" href="_reaper_ext_base_8cpp_source.html#l00111">ToggleDocking()</a>.</p>
+
+</div>
+</div>
+<a id="a8cd1aa4eb4b34390b7356c47755a09ba" name="a8cd1aa4eb4b34390b7356c47755a09ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd1aa4eb4b34390b7356c47755a09ba">&#9670;&#160;</a></span>LoadProjectStateLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ReaperExtBase::LoadProjectStateLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called (via "projectconfig") for each project line not consumed by Reaper. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>The line of project data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if this line belonged to the extension and was handled </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00071">71</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+
+</div>
+</div>
+<a id="ac504783ec31b364c8884ca00e02ce6f4" name="ac504783ec31b364c8884ca00e02ce6f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac504783ec31b364c8884ca00e02ce6f4">&#9670;&#160;</a></span>MenuHook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReaperExtBase::MenuHook </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>menuidstr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>menu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00204">204</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a51ea2fe04a96f381cfc11d879c0f6b24" name="a51ea2fe04a96f381cfc11d879c0f6b24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ea2fe04a96f381cfc11d879c0f6b24">&#9670;&#160;</a></span>OnActionRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ReaperExtBase::OnActionRun </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>commandId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called after any action in the main section runs (via "hookpostcommand"). </p>
+<p >Override to react to user edits without polling. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commandId</td><td>The command that ran </td></tr>
+    <tr><td class="paramname">flag</td><td>Reaper-supplied flag </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00061">61</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+
+</div>
+</div>
+<a id="ad9e86891d2b38af736c02e9d23637372" name="ad9e86891d2b38af736c02e9d23637372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e86891d2b38af736c02e9d23637372">&#9670;&#160;</a></span>OnBeginLoadProjectState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ReaperExtBase::OnBeginLoadProjectState </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isUndo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called (via "projectconfig") before project state is loaded (also on "new project"). </p>
+<p >Override to reset state to defaults. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isUndo</td><td>true if this load is part of an undo/redo </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00076">76</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -380,12 +604,100 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Called during idle processing - override to perform periodic tasks. </p>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00053">53</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00055">55</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
-<a id="af36768e35c40037fce7c77c0406e2484" name="af36768e35c40037fce7c77c0406e2484"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af36768e35c40037fce7c77c0406e2484">&#9670;&#160;</a></span>RegisterAction()</h2>
+<a id="a32aa39e6bcdaa07a319045ab71aad5d0" name="a32aa39e6bcdaa07a319045ab71aad5d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32aa39e6bcdaa07a319045ab71aad5d0">&#9670;&#160;</a></span>PostCommandProc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReaperExtBase::PostCommandProc </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00228">228</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae76c2f1410b0d4f4d4659274c7a8cce3" name="ae76c2f1410b0d4f4d4659274c7a8cce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76c2f1410b0d4f4d4659274c7a8cce3">&#9670;&#160;</a></span>ProcessExtensionLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReaperExtBase::ProcessExtensionLine </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ProjectStateContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isUndo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">project_config_extension_t *&#160;</td>
+          <td class="paramname"><em>reg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00242">242</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeacdb3d8de999bbed2da331da8ef4405" name="aeacdb3d8de999bbed2da331da8ef4405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacdb3d8de999bbed2da331da8ef4405">&#9670;&#160;</a></span>RegisterAction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,7 +724,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>pToggle</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramname"><em>pToggle</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>contextMenuId</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -427,13 +745,94 @@ Static Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">actionName</td><td>The name of the action to register </td></tr>
     <tr><td class="paramname">func</td><td>The function to call when the action is executed </td></tr>
-    <tr><td class="paramname">addMenuItem</td><td>If true, adds a menu item for this action </td></tr>
+    <tr><td class="paramname">addMenuItem</td><td>If true, adds a menu item for this action to the Extensions menu </td></tr>
     <tr><td class="paramname">pToggle</td><td>Optional pointer to an int for toggle state </td></tr>
+    <tr><td class="paramname">contextMenuId</td><td>Optional REAPER context-menu id to also add this action to, e.g. "Media item context", "Track control panel context". nullptr = none. </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00183">183</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aeea04c7979dd1cf19103a02d8496796a" name="aeea04c7979dd1cf19103a02d8496796a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea04c7979dd1cf19103a02d8496796a">&#9670;&#160;</a></span>SaveExtensionConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReaperExtBase::SaveExtensionConfig </td>
+          <td>(</td>
+          <td class="paramtype">ProjectStateContext *&#160;</td>
+          <td class="paramname"><em>ctx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isUndo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">project_config_extension_t *&#160;</td>
+          <td class="paramname"><em>reg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00248">248</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a595698b9fd283b635c2b5ec2756cd161" name="a595698b9fd283b635c2b5ec2756cd161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a595698b9fd283b635c2b5ec2756cd161">&#9670;&#160;</a></span>SaveProjectState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ReaperExtBase::SaveProjectState </td>
+          <td>(</td>
+          <td class="paramtype">ProjectStateContext *&#160;</td>
+          <td class="paramname"><em>ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Called (via "projectconfig") when the project is being saved, so the extension can persist state into the .RPP. </p>
+<p >Write lines with ctx-&gt;AddLine(...). </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctx</td><td>The project state context to write to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00066">66</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -469,7 +868,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00073">73</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8h_source.html#l00098">98</a> of file <a class="el" href="_reaper_ext_base_8h_source.html">ReaperExtBase.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +891,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00097">97</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_reaper_ext_base_8h_source.html#l00069">IsDocked()</a>.</p>
+<p class="reference">References <a class="el" href="_reaper_ext_base_8h_source.html#l00094">IsDocked()</a>.</p>
 
 </div>
 </div>
@@ -520,7 +919,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00216">216</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00268">268</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
 </div>
 </div>
@@ -543,7 +942,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_reaper_ext_base_8cpp_source.html#l00111">111</a> of file <a class="el" href="_reaper_ext_base_8cpp_source.html">ReaperExtBase.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_reaper_ext_base_8h_source.html#l00069">IsDocked()</a>.</p>
+<p class="reference">References <a class="el" href="_reaper_ext_base_8h_source.html#l00094">IsDocked()</a>.</p>
 
 </div>
 </div>

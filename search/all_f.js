@@ -12,7 +12,7 @@ var searchData=
   ['reducefromleft_9',['ReduceFromLeft',['../struct_i_r_e_c_t.html#a2bcbdd2c5fe3cf9e84639b7d42e00dc2',1,'IRECT']]],
   ['reducefromright_10',['ReduceFromRight',['../struct_i_r_e_c_t.html#a056506eccf013161238f60411ad8d4f8',1,'IRECT']]],
   ['reducefromtop_11',['ReduceFromTop',['../struct_i_r_e_c_t.html#a604106e90684d697dce759e44b3024eb',1,'IRECT']]],
-  ['registeraction_12',['RegisterAction',['../class_reaper_ext_base.html#af36768e35c40037fce7c77c0406e2484',1,'ReaperExtBase']]],
+  ['registeraction_12',['RegisterAction',['../class_reaper_ext_base.html#aeacdb3d8de999bbed2da331da8ef4405',1,'ReaperExtBase']]],
   ['release_13',['Release',['../class_a_d_s_r_envelope.html#a834864bf8f15dff0f58aa9745e6e0256',1,'ADSREnvelope::Release()'],['../class_synth_voice.html#a6584a3bddaf7c8ab2b38dfa919fc639f',1,'SynthVoice::Release()']]],
   ['releasebitmap_14',['ReleaseBitmap',['../class_i_graphics_nano_v_g.html#a4ea856f8baef511a0440b1a739ac5cc3',1,'IGraphicsNanoVG::ReleaseBitmap()'],['../class_i_graphics.html#a3c4325453e5dc772e44fd390beafce33',1,'IGraphics::ReleaseBitmap(const IBitmap &amp;bitmap)']]],
   ['releasemousecapture_15',['ReleaseMouseCapture',['../class_i_graphics.html#a66fb499abd593492216041145220041a',1,'IGraphics']]],
