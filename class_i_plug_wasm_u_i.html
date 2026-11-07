@@ -108,9 +108,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c99609764b539eb7711eb963a648075"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe2926e194d1d8e0dcefbdf4be965266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_wasm_u_i.html#abe2926e194d1d8e0dcefbdf4be965266">SendArbitraryMsgFromUI</a> (int msgTag, int ctrlTag=kNoTag, int dataSize=0, const void *pData=nullptr) override</td></tr>
 <tr class="separator:abe2926e194d1d8e0dcefbdf4be965266"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac3f8a0e21444599790edf49bd9a71b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_wasm_u_i.html#aac3f8a0e21444599790edf49bd9a71b4">OnRestoreState</a> () override</td></tr>
-<tr class="memdesc:aac3f8a0e21444599790edf49bd9a71b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">State (e.g.  <a href="class_i_plug_wasm_u_i.html#aac3f8a0e21444599790edf49bd9a71b4">More...</a><br /></td></tr>
-<tr class="separator:aac3f8a0e21444599790edf49bd9a71b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d5a6166c5b04e5e16216947c9939208"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_plug_wasm_u_i.html#a9d5a6166c5b04e5e16216947c9939208">OnIdle</a> () override</td></tr>
 <tr class="memdesc:a9d5a6166c5b04e5e16216947c9939208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plug-ins that override <a class="el" href="class_i_plug_wasm_u_i.html#a9d5a6166c5b04e5e16216947c9939208" title="Plug-ins that override OnIdle() must call the base class!">OnIdle()</a> must call the base class!  <a href="class_i_plug_wasm_u_i.html#a9d5a6166c5b04e5e16216947c9939208">More...</a><br /></td></tr>
 <tr class="separator:a9d5a6166c5b04e5e16216947c9939208"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -480,37 +477,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_plug_a_p_i_base.html#a92072683c70545f8232846320ae52f40">IPlugAPIBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8h_source.html#l00047">47</a> of file <a class="el" href="_i_plug_wasm_u_i_8h_source.html">IPlugWasmUI.h</a>.</p>
-
-</div>
-</div>
-<a id="aac3f8a0e21444599790edf49bd9a71b4" name="aac3f8a0e21444599790edf49bd9a71b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac3f8a0e21444599790edf49bd9a71b4">&#9670;&#160;</a></span>OnRestoreState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IPlugWasmUI::OnRestoreState </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>State (e.g. </p>
-<p >a preset) is restored on the UI instance, so this sends the new parameter values to the DSP instance. Plug-ins that override <a class="el" href="class_i_plug_wasm_u_i.html#aac3f8a0e21444599790edf49bd9a71b4" title="State (e.g.">OnRestoreState()</a> must call the base class! </p>
-
-<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00048">48</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8h_source.html#l00043">43</a> of file <a class="el" href="_i_plug_wasm_u_i_8h_source.html">IPlugWasmUI.h</a>.</p>
 
 </div>
 </div>
@@ -560,7 +527,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00089">89</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00072">72</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -588,7 +555,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00065">65</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00048">48</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
 
 </div>
 </div>
@@ -654,7 +621,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00076">76</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html#l00059">59</a> of file <a class="el" href="_i_plug_wasm_u_i_8cpp_source.html">IPlugWasmUI.cpp</a>.</p>
 
 </div>
 </div>
