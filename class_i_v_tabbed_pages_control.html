@@ -98,7 +98,7 @@ Inheritance diagram for IVTabbedPagesControl:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2f8e236470a664c27601ca9b51ca5d3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_tabbed_pages_control.html#a2f8e236470a664c27601ca9b51ca5d3e">IVTabbedPagesControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const PageMap &amp;pages, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, float tabBarHeight=20.0f, float tabBarFrac=0.5f, EAlign tabsAlign=EAlign::Near)</td></tr>
+<tr class="memitem:a2f8e236470a664c27601ca9b51ca5d3e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_tabbed_pages_control.html#a2f8e236470a664c27601ca9b51ca5d3e">IVTabbedPagesControl</a> (const <a class="el" href="struct_i_r_e_c_t.html">IRECT</a> &amp;bounds, const <a class="el" href="_i_v_tabbed_pages_control_8h.html#a7f591da90461378532fc473e01ca2d4c">PageMap</a> &amp;pages, const char *label=&quot;&quot;, const <a class="el" href="struct_i_v_style.html">IVStyle</a> &amp;style=DEFAULT_STYLE, float tabBarHeight=20.0f, float tabBarFrac=0.5f, EAlign tabsAlign=EAlign::Near)</td></tr>
 <tr class="separator:a2f8e236470a664c27601ca9b51ca5d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a8d28bc1ecc56cb6eee7bf6a20ba450"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_v_tabbed_pages_control.html#a9a8d28bc1ecc56cb6eee7bf6a20ba450">Hide</a> (bool hide) override</td></tr>
 <tr class="memdesc:a9a8d28bc1ecc56cb6eee7bf6a20ba450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows or hides the <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a>.  <a href="class_i_v_tabbed_pages_control.html#a9a8d28bc1ecc56cb6eee7bf6a20ba450">More...</a><br /></td></tr>
@@ -685,12 +685,12 @@ Additional Inherited Members</h2></td></tr>
 <div class="line">  })}</div>
 <div class="line">}, <span class="stringliteral">&quot;Tabbed Pages Demo&quot;</span>));</div>
 <div class="ttc" id="aclass_i_panel_control_html"><div class="ttname"><a href="class_i_panel_control.html">IPanelControl</a></div><div class="ttdoc">A basic control to fill a rectangle with a color or gradient.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l01973">IControl.h:1974</a></div></div>
-<div class="ttc" id="aclass_i_v_tab_page_html"><div class="ttname"><a href="class_i_v_tab_page.html">IVTabPage</a></div><div class="ttdoc">A control used as the base class for a tabbed page of subcontrols.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00029">IVTabbedPagesControl.h:30</a></div></div>
-<div class="ttc" id="aclass_i_v_tabbed_pages_control_html"><div class="ttname"><a href="class_i_v_tabbed_pages_control.html">IVTabbedPagesControl</a></div><div class="ttdoc">A control to manage tabbed pages of sub controls Basic usage example:</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00106">IVTabbedPagesControl.h:107</a></div></div>
+<div class="ttc" id="aclass_i_v_tab_page_html"><div class="ttname"><a href="class_i_v_tab_page.html">IVTabPage</a></div><div class="ttdoc">A control used as the base class for a tabbed page of subcontrols.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00030">IVTabbedPagesControl.h:31</a></div></div>
+<div class="ttc" id="aclass_i_v_tabbed_pages_control_html"><div class="ttname"><a href="class_i_v_tabbed_pages_control.html">IVTabbedPagesControl</a></div><div class="ttdoc">A control to manage tabbed pages of sub controls Basic usage example:</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00108">IVTabbedPagesControl.h:109</a></div></div>
 <div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00749">IGraphicsStructs.h:750</a></div></div>
 </div><!-- fragment --><p >Laying out subcontrols on each page is done by passing a ResizeFunc lambda to the <a class="el" href="class_i_v_tab_page.html" title="A control used as the base class for a tabbed page of subcontrols.">IVTabPage</a> constructor, which is called when the page is attached to the <a class="el" href="class_i_v_tabbed_pages_control.html" title="A control to manage tabbed pages of sub controls Basic usage example:">IVTabbedPagesControl</a>. The default implementation of this function will resize the single child of the <a class="el" href="class_i_v_tab_page.html" title="A control used as the base class for a tabbed page of subcontrols.">IVTabPage</a> to fit the page bounds, but you can override this </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00106">106</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00108">108</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2f8e236470a664c27601ca9b51ca5d3e" name="a2f8e236470a664c27601ca9b51ca5d3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f8e236470a664c27601ca9b51ca5d3e">&#9670;&#160;</a></span>IVTabbedPagesControl()</h2>
@@ -710,7 +710,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const PageMap &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_i_v_tabbed_pages_control_8h.html#a7f591da90461378532fc473e01ca2d4c">PageMap</a> &amp;&#160;</td>
           <td class="paramname"><em>pages</em>, </td>
         </tr>
         <tr>
@@ -756,7 +756,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00109">109</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00111">111</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
@@ -783,7 +783,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00126">126</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00128">128</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
@@ -822,7 +822,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_container_base.html#ac2941612560428b465692bf592a526c1">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00153">153</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00155">155</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00894">IVectorBase::DrawLabel()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02524">IGraphics::DrawRoundRect()</a>, <a class="el" href="_i_graphics_8cpp_source.html#l02596">IGraphics::FillRoundRect()</a>, <a class="el" href="_i_control_8h_source.html#l00806">IVectorBase::GetColor()</a>, and <a class="el" href="_i_control_8h_source.html#l00858">IVectorBase::GetRoundedCornerRadius()</a>.</p>
 
@@ -851,7 +851,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00221">221</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00223">223</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
@@ -878,7 +878,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00223">223</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00225">225</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
@@ -905,7 +905,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00219">219</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00221">221</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
@@ -943,7 +943,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a52b7e2382bd2b106f429bf4c48e73d8b">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00131">131</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00133">133</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>, and <a class="el" href="_i_control_8h_source.html#l00679">IContainerBase::Hide()</a>.</p>
 
@@ -972,7 +972,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00228">228</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00230">230</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1004,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_container_base.html#a57875515fbe62983285da0f01888f8fc">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00169">169</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00171">171</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00839">IVectorBase::GetStyle()</a>, <a class="el" href="_i_control_8cpp_source.html#l00239">IControl::Hide()</a>, <a class="el" href="_i_control_8h_source.html#l00679">IContainerBase::Hide()</a>, and <a class="el" href="_i_control_8h_source.html#l00332">IControl::SetTargetAndDrawRECTs()</a>.</p>
 
@@ -1038,7 +1038,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_container_base.html#a4de57d1e1a086c3e5bbb3bdae52bc11a">IContainerBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00205">205</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00207">207</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l01163">IVectorBase::MakeRects()</a>, <a class="el" href="_i_control_8h_source.html#l00332">IControl::SetTargetAndDrawRECTs()</a>, and <a class="el" href="_i_control_8h_source.html#l00328">IControl::SetTargetRECT()</a>.</p>
 
@@ -1071,7 +1071,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_vector_base.html#ac6d92cb36120c237dcfeea46f6d95bb2">IVectorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00191">191</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00193">193</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_control_8h_source.html#l00839">IVectorBase::GetStyle()</a>, and <a class="el" href="_i_control_8h_source.html#l00830">IVectorBase::SetStyle()</a>.</p>
 

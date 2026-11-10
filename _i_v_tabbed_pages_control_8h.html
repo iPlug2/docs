@@ -90,7 +90,8 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_i_controls_8h_source.html">IControls.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_bubble_control_8h_source.html">IBubbleControl.h</a>&quot;</code><br />
-<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
 </div>
 <p><a href="_i_v_tabbed_pages_control_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -105,8 +106,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aff9128857786773b0930467a211f239b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_v_tabbed_pages_control_8h.html#aff9128857786773b0930467a211f239b">PageMap</a> = std::map&lt; const char *, <a class="el" href="class_i_v_tab_page.html">IVTabPage</a> * &gt;</td></tr>
-<tr class="separator:aff9128857786773b0930467a211f239b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f591da90461378532fc473e01ca2d4c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_v_tabbed_pages_control_8h.html#a7f591da90461378532fc473e01ca2d4c">PageMap</a> = std::vector&lt; std::pair&lt; const char *, <a class="el" href="class_i_v_tab_page.html">IVTabPage</a> * &gt; &gt;</td></tr>
+<tr class="memdesc:a7f591da90461378532fc473e01ca2d4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordered list of (tab name, page) pairs.  <a href="_i_v_tabbed_pages_control_8h.html#a7f591da90461378532fc473e01ca2d4c">More...</a><br /></td></tr>
+<tr class="separator:a7f591da90461378532fc473e01ca2d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A control to manage tabbed pages of sub controls Basic usage example: </p>
@@ -123,26 +125,29 @@ Typedefs</h2></td></tr>
 <div class="line">  })}</div>
 <div class="line">}, <span class="stringliteral">&quot;Tabbed Pages Demo&quot;</span>));</div>
 <div class="ttc" id="aclass_i_panel_control_html"><div class="ttname"><a href="class_i_panel_control.html">IPanelControl</a></div><div class="ttdoc">A basic control to fill a rectangle with a color or gradient.</div><div class="ttdef"><b>Definition:</b> <a href="_i_control_8h_source.html#l01973">IControl.h:1974</a></div></div>
-<div class="ttc" id="aclass_i_v_tab_page_html"><div class="ttname"><a href="class_i_v_tab_page.html">IVTabPage</a></div><div class="ttdoc">A control used as the base class for a tabbed page of subcontrols.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00029">IVTabbedPagesControl.h:30</a></div></div>
-<div class="ttc" id="aclass_i_v_tabbed_pages_control_html"><div class="ttname"><a href="class_i_v_tabbed_pages_control.html">IVTabbedPagesControl</a></div><div class="ttdoc">A control to manage tabbed pages of sub controls Basic usage example:</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00106">IVTabbedPagesControl.h:107</a></div></div>
+<div class="ttc" id="aclass_i_v_tab_page_html"><div class="ttname"><a href="class_i_v_tab_page.html">IVTabPage</a></div><div class="ttdoc">A control used as the base class for a tabbed page of subcontrols.</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00030">IVTabbedPagesControl.h:31</a></div></div>
+<div class="ttc" id="aclass_i_v_tabbed_pages_control_html"><div class="ttname"><a href="class_i_v_tabbed_pages_control.html">IVTabbedPagesControl</a></div><div class="ttdoc">A control to manage tabbed pages of sub controls Basic usage example:</div><div class="ttdef"><b>Definition:</b> <a href="_i_v_tabbed_pages_control_8h_source.html#l00108">IVTabbedPagesControl.h:109</a></div></div>
 <div class="ttc" id="astruct_i_r_e_c_t_html"><div class="ttname"><a href="struct_i_r_e_c_t.html">IRECT</a></div><div class="ttdoc">Used to manage a rectangular area, independent of draw class/platform.</div><div class="ttdef"><b>Definition:</b> <a href="_i_graphics_structs_8h_source.html#l00749">IGraphicsStructs.h:750</a></div></div>
 </div><!-- fragment --><p >Laying out subcontrols on each page is done by passing a ResizeFunc lambda to the <a class="el" href="class_i_v_tab_page.html" title="A control used as the base class for a tabbed page of subcontrols.">IVTabPage</a> constructor, which is called when the page is attached to the <a class="el" href="class_i_v_tabbed_pages_control.html" title="A control to manage tabbed pages of sub controls Basic usage example:">IVTabbedPagesControl</a>. The default implementation of this function will resize the single child of the <a class="el" href="class_i_v_tab_page.html" title="A control used as the base class for a tabbed page of subcontrols.">IVTabPage</a> to fit the page bounds, but you can override this  </p>
 
 <p class="definition">Definition in file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="aff9128857786773b0930467a211f239b" name="aff9128857786773b0930467a211f239b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff9128857786773b0930467a211f239b">&#9670;&#160;</a></span>PageMap</h2>
+<a id="a7f591da90461378532fc473e01ca2d4c" name="a7f591da90461378532fc473e01ca2d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f591da90461378532fc473e01ca2d4c">&#9670;&#160;</a></span>PageMap</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using PageMap =  std::map&lt;const char*, <a class="el" href="class_i_v_tab_page.html">IVTabPage</a>*&gt;</td>
+          <td class="memname">using <a class="el" href="_i_v_tabbed_pages_control_8h.html#a7f591da90461378532fc473e01ca2d4c">PageMap</a> =  std::vector&lt;std::pair&lt;const char*, <a class="el" href="class_i_v_tab_page.html">IVTabPage</a>*&gt; &gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00083">83</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
+<p>Ordered list of (tab name, page) pairs. </p>
+<p >Tabs appear in the order given. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_v_tabbed_pages_control_8h_source.html#l00085">85</a> of file <a class="el" href="_i_v_tabbed_pages_control_8h_source.html">IVTabbedPagesControl.h</a>.</p>
 
 </div>
 </div>
