@@ -425,11 +425,12 @@ $(function() {
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    TRACE</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    </div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    Steinberg::ViewRect newSize = Steinberg::ViewRect(0, 0, w, h);</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    plugFrame-&gt;resizeView(<span class="keyword">this</span>, &amp;newSize);</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  }</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>  T&amp; mOwner;</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>};</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="keywordflow">if</span> (plugFrame)</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      plugFrame-&gt;resizeView(<span class="keyword">this</span>, &amp;newSize);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  T&amp; mOwner;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>};</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
