@@ -2260,7 +2260,7 @@ $(function() {
 <div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span>  kernel.Resize(iSize);</div>
 <div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span>        </div>
 <div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iSize; i++)</div>
-<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span>    kernel.Get()[i] = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(std::round(255.f * std::expf(-(i * i) * blurConst)));</div>
+<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span>    kernel.Get()[i] = <span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(std::round(255.f * std::exp(-(i * i) * blurConst)));</div>
 <div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span>  </div>
 <div class="line"><a id="l02178" name="l02178"></a><span class="lineno"> 2178</span>  <span class="comment">// Kernel normalisation</span></div>
 <div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>  <span class="keywordtype">int</span> normFactor = kernel.Get()[0];</div>

@@ -94,6 +94,8 @@ $(function() {
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;bitset&gt;</code><br />
+<code>#include &lt;climits&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 <code>#include &quot;<a class="el" href="_i_plug_logger_8h_source.html">IPlugLogger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_i_plug_queue_8h_source.html">IPlugQueue.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_synth_voice_8h_source.html">SynthVoice.h</a>&quot;</code><br />
@@ -159,7 +161,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00034">34</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00036">36</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
@@ -204,7 +206,7 @@ mZone</td>
 <div class="textblock"><p >A <a class="el" href="_voice_allocator_8h.html#struct_voice_input_event" title="A VoiceInputEvent describes a change in input to be applied to one more more voices.">VoiceInputEvent</a> describes a change in input to be applied to one more more voices. </p>
 <p >mAddress specifies which voices should receive the change. mAction is the type of property change. mControllerNumber is the controller number to change if mAction is kController. mValue is the new value associated with the change. mSampleOffset is the number of samples into a processing buffer at which the change should occur. </p>
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00070">70</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00072">72</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 </div><table class="fieldtable">
 <tr><th colspan="3">Class Members</th></tr>
 <tr><td class="fieldtype">
@@ -254,7 +256,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00051">51</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00053">53</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
@@ -271,7 +273,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00043">43</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00045">45</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
@@ -287,7 +289,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00044">44</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00046">46</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
@@ -303,7 +305,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00042">42</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00044">44</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
@@ -319,7 +321,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00049">49</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00051">51</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
@@ -335,7 +337,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00047">47</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00049">49</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
@@ -351,7 +353,7 @@ mValue</td>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00048">48</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_voice_allocator_8h_source.html#l00050">50</a> of file <a class="el" href="_voice_allocator_8h_source.html">VoiceAllocator.h</a>.</p>
 
 </div>
 </div>
