@@ -102,6 +102,10 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1e1420c66bb244fb8ac90d5f4632103f"><td class="memItemLeft" align="right" valign="top">static BEGIN_IPLUG_NAMESPACE bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_plug_paths_8h.html#a1e1420c66bb244fb8ac90d5f4632103f">PathHasDotDotComponent</a> (const char *str)</td></tr>
+<tr class="separator:a1e1420c66bb244fb8ac90d5f4632103f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d26f979e0bdd9a7c5c97941e3581f44"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_plug_paths_8h.html#a7d26f979e0bdd9a7c5c97941e3581f44">IsSafeAbsoluteDir</a> (const char *dir)</td></tr>
+<tr class="separator:a7d26f979e0bdd9a7c5c97941e3581f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a795b9d00189ed09568cbd90acf1c0f88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_plug_paths_8h.html#a795b9d00189ed09568cbd90acf1c0f88">HostPath</a> (WDL_String &amp;path, const char *bundleID=0)</td></tr>
 <tr class="memdesc:a795b9d00189ed09568cbd90acf1c0f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the path to the host binary.  <a href="_i_plug_paths_8h.html#a795b9d00189ed09568cbd90acf1c0f88">More...</a><br /></td></tr>
 <tr class="separator:a795b9d00189ed09568cbd90acf1c0f88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,7 +154,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WebViewCachePath</b> 
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_paths_8h_source.html#l00027">27</a> of file <a class="el" href="_i_plug_paths_8h_source.html">IPlugPaths.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_paths_8h_source.html#l00057">57</a> of file <a class="el" href="_i_plug_paths_8h_source.html">IPlugPaths.h</a>.</p>
 
 </div>
 </div>
@@ -324,6 +328,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WebViewCachePath</b> 
 
 </div>
 </div>
+<a id="a7d26f979e0bdd9a7c5c97941e3581f44" name="a7d26f979e0bdd9a7c5c97941e3581f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d26f979e0bdd9a7c5c97941e3581f44">&#9670;&#160;</a></span>IsSafeAbsoluteDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool IsSafeAbsoluteDir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>dir</code> is safe to use as a base directory: a non-empty absolute path containing no ".." component. Validate environment-provided config dirs (e.g. <code>XDG_CONFIG_HOME</code>, <code>HOME</code>) with this before composing paths, per the XDG spec (which requires absolute paths) and CWE-22. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_paths_8h_source.html#l00047">47</a> of file <a class="el" href="_i_plug_paths_8h_source.html">IPlugPaths.h</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_plug_paths_8h_source.html#l00025">PathHasDotDotComponent()</a>.</p>
+
+</div>
+</div>
 <a id="a0238ef4a2d49efc240321b8b5ce290fe" name="a0238ef4a2d49efc240321b8b5ce290fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0238ef4a2d49efc240321b8b5ce290fe">&#9670;&#160;</a></span>LoadWinResource()</h2>
 
@@ -371,7 +406,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WebViewCachePath</b> 
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const void pointer to the data if successfull on windows. Returns nullptr if unsuccessfull or on platforms other than windows </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00316">IGraphicsNanoVG::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00380">IGraphicsSkia::LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01684">IGraphics::LoadResource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_nano_v_g_8cpp_source.html#l00322">IGraphicsNanoVG::LoadAPIBitmap()</a>, <a class="el" href="_i_graphics_skia_8cpp_source.html#l00384">IGraphicsSkia::LoadAPIBitmap()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01703">IGraphics::LoadResource()</a>.</p>
 
 </div>
 </div>
@@ -437,7 +472,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>WebViewCachePath</b> 
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><code>true</code> on success </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01684">IGraphics::LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01894">IGraphics::SearchImageResource()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_graphics_8cpp_source.html#l01703">IGraphics::LoadResource()</a>, and <a class="el" href="_i_graphics_8cpp_source.html#l01913">IGraphics::SearchImageResource()</a>.</p>
+
+</div>
+</div>
+<a id="a1e1420c66bb244fb8ac90d5f4632103f" name="a1e1420c66bb244fb8ac90d5f4632103f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e1420c66bb244fb8ac90d5f4632103f">&#9670;&#160;</a></span>PathHasDotDotComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static BEGIN_IPLUG_NAMESPACE bool PathHasDotDotComponent </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <code>str</code> contains a ".." component delimited by '/'. Used to reject directory traversal in environment-provided paths and resource names before they are composed into filesystem paths (CWE-22 / CWE-73). </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_paths_8h_source.html#l00025">25</a> of file <a class="el" href="_i_plug_paths_8h_source.html">IPlugPaths.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_paths_8h_source.html#l00047">IsSafeAbsoluteDir()</a>.</p>
 
 </div>
 </div>

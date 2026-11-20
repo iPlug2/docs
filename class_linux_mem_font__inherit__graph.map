@@ -1,0 +1,4 @@
+<map id="LinuxMemFont" name="LinuxMemFont">
+<area shape="rect" id="node1" title="Wraps pre&#45;loaded raw font bytes; takes a copy so the caller can free its buffer." alt="" coords="5,79,113,104"/>
+<area shape="rect" id="node2" title=" " alt="" coords="11,5,108,31"/>
+</map>

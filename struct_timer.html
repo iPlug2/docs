@@ -91,6 +91,12 @@ $(function() {
  <a href="struct_timer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Timer:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_timer__inherit__graph.svg" width="111" height="110"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -111,14 +117,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Stop</b> ()=0
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a662a0684fb4d8a9df465c718084cbfca"><td class="memItemLeft" align="right" valign="top"><a id="a662a0684fb4d8a9df465c718084cbfca" name="a662a0684fb4d8a9df465c718084cbfca"></a>
-static <a class="el" href="struct_timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Create</b> (ITimerFunction func, uint32_t intervalMs)</td></tr>
+<tr class="memitem:a662a0684fb4d8a9df465c718084cbfca"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_timer.html">Timer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_timer.html#a662a0684fb4d8a9df465c718084cbfca">Create</a> (ITimerFunction func, uint32_t intervalMs)</td></tr>
+<tr class="memdesc:a662a0684fb4d8a9df465c718084cbfca"><td class="mdescLeft">&#160;</td><td class="mdescRight">On Linux, callbacks run on a worker; returns nullptr if that worker cannot be created.  <a href="struct_timer.html#a662a0684fb4d8a9df465c718084cbfca">More...</a><br /></td></tr>
 <tr class="separator:a662a0684fb4d8a9df465c718084cbfca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base class for timer. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_timer_8h_source.html#l00039">39</a> of file <a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_timer_8h_source.html#l00042">42</a> of file <a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a7cbf6b658904150a52bb34fa424f2862" name="a7cbf6b658904150a52bb34fa424f2862"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7cbf6b658904150a52bb34fa424f2862">&#9670;&#160;</a></span>ITimerFunction</h2>
@@ -132,7 +138,7 @@ static <a class="el" href="struct_timer.html">Timer</a> *&#160;</td><td class="m
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_timer_8h_source.html#l00045">45</a> of file <a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_timer_8h_source.html#l00048">48</a> of file <a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>.</p>
 
 </div>
 </div>
@@ -160,7 +166,49 @@ static <a class="el" href="struct_timer.html">Timer</a> *&#160;</td><td class="m
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_timer_8h_source.html#l00048">48</a> of file <a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_timer_8h_source.html#l00053">53</a> of file <a class="el" href="_i_plug_timer_8h_source.html">IPlugTimer.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a662a0684fb4d8a9df465c718084cbfca" name="a662a0684fb4d8a9df465c718084cbfca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662a0684fb4d8a9df465c718084cbfca">&#9670;&#160;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="struct_timer.html">Timer</a> * Timer::Create </td>
+          <td>(</td>
+          <td class="paramtype">ITimerFunction&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>intervalMs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>On Linux, callbacks run on a worker; returns nullptr if that worker cannot be created. </p>
+<p >A callback may stop or destroy its own timer. External Stop() waits for the worker to exit. </p>
+
+<p class="reference">Referenced by <a class="el" href="_i_plug_a_p_i_base_8cpp_source.html#l00067">IPlugAPIBase::CreateTimer()</a>.</p>
 
 </div>
 </div>

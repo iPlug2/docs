@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a11afbf28f5b83cc097d1b0ef55fab2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a248c80f38f6f9460a2684fdeb0590c6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_s_c_device.html">OSCDevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a248c80f38f6f9460a2684fdeb0590c6e">CreateSender</a> (WDL_String &amp;log, const char *ip=&quot;127.0.0.1&quot;, int port=8000)</td></tr>
 <tr class="separator:a248c80f38f6f9460a2684fdeb0590c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb97ea7dca71d29de4bf088343c83b93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#aeb97ea7dca71d29de4bf088343c83b93">ProcessOSC</a> ()</td></tr>
+<tr class="memdesc:aeb97ea7dca71d29de4bf088343c83b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process one OSC tick on the owning main thread.  <a href="class_o_s_c_interface.html#aeb97ea7dca71d29de4bf088343c83b93">More...</a><br /></td></tr>
+<tr class="separator:aeb97ea7dca71d29de4bf088343c83b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5efe5256f4f01bc4918f241e0efb9560"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a5efe5256f4f01bc4918f241e0efb9560">OnOSCMessage</a> (<a class="el" href="class_osc_message_read.html">OscMessageRead</a> &amp;msg)</td></tr>
 <tr class="separator:a5efe5256f4f01bc4918f241e0efb9560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1fe9c2a5ce071f9b1a4030c5b12dd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_s_c_interface.html#a0f1fe9c2a5ce071f9b1a4030c5b12dd0">SetLogFunc</a> (OSCLogFunc logFunc)</td></tr>
@@ -150,7 +153,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00286">286</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00301">301</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -177,7 +180,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00295">295</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00312">312</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -208,7 +211,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00317">317</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00331">331</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -244,7 +247,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00374">374</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00388">388</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -274,7 +277,29 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_o_s_c_receiver.html#a7740fedb846201275f2ca51a2ed42222">OSCReceiver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00096">96</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00103">103</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb97ea7dca71d29de4bf088343c83b93" name="aeb97ea7dca71d29de4bf088343c83b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb97ea7dca71d29de4bf088343c83b93">&#9670;&#160;</a></span>ProcessOSC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OSCInterface::ProcessOSC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Process one OSC tick on the owning main thread. </p>
+<p >Linux callers must invoke this regularly; other platforms use the existing main-thread timer. All OSC operations and destruction must run on that same thread. Callbacks may change devices, but must not destroy the interface. Recursive calls do not start another tick. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00225">225</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 </div>
 </div>
@@ -310,7 +335,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00307">307</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html#l00321">321</a> of file <a class="el" href="_i_plug_o_s_c__internal_8cpp_source.html">IPlugOSC_internal.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00012">OSCSender::SetDestination()</a>, and <a class="el" href="_i_plug_o_s_c_8cpp_source.html#l00046">OSCReceiver::SetReceivePort()</a>.</p>
 
@@ -340,7 +365,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00097">97</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00104">104</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -365,7 +390,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00114">114</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00122">122</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -389,7 +414,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00115">115</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00123">123</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -413,7 +438,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00112">112</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00120">120</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>
@@ -437,7 +462,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00113">113</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_plug_o_s_c__internal_8h_source.html#l00121">121</a> of file <a class="el" href="_i_plug_o_s_c__internal_8h_source.html">IPlugOSC_internal.h</a>.</p>
 
 </div>
 </div>

@@ -10,6 +10,7 @@ var searchData=
   ['smoothedgain_7',['SmoothedGain',['../class_smoothed_gain.html',1,'']]],
   ['spectrumledrange_8',['SpectrumLEDRange',['../struct_spectrum_l_e_d_range.html',1,'']]],
   ['svf_9',['SVF',['../class_s_v_f.html',1,'']]],
-  ['synthvoice_10',['SynthVoice',['../class_synth_voice.html',1,'']]],
-  ['sysexdata_11',['SysExData',['../struct_sys_ex_data.html',1,'']]]
+  ['swelltimer_10',['SWELLTimer',['../class_s_w_e_l_l_timer.html',1,'']]],
+  ['synthvoice_11',['SynthVoice',['../class_synth_voice.html',1,'']]],
+  ['sysexdata_12',['SysExData',['../struct_sys_ex_data.html',1,'']]]
 ];

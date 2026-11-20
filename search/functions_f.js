@@ -24,12 +24,13 @@ var searchData=
   ['reset_21',['Reset',['../class_realtime_resampler.html#a9e1ac3bc93ee97d6f2fb8a23c12bec8b',1,'RealtimeResampler']]],
   ['resetbounds_22',['ResetBounds',['../class_i_bubble_control.html#a40acb0a3cf58d134560b07464981a8ed',1,'IBubbleControl']]],
   ['resetcolors_23',['ResetColors',['../struct_i_v_color_spec.html#aaf7a5513406d13750aad2a68749355ab',1,'IVColorSpec']]],
-  ['resize_24',['Resize',['../class_i_graphics.html#a095c4538eeda7ff3647214563bb559ec',1,'IGraphics::Resize()'],['../class_i_byte_chunk.html#ad7f02cbd9bbcfacc5e2b84241a8d777e',1,'IByteChunk::Resize()'],['../class_i_plug_queue.html#aedfd2fccc5c402331025b164ca538c10',1,'IPlugQueue::Resize()']]],
-  ['respondstogesture_25',['RespondsToGesture',['../class_i_graphics.html#a8cfecf7bd9ce3b256e53cfa1ebe015a3',1,'IGraphics']]],
-  ['restorepreset_26',['RestorePreset',['../class_i_plugin_base.html#a90ca1aad38c99a2ce6f4e6d7b7dab46b',1,'IPluginBase::RestorePreset(int idx)'],['../class_i_plugin_base.html#a996795e48a62ce580515ecfd4c9aefc1',1,'IPluginBase::RestorePreset(const char *name)']]],
-  ['resumelayer_27',['ResumeLayer',['../class_i_graphics.html#a2bb1244b49e9dd2973237e37be939b70',1,'IGraphics']]],
-  ['retainbitmap_28',['RetainBitmap',['../class_i_graphics_nano_v_g.html#ab8e177ee0da1d5decc2ba1f34cbdda01',1,'IGraphicsNanoVG::RetainBitmap()'],['../class_i_graphics.html#a27bd9abf9591fad9ddfc9a040a58564c',1,'IGraphics::RetainBitmap()']]],
-  ['retrigger_29',['Retrigger',['../class_a_d_s_r_envelope.html#ae58ef4ed8fcd354fb9d421d6dc9a1fa7',1,'ADSREnvelope']]],
-  ['revealpathinexplorerorfinder_30',['RevealPathInExplorerOrFinder',['../class_i_graphics.html#a764f90e7a6e7e8bed57d9f9697171b3b',1,'IGraphics']]],
-  ['rotate_31',['Rotate',['../struct_i_matrix.html#a16b061589f66dc23693316fc89ba5f8d',1,'IMatrix']]]
+  ['resize_24',['Resize',['../class_i_plug_queue.html#aedfd2fccc5c402331025b164ca538c10',1,'IPlugQueue::Resize()'],['../class_i_byte_chunk.html#ad7f02cbd9bbcfacc5e2b84241a8d777e',1,'IByteChunk::Resize()'],['../class_i_graphics.html#a095c4538eeda7ff3647214563bb559ec',1,'IGraphics::Resize()']]],
+  ['resizefromhost_25',['ResizeFromHost',['../class_i_graphics_linux.html#a80d5809801d9f6be12406c88ebd541c5',1,'IGraphicsLinux']]],
+  ['respondstogesture_26',['RespondsToGesture',['../class_i_graphics.html#a8cfecf7bd9ce3b256e53cfa1ebe015a3',1,'IGraphics']]],
+  ['restorepreset_27',['RestorePreset',['../class_i_plugin_base.html#a90ca1aad38c99a2ce6f4e6d7b7dab46b',1,'IPluginBase::RestorePreset(int idx)'],['../class_i_plugin_base.html#a996795e48a62ce580515ecfd4c9aefc1',1,'IPluginBase::RestorePreset(const char *name)']]],
+  ['resumelayer_28',['ResumeLayer',['../class_i_graphics.html#a2bb1244b49e9dd2973237e37be939b70',1,'IGraphics']]],
+  ['retainbitmap_29',['RetainBitmap',['../class_i_graphics_nano_v_g.html#ab8e177ee0da1d5decc2ba1f34cbdda01',1,'IGraphicsNanoVG::RetainBitmap()'],['../class_i_graphics.html#a27bd9abf9591fad9ddfc9a040a58564c',1,'IGraphics::RetainBitmap()']]],
+  ['retrigger_30',['Retrigger',['../class_a_d_s_r_envelope.html#ae58ef4ed8fcd354fb9d421d6dc9a1fa7',1,'ADSREnvelope']]],
+  ['revealpathinexplorerorfinder_31',['RevealPathInExplorerOrFinder',['../class_i_graphics.html#a764f90e7a6e7e8bed57d9f9697171b3b',1,'IGraphics']]],
+  ['rotate_32',['Rotate',['../struct_i_matrix.html#a16b061589f66dc23693316fc89ba5f8d',1,'IMatrix']]]
 ];

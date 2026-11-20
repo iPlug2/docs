@@ -5,10 +5,11 @@ var searchData=
   ['wasfull_2',['WasFull',['../class_i_plug_queue.html#ae0f205712815ab214f059e9e381e22f9',1,'IPlugQueue']]],
   ['webviewcachepath_3',['WebViewCachePath',['../_i_plug_paths_8h.html#afd1c96003e52f6c8cce65b4fda6797a6',1,'IPlugPaths.h']]],
   ['width_4',['Width',['../class_i_graphics.html#a4628c02e00b2e883f3d92d26136443ce',1,'IGraphics']]],
-  ['windowheight_5',['WindowHeight',['../class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55',1,'IGraphics']]],
-  ['windowisopen_6',['WindowIsOpen',['../class_i_graphics.html#ac69c4e6d882df4591a2e53fe9f9bec31',1,'IGraphics']]],
-  ['windowwidth_7',['WindowWidth',['../class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6',1,'IGraphics']]],
-  ['withcontrast_8',['WithContrast',['../struct_i_color.html#a5a213695bd442721ffe8203ccc5d36e8',1,'IColor']]],
-  ['withopacity_9',['WithOpacity',['../struct_i_color.html#a7466c8367557bd52c8ecca07b07856e3',1,'IColor']]],
-  ['write_10',['Write',['../struct_control_ramp.html#afe7409f59d08cca0f0f84da969697481',1,'ControlRamp']]]
+  ['windowcloserequested_5',['WindowCloseRequested',['../class_i_graphics_linux.html#ae65b8f92c488402ff3285ffaf771b85f',1,'IGraphicsLinux']]],
+  ['windowheight_6',['WindowHeight',['../class_i_graphics.html#af08f849251665da7aebbbd0271a2ff55',1,'IGraphics']]],
+  ['windowisopen_7',['WindowIsOpen',['../class_i_graphics.html#ac69c4e6d882df4591a2e53fe9f9bec31',1,'IGraphics']]],
+  ['windowwidth_8',['WindowWidth',['../class_i_graphics.html#a5b8ca42c8c7afff4da0b110704268cc6',1,'IGraphics']]],
+  ['withcontrast_9',['WithContrast',['../struct_i_color.html#a5a213695bd442721ffe8203ccc5d36e8',1,'IColor']]],
+  ['withopacity_10',['WithOpacity',['../struct_i_color.html#a7466c8367557bd52c8ecca07b07856e3',1,'IColor']]],
+  ['write_11',['Write',['../struct_control_ramp.html#afe7409f59d08cca0f0f84da969697481',1,'ControlRamp']]]
 ];

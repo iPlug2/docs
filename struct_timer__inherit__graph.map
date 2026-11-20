@@ -1,0 +1,4 @@
+<map id="Timer" name="Timer">
+<area shape="rect" id="node1" title="Base class for timer." alt="" coords="28,5,83,31"/>
+<area shape="rect" id="node2" href="$class_s_w_e_l_l_timer.html" title="A Linux timer dispatched by the owning SWELL main loop, never a worker." alt="" coords="5,79,105,104"/>
+</map>

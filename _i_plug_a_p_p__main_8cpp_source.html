@@ -616,126 +616,107 @@ $(function() {
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span> </div>
 <div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span><span class="preprocessor">#pragma mark - LINUX</span></div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span><span class="preprocessor">#elif defined(OS_LINUX)</span></div>
-<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="comment">//#include &lt;IPlugSWELL.h&gt;</span></div>
-<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span><span class="comment">//#include &quot;swell-internal.h&quot; // fixes problem with HWND forward decl</span></div>
-<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span><span class="comment">//</span></div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span><span class="comment">//HWND gHWND;</span></div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span><span class="comment">//UINT gScrollMessage;</span></div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="comment">//extern HMENU SWELL_app_stocksysmenu;</span></div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span><span class="comment">//</span></div>
-<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span><span class="comment">//int main(int argc, char **argv)</span></div>
-<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span><span class="comment">//{</span></div>
-<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="comment">//  SWELL_initargs(&amp;argc, &amp;argv);</span></div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span><span class="comment">//  SWELL_Internal_PostMessage_Init();</span></div>
-<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span><span class="comment">//  SWELL_ExtendedAPI(&quot;APPNAME&quot;, (void*) &quot;IGraphics Test&quot;);</span></div>
-<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span><span class="comment">//</span></div>
-<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span><span class="comment">//  HMENU menu = LoadMenu(NULL, MAKEINTRESOURCE(IDR_MENU1));</span></div>
-<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span><span class="comment">//  CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, MainDlgProc);</span></div>
-<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span><span class="comment">//  SetMenu(gHWND, menu);</span></div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span><span class="comment">//</span></div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span><span class="comment">//  while (!gHWND-&gt;m_hashaddestroy)</span></div>
-<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span><span class="comment">//  {</span></div>
-<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span><span class="comment">//    SWELL_RunMessageLoop();</span></div>
-<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span><span class="comment">//    Sleep(10);</span></div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span><span class="comment">//  };</span></div>
-<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span><span class="comment">//</span></div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span><span class="comment">//  if (gHWND)</span></div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span><span class="comment">//    DestroyWindow(gHWND);</span></div>
-<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span><span class="comment">//</span></div>
-<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span><span class="comment">//  return 0;</span></div>
-<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span><span class="comment">//}</span></div>
-<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span><span class="comment">//</span></div>
-<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span><span class="comment">//INT_PTR SWELLAppMain(int msg, INT_PTR parm1, INT_PTR parm2)</span></div>
-<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="comment">//{</span></div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="comment">//  switch (msg)</span></div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span><span class="comment">//  {</span></div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span><span class="comment">//    case SWELLAPP_ONLOAD:</span></div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span><span class="comment">//      break;</span></div>
-<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span><span class="comment">//    case SWELLAPP_LOADED:</span></div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span><span class="comment">//    {</span></div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span><span class="comment">//      HMENU menu = SWELL_GetCurrentMenu();</span></div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span><span class="comment">//</span></div>
-<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span><span class="comment">//      if (menu)</span></div>
-<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span><span class="comment">//      {</span></div>
-<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span><span class="comment">//        // work on a new menu</span></div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="comment">//        menu = SWELL_DuplicateMenu(menu);</span></div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span><span class="comment">//        HMENU src = LoadMenu(NULL, MAKEINTRESOURCE(IDR_MENU1));</span></div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span><span class="comment">//</span></div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="comment">//        for (auto x = 0; x &lt; GetMenuItemCount(src)-1; x++)</span></div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="comment">//        {</span></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span><span class="comment">//          HMENU sm = GetSubMenu(src,x);</span></div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="comment">//          if (sm)</span></div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="comment">//          {</span></div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span><span class="comment">//            char str[1024];</span></div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="comment">//            MENUITEMINFO mii = {sizeof(mii), MIIM_TYPE};</span></div>
-<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="comment">//            mii.dwTypeData = str;</span></div>
-<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="comment">//            mii.cch = sizeof(str);</span></div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span><span class="comment">//            str[0] = 0;</span></div>
-<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="comment">//            GetMenuItemInfo(src, x, TRUE, &amp;mii);</span></div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span><span class="comment">//            MENUITEMINFO mi= {sizeof(mi), MIIM_STATE|MIIM_SUBMENU|MIIM_TYPE,MFT_STRING, 0, 0, SWELL_DuplicateMenu(sm), NULL, NULL, 0, str};</span></div>
-<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="comment">//            InsertMenuItem(menu, x+1, TRUE, &amp;mi);</span></div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span><span class="comment">//          }</span></div>
-<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span><span class="comment">//        }</span></div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span><span class="comment">//      }</span></div>
-<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span><span class="comment">//</span></div>
-<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span><span class="comment">//      if (menu)</span></div>
-<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span><span class="comment">//      {</span></div>
-<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span><span class="comment">//        HMENU sm = GetSubMenu(menu, 1);</span></div>
-<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span><span class="comment">//        DeleteMenu(sm, ID_QUIT, MF_BYCOMMAND); // remove QUIT from our file menu, since it is in the system menu on OSX</span></div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span><span class="comment">//        DeleteMenu(sm, ID_PREFERENCES, MF_BYCOMMAND); // remove PREFERENCES from the file menu, since it is in the system menu on OSX</span></div>
-<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span><span class="comment">//</span></div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span><span class="comment">//        // remove any trailing separators</span></div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span><span class="comment">//        int a = GetMenuItemCount(sm);</span></div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span><span class="comment">//</span></div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span><span class="comment">//        while (a &gt; 0 &amp;&amp; GetMenuItemID(sm, a-1) == 0)</span></div>
-<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="comment">//          DeleteMenu(sm, --a, MF_BYPOSITION);</span></div>
-<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span><span class="comment">//</span></div>
-<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="comment">//        DeleteMenu(menu, 1, MF_BYPOSITION); // delete file menu</span></div>
-<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span><span class="comment">//      }</span></div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span><span class="comment">//</span></div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span><span class="comment">//      // if we want to set any default modifiers for items in the menus, we can use:</span></div>
-<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span><span class="comment">//      // SetMenuItemModifier(menu,commandID,MF_BYCOMMAND,&#39;A&#39;,FCONTROL) etc.</span></div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span><span class="comment">//</span></div>
-<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span><span class="comment">//      HWND hwnd = CreateDialog(gHINST,MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, MainDlgProc);</span></div>
-<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span><span class="comment">//</span></div>
-<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="comment">//      if (menu)</span></div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="comment">//      {</span></div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="comment">//        SetMenu(hwnd, menu); // set the menu for the dialog to our menu (on Windows that menu is set from the .rc, but on SWELL</span></div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="comment">//        SWELL_SetDefaultModalWindowMenu(menu); // other windows will get the stock (bundle) menus</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="comment">//      }</span></div>
-<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="comment">//</span></div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="comment">//      break;</span></div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="comment">//    }</span></div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="comment">//    case SWELLAPP_ONCOMMAND:</span></div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="comment">//      // this is to catch commands coming from the system menu etc</span></div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="comment">//      if (gHWND &amp;&amp; (parm1&amp;0xffff))</span></div>
-<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="comment">//        SendMessage(gHWND, WM_COMMAND, parm1 &amp; 0xffff, 0);</span></div>
-<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="comment">//      break;</span></div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span><span class="comment">//    case SWELLAPP_DESTROY:</span></div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span><span class="comment">//      if (gHWND)</span></div>
-<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span><span class="comment">//        DestroyWindow(gHWND);</span></div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span><span class="comment">//      break;</span></div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span><span class="comment">//    case SWELLAPP_PROCESSMESSAGE: // can hook keyboard input here</span></div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span><span class="comment">//      // parm1 = (MSG*), should we want it -- look in swell.h to see what the return values refer to</span></div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span><span class="comment">//      break;</span></div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span><span class="comment">//  }</span></div>
-<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span><span class="comment">//  return 0;</span></div>
-<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span><span class="comment">//}</span></div>
-<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span><span class="comment">//</span></div>
-<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span><span class="comment">//#define CBS_HASSTRINGS 0</span></div>
-<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span><span class="comment">//#define SWELL_DLG_SCALE_AUTOGEN 1</span></div>
-<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span><span class="comment">//#define SET_IDD_DIALOG_PREF_SCALE 1.5</span></div>
-<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span><span class="comment">//#include &quot;swell-dlggen.h&quot;</span></div>
-<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span><span class="comment">//#include &quot;resources/main.rc_mac_dlg&quot;</span></div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span><span class="comment">//#include &quot;swell-menugen.h&quot;</span></div>
-<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span><span class="comment">//#include &quot;resources/main.rc_mac_menu&quot;</span></div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span><span class="preprocessor">#include &quot;IPlugSWELL.h&quot;</span></div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>HWND gHWND;</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>HINSTANCE gHINSTANCE;</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span><span class="keywordtype">int</span> gStandaloneExitStatus = EXIT_SUCCESS;</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span><span class="keywordtype">bool</span> gStandaloneCloseRequested = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span> </div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span><span class="keyword">static</span> <span class="keywordtype">bool</span> gNoIO = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span> </div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>{</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>  SWELL_initargs(&amp;argc, &amp;argv);</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>  <span class="comment">// Let SWELL forward events to GTK dialogs while retaining its own GDK event handler.</span></div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>  SWELL_ExtendedAPI(<span class="stringliteral">&quot;LOAD_GTK&quot;</span>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>  SWELL_Internal_PostMessage_Init();</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>  SWELL_ExtendedAPI(<span class="stringliteral">&quot;APPNAME&quot;</span>, (<span class="keywordtype">void</span>*) BUNDLE_NAME);</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span> </div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>  <span class="comment">// Parse command line arguments</span></div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; argc; i++)</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>  {</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    <span class="keywordflow">if</span> (strcmp(argv[i], <span class="stringliteral">&quot;--no-io&quot;</span>) == 0)</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>      gNoIO = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>  }</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span> </div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>  <a class="code hl_class" href="class_i_plug_a_p_p_host.html">IPlugAPPHost</a>* pAppHost = IPlugAPPHost::Create();</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span> </div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  <span class="keywordflow">if</span> (gNoIO)</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    pAppHost-&gt;<a class="code hl_function" href="class_i_plug_a_p_p_host.html#a7bc6130d416dfa335145ab743029127f">SetNoIO</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>  <span class="keywordflow">if</span> (!pAppHost-&gt;Init())</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>  {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>    fprintf(stderr, <span class="stringliteral">&quot;Standalone initialization failed; audio and editor startup cancelled\n&quot;</span>);</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  }</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>  <span class="keywordflow">if</span> (!pAppHost-&gt;TryToChangeAudio())</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    fprintf(stderr, <span class="stringliteral">&quot;Audio startup failed; check the standalone audio settings\n&quot;</span>);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span> </div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>  HMENU menu = LoadMenu(NULL, MAKEINTRESOURCE(IDR_MENU1));</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>  <span class="keywordflow">if</span> (!CreateDialog(gHINSTANCE, MAKEINTRESOURCE(IDD_DIALOG_MAIN), NULL, IPlugAPPHost::MainDlgProc))</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  {</div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    fprintf(stderr, <span class="stringliteral">&quot;Could not create the standalone window\n&quot;</span>);</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  }</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>  <span class="keywordflow">if</span> (menu)</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>  {</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    SetMenu(gHWND, menu);</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>  }</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>  <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    fprintf(stderr, <span class="stringliteral">&quot;Standalone menu could not be loaded; opening the editor without it\n&quot;</span>);</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span> </div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>  <span class="comment">// Let the event loop process the optional menu resize before opening the editor.</span></div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  <span class="keywordflow">if</span> (!PostMessage(gHWND, WM_USER_OPENWINDOW, 0, 0))</div>
+<div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>  {</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    fprintf(stderr, <span class="stringliteral">&quot;Could not schedule standalone editor startup\n&quot;</span>);</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>    DestroyWindow(gHWND);</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>  }</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>  <span class="keywordflow">while</span> (gHWND)</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>  {</div>
+<div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>    SWELL_RunMessageLoop();</div>
+<div class="line"><a id="l00594" name="l00594"></a><span class="lineno">  594</span>    <span class="keywordflow">if</span> (gStandaloneCloseRequested &amp;&amp; gHWND)</div>
+<div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>    {</div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>      gStandaloneCloseRequested = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>      DestroyWindow(gHWND);</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>    }</div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    Sleep(10);</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>  }</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span> </div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  <span class="keywordflow">if</span> (gHWND)</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>    DestroyWindow(gHWND);</div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span> </div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>  <span class="keywordflow">return</span> gStandaloneExitStatus;</div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>}</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>INT_PTR SWELLAppMain(<span class="keywordtype">int</span> msg, INT_PTR parm1, INT_PTR parm2)</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>{</div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>}</div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span> </div>
+<div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span><span class="preprocessor">#define CBS_HASSTRINGS 0</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span><span class="preprocessor">#define SWELL_DLG_SCALE_AUTOGEN 1</span></div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span><span class="preprocessor">#define SET_IDD_DIALOG_PREF_SCALE 1.5</span></div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span><span class="preprocessor">#if PLUG_HOST_RESIZE</span></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="preprocessor">#define SWELL_DLG_FLAGS_AUTOGEN SWELL_DLG_WS_FLIPPED|SWELL_DLG_WS_RESIZABLE</span></div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="preprocessor">#include &quot;swell-dlggen.h&quot;</span></div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span><span class="preprocessor">#ifndef SWELL_DLG_WS_DEFAULT_SCALING</span></div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span><span class="preprocessor">#define SWELL_DLG_WS_DEFAULT_SCALING 0</span></div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span><span class="preprocessor">#include &quot;resources/main.rc_mac_dlg&quot;</span></div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span><span class="preprocessor">#include &quot;swell-menugen.h&quot;</span></div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="preprocessor">#include &quot;resources/main.rc_mac_menu&quot;</span></div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_i_plug_paths_8h_html"><div class="ttname"><a href="_i_plug_paths_8h.html">IPlugPaths.h</a></div><div class="ttdoc">Common paths useful for plug-ins.</div></div>
 <div class="ttc" id="a_i_plug_platform_8h_html"><div class="ttname"><a href="_i_plug_platform_8h.html">IPlugPlatform.h</a></div><div class="ttdoc">Include to get consistently named preprocessor macros for different platforms and logging functionali...</div></div>
-<div class="ttc" id="aclass_i_plug_a_p_p_host_html"><div class="ttname"><a href="class_i_plug_a_p_p_host.html">IPlugAPPHost</a></div><div class="ttdoc">A class that hosts an IPlug as a standalone app and provides Audio/Midi I/O.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00082">IPlugAPP_host.h:83</a></div></div>
-<div class="ttc" id="aclass_i_plug_a_p_p_host_html_a20fb9894a8ec85babe919d793dd97528"><div class="ttname"><a href="class_i_plug_a_p_p_host.html#a20fb9894a8ec85babe919d793dd97528">IPlugAPPHost::SetScreenshotPath</a></div><div class="ttdeci">void SetScreenshotPath(const char *path)</div><div class="ttdoc">Set screenshot path for CLI screenshot mode.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00164">IPlugAPP_host.h:164</a></div></div>
-<div class="ttc" id="aclass_i_plug_a_p_p_host_html_a7bc6130d416dfa335145ab743029127f"><div class="ttname"><a href="class_i_plug_a_p_p_host.html#a7bc6130d416dfa335145ab743029127f">IPlugAPPHost::SetNoIO</a></div><div class="ttdeci">void SetNoIO(bool noIO)</div><div class="ttdoc">Set no-I/O mode (disables audio and MIDI initialization)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00176">IPlugAPP_host.h:176</a></div></div>
-<div class="ttc" id="aclass_i_plug_a_p_p_host_html_af3e01a486f2a380926e8e351ecf3f31f"><div class="ttname"><a href="class_i_plug_a_p_p_host.html#af3e01a486f2a380926e8e351ecf3f31f">IPlugAPPHost::IsScreenshotMode</a></div><div class="ttdeci">bool IsScreenshotMode() const</div><div class="ttdoc">Check if in screenshot mode.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00172">IPlugAPP_host.h:172</a></div></div>
+<div class="ttc" id="aclass_i_plug_a_p_p_host_html"><div class="ttname"><a href="class_i_plug_a_p_p_host.html">IPlugAPPHost</a></div><div class="ttdoc">A class that hosts an IPlug as a standalone app and provides Audio/Midi I/O.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00091">IPlugAPP_host.h:92</a></div></div>
+<div class="ttc" id="aclass_i_plug_a_p_p_host_html_a20fb9894a8ec85babe919d793dd97528"><div class="ttname"><a href="class_i_plug_a_p_p_host.html#a20fb9894a8ec85babe919d793dd97528">IPlugAPPHost::SetScreenshotPath</a></div><div class="ttdeci">void SetScreenshotPath(const char *path)</div><div class="ttdoc">Set screenshot path for CLI screenshot mode.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00173">IPlugAPP_host.h:173</a></div></div>
+<div class="ttc" id="aclass_i_plug_a_p_p_host_html_a7bc6130d416dfa335145ab743029127f"><div class="ttname"><a href="class_i_plug_a_p_p_host.html#a7bc6130d416dfa335145ab743029127f">IPlugAPPHost::SetNoIO</a></div><div class="ttdeci">void SetNoIO(bool noIO)</div><div class="ttdoc">Set no-I/O mode (disables audio and MIDI initialization)</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00185">IPlugAPP_host.h:185</a></div></div>
+<div class="ttc" id="aclass_i_plug_a_p_p_host_html_af3e01a486f2a380926e8e351ecf3f31f"><div class="ttname"><a href="class_i_plug_a_p_p_host.html#af3e01a486f2a380926e8e351ecf3f31f">IPlugAPPHost::IsScreenshotMode</a></div><div class="ttdeci">bool IsScreenshotMode() const</div><div class="ttdoc">Check if in screenshot mode.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_a_p_p__host_8h_source.html#l00181">IPlugAPP_host.h:181</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

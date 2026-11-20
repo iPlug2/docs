@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="node1" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title="IGraphics platform class for linux.">
+<g id="a_node1"><a xlink:title="IGraphics platform class for Linux.">
 <polygon fill="#999999" stroke="#666666" points="113,-19 31,-19 31,0 113,0 113,-19"/>
 <text text-anchor="middle" x="72" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">IGraphicsLinux</text>
 </a>

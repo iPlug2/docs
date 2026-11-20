@@ -172,36 +172,40 @@ $(function() {
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* CreateReceiver(WDL_String&amp; log, <span class="keywordtype">int</span> port = 8000);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* CreateSender(WDL_String&amp; log, <span class="keyword">const</span> <span class="keywordtype">char</span>* ip = <span class="stringliteral">&quot;127.0.0.1&quot;</span>, <span class="keywordtype">int</span> port = 8000);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnOSCMessage(<a class="code hl_class" href="class_osc_message_read.html">OscMessageRead</a>&amp; msg) {};</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordtype">void</span> SetLogFunc(OSCLogFunc logFunc) { mLogFunc = logFunc; }</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_interface.html#ae9d6d60d4212d170f3a03849f5590262">RemoveDevice</a>(<a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* device);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> MessageCallback(<span class="keywordtype">void</span> *d1, <span class="keywordtype">int</span> dev_idx, <span class="keywordtype">int</span> msglen, <span class="keywordtype">void</span> *msg);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordtype">void</span> OnTimer(<a class="code hl_struct" href="struct_timer.html">Timer</a>&amp; timer);</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  WDL_PtrList&lt;OSCDevice&gt; mDevices;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_interface.html#aeb97ea7dca71d29de4bf088343c83b93">ProcessOSC</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnOSCMessage(<a class="code hl_class" href="class_osc_message_read.html">OscMessageRead</a>&amp; msg) {};</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordtype">void</span> SetLogFunc(OSCLogFunc logFunc) { mLogFunc = logFunc; }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_s_c_interface.html#ae9d6d60d4212d170f3a03849f5590262">RemoveDevice</a>(<a class="code hl_class" href="class_o_s_c_device.html">OSCDevice</a>* device);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  OSCLogFunc mLogFunc;</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  std::unique_ptr&lt;Timer&gt; mTimer;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  WDL_HeapBuf mIncomingEvents;  <span class="comment">// incomingEvent list, each is 8-byte aligned</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  WDL_Mutex mIncomingEvents_mutex;</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>};</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> MessageCallback(<span class="keywordtype">void</span> *d1, <span class="keywordtype">int</span> dev_idx, <span class="keywordtype">int</span> msglen, <span class="keywordtype">void</span> *msg);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordtype">void</span> OnTimer(<a class="code hl_struct" href="struct_timer.html">Timer</a>&amp; timer);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  WDL_PtrList&lt;OSCDevice&gt; mDevices;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <span class="keywordtype">bool</span> mProcessingOSC = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  OSCLogFunc mLogFunc;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  std::unique_ptr&lt;Timer&gt; mTimer;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  WDL_HeapBuf mIncomingEvents;  <span class="comment">// incomingEvent list, each is 8-byte aligned</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  WDL_Mutex mIncomingEvents_mutex;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>};</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_plug_logger_8h_html"><div class="ttname"><a href="_i_plug_logger_8h.html">IPlugLogger.h</a></div><div class="ttdoc">IPlug logging a.k.a tracing functionality.</div></div>
 <div class="ttc" id="a_i_plug_platform_8h_html"><div class="ttname"><a href="_i_plug_platform_8h.html">IPlugPlatform.h</a></div><div class="ttdoc">Include to get consistently named preprocessor macros for different platforms and logging functionali...</div></div>
-<div class="ttc" id="a_i_plug_timer_8h_html"><div class="ttname"><a href="_i_plug_timer_8h.html">IPlugTimer.h</a></div><div class="ttdoc">This file includes classes for implementing timers - in order to get a regular callback on the main t...</div></div>
+<div class="ttc" id="a_i_plug_timer_8h_html"><div class="ttname"><a href="_i_plug_timer_8h.html">IPlugTimer.h</a></div><div class="ttdoc">Platform timer primitives.</div></div>
 <div class="ttc" id="aclass_o_s_c_device_html"><div class="ttname"><a href="class_o_s_c_device.html">OSCDevice</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8h_source.html#l00041">IPlugOSC_internal.h:42</a></div></div>
 <div class="ttc" id="aclass_o_s_c_interface_html"><div class="ttname"><a href="class_o_s_c_interface.html">OSCInterface</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8h_source.html#l00075">IPlugOSC_internal.h:76</a></div></div>
-<div class="ttc" id="aclass_o_s_c_interface_html_ae9d6d60d4212d170f3a03849f5590262"><div class="ttname"><a href="class_o_s_c_interface.html#ae9d6d60d4212d170f3a03849f5590262">OSCInterface::RemoveDevice</a></div><div class="ttdeci">void RemoveDevice(OSCDevice *device)</div><div class="ttdoc">Remove a device from the device list and delete it.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8cpp_source.html#l00307">IPlugOSC_internal.cpp:307</a></div></div>
+<div class="ttc" id="aclass_o_s_c_interface_html_ae9d6d60d4212d170f3a03849f5590262"><div class="ttname"><a href="class_o_s_c_interface.html#ae9d6d60d4212d170f3a03849f5590262">OSCInterface::RemoveDevice</a></div><div class="ttdeci">void RemoveDevice(OSCDevice *device)</div><div class="ttdoc">Remove a device from the device list and delete it.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8cpp_source.html#l00321">IPlugOSC_internal.cpp:321</a></div></div>
+<div class="ttc" id="aclass_o_s_c_interface_html_aeb97ea7dca71d29de4bf088343c83b93"><div class="ttname"><a href="class_o_s_c_interface.html#aeb97ea7dca71d29de4bf088343c83b93">OSCInterface::ProcessOSC</a></div><div class="ttdeci">void ProcessOSC()</div><div class="ttdoc">Process one OSC tick on the owning main thread.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__internal_8cpp_source.html#l00225">IPlugOSC_internal.cpp:225</a></div></div>
 <div class="ttc" id="aclass_osc_message_read_html"><div class="ttname"><a href="class_osc_message_read.html">OscMessageRead</a></div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_o_s_c__msg_8h_source.html#l00060">IPlugOSC_msg.h:61</a></div></div>
-<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdoc">Base class for timer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_timer_8h_source.html#l00039">IPlugTimer.h:40</a></div></div>
+<div class="ttc" id="astruct_timer_html"><div class="ttname"><a href="struct_timer.html">Timer</a></div><div class="ttdoc">Base class for timer.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_timer_8h_source.html#l00042">IPlugTimer.h:43</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
