@@ -390,6 +390,7 @@ Syntax</h2>
 <div class="line">  [DEFINES &lt;def1&gt; [def2 ...]]</div>
 <div class="line">  [UI &lt;IGRAPHICS|WEBVIEW|NONE&gt;]</div>
 <div class="line">  [WAM_SITE_ORIGIN &lt;origin&gt;]</div>
+<div class="line">  [RC_INCLUDE_DIRS &lt;dir1&gt; [dir2 ...]]</div>
 <div class="line">)</div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md50"></a>
 Parameters</h2>
@@ -413,7 +414,9 @@ Parameters</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>UI</code>   </td><td class="markdownTableBodyNone">UI framework: <code>IGRAPHICS</code>, <code>WEBVIEW</code>, or <code>NONE</code>   </td><td class="markdownTableBodyNone"><code>IGRAPHICS</code>    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone"><code>WAM_SITE_ORIGIN</code>   </td><td class="markdownTableBodyNone">WAM site origin for CORS   </td><td class="markdownTableBodyNone"><code>"/"</code>   </td></tr>
+<td class="markdownTableBodyNone"><code>WAM_SITE_ORIGIN</code>   </td><td class="markdownTableBodyNone">WAM site origin for CORS   </td><td class="markdownTableBodyNone"><code>"/"</code>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>RC_INCLUDE_DIRS</code>   </td><td class="markdownTableBodyNone">Windows only: extra include directories for the resource compiler when compiling <code>resources/main.rc</code> (e.g. a fonts folder shared between projects). Relative paths are resolved against the project directory   </td><td class="markdownTableBodyNone">None   </td></tr>
 </table>
 <h2><a class="anchor" id="autotoc_md51"></a>
 Format Names</h2>
