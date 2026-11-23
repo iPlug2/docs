@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_voice_allocator.html" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" id="node1" href="$struct_timer.html" title="Base class for timer." alt="" coords="5,5,60,31"/>
+<area shape="rect" id="node2" href="$class_s_w_e_l_l_timer.html" title="A Linux timer dispatched by the owning SWELL main loop, never a worker." alt="" coords="108,5,208,31"/>
 </map>
