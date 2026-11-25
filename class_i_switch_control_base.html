@@ -110,6 +110,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afdde35f770ea900f8ae3c0b80f42d93b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">OnMouseUp</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
 <tr class="memdesc:afdde35f770ea900f8ae3c0b80f42d93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse up event on this control.  <a href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">More...</a><br /></td></tr>
 <tr class="separator:afdde35f770ea900f8ae3c0b80f42d93b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4be5d4d7b958522adc399918ae1a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a6b4be5d4d7b958522adc399918ae1a3d">GetAccessibleNodes</a> (<a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> &amp;nodes) override</td></tr>
+<tr class="memdesc:a6b4be5d4d7b958522adc399918ae1a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe the control for assistive technology (e.g.  <a href="class_i_switch_control_base.html#a6b4be5d4d7b958522adc399918ae1a3d">More...</a><br /></td></tr>
+<tr class="separator:a6b4be5d4d7b958522adc399918ae1a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87e8123b4952035d01b773ab4b08536"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ab87e8123b4952035d01b773ab4b08536">OnAccessibleAction</a> (<a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a> action, int nodeIdx=0, double value=1.) override</td></tr>
+<tr class="memdesc:ab87e8123b4952035d01b773ab4b08536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an action requested by assistive technology or keyboard navigation.  <a href="class_i_switch_control_base.html#ab87e8123b4952035d01b773ab4b08536">More...</a><br /></td></tr>
+<tr class="separator:ab87e8123b4952035d01b773ab4b08536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6227045c4c91c99dac2dee7b0f212ad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ae6227045c4c91c99dac2dee7b0f212ad">GetSelectedIdx</a> () const</td></tr>
 <tr class="separator:ae6227045c4c91c99dac2dee7b0f212ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f15dc5242fc73ea7d5bb774d98a2692"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a0f15dc5242fc73ea7d5bb774d98a2692">SetStateDisabled</a> (int stateIdx, bool disabled)</td></tr>
@@ -429,6 +435,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">As</a> ()</td></tr>
 <tr class="memdesc:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to dynamic cast an <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> to a subclass.  <a href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">More...</a><br /></td></tr>
 <tr class="separator:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff43701545fdfec0e7fd7f0af8b7a698 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698">GetAccessibleNodes</a> (<a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> &amp;nodes)</td></tr>
+<tr class="memdesc:aff43701545fdfec0e7fd7f0af8b7a698 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe the control for assistive technology (e.g.  <a href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698">More...</a><br /></td></tr>
+<tr class="separator:aff43701545fdfec0e7fd7f0af8b7a698 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b007b0c5017f1d3a8d8bae01960712 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712">OnAccessibleAction</a> (<a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a> action, int nodeIdx=0, double value=1.)</td></tr>
+<tr class="memdesc:aa2b007b0c5017f1d3a8d8bae01960712 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an action requested by assistive technology or keyboard navigation.  <a href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712">More...</a><br /></td></tr>
+<tr class="separator:aa2b007b0c5017f1d3a8d8bae01960712 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e60086bde385448e91a4db401a205a inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ab3e60086bde385448e91a4db401a205a">SetAccessibleRole</a> (<a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a> role)</td></tr>
+<tr class="memdesc:ab3e60086bde385448e91a4db401a205a inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the role that the control reports to assistive technology.  <a href="class_i_control.html#ab3e60086bde385448e91a4db401a205a">More...</a><br /></td></tr>
+<tr class="separator:ab3e60086bde385448e91a4db401a205a inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f60510c986494812cea4cbae1c0a361 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7f60510c986494812cea4cbae1c0a361">GetAccessibleRole</a> () const</td></tr>
+<tr class="separator:a7f60510c986494812cea4cbae1c0a361 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd977336bcd44d81e46225b56901e1d inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#addd977336bcd44d81e46225b56901e1d">SetAccessibleLabel</a> (const char *str)</td></tr>
+<tr class="memdesc:addd977336bcd44d81e46225b56901e1d inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the label that the control reports to assistive technology.  <a href="class_i_control.html#addd977336bcd44d81e46225b56901e1d">More...</a><br /></td></tr>
+<tr class="separator:addd977336bcd44d81e46225b56901e1d inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c222f0f5fe645b6a9f086b311473943 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a9c222f0f5fe645b6a9f086b311473943">GetAccessibleLabel</a> () const</td></tr>
+<tr class="separator:a9c222f0f5fe645b6a9f086b311473943 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -483,6 +505,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8345c576ab2c74910b9a91a995c2cde0 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7161238f8c99333cd6b0fff590396350">mPTisHighlighted</a> = false</td></tr>
 <tr class="separator:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88f70b48af5aee33f4735ff268349ff inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top">WDL_String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ad88f70b48af5aee33f4735ff268349ff">mAccessibleLabel</a></td></tr>
+<tr class="separator:ad88f70b48af5aee33f4735ff268349ff inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c1f9bc0433afce62e2ac6b4f19aa9f inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a55c1f9bc0433afce62e2ac6b4f19aa9f">mAccessibleRole</a> = EAccessibleRole::None</td></tr>
+<tr class="separator:a55c1f9bc0433afce62e2ac6b4f19aa9f inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -491,13 +517,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">ForValIdx</a> (int valIdx, T func, Args... args)</td></tr>
 <tr class="memdesc:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper template function to call a method for an individual value, or for all values.  <a href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">More...</a><br /></td></tr>
 <tr class="separator:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eee6e607a7b1027a78a33d45bf1e458 inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a6eee6e607a7b1027a78a33d45bf1e458">InitAccessibleNode</a> (<a class="el" href="struct_i_accessible_node.html">IAccessibleNode</a> &amp;node, <a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a> role, int valIdx=0)</td></tr>
+<tr class="memdesc:a6eee6e607a7b1027a78a33d45bf1e458 inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <a class="el" href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698" title="Describe the control for assistive technology (e.g.">GetAccessibleNodes()</a>.  <a href="class_i_control.html#a6eee6e607a7b1027a78a33d45bf1e458">More...</a><br /></td></tr>
+<tr class="separator:a6eee6e607a7b1027a78a33d45bf1e458 inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02bb5cd1ed0c7d5a80588a7c91b3cb8a inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a02bb5cd1ed0c7d5a80588a7c91b3cb8a">StepValueFromUserInput</a> (int valIdx, int nSteps)</td></tr>
+<tr class="memdesc:a02bb5cd1ed0c7d5a80588a7c91b3cb8a inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712" title="Perform an action requested by assistive technology or keyboard navigation.">OnAccessibleAction()</a>.  <a href="class_i_control.html#a02bb5cd1ed0c7d5a80588a7c91b3cb8a">More...</a><br /></td></tr>
+<tr class="separator:a02bb5cd1ed0c7d5a80588a7c91b3cb8a inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfe701d65b8cca577ebb9467a46b902 inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aacfe701d65b8cca577ebb9467a46b902">SetNonNormalizedValueFromUserInput</a> (int valIdx, double value)</td></tr>
+<tr class="memdesc:aacfe701d65b8cca577ebb9467a46b902 inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712" title="Perform an action requested by assistive technology or keyboard navigation.">OnAccessibleAction()</a>.  <a href="class_i_control.html#aacfe701d65b8cca577ebb9467a46b902">More...</a><br /></td></tr>
+<tr class="separator:aacfe701d65b8cca577ebb9467a46b902 inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa35c559ca13bfdb2f3507216047afdbd">SetNVals</a> (int nVals)</td></tr>
 <tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A base class for switch controls. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01878">1878</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01966">1966</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5751f562f5c973786c83bff8827150d4" name="a5751f562f5c973786c83bff8827150d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5751f562f5c973786c83bff8827150d4">&#9670;&#160;</a></span>ISwitchControlBase()</h2>
@@ -537,7 +572,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00732">732</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00921">921</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -564,11 +599,51 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01883">1883</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01971">1971</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6b4be5d4d7b958522adc399918ae1a3d" name="a6b4be5d4d7b958522adc399918ae1a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4be5d4d7b958522adc399918ae1a3d">&#9670;&#160;</a></span>GetAccessibleNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISwitchControlBase::GetAccessibleNodes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> &amp;&#160;</td>
+          <td class="paramname"><em>nodes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Describe the control for assistive technology (e.g. </p>
+<p >screen readers) and keyboard navigation. The default implementation adds a single node based on the role set with <a class="el" href="class_i_control.html#ab3e60086bde385448e91a4db401a205a" title="Set the role that the control reports to assistive technology.">SetAccessibleRole()</a> and the parameter linked to the control (if any). Override this for custom controls that have a more complex structure: the first node added describes the control itself, and any following nodes are treated as its children. If no nodes are added, or the role of the first node is EAccessibleRole::None, the control is not exposed. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodes</td><td>The list to add nodes to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698">IControl</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00966">966</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00300">IControl::GetAccessibleNodes()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>.</p>
+
+</div>
+</div>
 <a id="ae6227045c4c91c99dac2dee7b0f212ad" name="ae6227045c4c91c99dac2dee7b0f212ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6227045c4c91c99dac2dee7b0f212ad">&#9670;&#160;</a></span>GetSelectedIdx()</h2>
 
@@ -592,7 +667,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01888">1888</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01978">1978</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -612,7 +687,68 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00758">758</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00948">948</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab87e8123b4952035d01b773ab4b08536" name="ab87e8123b4952035d01b773ab4b08536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab87e8123b4952035d01b773ab4b08536">&#9670;&#160;</a></span>OnAccessibleAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ISwitchControlBase::OnAccessibleAction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a>&#160;</td>
+          <td class="paramname"><em>action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nodeIdx</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em> = <code>1.</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Perform an action requested by assistive technology or keyboard navigation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">action</td><td>The action to perform </td></tr>
+    <tr><td class="paramname">nodeIdx</td><td>The index of the node that the action should be performed on, in the list supplied by <a class="el" href="class_i_switch_control_base.html#a6b4be5d4d7b958522adc399918ae1a3d" title="Describe the control for assistive technology (e.g.">GetAccessibleNodes()</a> </td></tr>
+    <tr><td class="paramname">value</td><td>For EAccessibleAction::SetValue the new value, in the units of IAccessibleNode::value. For EAccessibleAction::Increment / EAccessibleAction::Decrement the number of steps </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the action was handled </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712">IControl</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00975">975</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_i_plug_utilities_8h_source.html#l00051">Clip()</a>, <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00344">IControl::OnAccessibleAction()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00330">IControl::SetNonNormalizedValueFromUserInput()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00494">IVTabSwitchControl::OnAccessibleAction()</a>.</p>
 
 </div>
 </div>
@@ -643,11 +779,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#acd7d00c3219eacdcc1b5dfd5996ffcae">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00765">765</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00955">955</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00122">IControl::GetParam()</a>, <a class="el" href="_i_control_8cpp_source.html#l00109">IControl::GetParamIdx()</a>, and <a class="el" href="_i_plug_parameter_8h_source.html#l00464">IParam::GetRange()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00144">IVSwitchControl::OnInit()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00332">IVTabSwitchControl::OnInit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00144">IVSwitchControl::OnInit()</a>, and <a class="el" href="_i_controls_8cpp_source.html#l00334">IVTabSwitchControl::OnInit()</a>.</p>
 
 </div>
 </div>
@@ -703,7 +839,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a4bf75d9b7be5d293b801b65c8834295e">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00773">773</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00988">988</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00147">IControl::SetValue()</a>.</p>
 
@@ -761,7 +897,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_i_control.html#a919eb7860ce5559e589f95ceb3309df7">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00791">791</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l01006">1006</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
@@ -783,7 +919,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00741">741</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00931">931</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -813,7 +949,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00750">750</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00940">940</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
 </div>
 </div>
@@ -838,7 +974,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01895">1895</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01985">1985</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +998,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01896">1896</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01986">1986</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>
@@ -886,7 +1022,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01894">1894</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_control_8h_source.html#l01984">1984</a> of file <a class="el" href="_i_control_8h_source.html">IControl.h</a>.</p>
 
 </div>
 </div>

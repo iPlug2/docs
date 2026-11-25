@@ -126,6 +126,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">OnMouseUp</a> (float x, float y, const <a class="el" href="struct_i_mouse_mod.html">IMouseMod</a> &amp;mod) override</td></tr>
 <tr class="memdesc:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implement this method to respond to a mouse up event on this control.  <a href="class_i_switch_control_base.html#afdde35f770ea900f8ae3c0b80f42d93b">More...</a><br /></td></tr>
 <tr class="separator:afdde35f770ea900f8ae3c0b80f42d93b inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4be5d4d7b958522adc399918ae1a3d inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a6b4be5d4d7b958522adc399918ae1a3d">GetAccessibleNodes</a> (<a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> &amp;nodes) override</td></tr>
+<tr class="memdesc:a6b4be5d4d7b958522adc399918ae1a3d inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe the control for assistive technology (e.g.  <a href="class_i_switch_control_base.html#a6b4be5d4d7b958522adc399918ae1a3d">More...</a><br /></td></tr>
+<tr class="separator:a6b4be5d4d7b958522adc399918ae1a3d inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87e8123b4952035d01b773ab4b08536 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ab87e8123b4952035d01b773ab4b08536">OnAccessibleAction</a> (<a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a> action, int nodeIdx=0, double value=1.) override</td></tr>
+<tr class="memdesc:ab87e8123b4952035d01b773ab4b08536 inherit pub_methods_class_i_switch_control_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an action requested by assistive technology or keyboard navigation.  <a href="class_i_switch_control_base.html#ab87e8123b4952035d01b773ab4b08536">More...</a><br /></td></tr>
+<tr class="separator:ab87e8123b4952035d01b773ab4b08536 inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6227045c4c91c99dac2dee7b0f212ad inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#ae6227045c4c91c99dac2dee7b0f212ad">GetSelectedIdx</a> () const</td></tr>
 <tr class="separator:ae6227045c4c91c99dac2dee7b0f212ad inherit pub_methods_class_i_switch_control_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f15dc5242fc73ea7d5bb774d98a2692 inherit pub_methods_class_i_switch_control_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_switch_control_base.html#a0f15dc5242fc73ea7d5bb774d98a2692">SetStateDisabled</a> (int stateIdx, bool disabled)</td></tr>
@@ -445,6 +451,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="memitem:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">As</a> ()</td></tr>
 <tr class="memdesc:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to dynamic cast an <a class="el" href="class_i_control.html" title="The lowest level base class of an IGraphics control.">IControl</a> to a subclass.  <a href="class_i_control.html#abd0b08e6ef9903d63305d197b6f1da23">More...</a><br /></td></tr>
 <tr class="separator:abd0b08e6ef9903d63305d197b6f1da23 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff43701545fdfec0e7fd7f0af8b7a698 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698">GetAccessibleNodes</a> (<a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> &amp;nodes)</td></tr>
+<tr class="memdesc:aff43701545fdfec0e7fd7f0af8b7a698 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describe the control for assistive technology (e.g.  <a href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698">More...</a><br /></td></tr>
+<tr class="separator:aff43701545fdfec0e7fd7f0af8b7a698 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b007b0c5017f1d3a8d8bae01960712 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712">OnAccessibleAction</a> (<a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a> action, int nodeIdx=0, double value=1.)</td></tr>
+<tr class="memdesc:aa2b007b0c5017f1d3a8d8bae01960712 inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform an action requested by assistive technology or keyboard navigation.  <a href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712">More...</a><br /></td></tr>
+<tr class="separator:aa2b007b0c5017f1d3a8d8bae01960712 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3e60086bde385448e91a4db401a205a inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ab3e60086bde385448e91a4db401a205a">SetAccessibleRole</a> (<a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a> role)</td></tr>
+<tr class="memdesc:ab3e60086bde385448e91a4db401a205a inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the role that the control reports to assistive technology.  <a href="class_i_control.html#ab3e60086bde385448e91a4db401a205a">More...</a><br /></td></tr>
+<tr class="separator:ab3e60086bde385448e91a4db401a205a inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f60510c986494812cea4cbae1c0a361 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7f60510c986494812cea4cbae1c0a361">GetAccessibleRole</a> () const</td></tr>
+<tr class="separator:a7f60510c986494812cea4cbae1c0a361 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd977336bcd44d81e46225b56901e1d inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_control.html">IControl</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#addd977336bcd44d81e46225b56901e1d">SetAccessibleLabel</a> (const char *str)</td></tr>
+<tr class="memdesc:addd977336bcd44d81e46225b56901e1d inherit pub_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the label that the control reports to assistive technology.  <a href="class_i_control.html#addd977336bcd44d81e46225b56901e1d">More...</a><br /></td></tr>
+<tr class="separator:addd977336bcd44d81e46225b56901e1d inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c222f0f5fe645b6a9f086b311473943 inherit pub_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a9c222f0f5fe645b6a9f086b311473943">GetAccessibleLabel</a> () const</td></tr>
+<tr class="separator:a9c222f0f5fe645b6a9f086b311473943 inherit pub_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -508,6 +530,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a8345c576ab2c74910b9a91a995c2cde0 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a7161238f8c99333cd6b0fff590396350">mPTisHighlighted</a> = false</td></tr>
 <tr class="separator:a7161238f8c99333cd6b0fff590396350 inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad88f70b48af5aee33f4735ff268349ff inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top">WDL_String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#ad88f70b48af5aee33f4735ff268349ff">mAccessibleLabel</a></td></tr>
+<tr class="separator:ad88f70b48af5aee33f4735ff268349ff inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55c1f9bc0433afce62e2ac6b4f19aa9f inherit pro_attribs_class_i_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a55c1f9bc0433afce62e2ac6b4f19aa9f">mAccessibleRole</a> = EAccessibleRole::None</td></tr>
+<tr class="separator:a55c1f9bc0433afce62e2ac6b4f19aa9f inherit pro_attribs_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -516,13 +542,22 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">ForValIdx</a> (int valIdx, T func, Args... args)</td></tr>
 <tr class="memdesc:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper template function to call a method for an individual value, or for all values.  <a href="class_i_control.html#abd04b8dd81a2bd4124b9604c3b1d3eed">More...</a><br /></td></tr>
 <tr class="separator:abd04b8dd81a2bd4124b9604c3b1d3eed inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6eee6e607a7b1027a78a33d45bf1e458 inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a6eee6e607a7b1027a78a33d45bf1e458">InitAccessibleNode</a> (<a class="el" href="struct_i_accessible_node.html">IAccessibleNode</a> &amp;node, <a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a> role, int valIdx=0)</td></tr>
+<tr class="memdesc:a6eee6e607a7b1027a78a33d45bf1e458 inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <a class="el" href="class_i_control.html#aff43701545fdfec0e7fd7f0af8b7a698" title="Describe the control for assistive technology (e.g.">GetAccessibleNodes()</a>.  <a href="class_i_control.html#a6eee6e607a7b1027a78a33d45bf1e458">More...</a><br /></td></tr>
+<tr class="separator:a6eee6e607a7b1027a78a33d45bf1e458 inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02bb5cd1ed0c7d5a80588a7c91b3cb8a inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#a02bb5cd1ed0c7d5a80588a7c91b3cb8a">StepValueFromUserInput</a> (int valIdx, int nSteps)</td></tr>
+<tr class="memdesc:a02bb5cd1ed0c7d5a80588a7c91b3cb8a inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712" title="Perform an action requested by assistive technology or keyboard navigation.">OnAccessibleAction()</a>.  <a href="class_i_control.html#a02bb5cd1ed0c7d5a80588a7c91b3cb8a">More...</a><br /></td></tr>
+<tr class="separator:a02bb5cd1ed0c7d5a80588a7c91b3cb8a inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfe701d65b8cca577ebb9467a46b902 inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aacfe701d65b8cca577ebb9467a46b902">SetNonNormalizedValueFromUserInput</a> (int valIdx, double value)</td></tr>
+<tr class="memdesc:aacfe701d65b8cca577ebb9467a46b902 inherit pro_methods_class_i_control"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper for <a class="el" href="class_i_control.html#aa2b007b0c5017f1d3a8d8bae01960712" title="Perform an action requested by assistive technology or keyboard navigation.">OnAccessibleAction()</a>.  <a href="class_i_control.html#aacfe701d65b8cca577ebb9467a46b902">More...</a><br /></td></tr>
+<tr class="separator:aacfe701d65b8cca577ebb9467a46b902 inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_control.html#aa35c559ca13bfdb2f3507216047afdbd">SetNVals</a> (int nVals)</td></tr>
 <tr class="separator:aa35c559ca13bfdb2f3507216047afdbd inherit pro_methods_class_i_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A vector toggle switch control which shows an SVG image. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00614">614</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00618">618</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab2dbe2c6da230a0f119c75cf716268e8" name="ab2dbe2c6da230a0f119c75cf716268e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2dbe2c6da230a0f119c75cf716268e8">&#9670;&#160;</a></span>ISVGToggleControl() <span class="overload">[1/4]</span></h2>
@@ -579,7 +614,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01472">1472</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01566">1566</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -632,7 +667,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01479">1479</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01573">1573</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -698,7 +733,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01486">1486</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01580">1580</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -758,7 +793,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01495">1495</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01589">1589</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
 </div>
 </div>
@@ -797,9 +832,9 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="class_i_control.html#ab9d872edcc790c0506d5b90c07a968de">IControl</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01504">1504</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8cpp_source.html#l01598">1598</a> of file <a class="el" href="_i_controls_8cpp_source.html">IControls.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l02823">IGraphics::DrawSVG()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, and <a class="el" href="_i_control_8h_source.html#l00565">IControl::mMouseIsOver</a>.</p>
+<p class="reference">References <a class="el" href="_i_graphics_8cpp_source.html#l03127">IGraphics::DrawSVG()</a>, <a class="el" href="_i_control_8cpp_source.html#l00153">IControl::GetValue()</a>, and <a class="el" href="_i_control_8h_source.html#l00597">IControl::mMouseIsOver</a>.</p>
 
 </div>
 </div>
@@ -824,7 +859,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00653">653</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00657">657</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -848,7 +883,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00652">652</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00656">656</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -872,7 +907,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00650">650</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00654">654</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>
@@ -896,7 +931,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00651">651</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_controls_8h_source.html#l00655">655</a> of file <a class="el" href="_i_controls_8h_source.html">IControls.h</a>.</p>
 
 </div>
 </div>

@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$group___i_plug_structs.html#struct_i_channel_data" title="Used to manage scratch buffers for each channel of I/O, which may involve converting from single to d..." alt="" coords="5,5,143,45"/>
+<area shape="rect" id="node1" href="$struct_i_byte_getter.html" title="A helper class for IByteChunk and IByteStream that avoids code duplication." alt="" coords="5,31,93,56"/>
+<area shape="rect" id="node2" href="$class_i_byte_chunk.html" title="Manages a block of memory, for plug&#45;in settings store/recall." alt="" coords="144,5,233,31"/>
+<area shape="rect" id="node3" href="$class_i_byte_stream.html" title="Manages a non&#45;owned block of memory, for receiving arbitrary message byte streams." alt="" coords="141,55,236,80"/>
 </map>

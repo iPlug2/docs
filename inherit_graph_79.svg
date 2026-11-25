@@ -15,7 +15,7 @@
 <polygon fill="white" stroke="#666666" points="118,-41 0,-41 0,0 118,0 118,-41"/>
 <text text-anchor="start" x="8" y="-29" font-family="Helvetica,sans-Serif" font-size="10.00">ISenderData&lt; MAXNC,</text>
 <text text-anchor="start" x="8" y="-18" font-family="Helvetica,sans-Serif" font-size="10.00"> std::array&lt; float,</text>
-<text text-anchor="middle" x="59" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> MAXBUF &gt; &gt;</text>
+<text text-anchor="middle" x="59" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00"> 128 &gt; &gt;</text>
 </a>
 </g>
 </g>

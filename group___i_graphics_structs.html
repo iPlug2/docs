@@ -81,6 +81,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">IGraphics::Structs</div></div>
@@ -152,6 +153,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_v_style.html">IVStyle</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A struct encapsulating a set of properties used to configure IVControls.  <a href="struct_i_v_style.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_accessible_node.html">IAccessibleNode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to describe a control (or a part of a control) to assistive technology.  <a href="struct_i_accessible_node.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -192,6 +196,45 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga9b7871899f7948866b57786e8dbf678b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">ILayerPtr</a> = std::unique_ptr&lt; <a class="el" href="class_i_layer.html">ILayer</a> &gt;</td></tr>
 <tr class="memdesc:ga9b7871899f7948866b57786e8dbf678b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ILayerPtr is a managed pointer for transferring the ownership of layers.  <a href="group___i_graphics_structs.html#ga9b7871899f7948866b57786e8dbf678b">More...</a><br /></td></tr>
 <tr class="separator:ga9b7871899f7948866b57786e8dbf678b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga145b881e5a3dcc35da69c35ef6104390"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> = std::vector&lt; <a class="el" href="struct_i_accessible_node.html">IAccessibleNode</a> &gt;</td></tr>
+<tr class="memdesc:ga145b881e5a3dcc35da69c35ef6104390"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of <a class="el" href="struct_i_accessible_node.html" title="Used to describe a control (or a part of a control) to assistive technology.">IAccessibleNode</a>.  <a href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">More...</a><br /></td></tr>
+<tr class="separator:ga145b881e5a3dcc35da69c35ef6104390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaa33364b5bad78a2e7dfe330d6e223946"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a> { <br />
+&#160;&#160;<b>None</b>
+, <b>Group</b>
+, <b>Label</b>
+, <b>Button</b>
+, <br />
+&#160;&#160;<b>Toggle</b>
+, <b>Slider</b>
+, <b>ComboBox</b>
+, <b>RadioGroup</b>
+, <br />
+&#160;&#160;<b>RadioButton</b>
+, <b>TabList</b>
+, <b>Tab</b>
+, <b>Meter</b>
+, <br />
+&#160;&#160;<b>Image</b>
+, <b>TextInput</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:gaa33364b5bad78a2e7dfe330d6e223946"><td class="mdescLeft">&#160;</td><td class="mdescRight">The semantic role of a control (or part of a control), reported to assistive technology such as screen readers.  <a href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">More...</a><br /></td></tr>
+<tr class="separator:gaa33364b5bad78a2e7dfe330d6e223946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84d4fb0849d8e9e0fff8e78395b7fe0f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a> { <br />
+&#160;&#160;<b>Click</b>
+, <b>Increment</b>
+, <b>Decrement</b>
+, <b>SetValue</b>
+, <br />
+&#160;&#160;<b>Focus</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga84d4fb0849d8e9e0fff8e78395b7fe0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">An action that can be performed on a control via assistive technology or keyboard navigation.  <a href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">More...</a><br /></td></tr>
+<tr class="separator:ga84d4fb0849d8e9e0fff8e78395b7fe0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -519,6 +562,25 @@ y = 0.f</td>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga145b881e5a3dcc35da69c35ef6104390" name="ga145b881e5a3dcc35da69c35ef6104390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga145b881e5a3dcc35da69c35ef6104390">&#9670;&#160;</a></span>IAccessibleNodeList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="group___i_graphics_structs.html#ga145b881e5a3dcc35da69c35ef6104390">IAccessibleNodeList</a> =  std::vector&lt;<a class="el" href="struct_i_accessible_node.html">IAccessibleNode</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A list of <a class="el" href="struct_i_accessible_node.html" title="Used to describe a control (or a part of a control) to assistive technology.">IAccessibleNode</a>. </p>
+<p >The first node describes the control itself, any following nodes are its children </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02656">2656</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+
+</div>
+</div>
 <a id="ga8c26fa818f5f0b1ea01540683dffde93" name="ga8c26fa818f5f0b1ea01540683dffde93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga8c26fa818f5f0b1ea01540683dffde93">&#9670;&#160;</a></span>IActionFunction</h2>
 
@@ -809,6 +871,59 @@ y = 0.f</td>
 
 </div>
 </div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga84d4fb0849d8e9e0fff8e78395b7fe0f" name="ga84d4fb0849d8e9e0fff8e78395b7fe0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84d4fb0849d8e9e0fff8e78395b7fe0f">&#9670;&#160;</a></span>EAccessibleAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="group___i_graphics_structs.html#ga84d4fb0849d8e9e0fff8e78395b7fe0f">EAccessibleAction</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An action that can be performed on a control via assistive technology or keyboard navigation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02597">2597</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+
+</div>
+</div>
+<a id="gaa33364b5bad78a2e7dfe330d6e223946" name="gaa33364b5bad78a2e7dfe330d6e223946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa33364b5bad78a2e7dfe330d6e223946">&#9670;&#160;</a></span>EAccessibleRole</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="group___i_graphics_structs.html#gaa33364b5bad78a2e7dfe330d6e223946">EAccessibleRole</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The semantic role of a control (or part of a control), reported to assistive technology such as screen readers. </p>
+
+<p class="definition">Definition at line <a class="el" href="_i_graphics_structs_8h_source.html#l02578">2578</a> of file <a class="el" href="_i_graphics_structs_8h_source.html">IGraphicsStructs.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gad3789b954df5c92ab742a855dc095c71" name="gad3789b954df5c92ab742a855dc095c71"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad3789b954df5c92ab742a855dc095c71">&#9670;&#160;</a></span>BlendWeight()</h2>
@@ -871,9 +986,9 @@ y = 0.f</td>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00021">21</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00431">IControl::GetAnimationProgress()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8cpp_source.html#l00605">IControl::GetAnimationProgress()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00045">DefaultClickActionFunc()</a>, and <a class="el" href="_i_control_8h_source.html#l02050">ILambdaControl::OnMouseDown()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00045">DefaultClickActionFunc()</a>, and <a class="el" href="_i_control_8h_source.html#l02140">ILambdaControl::OnMouseDown()</a>.</p>
 
 </div>
 </div>
@@ -1019,7 +1134,7 @@ y = 0.f</td>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00030">30</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_control_8cpp_source.html#l00431">IControl::GetAnimationProgress()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_control_8cpp_source.html#l00605">IControl::GetAnimationProgress()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00198">IControl::SetDirty()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_i_control_8cpp_source.html#l00047">SplashClickActionFunc()</a>.</p>
 
@@ -1045,9 +1160,9 @@ y = 0.f</td>
 
 <p class="definition">Definition at line <a class="el" href="_i_control_8cpp_source.html#l00047">47</a> of file <a class="el" href="_i_control_8cpp_source.html">IControl.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_graphics_8h_source.html#l01624">IGraphics::GetMouseDownPoint()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="_i_control_8h_source.html#l00497">IControl::SetAnimation()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>.</p>
+<p class="reference">References <a class="el" href="_i_control_8h_source.html#l00518">IControl::As()</a>, <a class="el" href="_i_graphics_8h_source.html#l01659">IGraphics::GetMouseDownPoint()</a>, <a class="el" href="_i_control_8h_source.html#l00472">IControl::GetUI()</a>, <a class="el" href="_i_control_8h_source.html#l00497">IControl::SetAnimation()</a>, and <a class="el" href="_i_control_8cpp_source.html#l00030">SplashAnimationFunc()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00520">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00097">IVNumberBoxControl::OnAttached()</a>, <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00077">IVBakedPresetManagerControl::OnAttached()</a>, and <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00217">IVDiskPresetManagerControl::OnAttached()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_i_controls_8cpp_source.html#l00567">IVMenuButtonControl::IVMenuButtonControl()</a>, <a class="el" href="_i_v_number_box_control_8h_source.html#l00142">IVNumberBoxControl::OnAttached()</a>, <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00077">IVBakedPresetManagerControl::OnAttached()</a>, and <a class="el" href="_i_v_preset_manager_controls_8h_source.html#l00217">IVDiskPresetManagerControl::OnAttached()</a>.</p>
 
 </div>
 </div>

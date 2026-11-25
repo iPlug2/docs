@@ -82,7 +82,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p >iPlug2 supports building plugins for Windows ARM64EC (ARM64 Emulation Compatible), enabling native performance on Windows ARM devices while maintaining compatibility with x64 hosts.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 What is ARM64EC?</h1>
 <p >ARM64EC is a Windows ABI that allows ARM64 code to interoperate with x64 code. This is particularly useful for audio plugins because:</p>
 <ul>
@@ -94,21 +94,21 @@ What is ARM64EC?</h1>
 <li>Run at full native speed when loaded by ARM64 native hosts</li>
 <li>Still work when loaded by x64 hosts (DAWs) running under emulation on ARM64 Windows</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Supported Platforms</h1>
 <p >ARM64EC builds are supported for:</p><ul>
 <li><b>Plugin Formats</b>: VST2, VST3, CLAP, AAX, Standalone App</li>
 <li><b>Graphics Backend</b>: NanoVG only (Skia not yet supported for ARM64EC)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Building for ARM64EC</h1>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md13"></a>
 Visual Studio Requirements</h2>
 <p >ARM64EC builds require:</p><ul>
 <li>Visual Studio 2022 (v17.0+)</li>
 <li>ARM64EC build tools installed via Visual Studio Installer</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md5"></a>
+<h3><a class="anchor" id="autotoc_md14"></a>
 Installing ARM64EC Build Tools</h3>
 <ol type="1">
 <li>Open <b>Visual Studio Installer</b></li>
@@ -119,7 +119,7 @@ Installing ARM64EC Build Tools</h3>
 </ul>
 </li>
 </ol>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 Cross-Compilation</h2>
 <p >ARM64EC builds use cross-compilation from an x64 host. When building from command line, the build environment must be initialized for ARM64 cross-compilation:</p>
 <div class="fragment"><div class="line">:: Initialize environment for ARM64EC cross-compilation</div>
@@ -131,7 +131,7 @@ Cross-Compilation</h2>
 <blockquote class="doxtable">
 <p >&zwj;<b>Note</b>: You can verify the ARM64EC tools are installed by checking if vswhere finds them: </p><div class="fragment"><div class="line">&amp; &quot;${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe&quot; -latest -requires Microsoft.VisualStudio.Component.VC.Tools.ARM64EC -property installationPath</div>
 </div><!-- fragment --> </blockquote>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md16"></a>
 Build Configurations</h2>
 <p >Each iPlug2 solution includes ARM64EC configurations alongside x64:</p>
 <table class="markdownTable">
@@ -150,7 +150,7 @@ Build Configurations</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">Tracer   </td><td class="markdownTableBodyNone">ARM64EC   </td><td class="markdownTableBodyNone">Tracer build for ARM64EC   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Building from Visual Studio</h2>
 <ol type="1">
 <li>Open the solution file (e.g., <code>IPlugEffect.sln</code>)</li>
@@ -158,27 +158,27 @@ Building from Visual Studio</h2>
 <li>Select the platform (ARM64EC)</li>
 <li>Build the solution</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md18"></a>
 Building from Command Line</h2>
 <div class="fragment"><div class="line">msbuild YourPlugin.sln /p:Configuration=Release /p:Platform=ARM64EC</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md19"></a>
 Debugger Configuration</h1>
 <p >Debugger settings are configured via MSBuild properties in <code>common-win.props</code>. The following variables control debugger host paths:</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md20"></a>
 x64 Variables</h2>
 <ul>
 <li><code>VST2_X64_HOST_PATH</code> - Host application for x64 VST2 debugging</li>
 <li><code>VST3_X64_HOST_PATH</code> - Host application for x64 VST3 debugging</li>
 <li><code>CLAP_X64_HOST_PATH</code> - Host application for x64 CLAP debugging</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md21"></a>
 ARM64EC Variables</h2>
 <ul>
 <li><code>VST2_ARM64EC_HOST_PATH</code> - Host application for ARM64EC VST2 debugging</li>
 <li><code>VST3_ARM64EC_HOST_PATH</code> - Host application for ARM64EC VST3 debugging</li>
 <li><code>CLAP_ARM64EC_HOST_PATH</code> - Host application for ARM64EC CLAP debugging</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md22"></a>
 Plugin Output Paths</h2>
 <ul>
 <li><code>VST3_X64_PATH</code> - Installation path for x64 VST3 plugins</li>
@@ -186,7 +186,7 @@ Plugin Output Paths</h2>
 <li><code>CLAP_X64_PATH</code> - Installation path for x64 CLAP plugins</li>
 <li><code>CLAP_ARM64EC_PATH</code> - Installation path for ARM64EC CLAP plugins</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 Output File Naming</h1>
 <p >Built binaries use platform suffixes:</p>
 <table class="markdownTable">
@@ -201,17 +201,17 @@ Output File Naming</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">APP   </td><td class="markdownTableBodyNone"><code>PluginName_x64.exe</code>   </td><td class="markdownTableBodyNone"><code>PluginName_ARM64EC.exe</code>   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md15"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Skia Limitation</h2>
 <p >ARM64EC builds are automatically skipped when &lsquo;graphics: 'SKIA&rsquo;` is specified, as Skia does not yet support ARM64EC on Windows.</p>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 Known Limitations</h1>
 <ol type="1">
 <li><b>Skia graphics</b>: Not yet supported for ARM64EC. Use NanoVG for ARM64EC builds.</li>
 <li><b>Testing on x64 machines</b>: ARM64EC binaries cannot be executed on x64 Windows. Testing requires ARM64 Windows hardware or emulation.</li>
 <li><b>AAX</b>: ARM64EC AAX support depends on Avid's AAX SDK support for ARM64EC.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 VST3 Bundle Structure</h1>
 <p >VST3 plugins support multi-architecture bundles. After building both architectures, the bundle structure is:</p>
 <div class="fragment"><div class="line">PluginName.vst3/</div>
@@ -223,7 +223,7 @@ VST3 Bundle Structure</h1>
 <div class="line">└── Resources/</div>
 <div class="line">    └── ...</div>
 </div><!-- fragment --><p >This allows a single VST3 bundle to contain both x64 and ARM64EC binaries, with the host selecting the appropriate one at runtime.</p>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 Resources</h1>
 <ul>
 <li><a href="https://learn.microsoft.com/en-us/windows/arm/overview">Windows on ARM Overview</a></li>
