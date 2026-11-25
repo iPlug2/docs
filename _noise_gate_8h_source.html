@@ -200,12 +200,13 @@ $(function() {
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordtype">double</span> mHoldTime = 0.01f;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordtype">double</span> mReleaseTime = 0.01f;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordtype">double</span> mMinRate = mAttackTime;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  T mHistory1, mHistory2 = 0.0f;</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keywordtype">bool</span> mPrevGate = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordtype">int</span> mHoldCounter = 0;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>};</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  T mHistory1 = T(0);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  T mHistory2 = T(0);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <span class="keywordtype">bool</span> mPrevGate = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keywordtype">int</span> mHoldCounter = 0;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>};</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>END_IPLUG_NAMESPACE</div>
 <div class="ttc" id="a_i_plug_utilities_8h_html"><div class="ttname"><a href="_i_plug_utilities_8h.html">IPlugUtilities.h</a></div><div class="ttdoc">Utility functions and macros.</div></div>
 <div class="ttc" id="aclass_noise_gate_html"><div class="ttname"><a href="class_noise_gate.html">NoiseGate</a></div><div class="ttdef"><b>Definition:</b> <a href="_noise_gate_8h_source.html#l00035">NoiseGate.h:36</a></div></div>
 <div class="ttc" id="agroup___i_plug_utilities_html_gac880d08b2331fd32d3ad76f979c489e5"><div class="ttname"><a href="group___i_plug_utilities.html#gac880d08b2331fd32d3ad76f979c489e5">DBToAmp</a></div><div class="ttdeci">static double DBToAmp(double dB)</div><div class="ttdoc">Calculates gain from a given dB value.</div><div class="ttdef"><b>Definition:</b> <a href="_i_plug_utilities_8h_source.html#l00099">IPlugUtilities.h:99</a></div></div>
