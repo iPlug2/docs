@@ -205,80 +205,80 @@ $(function() {
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> mVoiceAllocator.GetNVoices();</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  }</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_midi_synth.html#aafcd25dfee58bb4c1d6273dfe6d30366">  138</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_midi_synth.html#aafcd25dfee58bb4c1d6273dfe6d30366">AddVoice</a>(<a class="code hl_class" href="class_synth_voice.html">SynthVoice</a>* pVoice, uint8_t zone)</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    mVoiceAllocator.<a class="code hl_function" href="class_voice_allocator.html#ad972e8cd51359c1ceca70a05a847b813">AddVoice</a>(pVoice, zone);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  }</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="keywordtype">void</span> AddMidiMsgToQueue(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg)</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  {</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    mMidiQueue.Add(msg);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  }</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_midi_synth.html#a536cb314558b0da21d1e42feb4b74684">ProcessBlock</a>(sample** inputs, sample** outputs, <span class="keywordtype">int</span> nInputs, <span class="keywordtype">int</span> nOutputs, <span class="keywordtype">int</span> nFrames);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="comment">// maintain the state for one MIDI channel including RPN receipt state and pitch bend range.</span></div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">struct </span>ChannelState</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    uint8_t paramMSB;</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    uint8_t paramLSB;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    uint8_t valueMSB;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    uint8_t valueLSB;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    uint8_t pitchBendRange; <span class="comment">// in semitones</span></div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">float</span> pitchBend;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">float</span> pressure;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">float</span> timbre;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  };</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="comment">// MPE helper functions</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> kMPELowerZoneMasterChannel = 0;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> kMPEUpperZoneMasterChannel = 15;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">inline</span> <span class="keywordtype">bool</span> IsMasterChannel(<span class="keywordtype">int</span> c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((c == 0)||(c == 15)); }</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordtype">bool</span> IsInLowerZone(<span class="keywordtype">int</span> c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((c &gt; 0)&amp;&amp;(c &lt; mMPELowerZoneChannels)); }</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordtype">bool</span> IsInUpperZone(<span class="keywordtype">int</span> c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((c &lt; 15)&amp;&amp;(c &gt; 15 - mMPEUpperZoneChannels)); }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordtype">int</span> MasterChannelFor(<span class="keywordtype">int</span> memberChan)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> IsInUpperZone(memberChan) ? kMPEUpperZoneMasterChannel : kMPELowerZoneMasterChannel; }</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keywordtype">int</span> MasterZoneFor(<span class="keywordtype">int</span> memberChan)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> IsInUpperZone(memberChan) ? 1 : 0; }</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="comment">// handy functions for writing loops on lower and upper Zone member channels</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="keywordtype">int</span> LowerZoneStart()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; }</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordtype">int</span> LowerZoneEnd()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMPELowerZoneChannels - 1; }</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="keywordtype">int</span> UpperZoneStart()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 16 - mMPEUpperZoneChannels; }</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordtype">int</span> UpperZoneEnd()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 14; }</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keywordtype">void</span> SetMPEZones(<span class="keywordtype">int</span> channel, <span class="keywordtype">int</span> nChans);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordtype">void</span> SetChannelPitchBendRange(<span class="keywordtype">int</span> channel, <span class="keywordtype">int</span> range);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_struct" href="_voice_allocator_8h.html#struct_voice_input_event">VoiceInputEvent</a> MidiMessageToEventBasic(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_struct" href="_voice_allocator_8h.html#struct_voice_input_event">VoiceInputEvent</a> MidiMessageToEventMPE(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_struct" href="_voice_allocator_8h.html#struct_voice_input_event">VoiceInputEvent</a> MidiMessageToEvent(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordtype">void</span> HandleRPN(<a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a> msg);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// basic MIDI data</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <a class="code hl_class" href="class_voice_allocator.html">VoiceAllocator</a> mVoiceAllocator;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  uint16_t mUnisonVoices{1};</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <a class="code hl_class" href="class_i_midi_queue_base.html">IMidiQueue</a> mMidiQueue;</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keywordtype">float</span> mVelocityLUT[128];</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keywordtype">float</span> mAfterTouchLUT[128];</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  ChannelState mChannelStates[16]{};</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="keywordtype">int</span> mBlockSize;</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  int64_t mSampleTime{0};</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="keywordtype">double</span> mSampleRate = DEFAULT_SAMPLE_RATE;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">bool</span> mVoicesAreActive = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keywordtype">int</span> mNonMPEPitchBendRange = kDefaultPitchBendRange;</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <span class="comment">// the synth will startup in basic MIDI mode. When an MPE Zone setup message is received, MPE mode is entered.</span></div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="comment">// To leave MPE mode, use RPNs to set all MPE zone channel counts to 0 as per the MPE spec.</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordtype">bool</span> mMPEMode{<span class="keyword">false</span>};</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="comment">// MPE state - channels in zone including master channels.</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="keywordtype">int</span> mMPELowerZoneChannels{0};</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordtype">int</span> mMPEUpperZoneChannels{0};</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>};</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>END_IPLUG_NAMESPACE</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_midi_synth.html#aafcd25dfee58bb4c1d6273dfe6d30366">  139</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_midi_synth.html#aafcd25dfee58bb4c1d6273dfe6d30366">AddVoice</a>(<a class="code hl_class" href="class_synth_voice.html">SynthVoice</a>* pVoice, uint8_t zone)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    mVoiceAllocator.<a class="code hl_function" href="class_voice_allocator.html#ad972e8cd51359c1ceca70a05a847b813">AddVoice</a>(pVoice, zone);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keywordtype">void</span> AddMidiMsgToQueue(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    mMidiQueue.Add(msg);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="class_midi_synth.html#a536cb314558b0da21d1e42feb4b74684">ProcessBlock</a>(sample** inputs, sample** outputs, <span class="keywordtype">int</span> nInputs, <span class="keywordtype">int</span> nOutputs, <span class="keywordtype">int</span> nFrames);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="comment">// maintain the state for one MIDI channel including RPN receipt state and pitch bend range.</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keyword">struct </span>ChannelState</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    uint8_t paramMSB;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    uint8_t paramLSB;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    uint8_t valueMSB;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    uint8_t valueLSB;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    uint8_t pitchBendRange; <span class="comment">// in semitones</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">float</span> pitchBend;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">float</span> pressure;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordtype">float</span> timbre;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  };</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="comment">// MPE helper functions</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> kMPELowerZoneMasterChannel = 0;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> kMPEUpperZoneMasterChannel = 15;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keyword">inline</span> <span class="keywordtype">bool</span> IsMasterChannel(<span class="keywordtype">int</span> c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((c == 0)||(c == 15)); }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordtype">bool</span> IsInLowerZone(<span class="keywordtype">int</span> c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((c &gt; 0)&amp;&amp;(c &lt; mMPELowerZoneChannels)); }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordtype">bool</span> IsInUpperZone(<span class="keywordtype">int</span> c)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ((c &lt; 15)&amp;&amp;(c &gt; 15 - mMPEUpperZoneChannels)); }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keywordtype">int</span> MasterChannelFor(<span class="keywordtype">int</span> memberChan)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> IsInUpperZone(memberChan) ? kMPEUpperZoneMasterChannel : kMPELowerZoneMasterChannel; }</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordtype">int</span> MasterZoneFor(<span class="keywordtype">int</span> memberChan)<span class="keyword"> const </span>{ <span class="keywordflow">return</span> IsInUpperZone(memberChan) ? 1 : 0; }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <span class="comment">// handy functions for writing loops on lower and upper Zone member channels</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordtype">int</span> LowerZoneStart()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 1; }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <span class="keywordtype">int</span> LowerZoneEnd()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mMPELowerZoneChannels - 1; }</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <span class="keywordtype">int</span> UpperZoneStart()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 16 - mMPEUpperZoneChannels; }</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keywordtype">int</span> UpperZoneEnd()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 14; }</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordtype">void</span> SetMPEZones(<span class="keywordtype">int</span> channel, <span class="keywordtype">int</span> nChans);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <span class="keywordtype">void</span> SetChannelPitchBendRange(<span class="keywordtype">int</span> channel, <span class="keywordtype">int</span> range);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_struct" href="_voice_allocator_8h.html#struct_voice_input_event">VoiceInputEvent</a> MidiMessageToEventBasic(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_struct" href="_voice_allocator_8h.html#struct_voice_input_event">VoiceInputEvent</a> MidiMessageToEventMPE(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_struct" href="_voice_allocator_8h.html#struct_voice_input_event">VoiceInputEvent</a> MidiMessageToEvent(<span class="keyword">const</span> <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a>&amp; msg);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordtype">void</span> HandleRPN(<a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a> msg);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">// basic MIDI data</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <a class="code hl_class" href="class_voice_allocator.html">VoiceAllocator</a> mVoiceAllocator;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  uint16_t mUnisonVoices{1};</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <a class="code hl_class" href="class_i_midi_queue_base.html">IMidiQueue</a> mMidiQueue;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="keywordtype">float</span> mVelocityLUT[128];</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <span class="keywordtype">float</span> mAfterTouchLUT[128];</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  ChannelState mChannelStates[16]{};</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">int</span> mBlockSize;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  int64_t mSampleTime{0};</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">double</span> mSampleRate = DEFAULT_SAMPLE_RATE;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keywordtype">bool</span> mVoicesAreActive = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keywordtype">int</span> mNonMPEPitchBendRange = kDefaultPitchBendRange;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="comment">// the synth will startup in basic MIDI mode. When an MPE Zone setup message is received, MPE mode is entered.</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="comment">// To leave MPE mode, use RPNs to set all MPE zone channel counts to 0 as per the MPE spec.</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="keywordtype">bool</span> mMPEMode{<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="comment">// MPE state - channels in zone including master channels.</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keywordtype">int</span> mMPELowerZoneChannels{0};</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <span class="keywordtype">int</span> mMPEUpperZoneChannels{0};</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>};</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>END_IPLUG_NAMESPACE</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
 <div class="ttc" id="a_i_plug_constants_8h_html"><div class="ttname"><a href="_i_plug_constants_8h.html">IPlugConstants.h</a></div><div class="ttdoc">IPlug Constant definitions, Types, magic numbers.</div></div>
 <div class="ttc" id="a_i_plug_logger_8h_html"><div class="ttname"><a href="_i_plug_logger_8h.html">IPlugLogger.h</a></div><div class="ttdoc">IPlug logging a.k.a tracing functionality.</div></div>
 <div class="ttc" id="a_i_plug_midi_8h_html"><div class="ttname"><a href="_i_plug_midi_8h.html">IPlugMidi.h</a></div><div class="ttdoc">MIDI and sysex structs/utilites.</div></div>
@@ -291,7 +291,7 @@ $(function() {
 <div class="ttc" id="aclass_midi_synth_html_a536cb314558b0da21d1e42feb4b74684"><div class="ttname"><a href="class_midi_synth.html#a536cb314558b0da21d1e42feb4b74684">MidiSynth::ProcessBlock</a></div><div class="ttdeci">bool ProcessBlock(sample **inputs, sample **outputs, int nInputs, int nOutputs, int nFrames)</div><div class="ttdoc">Processes a block of audio samples.</div><div class="ttdef"><b>Definition:</b> <a href="_midi_synth_8cpp_source.html#l00403">MidiSynth.cpp:403</a></div></div>
 <div class="ttc" id="aclass_midi_synth_html_a57d033c29de4e358cb5c9f96e63bb179"><div class="ttname"><a href="class_midi_synth.html#a57d033c29de4e358cb5c9f96e63bb179">MidiSynth::SetPitchBendRange</a></div><div class="ttdeci">void SetPitchBendRange(int pitchBendRange)</div><div class="ttdoc">Set the pitch bend range for non-MPE mode.</div><div class="ttdef"><b>Definition:</b> <a href="_midi_synth_8h_source.html#l00074">MidiSynth.h:74</a></div></div>
 <div class="ttc" id="aclass_midi_synth_html_a8ffd80e1fdb7e35a6ece606f300d536c"><div class="ttname"><a href="class_midi_synth.html#a8ffd80e1fdb7e35a6ece606f300d536c">MidiSynth::SetKeyToPitchFn</a></div><div class="ttdeci">void SetKeyToPitchFn(const std::function&lt; float(int)&gt; &amp;fn)</div><div class="ttdoc">Set this function to something other than the default if you need to implement a tuning table for mic...</div><div class="ttdef"><b>Definition:</b> <a href="_midi_synth_8h_source.html#l00101">MidiSynth.h:101</a></div></div>
-<div class="ttc" id="aclass_midi_synth_html_aafcd25dfee58bb4c1d6273dfe6d30366"><div class="ttname"><a href="class_midi_synth.html#aafcd25dfee58bb4c1d6273dfe6d30366">MidiSynth::AddVoice</a></div><div class="ttdeci">void AddVoice(SynthVoice *pVoice, uint8_t zone)</div><div class="ttdoc">adds a SynthVoice to this MidiSynth, taking ownership of the object.</div><div class="ttdef"><b>Definition:</b> <a href="_midi_synth_8h_source.html#l00138">MidiSynth.h:138</a></div></div>
+<div class="ttc" id="aclass_midi_synth_html_aafcd25dfee58bb4c1d6273dfe6d30366"><div class="ttname"><a href="class_midi_synth.html#aafcd25dfee58bb4c1d6273dfe6d30366">MidiSynth::AddVoice</a></div><div class="ttdeci">void AddVoice(SynthVoice *pVoice, uint8_t zone)</div><div class="ttdoc">adds a SynthVoice to this MidiSynth, taking ownership of the object.</div><div class="ttdef"><b>Definition:</b> <a href="_midi_synth_8h_source.html#l00139">MidiSynth.h:139</a></div></div>
 <div class="ttc" id="aclass_midi_synth_html_aafea610fcc68ee3e4edb0c3cda082e3d"><div class="ttname"><a href="class_midi_synth.html#aafea610fcc68ee3e4edb0c3cda082e3d">MidiSynth::kDefaultBlockSize</a></div><div class="ttdeci">static constexpr int kDefaultBlockSize</div><div class="ttdoc">This defines the size in samples of a single block of processing that will be done by the synth.</div><div class="ttdef"><b>Definition:</b> <a href="_midi_synth_8h_source.html#l00041">MidiSynth.h:41</a></div></div>
 <div class="ttc" id="aclass_synth_voice_html"><div class="ttname"><a href="class_synth_voice.html">SynthVoice</a></div><div class="ttdef"><b>Definition:</b> <a href="_synth_voice_8h_source.html#l00054">SynthVoice.h:55</a></div></div>
 <div class="ttc" id="aclass_voice_allocator_html"><div class="ttname"><a href="class_voice_allocator.html">VoiceAllocator</a></div><div class="ttdef"><b>Definition:</b> <a href="_voice_allocator_8h_source.html#l00083">VoiceAllocator.h:84</a></div></div>

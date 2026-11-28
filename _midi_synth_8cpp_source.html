@@ -507,7 +507,7 @@ $(function() {
 <div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <a class="code hl_struct" href="struct_i_midi_msg.html">IMidiMsg</a> msg = mMidiQueue.Peek();</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span> </div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        <span class="comment">// we assume the messages are in chronological order. If we find one later than the current block we are done.</span></div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keywordflow">if</span> (msg.mOffset &gt; startIndex + blockSize) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keywordflow">if</span> (msg.mOffset &gt;= startIndex + blockSize) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        <span class="keywordflow">if</span>(IsRPNMessage(msg))</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        {</div>
