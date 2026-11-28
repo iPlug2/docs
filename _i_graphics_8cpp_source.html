@@ -3099,10 +3099,10 @@ $(function() {
 <div class="line"><a id="l03012" name="l03012"></a><span class="lineno"> 3012</span> </div>
 <div class="line"><a id="l03013" name="l03013"></a><span class="lineno"><a class="line" href="class_i_graphics.html#a7f6b042a2b05f88585718b11d42e9556"> 3013</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_i_graphics.html#af0c393d3b3c9023d6d1739b952532feb">IGraphics::PathEllipse</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> r1, <span class="keywordtype">float</span> r2, <span class="keywordtype">float</span> angle)</div>
 <div class="line"><a id="l03014" name="l03014"></a><span class="lineno"> 3014</span>{</div>
-<div class="line"><a id="l03015" name="l03015"></a><span class="lineno"> 3015</span>  <a class="code hl_function" href="class_i_graphics.html#ac28803e8d8aa7ab50c414caea51e4f32">PathTransformSave</a>();</div>
-<div class="line"><a id="l03016" name="l03016"></a><span class="lineno"> 3016</span>  </div>
-<div class="line"><a id="l03017" name="l03017"></a><span class="lineno"> 3017</span>  <span class="keywordflow">if</span> (r1 &lt;= 0.0 || r2 &lt;= 0.0)</div>
-<div class="line"><a id="l03018" name="l03018"></a><span class="lineno"> 3018</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l03015" name="l03015"></a><span class="lineno"> 3015</span>  <span class="keywordflow">if</span> (r1 &lt;= 0.0 || r2 &lt;= 0.0)</div>
+<div class="line"><a id="l03016" name="l03016"></a><span class="lineno"> 3016</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l03017" name="l03017"></a><span class="lineno"> 3017</span>  </div>
+<div class="line"><a id="l03018" name="l03018"></a><span class="lineno"> 3018</span>  <a class="code hl_function" href="class_i_graphics.html#ac28803e8d8aa7ab50c414caea51e4f32">PathTransformSave</a>();</div>
 <div class="line"><a id="l03019" name="l03019"></a><span class="lineno"> 3019</span>  </div>
 <div class="line"><a id="l03020" name="l03020"></a><span class="lineno"> 3020</span>  <a class="code hl_function" href="class_i_graphics.html#a25ec2794da0240fd9612e18d97ec918a">PathTransformTranslate</a>(x, y);</div>
 <div class="line"><a id="l03021" name="l03021"></a><span class="lineno"> 3021</span>  <a class="code hl_function" href="class_i_graphics.html#a88b9d9e3fa46f72cfbe19968bc3d874c">PathTransformRotate</a>(angle);</div>
