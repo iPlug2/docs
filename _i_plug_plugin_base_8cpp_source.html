@@ -601,7 +601,7 @@ $(function() {
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  {</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>    <a class="code hl_struct" href="struct_i_preset.html">IPreset</a>* pPreset = mPresets.Get(i);</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    pos = chunk.<a class="code hl_function" href="class_i_byte_chunk.html#af4ba354807e9a8aacbc656c19e75bb16">GetStr</a>(name, pos);</div>
-<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    strcpy(pPreset-&gt;mName, name.Get());</div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    snprintf(pPreset-&gt;mName, MAX_PRESET_NAME_LEN, <span class="stringliteral">&quot;%s&quot;</span>, name.Get());</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    </div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>    Trace(TRACELOC, <span class="stringliteral">&quot;%d %s&quot;</span>, i, pPreset-&gt;mName);</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>    </div>
