@@ -127,11 +127,11 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">float</span> val = <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>(startValue);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">float</span> dv = (transitionEnd &gt; transitionStart) ? <span class="keyword">static_cast&lt;</span><span class="keywordtype">float</span><span class="keyword">&gt;</span>((endValue - startValue)/(transitionEnd - transitionStart)) : 0.f;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=startIdx; i&lt;startIdx + transitionStart; ++i)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=startIdx; i&lt;startIdx + transitionStart &amp;&amp; i&lt;startIdx + nFrames; ++i)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      buffer[i] = val;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=startIdx + transitionStart; i&lt;startIdx + transitionEnd; ++i)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=startIdx + transitionStart; i&lt;startIdx + transitionEnd &amp;&amp; i&lt;startIdx + nFrames; ++i)</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      val += dv;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      buffer[i] = val;</div>
