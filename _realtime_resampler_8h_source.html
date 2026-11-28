@@ -246,7 +246,7 @@ $(function() {
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>          <span class="keyword">const</span> T x0 = inputs[chan][readPosInt];</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>          <span class="keyword">const</span> T x1 = ((readPosInt + 1) &lt; inputLength) ? inputs[chan][readPosInt + 1] </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                                                       : inputs[chan][readPosInt - 1];</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>                                                       : inputs[chan][std::max(readPosInt - 1, 0)];</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>          outputs[chan][writePos] = (T(1) - y) * x0 + y * x1;</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        }</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      }</div>
